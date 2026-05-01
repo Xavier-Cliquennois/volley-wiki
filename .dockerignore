@@ -1,0 +1,9 @@
+.git
+.github
+.gitignore
+dist
+node_modules
+Dockerfile
+docker-compose*.yml
+nginx.conf
+*.md

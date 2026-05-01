@@ -1,0 +1,26 @@
+services:
+  volley-wiki:
+    image: volley-wiki:latest
+    container_name: volley-wiki
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.volley-wiki.rule=Host(`volley-wiki.apprendre-et-avancer.fr`) || Host(`www.volley-wiki.apprendre-et-avancer.fr`)
+      - traefik.http.routers.volley-wiki.entrypoints=websecure
+      - traefik.http.routers.volley-wiki.tls=true
+      - traefik.http.routers.volley-wiki.tls.certresolver=mytlschallenge
+      - traefik.http.routers.volley-wiki.middlewares=volley-wiki-headers@docker
+      - traefik.http.services.volley-wiki.loadbalancer.server.port=80
+      - traefik.http.middlewares.volley-wiki-headers.headers.SSLRedirect=true
+      - traefik.http.middlewares.volley-wiki-headers.headers.STSSeconds=315360000
+      - traefik.http.middlewares.volley-wiki-headers.headers.browserXSSFilter=true
+      - traefik.http.middlewares.volley-wiki-headers.headers.contentTypeNosniff=true
+      - traefik.http.middlewares.volley-wiki-headers.headers.forceSTSHeader=true
+      - traefik.http.middlewares.volley-wiki-headers.headers.STSIncludeSubdomains=true
+      - traefik.http.middlewares.volley-wiki-headers.headers.STSPreload=true
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

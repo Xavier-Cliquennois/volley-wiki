@@ -1,0 +1,64 @@
+name: Deploy Volley Wiki
+
+on:
+  push:
+    branches: [main]
+
+env:
+  IMAGE_NAME: volley-wiki
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t ${{ env.IMAGE_NAME }}:latest .
+
+      - name: Save Docker image
+        run: docker save ${{ env.IMAGE_NAME }}:latest | gzip > image.tar.gz
+
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "image.tar.gz,docker-compose.prod.yml"
+          target: "/tmp/volley-wiki-deploy"
+          timeout: 60s
+          command_timeout: 30m
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          timeout: 60s
+          command_timeout: 30m
+          script: |
+            set -e
+
+            echo "=== Loading Docker image ==="
+            gunzip -c /tmp/volley-wiki-deploy/image.tar.gz | docker load
+
+            APP_DIR="$HOME/deployer/apps/volley-wiki"
+            mkdir -p "$APP_DIR"
+            cd "$APP_DIR"
+
+            echo "=== Copying docker-compose.yml ==="
+            cp /tmp/volley-wiki-deploy/docker-compose.prod.yml docker-compose.yml
+            rm -rf /tmp/volley-wiki-deploy
+
+            echo "=== Starting container ==="
+            docker compose up -d --force-recreate
+
+            echo "=== Cleanup ==="
+            docker image prune -f
+
+            echo "=== Container status ==="
+            docker compose ps
