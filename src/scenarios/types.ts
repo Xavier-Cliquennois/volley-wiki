@@ -1,0 +1,96 @@
+// Court coordinate system (matches Court.tsx and existing visualizer)
+// - Court: 9m wide (X axis) x 18m long (Z axis)
+// - Net at z = 0
+// - Our side: z > 0 (positive)
+// - Opponent side: z < 0 (negative)
+// - Y axis: height
+// - Positions 1-6 (FIVB numbering) on our side, viewed from behind:
+//     P4 (front-left, x<0)   P3 (front-center)   P2 (front-right, x>0)
+//     P5 (back-left)          P6 (back-center)    P1 (back-right)
+
+export type TeamSize = 4 | 5 | 6;
+export type PhaseKind = 'attack' | 'defense' | 'reception';
+
+export type PlayerRole =
+  | 'setter'
+  | 'opposite'
+  | 'middle'
+  | 'outside'
+  | 'libero'
+  | 'opponent'
+  | 'generic';
+
+export type ScenarioPlayerConfig = {
+  id: string;
+  label: string;
+  role: PlayerRole;
+  color: string;
+  position: [number, number, number];
+};
+
+// Action shapes match what useTactic already understands
+export type BallMoveAction = {
+  type: 'ball_move';
+  time: number;
+  from: [number, number, number];
+  to: [number, number, number];
+  duration: number;
+  arc: number | false;
+  description?: string;
+};
+
+export type PlayerMoveAction = {
+  type: 'player_move';
+  time: number;
+  id: string;
+  to: [number, number, number];
+  duration: number;
+  description?: string;
+};
+
+export type PlayerPoseAction = {
+  type: 'player_pose';
+  time: number;
+  id: string;
+  pose: 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'READY' | 'RESET';
+  duration: number;
+  description?: string;
+  text?: string;
+};
+
+export type TimelineAction = BallMoveAction | PlayerMoveAction | PlayerPoseAction;
+
+// Narrative step shown in the side card / timeline strip
+// Multiple actions can map to the same narrative step via stepId
+export type ScenarioStep = {
+  id: string;
+  startTime: number;
+  title: string;
+  description: string;
+};
+
+export type ScenarioConfig = {
+  teamSize: TeamSize;
+  phase: PhaseKind;
+  contextLabel: string;
+};
+
+export type ScenarioSummary = {
+  keyPoints: string[];
+  commonMistakes: string[];
+};
+
+export type CameraPreset = 'DEFAULT' | 'TOP_DOWN' | 'BEHIND_SERVE' | 'ATTACKER_VIEW';
+
+export type Scenario = {
+  id: string;
+  title: string;
+  shortDescription: string;
+  config: ScenarioConfig;
+  players: ScenarioPlayerConfig[];
+  initialBallPosition: [number, number, number];
+  timeline: TimelineAction[];
+  steps: ScenarioStep[];
+  summary: ScenarioSummary;
+  defaultCamera?: CameraPreset;
+};

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volley Wiki — Design System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .swatch { aspect-ratio: 1 / 1; }
+    pre code { font-family: inherit; }
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-100">
+
+  <!-- ============== HEADER ============== -->
+  <header class="border-b-2 border-yellow-400 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-yellow-400 text-2xl">🏐</span>
+        <div>
+          <div class="text-yellow-400 font-bold text-sm tracking-widest uppercase">Volley Wiki</div>
+          <div class="text-gray-500 text-xs">Design System — v1.1</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-1 text-xs uppercase tracking-wider">
+        <a href="#principles" class="px-3 py-2 border border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200">Principes</a>
+        <a href="#colors" class="px-3 py-2 border border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200">Couleurs</a>
+        <a href="#typography" class="px-3 py-2 border border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200">Typo</a>
+        <a href="#components" class="px-3 py-2 border border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200">Composants</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto w-full px-4 py-8 space-y-16">
+
+    <!-- ============== HERO ============== -->
+    <section class="text-center space-y-6 py-8">
+      <div class="inline-block border-2 border-yellow-400 px-6 py-2 text-yellow-400 text-xs uppercase tracking-widest mb-4">
+        Documentation interne
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold text-white leading-none">
+        Design<span class="text-yellow-400">System</span>
+      </h1>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Référence visuelle des couleurs, typographies, composants et patterns utilisés dans Volley Wiki.
+      </p>
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">01 — Principes</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== PRINCIPES ============== -->
+    <section id="principles" class="space-y-6">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Fondations</div>
+        <h2 class="text-4xl font-bold text-white">Principes de design</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border-2 border-gray-700 p-6">
+          <div class="text-3xl mb-3">⚡</div>
+          <h3 class="text-white font-bold text-lg mb-2">Brutalisme numérique</h3>
+          <p class="text-gray-500 text-sm">Esthétique terminal : bordures nettes, pas de coins arrondis, contrastes francs. Le contenu prime sur la décoration.</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="text-3xl mb-3">🎯</div>
+          <h3 class="text-white font-bold text-lg mb-2">Lisibilité technique</h3>
+          <p class="text-gray-500 text-sm">Police monospace partout. Les titres en MAJUSCULES avec tracking-widest renforcent l'aspect documentation.</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="text-3xl mb-3">🟡</div>
+          <h3 class="text-white font-bold text-lg mb-2">Mono-accent jaune</h3>
+          <p class="text-gray-500 text-sm">Une seule couleur d'accent (jaune-400) pour les actions, liens actifs et éléments importants. Le reste reste en niveaux de gris.</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="text-3xl mb-3">📐</div>
+          <h3 class="text-white font-bold text-lg mb-2">Grilles strictes</h3>
+          <p class="text-gray-500 text-sm">Largeur max 6xl (72rem). Espacements verticaux par paliers (space-y-6/8/16). Hiérarchie via la taille et l'épaisseur.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">02 — Couleurs</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== COULEURS ============== -->
+    <section id="colors" class="space-y-6">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Palette</div>
+        <h2 class="text-4xl font-bold text-white">Couleurs</h2>
+        <p class="text-gray-400 mt-2">Basée sur l'échelle Tailwind. Trois familles : fonds, textes, accent.</p>
+      </div>
+
+      <!-- Fonds -->
+      <div>
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-3 border-b-2 border-gray-800 pb-2">Fonds</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="border-2 border-gray-700">
+            <div class="swatch bg-gray-950"></div>
+            <div class="p-3 border-t-2 border-gray-700">
+              <div class="text-white text-xs font-bold">bg-gray-950</div>
+              <div class="text-gray-500 text-xs">Page</div>
+            </div>
+          </div>
+          <div class="border-2 border-gray-700">
+            <div class="swatch bg-gray-900"></div>
+            <div class="p-3 border-t-2 border-gray-700">
+              <div class="text-white text-xs font-bold">bg-gray-900</div>
+              <div class="text-gray-500 text-xs">Header / inputs</div>
+            </div>
+          </div>
+          <div class="border-2 border-gray-700">
+            <div class="swatch bg-gray-800"></div>
+            <div class="p-3 border-t-2 border-gray-700">
+              <div class="text-white text-xs font-bold">bg-gray-800</div>
+              <div class="text-gray-500 text-xs">Surfaces</div>
+            </div>
+          </div>
+          <div class="border-2 border-gray-700">
+            <div class="swatch" style="background-color: rgba(250, 204, 21, 0.1);"></div>
+            <div class="p-3 border-t-2 border-gray-700">
+              <div class="text-white text-xs font-bold">yellow-400/10</div>
+              <div class="text-gray-500 text-xs">État actif</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bordures -->
+      <div>
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-3 border-b-2 border-gray-800 pb-2">Bordures</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="border-2 border-gray-800">
+            <div class="swatch bg-gray-800"></div>
+            <div class="p-3 border-t-2 border-gray-800">
+              <div class="text-white text-xs font-bold">border-gray-800</div>
+              <div class="text-gray-500 text-xs">Subtile</div>
+            </div>
+          </div>
+          <div class="border-2 border-gray-700">
+            <div class="swatch bg-gray-700"></div>
+            <div class="p-3 border-t-2 border-gray-700">
+              <div class="text-white text-xs font-bold">border-gray-700</div>
+              <div class="text-gray-500 text-xs">Standard</div>
+            </div>
+          </div>
+          <div class="border-2 border-gray-600">
+            <div class="swatch bg-gray-600"></div>
+            <div class="p-3 border-t-2 border-gray-600">
+              <div class="text-white text-xs font-bold">border-gray-600</div>
+              <div class="text-gray-500 text-xs">Hover</div>
+            </div>
+          </div>
+          <div class="border-2 border-yellow-400">
+            <div class="swatch bg-yellow-400"></div>
+            <div class="p-3 border-t-2 border-yellow-400">
+              <div class="text-white text-xs font-bold">border-yellow-400</div>
+              <div class="text-gray-500 text-xs">Accent / actif</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Textes -->
+      <div>
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest mb-3 border-b-2 border-gray-800 pb-2">Textes</h3>
+        <div class="border-2 border-gray-700 p-6 space-y-3 bg-gray-900">
+          <div><span class="text-white">text-white</span> <span class="text-gray-500 text-xs ml-2">— Titres et contenus principaux</span></div>
+          <div><span class="text-gray-100">text-gray-100</span> <span class="text-gray-500 text-xs ml-2">— Texte par défaut sur fond sombre</span></div>
+          <div><span class="text-gray-300">text-gray-300</span> <span class="text-gray-500 text-xs ml-2">— Texte secondaire</span></div>
+          <div><span class="text-gray-400">text-gray-400</span> <span class="text-gray-500 text-xs ml-2">— Description / corps de texte</span></div>
+          <div><span class="text-gray-500">text-gray-500</span> <span class="text-gray-500 text-xs ml-2">— Légende, métadonnées</span></div>
+          <div><span class="text-gray-600">text-gray-600</span> <span class="text-gray-500 text-xs ml-2">— Texte estompé, footer</span></div>
+          <div><span class="text-yellow-400">text-yellow-400</span> <span class="text-gray-500 text-xs ml-2">— Accent, liens actifs, valeurs clés</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">03 — Typographie</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== TYPOGRAPHIE ============== -->
+    <section id="typography" class="space-y-6">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Échelle</div>
+        <h2 class="text-4xl font-bold text-white">Typographie</h2>
+        <p class="text-gray-400 mt-2">Police monospace système. Hiérarchie par taille et casse.</p>
+      </div>
+
+      <div class="border-2 border-gray-700 p-6 space-y-6 bg-gray-900">
+        <div class="border-b border-gray-800 pb-4">
+          <h1 class="text-7xl font-bold text-white leading-none">H1 / Hero</h1>
+          <div class="text-gray-500 text-xs mt-2">text-7xl font-bold — pages d'accueil</div>
+        </div>
+        <div class="border-b border-gray-800 pb-4">
+          <h2 class="text-4xl font-bold text-white">H2 / Page title</h2>
+          <div class="text-gray-500 text-xs mt-2">text-4xl font-bold — titres de page</div>
+        </div>
+        <div class="border-b border-gray-800 pb-4">
+          <h3 class="text-2xl font-bold text-white">H3 / Section</h3>
+          <div class="text-gray-500 text-xs mt-2">text-2xl font-bold — sections importantes</div>
+        </div>
+        <div class="border-b border-gray-800 pb-4">
+          <h4 class="text-lg font-bold text-white">H4 / Card title</h4>
+          <div class="text-gray-500 text-xs mt-2">text-lg font-bold — titres de cartes</div>
+        </div>
+        <div class="border-b border-gray-800 pb-4">
+          <p class="text-base text-gray-100">Body — corps de texte standard pour paragraphes et descriptions.</p>
+          <div class="text-gray-500 text-xs mt-2">text-base — paragraphes</div>
+        </div>
+        <div class="border-b border-gray-800 pb-4">
+          <p class="text-sm text-gray-400">Small — texte secondaire, descriptions courtes.</p>
+          <div class="text-gray-500 text-xs mt-2">text-sm — descriptions</div>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-yellow-400">Eyebrow / kicker label</p>
+          <div class="text-gray-500 text-xs mt-2">text-xs uppercase tracking-widest — labels au-dessus des titres</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">04 — Composants</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== COMPOSANTS ============== -->
+    <section id="components" class="space-y-10">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Bibliothèque</div>
+        <h2 class="text-4xl font-bold text-white">Composants</h2>
+      </div>
+
+      <!-- Boutons -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Boutons</h3>
+        <div class="border-2 border-gray-700 p-6 flex flex-wrap items-center gap-4">
+          <button class="px-6 py-3 bg-yellow-400 text-black text-sm font-bold uppercase tracking-wider hover:bg-yellow-300 transition-colors border-2 border-yellow-600">
+            Primary
+          </button>
+          <button class="px-6 py-3 border-2 border-gray-600 text-gray-300 text-sm uppercase tracking-wider hover:border-gray-400 transition-colors">
+            Secondary
+          </button>
+          <button class="px-3 py-2 text-xs uppercase tracking-wider border border-yellow-400 text-yellow-400 bg-yellow-400/10">
+            Active nav
+          </button>
+          <button class="px-3 py-2 text-xs uppercase tracking-wider border border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200 transition-colors">
+            Inactive nav
+          </button>
+        </div>
+      </div>
+
+      <!-- Badge / Eyebrow -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Badges & étiquettes</h3>
+        <div class="border-2 border-gray-700 p-6 flex flex-wrap items-center gap-4">
+          <div class="inline-block border-2 border-yellow-400 px-6 py-2 text-yellow-400 text-xs uppercase tracking-widest">
+            Documentation
+          </div>
+          <div class="text-yellow-400 text-xs uppercase tracking-widest">Eyebrow label</div>
+          <div class="px-2 py-1 border border-gray-700 text-gray-400 text-xs uppercase tracking-wider">Tag</div>
+        </div>
+      </div>
+
+      <!-- Carte feature -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Cartes feature (interactives)</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="#" class="border-2 border-gray-700 hover:border-yellow-400 p-6 transition-colors group">
+            <div class="text-3xl mb-3">🎯</div>
+            <h4 class="text-white font-bold text-lg mb-2 group-hover:text-yellow-400 transition-colors">Titre de la carte</h4>
+            <p class="text-gray-500 text-sm">Description courte expliquant le contenu.</p>
+            <div class="mt-4 text-yellow-400 text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+              Explorer →
+            </div>
+          </a>
+          <a href="#" class="border-2 border-gray-700 hover:border-yellow-400 p-6 transition-colors group">
+            <div class="text-3xl mb-3">📖</div>
+            <h4 class="text-white font-bold text-lg mb-2 group-hover:text-yellow-400 transition-colors">Hover pour voir</h4>
+            <p class="text-gray-500 text-sm">La bordure passe au jaune et la flèche apparaît.</p>
+            <div class="mt-4 text-yellow-400 text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+              Explorer →
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Bloc de statistiques</h3>
+        <div class="border-2 border-gray-800 p-6 space-y-4">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest">À savoir</div>
+          <h4 class="text-white text-2xl font-bold">Le terrain en chiffres</h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+            <div class="border border-gray-700 p-4 text-center">
+              <div class="text-yellow-400 text-xl font-bold mb-1">18 × 9 m</div>
+              <div class="text-gray-500 text-xs">Dimensions</div>
+            </div>
+            <div class="border border-gray-700 p-4 text-center">
+              <div class="text-yellow-400 text-xl font-bold mb-1">2,43 m</div>
+              <div class="text-gray-500 text-xs">Filet (H)</div>
+            </div>
+            <div class="border border-gray-700 p-4 text-center">
+              <div class="text-yellow-400 text-xl font-bold mb-1">6 × 6</div>
+              <div class="text-gray-500 text-xs">Joueurs</div>
+            </div>
+            <div class="border border-gray-700 p-4 text-center">
+              <div class="text-yellow-400 text-xl font-bold mb-1">3 m</div>
+              <div class="text-gray-500 text-xs">Zone d'attaque</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Champ de recherche</h3>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">🔍</span>
+            <input type="text" placeholder="Rechercher un terme…"
+              class="w-full bg-gray-900 border-2 border-gray-700 focus:border-yellow-400 outline-none px-10 py-3 text-white text-sm placeholder-gray-600 transition-colors" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Item liste glossaire -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Item de liste (glossaire)</h3>
+        <div class="border-2 border-gray-700 p-6 space-y-3">
+          <div class="border-l-2 border-gray-700 pl-4 hover:border-yellow-400 transition-colors">
+            <div class="text-white font-bold text-sm mb-1">Spike / Smash</div>
+            <p class="text-gray-400 text-sm leading-relaxed">Attaque frappée fort vers le bas par un attaquant en saut.</p>
+          </div>
+          <div class="border-l-2 border-gray-700 pl-4 hover:border-yellow-400 transition-colors">
+            <div class="text-white font-bold text-sm mb-1">Libero</div>
+            <p class="text-gray-400 text-sm leading-relaxed">Joueur défensif spécialisé portant un maillot de couleur différente.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Index lettres -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Index alphabétique</h3>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="flex flex-wrap gap-1">
+            <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-xs text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors">A</a>
+            <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-xs text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors">B</a>
+            <a href="#" class="w-8 h-8 border border-yellow-400 flex items-center justify-center text-xs text-yellow-400 transition-colors">C</a>
+            <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-xs text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors">D</a>
+            <a href="#" class="w-8 h-8 border border-gray-700 flex items-center justify-center text-xs text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors">E</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider de section -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Diviseur de section</h3>
+        <div class="border-2 border-gray-700 p-6">
+          <div class="flex items-center gap-4">
+            <div class="flex-1 h-px bg-gray-800"></div>
+            <span class="text-gray-600 text-xs uppercase tracking-widest">Sections</span>
+            <div class="flex-1 h-px bg-gray-800"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte scénario (galerie) -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Carte scénario (galerie)</h3>
+        <div class="border-2 border-gray-700 p-6">
+          <a href="#" class="block border-2 border-gray-700 hover:border-yellow-400 p-6 transition-colors group max-w-md">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl flex-shrink-0">🎯</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2 mb-2">
+                  <span class="text-yellow-400 text-xs uppercase tracking-widest">6v6</span>
+                  <span class="text-gray-600">·</span>
+                  <span class="text-gray-400 text-xs uppercase tracking-wider">Attaque</span>
+                </div>
+                <h3 class="text-white font-bold text-lg group-hover:text-yellow-400 transition-colors">Titre du scénario</h3>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm">Description courte du scénario tactique en une ou deux phrases.</p>
+            <div class="mt-4 pt-3 border-t border-gray-800 flex items-center justify-between">
+              <span class="text-gray-600 text-xs uppercase tracking-wider">Contexte précis</span>
+              <span class="text-yellow-400 text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">Lancer →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Badges de contexte -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Badges de contexte (header scénario)</h3>
+        <div class="border-2 border-gray-700 p-6 flex flex-wrap items-center gap-2">
+          <div class="px-3 py-1 border-2 border-yellow-400 text-yellow-400 text-xs uppercase tracking-widest">6v6</div>
+          <div class="px-3 py-1 border-2 border-gray-700 text-gray-300 text-xs uppercase tracking-widest">Attaque</div>
+          <div class="px-3 py-1 border border-gray-700 text-gray-400 text-xs uppercase tracking-wider">5-1 · Rotation P1 · Service adverse</div>
+        </div>
+        <p class="text-gray-500 text-xs">Trois niveaux : badge primaire (jaune), badge secondaire (bordure 2px), badge contexte (bordure 1px).</p>
+      </div>
+
+      <!-- Timeline cards -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Timeline cards (étapes)</h3>
+        <div class="border-2 border-gray-700 bg-gray-900">
+          <div class="border-b-2 border-gray-700 px-3 py-2 flex items-center justify-between">
+            <span class="text-gray-400 text-xs uppercase tracking-widest">Timeline</span>
+            <span class="text-gray-600 text-xs">cliquer pour sauter</span>
+          </div>
+          <div class="flex gap-2 p-3 overflow-x-auto">
+            <button class="flex-shrink-0 w-48 text-left p-3 border-2 border-gray-600 bg-gray-800 opacity-60">
+              <div class="text-gray-500 text-xs uppercase tracking-widest mb-1">01</div>
+              <div class="text-white text-sm font-bold mb-1">Étape passée</div>
+              <div class="text-gray-400 text-xs">Description de l'étape déjà jouée.</div>
+            </button>
+            <button class="flex-shrink-0 w-48 text-left p-3 border-2 border-yellow-400 bg-yellow-400/10">
+              <div class="text-yellow-400 text-xs uppercase tracking-widest mb-1">02</div>
+              <div class="text-yellow-400 text-sm font-bold mb-1">Étape active</div>
+              <div class="text-gray-400 text-xs">Description de l'étape en cours d'animation.</div>
+            </button>
+            <button class="flex-shrink-0 w-48 text-left p-3 border-2 border-gray-700 hover:border-gray-500">
+              <div class="text-gray-500 text-xs uppercase tracking-widest mb-1">03</div>
+              <div class="text-white text-sm font-bold mb-1">Étape future</div>
+              <div class="text-gray-400 text-xs">Description de l'étape à venir.</div>
+            </button>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs">Trois états : passée (opacity-60), active (jaune), future (standard).</p>
+      </div>
+
+      <!-- Fiche résumé -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Fiches résumé (points clés / erreurs)</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border-2 border-gray-700 p-6">
+            <div class="text-yellow-400 text-xs uppercase tracking-widest mb-3">Points clés</div>
+            <ul class="space-y-2">
+              <li class="flex gap-3 text-gray-200 text-sm leading-relaxed">
+                <span class="text-yellow-400 font-bold flex-shrink-0">▸</span>
+                <span>Information à retenir, formulation directe.</span>
+              </li>
+              <li class="flex gap-3 text-gray-200 text-sm leading-relaxed">
+                <span class="text-yellow-400 font-bold flex-shrink-0">▸</span>
+                <span>Deuxième point clé, idéalement 3 à 5 maximum.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="border-2 border-gray-800 p-6">
+            <div class="text-gray-500 text-xs uppercase tracking-widest mb-3">Erreurs fréquentes</div>
+            <ul class="space-y-2">
+              <li class="flex gap-3 text-gray-400 text-sm leading-relaxed">
+                <span class="text-gray-600 font-bold flex-shrink-0">✗</span>
+                <span>Description d'une erreur courante à éviter.</span>
+              </li>
+              <li class="flex gap-3 text-gray-400 text-sm leading-relaxed">
+                <span class="text-gray-600 font-bold flex-shrink-0">✗</span>
+                <span>Deuxième erreur, formulation cause → conséquence.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs">Hiérarchie : points clés (bordure standard, bullet jaune) versus erreurs (bordure subtile, croix grise).</p>
+      </div>
+
+      <!-- Contrôles de lecture -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Contrôles de lecture (player 3D)</h3>
+        <div class="border-2 border-gray-700 p-6 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex items-center gap-2">
+            <button class="px-3 py-2 text-xs border border-gray-600 text-gray-300 hover:border-gray-400 min-w-[48px] uppercase tracking-wider">1×</button>
+            <button class="px-3 py-2 text-xs border border-yellow-400 text-yellow-400 uppercase tracking-wider">Trail</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="w-10 h-10 border border-gray-600 text-gray-300 flex items-center justify-center">⏮</button>
+            <button class="w-12 h-12 bg-yellow-400 border-2 border-yellow-600 text-black flex items-center justify-center text-lg font-bold">▶</button>
+            <button class="w-10 h-10 border border-gray-600 text-gray-300 flex items-center justify-center">⏭</button>
+            <button class="w-10 h-10 border border-gray-600 text-gray-300 flex items-center justify-center">↺</button>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs">Bouton play primaire jaune (12×12), prev/next/restart secondaires (10×10), modifiers (vitesse, options) en bordure 1px.</p>
+      </div>
+
+      <!-- Formulaire guidé -->
+      <div class="space-y-3">
+        <h3 class="text-white font-bold text-sm uppercase tracking-widest border-b-2 border-gray-800 pb-2">Formulaire guidé (étapes dépendantes)</h3>
+        <div class="border-2 border-gray-700 p-6 space-y-6">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest">Choix guidé</div>
+          <div class="space-y-3">
+            <div class="text-white text-sm font-bold uppercase tracking-wider">1 · Question principale</div>
+            <div class="grid grid-cols-3 gap-2">
+              <button class="px-4 py-4 border-2 border-gray-700 text-gray-300 uppercase tracking-wider text-sm font-bold">Option A</button>
+              <button class="px-4 py-4 border-2 border-yellow-400 bg-yellow-400 text-black uppercase tracking-wider text-sm font-bold">Option B</button>
+              <button class="px-4 py-4 border-2 border-gray-700 text-gray-300 uppercase tracking-wider text-sm font-bold">Option C</button>
+            </div>
+          </div>
+          <div class="space-y-3 border-t-2 border-gray-800 pt-6">
+            <div class="text-white text-sm font-bold uppercase tracking-wider">2 · Question dépendante</div>
+            <div class="text-gray-500 text-xs">N'apparaît que lorsque la question 1 est répondue.</div>
+          </div>
+        </div>
+        <p class="text-gray-500 text-xs">Étapes séparées par <code class="text-yellow-400">border-t-2 border-gray-800 pt-6</code>. État sélectionné : remplissage jaune plein.</p>
+      </div>
+
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">05 — Espacements</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== ESPACEMENTS ============== -->
+    <section class="space-y-6">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Layout</div>
+        <h2 class="text-4xl font-bold text-white">Espacements & grilles</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border-2 border-gray-700 p-6 space-y-2">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Conteneur</div>
+          <div class="text-white text-sm">max-w-6xl mx-auto</div>
+          <p class="text-gray-500 text-xs">Largeur max 72rem (1152px). Centré horizontalement.</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6 space-y-2">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Padding page</div>
+          <div class="text-white text-sm">px-4 py-8</div>
+          <p class="text-gray-500 text-xs">16px horizontal, 32px vertical sur le main.</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6 space-y-2">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Espacements verticaux</div>
+          <div class="text-white text-sm">space-y-4 / 6 / 8 / 16</div>
+          <p class="text-gray-500 text-xs">Paliers utilisés : 16px (compact), 24px, 32px (standard), 64px (sections).</p>
+        </div>
+        <div class="border-2 border-gray-700 p-6 space-y-2">
+          <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Bordures</div>
+          <div class="text-white text-sm">border / border-2</div>
+          <p class="text-gray-500 text-xs">1px pour les éléments fins, 2px pour les conteneurs et boutons.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== DIVIDER ============== -->
+    <div class="flex items-center gap-4">
+      <div class="flex-1 h-px bg-gray-800"></div>
+      <span class="text-gray-600 text-xs uppercase tracking-widest">06 — Stack technique</span>
+      <div class="flex-1 h-px bg-gray-800"></div>
+    </div>
+
+    <!-- ============== STACK ============== -->
+    <section class="space-y-6">
+      <div>
+        <div class="text-yellow-400 text-xs uppercase tracking-widest mb-2">Outils</div>
+        <h2 class="text-4xl font-bold text-white">Stack technique</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="border border-gray-700 p-4 text-center">
+          <div class="text-yellow-400 text-xl font-bold mb-1">React 19</div>
+          <div class="text-gray-500 text-xs">Framework UI</div>
+        </div>
+        <div class="border border-gray-700 p-4 text-center">
+          <div class="text-yellow-400 text-xl font-bold mb-1">Tailwind 4</div>
+          <div class="text-gray-500 text-xs">Styling</div>
+        </div>
+        <div class="border border-gray-700 p-4 text-center">
+          <div class="text-yellow-400 text-xl font-bold mb-1">Vite 8</div>
+          <div class="text-gray-500 text-xs">Build tool</div>
+        </div>
+        <div class="border border-gray-700 p-4 text-center">
+          <div class="text-yellow-400 text-xl font-bold mb-1">R3F</div>
+          <div class="text-gray-500 text-xs">3D / Three.js</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="border-t-2 border-gray-800 py-4 text-center text-gray-600 text-xs mt-16">
+    Volley Wiki — Design System v1.1 · Dernière mise à jour 2026-04-30
+  </footer>
+
+</body>
+</html>
