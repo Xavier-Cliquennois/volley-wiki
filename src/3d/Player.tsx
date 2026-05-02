@@ -48,7 +48,7 @@ export const Player = forwardRef<PlayerRef, PlayerProps>(({ color, position }, r
   useImperativeHandle(ref, () => ({ group, rightShoulder, leftShoulder }));
 
   return (
-    <group ref={group} position={position} rotation={[0, Math.PI, 0]}>
+    <group ref={group} position={position} rotation={[0, position[2] < 0 ? 0 : Math.PI, 0]}>
       <OutlinedBox args={[0.5, 0.7, 0.3]} color={color} position={[0, 0.85, 0]} castShadow>
         <mesh position={[0, 0, 0.151]}>
           <planeGeometry args={[0.25, 0.35]} />
