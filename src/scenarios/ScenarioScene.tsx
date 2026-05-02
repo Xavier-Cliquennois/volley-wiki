@@ -3,6 +3,7 @@ import { useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { Court } from '../3d/Court';
+import { CourtZones } from '../3d/CourtZones';
 import { Player } from '../3d/Player';
 import { BallWithTrail } from '../3d/BallWithTrail';
 import type { BallWithTrailRef } from '../3d/BallWithTrail';
@@ -18,6 +19,7 @@ type ScenarioSceneProps = {
   cameraRef: React.RefObject<THREE.PerspectiveCamera | null>;
   onUpdate: (progress: number, actionIndex: number) => void;
   showTrail: boolean;
+  showZones: boolean;
 };
 
 const CameraSetup: React.FC<{ cameraRef: React.RefObject<THREE.PerspectiveCamera | null> }> = ({ cameraRef }) => {
@@ -35,6 +37,7 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   cameraRef,
   onUpdate,
   showTrail,
+  showZones,
 }) => {
   const ballRef = useRef<BallWithTrailRef>(null);
   const impactRef = useRef<ImpactEffectRef>(null);
@@ -61,6 +64,7 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
+      {showZones && <CourtZones />}
       {scenario.players.map(player => (
         <Player
           key={player.id}

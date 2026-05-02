@@ -46,6 +46,7 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
   const [progress, setProgress] = useState(0);
   const [activeStepIdx, setActiveStepIdx] = useState(0);
   const [showTrail, setShowTrail] = useState(true);
+  const [showZones, setShowZones] = useState(false);
   const [currentCameraPreset, setCurrentCameraPreset] = useState<CameraPresetKey>('DEFAULT');
 
   const { animateToPreset } = useCameraControls(cameraRef);
@@ -309,6 +310,7 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
                 cameraRef={cameraRef}
                 onUpdate={handleUpdate}
                 showTrail={showTrail}
+                showZones={showZones}
               />
             </Canvas>
 
@@ -378,6 +380,15 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
                 }`}
               >
                 Traînée
+              </button>
+              <button
+                onClick={() => setShowZones(z => !z)}
+                title="Affiche les 6 zones FIVB sur le terrain"
+                className={`px-3 py-2 text-xs border uppercase tracking-wider ${
+                  showZones ? 'border-yellow-400 text-yellow-400' : 'border-gray-600 text-gray-400 hover:border-gray-400'
+                }`}
+              >
+                Zones
               </button>
             </div>
 
