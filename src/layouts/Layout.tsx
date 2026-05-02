@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <span className="text-yellow-400 text-2xl">🏐</span>
             <div>
               <div className="text-yellow-400 font-bold text-sm tracking-widest uppercase">Volley Wiki</div>
-              <div className="text-gray-500 text-xs">Documentation officieuse du volleyball</div>
+              <div className="text-gray-500 text-xs">Techniques · Règles · Tactiques</div>
             </div>
           </Link>
           {/* Desktop nav */}
@@ -81,7 +81,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       <footer className="border-t-2 border-gray-800 py-4 text-center text-gray-600 text-xs">
-        Volley Wiki — Documentation non officielle du volleyball
+        Volley Wiki — Techniques, règles & tactiques du volleyball
       </footer>
     </div>
   );

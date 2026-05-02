@@ -2,6 +2,16 @@ import { useState } from 'react';
 
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6' | 'L';
 
+const ROLE_COLORS: Record<ZoneId, string> = {
+  P2: '#e74c3c',   // setter
+  P1: '#9b59b6',   // opposite
+  P3: '#2ecc71',   // middle
+  P4: '#3498db',   // outside
+  P5: '#3498db',   // outside (back row)
+  P6: '#2ecc71',   // middle (back row)
+  L:  '#f1c40f',   // libero
+};
+
 type Position = {
   id: ZoneId;
   number: string;
@@ -143,19 +153,23 @@ export default function Positions() {
             >
               {COURT_ZONES.map(zone => {
                 const active = isZoneActive(zone.id);
+                const roleColor = ROLE_COLORS[zone.id];
+                const cellStyle: React.CSSProperties = {
+                  gridRow: zone.row === 'front' ? 1 : 2,
+                  gridColumn: zone.col + 1,
+                  ...(active ? { borderColor: roleColor, backgroundColor: `${roleColor}1a`, color: roleColor, zIndex: 10 } : {}),
+                };
                 return (
                   <button
                     key={zone.id}
                     onClick={() => toggle(zone.id)}
                     className={`relative border-2 -ml-px -mt-px flex flex-col items-center justify-center transition-colors ${
-                      active
-                        ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400 z-10'
-                        : 'border-gray-700 hover:border-gray-500 text-gray-300'
+                      active ? '' : 'border-gray-700 hover:border-gray-500 text-gray-300'
                     }`}
-                    style={{ gridRow: zone.row === 'front' ? 1 : 2, gridColumn: zone.col + 1 }}
+                    style={cellStyle}
                   >
                     <span className="text-2xl font-bold">{zone.id}</span>
-                    <span className={`text-[10px] uppercase tracking-wider mt-1 ${active ? 'text-yellow-400' : 'text-gray-500'}`}>
+                    <span className="text-[10px] uppercase tracking-wider mt-1" style={active ? { color: roleColor } : { color: '#6b7280' }}>
                       {zone.row === 'front' ? 'Avant' : 'Arrière'}
                     </span>
                   </button>
@@ -201,10 +215,12 @@ export default function Positions() {
 
       {/* Position cards */}
       <div className="space-y-6">
-        {visiblePositions.map(pos => (
+        {visiblePositions.map(pos => {
+          const roleColor = ROLE_COLORS[pos.id];
+          return (
           <div key={pos.id} className="border-2 border-gray-700 overflow-hidden">
-            <div className="px-6 py-4 flex items-center gap-4 border-l-4 border-l-yellow-400">
-              <span className="text-4xl font-bold text-yellow-400 min-w-[2.5rem] text-center">{pos.number}</span>
+            <div className="px-6 py-4 flex items-center gap-4 border-l-4" style={{ borderLeftColor: roleColor }}>
+              <span className="text-4xl font-bold min-w-[2.5rem] text-center" style={{ color: roleColor }}>{pos.number}</span>
               <div>
                 <h2 className="text-white font-bold text-xl">{pos.name}</h2>
                 <div className="text-gray-500 text-xs uppercase tracking-wider">{pos.role}</div>
@@ -234,7 +250,8 @@ export default function Positions() {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Rotation note */}

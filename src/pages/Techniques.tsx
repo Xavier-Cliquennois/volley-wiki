@@ -1,7 +1,3 @@
-import { Suspense, lazy } from 'react';
-
-const VolleyballVisualizer = lazy(() => import('../3d/VolleyballVisualizer'));
-
 const TECHNIQUES = [
   {
     id: 'bump',
@@ -77,25 +73,6 @@ export default function Techniques() {
         <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
         <h1 className="text-4xl font-bold text-white mb-3">Techniques fondamentales</h1>
         <p className="text-gray-400">Les gestes clés du volleyball, de la réception à l'attaque.</p>
-      </div>
-
-      {/* 3D Visualizer */}
-      <div>
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-px flex-1 bg-gray-800" />
-          <span className="text-gray-500 text-xs uppercase tracking-widest">Démo interactive 3D</span>
-          <div className="h-px flex-1 bg-gray-800" />
-        </div>
-        <Suspense fallback={
-          <div className="border-2 border-gray-700 bg-gray-900 h-96 flex items-center justify-center">
-            <span className="text-gray-500 text-sm">Chargement du visualiseur 3D…</span>
-          </div>
-        }>
-          <VolleyballVisualizer autoplay={false} />
-        </Suspense>
-        <p className="text-gray-600 text-xs mt-2 text-center">
-          Cliquez ▶ pour animer la séquence Réception → Passe → Attaque. Cliquez et glissez pour pivoter la caméra.
-        </p>
       </div>
 
       {/* Technique cards */}

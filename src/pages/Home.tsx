@@ -56,25 +56,6 @@ export default function Home() {
           </Link>
         ))}
       </section>
-
-      {/* Court dimensions teaser */}
-      <section className="border-2 border-gray-800 p-6 space-y-4">
-        <div className="text-yellow-400 text-xs uppercase tracking-widest">À savoir</div>
-        <h2 className="text-white text-2xl font-bold">Le terrain en chiffres</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-          {[
-            { value: '18 × 9 m', label: 'Dimensions du terrain' },
-            { value: '2,43 m', label: 'Hauteur du filet (hommes)' },
-            { value: '6 × 6', label: 'Joueurs par équipe' },
-            { value: '3 m', label: 'Zone d\'attaque' },
-          ].map(stat => (
-            <div key={stat.label} className="border border-gray-700 p-4 text-center">
-              <div className="text-yellow-400 text-xl font-bold mb-1">{stat.value}</div>
-              <div className="text-gray-500 text-xs">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }
