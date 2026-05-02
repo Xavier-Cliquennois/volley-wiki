@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 const FEATURES = [
   { icon: '🎯', title: 'Techniques', desc: 'Animations 3D interactives des gestes fondamentaux', to: '/techniques' },
   { icon: '📍', title: 'Positions', desc: 'Rôles et responsabilités de chaque poste sur le terrain', to: '/positions' },
+  { icon: '📚', title: 'Guides', desc: 'Guides techniques et tactiques détaillés', to: '/guides' },
   { icon: '📋', title: 'Règles', desc: 'Règlement officiel FIVB simplifié et expliqué', to: '/rules' },
   { icon: '📖', title: 'Glossaire', desc: 'Vocabulaire technique du volleyball', to: '/glossary' },
 ];

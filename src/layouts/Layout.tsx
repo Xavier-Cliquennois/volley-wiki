@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { to: '/techniques', label: 'Techniques', icon: '🎯' },
   { to: '/positions', label: 'Positions', icon: '📍' },
   { to: '/scenarios', label: 'Scénarios', icon: '🎬' },
+  { to: '/guides', label: 'Guides', icon: '📚' },
   { to: '/rules', label: 'Règles', icon: '📋' },
   { to: '/glossary', label: 'Glossaire', icon: '📖' },
 ];

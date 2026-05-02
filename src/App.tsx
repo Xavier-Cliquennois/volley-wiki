@@ -8,6 +8,8 @@ import Rules from './pages/Rules';
 import Glossary from './pages/Glossary';
 import Scenarios from './pages/Scenarios';
 import ScenarioDetail from './pages/ScenarioDetail';
+import Guides from './pages/Guides';
+import GuideDetail from './pages/GuideDetail';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/scenarios/:id" element={<Layout><ScenarioDetail /></Layout>} />
         <Route path="/rules" element={<Layout><Rules /></Layout>} />
         <Route path="/glossary" element={<Layout><Glossary /></Layout>} />
+        <Route path="/guides" element={<Layout><Guides /></Layout>} />
+        <Route path="/guides/:slug" element={<Layout><GuideDetail /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
