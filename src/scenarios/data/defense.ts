@@ -48,10 +48,10 @@ const DEFENSE_VS_Z4: Scenario = {
     { id: 's1', startTime: 0, title: '1. Passe adverse en Z4', description: 'Le passeur adverse distribue vers son ailier en zone 4. Notre ligne avant lit la trajectoire.' },
     { id: 's2', startTime: 0.4, title: '2. Formation du block à 2', description: 'Notre P2 (pointu) fixe la ligne, le central (P3) se déplace en pas chassés et ferme la diagonale.' },
     { id: 's3', startTime: 0.5, title: '3. Défense au sol — 6 arrière', description: 'Le R4 (P4) recule sur les 3 m comme off-blocker (feintes courtes). Libéro en P5 sur la grande diagonale, P6 fond, P1 recul ligne.' },
-    { id: 's4', startTime: 1.0, title: '4. Frappe adverse', description: 'L\'attaquant frappe en diagonale longue. Le block dévie ou laisse passer dans la zone défendue par P5/P6.' },
-    { id: 's5', startTime: 1.5, title: '5. Défense du libéro', description: 'Le libéro récupère en manchette dans sa zone prioritaire. Annonce vocale "J\'ai !".' },
-    { id: 's6', startTime: 1.5, title: '6. Transition contre-attaque', description: 'Le passeur, qui n\'a pas contré, arrive vite au filet pour la 2ᵉ touche et organiser la contre-attaque.' },
-    { id: 's7', startTime: 2.3, title: '7. Distribution', description: 'Passe en suspension vers les ailes ou le pointu en zone 2 selon où l\'option est libre.' },
+    { id: 's4', startTime: 1.0, title: '4. Frappe adverse', description: "L'attaquant frappe en diagonale longue. Le block dévie ou laisse passer dans la zone défendue par P5/P6." },
+    { id: 's5', startTime: 1.5, title: '5. Défense du libéro', description: `Le libéro récupère en manchette dans sa zone prioritaire. Annonce vocale "J'ai !".` },
+    { id: 's6', startTime: 1.5, title: '6. Transition contre-attaque', description: "Le passeur, qui n'a pas contré, arrive vite au filet pour la 2ᵉ touche et organiser la contre-attaque." },
+    { id: 's7', startTime: 2.3, title: '7. Distribution', description: "Passe en suspension vers les ailes ou le pointu en zone 2 selon où l'option est libre." },
   ],
   summary: {
     keyPoints: [
@@ -63,7 +63,7 @@ const DEFENSE_VS_Z4: Scenario = {
     commonMistakes: [
       'Block ouvert non intentionnel → balle passe entre les contreurs.',
       'Off-blocker qui reste au filet au lieu de redescendre → ombre du block non couverte.',
-      'Passeur qui contre puis n\'arrive pas au filet → 2ᵉ touche par un joueur non spécialisé.',
+      "Passeur qui contre puis n'arrive pas au filet → 2ᵉ touche par un joueur non spécialisé.",
     ],
   },
 };
@@ -107,7 +107,7 @@ const DEFENSE_VS_Z3: Scenario = {
     { id: 's1', startTime: 0, title: '1. Passe rapide adverse', description: 'Le passeur adverse distribue tendue vers son central pour une attaque tempo 1.' },
     { id: 's2', startTime: 0.2, title: '2. Bloc individuel central', description: 'Notre central seul saute sur la fixation. Choix : commit block (saute systématiquement) ou read (attend la passe).' },
     { id: 's3', startTime: 0.3, title: '3. Ailes en latéral', description: 'Le R4 et le pointu reculent légèrement sur les 3 m, prêts à défendre les diagonales courtes ou monter sur la passe suivante.' },
-    { id: 's4', startTime: 0.4, title: '4. Frappe rapide', description: 'L\'attaque centrale est rapide mais souvent moins angulée — la défense en arrière a le temps de lire.' },
+    { id: 's4', startTime: 0.4, title: '4. Frappe rapide', description: "L'attaque centrale est rapide mais souvent moins angulée — la défense en arrière a le temps de lire." },
     { id: 's5', startTime: 0.9, title: '5. Récupération arrière', description: 'Le passeur (en P1) est très avancé sur la lecture rapide. Il défend ou récupère.' },
     { id: 's6', startTime: 1.7, title: '6. Contre-attaque', description: 'Si la défense est propre, transition vers une contre-attaque rapide.' },
   ],
@@ -121,7 +121,7 @@ const DEFENSE_VS_Z3: Scenario = {
     commonMistakes: [
       'Tous les avants sautent → laisse les ailes ouvertes pour la passe suivante.',
       'Bloc trop tardif → balle passe au-dessus des mains.',
-      'Défenseurs figés en fond → balle rapide tombe avant qu\'ils n\'aient bougé.',
+      "Défenseurs figés en fond → balle rapide tombe avant qu'ils n'aient bougé.",
     ],
   },
 };
@@ -168,13 +168,13 @@ const DEFENSE_VS_Z2: Scenario = {
     { type: 'player_move', time: 2.0, id: 'Op', to: [3.0, 0, 0.4], duration: 0.3 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe adverse en Z2', description: 'L\'attaque arrive côté gauche défenseur. Notre R4 et central organisent le bloc.' },
+    { id: 's1', startTime: 0, title: '1. Passe adverse en Z2', description: "L'attaque arrive côté gauche défenseur. Notre R4 et central organisent le bloc." },
     { id: 's2', startTime: 0.4, title: '2. Bloc à 2 fermant', description: 'Le R4 fixe la ligne, le central se déplace vers la zone 4 et ferme la diagonale (symétrique du Z4).' },
     { id: 's3', startTime: 0.5, title: '3. Off-blocker à droite', description: 'Le pointu (P2) recule sur les 3 m côté droit pour défendre les feintes courtes.' },
     { id: 's4', startTime: 0.5, title: '4. Défense réorganisée', description: 'Libéro et R4b en arrière à gauche, P1 (passeur) recule sur la grande diagonale côté droit.' },
-    { id: 's5', startTime: 1.0, title: '5. Frappe adverse', description: 'L\'attaquant gauche frappe en diagonale longue vers notre P1 ou en ligne vers notre R4 reculé.' },
+    { id: 's5', startTime: 1.0, title: '5. Frappe adverse', description: "L'attaquant gauche frappe en diagonale longue vers notre P1 ou en ligne vers notre R4 reculé." },
     { id: 's6', startTime: 1.5, title: '6. Récupération du passeur', description: 'Le passeur, en P1, défend dans son couloir et est aussi celui qui doit relancer.' },
-    { id: 's7', startTime: 1.5, title: '7. Transition compliquée', description: 'Si le passeur a défendu, c\'est le pointu (en zone 2) qui prend la 2ᵉ touche.' },
+    { id: 's7', startTime: 1.5, title: '7. Transition compliquée', description: "Si le passeur a défendu, c'est le pointu (en zone 2) qui prend la 2ᵉ touche." },
   ],
   summary: {
     keyPoints: [
@@ -231,10 +231,10 @@ const DEFENSE_VS_PIPE: Scenario = {
     { type: 'player_pose', time: 2.0, id: 'P', pose: 'SET', duration: 0.2 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe adverse en pipe', description: 'Trajectoire tendue vers le centre arrière de l\'adversaire. Le central de l\'attaque adverse entre en course.' },
+    { id: 's1', startTime: 0, title: '1. Passe adverse en pipe', description: "Trajectoire tendue vers le centre arrière de l'adversaire. Le central de l'attaque adverse entre en course." },
     { id: 's2', startTime: 0.2, title: '2. Bloc central seul', description: 'Notre central saute au centre du filet. Souvent bloc à 1 car les ailiers ne peuvent pas revenir vite.' },
     { id: 's3', startTime: 0.3, title: '3. Off-blockers reculés', description: 'R4 et pointu redescendent sur les 3 m côté opposé pour défendre les balles profondes.' },
-    { id: 's4', startTime: 0.3, title: '4. Périmètre profond', description: 'Libéro, R4b et passeur s\'étalent en triangle profond. La pipe va loin et droit.' },
+    { id: 's4', startTime: 0.3, title: '4. Périmètre profond', description: "Libéro, R4b et passeur s'étalent en triangle profond. La pipe va loin et droit." },
     { id: 's5', startTime: 0.5, title: '5. Frappe profonde', description: 'La pipe est puissante et va profond — le R4b ou le libéro doit défendre droit devant.' },
     { id: 's6', startTime: 1.2, title: '6. Récupération profonde', description: 'Le R4b fait une manchette profonde vers le passeur qui revient au filet.' },
   ],
@@ -243,10 +243,10 @@ const DEFENSE_VS_PIPE: Scenario = {
       'Pipe = attaque arrière au centre, vise le cœur du terrain.',
       'Bloc à 1 (central) ou off-blocker en aide selon élan adverse.',
       'Périmètre profond obligatoire : 3 défenseurs en triangle au fond.',
-      'Difficile à défendre car pas d\'ombre de bloc protectrice.',
+      "Difficile à défendre car pas d'ombre de bloc protectrice.",
     ],
     commonMistakes: [
-      'Bloc à 2 sur pipe → laisse les ailes ouvertes pour l\'attaque suivante.',
+      "Bloc à 2 sur pipe → laisse les ailes ouvertes pour l'attaque suivante.",
       'Défenseurs trop avancés sur les 3 m → balle profonde tombe.',
       'Off-blockers qui restent au filet → centre du terrain à découvert.',
     ],
@@ -296,23 +296,23 @@ const DEFENSE_6_FRONT: Scenario = {
     { type: 'player_pose', time: 2.3, id: 'Op', pose: 'SET', duration: 0.2 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe adverse en Z4', description: 'Lecture habituelle. Mais l\'adversaire est connu pour ses feintes.' },
+    { id: 's1', startTime: 0, title: '1. Passe adverse en Z4', description: "Lecture habituelle. Mais l'adversaire est connu pour ses feintes." },
     { id: 's2', startTime: 0.4, title: '2. Bloc à 2 standard', description: 'Pointu et central forment le bloc comme en 6 arrière.' },
-    { id: 's3', startTime: 0.5, title: '3. P6 avance', description: 'Différence-clé : le R4 en P6 avance dans la zone des 3 m, dans l\'ombre du bloc.' },
-    { id: 's4', startTime: 0.5, title: '4. Compensation profonde', description: 'Libéro et passeur reculent jusqu\'à la ligne de fond pour couvrir les balles longues.' },
-    { id: 's5', startTime: 1.0, title: '5. Feinte adverse', description: 'L\'attaquant adverse choisit la feinte plutôt que le smash. La balle tombe juste derrière le bloc.' },
+    { id: 's3', startTime: 0.5, title: '3. P6 avance', description: "Différence-clé : le R4 en P6 avance dans la zone des 3 m, dans l'ombre du bloc." },
+    { id: 's4', startTime: 0.5, title: '4. Compensation profonde', description: "Libéro et passeur reculent jusqu'à la ligne de fond pour couvrir les balles longues." },
+    { id: 's5', startTime: 1.0, title: '5. Feinte adverse', description: "L'attaquant adverse choisit la feinte plutôt que le smash. La balle tombe juste derrière le bloc." },
     { id: 's6', startTime: 1.6, title: '6. Récupération courte', description: 'Le P6 avancé est exactement où la balle tombe. Manchette précise vers le pointu pour relancer.' },
   ],
   summary: {
     keyPoints: [
       'Système "6 avant" (middle-up, 2-1-3) : optimisé contre les feintes.',
-      'Le P6 avance dans l\'ombre du bloc, à la limite des 3 m.',
+      "Le P6 avance dans l'ombre du bloc, à la limite des 3 m.",
       'Libéro et P1/P5 reculent pour couvrir les balles longues.',
       'Adapté contre le volley féminin, jeunes, équipes techniques.',
     ],
     commonMistakes: [
       'Garder le système 6 arrière contre une équipe qui feinte → balles courtes perdues.',
-      'P6 trop avancé (au filet) → bloqué dans l\'élan du contre.',
+      "P6 trop avancé (au filet) → bloqué dans l'élan du contre.",
       'Libéro qui ne recule pas → trou en arrière.',
     ],
   },
@@ -362,7 +362,7 @@ const DEFENSE_PERIMETER: Scenario = {
     { id: 's1', startTime: 0, title: '1. Configuration périmétrique', description: 'Les 4 défenseurs ont un pied sur les lignes du terrain : grand rectangle.' },
     { id: 's2', startTime: 0.4, title: '2. Bloc à 2 standard', description: 'Le bloc forme le rideau habituel. La défense au sol prend le relais sur ce qui passe.' },
     { id: 's3', startTime: 0.5, title: '3. Tous sur les lignes', description: 'Libéro sur la ligne gauche, P6 sur la ligne de fond, P1 sur la ligne droite. Ils identifient facilement les balles "out".' },
-    { id: 's4', startTime: 1.0, title: '4. Block-out long', description: 'L\'attaque puissante part en diagonale longue qui touche le bloc.' },
+    { id: 's4', startTime: 1.0, title: '4. Block-out long', description: "L'attaque puissante part en diagonale longue qui touche le bloc." },
     { id: 's5', startTime: 1.6, title: '5. Récupération en couloir', description: 'Le libéro récupère sur la ligne — couverture périphérique parfaite.' },
   ],
   summary: {
@@ -384,7 +384,7 @@ const DEFENSE_PERIMETER: Scenario = {
 const DEFENSE_ROTATION: Scenario = {
   id: '6v6-defense-rotation',
   title: 'Défense · en rotation',
-  shortDescription: 'Défense rotationnelle : les défenseurs tournent en arc autour du bloc vers la zone d\'attaque.',
+  shortDescription: "Défense rotationnelle : les défenseurs tournent en arc autour du bloc vers la zone d'attaque.",
   config: {
     teamSize: 6,
     phase: 'defense',
@@ -424,24 +424,24 @@ const DEFENSE_ROTATION: Scenario = {
     { type: 'ball_move', time: 1.5, from: [-1.0, 0.8, 7], to: [1.5, 2.5, 1.0], duration: 0.9, arc: 4.0 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Lecture de l\'attaque Z4', description: 'L\'attaque arrive à droite de l\'adversaire = à droite de notre côté.' },
+    { id: 's1', startTime: 0, title: "1. Lecture de l'attaque Z4", description: "L'attaque arrive à droite de l'adversaire = à droite de notre côté." },
     { id: 's2', startTime: 0.4, title: '2. Bloc à 2 standard', description: 'Pointu et central forment le bloc côté droit.' },
     { id: 's3', startTime: 0.5, title: '3. Rotation côté ballon', description: 'Le R4 redescend en zone 4 sur la ligne courte. Le libéro bascule en grande diagonale (côté ballon).' },
     { id: 's4', startTime: 0.5, title: '4. P6 et P1 ajustent', description: 'Le P6 (R4b) glisse côté gauche pour compenser. Le P1 reste sur la ligne droite.' },
-    { id: 's5', startTime: 1.0, title: '5. Frappe diagonale', description: '80% des smashs vont en diagonale forte. Le libéro est exactement à l\'arrivée.' },
+    { id: 's5', startTime: 1.0, title: '5. Frappe diagonale', description: "80% des smashs vont en diagonale forte. Le libéro est exactement à l'arrivée." },
     { id: 's6', startTime: 1.5, title: '6. Récupération en diagonale', description: 'Le libéro défend dans sa zone optimale. Transition fluide vers la contre-attaque.' },
   ],
   summary: {
     keyPoints: [
-      'Rotation defense (3-2-1 ou 3-1-2) : tous tournent vers la zone d\'attaque.',
+      "Rotation defense (3-2-1 ou 3-1-2) : tous tournent vers la zone d'attaque.",
       '80 % des smashs vont en diagonale forte → libéro y est placé prioritairement.',
-      'L\'off-blocker du côté opposé recule sur les 3 m côté opposé.',
+      "L'off-blocker du côté opposé recule sur les 3 m côté opposé.",
       'Système le plus courant chez les jeunes/intermédiaires car simple à enseigner.',
     ],
     commonMistakes: [
       'Rotation incomplète → trous dans la couverture.',
       'Vulnérable aux line shots (changement de direction).',
-      'Confusion entre rotate (vers ballon) et counter-rotate (à l\'opposé).',
+      "Confusion entre rotate (vers ballon) et counter-rotate (à l'opposé).",
     ],
   },
 };
@@ -494,10 +494,10 @@ const DEFENSE_READ: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Position de base neutre', description: 'Tous les défenseurs en position de lecture, jambes fléchies, pieds parallèles, regard sur le passeur adverse.' },
-    { id: 's2', startTime: 0.3, title: '2. Lecture de la passe', description: 'Dès que le ballon quitte les mains du passeur adverse → ajustement vers la zone d\'attaque (ici Z2).' },
-    { id: 's3', startTime: 0.6, title: '3. Lecture de l\'attaquant', description: 'Course d\'élan + orientation du bras armé + épaules → indices visuels en temps réel.' },
+    { id: 's2', startTime: 0.3, title: '2. Lecture de la passe', description: "Dès que le ballon quitte les mains du passeur adverse → ajustement vers la zone d'attaque (ici Z2)." },
+    { id: 's3', startTime: 0.6, title: "3. Lecture de l'attaquant", description: "Course d'élan + orientation du bras armé + épaules → indices visuels en temps réel." },
     { id: 's4', startTime: 0.6, title: '4. Ajustement final', description: 'Le libéro bascule en grande diagonale, le R4b en milieu profond. Tout le monde lit en parallèle.' },
-    { id: 's5', startTime: 1.1, title: '5. Frappe lue', description: 'L\'attaquant ouvre vers la diagonale longue → la défense est déjà en place.' },
+    { id: 's5', startTime: 1.1, title: '5. Frappe lue', description: "L'attaquant ouvre vers la diagonale longue → la défense est déjà en place." },
     { id: 's6', startTime: 1.6, title: '6. Pursuit acrobatique', description: 'Si la défense est dépassée, plongeon ou roulade pour récupérer la balle → transition.' },
   ],
   summary: {
@@ -562,17 +562,17 @@ const ATTACK_COVERAGE: Scenario = {
     { type: 'ball_move', time: 0.95, from: [-1.5, 1.0, 1.5], to: [0, 3.0, 2], duration: 0.8, arc: 4.0 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Attaque en zone 4', description: 'Le R4 décolle pour attaquer. Avant même la frappe, la couverture s\'organise.' },
-    { id: 's2', startTime: 0.1, title: '2. Premier arc (3 joueurs)', description: 'Passeur + central + libéro forment un demi-cercle à 1,5-2 m de l\'attaquant, position TRÈS basse, bras tendus.' },
+    { id: 's1', startTime: 0, title: '1. Attaque en zone 4', description: "Le R4 décolle pour attaquer. Avant même la frappe, la couverture s'organise." },
+    { id: 's2', startTime: 0.1, title: '2. Premier arc (3 joueurs)', description: "Passeur + central + libéro forment un demi-cercle à 1,5-2 m de l'attaquant, position TRÈS basse, bras tendus." },
     { id: 's3', startTime: 0.1, title: '3. Deuxième arc (2 joueurs)', description: 'Pointu et R4b se placent à 3-5 m, debout, prêts à récupérer les balles déviées plus loin.' },
-    { id: 's4', startTime: 0.4, title: '4. Block adverse réussi', description: 'L\'attaque touche le bloc adverse et revient dans notre camp.' },
-    { id: 's5', startTime: 0.55, title: '5. Récupération du passeur', description: 'Le passeur (1ᵉʳ soutien proche) relève la balle en manchette à 1 m de l\'attaquant.' },
+    { id: 's4', startTime: 0.4, title: '4. Block adverse réussi', description: "L'attaque touche le bloc adverse et revient dans notre camp." },
+    { id: 's5', startTime: 0.55, title: '5. Récupération du passeur', description: "Le passeur (1ᵉʳ soutien proche) relève la balle en manchette à 1 m de l'attaquant." },
     { id: 's6', startTime: 0.95, title: '6. Sauvetage = nouvelle attaque', description: 'La balle remonte vers une nouvelle distribution. Sans cette couverture = point perdu.' },
   ],
   summary: {
     keyPoints: [
       'Couverture à 5 = standard haut niveau. Dispositif 3-2 (3 proches + 2 éloignés).',
-      'Le passeur est TOUJOURS le 1ᵉʳ soutien proche, à 1-1,5 m de l\'attaquant.',
+      "Le passeur est TOUJOURS le 1ᵉʳ soutien proche, à 1-1,5 m de l'attaquant.",
       'Position TRÈS basse pour les 3 proches, bras tendus en avant.',
       'Sans couverture, un block adverse réussi = point perdu directement.',
     ],
@@ -624,7 +624,7 @@ const DEFENSE_5V5_VS_Z4: Scenario = {
     { type: 'ball_move', time: 1.5, from: [-1.0, 0.8, 6], to: [1.5, 2.5, 1.0], duration: 0.9, arc: 4.0 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Lecture attaque Z4', description: 'L\'attaque adverse est en zone 4 — symétrique du 6v6 mais avec un défenseur en moins.' },
+    { id: 's1', startTime: 0, title: '1. Lecture attaque Z4', description: "L'attaque adverse est en zone 4 — symétrique du 6v6 mais avec un défenseur en moins." },
     { id: 's2', startTime: 0.4, title: '2. Bloc à 2 standard', description: 'Pointu fixe la ligne, central ferme la diagonale. Pas de différence avec le 6v6.' },
     { id: 's3', startTime: 0.5, title: '3. Off-blocker R4', description: 'Le R4 redescend sur les 3 m côté ligne pour les feintes courtes.' },
     { id: 's4', startTime: 0.5, title: '4. Couloirs profonds', description: 'Libéro en diagonale forte, passeur sur la ligne droite. Seulement 2 défenseurs en arrière.' },
@@ -634,7 +634,7 @@ const DEFENSE_5V5_VS_Z4: Scenario = {
   summary: {
     keyPoints: [
       'En 5v5, on perd un arrière → seulement 2 défenseurs en fond après le block.',
-      'Le block à 2 reste la norme malgré la perte d\'un défenseur.',
+      "Le block à 2 reste la norme malgré la perte d'un défenseur.",
       'Recommandation : conserver le système 5-1 du 6v6 en retirant un arrière non-passeur.',
       'Lecture du jeu encore plus importante (~30 m² par défenseur vs 20 m² en 6v6).',
     ],
@@ -682,12 +682,12 @@ const DEFENSE_4V4_BLOCK_1: Scenario = {
     { type: 'ball_move', time: 1.5, from: [1.5, 0.8, 6.5], to: [0, 2.5, 1.0], duration: 0.9, arc: 4.0 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Lecture attaque Z4 adverse', description: 'L\'attaque arrive côté gauche pour le défenseur. Avec 4 joueurs seulement, chacun est crucial.' },
-    { id: 's2', startTime: 0.4, title: '2. Block à 1 du central', description: 'Le central seul saute sur l\'attaquant. Configuration STANDARD en 4v4.' },
+    { id: 's1', startTime: 0, title: '1. Lecture attaque Z4 adverse', description: "L'attaque arrive côté gauche pour le défenseur. Avec 4 joueurs seulement, chacun est crucial." },
+    { id: 's2', startTime: 0.4, title: '2. Block à 1 du central', description: "Le central seul saute sur l'attaquant. Configuration STANDARD en 4v4." },
     { id: 's3', startTime: 0.5, title: '3. Ailes en couverture courte', description: 'Aile gauche couvre la petite diagonale (3 m), aile droite la grande diagonale (mi-terrain).' },
-    { id: 's4', startTime: 0.5, title: '4. Arrière unique au fond', description: 'L\'arrière unique se place en fond, là où la balle ira si l\'attaque est puissante.' },
-    { id: 's5', startTime: 1.0, title: '5. Frappe puissante', description: 'L\'attaquant adverse frappe en diagonale longue.' },
-    { id: 's6', startTime: 1.5, title: '6. Récupération arrière', description: 'L\'arrière unique fait la défense profonde. Sa lecture doit être parfaite — il n\'y a personne pour compenser.' },
+    { id: 's4', startTime: 0.5, title: '4. Arrière unique au fond', description: "L'arrière unique se place en fond, là où la balle ira si l'attaque est puissante." },
+    { id: 's5', startTime: 1.0, title: '5. Frappe puissante', description: "L'attaquant adverse frappe en diagonale longue." },
+    { id: 's6', startTime: 1.5, title: '6. Récupération arrière', description: "L'arrière unique fait la défense profonde. Sa lecture doit être parfaite — il n'y a personne pour compenser." },
   ],
   summary: {
     keyPoints: [

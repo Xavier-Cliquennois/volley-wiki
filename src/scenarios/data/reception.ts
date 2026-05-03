@@ -33,18 +33,18 @@ const RECEPTION_5_1_3R: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Position de réception', description: 'Trois réceptionneurs en arc : R4 gauche, libéro central, R4 droit. Chacun couvre ~1/3 de la largeur. Passeur et pointu cachés au filet.' },
-    { id: 's2', startTime: 0.3, title: '2. Lecture & annonce', description: 'Le R4 gauche lit la trajectoire du service, annonce "J\'ai !" pour lever le doute.' },
+    { id: 's2', startTime: 0.3, title: '2. Lecture & annonce', description: `Le R4 gauche lit la trajectoire du service, annonce "J'ai !" pour lever le doute.` },
     { id: 's3', startTime: 0.4, title: '3. Déplacement', description: 'Petit déplacement latéral, alignement des appuis, plateforme de manchette préparée à hauteur du nombril.' },
-    { id: 's4', startTime: 1.0, title: '4. Manchette précise', description: 'Manchette dirigée vers la cible passeur (entre P2 et P3), trajectoire haute permettant au passeur d\'arriver.' },
+    { id: 's4', startTime: 1.0, title: '4. Manchette précise', description: "Manchette dirigée vers la cible passeur (entre P2 et P3), trajectoire haute permettant au passeur d'arriver." },
     { id: 's5', startTime: 1.0, title: '5. Passeur en course', description: 'Le passeur sort de sa cachette et pénètre vers la zone 2-3.' },
-    { id: 's6', startTime: 2.0, title: '6. Repli pour l\'attaque', description: 'Le R4 récepteur déclenche immédiatement sa course d\'élan vers l\'aile gauche pour se présenter en attaque.' },
+    { id: 's6', startTime: 2.0, title: "6. Repli pour l'attaque", description: "Le R4 récepteur déclenche immédiatement sa course d'élan vers l'aile gauche pour se présenter en attaque." },
   ],
   summary: {
     keyPoints: [
       'Réception à 3 = standard 5-1 moderne. Spécialisation maximale.',
       'Cible : zone 2-3, à un bras du filet, à hauteur ~3 m.',
-      'Le passeur reste caché au filet jusqu\'à la frappe du serveur, puis pénètre.',
-      'Le R4 récepteur enchaîne IMMÉDIATEMENT sa course d\'élan d\'attaque.',
+      "Le passeur reste caché au filet jusqu'à la frappe du serveur, puis pénètre.",
+      "Le R4 récepteur enchaîne IMMÉDIATEMENT sa course d'élan d'attaque.",
     ],
     commonMistakes: [
       'Réception trop plate ou trop courte → passeur arrive en retard.',
@@ -87,10 +87,10 @@ const RECEPTION_W: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Formation W', description: 'Disposition en W : 2 avants à mi-terrain, 1 médian, 2 arrières au fond. Le passeur sort.' },
-    { id: 's2', startTime: 0.3, title: '2. Médian annonce', description: 'Le médian a la zone centrale. Annonce "J\'ai !" dès qu\'il lit la trajectoire.' },
-    { id: 's3', startTime: 0.4, title: '3. Petites zones individuelles', description: 'Chaque joueur défend une petite zone (~10-12 m²). Idéal pour les débutants : moins d\'erreurs.' },
+    { id: 's2', startTime: 0.3, title: '2. Médian annonce', description: `Le médian a la zone centrale. Annonce "J'ai !" dès qu'il lit la trajectoire.` },
+    { id: 's3', startTime: 0.4, title: '3. Petites zones individuelles', description: "Chaque joueur défend une petite zone (~10-12 m²). Idéal pour les débutants : moins d'erreurs." },
     { id: 's4', startTime: 1.0, title: '4. Manchette vers le passeur', description: 'Cible : zone 2-3. Le passeur, déjà au filet en 4-2, distribue.' },
-    { id: 's5', startTime: 1.9, title: '5. Distribution simple', description: 'Le passeur distribue vers l\'aile gauche pour une attaque classique.' },
+    { id: 's5', startTime: 1.9, title: '5. Distribution simple', description: "Le passeur distribue vers l'aile gauche pour une attaque classique." },
   ],
   summary: {
     keyPoints: [
@@ -139,7 +139,7 @@ const RECEPTION_SEMI_CIRCLE: Scenario = {
   steps: [
     { id: 's1', startTime: 0, title: '1. Arc semi-circulaire', description: 'Les 5 réceptionneurs forment un arc à équidistance du serveur. Tous orientés vers le passeur.' },
     { id: 's2', startTime: 0.3, title: '2. Lecture commune', description: 'Tous regardent dans la même direction. Annonce vocale du joueur le plus proche.' },
-    { id: 's3', startTime: 1.0, title: '3. Manchette précise', description: 'Cible : zone 2-3 où le passeur est en train d\'arriver.' },
+    { id: 's3', startTime: 1.0, title: '3. Manchette précise', description: "Cible : zone 2-3 où le passeur est en train d'arriver." },
     { id: 's4', startTime: 1.0, title: '4. Pénétration en parallèle', description: 'Le passeur sort de sa cachette pendant que la réception se fait.' },
     { id: 's5', startTime: 1.9, title: '5. Préparation attaque', description: 'Distribution classique. Le central qui a réceptionné continue son attaque.' },
   ],
@@ -197,7 +197,7 @@ const RECEPTION_2: Scenario = {
     { id: 's1', startTime: 0, title: '1. Configuration à 2', description: 'Seulement 2 réceptionneurs (libéro + R4 droit). Les 4 autres sont prêts à attaquer.' },
     { id: 's2', startTime: 0.3, title: '2. Service facile', description: 'Utilisé sur free balls ou contre un service prévisible. Variété maximale.' },
     { id: 's3', startTime: 1.0, title: '3. Manchette ultra-précise', description: 'Avec seulement 2 zones, exigence technique extrême. Le libéro doit être exceptionnel.' },
-    { id: 's4', startTime: 1.0, title: '4. Tous attaquants', description: 'Le R4 gauche est DÉJÀ en course d\'élan dès la réception → arrive à grande vitesse.' },
+    { id: 's4', startTime: 1.0, title: '4. Tous attaquants', description: "Le R4 gauche est DÉJÀ en course d'élan dès la réception → arrive à grande vitesse." },
     { id: 's5', startTime: 1.9, title: '5. Combinaisons rapides', description: 'Le passeur peut tenter une rapide centrale + 2 attaquants en aile + pointu arrière.' },
   ],
   summary: {
@@ -210,7 +210,7 @@ const RECEPTION_2: Scenario = {
     commonMistakes: [
       'Adopter ce système contre un service puissant → réceptions catastrophiques.',
       'R4 attaquant qui ne démarre pas son élan en parallèle → option perdue.',
-      'Pas d\'annonce → flottement entre les 2 réceptionneurs.',
+      "Pas d'annonce → flottement entre les 2 réceptionneurs.",
     ],
   },
 };
@@ -248,15 +248,15 @@ const RECEPTION_4_2: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Disposition 4-2', description: '2 passeurs en opposition. Le passeur avant (P2) sort de la réception, le central avant aussi. 4 réceptionneurs.' },
-    { id: 's2', startTime: 0.3, title: '2. Couverture en trapèze', description: '4 zones plus larges qu\'en W. Le R4 gauche prend la balle dans son couloir.' },
+    { id: 's2', startTime: 0.3, title: '2. Couverture en trapèze', description: "4 zones plus larges qu'en W. Le R4 gauche prend la balle dans son couloir." },
     { id: 's3', startTime: 1.0, title: '3. Cible passeur fixe', description: 'Pas de pénétration : le passeur en P2 attend la balle.' },
-    { id: 's4', startTime: 1.9, title: '4. Distribution', description: 'Le passeur distribue. Pas d\'option centrale puisque le central arrière n\'attaque pas en avant (en 4-2).' },
+    { id: 's4', startTime: 1.9, title: '4. Distribution', description: "Le passeur distribue. Pas d'option centrale puisque le central arrière n'attaque pas en avant (en 4-2)." },
     { id: 's5', startTime: 2.4, title: '5. Attaque rapide', description: 'Le R4 gauche, déjà avancé, frappe rapidement.' },
   ],
   summary: {
     keyPoints: [
       'Réception à 4 = système 4-2. 2 joueurs avant sortis (passeur + central avant).',
-      'Zones plus grandes qu\'en W mais moins exigeant que la réception à 3.',
+      "Zones plus grandes qu'en W mais moins exigeant que la réception à 3.",
       'Cible facile : le passeur ne bouge pas.',
       'Inconvénient : seulement 2 attaquants devant.',
     ],
@@ -305,7 +305,7 @@ const RECEPTION_P4: Scenario = {
     { type: 'player_pose', time: 1.9, id: 'P', pose: 'SET', duration: 0.2 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Décalage à gauche', description: 'AVANT la frappe : passeur et central se placent le PLUS À GAUCHE possible, dans les règles d\'alignement.' },
+    { id: 's1', startTime: 0, title: '1. Décalage à gauche', description: "AVANT la frappe : passeur et central se placent le PLUS À GAUCHE possible, dans les règles d'alignement." },
     { id: 's2', startTime: 0, title: '2. R4 libre en zone 6', description: 'Ce décalage ouvre la zone 6 pour que le R4 puisse y réceptionner sans conflit.' },
     { id: 's3', startTime: 0.3, title: '3. Lecture du service', description: 'Le R4 en P6 annonce sa prise. Trois réceptionneurs : R4 + libéro + pointu (parfois).' },
     { id: 's4', startTime: 1.0, title: '4. Pénétration + permutation', description: 'Le passeur fonce vers 2-3. Simultanément, le R4* en P2 traverse vers P4 pour attaquer.' },
@@ -316,12 +316,12 @@ const RECEPTION_P4: Scenario = {
       'En P4, le passeur et le central DOIVENT se décaler à gauche au service.',
       'Ce décalage ouvre la zone 6 pour la réception du R4 en P6.',
       'Permutation P↔R4* obligatoire pendant la passe.',
-      'Le pointu (en P1) ne réceptionne pas et reste prêt à l\'attaque arrière.',
+      "Le pointu (en P1) ne réceptionne pas et reste prêt à l'attaque arrière.",
     ],
     commonMistakes: [
       'Décalage oublié → conflit de réception en zone 6.',
       'Permutation tardive → R4* attaque en P2 (mauvais côté).',
-      'Pointu qui réceptionne → perd l\'option d\'attaque arrière.',
+      "Pointu qui réceptionne → perd l'option d'attaque arrière.",
     ],
   },
 };
@@ -358,10 +358,10 @@ const RECEPTION_5V5_4: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration 5v5', description: 'Le passeur (en P2) sort. 4 réceptionneurs forment un U : 2 sur les 3m, 2 au fond.' },
-    { id: 's2', startTime: 0.3, title: '2. Annonce arrière', description: 'L\'arrière gauche annonce sa prise dans son couloir.' },
+    { id: 's2', startTime: 0.3, title: '2. Annonce arrière', description: "L'arrière gauche annonce sa prise dans son couloir." },
     { id: 's3', startTime: 1.0, title: '3. Manchette précise', description: 'Cible : zone 2, où le passeur attend déjà au filet.' },
     { id: 's4', startTime: 1.9, title: '4. Distribution', description: 'Pas de pénétration en 5v5 (souvent passeur avant fixe). Distribution rapide.' },
-    { id: 's5', startTime: 2.4, title: '5. Attaque sur l\'aile', description: 'L\'avant gauche attaque immédiatement. La couverture se fait à 3 (pas 5 comme en 6v6).' },
+    { id: 's5', startTime: 2.4, title: "5. Attaque sur l'aile", description: "L'avant gauche attaque immédiatement. La couverture se fait à 3 (pas 5 comme en 6v6)." },
   ],
   summary: {
     keyPoints: [
@@ -372,7 +372,7 @@ const RECEPTION_5V5_4: Scenario = {
     ],
     commonMistakes: [
       'Forme U trop étroite → grandes diagonales non couvertes.',
-      'Joueur faible en réception → l\'isoler dans la plus petite zone.',
+      "Joueur faible en réception → l'isoler dans la plus petite zone.",
       'Passeur qui pénètre quand même → confusion avec le 6v6 standard.',
     ],
   },
@@ -413,9 +413,9 @@ const RECEPTION_5V5_PENTAGON: Scenario = {
   steps: [
     { id: 's1', startTime: 0, title: '1. Pentagone à 5', description: 'Tous les joueurs réceptionnent. Pas de passeur dédié — qui touche en 1ère fait la suite.' },
     { id: 's2', startTime: 0.3, title: '2. Centre prend', description: 'Le joueur central a la zone moyenne. Annonce vocale.' },
-    { id: 's3', startTime: 1.0, title: '3. 2ᵉ touche par celui qui peut', description: 'Le joueur le plus proche du filet (ici l\'avant droit) prend la 2ᵉ touche.' },
-    { id: 's4', startTime: 1.8, title: '4. Passe d\'opportunité', description: 'Distribution à 10 doigts ou en manchette selon la qualité de la réception.' },
-    { id: 's5', startTime: 2.3, title: '5. Attaque', description: 'L\'avant gauche conclut. Système simple, lisible, idéal en initiation.' },
+    { id: 's3', startTime: 1.0, title: '3. 2ᵉ touche par celui qui peut', description: "Le joueur le plus proche du filet (ici l'avant droit) prend la 2ᵉ touche." },
+    { id: 's4', startTime: 1.8, title: "4. Passe d'opportunité", description: 'Distribution à 10 doigts ou en manchette selon la qualité de la réception.' },
+    { id: 's5', startTime: 2.3, title: '5. Attaque', description: "L'avant gauche conclut. Système simple, lisible, idéal en initiation." },
   ],
   summary: {
     keyPoints: [
@@ -466,10 +466,10 @@ const RECEPTION_4V4_LOSANGE: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Disposition losange', description: '4 zones, 4 joueurs : passeur P2 caché au filet, central P3 et R4 P4 sur les 3 m, arrière unique au fond.' },
-    { id: 's2', startTime: 0.2, title: '2. Lecture & annonce', description: 'L\'arrière lit la trajectoire de service en cloche et annonce sa prise.' },
-    { id: 's3', startTime: 0.9, title: '3. Réception manchette', description: 'Réception dirigée vers le passeur en P2 (avant droit). Trajectoire haute pour compenser l\'absence de libéro.' },
+    { id: 's2', startTime: 0.2, title: '2. Lecture & annonce', description: "L'arrière lit la trajectoire de service en cloche et annonce sa prise." },
+    { id: 's3', startTime: 0.9, title: '3. Réception manchette', description: "Réception dirigée vers le passeur en P2 (avant droit). Trajectoire haute pour compenser l'absence de libéro." },
     { id: 's4', startTime: 1.8, title: '4. Passe en touche', description: 'Le passeur, déjà au filet, distribue vers le R4 en zone 4. Pas de pénétration nécessaire (variante "passeur avant fixe").' },
-    { id: 's5', startTime: 1.9, title: '5. Course d\'élan', description: 'Le R4 quitte sa zone de réception, prend une course rapide de 3 m vers l\'aile gauche.' },
+    { id: 's5', startTime: 1.9, title: "5. Course d'élan", description: "Le R4 quitte sa zone de réception, prend une course rapide de 3 m vers l'aile gauche." },
     { id: 's6', startTime: 2.4, title: '6. Attaque', description: 'Armé court, fouetté en diagonale dans le terrain adverse. Avec un seul arrière, la couverture est limitée.' },
   ],
   summary: {
@@ -518,15 +518,15 @@ const RECEPTION_4V4_U: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration en U', description: 'Le passeur est caché en P2. 3 réceptionneurs en U : aile gauche, fond centre, aile droite.' },
-    { id: 's2', startTime: 0.2, title: '2. Annonce de l\'aile gauche', description: 'L\'aile gauche prend la balle dans son couloir. Chaque joueur couvre ~1/3 de la largeur.' },
+    { id: 's2', startTime: 0.2, title: "2. Annonce de l'aile gauche", description: "L'aile gauche prend la balle dans son couloir. Chaque joueur couvre ~1/3 de la largeur." },
     { id: 's3', startTime: 0.9, title: '3. Manchette précise', description: 'Cible : zone 2 (passeur déjà au filet). Trajectoire haute.' },
-    { id: 's4', startTime: 1.8, title: '4. Distribution', description: 'Le passeur n\'a pas à pénétrer. Distribution rapide vers l\'aile gauche.' },
-    { id: 's5', startTime: 2.4, title: '5. Attaque immédiate', description: 'L\'aile gauche enchaîne réception + course d\'élan + frappe.' },
+    { id: 's4', startTime: 1.8, title: '4. Distribution', description: "Le passeur n'a pas à pénétrer. Distribution rapide vers l'aile gauche." },
+    { id: 's5', startTime: 2.4, title: '5. Attaque immédiate', description: "L'aile gauche enchaîne réception + course d'élan + frappe." },
   ],
   summary: {
     keyPoints: [
       'Réception en U = configuration 4v4 compétitive la plus efficace.',
-      '3 réceptionneurs spécialisés + passeur sorti = 1 joueur disponible pour l\'attaque sans avoir réceptionné.',
+      "3 réceptionneurs spécialisés + passeur sorti = 1 joueur disponible pour l'attaque sans avoir réceptionné.",
       'Cible zone 2 (passeur fixe) → distribution rapide.',
       'Plus exigeant techniquement que le losange mais plus offensif.',
     ],

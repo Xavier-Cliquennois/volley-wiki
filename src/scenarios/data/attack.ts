@@ -45,7 +45,7 @@ const ATTACK_5_1_P1: Scenario = {
     { id: 's3', startTime: 1.0, title: '3. Pénétration du passeur', description: 'Le passeur quitte P1 et pénètre vers la zone 2-3 dès la frappe du serveur, perpendiculaire au filet.' },
     { id: 's4', startTime: 1.5, title: '4. Bloc adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer la diagonale et la ligne.' },
     { id: 's5', startTime: 1.9, title: '5. Passe en touche', description: 'Passe haute en cloche vers le R4 en zone 4. La trajectoire fixe le contre adverse à droite.' },
-    { id: 's6', startTime: 2.0, title: '6. Course d\'élan', description: 'Le R4 décolle large, prend une course en 3-4 m, déclenche l\'impulsion derrière la ligne d\'attaque.' },
+    { id: 's6', startTime: 2.0, title: "6. Course d'élan", description: "Le R4 décolle large, prend une course en 3-4 m, déclenche l'impulsion derrière la ligne d'attaque." },
     { id: 's7', startTime: 2.5, title: '7. Armé et fouetté', description: 'Armé du bras dorsal, épaule codée, fouetté vers le bas. La balle traverse la diagonale longue.' },
     { id: 's8', startTime: 3.0, title: '8. Reset & couverture', description: 'Réception équilibrée, le passeur et le central couvrent à 1,5 m en position basse pour un éventuel block adverse.' },
   ],
@@ -106,20 +106,20 @@ const ATTACK_5_1_P2: Scenario = {
     { id: 's2', startTime: 1.0, title: '2. Réception du libéro', description: 'Manchette dirigée vers le passeur déjà en P2 — pas de pénétration nécessaire.' },
     { id: 's3', startTime: 1.5, title: '3. Bloc adverse central', description: 'Les contreurs se regroupent au centre car ils savent que le pointu attaquera à gauche dans cette rotation.' },
     { id: 's4', startTime: 1.9, title: '4. Passe vers le pointu', description: 'Le passeur, surpris au filet, distribue exceptionnellement vers la zone 4 où le pointu prend le relais.' },
-    { id: 's5', startTime: 2.0, title: '5. Course d\'élan du pointu', description: 'Le pointu attaque à gauche pour ne pas bousculer le passeur en zone 2. Configuration rare mais incontournable en P2.' },
-    { id: 's6', startTime: 2.5, title: '6. Frappe en diagonale', description: 'Frappe puissante en diagonale longue pour exploiter l\'espace laissé par le bloc.' },
+    { id: 's5', startTime: 2.0, title: "5. Course d'élan du pointu", description: 'Le pointu attaque à gauche pour ne pas bousculer le passeur en zone 2. Configuration rare mais incontournable en P2.' },
+    { id: 's6', startTime: 2.5, title: '6. Frappe en diagonale', description: "Frappe puissante en diagonale longue pour exploiter l'espace laissé par le bloc." },
   ],
   summary: {
     keyPoints: [
       'Rotation P2 = la plus pauvre offensivement (seulement 2 attaquants devant).',
       'Passeur déjà en place : zéro pénétration, distribution facile.',
       'Le pointu attaque exceptionnellement à gauche (poste 4) pour libérer le passeur.',
-      'Privilégier les ailes et l\'attaque arrière des R4 en option.',
+      "Privilégier les ailes et l'attaque arrière des R4 en option.",
     ],
     commonMistakes: [
-      'Passeur qui veut faire un set en 2 alors qu\'il y est déjà → 2ᵉ touche difficile.',
+      "Passeur qui veut faire un set en 2 alors qu'il y est déjà → 2ᵉ touche difficile.",
       'Pointu qui hésite entre 2 et 4 → contre adverse en place.',
-      'Centraux qui ne fixent pas → bloc à 2 facile pour l\'adversaire.',
+      "Centraux qui ne fixent pas → bloc à 2 facile pour l'adversaire.",
     ],
   },
 };
@@ -170,7 +170,7 @@ const ATTACK_5_1_P3: Scenario = {
     { id: 's3', startTime: 1.5, title: '3. Lecture du bloc adverse', description: 'Les contreurs adverses se concentrent sur les ailes — la zone 6 reste libre.' },
     { id: 's4', startTime: 1.9, title: '4. Passe en pipe', description: 'Le passeur distribue tendue vers le poste 6 : trajectoire rapide, à 2 m du filet.' },
     { id: 's5', startTime: 2.0, title: '5. Course du pointu', description: 'Le pointu, en P6, lance sa course derrière la ligne des 3 m pour la pipe.' },
-    { id: 's6', startTime: 2.5, title: '6. Pipe au cœur', description: 'Frappe puissante au centre, là où le bloc à 2 ailier ne peut pas former d\'écran. Option clé du 5-1 moderne.' },
+    { id: 's6', startTime: 2.5, title: '6. Pipe au cœur', description: "Frappe puissante au centre, là où le bloc à 2 ailier ne peut pas former d'écran. Option clé du 5-1 moderne." },
   ],
   summary: {
     keyPoints: [
@@ -181,7 +181,7 @@ const ATTACK_5_1_P3: Scenario = {
     ],
     commonMistakes: [
       'Pipe trop haute → bloc adverse a le temps de revenir au centre.',
-      'R4 arrière qui décolle dans la zone avant → faute d\'attaque arrière.',
+      "R4 arrière qui décolle dans la zone avant → faute d'attaque arrière.",
       'Permutation trop tardive du central → blocage de la zone 3.',
     ],
   },
@@ -237,20 +237,20 @@ const ATTACK_5_1_P4: Scenario = {
     { id: 's2', startTime: 0.2, title: '2. Décalage tactique', description: 'Le passeur et le central se placent le plus à gauche possible pour ouvrir la zone de réception au libéro.' },
     { id: 's3', startTime: 1.0, title: '3. Réception du libéro', description: 'Manchette dirigée vers la cible classique (entre P2 et P3).' },
     { id: 's4', startTime: 1.0, title: '4. Permutation P↔R4*', description: 'Le passeur quitte P4 vers 2-3 ; le R4* quitte P2 vers 4 pour attaquer. Croisement essentiel.' },
-    { id: 's5', startTime: 1.9, title: '5. Passe en zone 4', description: 'Passe haute vers l\'aile gauche où le R4* est arrivé.' },
-    { id: 's6', startTime: 2.5, title: '6. Attaque sur l\'aile', description: 'Frappe en diagonale longue. Avec un passeur avant (donc petit au bloc), l\'attaque doit conclure rapidement.' },
+    { id: 's5', startTime: 1.9, title: '5. Passe en zone 4', description: "Passe haute vers l'aile gauche où le R4* est arrivé." },
+    { id: 's6', startTime: 2.5, title: "6. Attaque sur l'aile", description: "Frappe en diagonale longue. Avec un passeur avant (donc petit au bloc), l'attaque doit conclure rapidement." },
   ],
   summary: {
     keyPoints: [
       'Rotation P4 = passeur avant. Permutation P↔R4* obligatoire.',
       '2 attaquants devant : R4* en 4, central en 3. Pipe ou pointu arrière en option.',
       'Le passeur et le central se décalent à gauche au service pour libérer la zone 6.',
-      'Le pointu (en P1) ne réceptionne pas et reste prêt pour l\'attaque arrière.',
+      "Le pointu (en P1) ne réceptionne pas et reste prêt pour l'attaque arrière.",
     ],
     commonMistakes: [
       'Permutation oubliée → le R4* reste à droite, attaquant en mauvaise position.',
       'Passeur et central trop à droite au service → conflit de réception en zone 6.',
-      'Bloc adverse non fixé par le central → bloc à 2 facile sur l\'aile gauche.',
+      "Bloc adverse non fixé par le central → bloc à 2 facile sur l'aile gauche.",
     ],
   },
 };
@@ -366,14 +366,14 @@ const ATTACK_5_1_P6: Scenario = {
     { id: 's1', startTime: 0, title: '1. Service côté gauche', description: 'Service vers la zone 5. Le libéro réceptionne dans son couloir.' },
     { id: 's2', startTime: 0.4, title: '2. Permutation Pt↔C', description: 'Le pointu glisse en zone 2 ; le central prend le centre du filet pour préparer la rapide.' },
     { id: 's3', startTime: 1.0, title: '3. Pénétration médiane', description: 'Le passeur traverse depuis P6 vers la zone 2-3 (trajet médian, plus court que P5).' },
-    { id: 's4', startTime: 1.6, title: '4. Pré-saut du central', description: 'Le central décolle déjà avant la passe — c\'est le tempo 1 (rapide tendue).' },
-    { id: 's5', startTime: 1.9, title: '5. Passe rapide tendue', description: 'Le passeur envoie une balle rapide à 1 m, juste devant lui. Le central est déjà en l\'air.' },
-    { id: 's6', startTime: 2.0, title: '6. Frappe au centre', description: 'Frappe rapide centrale qui surprend le contre adverse avant qu\'il ne soit en place.' },
+    { id: 's4', startTime: 1.6, title: '4. Pré-saut du central', description: "Le central décolle déjà avant la passe — c'est le tempo 1 (rapide tendue)." },
+    { id: 's5', startTime: 1.9, title: '5. Passe rapide tendue', description: "Le passeur envoie une balle rapide à 1 m, juste devant lui. Le central est déjà en l'air." },
+    { id: 's6', startTime: 2.0, title: '6. Frappe au centre', description: "Frappe rapide centrale qui surprend le contre adverse avant qu'il ne soit en place." },
   ],
   summary: {
     keyPoints: [
       'P6 = pénétration médiane. Idéal pour les combinaisons rapides.',
-      'Tempo 1 : central déjà en l\'air au moment où le passeur touche le ballon.',
+      "Tempo 1 : central déjà en l'air au moment où le passeur touche le ballon.",
       'Le central fixe le contre adverse central : libère les ailes pour les R4.',
       'Permutation Pt↔C systématique pour replacer le central au centre.',
     ],
@@ -425,16 +425,16 @@ const ATTACK_4_2: Scenario = {
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration 4-2', description: '2 passeurs en opposition diagonale (P2 et P5). Le passeur en avant (P1) fait toujours la 2ᵉ touche.' },
     { id: 's2', startTime: 1.0, title: '2. Réception centrale', description: 'Le central arrière fait la première touche dans une réception en W classique.' },
-    { id: 's3', startTime: 1.5, title: '3. Bloc adverse', description: 'Bloc à 2 sur la zone 4 — l\'adversaire sait qu\'il n\'y a que 2 attaquants devant.' },
-    { id: 's4', startTime: 1.9, title: '4. Passe directe', description: 'Le passeur avant n\'a qu\'à distribuer : pas de pénétration, pas de permutation.' },
-    { id: 's5', startTime: 2.5, title: '5. Attaque sur l\'aile', description: 'Le R4 attaque en zone 4. Pas d\'option centrale puisque le central a réceptionné.' },
+    { id: 's3', startTime: 1.5, title: '3. Bloc adverse', description: "Bloc à 2 sur la zone 4 — l'adversaire sait qu'il n'y a que 2 attaquants devant." },
+    { id: 's4', startTime: 1.9, title: '4. Passe directe', description: "Le passeur avant n'a qu'à distribuer : pas de pénétration, pas de permutation." },
+    { id: 's5', startTime: 2.5, title: "5. Attaque sur l'aile", description: "Le R4 attaque en zone 4. Pas d'option centrale puisque le central a réceptionné." },
   ],
   summary: {
     keyPoints: [
       '4-2 : 2 passeurs + 2 centraux + 2 R4. Toujours 2 attaquants devant.',
       'Le passeur avant (en P2 ou P3 selon variante) fait systématiquement la 2ᵉ touche.',
       'Pas de pénétration, pas de permutation : système le plus simple à apprendre.',
-      'Idéal en M13/M15 ou en initiation adulte. Favorise l\'apprentissage des rotations.',
+      "Idéal en M13/M15 ou en initiation adulte. Favorise l'apprentissage des rotations.",
     ],
     commonMistakes: [
       'Passeur avant qui réceptionne aussi → impossible de faire la 2ᵉ touche.',
@@ -543,10 +543,10 @@ const ATTACK_5V5_PENTAGON: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Pentagone offensif', description: '5 joueurs en pentagone : 3 devant (R4, C, P) + 2 arrière. Couverture régulière.' },
-    { id: 's2', startTime: 1.0, title: '2. Réception arrière', description: 'L\'arrière gauche prend la première balle. Sans libéro, l\'arrière le plus solide en réception.' },
-    { id: 's3', startTime: 1.5, title: '3. Bloc adverse à 2', description: 'Le bloc adverse en pentagone aussi : 2 contreurs sur l\'aile.' },
+    { id: 's2', startTime: 1.0, title: '2. Réception arrière', description: "L'arrière gauche prend la première balle. Sans libéro, l'arrière le plus solide en réception." },
+    { id: 's3', startTime: 1.5, title: '3. Bloc adverse à 2', description: "Le bloc adverse en pentagone aussi : 2 contreurs sur l'aile." },
     { id: 's4', startTime: 1.9, title: '4. Passe en zone 4', description: 'Le passeur, déjà au filet, distribue facilement. Pas de pénétration en 5v5.' },
-    { id: 's5', startTime: 2.5, title: '5. Attaque sur l\'aile', description: 'L\'aile gauche conclut. La défense au sol est plus rare avec un seul arrière par couloir.' },
+    { id: 's5', startTime: 2.5, title: "5. Attaque sur l'aile", description: "L'aile gauche conclut. La défense au sol est plus rare avec un seul arrière par couloir." },
   ],
   summary: {
     keyPoints: [
@@ -558,7 +558,7 @@ const ATTACK_5V5_PENTAGON: Scenario = {
     commonMistakes: [
       'Pas de libéro en 5v5 → tous les arrières doivent savoir réceptionner.',
       'Vouloir bloquer à 3 → seulement 2 défenseurs au sol restants.',
-      'Oublier la couverture d\'attaque → un joueur en moins en couverture.',
+      "Oublier la couverture d'attaque → un joueur en moins en couverture.",
     ],
   },
 };
@@ -598,18 +598,18 @@ const ATTACK_4V4_LOSANGE: Scenario = {
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Disposition losange', description: '4 zones, 4 joueurs : passeur en P3 caché au filet, 2 ailes sur les 3m, arrière unique au fond.' },
-    { id: 's2', startTime: 0.2, title: '2. Réception arrière', description: 'L\'arrière unique fait la première touche. Pas de libéro en 4v4.' },
+    { id: 's2', startTime: 0.2, title: '2. Réception arrière', description: "L'arrière unique fait la première touche. Pas de libéro en 4v4." },
     { id: 's3', startTime: 0.9, title: '3. Manchette précise', description: 'Réception haute en cloche pour donner du temps au passeur central.' },
-    { id: 's4', startTime: 1.8, title: '4. Passe vers la gauche', description: 'Le passeur distribue vers l\'aile gauche. Variante "passeur centre" du 4v4.' },
-    { id: 's5', startTime: 1.9, title: '5. Course d\'élan courte', description: 'L\'aile gauche, déjà sur les 3 m, prend une course courte de 2 m vers la gauche.' },
-    { id: 's6', startTime: 2.4, title: '6. Frappe diagonale', description: 'Frappe puissante en diagonale. Avec un seul bloc adverse, l\'angle est ouvert.' },
+    { id: 's4', startTime: 1.8, title: '4. Passe vers la gauche', description: `Le passeur distribue vers l'aile gauche. Variante "passeur centre" du 4v4.` },
+    { id: 's5', startTime: 1.9, title: "5. Course d'élan courte", description: "L'aile gauche, déjà sur les 3 m, prend une course courte de 2 m vers la gauche." },
+    { id: 's6', startTime: 2.4, title: '6. Frappe diagonale', description: "Frappe puissante en diagonale. Avec un seul bloc adverse, l'angle est ouvert." },
   ],
   summary: {
     keyPoints: [
       'Format losange = la formation 4v4 la plus utilisée.',
       'Variante "passeur centre" : passeur en P3, distribue à gauche ou à droite.',
-      'Bloc adverse à 1 standard en 4v4 : angle d\'attaque large.',
-      'Couverture limitée : 3 joueurs autour de l\'attaquant maximum.',
+      "Bloc adverse à 1 standard en 4v4 : angle d'attaque large.",
+      "Couverture limitée : 3 joueurs autour de l'attaquant maximum.",
     ],
     commonMistakes: [
       'Passeur qui réceptionne aussi → impossible de passer derrière.',
@@ -658,8 +658,8 @@ const ATTACK_4V4_SQUARE: Scenario = {
     { id: 's1', startTime: 0, title: '1. Configuration carré', description: '2 joueurs au filet (P2 et P4), 2 joueurs au fond. Couverture équilibrée.' },
     { id: 's2', startTime: 0.9, title: '2. Réception haute', description: 'Manchette en cloche vers le passeur-attaquant en zone 2.' },
     { id: 's3', startTime: 1.4, title: '3. Bloc adverse à 2', description: 'Bloc à 2 adverse possible avec 2 contreurs au filet — défense plus difficile.' },
-    { id: 's4', startTime: 1.8, title: '4. Passe vers l\'aile', description: 'Le passeur distribue vers l\'attaquant en zone 4. Pas d\'option centrale (pas de central spécialisé).' },
-    { id: 's5', startTime: 2.4, title: '5. Frappe contre bloc à 2', description: 'L\'attaquant doit choisir : ligne courte, diagonale longue ou tip dans le couloir laissé.' },
+    { id: 's4', startTime: 1.8, title: "4. Passe vers l'aile", description: "Le passeur distribue vers l'attaquant en zone 4. Pas d'option centrale (pas de central spécialisé)." },
+    { id: 's5', startTime: 2.4, title: '5. Frappe contre bloc à 2', description: "L'attaquant doit choisir : ligne courte, diagonale longue ou tip dans le couloir laissé." },
   ],
   summary: {
     keyPoints: [

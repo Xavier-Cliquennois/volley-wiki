@@ -16,21 +16,21 @@ function VideoLink({ title, url }: { title: string; url: string }) {
 }
 
 const PHASES = [
-  ['Initiation', 'Lecture du set et décision de l\'approche'],
-  ['Wind-up', 'Début de la course d\'élan'],
-  ['Cocking', 'Coude au-dessus de l\'épaule, main derrière l\'oreille — position de puissance'],
+  ['Initiation', "Lecture du set et décision de l'approche"],
+  ['Wind-up', "Début de la course d'élan"],
+  ['Cocking', "Coude au-dessus de l'épaule, main derrière l'oreille — position de puissance"],
   ['Accélération', 'Rotation séquentielle : hanches → tronc → épaule → coude → poignet'],
   ['Contact + suivi', 'Snap du poignet, la main "griffe" la balle par-dessus → topspin'],
 ];
 
 const APPROACH_3 = [
-  ['Pas 1 (gauche)', 'Pas court directionnel, orientation vers l\'attaque'],
-  ['Pas 2 (droit)', 'Power step — long et bas, talon d\'abord, abaissement du centre de gravité'],
+  ['Pas 1 (gauche)', "Pas court directionnel, orientation vers l'attaque"],
+  ['Pas 2 (droit)', "Power step — long et bas, talon d'abord, abaissement du centre de gravité"],
   ['Pas 3 (gauche)', 'Closing step — court, freine la translation horizontale et la convertit en vertical'],
 ];
 
 const APPROACH_4 = [
-  ['Pas 1 (droit)', 'Pas d\'observation, rythme lent'],
+  ['Pas 1 (droit)', "Pas d'observation, rythme lent"],
   ['Pas 2 (gauche)', 'Accélération'],
   ['Pas 3 (droit)', 'Power step — le plus important, long et bas'],
   ['Pas 4 (gauche)', 'Closing step parallèle au filet'],
@@ -39,7 +39,7 @@ const APPROACH_4 = [
 const TIMING_TABLE: [string, string][] = [
   ['Haute ball (3e tempo)', 'Commencer TARD — quand la balle quitte les mains du passeur'],
   ['2e tempo (Hut/Go)', 'Commencer quand la passe arrive vers le passeur'],
-  ['1er tempo (Quick)', 'Commencer TÔT — déjà en l\'air quand le passeur touche la balle'],
+  ['1er tempo (Quick)', "Commencer TÔT — déjà en l'air quand le passeur touche la balle"],
   ['Slide', 'Commencer au moment où le passeur reçoit la passe'],
 ];
 
@@ -57,13 +57,13 @@ const ATTACK_TYPES: AttackType[] = [
     id: 'outside',
     name: 'Attaque en zone 4 (Outside / OH)',
     position: 'Aile gauche',
-    description: 'Base d\'apprentissage de l\'attaque. L\'attaquant aile (Outside Hitter) reçoit le plus grand volume de balles — c\'est l\'option "sécurité" du passeur. Approche à 45° depuis la gauche.',
+    description: `Base d'apprentissage de l'attaque. L'attaquant aile (Outside Hitter) reçoit le plus grand volume de balles — c'est l'option "sécurité" du passeur. Approche à 45° depuis la gauche.`,
     keyPoints: [
       'Approche 4 pas à ~45° par rapport au filet',
       'Appel à 30-50 cm du filet',
       'Set "Hut" (3e tempo haut) ou "Go" (2e tempo rapide)',
       'Sauter VERTICALEMENT — pas vers le filet',
-      'Contact légèrement en avant de l\'épaule frappante',
+      "Contact légèrement en avant de l'épaule frappante",
     ],
     shots: ['Cross-court (diagonale)', 'Line shot (ligne latérale)', 'Cut shot (angle court <3 m)', 'Tip (feinte)', 'Roll shot (amortie topspin)'],
   },
@@ -71,11 +71,11 @@ const ATTACK_TYPES: AttackType[] = [
     id: 'middle',
     name: 'Attaque centrale (Quick / 1er tempo)',
     position: 'Avant centre',
-    description: 'L\'attaque la plus rapide. Le central est en l\'air AVANT ou au moment où le passeur touche la balle. Set très bas (30-50 cm) et très court.',
+    description: "L'attaque la plus rapide. Le central est en l'air AVANT ou au moment où le passeur touche la balle. Set très bas (30-50 cm) et très court.",
     keyPoints: [
-      'Déclencher l\'approche TÔT — déjà en l\'air au set du passeur',
+      "Déclencher l'approche TÔT — déjà en l'air au set du passeur",
       'Approche 2-3 pas, bras déjà armé en montant',
-      'Concept "Ghost Middle" : même si la balle n\'arrive pas, courir le quick à fond pour fixer le bloc adverse → libère les ailiers',
+      `Concept "Ghost Middle" : même si la balle n'arrive pas, courir le quick à fond pour fixer le bloc adverse → libère les ailiers`,
       'Contact à 30-50 cm au-dessus du filet',
       'Transition rapide : contre → approche en 1-2 secondes',
     ],
@@ -85,9 +85,9 @@ const ATTACK_TYPES: AttackType[] = [
     id: 'opposite',
     name: 'Attaque en zone 2 (Opposé / Pointu)',
     position: 'Aile droite',
-    description: 'L\'opposé (pointu) attaque depuis la zone 2. Idéal pour les gauchers (épaule frappante côté antenne droite = fenêtre maximale). Pour droitier : rotation du tronc plus prononcée, se positionner plus loin de l\'antenne.',
+    description: "L'opposé (pointu) attaque depuis la zone 2. Idéal pour les gauchers (épaule frappante côté antenne droite = fenêtre maximale). Pour droitier : rotation du tronc plus prononcée, se positionner plus loin de l'antenne.",
     keyPoints: [
-      'Approche symétrique à l\'Outside mais depuis la droite',
+      "Approche symétrique à l'Outside mais depuis la droite",
       'Finir avec pouce vers le bas pour le cut shot',
       'Solution "release" du passeur quand la réception est dégradée',
       'Attaque arrière depuis P1 (zone D) quand en back-row',
@@ -98,12 +98,12 @@ const ATTACK_TYPES: AttackType[] = [
     id: 'backrow',
     name: 'Attaque arrière (Back-row / Pipe)',
     position: 'Arrière centre ou droit',
-    description: 'Attaque depuis la zone arrière. Le plant DOIT se faire DERRIÈRE la ligne des 3 m. Permet d\'avoir 4 attaquants face à 3 contreurs.',
+    description: "Attaque depuis la zone arrière. Le plant DOIT se faire DERRIÈRE la ligne des 3 m. Permet d'avoir 4 attaquants face à 3 contreurs.",
     keyPoints: [
       'Appel obligatoirement derrière la ligne des 3 m (sinon faute)',
       'Atterrissage dans la zone avant après saut légal = OK',
       'Pipe : depuis P6, set arrière du quick (BIC = juste au-dessus du quick)',
-      'Zone D : depuis P1, souvent attaque-refuge de l\'opposé',
+      "Zone D : depuis P1, souvent attaque-refuge de l'opposé",
     ],
     shots: ['Pipe (arrière-centre)', 'Zone D (arrière-droit)', 'Zone A (arrière-gauche, rare)', 'Feinte sur mauvaise passe'],
   },
@@ -113,7 +113,7 @@ const SPECIAL_SHOTS = [
   {
     name: 'Feinte / Tip',
     level: 'Débutant → Intermédiaire',
-    desc: 'Approche IDENTIQUE au smash (déguisement crucial), puis au contact ralentir le bras et placer la balle d\'un coup de doigts. Direction : zone vide repérée AVANT le saut.',
+    desc: "Approche IDENTIQUE au smash (déguisement crucial), puis au contact ralentir le bras et placer la balle d'un coup de doigts. Direction : zone vide repérée AVANT le saut.",
   },
   {
     name: 'Roll shot / Amortie topspin',
@@ -133,10 +133,10 @@ const SPECIAL_SHOTS = [
 ];
 
 const ERRORS = [
-  ['Timing d\'approche', 'Trop tôt : re-saut sans puissance. Trop tard : bras tendu en arrière au contact.'],
+  ["Timing d'approche", 'Trop tôt : re-saut sans puissance. Trop tard : bras tendu en arrière au contact.'],
   ['Mauvais ordre de pieds', 'Terminer toujours sur gauche-droite (droitier) — les deux pieds quasi simultanés.'],
   ['Pas de topspin', 'Main plate = pas de snap = ballon trop long. "Griffer" la balle par-dessus.'],
-  ['Faute de filet', 'Saut vers l\'avant sur set serré. Sauter VERTICAL, pas avant.'],
+  ['Faute de filet', "Saut vers l'avant sur set serré. Sauter VERTICAL, pas avant."],
   ['Faute de back-row', 'Pied sur ou devant la ligne des 3 m au décollage.'],
   ['Atterrissage un pied', 'Sauf pour le slide : atterrir sur les deux pieds pour protéger le genou (risque ACL).'],
 ];
@@ -144,7 +144,7 @@ const ERRORS = [
 const VIDEOS = [
   { title: 'Comment attaquer — 3 étapes (Sikana)', url: 'https://www.youtube.com/watch?v=3aQgfk0VtEA' },
   { title: 'Le smash au volleyball (CEPSUM)', url: 'https://www.youtube.com/watch?v=Gn1Otje3beg' },
-  { title: 'Course d\'attaque détaillée', url: 'https://www.youtube.com/watch?v=ub4XoCJMUzU' },
+  { title: "Course d'attaque détaillée", url: 'https://www.youtube.com/watch?v=ub4XoCJMUzU' },
   { title: 'La Séquence de Seb — tout sur le smash', url: 'https://www.youtube.com/watch?v=JvxZgViw_os' },
   { title: 'Sauter pour attaquer (Sikana)', url: 'https://www.youtube.com/watch?v=6GOHF5cNIKs' },
   { title: 'Attaquer placé (Sikana)', url: 'https://www.youtube.com/watch?v=sCiu8Mqm1d0' },
@@ -173,7 +173,7 @@ export default function GuideAttaque() {
         </div>
         <div className="border-l-4 border-yellow-400 pl-4 py-1 text-sm text-gray-400">
           <strong className="text-white">Contact idéal : </strong>
-          Légèrement en avant de l\'épaule frappante, jamais derrière la tête (perte de puissance + risque blessure). Distance au filet à l\'impulsion : 30-50 cm minimum.
+          Légèrement en avant de l'épaule frappante, jamais derrière la tête (perte de puissance + risque blessure). Distance au filet à l'impulsion : 30-50 cm minimum.
         </div>
       </section>
 

@@ -15,15 +15,15 @@ function VideoLink({ title, url }: { title: string; url: string }) {
 
 const PLATFORM_TIPS = [
   ['Sweet spot', 'La surface de contact idéale se situe entre 2,5 et 15 cm au-dessus des poignets.'],
-  ['Cup and fold', 'Technique recommandée : un poing fermé, l\'autre main qui enveloppe par-dessus — pouces parallèles pointés vers le bas.'],
-  ['Pouces vers le bas', 'Le fait de pointer les pouces vers le sol fait pivoter les avant-bras vers l\'extérieur et resserre la plateforme.'],
+  ['Cup and fold', "Technique recommandée : un poing fermé, l'autre main qui enveloppe par-dessus — pouces parallèles pointés vers le bas."],
+  ['Pouces vers le bas', "Le fait de pointer les pouces vers le sol fait pivoter les avant-bras vers l'extérieur et resserre la plateforme."],
   ['Ne jamais entrelacer', 'Ne JAMAIS entrelacer les doigts sur un service puissant — risque de fracture.'],
-  ['L\'angle commande', '"Le ballon va où la plateforme regarde" — pour réception profonde : plateforme à 45° ; réception courte : plateforme plus parallèle au sol.'],
+  ["L'angle commande", '"Le ballon va où la plateforme regarde" — pour réception profonde : plateforme à 45° ; réception courte : plateforme plus parallèle au sol.'],
 ];
 
 const STEPS = [
   'Lire le serveur : identifier le type de service avant le contact.',
-  'Ready position bras dissociés (NON joints à l\'avance).',
+  "Ready position bras dissociés (NON joints à l'avance).",
   'Lire la trajectoire dès la frappe adverse.',
   'Se déplacer (pas chassés), arriver DERRIÈRE le ballon avant que les bras se joignent.',
   'Build the platform early : joindre les mains quand le ballon arrive, pas trop tôt.',
@@ -43,7 +43,7 @@ const DISPLACEMENTS = [
   },
   {
     name: 'Arrière (drop step)',
-    desc: 'Pivoter le pied puis pas chassés arrière. JAMAIS courir en marche arrière (perte d\'équilibre). Si trop tard pour reculer : pivoter et créer une plateforme sur le côté.',
+    desc: "Pivoter le pied puis pas chassés arrière. JAMAIS courir en marche arrière (perte d'équilibre). Si trop tard pour reculer : pivoter et créer une plateforme sur le côté.",
   },
 ];
 
@@ -66,7 +66,7 @@ const SYSTEMS = [
 
 const READING_TABLE: [string, string][] = [
   ['Cuillère / underhand', 'Position normale, prendre le ballon haut'],
-  ['Float debout', 'Position haute, avancer pour le prendre tôt avant qu\'il dévie'],
+  ['Float debout', "Position haute, avancer pour le prendre tôt avant qu'il dévie"],
   ['Topspin', 'Position basse, prêt à reculer, plateforme angulée'],
   ['Jump float', 'Peut se traiter en passe haute (overhand) à 4 m du filet'],
   ['Jump topspin', 'Position basse, recul anticipé, plateforme rigide passive'],
@@ -76,17 +76,17 @@ const READING_TABLE: [string, string][] = [
 const READING_CUES = [
   'Position du serveur sur la ligne → angle préféré',
   'Hauteur et placement du lancer : haut+arrière → topspin ; bas+devant → float',
-  'Longueur de la course d\'élan : longue → jump topspin ; courte → jump float',
+  "Longueur de la course d'élan : longue → jump topspin ; courte → jump float",
   'Direction des épaules du serveur au contact → direction de la balle',
 ];
 
 const ERRORS = [
   ['Swinging arms', 'Cause #1 — bras qui balaient au contact, ballon imprévisible. Correctif : "la plateforme est passive, les jambes sont actives".'],
-  ['Plateforme cassée', 'Un avant-bras plus haut que l\'autre — verrouiller les coudes et pousser les pouces vers le bas.'],
-  ['Bras joints trop tôt', 'Ralentit le déplacement et empêche le choix tardif manchette/mains. Joindre les mains uniquement à l\'arrivée.'],
-  ['Tronc trop droit', 'La plateforme passe sous le ballon → balle trop loin du filet. S\'incliner à 30-45° vers l\'avant.'],
+  ['Plateforme cassée', "Un avant-bras plus haut que l'autre — verrouiller les coudes et pousser les pouces vers le bas."],
+  ['Bras joints trop tôt', "Ralentit le déplacement et empêche le choix tardif manchette/mains. Joindre les mains uniquement à l'arrivée."],
+  ['Tronc trop droit', "La plateforme passe sous le ballon → balle trop loin du filet. S'incliner à 30-45° vers l'avant."],
   ['Contact au-dessus du nombril', 'Trop haut = contrôle réduit. Viser le contact à hauteur de la taille ou plus bas.'],
-  ['Pas de freeze', 'Encore en mouvement au contact = direction impossible à contrôler. S\'immobiliser complètement.'],
+  ['Pas de freeze', "Encore en mouvement au contact = direction impossible à contrôler. S'immobiliser complètement."],
 ];
 
 const VIDEOS = [
@@ -104,7 +104,7 @@ export default function GuideReception() {
       {/* Règle d'or */}
       <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5">
         <div className="text-yellow-400 text-xs uppercase tracking-wider mb-1">Règle d'or</div>
-        <p className="text-white font-bold text-sm">La manchette détermine 60% du succès offensif d\'une équipe. Sans bonne réception, pas d\'attaque rapide. La plateforme est passive — les jambes sont actives.</p>
+        <p className="text-white font-bold text-sm">La manchette détermine 60% du succès offensif d'une équipe. Sans bonne réception, pas d'attaque rapide. La plateforme est passive — les jambes sont actives.</p>
       </div>
 
       {/* Ready position */}
@@ -114,7 +114,7 @@ export default function GuideReception() {
           <ul className="space-y-2">
             {[
               'Pieds légèrement plus larges que les épaules, un pied légèrement avancé',
-              'Genoux fléchis vers l\'intérieur des pieds, hanches basses, tronc incliné à 30-45°',
+              "Genoux fléchis vers l'intérieur des pieds, hanches basses, tronc incliné à 30-45°",
               'Dos droit, poids sur la plante des pieds (talons légèrement allégés mais pas décollés)',
               'Bras DISSOCIÉS (non joints), fléchis à 90-145°, à hauteur de la taille',
               'Regard sur le serveur dès le lancer du ballon',
@@ -126,7 +126,7 @@ export default function GuideReception() {
           </ul>
           <div className="border-l-4 border-red-500 pl-3 text-sm">
             <strong className="text-red-400">Erreur principale : </strong>
-            <span className="text-gray-400">avoir les bras déjà joints en plateau avant que le ballon n\'arrive — cela ralentit le déplacement et empêche le choix tardif manchette/mains.</span>
+            <span className="text-gray-400">avoir les bras déjà joints en plateau avant que le ballon n'arrive — cela ralentit le déplacement et empêche le choix tardif manchette/mains.</span>
           </div>
         </div>
       </section>
@@ -174,7 +174,7 @@ export default function GuideReception() {
         </div>
         <div className="border-2 border-gray-700 p-4">
           <div className="text-yellow-400 text-xs uppercase tracking-wider mb-2">Manchette à une main — urgence</div>
-          <p className="text-gray-400 text-sm leading-relaxed">Geste de dernier recours quand le ballon est trop loin pour deux bras. Bras tendu, plateforme plate sur l\'avant-bras intérieur, pas de swing — juste un piqué (stab) pour dévier vers le haut. Variante : one-arm stab (poing sur smash puissant), one-arm scoop (paume ouverte vers le haut, ballon bas).</p>
+          <p className="text-gray-400 text-sm leading-relaxed">Geste de dernier recours quand le ballon est trop loin pour deux bras. Bras tendu, plateforme plate sur l'avant-bras intérieur, pas de swing — juste un piqué (stab) pour dévier vers le haut. Variante : one-arm stab (poing sur smash puissant), one-arm scoop (paume ouverte vers le haut, ballon bas).</p>
         </div>
       </section>
 

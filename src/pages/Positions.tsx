@@ -1,16 +1,7 @@
 import { useState } from 'react';
+import { ROLE_COLORS } from '../constants/positions';
 
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6' | 'L';
-
-const ROLE_COLORS: Record<ZoneId, string> = {
-  P2: '#e74c3c',   // setter
-  P1: '#9b59b6',   // opposite
-  P3: '#2ecc71',   // middle
-  P4: '#3498db',   // outside
-  P5: '#3498db',   // outside (back row)
-  P6: '#2ecc71',   // middle (back row)
-  L:  '#f1c40f',   // libero
-};
 
 type Position = {
   id: ZoneId;
@@ -32,9 +23,9 @@ const POSITIONS: Position[] = [
     role: 'Attaquant aile (Outside)',
     row: 'front',
     col: 0,
-    description: 'Zone d\'attaque principale. L\'attaquant aile reçoit la plupart des balles hautes et doit être polyvalent : attaque, contre et réception.',
+    description: "Zone d'attaque principale. L'attaquant aile reçoit la plupart des balles hautes et doit être polyvalent : attaque, contre et réception.",
     skills: ['Attaque', 'Contre', 'Réception', 'Service'],
-    traits: ['Puissance et précision d\'attaque', 'Grande envergure', 'Polyvalence', 'Endurance'],
+    traits: ["Puissance et précision d'attaque", 'Grande envergure', 'Polyvalence', 'Endurance'],
   },
   {
     id: 'P3',
@@ -54,7 +45,7 @@ const POSITIONS: Position[] = [
     role: 'Passeur (Setter)',
     row: 'front',
     col: 2,
-    description: 'Le chef d\'orchestre. Il reçoit la deuxième touche et distribue le jeu vers les attaquants. Sa précision et sa lecture du jeu sont cruciales.',
+    description: "Le chef d'orchestre. Il reçoit la deuxième touche et distribue le jeu vers les attaquants. Sa précision et sa lecture du jeu sont cruciales.",
     skills: ['Passe en touche', 'Lecture du bloc adverse', 'Communication', 'Coordination'],
     traits: ['Précision technique maximale', 'Vision du jeu 360°', 'Sang-froid sous pression', 'Leadership'],
   },
@@ -87,9 +78,9 @@ const POSITIONS: Position[] = [
     role: 'Opposé (Opposite)',
     row: 'back',
     col: 2,
-    description: 'L\'opposé (ou "pointu") est placé en opposition au passeur dans la rotation. Ne participe pas à la réception — c\'est le finisseur de l\'équipe. En arrière 3 rotations sur 6 (il doit attaquer depuis le fond).',
+    description: `L'opposé (ou "pointu") est placé en opposition au passeur dans la rotation. Ne participe pas à la réception — c'est le finisseur de l'équipe. En arrière 3 rotations sur 6 (il doit attaquer depuis le fond).`,
     skills: ['Attaque forte', 'Service', 'Contre', 'Attaque arrière (D/Pipe)'],
-    traits: ['Puissance de frappe maximale', 'Attaque back-row obligatoire (3 rotations/6)', 'Libéré de la réception', '"Pointu" = synonyme exact d\'opposé (FFVolley)'],
+    traits: ['Puissance de frappe maximale', 'Attaque back-row obligatoire (3 rotations/6)', 'Libéré de la réception', `"Pointu" = synonyme exact d'opposé (FFVolley)`],
   },
   {
     id: 'L',

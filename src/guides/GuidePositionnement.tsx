@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Court, Player, Zone, Ball, ZoneLabel } from './CourtDiagram';
+import { ROLE_COLORS } from '../constants/positions';
 
 type ZoneTab = 'zone4' | 'zone3' | 'zone2';
 
@@ -8,10 +9,10 @@ function Zone4Tab() {
     <div className="space-y-4">
       <Court>
         <Ball x={15} y={38} />
-        <Zone x={0} y={50} w={28} h={28} type="arriere" />
-        <Zone x={23} y={56} w={35} h={32} type="libero" />
-        <Zone x={58} y={62} w={42} h={38} type="arriere" />
-        <Zone x={70} y={50} w={30} h={24} type="avant" />
+        <Zone x={0} y={50} w={28} h={28} type="arriere" posNumber={5} />
+        <Zone x={23} y={56} w={35} h={32} type="libero" posNumber={6} />
+        <Zone x={58} y={62} w={42} h={38} type="arriere" posNumber={1} />
+        <Zone x={70} y={50} w={30} h={24} type="avant" posNumber={2} />
         <ZoneLabel x={8} y={60} label="Zone 5" type="arriere" />
         <ZoneLabel x={38} y={68} label="Zone 6" type="libero" />
         <ZoneLabel x={72} y={80} label="Zone 1" type="arriere" />
@@ -74,9 +75,9 @@ function Zone3Tab() {
     <div className="space-y-4">
       <Court>
         <Ball x={50} y={38} />
-        <Zone x={0} y={50} w={33} h={50} type="arriere" />
-        <Zone x={33} y={68} w={34} h={32} type="libero" />
-        <Zone x={67} y={50} w={33} h={50} type="arriere" />
+        <Zone x={0} y={50} w={33} h={50} type="arriere" posNumber={5} />
+        <Zone x={33} y={68} w={34} h={32} type="libero" posNumber={6} />
+        <Zone x={67} y={50} w={33} h={50} type="arriere" posNumber={1} />
         <ZoneLabel x={10} y={80} label="Zone 5" type="arriere" />
         <ZoneLabel x={45} y={82} label="Zone 6" type="libero" />
         <ZoneLabel x={78} y={80} label="Zone 1" type="arriere" />
@@ -135,10 +136,10 @@ function Zone2Tab() {
     <div className="space-y-4">
       <Court>
         <Ball x={85} y={38} />
-        <Zone x={0} y={62} w={42} h={38} type="arriere" />
-        <Zone x={40} y={56} w={35} h={32} type="libero" />
-        <Zone x={72} y={50} w={28} h={28} type="arriere" />
-        <Zone x={0} y={50} w={30} h={24} type="avant" />
+        <Zone x={0} y={62} w={42} h={38} type="arriere" posNumber={5} />
+        <Zone x={40} y={56} w={35} h={32} type="libero" posNumber={6} />
+        <Zone x={72} y={50} w={28} h={28} type="arriere" posNumber={1} />
+        <Zone x={0} y={50} w={30} h={24} type="avant" posNumber={4} />
         <ZoneLabel x={16} y={80} label="Zone 5" type="arriere" />
         <ZoneLabel x={55} y={68} label="Zone 6" type="libero" />
         <ZoneLabel x={80} y={60} label="Zone 1" type="arriere" />
@@ -255,7 +256,7 @@ const EXERCICES = [
     materiel: '1 coach ou partenaire avec balles',
     objectif: "Apprendre à identifier rapidement la zone d'attaque",
     steps: [
-      'Le coach se place de l\'autre côté du filet en zone 4, 3 ou 2',
+      "Le coach se place de l'autre côté du filet en zone 4, 3 ou 2",
       'Tu pars du centre du terrain',
       'Le coach annonce la zone et lance la balle',
       'Tu dois te placer dans ta zone défensive en 2–3 secondes',
@@ -269,10 +270,10 @@ const EXERCICES = [
     materiel: '1 passeur, 1 attaquant, plusieurs défenseurs',
     objectif: 'Ajuster ta position selon la qualité de la passe',
     steps: [
-      'Le passeur fait des passes de qualité variable à l\'attaquant',
+      "Le passeur fait des passes de qualité variable à l'attaquant",
       'Passe proche du filet → Tu recules (smash puissant attendu)',
       'Passe loin du filet → Tu avances (feinte probable)',
-      'L\'attaquant frappe et tu défends',
+      "L'attaquant frappe et tu défends",
       'Le coach corrige ta position après chaque balle',
     ],
   },
@@ -285,8 +286,8 @@ const EXERCICES = [
     steps: [
       'Jeu à 6 contre 6, mais en CRIANT tous les appels',
       'Pénalité : -1 point si un joueur ne crie pas "Moi !" sur sa balle',
-      'Bonus : +1 point si toute l\'équipe communique sur un échange',
-      'Chaque joueur doit annoncer la zone d\'attaque adverse',
+      "Bonus : +1 point si toute l'équipe communique sur un échange",
+      "Chaque joueur doit annoncer la zone d'attaque adverse",
     ],
   },
   {
@@ -296,10 +297,10 @@ const EXERCICES = [
     materiel: '1 attaquant, 3 défenseurs arrière',
     objectif: 'Améliorer la défense des balles courtes',
     steps: [
-      'L\'attaquant ne fait QUE des feintes et amorties',
+      "L'attaquant ne fait QUE des feintes et amorties",
       'Les défenseurs doivent tous avancer (3–4m)',
       'Objectif : récupérer 8 balles sur 10',
-      'Puis alterner : 5 feintes, 5 smashes pour travailler l\'adaptation',
+      "Puis alterner : 5 feintes, 5 smashes pour travailler l'adaptation",
     ],
   },
   {
@@ -311,7 +312,7 @@ const EXERCICES = [
     steps: [
       'Jeu normal mais le coach chronomètre les transitions',
       'Objectif : être en position défensive en moins de 3 secondes',
-      'Si trop lent, l\'équipe fait 5 pompes et recommence',
+      "Si trop lent, l'équipe fait 5 pompes et recommence",
       'Augmente progressivement le rythme des échanges',
     ],
   },
@@ -322,8 +323,8 @@ const EXERCICES = [
     materiel: '1 attaquant, défenseurs',
     objectif: 'Anticiper selon le langage corporel',
     steps: [
-      'L\'attaquant alterne smash, feinte, pointe sans prévenir',
-      'Avant qu\'il frappe, le défenseur crie sa prédiction : "Smash !" ou "Feinte !"',
+      "L'attaquant alterne smash, feinte, pointe sans prévenir",
+      `Avant qu'il frappe, le défenseur crie sa prédiction : "Smash !" ou "Feinte !"`,
       'Point si la prédiction est correcte ET la balle défendue',
       'Focus sur : épaule, élan, position par rapport au filet',
     ],
@@ -331,7 +332,7 @@ const EXERCICES = [
 ];
 
 const COMMANDEMENTS = [
-  ['Regarde le passeur', 'Puis l\'attaquant, pas la balle'],
+  ['Regarde le passeur', "Puis l'attaquant, pas la balle"],
   ['Même côté = Avance', 'Côté opposé = Recule'],
   ['Mauvaise passe adverse', '→ Avance de 1–2m (feinte probable)'],
   ['Jamais au milieu', 'Choisis : avancé OU reculé'],
@@ -371,13 +372,13 @@ export default function GuidePositionnement() {
           <div className="relative w-full max-w-[440px] mx-auto bg-gray-800 border border-gray-600 aspect-square">
             <div className="absolute left-0 right-0 bg-yellow-400" style={{ top: '50%', height: '3px', transform: 'translateY(-50%)' }} />
             {/* Notre côté — arrière */}
-            <div className="absolute text-lg font-bold text-gray-500" style={{ left: '10%', top: '82%' }}>5</div>
-            <div className="absolute text-lg font-bold text-gray-500" style={{ left: '50%', top: '82%', transform: 'translateX(-50%)' }}>6</div>
-            <div className="absolute text-lg font-bold text-gray-500" style={{ right: '10%', top: '82%' }}>1</div>
+            <div className="absolute text-lg font-bold" style={{ left: '10%', top: '82%', color: ROLE_COLORS.P5 }}>5</div>
+            <div className="absolute text-lg font-bold" style={{ left: '50%', top: '82%', transform: 'translateX(-50%)', color: ROLE_COLORS.P6 }}>6</div>
+            <div className="absolute text-lg font-bold" style={{ right: '10%', top: '82%', color: ROLE_COLORS.P1 }}>1</div>
             {/* Notre côté — avant */}
-            <div className="absolute text-lg font-bold text-yellow-400" style={{ left: '10%', top: '62%' }}>4</div>
-            <div className="absolute text-lg font-bold text-yellow-400" style={{ left: '50%', top: '62%', transform: 'translateX(-50%)' }}>3</div>
-            <div className="absolute text-lg font-bold text-yellow-400" style={{ right: '10%', top: '62%' }}>2</div>
+            <div className="absolute text-lg font-bold" style={{ left: '10%', top: '62%', color: ROLE_COLORS.P4 }}>4</div>
+            <div className="absolute text-lg font-bold" style={{ left: '50%', top: '62%', transform: 'translateX(-50%)', color: ROLE_COLORS.P3 }}>3</div>
+            <div className="absolute text-lg font-bold" style={{ right: '10%', top: '62%', color: ROLE_COLORS.P2 }}>2</div>
             {/* Adversaires — avant */}
             <div className="absolute text-sm text-gray-700" style={{ left: '10%', top: '35%' }}>4</div>
             <div className="absolute text-sm text-gray-700" style={{ left: '50%', top: '35%', transform: 'translateX(-50%)' }}>3</div>
@@ -389,15 +390,13 @@ export default function GuidePositionnement() {
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-gray-400 uppercase tracking-wider">Notre côté</div>
             <div className="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] text-gray-600 uppercase tracking-wider">Adversaires</div>
           </div>
-          <div className="flex gap-6 justify-center flex-wrap text-xs">
-            <div className="flex items-center gap-2">
-              <span className="w-4 h-4 bg-yellow-400 inline-block" />
-              <span className="text-gray-400">Postes avants (4, 3, 2)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-4 h-4 bg-gray-600 inline-block" />
-              <span className="text-gray-400">Postes arrières (5, 6, 1)</span>
-            </div>
+          <div className="flex gap-4 justify-center flex-wrap text-xs">
+            {([['P4', '4 Outside'], ['P3', '3 Central'], ['P2', '2 Passeur'], ['P5', '5 Outside'], ['P6', '6 Central'], ['P1', '1 Opposé']] as const).map(([key, label]) => (
+              <div key={key} className="flex items-center gap-1">
+                <span className="w-3 h-3 inline-block" style={{ backgroundColor: ROLE_COLORS[key] }} />
+                <span className="text-gray-400">{label}</span>
+              </div>
+            ))}
           </div>
         </div>
         <div className="border-l-4 border-gray-600 pl-4 py-1 text-sm text-gray-400">
@@ -512,11 +511,11 @@ export default function GuidePositionnement() {
             <div className="border-l-4 border-yellow-400 pl-4 space-y-1">
               <div className="text-yellow-400 text-xs uppercase tracking-wider font-bold">S'avancer (3–4m du filet) quand :</div>
               {[
-                'Vous êtes du même côté que l\'attaquant (ex: attaque zone 4, vous êtes poste 5)',
-                'L\'attaquant est loin du filet (mauvaise passe)',
+                "Vous êtes du même côté que l'attaquant (ex: attaque zone 4, vous êtes poste 5)",
+                "L'attaquant est loin du filet (mauvaise passe)",
                 'Vous anticipez une feinte ou amortie',
                 'Le bloc est solide (3 joueurs) — moins de balles puissantes passent',
-                'L\'attaquant est petit ou pas très puissant',
+                "L'attaquant est petit ou pas très puissant",
               ].map((pt, i) => (
                 <div key={i} className="flex items-start gap-2 text-sm text-gray-400">
                   <span className="text-yellow-400 mt-0.5">▸</span>{pt}
@@ -526,9 +525,9 @@ export default function GuidePositionnement() {
             <div className="border-l-4 border-gray-600 pl-4 space-y-1">
               <div className="text-gray-400 text-xs uppercase tracking-wider font-bold">Reculer (6–7m du filet) quand :</div>
               {[
-                'Vous êtes du côté opposé à l\'attaquant (ex: attaque zone 4, vous êtes poste 1)',
-                'L\'attaquant a une bonne passe près du filet',
-                'L\'attaquant est puissant ou grand',
+                "Vous êtes du côté opposé à l'attaquant (ex: attaque zone 4, vous êtes poste 1)",
+                "L'attaquant a une bonne passe près du filet",
+                "L'attaquant est puissant ou grand",
                 'Le bloc est faible (1 seul bloqueur)',
                 'Vous défendez la diagonale (trajectoire la plus longue)',
               ].map((pt, i) => (
@@ -552,7 +551,7 @@ export default function GuidePositionnement() {
           {[
             ['Rester au milieu du terrain', "Beaucoup de débutants restent à 4–5m du filet, dans «no man's land». C'est la zone où vous ne pouvez défendre ni les balles courtes ni les balles longues. Choisissez : avancé OU reculé !"],
             ['Ne pas regarder le bloc', 'La position du bloc détermine où la balle peut passer. Si le bloc ferme bien la ligne, défendez plus la diagonale.'],
-            ['Ne pas bouger après le service', 'Votre position de service n\'est JAMAIS votre position de défense. Dès que le service part, repositionnez-vous selon l\'attaque adverse.'],
+            ['Ne pas bouger après le service', "Votre position de service n'est JAMAIS votre position de défense. Dès que le service part, repositionnez-vous selon l'attaque adverse."],
             ['Défendre la même zone que votre coéquipier', 'Communiquez ! Si deux joueurs vont au même endroit, un espace se crée ailleurs.'],
           ].map(([label, text], i) => (
             <div key={i} className="border-l-4 border-red-500 pl-4 py-2 text-sm">
@@ -577,7 +576,7 @@ export default function GuidePositionnement() {
               ['Ton équipe sert', 'Tu es en position de rotation'],
               ['Le serveur frappe', 'Tu regardes le passeur adverse'],
               ['Le passeur touche la balle', 'Tu te déplaces vers ta zone défensive'],
-              ['L\'attaquant saute', 'Tu es en position finale, prêt à réagir'],
+              ["L'attaquant saute", 'Tu es en position finale, prêt à réagir'],
             ].map(([step, detail], i) => (
               <li key={i} className="flex gap-3 items-start text-sm">
                 <span className="bg-yellow-400 text-black text-xs font-bold w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
@@ -597,27 +596,27 @@ export default function GuidePositionnement() {
         <div className="space-y-3">
           {[
             {
-              moment: 'Avant l\'attaque adverse',
+              moment: "Avant l'attaque adverse",
               calls: [
-                ['"Numéro 4 !"', 'Annonce la zone d\'où vient l\'attaque'],
+                ['"Numéro 4 !"', "Annonce la zone d'où vient l'attaque"],
                 ['"Deux au bloc !"', 'Indique combien de bloqueurs'],
                 ['"Ligne libre !"', 'Si le bloc ne couvre pas la ligne'],
-                ['"J\'avance !" / "Je recule !"', 'Annonce ton mouvement'],
+                [`"J'avance !" / "Je recule !"`, 'Annonce ton mouvement'],
               ],
             },
             {
-              moment: 'Pendant l\'action',
+              moment: "Pendant l'action",
               calls: [
-                ['"Moi !" / "J\'ai !"', 'Tu prends la balle (le PLUS important)'],
+                [`"Moi !" / "J'ai !"`, 'Tu prends la balle (le PLUS important)'],
                 ['"Toi !" / "À toi !"', 'Tu laisses la balle à un coéquipier'],
                 ['"Dehors !"', 'La balle va sortir, ne la touche pas'],
                 ['"Bloquée !"', 'Si tu bloques, annonce-le'],
               ],
             },
             {
-              moment: 'Après l\'action',
+              moment: "Après l'action",
               calls: [
-                ['"Couvrez !"', 'Demande la couverture d\'attaque'],
+                ['"Couvrez !"', "Demande la couverture d'attaque"],
                 ['"Libre !"', 'Balle libre, replacez-vous'],
                 ['"On reste !"', 'On garde la défense en place'],
               ],
@@ -667,7 +666,7 @@ export default function GuidePositionnement() {
               </ul>
               <div className="text-gray-400 text-xs uppercase tracking-wider mt-2">À utiliser quand</div>
               <ul className="space-y-1">
-                {['L\'équipe adverse fait beaucoup de feintes', 'Vous avez un bon triple bloc', 'Les attaquants adverses sont peu puissants'].map((pt, i) => (
+                {["L'équipe adverse fait beaucoup de feintes", 'Vous avez un bon triple bloc', 'Les attaquants adverses sont peu puissants'].map((pt, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-400"><span className="text-yellow-400">▸</span>{pt}</li>
                 ))}
               </ul>
@@ -691,7 +690,7 @@ export default function GuidePositionnement() {
               </ul>
               <div className="text-gray-400 text-xs uppercase tracking-wider mt-2">À utiliser quand</div>
               <ul className="space-y-1">
-                {['Face à des attaquants puissants', 'Votre bloc est faible (1–2 joueurs)', 'L\'équipe adverse privilégie la force'].map((pt, i) => (
+                {['Face à des attaquants puissants', 'Votre bloc est faible (1–2 joueurs)', "L'équipe adverse privilégie la force"].map((pt, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-400"><span className="text-gray-300">▸</span>{pt}</li>
                 ))}
               </ul>
@@ -739,8 +738,8 @@ export default function GuidePositionnement() {
               {[
                 ['Tu défends la balle', 'Passe précise vers le passeur'],
                 ['Si tu es AVANT', 'Cours au filet pour attaquer ou bloquer'],
-                ['Si tu es ARRIÈRE', 'Recule légèrement, prêt à couvrir l\'attaque'],
-                ['Couverture d\'attaque', 'Entoure ton attaquant (en demi-cercle à 2–3m)'],
+                ['Si tu es ARRIÈRE', "Recule légèrement, prêt à couvrir l'attaque"],
+                ["Couverture d'attaque", 'Entoure ton attaquant (en demi-cercle à 2–3m)'],
               ].map(([step, detail], i) => (
                 <li key={i} className="flex gap-3 items-start text-sm">
                   <span className="bg-yellow-400 text-black text-xs font-bold w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
@@ -841,10 +840,10 @@ export default function GuidePositionnement() {
             <ul className="space-y-2">
               {[
                 ['"Chaque balle est récupérable"', 'Ne lâche jamais, même sur les smashes impossibles'],
-                ['"C\'est MON terrain"', 'Défends ta zone avec agressivité'],
+                [`"C'est MON terrain"`, 'Défends ta zone avec agressivité'],
                 ['"Je lis, je réagis, je défends"', 'Processus automatique'],
-                ['"L\'erreur fait partie du jeu"', 'Oublie la dernière balle manquée'],
-                ['"Je suis prêt avant qu\'il saute"', 'Anticipation constante'],
+                [`"L'erreur fait partie du jeu"`, 'Oublie la dernière balle manquée'],
+                [`"Je suis prêt avant qu'il saute"`, 'Anticipation constante'],
               ].map(([quote, detail], i) => (
                 <li key={i} className="text-sm">
                   <div className="text-white font-bold">{quote}</div>
@@ -858,10 +857,10 @@ export default function GuidePositionnement() {
             <ul className="space-y-2">
               {[
                 ['"Cette balle est pour lui"', 'Résultat : personne ne bouge'],
-                ['"J\'ai peur de me tromper"', "L'hésitation tue la défense"],
+                [`"J'ai peur de me tromper"`, "L'hésitation tue la défense"],
                 ['"Je regarde juste la balle"', 'Tu arrives toujours en retard'],
-                ['"C\'était trop fort"', 'État d\'esprit défaitiste'],
-                ['"Je reste ici, c\'est ma position"', 'Le volleyball est mouvement'],
+                [`"C'était trop fort"`, "État d'esprit défaitiste"],
+                [`"Je reste ici, c'est ma position"`, 'Le volleyball est mouvement'],
               ].map(([quote, detail], i) => (
                 <li key={i} className="text-sm">
                   <div className="text-red-400 font-bold">{quote}</div>
@@ -876,7 +875,7 @@ export default function GuidePositionnement() {
           <ol className="space-y-2">
             {[
               ['Respiration profonde', 'Oxygène le cerveau'],
-              ['Position athlétique', 'Jambes écartées, poids sur l\'avant des pieds'],
+              ['Position athlétique', "Jambes écartées, poids sur l'avant des pieds"],
               ['Yeux sur le passeur', 'Concentration maximale'],
               ['Rappel mental', '"Même côté = avance, opposé = recule"'],
               ['Confiance', '"Je vais défendre cette balle"'],
@@ -912,7 +911,7 @@ export default function GuidePositionnement() {
             },
             {
               moment: 'Après le match',
-              items: ['J\'analyse mes placements (vidéo si possible)', 'Je note les situations difficiles', 'Je demande des retours à mon coach', 'Je planifie mes exercices pour la semaine'],
+              items: ["J'analyse mes placements (vidéo si possible)", 'Je note les situations difficiles', 'Je demande des retours à mon coach', 'Je planifie mes exercices pour la semaine'],
             },
           ].map((section, i) => (
             <div key={i} className="border-2 border-gray-700 p-4 space-y-2">

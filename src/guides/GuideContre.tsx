@@ -1,19 +1,19 @@
 const TIMING_STEPS = [
   {
-    title: 'Observez l\'attaquant, pas le ballon',
-    desc: 'Regardez les épaules et le bras de l\'attaquant pour anticiper le moment et la direction de la frappe.',
+    title: "Observez l'attaquant, pas le ballon",
+    desc: "Regardez les épaules et le bras de l'attaquant pour anticiper le moment et la direction de la frappe.",
   },
   {
-    title: 'Sautez APRÈS l\'attaquant',
-    desc: 'Attendez que l\'attaquant soit dans sa phase d\'impulsion. Si vous sautez en même temps ou avant, vous redescendrez trop tôt.',
+    title: "Sautez APRÈS l'attaquant",
+    desc: "Attendez que l'attaquant soit dans sa phase d'impulsion. Si vous sautez en même temps ou avant, vous redescendrez trop tôt.",
   },
   {
     title: 'Le décalage idéal : 0,2 à 0,3 secondes',
-    desc: 'Comptez mentalement "UN" quand l\'attaquant saute, puis sautez immédiatement après. Cette fraction de seconde est cruciale.',
+    desc: `Comptez mentalement "UN" quand l'attaquant saute, puis sautez immédiatement après. Cette fraction de seconde est cruciale.`,
   },
   {
     title: 'Pénétrez au-dessus du filet',
-    desc: 'Au sommet de votre saut, poussez vos mains et bras vers l\'avant et vers le bas — pas juste vers le haut.',
+    desc: "Au sommet de votre saut, poussez vos mains et bras vers l'avant et vers le bas — pas juste vers le haut.",
   },
 ];
 
@@ -23,9 +23,9 @@ const CONTRE_TYPES = [
     objectif: 'Renvoyer le ballon directement dans le camp adverse',
     points: [
       ['Position', 'Mains écartées, doigts tendus et écartés'],
-      ['Action', 'Pénétrer au maximum au-dessus du filet, bras tendus vers l\'avant'],
+      ['Action', "Pénétrer au maximum au-dessus du filet, bras tendus vers l'avant"],
       ['Cible', 'Gainez vos poignets pour rabattre le ballon vers le sol adverse'],
-      ['Quand', 'Quand vous êtes bien placé et que vous avez lu l\'attaque'],
+      ['Quand', "Quand vous êtes bien placé et que vous avez lu l'attaque"],
     ],
   },
   {
@@ -33,18 +33,18 @@ const CONTRE_TYPES = [
     objectif: 'Ralentir le ballon pour permettre à votre défense de récupérer',
     points: [
       ['Position', 'Mains rapprochées, paumes orientées vers vous'],
-      ['Action', 'Absorber l\'impact plutôt que de pousser'],
+      ['Action', "Absorber l'impact plutôt que de pousser"],
       ['Résultat', 'Le ballon retombe doucement dans votre camp pour être joué'],
       ['Quand', 'Quand vous êtes en retard ou mal placé'],
     ],
   },
   {
     name: 'Le contre de fixation',
-    objectif: 'Empêcher certaines zones d\'attaque',
+    objectif: "Empêcher certaines zones d'attaque",
     points: [
       ['Position', 'Bloquer une zone spécifique (ligne ou diagonale)'],
       ['Action', 'Orienter vos mains vers la zone à protéger'],
-      ['Tactique', 'Forcer l\'attaquant à frapper dans une zone où vos défenseurs sont prêts'],
+      ['Tactique', "Forcer l'attaquant à frapper dans une zone où vos défenseurs sont prêts"],
       ['Quand', 'En accord avec votre défense arrière'],
     ],
   },
@@ -54,23 +54,23 @@ const CONTRE_TYPES = [
     points: [
       ['Coordination', 'Sauter ensemble au même moment'],
       ['Placement', 'Les contreurs extérieurs se placent en fonction du contreur central'],
-      ['Mains', 'Joindre vos mains avec celles de vos partenaires (pas d\'espace)'],
+      ['Mains', "Joindre vos mains avec celles de vos partenaires (pas d'espace)"],
       ['Communication', 'Un contreur annonce "ligne" ou "diagonale" pour coordonner'],
     ],
   },
 ];
 
 const TIMING_TIPS = [
-  ['Exercice du "un-deux"', 'À l\'entraînement, dites "UN" quand l\'attaquant saute, "DEUX" quand vous sautez. Cela crée le décalage nécessaire.'],
-  ['Regardez les épaules', 'L\'orientation des épaules de l\'attaquant indique la direction de la frappe.'],
+  ['Exercice du "un-deux"', `À l'entraînement, dites "UN" quand l'attaquant saute, "DEUX" quand vous sautez. Cela crée le décalage nécessaire.`],
+  ['Regardez les épaules', "L'orientation des épaules de l'attaquant indique la direction de la frappe."],
   ['Analysez la passe', 'Une passe haute = plus de temps. Une passe tendue = réaction rapide.'],
-  ['Positionnez-vous tôt', 'Mieux vaut être en position d\'attente que de courir au dernier moment.'],
-  ['Travaillez votre détente', 'Plus vous sautez haut, plus vous avez de marge d\'erreur sur le timing.'],
+  ['Positionnez-vous tôt', "Mieux vaut être en position d'attente que de courir au dernier moment."],
+  ['Travaillez votre détente', "Plus vous sautez haut, plus vous avez de marge d'erreur sur le timing."],
 ];
 
 const SAUT_POSITION = [
   'Pieds écartés à la largeur des épaules',
-  'Poids sur l\'avant des pieds',
+  "Poids sur l'avant des pieds",
   'Genoux légèrement fléchis',
   'Bras le long du corps ou légèrement devant',
   'Position à environ 30–50 cm du filet',
@@ -91,29 +91,29 @@ const SAUT_EN_LAIR = [
 ];
 
 const ERREURS = [
-  ['Sauter trop tôt', 'Vous redescendez quand l\'attaquant frappe — attendez plus longtemps !'],
-  ['Regarder le ballon', 'Vous perdez des informations sur l\'attaquant — regardez le joueur !'],
+  ['Sauter trop tôt', "Vous redescendez quand l'attaquant frappe — attendez plus longtemps !"],
+  ['Regarder le ballon', "Vous perdez des informations sur l'attaquant — regardez le joueur !"],
   ['Mains trop molles', 'Le ballon rebondit dans votre camp — tendez et gainez vos doigts !'],
-  ['Sauter vers l\'avant', 'Vous touchez le filet — sautez verticalement !'],
-  ['Baisser les bras trop tôt', 'Gardez vos bras levés jusqu\'à ce que vous retombiez.'],
+  ["Sauter vers l'avant", 'Vous touchez le filet — sautez verticalement !'],
+  ['Baisser les bras trop tôt', "Gardez vos bras levés jusqu'à ce que vous retombiez."],
 ];
 
 const EXERCICES = [
   {
     title: 'Timing avec partenaire',
-    desc: 'Un partenaire fait semblant d\'attaquer (sans ballon). Vous travaillez uniquement le timing de votre saut. Répétez 20 fois.',
+    desc: "Un partenaire fait semblant d'attaquer (sans ballon). Vous travaillez uniquement le timing de votre saut. Répétez 20 fois.",
   },
   {
     title: 'Contre sur attaque fixe',
     desc: 'Un attaquant frappe depuis une position fixe. Concentrez-vous sur le timing et la technique. Augmentez progressivement la vitesse.',
   },
   {
-    title: 'Lecture d\'épaules',
-    desc: 'L\'attaquant varie ses frappes (ligne/diagonale). Essayez de lire ses épaules pour anticiper la direction.',
+    title: "Lecture d'épaules",
+    desc: "L'attaquant varie ses frappes (ligne/diagonale). Essayez de lire ses épaules pour anticiper la direction.",
   },
   {
     title: 'Déplacements + contre',
-    desc: 'Travaillez vos déplacements latéraux rapides suivis d\'un contre. Simule les situations de match.',
+    desc: "Travaillez vos déplacements latéraux rapides suivis d'un contre. Simule les situations de match.",
   },
 ];
 
@@ -216,7 +216,7 @@ export default function GuideContre() {
               ['1. BALLON', 'Voir le ballon partir vers le passeur'],
               ['2. PASSEUR', 'Lire les mains du passeur au moment du contact — direction du set'],
               ['3. BALLON', 'Suivre brièvement le ballon pour confirmer la direction'],
-              ['4. ÉPAULE DU FRAPPEUR', 'Verrouiller sur l\'épaule de l\'attaquant — donne la direction de frappe avant le contact'],
+              ['4. ÉPAULE DU FRAPPEUR', "Verrouiller sur l'épaule de l'attaquant — donne la direction de frappe avant le contact"],
             ].map(([label, text], i) => (
               <li key={i} className="flex items-start gap-2 text-sm">
                 <span className="text-yellow-400 mt-0.5">▸</span>
@@ -263,7 +263,7 @@ export default function GuideContre() {
         <div className="grid md:grid-cols-2 gap-3">
           <div className="border-2 border-yellow-400 bg-yellow-400/5 p-4 space-y-3">
             <h3 className="text-yellow-400 text-xs uppercase tracking-wider font-bold">Read blocking — recommandé</h3>
-            <p className="text-gray-400 text-sm">Le contreur attend la décision du passeur, lit le ballon et l\'attaquant, puis se déplace. Position "bunch read" (tous proches du centre, puis explosion vers le pin).</p>
+            <p className="text-gray-400 text-sm">Le contreur attend la décision du passeur, lit le ballon et l'attaquant, puis se déplace. Position "bunch read" (tous proches du centre, puis explosion vers le pin).</p>
             <ul className="space-y-1">
               {['Stable et présent sur la majorité des sets', 'Préserve les hanches et genoux', 'Adapté à tous les niveaux amateur'].map((pt, i) => (
                 <li key={i} className="flex items-start gap-2 text-xs text-gray-300">
@@ -274,7 +274,7 @@ export default function GuideContre() {
           </div>
           <div className="border-2 border-gray-600 p-4 space-y-3">
             <h3 className="text-gray-300 text-xs uppercase tracking-wider font-bold">Commit blocking — avancé/pro</h3>
-            <p className="text-gray-400 text-sm">Le central décide AVANT le release du passeur de sauter avec le quick. Annule l\'attaque rapide adverse, mais si le passeur sette ailleurs, le central est complètement hors jeu.</p>
+            <p className="text-gray-400 text-sm">Le central décide AVANT le release du passeur de sauter avec le quick. Annule l'attaque rapide adverse, mais si le passeur sette ailleurs, le central est complètement hors jeu.</p>
             <ul className="space-y-1">
               {['Efficace contre les centraux dominants', 'Risque élevé si le passeur adapte', 'Réservé aux joueurs avec excellente lecture'].map((pt, i) => (
                 <li key={i} className="flex items-start gap-2 text-xs text-gray-500">

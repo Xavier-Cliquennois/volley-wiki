@@ -29,8 +29,8 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'attaque',
-    title: 'Guide de l\'attaque',
-    subtitle: 'Course d\'approche, timing, tirs et postes',
+    title: "Guide de l'attaque",
+    subtitle: "Course d'approche, timing, tirs et postes",
     category: 'Technique',
     description: "Les 5 phases du smash, approche 3-4 pas, timing selon la passe, tirs spéciaux et erreurs.",
     readingTime: '~15 min',
