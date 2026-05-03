@@ -198,6 +198,94 @@ export default function GuideContre() {
         </div>
       </section>
 
+      {/* Séquence visuelle élite */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Séquence visuelle élite</h2>
+        <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5 space-y-4">
+          <p className="text-gray-300 text-sm">Les meilleurs contreurs ne regardent pas le ballon — ils suivent une séquence précise :</p>
+          <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
+            {['BALLON', 'PASSEUR', 'BALLON', 'ÉPAULE DU FRAPPEUR'].map((step, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="bg-yellow-400 text-black px-2 py-1 text-xs">{step}</span>
+                {i < 3 && <span className="text-yellow-400">→</span>}
+              </div>
+            ))}
+          </div>
+          <ul className="space-y-1">
+            {[
+              ['1. BALLON', 'Voir le ballon partir vers le passeur'],
+              ['2. PASSEUR', 'Lire les mains du passeur au moment du contact — direction du set'],
+              ['3. BALLON', 'Suivre brièvement le ballon pour confirmer la direction'],
+              ['4. ÉPAULE DU FRAPPEUR', 'Verrouiller sur l\'épaule de l\'attaquant — donne la direction de frappe avant le contact'],
+            ].map(([label, text], i) => (
+              <li key={i} className="flex items-start gap-2 text-sm">
+                <span className="text-yellow-400 mt-0.5">▸</span>
+                <span><strong className="text-white">{label} : </strong><span className="text-gray-400">{text}</span></span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Timing précis par type d'attaque */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Timing précis selon le type d'attaque</h2>
+        <div className="border-2 border-gray-700 overflow-hidden">
+          <table className="w-full text-sm">
+            <thead className="border-b border-gray-700">
+              <tr>
+                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Type d'attaque</th>
+                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Timing du saut contreur</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['Quick / 1er tempo (central)', 'AVEC ou un poil avant le hitter (commit block)'],
+                ['Tendue / 2e tempo ailier', '~0,1s après le hitter'],
+                ['Haute ball ailier (3e tempo)', '0,2–0,3s après le hitter'],
+                ['Set serré près du filet', 'AVEC le hitter'],
+                ['Set éloigné du filet', '~0,5s après ou ne pas sauter'],
+                ['Slide (central)', 'AVEC ou juste après — suivre latéralement'],
+              ].map(([type, timing], i, arr) => (
+                <tr key={i} className={`${i < arr.length - 1 ? 'border-b border-gray-800' : ''} hover:bg-gray-900/50`}>
+                  <td className="px-4 py-3 text-yellow-400 font-bold text-sm">{type}</td>
+                  <td className="px-4 py-3 text-gray-400 text-sm">{timing}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* Read vs Commit blocking */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Read blocking vs Commit blocking</h2>
+        <div className="grid md:grid-cols-2 gap-3">
+          <div className="border-2 border-yellow-400 bg-yellow-400/5 p-4 space-y-3">
+            <h3 className="text-yellow-400 text-xs uppercase tracking-wider font-bold">Read blocking — recommandé</h3>
+            <p className="text-gray-400 text-sm">Le contreur attend la décision du passeur, lit le ballon et l\'attaquant, puis se déplace. Position "bunch read" (tous proches du centre, puis explosion vers le pin).</p>
+            <ul className="space-y-1">
+              {['Stable et présent sur la majorité des sets', 'Préserve les hanches et genoux', 'Adapté à tous les niveaux amateur'].map((pt, i) => (
+                <li key={i} className="flex items-start gap-2 text-xs text-gray-300">
+                  <span className="text-yellow-400 mt-0.5">▸</span>{pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-2 border-gray-600 p-4 space-y-3">
+            <h3 className="text-gray-300 text-xs uppercase tracking-wider font-bold">Commit blocking — avancé/pro</h3>
+            <p className="text-gray-400 text-sm">Le central décide AVANT le release du passeur de sauter avec le quick. Annule l\'attaque rapide adverse, mais si le passeur sette ailleurs, le central est complètement hors jeu.</p>
+            <ul className="space-y-1">
+              {['Efficace contre les centraux dominants', 'Risque élevé si le passeur adapte', 'Réservé aux joueurs avec excellente lecture'].map((pt, i) => (
+                <li key={i} className="flex items-start gap-2 text-xs text-gray-500">
+                  <span className="text-gray-600 mt-0.5">▸</span>{pt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Technique de saut */}
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">La technique de saut pour le contre</h2>
@@ -289,12 +377,37 @@ export default function GuideContre() {
         <div className="border-2 border-yellow-400 bg-yellow-400/5 p-6 space-y-4">
           <h2 className="text-yellow-400 text-xs uppercase tracking-widest font-bold">La règle d'or</h2>
           <p className="text-white font-bold text-sm leading-relaxed tracking-wide">
-            REGARDEZ L'ATTAQUANT → ATTENDEZ SON SAUT → COMPTEZ "UN" → SAUTEZ → PÉNÉTREZ AU-DESSUS DU FILET
+            BALLON → PASSEUR → BALLON → ÉPAULE DU FRAPPEUR → SAUT → PÉNÉTRATION
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">
             Avec de la pratique régulière et une attention particulière au timing, vous améliorerez considérablement
             vos contres. Mieux vaut un contre bien timé avec une détente moyenne qu'un saut très haut mais mal timé.
           </p>
+        </div>
+      </section>
+
+      {/* Vidéos */}
+      <section className="space-y-3">
+        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Ressources vidéo</h2>
+        <div className="space-y-2">
+          {[
+            { title: 'Apprendre le contre (Sikana)', url: 'https://www.youtube.com/watch?v=hJKueZn-tNQ' },
+            { title: 'Le bloc au volleyball (CEPSUM)', url: 'https://www.youtube.com/watch?v=_MchJmDMn0E' },
+            { title: 'Exercice : sauter pour contrer', url: 'https://www.youtube.com/watch?v=GDS8PoWxO6Q' },
+            { title: 'Exercice : contrer une attaque', url: 'https://www.youtube.com/watch?v=S6TcodMWFz4' },
+          ].map((v, i) => (
+            <a
+              key={i}
+              href={v.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors"
+            >
+              <span className="text-yellow-400">▶</span>
+              <span className="flex-1">{v.title}</span>
+              <span className="text-gray-600 text-xs">YT</span>
+            </a>
+          ))}
         </div>
       </section>
 

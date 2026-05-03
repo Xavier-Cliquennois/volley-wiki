@@ -7,8 +7,8 @@ const RULE_SECTIONS = [
     icon: '📌',
     rules: [
       { title: 'Format de jeu', content: 'Un match se joue en 3 sets gagnants (best of 5). Chaque set se joue à 25 points, avec au moins 2 points d\'écart. En cas de 5ème set, on joue à 15 points.' },
-      { title: 'Équipes', content: '6 joueurs de chaque côté sur le terrain. Une équipe peut avoir jusqu\'à 6 remplaçants et un libero. Maximum 6 remplacements réguliers par set.' },
-      { title: 'Service', content: 'Le service est effectué depuis la zone de service derrière la ligne de fond. Le ballon doit passer au-dessus du filet dans le terrain adverse. Un service faute entraîne un point adverse.' },
+      { title: 'Équipes', content: '6 joueurs de chaque côté sur le terrain. Une équipe peut avoir jusqu\'à 6 remplaçants et un libero. Maximum 6 remplacements réguliers par set (libero non compté).' },
+      { title: 'Service', content: 'Le service est effectué depuis la zone de service derrière la ligne de fond. Le ballon doit passer au-dessus du filet dans le terrain adverse. Le serveur dispose de 8 secondes après le coup de sifflet pour frapper. Un service qui touche le filet et retombe dans le terrain adverse est BON (let serve légal depuis 2001).' },
       { title: 'Point à chaque échange', content: 'Depuis 1999 (système rally point), un point est marqué à chaque échange, quelle que soit l\'équipe qui a servi. L\'équipe qui marque récupère le service.' },
     ],
   },
@@ -17,10 +17,10 @@ const RULE_SECTIONS = [
     title: 'Contacts et fautes',
     icon: '✋',
     rules: [
-      { title: 'Maximum 3 touches', content: 'Une équipe a droit à 3 touches pour renvoyer le ballon. Le contre (block) ne compte pas comme une touche d\'équipe.' },
-      { title: 'Double touche', content: 'Un joueur ne peut pas toucher le ballon deux fois consécutivement (sauf lors du contre).' },
-      { title: 'Faute au filet', content: 'Toucher le filet pendant le jeu est une faute, sauf si cela ne perturbe pas le jeu adverse. Toucher la bande supérieure est toujours une faute.' },
-      { title: 'Ballon sur les limites', content: 'Un ballon qui tombe sur la ligne est considéré "dans". Un ballon qui sort des antennes est hors.' },
+      { title: 'Maximum 3 touches', content: 'Une équipe a droit à 3 touches pour renvoyer le ballon. Le contre (block) ne compte pas comme une touche d\'équipe — l\'équipe a toujours 3 touches après un contre.' },
+      { title: 'Double touche', content: 'Un joueur ne peut pas toucher le ballon deux fois consécutivement, sauf lors du premier contact d\'équipe (réception/défense). Exception au contre. Nouveauté test FIVB 2025-2026 : double-contact autorisé lors de l\'action de passe (2e touche) tant que le ballon reste du même côté.' },
+      { title: 'Faute au filet', content: 'Toucher le filet pendant l\'action de jouer le ballon est une faute. Toucher hors action ou hors antennes n\'est pas une faute. Passer partiellement sous le filet est autorisé si cela ne gêne pas l\'adversaire. Objectif FIVB 2025 : "promouvoir le jeu fluide".' },
+      { title: 'Ballon sur les limites', content: 'Un ballon qui tombe sur la ligne est considéré "dans". Un ballon qui sort des antennes ou passe hors de l\'espace de passage est hors.' },
     ],
   },
   {
@@ -28,10 +28,10 @@ const RULE_SECTIONS = [
     title: 'Rotation et positions',
     icon: '🔄',
     rules: [
-      { title: 'Rotation obligatoire', content: 'À chaque changement de service, l\'équipe qui récupère le service tourne dans le sens des aiguilles d\'une montre.' },
-      { title: 'Faute de position', content: 'Au moment du service, chaque joueur doit être dans sa position de rotation. Le non-respect entraîne une faute de position.' },
-      { title: 'Règle des 3 mètres', content: 'Les joueurs arrière (rangs 1, 5, 6) ne peuvent pas attaquer au-dessus du niveau du filet depuis la zone avant (les 3 premiers mètres).' },
-      { title: 'Libero', content: 'Le libero porte un maillot différent. Il ne peut pas attaquer au-dessus du filet, servir, ni bloquer. Il peut remplacer tout joueur arrière sans que cela compte comme remplacement.' },
+      { title: 'Rotation obligatoire', content: 'À chaque récupération de service, l\'équipe gagnante tourne dans le sens des aiguilles d\'une montre : P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. Le joueur en P2→P1 devient le nouveau serveur.' },
+      { title: 'Faute de position', content: 'Au moment de la frappe du serveur, les joueurs doivent respecter leur ordre de rotation (pas de chevauchement diagonal). Faute = point + service à l\'adversaire. Nouveauté 2025 : la règle d\'overlap ne s\'applique plus qu\'à l\'équipe en RÉCEPTION — l\'équipe au service peut se positionner librement.' },
+      { title: 'Règle des 3 mètres', content: 'Les joueurs arrière (P1, P5, P6) ne peuvent pas attaquer au-dessus du filet depuis la zone avant. Ils peuvent sauter depuis derrière la ligne des 3 m et atterrir en zone avant — c\'est légal.' },
+      { title: 'Libero', content: 'Le libero porte un maillot contrastant et joue uniquement en arrière (P1, P5, P6). Remplacements illimités non comptés. Ne peut pas bloquer ni attaquer au-dessus du filet. Peut servir depuis 2021 dans une seule rotation par set. Peut être capitaine depuis 2021. Restriction : si le libero fait une passe haute à 10 doigts depuis la zone avant, le coéquipier ne peut pas attaquer le ballon au-dessus du filet.' },
     ],
   },
   {
@@ -39,10 +39,21 @@ const RULE_SECTIONS = [
     title: 'Situations spéciales',
     icon: '⚡',
     rules: [
-      { title: 'Time-outs', content: 'Chaque équipe a droit à 2 time-outs de 30 secondes par set. Des time-outs techniques automatiques à 8 et 16 points sont prévus dans certaines compétitions.' },
-      { title: 'Pénétration sous le filet', content: 'Passer partiellement sous le filet n\'est pas une faute si cela ne gêne pas l\'adversaire. Passer complètement sous le filet est une faute.' },
-      { title: 'Ballon tenu', content: 'Le contact avec le ballon doit être bref. Un ballon "tenu" (porté, lancé) est une faute. La manchette peut être plus prolongée sans être fautée si c\'est un seul geste.' },
-      { title: 'Coup de sifflet', content: 'Le jeu s\'arrête au coup de sifflet de l\'arbitre. Si le ballon est en jeu au moment d\'une interruption autorisée, l\'échange est à rejouer.' },
+      { title: 'Time-outs', content: 'Chaque équipe a droit à 2 time-outs de 30 secondes par set. Des time-outs techniques automatiques aux 8e et 16e points dans les sets 1-4 sont prévus dans certaines compétitions FIVB.' },
+      { title: 'Service — règles clés', content: '8 secondes pour frapper après le sifflet. Un seul lancer autorisé, mais le serveur peut laisser tomber le ballon une fois sans pénalité. Faute de pied : au moment de la frappe (ou l\'impulsion en saut), le serveur ne doit pas toucher la ligne de fond ni le terrain. Service masqué : les coéquipiers ne doivent pas lever les mains au-dessus de la tête pendant le service (règle 2025).' },
+      { title: 'Attaque arrière', content: 'Un joueur arrière peut attaquer si son appel est derrière la ligne des 3 m (les 2 pieds). Il peut aussi frapper le ballon si une partie est sous le niveau du filet. Bloquer ou attaquer le service au-dessus du filet en zone avant est une faute.' },
+      { title: 'Ballon tenu', content: 'Le contact avec le ballon doit être bref et net. "Ugly contact ≠ fault" : un contact imparfait n\'est pas automatiquement une faute si le ballon rebondit. Standard plus permissif pour la manchette que pour la passe haute.' },
+    ],
+  },
+  {
+    id: 'nouveautes2025',
+    title: 'Nouveautés FIVB 2025-2028',
+    icon: '🆕',
+    rules: [
+      { title: 'Overlap : seulement en réception', content: 'Depuis 2025, la règle d\'overlap (chevauchement) ne s\'applique plus qu\'à l\'équipe en réception. L\'équipe au service peut occuper n\'importe quelle position sur le terrain au moment du service.' },
+      { title: 'Anti-écran au service', content: 'Il est désormais interdit pour les joueurs de l\'équipe au service de lever les mains au-dessus de la tête pendant le service jusqu\'au franchissement du filet. Un écran de ce type est directement sanctionné.' },
+      { title: 'Double-contact en passe — test', content: 'Test FIVB 2025-2026 : le double-contact lors de l\'action de passe (2e touche) est autorisé tant que le ballon reste du même côté du terrain. Si le test est concluant, la règle pourrait être permanente.' },
+      { title: 'Libero peut servir (depuis 2021)', content: 'Le libero peut servir depuis 2021 dans une seule rotation par set. Règle variable selon les fédérations (certains tournois USAV et NFHS ne l\'autorisent pas — vérifier le règlement de la compétition).' },
     ],
   },
 ];

@@ -1,9 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
 import { GUIDES } from '../guides/data';
+import GuideService from '../guides/GuideService';
+import GuideReception from '../guides/GuideReception';
+import GuideAttaque from '../guides/GuideAttaque';
 import GuideContre from '../guides/GuideContre';
 import GuidePositionnement from '../guides/GuidePositionnement';
 
 const COMPONENTS: Record<string, React.ComponentType> = {
+  'service': GuideService,
+  'reception': GuideReception,
+  'attaque': GuideAttaque,
   'contre': GuideContre,
   'positionnement-defense': GuidePositionnement,
 };

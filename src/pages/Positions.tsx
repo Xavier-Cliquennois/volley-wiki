@@ -87,9 +87,9 @@ const POSITIONS: Position[] = [
     role: 'Opposé (Opposite)',
     row: 'back',
     col: 2,
-    description: 'Zone de service. L\'opposant attaque depuis l\'arrière droite et n\'a pas à réceptionner. Souvent le meilleur attaquant de l\'équipe, en face du passeur.',
-    skills: ['Attaque forte', 'Service', 'Contre', 'Attaque arrière'],
-    traits: ['Puissance de frappe maximale', 'Attaque en suspension longue', 'Moins impliqué en réception', 'Frappe depuis l\'arrière'],
+    description: 'L\'opposé (ou "pointu") est placé en opposition au passeur dans la rotation. Ne participe pas à la réception — c\'est le finisseur de l\'équipe. En arrière 3 rotations sur 6 (il doit attaquer depuis le fond).',
+    skills: ['Attaque forte', 'Service', 'Contre', 'Attaque arrière (D/Pipe)'],
+    traits: ['Puissance de frappe maximale', 'Attaque back-row obligatoire (3 rotations/6)', 'Libéré de la réception', '"Pointu" = synonyme exact d\'opposé (FFVolley)'],
   },
   {
     id: 'L',
@@ -98,9 +98,9 @@ const POSITIONS: Position[] = [
     role: 'Spécialiste défensif',
     row: 'off',
     col: 0,
-    description: 'Spécialiste défensif en maillot de couleur distincte. Il remplace les joueurs arrière sans compter sur le quota de remplacements. Meilleur récepteur de l\'équipe.',
+    description: 'Spécialiste défensif en maillot contrastant. Remplace les joueurs arrière (P1, P5, P6) sans que cela compte comme substitution. Peut servir depuis 2021 dans une rotation par set. Peut être capitaine depuis 2021.',
     skills: ['Manchette', 'Réception de service', 'Défense', 'Lecture de trajectoire'],
-    traits: ['Agilité maximale', 'Réflexes rapides', 'Ne peut pas attaquer au-dessus du filet', 'Ne peut pas servir'],
+    traits: ['Agilité et réflexes maximaux', 'Ne peut pas bloquer ni attaquer au-dessus du filet', 'Remplacements illimités hors quota', 'Peut servir (1 rotation/set, FIVB 2021)'],
   },
 ];
 
