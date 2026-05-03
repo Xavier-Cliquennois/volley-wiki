@@ -1,4 +1,5 @@
 import { Html } from '@react-three/drei';
+import { ROLE_COLORS, ZONE_NUM_TO_ROLE } from '../constants/positions';
 
 const ZONES = [
   { number: 4, x: -3, z: 1.5, w: 3, d: 3 },
@@ -11,27 +12,31 @@ const ZONES = [
 
 export const CourtZones: React.FC = () => (
   <group>
-    {ZONES.map(({ number, x, z, w, d }) => (
-      <group key={number}>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.018, z]}>
-          <planeGeometry args={[w, d]} />
-          <meshBasicMaterial color="#facc15" transparent opacity={0.07} depthWrite={false} />
-        </mesh>
-        <Html position={[x, 0.1, z]} center distanceFactor={8} style={{ pointerEvents: 'none' }}>
-          <span style={{
-            color: '#facc15',
-            fontFamily: 'ui-monospace, monospace',
-            fontSize: '48px',
-            fontWeight: 'bold',
-            opacity: 0.4,
-            userSelect: 'none',
-            lineHeight: 1,
-          }}>
-            {number}
-          </span>
-        </Html>
-      </group>
-    ))}
+    {ZONES.map(({ number, x, z, w, d }) => {
+      const roleKey = ZONE_NUM_TO_ROLE[number];
+      const color = roleKey ? ROLE_COLORS[roleKey] : '#facc15';
+      return (
+        <group key={number}>
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.018, z]}>
+            <planeGeometry args={[w, d]} />
+            <meshBasicMaterial color={color} transparent opacity={0.07} depthWrite={false} />
+          </mesh>
+          <Html position={[x, 0.1, z]} center distanceFactor={8} style={{ pointerEvents: 'none' }}>
+            <span style={{
+              color,
+              fontFamily: 'ui-monospace, monospace',
+              fontSize: '48px',
+              fontWeight: 'bold',
+              opacity: 0.5,
+              userSelect: 'none',
+              lineHeight: 1,
+            }}>
+              {number}
+            </span>
+          </Html>
+        </group>
+      );
+    })}
 
     {/* Column dividers at X = ±1.5 to separate the 3 zone columns */}
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[1.5, 0.019, 4.5]}>
