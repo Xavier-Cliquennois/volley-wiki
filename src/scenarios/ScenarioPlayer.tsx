@@ -295,14 +295,14 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
                     : 'text-gray-400 border-gray-600 hover:border-gray-400'
                 }`}
               >
-                {CAMERA_PRESETS[key].label.split(' ')[0]}
+                {CAMERA_PRESETS[key].label}
               </button>
             ))}
           </div>
 
           {/* Canvas */}
           <div className="relative aspect-[4/3] md:aspect-auto md:h-[440px]">
-            <Canvas shadows="percentage" camera={{ position: [0, 5, 10], fov: 50 }}>
+            <Canvas shadows="percentage" camera={{ position: [0, 9, 18], fov: 50 }}>
               <ScenarioScene
                 scenario={scenario}
                 playerRefs={playerRefs}

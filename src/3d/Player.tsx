@@ -5,6 +5,7 @@ import { ToonMaterial } from './ToonMaterial';
 type PlayerProps = {
   color: string;
   position: [number, number, number];
+  facingRotation?: number;
 };
 
 export type PlayerRef = {
@@ -40,15 +41,18 @@ const OutlinedBox: React.FC<{
   );
 };
 
-export const Player = forwardRef<PlayerRef, PlayerProps>(({ color, position }, ref) => {
+export const Player = forwardRef<PlayerRef, PlayerProps>(({ color, position, facingRotation }, ref) => {
   const group = useRef<THREE.Group>(null!);
   const rightShoulder = useRef<THREE.Group>(null!);
   const leftShoulder = useRef<THREE.Group>(null!);
 
   useImperativeHandle(ref, () => ({ group, rightShoulder, leftShoulder }));
 
+  const defaultRot = position[2] < 0 ? 0 : Math.PI;
+  const yRot = facingRotation ?? defaultRot;
+
   return (
-    <group ref={group} position={position} rotation={[0, position[2] < 0 ? 0 : Math.PI, 0]}>
+    <group ref={group} position={position} rotation={[0, yRot, 0]}>
       <OutlinedBox args={[0.5, 0.7, 0.3]} color={color} position={[0, 0.85, 0]} castShadow>
         <mesh position={[0, 0, 0.151]}>
           <planeGeometry args={[0.25, 0.35]} />

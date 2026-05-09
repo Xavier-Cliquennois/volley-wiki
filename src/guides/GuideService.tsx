@@ -199,7 +199,7 @@ const ZONES_TABLE: [string, string][] = [
 ];
 
 export default function GuideService() {
-  const [activeId, setActiveId] = useState('float');
+  const [activeId, setActiveId] = useState('cuillere');
   const current = SERVICE_TYPES.find(t => t.id === activeId)!;
 
   return (

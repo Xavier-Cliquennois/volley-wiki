@@ -440,6 +440,62 @@ export default function GuidePositionnement() {
         </div>
       </section>
 
+      {/* Jouer à 4 ou à 5 */}
+      <section className="space-y-4">
+        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">3. Jouer à 4 ou à 5 joueurs</h2>
+        <div className="border-2 border-gray-700 bg-gray-900 p-4 text-sm text-gray-300">
+          Quand on joue en effectif réduit (entraînement, UNSS, loisir), il faut adapter les zones de responsabilité.
+          La règle d'or : <strong className="text-white">moins on est, plus chaque joueur couvre une grande zone et plus la communication est cruciale.</strong>
+        </div>
+        <div className="grid md:grid-cols-2 gap-3">
+          <div className="border-2 border-yellow-400 bg-yellow-400/5 p-4 space-y-3">
+            <h3 className="text-yellow-400 text-xs uppercase tracking-wider font-bold">Jouer à 5 (5v5)</h3>
+            <div className="text-gray-400 text-xs">Système 5-1 simplifié : 2 avant + 3 arrière OU 3 avant + 2 arrière selon la rotation.</div>
+            <ul className="space-y-1">
+              {[
+                ['Bloc à 2 reste la norme', 'Garder la même logique qu\'en 6v6.'],
+                ['Off-blocker côté opposé', 'Recule sur les 3 m comme en 6v6.'],
+                ['Seulement 2 défenseurs en fond', 'Un libéro en grande diagonale, un autre arrière sur la ligne.'],
+                ['Lecture indispensable', 'Chaque défenseur couvre ~30 m² (vs 20 m² en 6v6).'],
+                ['Couverture d\'attaque à 4', 'Plus serrée — 3 proches + 1 lointain.'],
+              ].map(([t, d], i) => (
+                <li key={i} className="flex items-start gap-2 text-sm">
+                  <span className="text-yellow-400 mt-0.5">▸</span>
+                  <span><strong className="text-white">{t} : </strong><span className="text-gray-400">{d}</span></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="border-2 border-gray-600 p-4 space-y-3">
+            <h3 className="text-gray-300 text-xs uppercase tracking-wider font-bold">Jouer à 4 (4v4)</h3>
+            <div className="text-gray-400 text-xs">Configuration losange ou carré : pas de libéro, chaque joueur défend une zone large.</div>
+            <ul className="space-y-1">
+              {[
+                ['Bloc à 1', 'Le central seul saute. Libère 3 défenseurs au sol.'],
+                ['Bloc à 2 occasionnel', 'Réservé aux gros attaquants — laisse 2 défenseurs au sol seulement.'],
+                ['Losange (1-2-1)', 'Passeur P3 caché, 2 ailes sur les 3m, 1 arrière au fond. Couverture homogène.'],
+                ['Carré (2-2)', '2 contreurs avant + 2 défenseurs arrière. Bloc à 2 possible mais arrière vulnérable.'],
+                ['Anticipation = compétence n°1', 'Avec 4 joueurs, les zones font 30-40 m² par défenseur.'],
+              ].map(([t, d], i) => (
+                <li key={i} className="flex items-start gap-2 text-sm">
+                  <span className="text-gray-300 mt-0.5">▸</span>
+                  <span><strong className="text-white">{t} : </strong><span className="text-gray-400">{d}</span></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="border-l-4 border-yellow-400 pl-4 py-1 text-sm text-gray-400 space-y-1">
+          <div className="text-yellow-400 text-xs uppercase tracking-wider">Recommandations transverses</div>
+          <div><strong className="text-white">5v5 : </strong>conserver le 5-1 du 6v6 en retirant un arrière non-passeur. Le libéro reste en P5 ou P6.</div>
+          <div><strong className="text-white">4v4 : </strong>privilégier le losange (formation la plus utilisée). Pas de libéro autorisé en UNSS.</div>
+          <div><strong className="text-white">Communication : </strong>annoncer chaque balle est encore plus important — 3 joueurs disponibles pour la défense seulement.</div>
+        </div>
+        <div className="text-xs text-gray-500">
+          Voir les scénarios <code className="text-gray-300">5v5 · Défense Z4</code> et <code className="text-gray-300">4v4 · Défense bloc à 1</code> dans la section Scénarios pour visualiser ces formations en 3D.
+        </div>
+      </section>
+
       {/* 6. Principes généraux */}
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">6. Principes généraux de positionnement</h2>

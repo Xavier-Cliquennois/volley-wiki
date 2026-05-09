@@ -3,10 +3,10 @@ import gsap from 'gsap';
 import * as THREE from 'three';
 
 export const CAMERA_PRESETS = {
-  DEFAULT: { position: [0, 5, 10] as [number, number, number], lookAt: [0, 1, 0] as [number, number, number], label: 'Vue par défaut' },
-  TOP_DOWN: { position: [0, 15, 0.1] as [number, number, number], lookAt: [0, 0, 0] as [number, number, number], label: 'Vue du dessus' },
-  BEHIND_SERVE: { position: [0, 3, 15] as [number, number, number], lookAt: [0, 1, 0] as [number, number, number], label: 'Derrière le serveur' },
-  ATTACKER_VIEW: { position: [-5, 2, 5] as [number, number, number], lookAt: [0, 1, -3] as [number, number, number], label: 'Vue attaquant' },
+  DEFAULT: { position: [0, 9, 18] as [number, number, number], lookAt: [0, 1, 0] as [number, number, number], label: 'Large' },
+  TOP_DOWN: { position: [0, 18, 0.1] as [number, number, number], lookAt: [0, 0, 0] as [number, number, number], label: 'Dessus' },
+  BEHIND_SERVE: { position: [0, 4, 17] as [number, number, number], lookAt: [0, 1, 0] as [number, number, number], label: 'Serveur' },
+  ATTACKER_VIEW: { position: [-6, 3, 5] as [number, number, number], lookAt: [0, 1, -3] as [number, number, number], label: 'Attaquant' },
 } as const;
 
 export type CameraPresetKey = keyof typeof CAMERA_PRESETS;
