@@ -436,46 +436,64 @@ const RECEPTION_5V5_PENTAGON: Scenario = {
 const RECEPTION_4V4_LOSANGE: Scenario = {
   id: '4v4-reception-losange',
   title: '4v4 · Réception losange',
-  shortDescription: 'Formation losange (diamant) sur réception, passeur dédié en P2, attaque en zone 4.',
+  shortDescription: 'Formation losange canonique : passeur en P3 (centre filet) + 2 ailes sur les 3 m + arrière au fond.',
   config: {
     teamSize: 4,
     phase: 'reception',
-    contextLabel: '4v4 · Losange · Passeur avant fixe',
+    contextLabel: '4v4 · Losange (1-2-1) · Passeur centre',
   },
   defaultCamera: 'BEHIND_SERVE',
   players: [
-    { id: 'P', label: 'Passeur (P2)', role: 'setter', color: COLORS.setter, position: [2.5, 0, 0.6] },
-    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 1.5] },
-    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 1.5] },
-    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 5] },
+    // Disposition LOSANGE canonique (matche /positions) :
+    // 1 joueur au centre du filet (passeur P3) + 2 ailes sur les 3 m (P4 / P2) + 1 arrière (P1).
+    { id: 'P', label: 'Passeur (P3)', role: 'setter', color: COLORS.setter, position: [0, 0, 0.6] },
+    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 2.5] },
+    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [2.5, 0, 2.5] },
+    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 5.5] },
   ],
   initialBallPosition: [0, 2.5, -7],
   timeline: [
     { type: 'ball_move', time: 0, from: [0, 2.5, -7], to: [0, 1.2, 4.5], duration: 0.9, arc: 3.0 },
-    { type: 'player_pose', time: 0.2, id: 'A', pose: 'READY', duration: 0.1, text: "J'ai !" },
+    { type: 'player_pose', time: 0.05, id: 'R4', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'A2', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'A', pose: 'READY', duration: 0.2, text: "J'ai !" },
+    // L'arrière vient légèrement vers la balle (réception en zone centrale)
     { type: 'player_move', time: 0.3, id: 'A', to: [0, 0, 4.5], duration: 0.4 },
     { type: 'player_pose', time: 0.9, id: 'A', pose: 'BUMP', duration: 0.2 },
-    { type: 'ball_move', time: 0.9, from: [0, 1.2, 4.5], to: [2.5, 1.9, 0.8], duration: 0.9, arc: 3.8 },
+    // Manchette dirigée vers le passeur AU FILET (P3, centre)
+    { type: 'ball_move', time: 0.9, from: [0, 1.2, 4.5], to: [0, 1.9, 0.8], duration: 0.9, arc: 3.8 },
     { type: 'player_pose', time: 1.8, id: 'P', pose: 'SET', duration: 0.2 },
-    { type: 'ball_move', time: 1.8, from: [2.5, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
+    // Passe en cloche vers la zone 4 (R4 attaque)
+    { type: 'ball_move', time: 1.8, from: [0, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
+    // R4 enchaîne sa course d'élan vers la zone 4
     { type: 'player_move', time: 1.9, id: 'R4', to: [-3.0, 0, 1.2], duration: 0.4 },
     { type: 'player_move', time: 2.3, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
     { type: 'player_pose', time: 2.4, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2, 0, -5], duration: 0.5, arc: false },
+    // Couverture courte par P et A2 pendant que A revient au fond
+    { type: 'player_move', time: 2.0, id: 'A2', to: [1.5, 0, 1.5], duration: 0.3 },
+    { type: 'player_move', time: 2.0, id: 'A', to: [-1, 0, 3], duration: 0.3 },
+
+    // RESET : retour à la formation losange
+    { type: 'player_move', time: 3.0, id: 'P', to: [0, 0, 0.6], duration: 0.7 },
+    { type: 'player_move', time: 3.0, id: 'R4', to: [-2.5, 0, 2.5], duration: 0.7 },
+    { type: 'player_move', time: 3.0, id: 'A2', to: [2.5, 0, 2.5], duration: 0.7 },
+    { type: 'player_move', time: 3.0, id: 'A', to: [0, 0, 5.5], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Disposition losange', description: '4 zones, 4 joueurs : passeur P2 caché au filet, central P3 et R4 P4 sur les 3 m, arrière unique au fond.' },
-    { id: 's2', startTime: 0.2, title: '2. Lecture & annonce', description: "L'arrière lit la trajectoire de service en cloche et annonce sa prise." },
-    { id: 's3', startTime: 0.9, title: '3. Réception manchette', description: "Réception dirigée vers le passeur en P2 (avant droit). Trajectoire haute pour compenser l'absence de libéro." },
-    { id: 's4', startTime: 1.8, title: '4. Passe en touche', description: 'Le passeur, déjà au filet, distribue vers le R4 en zone 4. Pas de pénétration nécessaire (variante "passeur avant fixe").' },
-    { id: 's5', startTime: 1.9, title: "5. Course d'élan", description: "Le R4 quitte sa zone de réception, prend une course rapide de 3 m vers l'aile gauche." },
-    { id: 's6', startTime: 2.4, title: '6. Attaque', description: 'Armé court, fouetté en diagonale dans le terrain adverse. Avec un seul arrière, la couverture est limitée.' },
+    { id: 's1', startTime: 0, title: '1. Formation losange (départ)', description: 'Disposition canonique : passeur AU CENTRE du filet (P3) + 2 ailes sur les 3 m + arrière au fond. Tous en READY pour la lecture du service.' },
+    { id: 's2', startTime: 0.3, title: '2. Annonce de l\'arrière', description: "L'arrière unique annonce \"J'ai !\" et avance légèrement vers la balle." },
+    { id: 's3', startTime: 0.9, title: '3. Manchette vers le passeur', description: 'Manchette haute dirigée vers le passeur au centre du filet. Pas de pénétration en losange.' },
+    { id: 's4', startTime: 1.8, title: "4. Passe vers l'aile gauche", description: 'Le passeur distribue vers la zone 4. Variante "passeur centre" — il peut aussi distribuer à droite (vers A2).' },
+    { id: 's5', startTime: 1.9, title: "5. Course d'élan + couverture", description: "Le R4 prend une course courte vers l'aile gauche. P et A2 forment la couverture proche, A revient au fond." },
+    { id: 's6', startTime: 2.4, title: '6. Frappe', description: 'Frappe diagonale. Avec un seul bloc adverse, l\'angle est ouvert.' },
+    { id: 's7', startTime: 3.0, title: '7. RESET — retour au losange', description: "Tout le monde reprend sa position dans le losange pour le service suivant." },
   ],
   summary: {
     keyPoints: [
-      'Format losange = formation 4v4 la plus utilisée. Une zone = un joueur.',
-      'Variante "passeur avant fixe" : système le plus simple, idéal débutants.',
+      'Losange canonique (1-2-1) = formation 4v4 la plus utilisée.',
+      'Variante "passeur centre" : passeur en P3 au filet, distribue à gauche OU à droite.',
       'Pas de libéro autorisé en 4v4 UNSS — tous doivent savoir réceptionner.',
       'Chaque joueur défend ~30-40 m² (vs ~20 m² en 6v6).',
     ],

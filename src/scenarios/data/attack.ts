@@ -13,9 +13,13 @@ const ATTACK_5_1_P1: Scenario = {
   },
   defaultCamera: 'DEFAULT',
   players: [
-    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 4] },
-    { id: 'R4a', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3.2, 0, 0.6] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4] },
+    // Position de DÉPART = formation de RÉCEPTION à 3.
+    // Libéro + R4 P6 + R4 P4 (qui recule sur les 3 m) prennent la largeur.
+    // Central et pointu sont "cachés" au filet (sortis de la réception).
+    // Le passeur est en P1 arrière, prêt à pénétrer.
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
+    { id: 'R4a', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 4] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [1, 0, 5] },
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3.2, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 4] },
@@ -31,9 +35,14 @@ const ATTACK_5_1_P1: Scenario = {
   timeline: [
     // ── Phase 0 : le serveur adverse vient de frapper (SPIKE pose au moment du contact) ──
     { type: 'player_pose', time: 0, id: 'OPP_SRV', pose: 'SPIKE', duration: 0.2 },
+    // Tous nos réceptionneurs en READY (jambes fléchies, plateforme prête)
+    { type: 'player_pose', time: 0.05, id: 'L', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'R4a', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'R4b', pose: 'READY', duration: 0.2, text: "J'ai !" },
+    { type: 'player_pose', time: 0.05, id: 'P', pose: 'READY', duration: 0.2 },
+
     // ── Phase 1 : trajectoire du service vers notre P6 + déclenchement de notre passeur ──
-    { type: 'ball_move', time: 0, from: [0, 1.5, -8.5], to: [0, 1.2, 4], duration: 1.0, arc: 3.5 },
-    { type: 'player_pose', time: 0.3, id: 'R4b', pose: 'READY', duration: 0.1, text: "J'ai !" },
+    { type: 'ball_move', time: 0, from: [0, 1.5, -8.5], to: [1, 1.2, 5], duration: 1.0, arc: 3.5 },
     // Le passeur démarre sa pénétration dès la frappe du service (~ t=0.2)
     { type: 'player_move', time: 0.2, id: 'P', to: [3, 0, 2.5], duration: 0.5 },
     // Le serveur retombe dans son terrain et entre en défense
@@ -41,10 +50,11 @@ const ATTACK_5_1_P1: Scenario = {
 
     // ── Phase 2 : réception + pénétration finale + lecture du contre adverse ──
     { type: 'player_pose', time: 1.0, id: 'R4b', pose: 'BUMP', duration: 0.2 },
-    { type: 'ball_move', time: 1.0, from: [0, 1.2, 4], to: [1.5, 1.9, 0.8], duration: 0.9, arc: 4.0 },
+    { type: 'ball_move', time: 1.0, from: [1, 1.2, 5], to: [1.5, 1.9, 0.8], duration: 0.9, arc: 4.0 },
     { type: 'player_move', time: 1.0, id: 'P', to: [1.5, 0, 0.8], duration: 0.8 },
     // Le R4 attaquant (R4a) commence sa course d'élan large dès la réception
-    { type: 'player_move', time: 1.0, id: 'R4a', to: [-4, 0, 1.5], duration: 0.7 },
+    // — il PARTAIT en réception, maintenant il enchaîne immédiatement vers la zone d'impact
+    { type: 'player_move', time: 1.0, id: 'R4a', to: [-4.5, 0, 2.5], duration: 0.6 },
     // Le central adverse glisse au centre prêt à bloquer
     { type: 'player_move', time: 1.0, id: 'OPP_C', to: [-1, 0, -0.4], duration: 0.5 },
     // Les blockers se positionnent vers la zone 4 (notre gauche, leur droite)
@@ -88,23 +98,23 @@ const ATTACK_5_1_P1: Scenario = {
     { type: 'player_pose', time: 3.5, id: 'C', pose: 'RESET', duration: 0.4 },
     { type: 'player_pose', time: 3.5, id: 'Op', pose: 'RESET', duration: 0.4 },
     { type: 'player_pose', time: 3.5, id: 'P', pose: 'RESET', duration: 0.4 },
-    { type: 'player_move', time: 3.5, id: 'L', to: [-2.5, 0, 4], duration: 0.7 },
-    { type: 'player_move', time: 3.5, id: 'R4a', to: [-3.2, 0, 0.6], duration: 0.7 },
-    { type: 'player_move', time: 3.5, id: 'R4b', to: [0, 0, 4], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'L', to: [-2.5, 0, 5], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'R4a', to: [-2.5, 0, 4], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'R4b', to: [1, 0, 5], duration: 0.7 },
     { type: 'player_move', time: 3.5, id: 'C', to: [0, 0, 0.6], duration: 0.7 },
     { type: 'player_move', time: 3.5, id: 'Op', to: [3.2, 0, 0.6], duration: 0.7 },
     { type: 'player_move', time: 3.5, id: 'P', to: [3, 0, 4], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Leur serveur frappe (SPIKE). Le ballon arrive vers la zone 6. Le R4 placé en P6 annonce sa prise. Le passeur démarre sa pénétration dès la frappe du serveur.' },
-    { id: 's2', startTime: 1.0, title: '2. Réception + pénétration', description: 'Réception en manchette précise vers la zone du passeur. Pénétration finale, perpendiculaire au filet, à un bras du filet.' },
-    { id: 's3', startTime: 1.5, title: '3. Block adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer diagonale et ligne. Le central glisse au centre.' },
-    { id: 's4', startTime: 1.9, title: '4. Passe en touche vers Z4', description: 'Passe haute en cloche. La trajectoire fixe le contre adverse à droite. Le R4 attaque, les autres se replient en couverture.' },
-    { id: 's5', startTime: 2.0, title: "5. Couverture d'attaque", description: "Passeur en position basse à 1-1,5 m, libéro et P6 dans le 1er arc, pointu et central plus loin. 5 joueurs autour de l'attaquant." },
-    { id: 's6', startTime: 2.5, title: "6. Armé + fouetté", description: 'Le R4 arme le bras dorsal puis frappe en diagonale longue. Le block adverse saute en parallèle.' },
-    { id: 's7', startTime: 2.7, title: '7. Frappe + chute du block', description: "La balle franchit le block (ou le force au touch). Notre attaquant retombe équilibré." },
-    { id: 's8', startTime: 3.0, title: '8. Recovery + transition', description: 'Réception équilibrée, le passeur adverse se replie pour défendre. On garde notre couverture jusqu\'au point.' },
-    { id: 's9', startTime: 3.5, title: '9. RESET — retour à la base', description: "Après chaque échange, on REVIENT à sa position de base. C'est vital : aucun système d'attaque ou de défense ne tient si on n'est pas bien placé au départ du coup suivant." },
+    { id: 's1', startTime: 0, title: '1. Formation de réception (départ)', description: "Notre équipe est en formation de RÉCEPTION à 3 : libéro + 2 R4 qui prennent la largeur. Le R4 en P4 a reculé sur les 3 m. Central et pointu sont 'sortis' (cachés au filet). Le passeur en P1 attend la frappe pour pénétrer." },
+    { id: 's2', startTime: 1.0, title: '2. Réception + pénétration', description: 'Le R4 en P6 reçoit en manchette précise vers la zone du passeur. Le passeur pénètre vers 2-3, à un bras du filet.' },
+    { id: 's3', startTime: 1.0, title: "3. Course d'élan immédiate", description: "Le R4 attaquant (P4) enchaîne sa course d'élan vers la zone 4 SANS attendre — il sortait juste de la réception, il doit rattraper le tempo." },
+    { id: 's4', startTime: 1.5, title: '4. Block adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer diagonale et ligne. Le central glisse au centre.' },
+    { id: 's5', startTime: 1.9, title: '5. Passe en touche vers Z4', description: 'Passe haute en cloche. La trajectoire fixe le contre adverse à droite.' },
+    { id: 's6', startTime: 2.0, title: "6. Couverture d'attaque", description: "Passeur en position basse à 1-1,5 m, libéro et P6 dans le 1er arc, pointu et central plus loin. 5 joueurs autour de l'attaquant." },
+    { id: 's7', startTime: 2.5, title: "7. Armé + fouetté", description: 'Le R4 arme le bras dorsal puis frappe en diagonale longue. Le block adverse saute en parallèle.' },
+    { id: 's8', startTime: 3.0, title: '8. Recovery + transition', description: 'Réception équilibrée, le passeur adverse se replie pour défendre.' },
+    { id: 's9', startTime: 3.5, title: '9. RESET — retour à la formation de réception', description: "Tout le monde reprend sa position de RÉCEPTION pour le service suivant. C'est ce placement qui détermine la qualité de la prochaine attaque." },
   ],
   summary: {
     keyPoints: [
@@ -624,49 +634,75 @@ const ATTACK_5V5_PENTAGON: Scenario = {
 const ATTACK_4V4_LOSANGE: Scenario = {
   id: '4v4-attack-losange',
   title: '4v4 · Attaque losange',
-  shortDescription: 'Configuration losange : passeur P3 + 2 ailes + 1 arrière. Attaque en zone 4.',
+  shortDescription: 'Losange canonique : passeur en P3 + 2 ailes sur les 3 m + arrière. Réception → attaque en zone 4.',
   config: {
     teamSize: 4,
     phase: 'attack',
-    contextLabel: '4v4 · Losange · UNSS / loisir',
+    contextLabel: '4v4 · Losange (1-2-1) · UNSS / loisir',
   },
   defaultCamera: 'DEFAULT',
   players: [
+    // DÉPART = formation losange (matche /positions). Personne au net pour attaquer encore.
     { id: 'P', label: 'Passeur (P3)', role: 'setter', color: COLORS.setter, position: [0, 0, 0.6] },
-    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.5] },
-    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 1.5] },
-    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 5] },
+    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 2.5] },
+    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [2.5, 0, 2.5] },
+    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 5.5] },
     { id: 'OPP_B', label: 'Bloc adverse', role: 'opponent', color: COLORS.opponent, position: [-1.5, 0, -0.5] },
   ],
   initialBallPosition: [0, 2.5, -7],
   timeline: [
-    { type: 'ball_move', time: 0, from: [0, 2.5, -7], to: [0, 1.2, 5], duration: 0.9, arc: 3.0 },
-    { type: 'player_pose', time: 0.2, id: 'A', pose: 'READY', duration: 0.1, text: "J'ai !" },
-    { type: 'player_move', time: 0.3, id: 'A', to: [0, 0, 5], duration: 0.4 },
+    // ── Phase 1 : service adverse + lecture en READY ──
+    { type: 'ball_move', time: 0, from: [0, 2.5, -7], to: [0, 1.2, 4.5], duration: 0.9, arc: 3.0 },
+    { type: 'player_pose', time: 0.05, id: 'R4', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'A2', pose: 'READY', duration: 0.2 },
+    { type: 'player_pose', time: 0.05, id: 'A', pose: 'READY', duration: 0.2, text: "J'ai !" },
+    { type: 'player_move', time: 0.3, id: 'A', to: [0, 0, 4.5], duration: 0.4 },
+
+    // ── Phase 2 : réception + transition vers l'attaque ──
     { type: 'player_pose', time: 0.9, id: 'A', pose: 'BUMP', duration: 0.2 },
-    { type: 'ball_move', time: 0.9, from: [0, 1.2, 5], to: [0.5, 1.9, 0.8], duration: 0.9, arc: 3.5 },
+    { type: 'ball_move', time: 0.9, from: [0, 1.2, 4.5], to: [0, 1.9, 0.8], duration: 0.9, arc: 3.5 },
+    // R4 enchaîne sa course d'élan vers la zone 4 (départ depuis la position losange)
+    { type: 'player_move', time: 0.9, id: 'R4', to: [-3.5, 0, 1.5], duration: 0.7 },
+
+    // ── Phase 3 : passe en touche + bloc adverse ──
+    { type: 'player_move', time: 1.5, id: 'OPP_B', to: [-2.5, 0, -0.4], duration: 0.3 },
     { type: 'player_pose', time: 1.8, id: 'P', pose: 'SET', duration: 0.2 },
-    { type: 'ball_move', time: 1.8, from: [0.5, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
-    { type: 'player_move', time: 1.9, id: 'R4', to: [-3.0, 0, 1.2], duration: 0.4 },
+    { type: 'ball_move', time: 1.8, from: [0, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
+
+    // Couverture : passeur, A2 et A se rapprochent en triangle
+    { type: 'player_move', time: 1.9, id: 'P', to: [-1.5, 0, 1.5], duration: 0.4 },
+    { type: 'player_move', time: 1.9, id: 'A2', to: [-0.5, 0, 2.0], duration: 0.4 },
+    { type: 'player_move', time: 1.9, id: 'A', to: [-1, 0, 3.5], duration: 0.4 },
+
+    // ── Phase 4 : armé + frappe ──
     { type: 'player_move', time: 2.3, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
+    { type: 'player_move', time: 2.3, id: 'OPP_B', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.3, id: 'OPP_B', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.4, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2, 0, -5], duration: 0.5, arc: false },
+
+    // ── Phase 5 : RESET — retour à la formation losange ──
+    { type: 'player_move', time: 3.2, id: 'P', to: [0, 0, 0.6], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'R4', to: [-2.5, 0, 2.5], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'A2', to: [2.5, 0, 2.5], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'A', to: [0, 0, 5.5], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Disposition losange', description: '4 zones, 4 joueurs : passeur en P3 caché au filet, 2 ailes sur les 3m, arrière unique au fond.' },
-    { id: 's2', startTime: 0.2, title: '2. Réception arrière', description: "L'arrière unique fait la première touche. Pas de libéro en 4v4." },
-    { id: 's3', startTime: 0.9, title: '3. Manchette précise', description: 'Réception haute en cloche pour donner du temps au passeur central.' },
-    { id: 's4', startTime: 1.8, title: '4. Passe vers la gauche', description: `Le passeur distribue vers l'aile gauche. Variante "passeur centre" du 4v4.` },
-    { id: 's5', startTime: 1.9, title: "5. Course d'élan courte", description: "L'aile gauche, déjà sur les 3 m, prend une course courte de 2 m vers la gauche." },
-    { id: 's6', startTime: 2.4, title: '6. Frappe diagonale', description: "Frappe puissante en diagonale. Avec un seul bloc adverse, l'angle est ouvert." },
+    { id: 's1', startTime: 0, title: '1. Formation losange (départ)', description: 'Disposition canonique : passeur AU CENTRE du filet (P3) + 2 ailes sur les 3 m + arrière au fond.' },
+    { id: 's2', startTime: 0.3, title: "2. Réception de l'arrière", description: "L'arrière unique avance et reçoit (BUMP). Trajectoire haute vers le passeur au filet." },
+    { id: 's3', startTime: 0.9, title: "3. Course d'élan + passe", description: "R4 enchaîne sa course d'élan vers la zone 4. Le passeur prépare sa passe." },
+    { id: 's4', startTime: 1.5, title: '4. Bloc adverse en place', description: 'Le bloc adverse glisse vers la zone 4 pour fermer l\'angle.' },
+    { id: 's5', startTime: 1.8, title: '5. Passe en cloche + couverture', description: 'Passe haute vers le R4. Passeur, A2 et A forment une couverture en triangle.' },
+    { id: 's6', startTime: 2.4, title: '6. Frappe en diagonale', description: "Frappe puissante. Avec un bloc à 1, l'angle est large." },
+    { id: 's7', startTime: 3.2, title: '7. RESET — retour au losange', description: "Tout le monde reprend sa position dans le losange pour le coup suivant." },
   ],
   summary: {
     keyPoints: [
-      'Format losange = la formation 4v4 la plus utilisée.',
+      'Losange canonique = formation 4v4 la plus utilisée.',
       'Variante "passeur centre" : passeur en P3, distribue à gauche ou à droite.',
       "Bloc adverse à 1 standard en 4v4 : angle d'attaque large.",
-      "Couverture limitée : 3 joueurs autour de l'attaquant maximum.",
+      "Couverture limitée : 3 joueurs autour de l'attaquant.",
     ],
     commonMistakes: [
       'Passeur qui réceptionne aussi → impossible de passer derrière.',
