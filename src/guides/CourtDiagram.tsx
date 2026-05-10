@@ -15,7 +15,8 @@ export function Player({
   x: number; y: number; label: string; sub?: string; type: PlayerType;
 }) {
   const bg = roleColor(label, type);
-  const fg = bg === ROLE_COLORS.L ? '#000000' : '#ffffff';
+  // Yellow (P5) needs black text for contrast; everything else uses white.
+  const fg = bg === ROLE_COLORS.P5 ? '#000000' : '#ffffff';
   return (
     <div
       className="absolute w-9 h-9 flex flex-col items-center justify-center text-xs font-bold -translate-x-1/2 -translate-y-1/2 leading-tight select-none"

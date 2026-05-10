@@ -1,12 +1,13 @@
 import type { ScenarioPlayerConfig } from '../types';
 
-// Color palette aligned with role conventions across all scenarios
+// Color palette aligned with role conventions across all scenarios.
+// Must match ROLE_COLORS in src/constants/positions.ts and CLAUDE.md.
 export const COLORS = {
   setter: '#e74c3c',
   opposite: '#9b59b6',
   middle: '#2ecc71',
   outside: '#3498db',
-  libero: '#f1c40f',
+  libero: '#ec4899',
   opponent: '#7f8c8d',
 } as const;
 

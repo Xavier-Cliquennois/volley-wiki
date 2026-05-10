@@ -32,7 +32,7 @@ const BUMP_SET_SPIKE_SCRIPT = {
 };
 
 const PLAYERS_CONFIG = [
-  { id: 'P1', label: 'Libero', color: '#f1c40f', position: [-1, 0, 3] as [number, number, number] },
+  { id: 'P1', label: 'Libero', color: '#ec4899', position: [-1, 0, 3] as [number, number, number] },
   { id: 'P2', label: 'Passeur', color: '#e74c3c', position: [1, 0, 1] as [number, number, number] },
   { id: 'P3', label: 'Attaquant', color: '#3498db', position: [-3.5, 0, 3] as [number, number, number] },
 ];

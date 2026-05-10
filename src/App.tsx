@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Home from './pages/Home';
 import Techniques from './pages/Techniques';
@@ -11,9 +12,18 @@ import ScenarioDetail from './pages/ScenarioDetail';
 import Guides from './pages/Guides';
 import GuideDetail from './pages/GuideDetail';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/techniques" element={<Layout><Techniques /></Layout>} />

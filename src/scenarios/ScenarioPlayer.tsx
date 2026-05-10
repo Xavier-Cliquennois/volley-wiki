@@ -88,14 +88,16 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
     }
   }, [scenario.steps]);
 
-  // Auto-scroll the step strip to keep the active step visible
+  // Auto-scroll the step strip to keep the active step visible.
+  // We scroll the strip element directly (not via scrollIntoView) to avoid
+  // moving the whole page on mobile when a step becomes active.
   useEffect(() => {
     const strip = stepStripRef.current;
     if (!strip) return;
     const activeChild = strip.children[activeStepIdx] as HTMLElement | undefined;
-    if (activeChild) {
-      activeChild.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    }
+    if (!activeChild) return;
+    const targetLeft = activeChild.offsetLeft - (strip.clientWidth - activeChild.clientWidth) / 2;
+    strip.scrollTo({ left: targetLeft, behavior: 'smooth' });
   }, [activeStepIdx]);
 
   const handlePresetChange = useCallback((preset: CameraPresetKey) => {

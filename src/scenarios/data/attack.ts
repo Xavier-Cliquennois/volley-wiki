@@ -676,6 +676,58 @@ const ATTACK_4V4_SQUARE: Scenario = {
   },
 };
 
+// Scenario A12 — 4v4 attack with back-row penetrating setter (3-1 system)
+const ATTACK_4V4_PEN: Scenario = {
+  id: '4v4-attack-penetrant',
+  title: '4v4 · Passeur pénétrant',
+  shortDescription: 'Système 3-1 simplifié : passeur unique en P1 pénètre vers la zone 2, libère 3 attaquants devant.',
+  config: { teamSize: 4, phase: 'attack', contextLabel: '4v4 · Passeur arrière · 3 attaquants' },
+  defaultCamera: 'DEFAULT',
+  players: [
+    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.6] },
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
+    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 0.6] },
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5] },
+    { id: 'OPP_B', label: 'Bloc adverse', role: 'opponent', color: COLORS.opponent, position: [-2, 0, -0.5] },
+  ],
+  initialBallPosition: [0, 2.5, -7],
+  timeline: [
+    { type: 'ball_move', time: 0, from: [0, 2.5, -7], to: [-1, 1.2, 4.5], duration: 0.9, arc: 3.0 },
+    { type: 'player_pose', time: 0.2, id: 'R4', pose: 'READY', duration: 0.1, text: "J'ai !" },
+    { type: 'player_move', time: 0.3, id: 'R4', to: [-1, 0, 4.5], duration: 0.4 },
+    { type: 'player_pose', time: 0.9, id: 'R4', pose: 'BUMP', duration: 0.2 },
+    { type: 'ball_move', time: 0.9, from: [-1, 1.2, 4.5], to: [2.0, 1.9, 0.8], duration: 0.9, arc: 3.5 },
+    { type: 'player_move', time: 0.9, id: 'P', to: [2.0, 0, 0.8], duration: 0.9 },
+    { type: 'player_pose', time: 1.8, id: 'P', pose: 'SET', duration: 0.2 },
+    { type: 'ball_move', time: 1.8, from: [2.0, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
+    { type: 'player_move', time: 1.0, id: 'R4', to: [-3.0, 0, 1.5], duration: 0.7 },
+    { type: 'player_move', time: 2.2, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
+    { type: 'player_pose', time: 2.3, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
+    { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2, 0, -5], duration: 0.5, arc: false },
+  ],
+  steps: [
+    { id: 's1', startTime: 0, title: '1. Configuration 3-1', description: 'Passeur unique en P1 (arrière). 3 attaquants devant en P2, P3, P4.' },
+    { id: 's2', startTime: 0.9, title: '2. Réception + course', description: "L'aile gauche réceptionne, le passeur démarre sa pénétration vers P2." },
+    { id: 's3', startTime: 1.0, title: '3. Pénétration', description: "Le passeur traverse depuis P1 vers la zone 2 — équivalent simplifié du 5-1." },
+    { id: 's4', startTime: 1.8, title: '4. Distribution', description: "Passe vers l'aile gauche après la course de réception." },
+    { id: 's5', startTime: 2.5, title: '5. Attaque + couverture limitée', description: "Frappe en diagonale. Avec 3 couvreurs seulement, ils forment un triangle court autour de l'attaquant." },
+  ],
+  summary: {
+    keyPoints: [
+      'Système 3-1 = équivalent du 5-1 en 4v4. 1 passeur dédié pénétrant.',
+      'Avantage : 3 attaquants devant en permanence, comme en 6v6.',
+      "Inconvénient : exige une réception très propre car le passeur n'est pas au filet.",
+      'Pas de libéro : le réceptionneur enchaîne aussi sa course d\'élan.',
+    ],
+    commonMistakes: [
+      'Pénétration trop tardive → un autre joueur doit faire la passe.',
+      "Réception trop courte → passeur arrive trop loin du filet.",
+      "Couverture oubliée — block-out adverse = point.",
+    ],
+  },
+};
+
 export const ATTACK_SCENARIOS: Scenario[] = [
   ATTACK_5_1_P1,
   ATTACK_5_1_P2,
@@ -688,4 +740,5 @@ export const ATTACK_SCENARIOS: Scenario[] = [
   ATTACK_5V5_PENTAGON,
   ATTACK_4V4_LOSANGE,
   ATTACK_4V4_SQUARE,
+  ATTACK_4V4_PEN,
 ];

@@ -3,6 +3,158 @@ import { Court, Player, Zone, Ball, ZoneLabel } from './CourtDiagram';
 import { ROLE_COLORS } from '../constants/positions';
 
 type ZoneTab = 'zone4' | 'zone3' | 'zone2';
+type TeamSize = 4 | 5 | 6;
+
+// 5v5 diagrams — block à 2 conservé, mais seulement 2 défenseurs en fond
+function Zone4Tab5v5() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={15} y={38} />
+        <Zone x={0} y={50} w={28} h={28} type="arriere" posNumber={5} />
+        <Zone x={28} y={56} w={50} h={32} type="arriere" posNumber={1} />
+        <Zone x={70} y={50} w={30} h={24} type="avant" posNumber={2} />
+        <ZoneLabel x={8} y={60} label="Z5 (libéro)" type="arriere" />
+        <ZoneLabel x={42} y={68} label="Z6 fond" type="arriere" />
+        <ZoneLabel x={78} y={60} label="Z2 off-blk" type="avant" />
+        <Player x={20} y={53} label="4" sub="BLK" type="avant" />
+        <Player x={40} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={85} y={75} label="2" sub="DÉF" type="avant" />
+        <Player x={20} y={75} label="5" type="arriere" />
+        <Player x={60} y={80} label="1" type="arriere" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> <strong className="text-white">Block à 2</strong> standard (R4 + central) ; pointu off-blocker reculé sur les 3 m.</li>
+        <li><span className="text-yellow-400">▸</span> <strong className="text-white">2 arrières seulement</strong> : un en grande diagonale (P5, souvent libéro), un sur la ligne (P1).</li>
+        <li><span className="text-yellow-400">▸</span> Pas de joueur fond centre dédié — le central des arrières (P6) est absent. La grande diagonale doit être prioritaire.</li>
+      </ul>
+    </div>
+  );
+}
+
+function Zone3Tab5v5() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={50} y={38} />
+        <Zone x={0} y={50} w={50} h={50} type="arriere" posNumber={5} />
+        <Zone x={50} y={50} w={50} h={50} type="arriere" posNumber={1} />
+        <ZoneLabel x={20} y={80} label="Diag G" type="arriere" />
+        <ZoneLabel x={70} y={80} label="Diag D" type="arriere" />
+        <Player x={35} y={53} label="4" sub="BLK" type="avant" />
+        <Player x={50} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={65} y={53} label="2" sub="BLK" type="avant" />
+        <Player x={25} y={80} label="5" type="arriere" />
+        <Player x={75} y={80} label="1" type="arriere" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> Sur attaque centrale rapide, <strong className="text-white">block à 2 (P3 + P2)</strong> ou block individuel selon la lecture du contre adverse.</li>
+        <li><span className="text-yellow-400">▸</span> Les 2 arrières se partagent les diagonales. Pas de défense fond centre dédiée — vulnérable aux balles longues droit devant.</li>
+      </ul>
+    </div>
+  );
+}
+
+function Zone2Tab5v5() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={85} y={38} />
+        <Zone x={70} y={50} w={30} h={28} type="arriere" posNumber={1} />
+        <Zone x={20} y={56} w={60} h={32} type="arriere" posNumber={5} />
+        <Zone x={0} y={50} w={30} h={24} type="avant" posNumber={4} />
+        <ZoneLabel x={75} y={60} label="Z1 (libéro)" type="arriere" />
+        <ZoneLabel x={45} y={68} label="Diag G" type="arriere" />
+        <ZoneLabel x={6} y={60} label="Z4 off-blk" type="avant" />
+        <Player x={60} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={80} y={53} label="2" sub="BLK" type="avant" />
+        <Player x={15} y={75} label="4" sub="DÉF" type="avant" />
+        <Player x={80} y={75} label="1" type="arriere" />
+        <Player x={40} y={80} label="5" type="arriere" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> Symétrique de Z4 : block central + pointu, R4 off-blocker reculé sur les 3 m.</li>
+        <li><span className="text-yellow-400">▸</span> Le passeur (souvent en P1) est sur la grande diagonale — la 2ᵉ touche est plus difficile s'il défend.</li>
+      </ul>
+    </div>
+  );
+}
+
+// 4v4 diagrams — block à 1 (central seul), 3 défenseurs au sol
+function Zone4Tab4v4() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={15} y={38} />
+        <Zone x={0} y={56} w={40} h={34} type="avant" posNumber={4} />
+        <Zone x={40} y={50} w={35} h={38} type="arriere" posNumber={5} />
+        <Zone x={70} y={50} w={30} h={50} type="avant" posNumber={2} />
+        <ZoneLabel x={10} y={62} label="P4 court" type="avant" />
+        <ZoneLabel x={45} y={70} label="Arrière" type="arriere" />
+        <ZoneLabel x={75} y={60} label="P2 long" type="avant" />
+        <Player x={45} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={15} y={75} label="4" sub="DÉF" type="avant" />
+        <Player x={50} y={82} label="1" type="arriere" />
+        <Player x={85} y={70} label="2" sub="DÉF" type="avant" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> <strong className="text-white">Block à 1</strong> (le central P3 seul) — configuration standard en 4v4.</li>
+        <li><span className="text-yellow-400">▸</span> P4 reculé sur les 3 m côté ligne couvre la <strong className="text-white">petite diagonale courte</strong> + feintes.</li>
+        <li><span className="text-yellow-400">▸</span> P2 recule en grande diagonale ou couvre la ligne longue.</li>
+        <li><span className="text-yellow-400">▸</span> Arrière unique (P1) en lecture profonde — il doit anticiper presque parfaitement.</li>
+      </ul>
+    </div>
+  );
+}
+
+function Zone3Tab4v4() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={50} y={38} />
+        <Zone x={0} y={56} w={40} h={34} type="avant" posNumber={4} />
+        <Zone x={30} y={70} w={40} h={30} type="arriere" posNumber={1} />
+        <Zone x={60} y={56} w={40} h={34} type="avant" posNumber={2} />
+        <ZoneLabel x={10} y={62} label="Diag G" type="avant" />
+        <ZoneLabel x={42} y={80} label="Fond" type="arriere" />
+        <ZoneLabel x={75} y={62} label="Diag D" type="avant" />
+        <Player x={50} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={20} y={70} label="4" sub="DÉF" type="avant" />
+        <Player x={50} y={85} label="1" type="arriere" />
+        <Player x={80} y={70} label="2" sub="DÉF" type="avant" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> Block à 1 ou à 2 au centre selon le danger. Avec block à 2, plus que 2 défenseurs au sol.</li>
+        <li><span className="text-yellow-400">▸</span> P4 et P2 reculent vers les 3 m, chacun sur sa diagonale.</li>
+        <li><span className="text-yellow-400">▸</span> Arrière unique en couverture courte ou profonde selon la lecture.</li>
+      </ul>
+    </div>
+  );
+}
+
+function Zone2Tab4v4() {
+  return (
+    <div className="space-y-4">
+      <Court>
+        <Ball x={85} y={38} />
+        <Zone x={0} y={50} w={30} h={50} type="avant" posNumber={4} />
+        <Zone x={25} y={50} w={40} h={38} type="arriere" posNumber={1} />
+        <Zone x={60} y={56} w={40} h={34} type="avant" posNumber={2} />
+        <ZoneLabel x={6} y={60} label="P4 long" type="avant" />
+        <ZoneLabel x={35} y={68} label="Arrière" type="arriere" />
+        <ZoneLabel x={75} y={62} label="P2 court" type="avant" />
+        <Player x={55} y={53} label="3" sub="BLK" type="avant" />
+        <Player x={15} y={70} label="4" sub="DÉF" type="avant" />
+        <Player x={45} y={82} label="1" type="arriere" />
+        <Player x={85} y={75} label="2" sub="DÉF" type="avant" />
+      </Court>
+      <ul className="space-y-1 text-sm text-gray-400">
+        <li><span className="text-yellow-400">▸</span> Symétrique de Z4 : central seul au bloc, P2 off-blocker court côté ligne, P4 grande diagonale longue.</li>
+        <li><span className="text-yellow-400">▸</span> Arrière unique en fond — pas de couverture latérale, communication impérative.</li>
+      </ul>
+    </div>
+  );
+}
 
 function Zone4Tab() {
   return (
@@ -346,6 +498,23 @@ const COMMANDEMENTS = [
 
 export default function GuidePositionnement() {
   const [zone, setZone] = useState<ZoneTab>('zone4');
+  const [teamSize, setTeamSize] = useState<TeamSize>(6);
+
+  const renderZoneTab = () => {
+    if (teamSize === 4) {
+      if (zone === 'zone4') return <Zone4Tab4v4 />;
+      if (zone === 'zone3') return <Zone3Tab4v4 />;
+      return <Zone2Tab4v4 />;
+    }
+    if (teamSize === 5) {
+      if (zone === 'zone4') return <Zone4Tab5v5 />;
+      if (zone === 'zone3') return <Zone3Tab5v5 />;
+      return <Zone2Tab5v5 />;
+    }
+    if (zone === 'zone4') return <Zone4Tab />;
+    if (zone === 'zone3') return <Zone3Tab />;
+    return <Zone2Tab />;
+  };
 
   return (
     <div className="space-y-12">
@@ -408,6 +577,32 @@ export default function GuidePositionnement() {
       {/* 2. Positionnement par zone */}
       <section className="space-y-4">
         <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">2. Positionnement selon la zone d'attaque adverse</h2>
+
+        {/* Team size selector */}
+        <div className="border-2 border-gray-700 p-3 space-y-2">
+          <div className="text-gray-500 text-xs uppercase tracking-widest">Format de jeu</div>
+          <div className="flex gap-2 flex-wrap">
+            {([6, 5, 4] as const).map(size => (
+              <button
+                key={size}
+                onClick={() => setTeamSize(size)}
+                className={`px-4 py-2 text-xs uppercase tracking-wider border-2 transition-colors ${
+                  teamSize === size
+                    ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400'
+                    : 'border-gray-700 text-gray-400 hover:border-gray-500'
+                }`}
+              >
+                {size}v{size}
+              </button>
+            ))}
+          </div>
+          <p className="text-gray-500 text-xs leading-relaxed">
+            {teamSize === 6 && 'Block à 1, 2 ou 3 selon la zone. Système 5-1 avec libéro standard.'}
+            {teamSize === 5 && 'Block à 2 conservé, mais 2 défenseurs au sol seulement après le bloc. Recommandé : conserver le 5-1 du 6v6 en retirant un arrière non passeur.'}
+            {teamSize === 4 && 'Block à 1 standard (le central seul). 3 défenseurs au sol. Pas de libéro autorisé en UNSS.'}
+          </p>
+        </div>
+
         <div className="flex gap-1 flex-wrap">
           {(['zone4', 'zone3', 'zone2'] as const).map(z => (
             <button
@@ -425,13 +620,12 @@ export default function GuidePositionnement() {
         </div>
         <div className="border-2 border-gray-700 p-4">
           <p className="text-gray-500 text-xs uppercase tracking-wider text-center mb-4">
+            {teamSize}v{teamSize} —{' '}
             {zone === 'zone4' ? 'Défense contre attaque en Zone 4 (aile gauche adverse)' :
              zone === 'zone3' ? 'Défense contre attaque en Zone 3 (centre)' :
              'Défense contre attaque en Zone 2 (aile droite adverse)'}
           </p>
-          {zone === 'zone4' && <Zone4Tab />}
-          {zone === 'zone3' && <Zone3Tab />}
-          {zone === 'zone2' && <Zone2Tab />}
+          {renderZoneTab()}
         </div>
         <div className="text-xs text-gray-600 flex gap-4 flex-wrap">
           <span><span className="text-yellow-400">■</span> Zone de responsabilité</span>
