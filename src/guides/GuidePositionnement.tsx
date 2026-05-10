@@ -25,11 +25,20 @@ type DefenseZone = {
   label: string;
 };
 
+type Shot = {
+  toX: number;
+  toY: number;
+};
+
 type DefenseLayout = {
   ballX: number;
   ballY: number;
   players: DefensePlayer[];
   zones: DefenseZone[];
+  // Most probable shot the attacker takes from the ball position
+  mainShot: Shot;
+  // Alternative possible shots (rendered dashed)
+  altShots: Shot[];
   notes: string[];
 };
 
@@ -52,11 +61,13 @@ const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
       Z('P1', 50, 62, 50, 38, 'Grande diagonale'),
       Z('P2', 70, 50, 30, 22, 'Off-blk court'),
     ],
+    mainShot: { toX: 75, toY: 85 },
+    altShots: [{ toX: 22, toY: 80 }, { toX: 50, toY: 70 }, { toX: 80, toY: 60 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P1).',
       'Block à 2 (P4 monte avec P3) ferme la diagonale.',
       'P2 (aile droite) recule sur les 3 m en off-blocker.',
       'P5 (proche de l\'attaque) défend la petite diagonale courte.',
-      'P1 prend la grande diagonale longue.',
     ],
   },
   zone3: {
@@ -72,7 +83,10 @@ const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 60, 50, 40, 'Diag G'),
       Z('P1', 50, 60, 50, 40, 'Diag D'),
     ],
+    mainShot: { toX: 25, toY: 80 },
+    altShots: [{ toX: 75, toY: 80 }, { toX: 50, toY: 88 }],
     notes: [
+      'Coup principal : diagonale puissante (G ou D, ici G).',
       'Block à 1 sur la rapide centrale (P3 seul).',
       'P4 et P2 reculent latéralement sur les 3 m.',
       'P5 et P1 tiennent les diagonales — pas de défense fond centre dédiée.',
@@ -92,7 +106,10 @@ const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 62, 50, 38, 'Grande diagonale'),
       Z('P4', 0, 50, 30, 22, 'Off-blk court'),
     ],
+    mainShot: { toX: 25, toY: 85 },
+    altShots: [{ toX: 78, toY: 80 }, { toX: 50, toY: 70 }, { toX: 20, toY: 60 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P5).',
       'Symétrique de Z4 : P3 + P2 forment le bloc, P4 off-blocker court.',
       'P1 défend la petite diagonale courte côté droit.',
       'P5 prend la grande diagonale longue.',
@@ -116,11 +133,13 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
       Z('P1', 50, 62, 50, 38, 'Grande diagonale'),
       Z('P2', 70, 50, 30, 22, 'Off-blk'),
     ],
+    mainShot: { toX: 75, toY: 85 },
+    altShots: [{ toX: 22, toY: 80 }, { toX: 50, toY: 70 }, { toX: 80, toY: 60 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P1).',
       'Block à 2 (P4 + P3) ferme la diagonale.',
       'Le passeur (P2) recule en off-blocker côté ligne.',
       'P5 (souvent meilleur réceptionneur) en grande diagonale.',
-      'P1 sur la ligne droite.',
     ],
   },
   zone3: {
@@ -136,7 +155,10 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 60, 50, 40, 'Diag G'),
       Z('P1', 50, 60, 50, 40, 'Diag D'),
     ],
+    mainShot: { toX: 50, toY: 88 },
+    altShots: [{ toX: 25, toY: 80 }, { toX: 75, toY: 80 }],
     notes: [
+      'Coup principal : balle profonde droit devant (faiblesse du système).',
       'Avec 3 avants, block à 3 possible — mais laisse seulement 2 défenseurs au sol.',
       'En général : block à 2 (P3 + l\'aile la plus proche).',
       'P5 et P1 partagent les diagonales.',
@@ -156,7 +178,10 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 62, 50, 38, 'Grande diagonale'),
       Z('P4', 0, 50, 30, 22, 'Off-blk'),
     ],
+    mainShot: { toX: 35, toY: 85 },
+    altShots: [{ toX: 78, toY: 80 }, { toX: 50, toY: 70 }, { toX: 20, toY: 60 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P5).',
       'Bloc P3 + P2 — l\'aile droite (P2 = passeur ici) bloque.',
       'P4 off-blocker court côté gauche.',
       'P1 défend la ligne droite, P5 la grande diagonale.',
@@ -179,10 +204,12 @@ const LAYOUTS_4V4_LOSANGE: Record<ZoneTab, DefenseLayout> = {
       Z('P2', 60, 50, 40, 30, 'Diag D'),
       Z('P1', 30, 75, 45, 25, 'Fond'),
     ],
+    mainShot: { toX: 80, toY: 70 },
+    altShots: [{ toX: 18, toY: 80 }, { toX: 50, toY: 85 }, { toX: 30, toY: 70 }],
     notes: [
+      'Coup principal : diagonale longue (vers P2 reculé).',
       'Block à 1 (P3 monte sur la zone 4 adverse).',
       'P4 redescend sur les 3 m côté ligne (couverture courte + feintes).',
-      'P2 prend la grande diagonale.',
       'L\'arrière unique P1 doit anticiper la trajectoire profonde.',
     ],
   },
@@ -199,7 +226,10 @@ const LAYOUTS_4V4_LOSANGE: Record<ZoneTab, DefenseLayout> = {
       Z('P2', 65, 55, 35, 35, 'Diag D'),
       Z('P1', 30, 75, 45, 25, 'Fond'),
     ],
+    mainShot: { toX: 50, toY: 85 },
+    altShots: [{ toX: 18, toY: 70 }, { toX: 80, toY: 70 }],
     notes: [
+      'Coup principal : balle profonde droit devant (vers P1 fond).',
       'Block à 1 (P3 seul) sur la rapide centrale.',
       'Les 2 ailes reculent latéralement sur les 3 m.',
       'L\'arrière unique au fond — il doit lire vite.',
@@ -218,10 +248,12 @@ const LAYOUTS_4V4_LOSANGE: Record<ZoneTab, DefenseLayout> = {
       Z('P4', 0, 50, 35, 30, 'Diag G'),
       Z('P1', 25, 75, 45, 25, 'Fond'),
     ],
+    mainShot: { toX: 20, toY: 70 },
+    altShots: [{ toX: 82, toY: 80 }, { toX: 50, toY: 85 }, { toX: 70, toY: 65 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P4 reculé).',
       'Symétrique de Z4 : P3 monte côté zone 2 adverse, block à 1.',
       'P2 redescend sur les 3 m en couverture courte + feintes.',
-      'P4 prend la grande diagonale longue.',
       'L\'arrière unique défend le fond.',
     ],
   },
@@ -242,11 +274,13 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
       Z('P1', 50, 62, 50, 38, 'Grande diagonale'),
       Z('P2', 60, 50, 40, 22, 'Off-blk'),
     ],
+    mainShot: { toX: 75, toY: 85 },
+    altShots: [{ toX: 25, toY: 80 }, { toX: 78, toY: 65 }, { toX: 50, toY: 75 }],
     notes: [
-      'P4 fixe la ligne — block à 1 ou block à 2 si P3 est aussi présent (rare).',
+      'Coup principal : grande diagonale longue (vers P1).',
+      'P4 fixe la ligne — block à 1 (block à 2 rare en carré sans central).',
       'P2 (passeur-attaquant) recule en off-blocker.',
       'P5 et P1 partagent diagonales courtes et longues.',
-      'Avec seulement 2 arrières, la grande diagonale est prioritaire.',
     ],
   },
   zone3: {
@@ -261,7 +295,10 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 60, 50, 40, 'Diag G'),
       Z('P1', 50, 60, 50, 40, 'Diag D'),
     ],
+    mainShot: { toX: 25, toY: 80 },
+    altShots: [{ toX: 75, toY: 80 }, { toX: 50, toY: 65 }],
     notes: [
+      'Coup principal : diagonale puissante (G ou D).',
       'Block à 2 (P4 + P2) ferme le centre.',
       'P5 et P1 prennent les diagonales — pas de couverture courte derrière le bloc.',
       'Vulnérable aux feintes — le carré n\'a pas de joueur à mi-terrain.',
@@ -280,7 +317,10 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
       Z('P5', 0, 62, 50, 38, 'Grande diagonale'),
       Z('P4', 0, 50, 35, 22, 'Off-blk'),
     ],
+    mainShot: { toX: 25, toY: 85 },
+    altShots: [{ toX: 75, toY: 80 }, { toX: 22, toY: 65 }, { toX: 50, toY: 75 }],
     notes: [
+      'Coup principal : grande diagonale longue (vers P5).',
       'Symétrique de Z4 : P2 fixe la ligne au filet.',
       'P4 (aile gauche) recule en off-blocker.',
       'P5 prend la grande diagonale, P1 la petite courte.',
@@ -316,6 +356,44 @@ function DataDrivenDefense({ layout }: { layout: DefenseLayout }) {
         {layout.zones.map((z, i) => (
           <ZoneLabel key={`zl-${i}`} x={z.x + z.w / 2 - 5} y={z.y + z.h / 2} label={z.label} type="arriere" />
         ))}
+        {/* Trajectoires : flèche pleine = coup principal, pointillés = alternatives */}
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          style={{ pointerEvents: 'none', zIndex: 20 }}
+        >
+          <defs>
+            <marker id="ddm" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <polygon points="0 0, 8 4, 0 8" fill="#eab308" />
+            </marker>
+            <marker id="dda" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <polygon points="0 0, 7 3.5, 0 7" fill="#6b7280" />
+            </marker>
+          </defs>
+          <line
+            x1={layout.ballX}
+            y1={layout.ballY}
+            x2={layout.mainShot.toX}
+            y2={layout.mainShot.toY}
+            stroke="#eab308"
+            strokeWidth="1.5"
+            markerEnd="url(#ddm)"
+          />
+          {layout.altShots.map((s, i) => (
+            <line
+              key={i}
+              x1={layout.ballX}
+              y1={layout.ballY}
+              x2={s.toX}
+              y2={s.toY}
+              stroke="#6b7280"
+              strokeWidth="0.8"
+              markerEnd="url(#dda)"
+              strokeDasharray="3,2"
+            />
+          ))}
+        </svg>
         {layout.players.map(p => (
           <Player
             key={p.zoneId}
