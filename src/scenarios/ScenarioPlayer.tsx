@@ -8,6 +8,9 @@ import type { Scenario } from './types';
 
 type ScenarioPlayerProps = {
   scenario: Scenario;
+  /** When the player is embedded under a filter bar that already shows
+   *  the context, hide the redundant top badges. */
+  hideHeader?: boolean;
 };
 
 type PlaybackMode = 'auto' | 'step';
@@ -32,7 +35,7 @@ function getStepEndTime(scenario: Scenario, stepIdx: number): number {
   return scenario.timeline.reduce((max, a) => Math.max(max, a.time + a.duration), 0);
 }
 
-export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
+export default function ScenarioPlayer({ scenario, hideHeader = false }: ScenarioPlayerProps) {
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const playerRefs = useRef<Record<string, any>>({});
@@ -245,18 +248,20 @@ export default function ScenarioPlayer({ scenario }: ScenarioPlayerProps) {
   return (
     <div className="space-y-4">
       {/* Header — context badges + mode toggle */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap items-center gap-2">
-          <div className="px-3 py-1 border-2 border-yellow-400 text-yellow-400 text-xs uppercase tracking-widest">
-            {scenario.config.teamSize}v{scenario.config.teamSize}
+      <div className={`flex flex-wrap items-center gap-3 ${hideHeader ? 'justify-end' : 'justify-between'}`}>
+        {!hideHeader && (
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="px-3 py-1 border-2 border-yellow-400 text-yellow-400 text-xs uppercase tracking-widest">
+              {scenario.config.teamSize}v{scenario.config.teamSize}
+            </div>
+            <div className="px-3 py-1 border-2 border-gray-700 text-gray-300 text-xs uppercase tracking-widest">
+              {phaseLabel}
+            </div>
+            <div className="px-3 py-1 border border-gray-700 text-gray-400 text-xs uppercase tracking-wider">
+              {scenario.config.contextLabel}
+            </div>
           </div>
-          <div className="px-3 py-1 border-2 border-gray-700 text-gray-300 text-xs uppercase tracking-widest">
-            {phaseLabel}
-          </div>
-          <div className="px-3 py-1 border border-gray-700 text-gray-400 text-xs uppercase tracking-wider">
-            {scenario.config.contextLabel}
-          </div>
-        </div>
+        )}
         <div className="flex items-center border-2 border-gray-700">
           <button
             onClick={() => handleModeChange('auto')}
