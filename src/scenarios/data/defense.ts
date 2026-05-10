@@ -13,61 +13,93 @@ const DEFENSE_VS_Z4: Scenario = {
   },
   defaultCamera: 'DEFAULT',
   players: [
-    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 3.5] },
-    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.4] },
-    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
-    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.4] },
-    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
-    { id: 'OPP', label: 'Attaquant adverse', role: 'opponent', color: COLORS.opponent, position: [3.2, 0, -0.6] },
+    // Notre équipe — positions de départ "neutres" (ligne de service / ready),
+    // les déplacements défensifs viennent ensuite dans la timeline.
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 6.5] },
+    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 1.2] },
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 1.2] },
+    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.2] },
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4.5] },
+    // Adversaires explicites : attaquant Z4 (recule pour la course d'élan) + passeur (penetrera)
+    { id: 'OPP', label: 'Attaquant adv. Z4', role: 'opponent', color: COLORS.opponent, position: [3.2, 0, -3] },
+    { id: 'OPP_S', label: 'Passeur adverse', role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -2] },
   ],
   initialBallPosition: [0, 2.0, -3],
   timeline: [
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [3.2, 3.0, -0.8], duration: 0.7, arc: 3.5 },
-    { type: 'player_move', time: 0.3, id: 'Op', to: [3.0, 0, 0.3], duration: 0.4 },
-    { type: 'player_move', time: 0.4, id: 'C', to: [2.0, 0, 0.3], duration: 0.5 },
-    { type: 'player_move', time: 0.5, id: 'R4', to: [-3.0, 0, 1.5], duration: 0.5 },
-    { type: 'player_move', time: 0.5, id: 'L', to: [-2.5, 0, 5.5], duration: 0.4 },
-    { type: 'player_move', time: 0.5, id: 'R4b', to: [0, 0, 5.5], duration: 0.4 },
-    { type: 'player_move', time: 0.5, id: 'P', to: [3.0, 0, 4.5], duration: 0.4 },
-    { type: 'player_move', time: 0.7, id: 'Op', to: [3.0, 1.6, 0.3], duration: 0.2 },
-    { type: 'player_move', time: 0.7, id: 'C', to: [2.0, 1.6, 0.3], duration: 0.2 },
-    { type: 'player_pose', time: 0.7, id: 'Op', pose: 'ARM_SPIKE', duration: 0.2 },
-    { type: 'player_pose', time: 0.7, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
-    // Opponent attacker approaches, jumps, arms then spikes
-    { type: 'player_move', time: 0.7, id: 'OPP', to: [3.2, 0, -1.2], duration: 0.2 },
-    { type: 'player_move', time: 0.85, id: 'OPP', to: [3.2, 1.8, -0.7], duration: 0.15 },
-    { type: 'player_pose', time: 0.85, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    // ── Phase 1 : pénétration du passeur adverse + lecture défensive ──
+    { type: 'player_move', time: 0, id: 'OPP_S', to: [-1.8, 0, -0.8], duration: 0.4 },
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
+    { type: 'player_pose', time: 0.1, id: 'L', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'R4b', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'P', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'R4', pose: 'READY', duration: 0.3 },
+
+    // ── Phase 2 : passe haute en Z4 + glissement défensif ──
+    { type: 'player_pose', time: 0.4, id: 'OPP_S', pose: 'SET', duration: 0.2 },
+    { type: 'ball_move', time: 0.4, from: [-1.8, 1.8, -0.8], to: [3.2, 3.0, -0.8], duration: 0.6, arc: 4.0 },
+    { type: 'player_move', time: 0.4, id: 'OPP', to: [3.2, 0, -1.5], duration: 0.4 },
+    // Notre block forme : Op (P2) fixe la ligne, C (P3) ferme la diagonale
+    { type: 'player_move', time: 0.5, id: 'Op', to: [3.0, 0, 0.3], duration: 0.4 },
+    { type: 'player_move', time: 0.5, id: 'C', to: [2.0, 0, 0.3], duration: 0.5 },
+    // R4 redescend sur les 3 m côté opposé (off-blocker)
+    { type: 'player_move', time: 0.5, id: 'R4', to: [-3.0, 0, 2.8], duration: 0.5 },
+    // Libéro (P5) glisse en grande diagonale (gros déplacement visible)
+    { type: 'player_move', time: 0.5, id: 'L', to: [-2.5, 0, 6.5], duration: 0.6 },
+    // P6 (R4b) bascule vers l'ombre du block (légèrement à gauche du centre)
+    { type: 'player_move', time: 0.5, id: 'R4b', to: [-0.8, 0, 5.5], duration: 0.5 },
+    // Passeur (P1) recule sur la ligne droite du fond (grande diag courte)
+    { type: 'player_move', time: 0.5, id: 'P', to: [3.8, 0, 7.5], duration: 0.5 },
+
+    // ── Phase 3 : décollage du block + attaquant en l'air ──
+    { type: 'player_move', time: 0.85, id: 'Op', to: [3.0, 1.6, 0.3], duration: 0.15 },
+    { type: 'player_move', time: 0.85, id: 'C', to: [2.0, 1.6, 0.3], duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'Op', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'C', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_move', time: 0.9, id: 'OPP', to: [3.2, 1.8, -0.7], duration: 0.1 },
+    { type: 'player_pose', time: 0.9, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.1 },
     { type: 'player_pose', time: 1.0, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
-    { type: 'ball_move', time: 1.0, from: [3.2, 3.0, -0.8], to: [-2.5, 1.0, 5.0], duration: 0.5, arc: false },
+
+    // ── Phase 4 : frappe en grande diagonale longue ──
+    { type: 'ball_move', time: 1.0, from: [3.2, 3.0, -0.8], to: [-2.5, 1.0, 6.5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 1.1, id: 'Op', to: [3.0, 0, 0.5], duration: 0.2 },
+    { type: 'player_move', time: 1.1, id: 'C', to: [2.0, 0, 0.5], duration: 0.2 },
     { type: 'player_move', time: 1.1, id: 'OPP', to: [3.2, 0, -0.6], duration: 0.3 },
+
+    // ── Phase 5 : défense du libéro + rentrée du passeur ──
     { type: 'player_pose', time: 1.5, id: 'L', pose: 'BUMP', duration: 0.2 },
-    { type: 'ball_move', time: 1.5, from: [-2.5, 1.0, 5.0], to: [2.0, 2.5, 1.0], duration: 0.8, arc: 3.5 },
+    { type: 'ball_move', time: 1.5, from: [-2.5, 1.0, 6.5], to: [2.0, 2.5, 1.0], duration: 0.8, arc: 3.5 },
+    // Notre passeur (P) sprint vers la zone 2-3 pour la 2ᵉ touche
     { type: 'player_move', time: 1.5, id: 'P', to: [2.0, 0, 1.0], duration: 0.7 },
+    // Le passeur adverse se replie pour défendre la contre-attaque
+    { type: 'player_move', time: 1.5, id: 'OPP_S', to: [-1, 0, -2], duration: 0.5 },
+
+    // ── Phase 6 : passe en suspension + course d'élan ──
     { type: 'player_pose', time: 2.3, id: 'P', pose: 'SET', duration: 0.2 },
-    { type: 'player_move', time: 2.0, id: 'Op', to: [3.0, 0, 0.4], duration: 0.3 },
-    { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 0.4], duration: 0.4 },
-    { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 0.4], duration: 0.3 },
+    { type: 'player_move', time: 2.0, id: 'Op', to: [3.0, 0, 1.0], duration: 0.3 },
+    { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 1.0], duration: 0.4 },
+    { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 1.0], duration: 0.3 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe adverse en Z4', description: 'Le passeur adverse distribue vers son ailier en zone 4. Notre ligne avant lit la trajectoire.' },
-    { id: 's2', startTime: 0.4, title: '2. Formation du block à 2', description: 'Notre P2 (pointu) fixe la ligne, le central (P3) se déplace en pas chassés et ferme la diagonale.' },
-    { id: 's3', startTime: 0.5, title: '3. Défense au sol — 6 arrière', description: 'Le R4 (P4) recule sur les 3 m comme off-blocker (feintes courtes). Libéro en P5 sur la grande diagonale, P6 fond, P1 recul ligne.' },
-    { id: 's4', startTime: 1.0, title: '4. Frappe adverse', description: "L'attaquant frappe en diagonale longue. Le block dévie ou laisse passer dans la zone défendue par P5/P6." },
-    { id: 's5', startTime: 1.5, title: '5. Défense du libéro', description: `Le libéro récupère en manchette dans sa zone prioritaire. Annonce vocale "J'ai !".` },
-    { id: 's6', startTime: 1.5, title: '6. Transition contre-attaque', description: "Le passeur, qui n'a pas contré, arrive vite au filet pour la 2ᵉ touche et organiser la contre-attaque." },
-    { id: 's7', startTime: 2.3, title: '7. Distribution', description: "Passe en suspension vers les ailes ou le pointu en zone 2 selon où l'option est libre." },
+    { id: 's1', startTime: 0, title: '1. Pénétration du passeur adverse', description: "Le passeur adverse pénètre de P1 vers la zone 2-3. Notre ligne défensive lit la trajectoire (READY, jambes fléchies)." },
+    { id: 's2', startTime: 0.4, title: '2. Passe en cloche vers Z4', description: 'Le passeur distribue vers son ailier en zone 4 (notre côté droit). Notre ligne avant identifie la zone d\'attaque.' },
+    { id: 's3', startTime: 0.5, title: '3. Block + glissement défensif', description: "P2 (pointu) fixe la ligne, le central (P3) ferme la diagonale. Le R4 redescend sur les 3 m (off-blocker) — le libéro glisse en grande diagonale, le P6 dans l'ombre du block, le passeur recule sur la ligne." },
+    { id: 's4', startTime: 0.85, title: '4. Décollage simultané', description: 'Saut du block à 2, mains au-dessus du filet. L\'attaquant arme dans le même temps.' },
+    { id: 's5', startTime: 1.0, title: '5. Frappe en diagonale longue', description: "L'attaquant frappe — le ballon traverse en grande diagonale vers notre zone 5. Le block dévie ou laisse passer." },
+    { id: 's6', startTime: 1.5, title: '6. Défense du libéro', description: `Le libéro récupère en manchette dans sa zone prioritaire — annonce vocale "J'ai !".` },
+    { id: 's7', startTime: 1.5, title: '7. Sprint du passeur au filet', description: "Notre passeur, qui n'a pas contré, arrive vite au filet pour la 2ᵉ touche. Le passeur adverse se replie pour défendre." },
+    { id: 's8', startTime: 2.3, title: '8. Distribution & contre-attaque', description: "Passe en suspension. Pointu, central et R4 se présentent en course d'élan pour finir le rally." },
   ],
   summary: {
     keyPoints: [
       'Block à 2 standard : ailier fixe la ligne, central ferme la diagonale.',
       'Off-blocker (R4 côté opposé) recule sur les 3 m pour les feintes courtes.',
-      'Système 6 arrière : P6 reste en fond, P1 et P5 sur les couloirs latéraux.',
+      'Système 6 arrière : libéro en grande diagonale, P6 dans l\'ombre du block, P1 sur la ligne droite.',
       'Le libéro a la priorité défensive et coordonne verbalement.',
     ],
     commonMistakes: [
       'Block ouvert non intentionnel → balle passe entre les contreurs.',
-      'Off-blocker qui reste au filet au lieu de redescendre → ombre du block non couverte.',
+      'Off-blocker qui reste au filet → ombre du block non couverte.',
       "Passeur qui contre puis n'arrive pas au filet → 2ᵉ touche par un joueur non spécialisé.",
     ],
   },
@@ -85,47 +117,82 @@ const DEFENSE_VS_Z3: Scenario = {
   },
   defaultCamera: 'TOP_DOWN',
   players: [
-    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 3.5] },
-    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.4] },
-    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
-    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.4] },
-    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 4] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4.5] },
-    { id: 'OPP', label: 'Central adverse', role: 'opponent', color: COLORS.opponent, position: [0, 0, -0.5] },
+    // Notre équipe en positions ready (légèrement spread pour mouvement visible)
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5] },
+    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 1.0] },
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 1.0] },
+    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.0] },
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4.5] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
+    // Adversaires : central attaquant + passeur explicite + autres
+    { id: 'OPP', label: 'Central adverse', role: 'opponent', color: COLORS.opponent, position: [0, 0, -1.5] },
+    { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -2] },
+    { id: 'OPP_R4', label: 'R4 adverse', role: 'opponent', color: COLORS.opponent, position: [3, 0, -0.6] },
   ],
   initialBallPosition: [0, 2.0, -3],
   timeline: [
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [0, 2.5, -0.5], duration: 0.4, arc: 2.5 },
-    { type: 'player_move', time: 0.2, id: 'C', to: [0, 1.6, 0.3], duration: 0.3 },
-    { type: 'player_pose', time: 0.2, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
-    { type: 'player_move', time: 0.3, id: 'R4', to: [-3, 0, 1.5], duration: 0.3 },
-    { type: 'player_move', time: 0.3, id: 'Op', to: [3, 0, 1.5], duration: 0.3 },
-    // Central opponent jumps fast for tempo 1
-    { type: 'player_move', time: 0.2, id: 'OPP', to: [0, 1.6, -0.6], duration: 0.2 },
-    { type: 'player_pose', time: 0.25, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    // ── Phase 1 : pénétration éclair du passeur (la rapide demande une passe rapide) ──
+    { type: 'player_move', time: 0, id: 'OPP_S', to: [-1.5, 0, -0.8], duration: 0.2 },
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-1.5, 1.8, -0.8], duration: 0.2, arc: 1.5 },
+    // Notre équipe lit la trajectoire (READY)
+    { type: 'player_pose', time: 0.05, id: 'C', pose: 'READY', duration: 0.15 },
+    { type: 'player_pose', time: 0.05, id: 'L', pose: 'READY', duration: 0.15 },
+    { type: 'player_pose', time: 0.05, id: 'P', pose: 'READY', duration: 0.15 },
+    { type: 'player_pose', time: 0.05, id: 'R4b', pose: 'READY', duration: 0.15 },
+
+    // ── Phase 2 : passe tendue rapide vers le central (tempo 1) ──
+    // Le central adverse a déjà commencé sa course, il décolle au moment de la passe
+    { type: 'player_move', time: 0.15, id: 'OPP', to: [0, 0, -1], duration: 0.1 },
+    { type: 'player_pose', time: 0.2, id: 'OPP_S', pose: 'SET', duration: 0.1 },
+    { type: 'ball_move', time: 0.2, from: [-1.5, 1.8, -0.8], to: [0, 2.5, -0.5], duration: 0.2, arc: 0.8 },
+    // Notre central commit-block ou lit puis saute
+    { type: 'player_move', time: 0.2, id: 'C', to: [0, 0, 0.3], duration: 0.15 },
+    { type: 'player_move', time: 0.35, id: 'C', to: [0, 1.6, 0.3], duration: 0.15 },
+    { type: 'player_pose', time: 0.35, id: 'C', pose: 'ARM_SPIKE', duration: 0.15 },
+    // Les ailiers reculent latéralement sur les 3 m
+    { type: 'player_move', time: 0.2, id: 'R4', to: [-3, 0, 2.2], duration: 0.3 },
+    { type: 'player_move', time: 0.2, id: 'Op', to: [3, 0, 2.2], duration: 0.3 },
+    // Le central adverse arme et frappe (rapide)
+    { type: 'player_move', time: 0.3, id: 'OPP', to: [0, 1.6, -0.6], duration: 0.1 },
+    { type: 'player_pose', time: 0.3, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.1 },
     { type: 'player_pose', time: 0.4, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
+
+    // ── Phase 3 : frappe rapide en diagonale ──
     { type: 'ball_move', time: 0.4, from: [0, 2.5, -0.5], to: [3, 0.8, 4], duration: 0.5, arc: false },
-    { type: 'player_move', time: 0.5, id: 'OPP', to: [0, 0, -0.6], duration: 0.3 },
-    { type: 'player_move', time: 0.5, id: 'P', to: [3, 0, 4], duration: 0.4 },
+    // Pendant la frappe, les arrières lisent et glissent
+    { type: 'player_move', time: 0.4, id: 'P', to: [3.5, 0, 4], duration: 0.5 },
+    { type: 'player_move', time: 0.4, id: 'L', to: [-2, 0, 5], duration: 0.5 },
+    { type: 'player_move', time: 0.4, id: 'R4b', to: [0, 0, 6], duration: 0.5 },
+    // Block + central retombent
+    { type: 'player_move', time: 0.5, id: 'C', to: [0, 0, 0.4], duration: 0.3 },
+    { type: 'player_move', time: 0.5, id: 'OPP', to: [0, 0, -1], duration: 0.3 },
+
+    // ── Phase 4 : récupération du passeur (P) côté ligne droite ──
     { type: 'player_pose', time: 0.9, id: 'P', pose: 'BUMP', duration: 0.2 },
     { type: 'ball_move', time: 0.9, from: [3, 0.8, 4], to: [1.5, 2.2, 1.0], duration: 0.8, arc: 3.5 },
-    { type: 'player_move', time: 1.0, id: 'C', to: [0, 0, 0.4], duration: 0.4 },
-    { type: 'player_pose', time: 1.7, id: 'P', pose: 'SET', duration: 0.2 },
+    // Le passeur adverse se replie en défense de contre-attaque
+    { type: 'player_move', time: 0.9, id: 'OPP_S', to: [-1, 0, -3], duration: 0.4 },
+
+    // ── Phase 5 : 2ᵉ touche par le pointu (le passeur a défendu) ──
+    { type: 'player_move', time: 1.5, id: 'Op', to: [2.5, 0, 1.0], duration: 0.3 },
+    { type: 'player_pose', time: 1.7, id: 'Op', pose: 'SET', duration: 0.2 },
+    // Notre R4 prépare une contre-attaque
+    { type: 'player_move', time: 1.5, id: 'R4', to: [-3, 0, 1.5], duration: 0.3 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe rapide adverse', description: 'Le passeur adverse distribue tendue vers son central pour une attaque tempo 1.' },
-    { id: 's2', startTime: 0.2, title: '2. Bloc individuel central', description: 'Notre central seul saute sur la fixation. Choix : commit block (saute systématiquement) ou read (attend la passe).' },
-    { id: 's3', startTime: 0.3, title: '3. Ailes en latéral', description: 'Le R4 et le pointu reculent légèrement sur les 3 m, prêts à défendre les diagonales courtes ou monter sur la passe suivante.' },
-    { id: 's4', startTime: 0.4, title: '4. Frappe rapide', description: "L'attaque centrale est rapide mais souvent moins angulée — la défense en arrière a le temps de lire." },
-    { id: 's5', startTime: 0.9, title: '5. Récupération arrière', description: 'Le passeur (en P1) est très avancé sur la lecture rapide. Il défend ou récupère.' },
-    { id: 's6', startTime: 1.7, title: '6. Contre-attaque', description: 'Si la défense est propre, transition vers une contre-attaque rapide.' },
+    { id: 's1', startTime: 0, title: '1. Pénétration éclair du passeur', description: "Le passeur adverse pénètre en sprintant pour une rapide. Tempo 1 : tout est rapide. Notre équipe lit en READY position." },
+    { id: 's2', startTime: 0.2, title: '2. Passe tendue + central en l\'air', description: "Le passeur lance tendu vers le central, qui a déjà commencé sa course et décolle juste avant la passe." },
+    { id: 's3', startTime: 0.2, title: '3. Bloc à 1 + ailes latérales', description: 'Notre central seul saute (commit ou read). R4 et pointu reculent latéralement sur les 3 m pour les diagonales courtes.' },
+    { id: 's4', startTime: 0.4, title: '4. Frappe rapide en diagonale', description: "Frappe à plat, peu angulée. Le passeur arrière (P) en lecture avancée se positionne pour récupérer." },
+    { id: 's5', startTime: 0.9, title: '5. Manchette défensive', description: 'Le passeur récupère en manchette dans son couloir. Trajectoire haute vers la zone 2-3.' },
+    { id: 's6', startTime: 1.5, title: '6. Le pointu prend la 2ᵉ touche', description: 'Comme notre passeur a défendu, le pointu (en P2) prend la 2ᵉ touche pour distribuer la contre-attaque.' },
   ],
   summary: {
     keyPoints: [
       'Bloc à 1 sur la rapide centrale : seul le central saute.',
       'Choix tactique : commit block (avec le central adverse) ou read block (attendre la passe).',
-      'Les ailiers reculent légèrement pour défendre les diagonales courtes.',
-      'Le passeur arrière (en P1) est en lecture avancée sur la rapide.',
+      'Les ailiers reculent latéralement sur les 3 m — pas en arrière complet.',
+      'Le passeur arrière (P1) est en lecture avancée sur la rapide.',
     ],
     commonMistakes: [
       'Tous les avants sautent → laisse les ailes ouvertes pour la passe suivante.',
@@ -147,55 +214,87 @@ const DEFENSE_VS_Z2: Scenario = {
   },
   defaultCamera: 'DEFAULT',
   players: [
-    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 3.5] },
-    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.4] },
-    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
-    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.4] },
-    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
-    { id: 'OPP', label: 'Attaquant adverse', role: 'opponent', color: COLORS.opponent, position: [-3.2, 0, -0.6] },
+    // Notre équipe en positions ready spread
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5.5] },
+    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 1.2] },
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 1.2] },
+    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.2] },
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4.5] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4.5] },
+    // Adversaires : attaquant Z2 (notre gauche) + passeur explicite
+    { id: 'OPP', label: 'Attaquant adv. Z2', role: 'opponent', color: COLORS.opponent, position: [-3.2, 0, -3] },
+    { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2] },
   ],
   initialBallPosition: [0, 2.0, -3],
   timeline: [
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-3.2, 3.0, -0.8], duration: 0.7, arc: 3.5 },
-    { type: 'player_move', time: 0.3, id: 'R4', to: [-3.0, 0, 0.3], duration: 0.4 },
-    { type: 'player_move', time: 0.4, id: 'C', to: [-2.0, 0, 0.3], duration: 0.5 },
-    { type: 'player_move', time: 0.5, id: 'Op', to: [3.0, 0, 1.5], duration: 0.5 },
-    { type: 'player_move', time: 0.5, id: 'L', to: [-2.0, 0, 5.5], duration: 0.4 },
-    { type: 'player_move', time: 0.5, id: 'R4b', to: [0.5, 0, 5.5], duration: 0.4 },
-    { type: 'player_move', time: 0.5, id: 'P', to: [3.5, 0, 4.5], duration: 0.4 },
-    { type: 'player_move', time: 0.7, id: 'R4', to: [-3.0, 1.6, 0.3], duration: 0.2 },
-    { type: 'player_move', time: 0.7, id: 'C', to: [-2.0, 1.6, 0.3], duration: 0.2 },
-    { type: 'player_pose', time: 0.7, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
-    { type: 'player_pose', time: 0.7, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
-    // Opponent attacker (left side) approaches, jumps and spikes
-    { type: 'player_move', time: 0.7, id: 'OPP', to: [-3.2, 0, -1.2], duration: 0.2 },
-    { type: 'player_move', time: 0.85, id: 'OPP', to: [-3.2, 1.8, -0.7], duration: 0.15 },
-    { type: 'player_pose', time: 0.85, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    // ── Phase 1 : pénétration du passeur adverse (depuis leur back-left = notre back-right) ──
+    { type: 'player_move', time: 0, id: 'OPP_S', to: [1.8, 0, -0.8], duration: 0.4 },
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
+    { type: 'player_pose', time: 0.1, id: 'L', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'R4b', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'P', pose: 'READY', duration: 0.3 },
+    { type: 'player_pose', time: 0.1, id: 'Op', pose: 'READY', duration: 0.3 },
+
+    // ── Phase 2 : passe en cloche vers Z2 + glissement défensif ──
+    { type: 'player_pose', time: 0.4, id: 'OPP_S', pose: 'SET', duration: 0.2 },
+    { type: 'ball_move', time: 0.4, from: [1.8, 1.8, -0.8], to: [-3.2, 3.0, -0.8], duration: 0.6, arc: 4.0 },
+    { type: 'player_move', time: 0.4, id: 'OPP', to: [-3.2, 0, -1.5], duration: 0.4 },
+    // Notre block : R4 fixe la ligne, C ferme la diagonale (symétrique de Z4)
+    { type: 'player_move', time: 0.5, id: 'R4', to: [-3.0, 0, 0.3], duration: 0.4 },
+    { type: 'player_move', time: 0.5, id: 'C', to: [-2.0, 0, 0.3], duration: 0.5 },
+    // Pointu (Op) recule en off-blocker
+    { type: 'player_move', time: 0.5, id: 'Op', to: [3.0, 0, 2.8], duration: 0.5 },
+    // Libéro glisse en grande diagonale (gros déplacement vers la droite)
+    { type: 'player_move', time: 0.5, id: 'L', to: [-1, 0, 6.5], duration: 0.6 },
+    // P6 (R4b) bascule dans l'ombre du block (à droite du centre)
+    { type: 'player_move', time: 0.5, id: 'R4b', to: [0.8, 0, 5.5], duration: 0.5 },
+    // Passeur (P1) recule sur la ligne droite
+    { type: 'player_move', time: 0.5, id: 'P', to: [3.8, 0, 7.5], duration: 0.5 },
+
+    // ── Phase 3 : décollage du block + attaquant en l'air ──
+    { type: 'player_move', time: 0.85, id: 'R4', to: [-3.0, 1.6, 0.3], duration: 0.15 },
+    { type: 'player_move', time: 0.85, id: 'C', to: [-2.0, 1.6, 0.3], duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'R4', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'C', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_move', time: 0.9, id: 'OPP', to: [-3.2, 1.8, -0.7], duration: 0.1 },
+    { type: 'player_pose', time: 0.9, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.1 },
     { type: 'player_pose', time: 1.0, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
-    { type: 'ball_move', time: 1.0, from: [-3.2, 3.0, -0.8], to: [3.0, 1.0, 5.0], duration: 0.5, arc: false },
+
+    // ── Phase 4 : frappe en grande diagonale longue ──
+    { type: 'ball_move', time: 1.0, from: [-3.2, 3.0, -0.8], to: [3.0, 1.0, 6.5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 1.1, id: 'R4', to: [-3.0, 0, 0.5], duration: 0.2 },
+    { type: 'player_move', time: 1.1, id: 'C', to: [-2.0, 0, 0.5], duration: 0.2 },
     { type: 'player_move', time: 1.1, id: 'OPP', to: [-3.2, 0, -0.6], duration: 0.3 },
+
+    // ── Phase 5 : le passeur défend en grande diagonale ──
     { type: 'player_pose', time: 1.5, id: 'P', pose: 'BUMP', duration: 0.2 },
-    { type: 'ball_move', time: 1.5, from: [3.0, 1.0, 5.0], to: [-1.0, 2.5, 1.0], duration: 0.8, arc: 3.5 },
-    { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 0.4], duration: 0.3 },
-    { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 0.4], duration: 0.4 },
-    { type: 'player_move', time: 2.0, id: 'Op', to: [3.0, 0, 0.4], duration: 0.3 },
+    { type: 'ball_move', time: 1.5, from: [3.0, 1.0, 6.5], to: [-1.0, 2.5, 1.0], duration: 0.8, arc: 3.5 },
+    // Le passeur adverse se replie défensivement
+    { type: 'player_move', time: 1.5, id: 'OPP_S', to: [1, 0, -2], duration: 0.5 },
+
+    // ── Phase 6 : 2ᵉ touche par le pointu (le passeur a défendu) ──
+    { type: 'player_move', time: 1.7, id: 'Op', to: [-1.0, 0, 1.0], duration: 0.5 },
+    { type: 'player_pose', time: 2.3, id: 'Op', pose: 'SET', duration: 0.2 },
+    // Notre R4 et C se replient pour la contre-attaque
+    { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 1.0], duration: 0.3 },
+    { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 1.0], duration: 0.4 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Passe adverse en Z2', description: "L'attaque arrive côté gauche défenseur. Notre R4 et central organisent le bloc." },
-    { id: 's2', startTime: 0.4, title: '2. Bloc à 2 fermant', description: 'Le R4 fixe la ligne, le central se déplace vers la zone 4 et ferme la diagonale (symétrique du Z4).' },
-    { id: 's3', startTime: 0.5, title: '3. Off-blocker à droite', description: 'Le pointu (P2) recule sur les 3 m côté droit pour défendre les feintes courtes.' },
-    { id: 's4', startTime: 0.5, title: '4. Défense réorganisée', description: 'Libéro et R4b en arrière à gauche, P1 (passeur) recule sur la grande diagonale côté droit.' },
-    { id: 's5', startTime: 1.0, title: '5. Frappe adverse', description: "L'attaquant gauche frappe en diagonale longue vers notre P1 ou en ligne vers notre R4 reculé." },
-    { id: 's6', startTime: 1.5, title: '6. Récupération du passeur', description: 'Le passeur, en P1, défend dans son couloir et est aussi celui qui doit relancer.' },
-    { id: 's7', startTime: 1.5, title: '7. Transition compliquée', description: "Si le passeur a défendu, c'est le pointu (en zone 2) qui prend la 2ᵉ touche." },
+    { id: 's1', startTime: 0, title: '1. Pénétration du passeur adverse', description: "Le passeur adverse pénètre depuis sa P1 vers la zone 2-3. Notre équipe lit la trajectoire (READY)." },
+    { id: 's2', startTime: 0.4, title: '2. Passe en cloche vers Z2', description: "Le passeur distribue vers son R4 en zone 2 — l'attaque arrive sur notre côté gauche." },
+    { id: 's3', startTime: 0.5, title: '3. Block + glissement défensif', description: "R4 fixe la ligne, C ferme la diagonale. Pointu off-blocker à droite (3 m). Libéro glisse en grande diag, P6 ombre du block, P1 ligne droite." },
+    { id: 's4', startTime: 0.85, title: '4. Décollage simultané', description: 'Bloc à 2 (R4 + C) saute, l\'attaquant arme dans le même temps.' },
+    { id: 's5', startTime: 1.0, title: '5. Frappe en diagonale longue', description: "Frappe en grande diagonale vers notre zone 1. Le passeur (en P1) est sur la trajectoire." },
+    { id: 's6', startTime: 1.5, title: '6. Le passeur défend', description: 'Manchette défensive — mais maintenant qui fait la 2ᵉ touche ?' },
+    { id: 's7', startTime: 1.7, title: '7. Le pointu prend le relais', description: 'Le pointu (P2) sort de l\'off-blocker pour faire la 2ᵉ touche. Communication impérative.' },
+    { id: 's8', startTime: 2.3, title: '8. Distribution de secours', description: 'Passe en touche par le pointu — souvent vers le R4 ou central qui sont disponibles.' },
   ],
   summary: {
     keyPoints: [
       'Symétrique du block vs Z4 : R4 fixe la ligne, central ferme la diagonale.',
       'Le pointu (P2) devient off-blocker côté droit.',
       'Le passeur (P1) défend dans la grande diagonale.',
-      'Si le passeur défend → 2ᵉ touche difficile, le pointu doit relayer.',
+      'Si le passeur défend → 2ᵉ touche par le pointu obligatoire.',
     ],
     commonMistakes: [
       'Pointu qui contre depuis la zone 2 → off-blocker absent.',
