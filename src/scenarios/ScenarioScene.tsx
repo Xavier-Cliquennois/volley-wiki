@@ -10,7 +10,33 @@ import type { BallWithTrailRef } from '../3d/BallWithTrail';
 import { ImpactEffect } from '../3d/ImpactEffect';
 import type { ImpactEffectRef } from '../3d/ImpactEffect';
 import { useTactic } from '../3d/useTactic';
-import type { Scenario } from './types';
+import type { Scenario, ScenarioPlayerConfig } from './types';
+import { COLORS } from './data/_shared';
+
+// Generates background opponents so the opposing team is always visible at full size.
+// Skips slots that overlap (within 1.5m) with opponents the scenario already animates.
+function fillOpposingTeam(scenario: Scenario): ScenarioPlayerConfig[] {
+  const existing = scenario.players.filter(p => p.role === 'opponent');
+  const needed = scenario.config.teamSize - existing.length;
+  if (needed <= 0) return [];
+
+  const fillers: ScenarioPlayerConfig[] = [
+    { id: '_fill_S',  label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -1.0] },
+    { id: '_fill_C',  label: 'Central adv.', role: 'opponent', color: COLORS.opponent, position: [0,    0, -0.6] },
+    { id: '_fill_R4', label: 'Aile adv.',    role: 'opponent', color: COLORS.opponent, position: [3.0,  0, -0.6] },
+    { id: '_fill_BL', label: 'Arr. G adv.',  role: 'opponent', color: COLORS.opponent, position: [-3.0, 0, -5.5] },
+    { id: '_fill_BC', label: 'Libéro adv.',  role: 'opponent', color: COLORS.opponent, position: [0,    0, -7.0] },
+    { id: '_fill_BR', label: 'Arr. D adv.',  role: 'opponent', color: COLORS.opponent, position: [3.0,  0, -5.5] },
+  ];
+
+  const safeFillers = fillers.filter(f =>
+    !existing.some(e =>
+      Math.abs(e.position[0] - f.position[0]) < 1.5 &&
+      Math.abs(e.position[2] - f.position[2]) < 1.5
+    )
+  );
+  return safeFillers.slice(0, needed);
+}
 
 type ScenarioSceneProps = {
   scenario: Scenario;
@@ -57,22 +83,34 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
     if (timelineRef?.current) controllerRef.current = timelineRef.current;
   }, [timelineRef, controllerRef, scenario.id]);
 
+  const allPlayers = useMemo(
+    () => [...scenario.players, ...fillOpposingTeam(scenario)],
+    [scenario]
+  );
+
   return (
     <>
       <CameraSetup cameraRef={cameraRef} />
-      <OrbitControls enablePan={false} minDistance={4} maxDistance={20} target={[0, 1, 0]} />
+      <OrbitControls enablePan={false} minDistance={4} maxDistance={30} target={[0, 1, 0]} />
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
       {showZones && <CourtZones />}
-      {scenario.players.map(player => (
-        <Player
-          key={player.id}
-          ref={el => { playerRefs.current[player.id] = el; }}
-          color={player.color}
-          position={player.position}
-        />
-      ))}
+      {allPlayers.map(player => {
+        // Setters on our side face the antenne gauche to mimic real setting orientation.
+        const facingRotation = player.role === 'setter' && player.position[2] > 0
+          ? -Math.PI / 2
+          : undefined;
+        return (
+          <Player
+            key={player.id}
+            ref={el => { playerRefs.current[player.id] = el; }}
+            color={player.color}
+            position={player.position}
+            facingRotation={facingRotation}
+          />
+        );
+      })}
       <BallWithTrail ref={ballRef} position={scenario.initialBallPosition} showTrail={showTrail} />
       <ImpactEffect ref={impactRef} />
     </>

@@ -173,7 +173,7 @@ export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisu
               onClick={() => handlePresetChange(key)}
               className={`px-2 py-1 text-xs border ${currentCameraPreset === key ? 'bg-yellow-400 text-black border-yellow-400' : 'text-gray-400 border-gray-600 hover:border-gray-400'}`}
             >
-              {CAMERA_PRESETS[key].label.split(' ')[0]}
+              {CAMERA_PRESETS[key].label}
             </button>
           ))}
         </div>

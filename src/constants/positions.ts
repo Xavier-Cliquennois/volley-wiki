@@ -2,8 +2,8 @@ export const ROLE_COLORS = {
   P1: '#9b59b6',  // opposite
   P2: '#e74c3c',  // setter
   P3: '#2ecc71',  // middle
-  P4: '#3498db',  // outside
-  P5: '#3498db',  // outside (back row)
+  P4: '#3498db',  // outside (front row)
+  P5: '#1abc9c',  // outside (back row) — distinct teal
   P6: '#e67e22',  // middle (back row)
   L:  '#f1c40f',  // libero
 } as const;
