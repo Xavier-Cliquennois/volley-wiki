@@ -20,19 +20,24 @@ const ATTACK_5_1_P1: Scenario = {
     { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3.2, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 4] },
     ...opponentBlockers(),
-    // Adversaires explicites côté arrière + central pour qu'ils réagissent à l'attaque
+    // Adversaires explicites : serveur (origine du ballon) + arrière + central pour qu'ils réagissent
+    { id: 'OPP_SRV', label: 'Serveur adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -8.5] },
     { id: 'OPP_C', label: 'Central adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -0.6] },
     { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [3, 0, -4] },
     { id: 'OPP_BC', label: 'Libéro adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -6] },
     { id: 'OPP_BL', label: 'Arr. adv. G', role: 'opponent', color: COLORS.opponent, position: [-3, 0, -5.5] },
   ],
-  initialBallPosition: [0, 2.5, -9],
+  initialBallPosition: [0, 1.5, -8.5],
   timeline: [
-    // ── Phase 1 : service adverse + déclenchement de notre passeur ──
-    { type: 'ball_move', time: 0, from: [0, 2.5, -9], to: [0, 1.2, 4], duration: 1.0, arc: 3.0 },
+    // ── Phase 0 : le serveur adverse vient de frapper (SPIKE pose au moment du contact) ──
+    { type: 'player_pose', time: 0, id: 'OPP_SRV', pose: 'SPIKE', duration: 0.2 },
+    // ── Phase 1 : trajectoire du service vers notre P6 + déclenchement de notre passeur ──
+    { type: 'ball_move', time: 0, from: [0, 1.5, -8.5], to: [0, 1.2, 4], duration: 1.0, arc: 3.5 },
     { type: 'player_pose', time: 0.3, id: 'R4b', pose: 'READY', duration: 0.1, text: "J'ai !" },
     // Le passeur démarre sa pénétration dès la frappe du service (~ t=0.2)
     { type: 'player_move', time: 0.2, id: 'P', to: [3, 0, 2.5], duration: 0.5 },
+    // Le serveur retombe dans son terrain et entre en défense
+    { type: 'player_move', time: 0.3, id: 'OPP_SRV', to: [0, 0, -7.5], duration: 0.5 },
 
     // ── Phase 2 : réception + pénétration finale + lecture du contre adverse ──
     { type: 'player_pose', time: 1.0, id: 'R4b', pose: 'BUMP', duration: 0.2 },
@@ -75,16 +80,31 @@ const ATTACK_5_1_P1: Scenario = {
     { type: 'player_move', time: 2.7, id: 'OPP_S', to: [3, 0, -1.5], duration: 0.5 },
     { type: 'player_move', time: 2.7, id: 'OPP_BC', to: [1, 0, -5], duration: 0.4 },
     { type: 'player_move', time: 2.7, id: 'OPP_BL', to: [-2.5, 0, -1.5], duration: 0.5 },
+
+    // ── Phase 6 : RESET — retour à la position de base ──
+    { type: 'player_pose', time: 3.5, id: 'L', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.5, id: 'R4a', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.5, id: 'R4b', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.5, id: 'C', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.5, id: 'Op', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.5, id: 'P', pose: 'RESET', duration: 0.4 },
+    { type: 'player_move', time: 3.5, id: 'L', to: [-2.5, 0, 4], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'R4a', to: [-3.2, 0, 0.6], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'R4b', to: [0, 0, 4], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'C', to: [0, 0, 0.6], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'Op', to: [3.2, 0, 0.6], duration: 0.7 },
+    { type: 'player_move', time: 3.5, id: 'P', to: [3, 0, 4], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Le ballon arrive vers la zone 6. Le R4 placé en P6 annonce sa prise. Le passeur démarre sa pénétration dès la frappe du serveur.' },
+    { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Leur serveur frappe (SPIKE). Le ballon arrive vers la zone 6. Le R4 placé en P6 annonce sa prise. Le passeur démarre sa pénétration dès la frappe du serveur.' },
     { id: 's2', startTime: 1.0, title: '2. Réception + pénétration', description: 'Réception en manchette précise vers la zone du passeur. Pénétration finale, perpendiculaire au filet, à un bras du filet.' },
     { id: 's3', startTime: 1.5, title: '3. Block adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer diagonale et ligne. Le central glisse au centre.' },
     { id: 's4', startTime: 1.9, title: '4. Passe en touche vers Z4', description: 'Passe haute en cloche. La trajectoire fixe le contre adverse à droite. Le R4 attaque, les autres se replient en couverture.' },
     { id: 's5', startTime: 2.0, title: "5. Couverture d'attaque", description: "Passeur en position basse à 1-1,5 m, libéro et P6 dans le 1er arc, pointu et central plus loin. 5 joueurs autour de l'attaquant." },
     { id: 's6', startTime: 2.5, title: "6. Armé + fouetté", description: 'Le R4 arme le bras dorsal puis frappe en diagonale longue. Le block adverse saute en parallèle.' },
     { id: 's7', startTime: 2.7, title: '7. Frappe + chute du block', description: "La balle franchit le block (ou le force au touch). Notre attaquant retombe équilibré." },
-    { id: 's8', startTime: 3.0, title: '8. Reset & transition', description: 'Réception équilibrée, le passeur adverse se replie pour défendre. On garde notre couverture jusqu\'au point.' },
+    { id: 's8', startTime: 3.0, title: '8. Recovery + transition', description: 'Réception équilibrée, le passeur adverse se replie pour défendre. On garde notre couverture jusqu\'au point.' },
+    { id: 's9', startTime: 3.5, title: '9. RESET — retour à la base', description: "Après chaque échange, on REVIENT à sa position de base. C'est vital : aucun système d'attaque ou de défense ne tient si on n'est pas bien placé au départ du coup suivant." },
   ],
   summary: {
     keyPoints: [

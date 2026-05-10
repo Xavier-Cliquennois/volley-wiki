@@ -21,15 +21,18 @@ const DEFENSE_VS_Z4: Scenario = {
     { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.2] },
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4] },
     { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4.5] },
-    // Adversaires explicites : attaquant Z4 (recule pour la course d'élan) + passeur (penetrera)
+    // Adversaires : attaquant Z4 (recule pour la course d'élan) + passeur (penetrera) + réceptionneur (origine du ballon)
     { id: 'OPP', label: 'Attaquant adv. Z4', role: 'opponent', color: COLORS.opponent, position: [3.2, 0, -3] },
     { id: 'OPP_S', label: 'Passeur adverse', role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -2] },
+    { id: 'OPP_R', label: 'Réceptionneur adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -3.2] },
   ],
-  initialBallPosition: [0, 2.0, -3],
+  initialBallPosition: [0, 1.0, -3.2],
   timeline: [
-    // ── Phase 1 : pénétration du passeur adverse + lecture défensive ──
+    // ── Phase 0 : le réceptionneur adverse vient de toucher (BUMP) ──
+    { type: 'player_pose', time: 0, id: 'OPP_R', pose: 'BUMP', duration: 0.2 },
+    // ── Phase 1 : ballon part vers le passeur en pénétration ──
     { type: 'player_move', time: 0, id: 'OPP_S', to: [-1.8, 0, -0.8], duration: 0.4 },
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
+    { type: 'ball_move', time: 0, from: [0, 1.0, -3.2], to: [-1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
     { type: 'player_pose', time: 0.1, id: 'L', pose: 'READY', duration: 0.3 },
     { type: 'player_pose', time: 0.1, id: 'R4b', pose: 'READY', duration: 0.3 },
     { type: 'player_pose', time: 0.1, id: 'P', pose: 'READY', duration: 0.3 },
@@ -79,9 +82,23 @@ const DEFENSE_VS_Z4: Scenario = {
     { type: 'player_move', time: 2.0, id: 'Op', to: [3.0, 0, 1.0], duration: 0.3 },
     { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 1.0], duration: 0.4 },
     { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 1.0], duration: 0.3 },
+
+    // ── Phase 7 : RESET — retour à la position de base ──
+    { type: 'player_pose', time: 3.2, id: 'P', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'Op', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'C', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'R4', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'L', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'R4b', pose: 'RESET', duration: 0.4 },
+    { type: 'player_move', time: 3.2, id: 'P', to: [3, 0, 6.5], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'Op', to: [3, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'C', to: [0, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'R4', to: [-3, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'L', to: [-3, 0, 4], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'R4b', to: [0, 0, 4.5], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Pénétration du passeur adverse', description: "Le passeur adverse pénètre de P1 vers la zone 2-3. Notre ligne défensive lit la trajectoire (READY, jambes fléchies)." },
+    { id: 's1', startTime: 0, title: '1. Réception adverse + pénétration du passeur', description: "Leur arrière reçoit le service (BUMP). Le passeur adverse pénètre vers la zone 2-3. Notre ligne défensive lit la trajectoire (READY, jambes fléchies)." },
     { id: 's2', startTime: 0.4, title: '2. Passe en cloche vers Z4', description: 'Le passeur distribue vers son ailier en zone 4 (notre côté droit). Notre ligne avant identifie la zone d\'attaque.' },
     { id: 's3', startTime: 0.5, title: '3. Block + glissement défensif', description: "P2 (pointu) fixe la ligne, le central (P3) ferme la diagonale. Le R4 redescend sur les 3 m (off-blocker) — le libéro glisse en grande diagonale, le P6 dans l'ombre du block, le passeur recule sur la ligne." },
     { id: 's4', startTime: 0.85, title: '4. Décollage simultané', description: 'Saut du block à 2, mains au-dessus du filet. L\'attaquant arme dans le même temps.' },
@@ -89,6 +106,7 @@ const DEFENSE_VS_Z4: Scenario = {
     { id: 's6', startTime: 1.5, title: '6. Défense du libéro', description: `Le libéro récupère en manchette dans sa zone prioritaire — annonce vocale "J'ai !".` },
     { id: 's7', startTime: 1.5, title: '7. Sprint du passeur au filet', description: "Notre passeur, qui n'a pas contré, arrive vite au filet pour la 2ᵉ touche. Le passeur adverse se replie pour défendre." },
     { id: 's8', startTime: 2.3, title: '8. Distribution & contre-attaque', description: "Passe en suspension. Pointu, central et R4 se présentent en course d'élan pour finir le rally." },
+    { id: 's9', startTime: 3.2, title: '9. RESET — retour à la base', description: "Après chaque échange, on REVIENT à sa position de base. Un placement sûr est la condition pour défendre le coup suivant — c'est vital." },
   ],
   summary: {
     keyPoints: [
@@ -124,16 +142,19 @@ const DEFENSE_VS_Z3: Scenario = {
     { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.0] },
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4.5] },
     { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
-    // Adversaires : central attaquant + passeur explicite + autres
+    // Adversaires : central attaquant + passeur explicite + R4 + réceptionneur (origine du ballon)
     { id: 'OPP', label: 'Central adverse', role: 'opponent', color: COLORS.opponent, position: [0, 0, -1.5] },
     { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -2] },
     { id: 'OPP_R4', label: 'R4 adverse', role: 'opponent', color: COLORS.opponent, position: [3, 0, -0.6] },
+    { id: 'OPP_R', label: 'Réceptionneur adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -3.2] },
   ],
-  initialBallPosition: [0, 2.0, -3],
+  initialBallPosition: [0, 1.0, -3.2],
   timeline: [
+    // ── Phase 0 : le réceptionneur adverse a touché (BUMP) ──
+    { type: 'player_pose', time: 0, id: 'OPP_R', pose: 'BUMP', duration: 0.15 },
     // ── Phase 1 : pénétration éclair du passeur (la rapide demande une passe rapide) ──
     { type: 'player_move', time: 0, id: 'OPP_S', to: [-1.5, 0, -0.8], duration: 0.2 },
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-1.5, 1.8, -0.8], duration: 0.2, arc: 1.5 },
+    { type: 'ball_move', time: 0, from: [0, 1.0, -3.2], to: [-1.5, 1.8, -0.8], duration: 0.2, arc: 1.5 },
     // Notre équipe lit la trajectoire (READY)
     { type: 'player_pose', time: 0.05, id: 'C', pose: 'READY', duration: 0.15 },
     { type: 'player_pose', time: 0.05, id: 'L', pose: 'READY', duration: 0.15 },
@@ -178,14 +199,29 @@ const DEFENSE_VS_Z3: Scenario = {
     { type: 'player_pose', time: 1.7, id: 'Op', pose: 'SET', duration: 0.2 },
     // Notre R4 prépare une contre-attaque
     { type: 'player_move', time: 1.5, id: 'R4', to: [-3, 0, 1.5], duration: 0.3 },
+
+    // ── Phase 6 : RESET — retour à la position de base ──
+    { type: 'player_pose', time: 2.5, id: 'P', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 2.5, id: 'Op', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 2.5, id: 'C', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 2.5, id: 'R4', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 2.5, id: 'L', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 2.5, id: 'R4b', pose: 'RESET', duration: 0.4 },
+    { type: 'player_move', time: 2.5, id: 'P', to: [3, 0, 5], duration: 0.7 },
+    { type: 'player_move', time: 2.5, id: 'Op', to: [3, 0, 1.0], duration: 0.7 },
+    { type: 'player_move', time: 2.5, id: 'C', to: [0, 0, 1.0], duration: 0.7 },
+    { type: 'player_move', time: 2.5, id: 'R4', to: [-3, 0, 1.0], duration: 0.7 },
+    { type: 'player_move', time: 2.5, id: 'L', to: [-3, 0, 4.5], duration: 0.7 },
+    { type: 'player_move', time: 2.5, id: 'R4b', to: [0, 0, 5], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Pénétration éclair du passeur', description: "Le passeur adverse pénètre en sprintant pour une rapide. Tempo 1 : tout est rapide. Notre équipe lit en READY position." },
+    { id: 's1', startTime: 0, title: '1. Réception adverse + pénétration éclair', description: "Leur arrière reçoit (BUMP). Le passeur sprint pour une rapide. Tempo 1 : tout est très rapide. Notre équipe lit en READY position." },
     { id: 's2', startTime: 0.2, title: '2. Passe tendue + central en l\'air', description: "Le passeur lance tendu vers le central, qui a déjà commencé sa course et décolle juste avant la passe." },
     { id: 's3', startTime: 0.2, title: '3. Bloc à 1 + ailes latérales', description: 'Notre central seul saute (commit ou read). R4 et pointu reculent latéralement sur les 3 m pour les diagonales courtes.' },
     { id: 's4', startTime: 0.4, title: '4. Frappe rapide en diagonale', description: "Frappe à plat, peu angulée. Le passeur arrière (P) en lecture avancée se positionne pour récupérer." },
     { id: 's5', startTime: 0.9, title: '5. Manchette défensive', description: 'Le passeur récupère en manchette dans son couloir. Trajectoire haute vers la zone 2-3.' },
     { id: 's6', startTime: 1.5, title: '6. Le pointu prend la 2ᵉ touche', description: 'Comme notre passeur a défendu, le pointu (en P2) prend la 2ᵉ touche pour distribuer la contre-attaque.' },
+    { id: 's7', startTime: 2.5, title: '7. RESET — retour à la base', description: "Après chaque échange, retour à la position de base. C'est vital : sans bon placement, on est en retard sur le coup suivant." },
   ],
   summary: {
     keyPoints: [
@@ -221,15 +257,18 @@ const DEFENSE_VS_Z2: Scenario = {
     { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.2] },
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-3, 0, 4.5] },
     { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 4.5] },
-    // Adversaires : attaquant Z2 (notre gauche) + passeur explicite
+    // Adversaires : attaquant Z2 (notre gauche) + passeur explicite + réceptionneur (origine du ballon)
     { id: 'OPP', label: 'Attaquant adv. Z2', role: 'opponent', color: COLORS.opponent, position: [-3.2, 0, -3] },
     { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2] },
+    { id: 'OPP_R', label: 'Réceptionneur adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -3.2] },
   ],
-  initialBallPosition: [0, 2.0, -3],
+  initialBallPosition: [0, 1.0, -3.2],
   timeline: [
+    // ── Phase 0 : le réceptionneur adverse a touché (BUMP) ──
+    { type: 'player_pose', time: 0, id: 'OPP_R', pose: 'BUMP', duration: 0.2 },
     // ── Phase 1 : pénétration du passeur adverse (depuis leur back-left = notre back-right) ──
     { type: 'player_move', time: 0, id: 'OPP_S', to: [1.8, 0, -0.8], duration: 0.4 },
-    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
+    { type: 'ball_move', time: 0, from: [0, 1.0, -3.2], to: [1.8, 1.8, -0.8], duration: 0.4, arc: 2.5 },
     { type: 'player_pose', time: 0.1, id: 'L', pose: 'READY', duration: 0.3 },
     { type: 'player_pose', time: 0.1, id: 'R4b', pose: 'READY', duration: 0.3 },
     { type: 'player_pose', time: 0.1, id: 'P', pose: 'READY', duration: 0.3 },
@@ -278,9 +317,23 @@ const DEFENSE_VS_Z2: Scenario = {
     // Notre R4 et C se replient pour la contre-attaque
     { type: 'player_move', time: 2.0, id: 'R4', to: [-3.0, 0, 1.0], duration: 0.3 },
     { type: 'player_move', time: 2.0, id: 'C', to: [0, 0, 1.0], duration: 0.4 },
+
+    // ── Phase 7 : RESET — retour à la position de base ──
+    { type: 'player_pose', time: 3.2, id: 'P', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'Op', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'C', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'R4', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'L', pose: 'RESET', duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'R4b', pose: 'RESET', duration: 0.4 },
+    { type: 'player_move', time: 3.2, id: 'P', to: [3, 0, 5.5], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'Op', to: [3, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'C', to: [0, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'R4', to: [-3, 0, 1.2], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'L', to: [-3, 0, 4.5], duration: 0.7 },
+    { type: 'player_move', time: 3.2, id: 'R4b', to: [0, 0, 4.5], duration: 0.7 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Pénétration du passeur adverse', description: "Le passeur adverse pénètre depuis sa P1 vers la zone 2-3. Notre équipe lit la trajectoire (READY)." },
+    { id: 's1', startTime: 0, title: '1. Réception adverse + pénétration', description: "Leur arrière reçoit (BUMP). Le passeur adverse pénètre depuis sa P1 vers la zone 2-3. Notre équipe lit la trajectoire (READY)." },
     { id: 's2', startTime: 0.4, title: '2. Passe en cloche vers Z2', description: "Le passeur distribue vers son R4 en zone 2 — l'attaque arrive sur notre côté gauche." },
     { id: 's3', startTime: 0.5, title: '3. Block + glissement défensif', description: "R4 fixe la ligne, C ferme la diagonale. Pointu off-blocker à droite (3 m). Libéro glisse en grande diag, P6 ombre du block, P1 ligne droite." },
     { id: 's4', startTime: 0.85, title: '4. Décollage simultané', description: 'Bloc à 2 (R4 + C) saute, l\'attaquant arme dans le même temps.' },
@@ -288,6 +341,7 @@ const DEFENSE_VS_Z2: Scenario = {
     { id: 's6', startTime: 1.5, title: '6. Le passeur défend', description: 'Manchette défensive — mais maintenant qui fait la 2ᵉ touche ?' },
     { id: 's7', startTime: 1.7, title: '7. Le pointu prend le relais', description: 'Le pointu (P2) sort de l\'off-blocker pour faire la 2ᵉ touche. Communication impérative.' },
     { id: 's8', startTime: 2.3, title: '8. Distribution de secours', description: 'Passe en touche par le pointu — souvent vers le R4 ou central qui sont disponibles.' },
+    { id: 's9', startTime: 3.2, title: '9. RESET — retour à la base', description: "Après chaque échange, retour à la position de base. C'est vital : tout dépend du placement initial pour la suite." },
   ],
   summary: {
     keyPoints: [
