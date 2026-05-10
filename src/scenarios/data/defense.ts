@@ -752,6 +752,214 @@ const DEFENSE_4V4_BLOCK_1: Scenario = {
   },
 };
 
+// Scenario D12 — 5v5 defense vs zone 3 (central rapide)
+const DEFENSE_5V5_VS_Z3: Scenario = {
+  id: '5v5-defense-vs-z3',
+  title: '5v5 · Défense Z3 (rapide)',
+  shortDescription: 'Défense 5v5 face à attaque centrale rapide : block individuel, latéraux en couverture.',
+  config: { teamSize: 5, phase: 'defense', contextLabel: '5v5 · Block à 1 · Lecture rapide' },
+  defaultCamera: 'TOP_DOWN',
+  players: [
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
+    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.4] },
+    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.4] },
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5] },
+    { id: 'OPP', label: 'Central adverse', role: 'opponent', color: COLORS.opponent, position: [0, 0, -0.5] },
+  ],
+  initialBallPosition: [0, 2.0, -3],
+  timeline: [
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [0, 2.5, -0.5], duration: 0.4, arc: 2.5 },
+    { type: 'player_move', time: 0.2, id: 'C', to: [0, 1.6, 0.3], duration: 0.3 },
+    { type: 'player_pose', time: 0.2, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 0.3, id: 'R4', to: [-3, 0, 1.5], duration: 0.3 },
+    { type: 'player_move', time: 0.3, id: 'Op', to: [3, 0, 1.5], duration: 0.3 },
+    { type: 'player_move', time: 0.2, id: 'OPP', to: [0, 1.6, -0.6], duration: 0.2 },
+    { type: 'player_pose', time: 0.25, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 0.4, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
+    { type: 'ball_move', time: 0.4, from: [0, 2.5, -0.5], to: [-2.5, 0.8, 5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 0.5, id: 'OPP', to: [0, 0, -0.6], duration: 0.3 },
+    { type: 'player_pose', time: 0.9, id: 'L', pose: 'BUMP', duration: 0.2 },
+    { type: 'ball_move', time: 0.9, from: [-2.5, 0.8, 5], to: [1.5, 2.0, 1.0], duration: 0.8, arc: 3.5 },
+    { type: 'player_move', time: 1.0, id: 'C', to: [0, 0, 0.4], duration: 0.4 },
+  ],
+  steps: [
+    { id: 's1', startTime: 0, title: '1. Passe rapide adverse', description: 'Distribution tendue vers le central pour une rapide.' },
+    { id: 's2', startTime: 0.2, title: '2. Block individuel', description: 'Le central seul saute. Les ailiers reculent latéralement sur les 3 m.' },
+    { id: 's3', startTime: 0.4, title: '3. Frappe centrale', description: "L'attaque rapide va plutôt en diagonale courte. Le libéro lit en grande diag." },
+    { id: 's4', startTime: 0.9, title: '4. Récupération + transition', description: 'Le libéro (en P5) fait la défense, le passeur revient au filet pour la 2ᵉ touche.' },
+  ],
+  summary: {
+    keyPoints: [
+      'Block à 1 sur la rapide centrale, comme en 6v6.',
+      'Les ailiers latéralisés couvrent les diagonales courtes.',
+      'Avec 2 défenseurs en fond seulement, la lecture est primordiale.',
+    ],
+    commonMistakes: [
+      'Bloc à 2 sur rapide → trop tard, et laisse 1 défenseur au sol.',
+      'Défenseurs figés au fond → balle rapide tombe avant de bouger.',
+    ],
+  },
+};
+
+// Scenario D13 — 5v5 defense vs zone 2 (mirror of Z4)
+const DEFENSE_5V5_VS_Z2: Scenario = {
+  id: '5v5-defense-vs-z2',
+  title: '5v5 · Défense Z2',
+  shortDescription: 'Défense 5v5 face à attaque zone 2 (notre côté gauche) : block à 2 + 3 défenseurs reculés.',
+  config: { teamSize: 5, phase: 'defense', contextLabel: '5v5 · Block à 2 · 3 défenseurs au sol' },
+  defaultCamera: 'DEFAULT',
+  players: [
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
+    { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.4] },
+    { id: 'R4', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.4] },
+    { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
+    { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5] },
+    { id: 'OPP', label: 'Attaquant adverse', role: 'opponent', color: COLORS.opponent, position: [-3, 0, -0.6] },
+  ],
+  initialBallPosition: [0, 2.0, -3],
+  timeline: [
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [-3.0, 3.0, -0.8], duration: 0.7, arc: 3.5 },
+    { type: 'player_move', time: 0.3, id: 'R4', to: [-3.0, 0, 0.3], duration: 0.4 },
+    { type: 'player_move', time: 0.4, id: 'C', to: [-2.0, 0, 0.3], duration: 0.5 },
+    { type: 'player_move', time: 0.5, id: 'Op', to: [3.0, 0, 1.5], duration: 0.5 },
+    { type: 'player_move', time: 0.5, id: 'L', to: [-1.0, 0, 5.5], duration: 0.4 },
+    { type: 'player_move', time: 0.5, id: 'P', to: [3.0, 0, 5.5], duration: 0.4 },
+    { type: 'player_move', time: 0.7, id: 'R4', to: [-3.0, 1.6, 0.3], duration: 0.2 },
+    { type: 'player_move', time: 0.7, id: 'C', to: [-2.0, 1.6, 0.3], duration: 0.2 },
+    { type: 'player_pose', time: 0.7, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 0.7, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 0.7, id: 'OPP', to: [-3.0, 0, -1.2], duration: 0.2 },
+    { type: 'player_move', time: 0.85, id: 'OPP', to: [-3.0, 1.8, -0.7], duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 1.0, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
+    { type: 'ball_move', time: 1.0, from: [-3.0, 3.0, -0.8], to: [3.0, 0.8, 5.5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 1.1, id: 'OPP', to: [-3.0, 0, -0.6], duration: 0.3 },
+    { type: 'player_pose', time: 1.5, id: 'P', pose: 'BUMP', duration: 0.2 },
+    { type: 'ball_move', time: 1.5, from: [3.0, 0.8, 5.5], to: [-1.0, 2.5, 1.0], duration: 0.9, arc: 4.0 },
+  ],
+  steps: [
+    { id: 's1', startTime: 0, title: '1. Lecture attaque Z2', description: "L'attaque arrive côté gauche défenseur — symétrique du Z4 en 5v5." },
+    { id: 's2', startTime: 0.4, title: '2. Block à 2 fermant', description: 'R4 fixe la ligne, central ferme la diagonale.' },
+    { id: 's3', startTime: 0.5, title: '3. Off-blocker à droite', description: 'Le pointu (P2) recule sur les 3 m côté droit.' },
+    { id: 's4', startTime: 0.5, title: '4. Couloirs profonds', description: 'Libéro en grande diagonale, passeur sur la ligne. 2 défenseurs en fond seulement.' },
+    { id: 's5', startTime: 1.0, title: '5. Frappe diagonale', description: "L'attaquant frappe en diagonale longue — le passeur récupère sur la ligne droite." },
+    { id: 's6', startTime: 1.5, title: '6. Transition compliquée', description: 'Si le passeur défend, le pointu doit relayer en 2ᵉ touche.' },
+  ],
+  summary: {
+    keyPoints: [
+      'Symétrique du block vs Z4 en 5v5.',
+      'Le pointu devient off-blocker côté droit.',
+      'Le passeur défend en grande diagonale et doit revenir vite au filet.',
+    ],
+    commonMistakes: [
+      'Pointu qui contre depuis Z2 → off-blocker absent.',
+      'Passeur qui défend ET relaie → confusion sur la 2ᵉ touche.',
+    ],
+  },
+};
+
+// Scenario D14 — 4v4 defense vs zone 3 (central)
+const DEFENSE_4V4_VS_Z3: Scenario = {
+  id: '4v4-defense-vs-z3',
+  title: '4v4 · Défense Z3',
+  shortDescription: 'Défense 4v4 sur attaque centrale : block à 1 (central), 3 défenseurs latéraux + arrière.',
+  config: { teamSize: 4, phase: 'defense', contextLabel: '4v4 · Block à 1 · 3 défenseurs' },
+  defaultCamera: 'DEFAULT',
+  players: [
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
+    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.5] },
+    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 1.5] },
+    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 6] },
+    { id: 'OPP', label: 'Central adverse', role: 'opponent', color: COLORS.opponent, position: [0, 0, -0.5] },
+  ],
+  initialBallPosition: [0, 2.0, -3],
+  timeline: [
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [0, 2.5, -0.5], duration: 0.4, arc: 2.5 },
+    { type: 'player_move', time: 0.2, id: 'C', to: [0, 1.6, 0.3], duration: 0.3 },
+    { type: 'player_pose', time: 0.2, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 0.3, id: 'R4', to: [-3, 0, 2], duration: 0.3 },
+    { type: 'player_move', time: 0.3, id: 'A2', to: [3, 0, 2], duration: 0.3 },
+    { type: 'player_move', time: 0.2, id: 'OPP', to: [0, 1.6, -0.6], duration: 0.2 },
+    { type: 'player_pose', time: 0.25, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 0.4, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
+    { type: 'ball_move', time: 0.4, from: [0, 2.5, -0.5], to: [0, 0.8, 6.5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 0.5, id: 'OPP', to: [0, 0, -0.6], duration: 0.3 },
+    { type: 'player_pose', time: 0.9, id: 'A', pose: 'BUMP', duration: 0.2 },
+    { type: 'ball_move', time: 0.9, from: [0, 0.8, 6.5], to: [1.5, 2.5, 1.0], duration: 0.8, arc: 4.0 },
+  ],
+  steps: [
+    { id: 's1', startTime: 0, title: '1. Passe rapide centrale', description: 'En 4v4 la rapide centrale est rare mais possible si le passeur est P3.' },
+    { id: 's2', startTime: 0.2, title: '2. Block à 1', description: 'Le central seul saute — block à 1 standard en 4v4.' },
+    { id: 's3', startTime: 0.3, title: '3. Ailes latérales', description: 'Les 2 ailes reculent et couvrent chacune une diagonale.' },
+    { id: 's4', startTime: 0.4, title: '4. Frappe puissante', description: "L'attaque va profond. L'arrière unique est exactement à l'arrivée." },
+    { id: 's5', startTime: 0.9, title: '5. Récupération arrière', description: "L'arrière unique défend en fond. Sa lecture compense l'absence d'autres arrières." },
+  ],
+  summary: {
+    keyPoints: [
+      'Block à 1 sur attaque centrale.',
+      'Les 2 ailes couvrent les 2 diagonales.',
+      "L'arrière unique reste profond — il doit lire la trajectoire parfaitement.",
+    ],
+    commonMistakes: [
+      'Block à 2 sur rapide → 2 défenseurs au sol seulement.',
+      "Arrière qui avance trop tôt → balle profonde tombe derrière lui.",
+    ],
+  },
+};
+
+// Scenario D15 — 4v4 defense vs zone 2 (mirror of Z4)
+const DEFENSE_4V4_VS_Z2: Scenario = {
+  id: '4v4-defense-vs-z2',
+  title: '4v4 · Défense Z2',
+  shortDescription: 'Défense 4v4 sur attaque adverse en zone 2 (côté gauche) : block à 1 + 3 défenseurs.',
+  config: { teamSize: 4, phase: 'defense', contextLabel: '4v4 · Block à 1 · 3 défenseurs' },
+  defaultCamera: 'DEFAULT',
+  players: [
+    { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.4] },
+    { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 1.5] },
+    { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 1.5] },
+    { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 6] },
+    { id: 'OPP', label: 'Attaquant adverse', role: 'opponent', color: COLORS.opponent, position: [3, 0, -0.6] },
+  ],
+  initialBallPosition: [0, 2.0, -3],
+  timeline: [
+    { type: 'ball_move', time: 0, from: [0, 2.0, -3], to: [3.0, 3.0, -0.8], duration: 0.7, arc: 3.5 },
+    { type: 'player_move', time: 0.4, id: 'C', to: [2.0, 0, 0.3], duration: 0.5 },
+    { type: 'player_move', time: 0.7, id: 'C', to: [2.0, 1.6, 0.3], duration: 0.2 },
+    { type: 'player_pose', time: 0.7, id: 'C', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 0.5, id: 'A2', to: [3.0, 0, 2.5], duration: 0.4 },
+    { type: 'player_move', time: 0.5, id: 'R4', to: [-3.0, 0, 4], duration: 0.5 },
+    { type: 'player_move', time: 0.5, id: 'A', to: [-1.5, 0, 7], duration: 0.5 },
+    { type: 'player_move', time: 0.7, id: 'OPP', to: [3.0, 0, -1.2], duration: 0.2 },
+    { type: 'player_move', time: 0.85, id: 'OPP', to: [3.0, 1.8, -0.7], duration: 0.15 },
+    { type: 'player_pose', time: 0.85, id: 'OPP', pose: 'ARM_SPIKE', duration: 0.15 },
+    { type: 'player_pose', time: 1.0, id: 'OPP', pose: 'SPIKE', duration: 0.1 },
+    { type: 'ball_move', time: 1.0, from: [3.0, 3.0, -0.8], to: [-1.5, 0.8, 6.5], duration: 0.5, arc: false },
+    { type: 'player_move', time: 1.1, id: 'OPP', to: [3.0, 0, -0.6], duration: 0.3 },
+    { type: 'player_pose', time: 1.5, id: 'A', pose: 'BUMP', duration: 0.2 },
+    { type: 'ball_move', time: 1.5, from: [-1.5, 0.8, 6.5], to: [0, 2.5, 1.0], duration: 0.9, arc: 4.0 },
+  ],
+  steps: [
+    { id: 's1', startTime: 0, title: '1. Lecture attaque Z2', description: 'Symétrique du Z4 — attaque adverse côté droit (notre côté gauche défenseur).' },
+    { id: 's2', startTime: 0.4, title: '2. Block à 1 du central', description: 'Le central glisse en zone 4 et bloque seul.' },
+    { id: 's3', startTime: 0.5, title: '3. Couvertures', description: 'A2 (P2) couvre la petite diagonale court ; R4 et arrière prennent les zones longues.' },
+    { id: 's4', startTime: 1.0, title: '4. Frappe diagonale', description: "L'attaque va en diagonale longue, défendue par l'arrière unique en fond." },
+    { id: 's5', startTime: 1.5, title: '5. Récupération', description: "L'arrière fait la défense profonde et relaie vers le centre du terrain." },
+  ],
+  summary: {
+    keyPoints: [
+      'Block à 1 (central) — symétrique du block vs Z4.',
+      'L\'aile droite (P2) devient off-blocker côté ligne.',
+      'L\'arrière unique se place sur la grande diagonale.',
+    ],
+    commonMistakes: [
+      'Aile droite qui contre → off-blocker absent.',
+      "Arrière trop avancé → balle profonde non couverte.",
+    ],
+  },
+};
+
 export const DEFENSE_SCENARIOS: Scenario[] = [
   DEFENSE_VS_Z4,
   DEFENSE_VS_Z3,
@@ -763,7 +971,11 @@ export const DEFENSE_SCENARIOS: Scenario[] = [
   DEFENSE_READ,
   ATTACK_COVERAGE,
   DEFENSE_5V5_VS_Z4,
+  DEFENSE_5V5_VS_Z3,
+  DEFENSE_5V5_VS_Z2,
   DEFENSE_4V4_BLOCK_1,
+  DEFENSE_4V4_VS_Z3,
+  DEFENSE_4V4_VS_Z2,
 ];
 
 export { opponentAttacker };

@@ -1,11 +1,13 @@
+// Single source of truth for position colours.
+// Mirror this palette in CLAUDE.md when changing it.
 export const ROLE_COLORS = {
-  P1: '#9b59b6',  // opposite
-  P2: '#e74c3c',  // setter
-  P3: '#2ecc71',  // middle
-  P4: '#3498db',  // outside (front row)
-  P5: '#1abc9c',  // outside (back row) — distinct teal
-  P6: '#e67e22',  // middle (back row)
-  L:  '#f1c40f',  // libero
+  P1: '#9b59b6',  // opposite — purple
+  P2: '#e74c3c',  // setter — red
+  P3: '#2ecc71',  // middle (front) — green
+  P4: '#3498db',  // outside (front) — blue
+  P5: '#facc15',  // outside (back) — yellow
+  P6: '#e67e22',  // middle (back) — orange
+  L:  '#ec4899',  // libero — magenta (distinct from team palette)
 } as const;
 
 export type RoleColorKey = keyof typeof ROLE_COLORS;
