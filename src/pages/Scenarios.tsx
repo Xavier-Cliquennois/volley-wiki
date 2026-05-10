@@ -1,4 +1,5 @@
-import { Suspense, lazy, useMemo, useState } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { SCENARIOS, getScenarioById } from '../scenarios/data';
 import type { PhaseKind, TeamSize } from '../scenarios/types';
 
@@ -17,12 +18,35 @@ const PHASE_ICONS: Record<PhaseKind, string> = {
 };
 
 export default function Scenarios() {
-  const [teamSize, setTeamSize] = useState<TeamSize | null>(null);
-  const [phase, setPhase] = useState<PhaseKind | null>(null);
-  const [contextChoice, setContextChoice] = useState<string | null>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Hydrate state from ?id=... so the URL is shareable (deep link).
+  // We do this lazily via the initial useState value so it runs once on mount.
+  const initialId = searchParams.get('id');
+  const initialScenario = initialId ? getScenarioById(initialId) : undefined;
+
+  const [teamSize, setTeamSize] = useState<TeamSize | null>(initialScenario?.config.teamSize ?? null);
+  const [phase, setPhase] = useState<PhaseKind | null>(initialScenario?.config.phase ?? null);
+  const [contextChoice, setContextChoice] = useState<string | null>(initialScenario?.id ?? null);
   // When true, the filter section collapses into a compact bar and the
   // selected scenario plays inline below.
-  const [launched, setLaunched] = useState(false);
+  const [launched, setLaunched] = useState(!!initialScenario);
+
+  // Keep the URL in sync with the current launched scenario so it can be
+  // copied + shared. Use replaceState so we don't pollute history when the
+  // user swaps scenarios via the compact bar.
+  const lastSyncedId = useRef<string | null>(initialId ?? null);
+  useEffect(() => {
+    const targetId = launched && contextChoice ? contextChoice : null;
+    if (targetId === lastSyncedId.current) return;
+    lastSyncedId.current = targetId;
+    if (targetId) {
+      setSearchParams({ id: targetId }, { replace: true });
+    } else if (searchParams.has('id')) {
+      setSearchParams({}, { replace: true });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [launched, contextChoice]);
 
   const matchingScenarios = useMemo(() => {
     if (!teamSize || !phase) return [];
