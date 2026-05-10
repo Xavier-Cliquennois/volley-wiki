@@ -20,41 +20,78 @@ const ATTACK_5_1_P1: Scenario = {
     { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3.2, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 4] },
     ...opponentBlockers(),
+    // Adversaires explicites côté arrière + central pour qu'ils réagissent à l'attaque
+    { id: 'OPP_C', label: 'Central adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -0.6] },
+    { id: 'OPP_S', label: 'Passeur adv.', role: 'opponent', color: COLORS.opponent, position: [3, 0, -4] },
+    { id: 'OPP_BC', label: 'Libéro adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -6] },
+    { id: 'OPP_BL', label: 'Arr. adv. G', role: 'opponent', color: COLORS.opponent, position: [-3, 0, -5.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
+    // ── Phase 1 : service adverse + déclenchement de notre passeur ──
     { type: 'ball_move', time: 0, from: [0, 2.5, -9], to: [0, 1.2, 4], duration: 1.0, arc: 3.0 },
     { type: 'player_pose', time: 0.3, id: 'R4b', pose: 'READY', duration: 0.1, text: "J'ai !" },
+    // Le passeur démarre sa pénétration dès la frappe du service (~ t=0.2)
+    { type: 'player_move', time: 0.2, id: 'P', to: [3, 0, 2.5], duration: 0.5 },
+
+    // ── Phase 2 : réception + pénétration finale + lecture du contre adverse ──
     { type: 'player_pose', time: 1.0, id: 'R4b', pose: 'BUMP', duration: 0.2 },
     { type: 'ball_move', time: 1.0, from: [0, 1.2, 4], to: [1.5, 1.9, 0.8], duration: 0.9, arc: 4.0 },
     { type: 'player_move', time: 1.0, id: 'P', to: [1.5, 0, 0.8], duration: 0.8 },
+    // Le R4 attaquant (R4a) commence sa course d'élan large dès la réception
+    { type: 'player_move', time: 1.0, id: 'R4a', to: [-4, 0, 1.5], duration: 0.7 },
+    // Le central adverse glisse au centre prêt à bloquer
+    { type: 'player_move', time: 1.0, id: 'OPP_C', to: [-1, 0, -0.4], duration: 0.5 },
+    // Les blockers se positionnent vers la zone 4 (notre gauche, leur droite)
     { type: 'player_move', time: 1.5, id: 'OPP_BL', to: [-2.5, 0, -0.4], duration: 0.5 },
     { type: 'player_move', time: 1.5, id: 'OPP_BR', to: [-1.0, 0, -0.4], duration: 0.6 },
+
+    // ── Phase 3 : passe en touche + course d'élan ──
     { type: 'player_pose', time: 1.9, id: 'P', pose: 'SET', duration: 0.2 },
     { type: 'ball_move', time: 1.9, from: [1.5, 1.9, 0.8], to: [-3.5, 3.6, 0.6], duration: 0.8, arc: 4.5 },
+    // R4 finalise sa course vers la zone d'impact
     { type: 'player_move', time: 2.0, id: 'R4a', to: [-3.5, 0, 1.2], duration: 0.4 },
+    // Le central adverse saute au bloc juste avant la frappe
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    // Couverture d'attaque : passeur descend en position basse (3 proches), libéro et R4b s'avancent
+    { type: 'player_move', time: 2.0, id: 'P', to: [-2, 0, 1.5], duration: 0.4 },
+    { type: 'player_move', time: 2.0, id: 'L', to: [-2.5, 0, 3], duration: 0.4 },
+    { type: 'player_move', time: 2.0, id: 'R4b', to: [-1, 0, 3.5], duration: 0.4 },
+
+    // ── Phase 4 : armé + frappe ──
     { type: 'player_move', time: 2.4, id: 'R4a', to: [-3.5, 2.0, 0.6], duration: 0.3 },
     { type: 'player_pose', time: 2.5, id: 'R4a', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.7, id: 'R4a', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.7, from: [-3.5, 3.6, 0.6], to: [2, 0, -6], duration: 0.5, arc: false },
+
+    // ── Phase 5 : retombée + recovery ──
     { type: 'player_move', time: 3.0, id: 'R4a', to: [-3.5, 0, 0.4], duration: 0.3 },
+    { type: 'player_move', time: 3.0, id: 'OPP_BL', to: [-2.5, 0, -0.4], duration: 0.3 },
+    { type: 'player_move', time: 3.0, id: 'OPP_BR', to: [-1.0, 0, -0.4], duration: 0.3 },
+    // L'adversaire passe en défense après le block-out
+    { type: 'player_move', time: 2.7, id: 'OPP_S', to: [3, 0, -1.5], duration: 0.5 },
+    { type: 'player_move', time: 2.7, id: 'OPP_BC', to: [1, 0, -5], duration: 0.4 },
+    { type: 'player_move', time: 2.7, id: 'OPP_BL', to: [-2.5, 0, -1.5], duration: 0.5 },
   ],
   steps: [
-    { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Le ballon arrive vers la zone 6. Le R4 placé en P6 annonce sa prise et se positionne pour la manchette.' },
-    { id: 's2', startTime: 1.0, title: '2. Réception haute', description: 'Réception en manchette précise dirigée vers la zone du passeur (entre P2 et P3, à un bras du filet).' },
-    { id: 's3', startTime: 1.0, title: '3. Pénétration du passeur', description: 'Le passeur quitte P1 et pénètre vers la zone 2-3 dès la frappe du serveur, perpendiculaire au filet.' },
-    { id: 's4', startTime: 1.5, title: '4. Bloc adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer la diagonale et la ligne.' },
-    { id: 's5', startTime: 1.9, title: '5. Passe en touche', description: 'Passe haute en cloche vers le R4 en zone 4. La trajectoire fixe le contre adverse à droite.' },
-    { id: 's6', startTime: 2.0, title: "6. Course d'élan", description: "Le R4 décolle large, prend une course en 3-4 m, déclenche l'impulsion derrière la ligne d'attaque." },
-    { id: 's7', startTime: 2.5, title: '7. Armé et fouetté', description: 'Armé du bras dorsal, épaule codée, fouetté vers le bas. La balle traverse la diagonale longue.' },
-    { id: 's8', startTime: 3.0, title: '8. Reset & couverture', description: 'Réception équilibrée, le passeur et le central couvrent à 1,5 m en position basse pour un éventuel block adverse.' },
+    { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Le ballon arrive vers la zone 6. Le R4 placé en P6 annonce sa prise. Le passeur démarre sa pénétration dès la frappe du serveur.' },
+    { id: 's2', startTime: 1.0, title: '2. Réception + pénétration', description: 'Réception en manchette précise vers la zone du passeur. Pénétration finale, perpendiculaire au filet, à un bras du filet.' },
+    { id: 's3', startTime: 1.5, title: '3. Block adverse en place', description: 'Les contreurs adverses se déplacent vers la zone 4 pour fermer diagonale et ligne. Le central glisse au centre.' },
+    { id: 's4', startTime: 1.9, title: '4. Passe en touche vers Z4', description: 'Passe haute en cloche. La trajectoire fixe le contre adverse à droite. Le R4 attaque, les autres se replient en couverture.' },
+    { id: 's5', startTime: 2.0, title: "5. Couverture d'attaque", description: "Passeur en position basse à 1-1,5 m, libéro et P6 dans le 1er arc, pointu et central plus loin. 5 joueurs autour de l'attaquant." },
+    { id: 's6', startTime: 2.5, title: "6. Armé + fouetté", description: 'Le R4 arme le bras dorsal puis frappe en diagonale longue. Le block adverse saute en parallèle.' },
+    { id: 's7', startTime: 2.7, title: '7. Frappe + chute du block', description: "La balle franchit le block (ou le force au touch). Notre attaquant retombe équilibré." },
+    { id: 's8', startTime: 3.0, title: '8. Reset & transition', description: 'Réception équilibrée, le passeur adverse se replie pour défendre. On garde notre couverture jusqu\'au point.' },
   ],
   summary: {
     keyPoints: [
       'Réception à 3 : libéro + 2 R4 prennent toute la largeur du terrain.',
       'Le passeur pénètre dès la frappe du service depuis P1 vers la zone 2-3.',
       'Trois options offensives : R4 en 4, central en 3 (rapide), pointu en 2, pipe en 6.',
-      'Couverture obligatoire par le passeur en position basse à 1-1,5 m.',
+      'Couverture à 5 joueurs (3 proches + 2 éloignés) en position basse.',
     ],
     commonMistakes: [
       'Passeur qui pénètre trop tard → passe forcée en suspension par un autre joueur.',
