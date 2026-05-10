@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ROLE_COLORS } from '../constants/positions';
 
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6' | 'L';
@@ -465,9 +465,25 @@ function CourtField({
 // ============================================================
 
 export default function Positions() {
-  const [teamSize, setTeamSize] = useState<TeamSize>(6);
-  const [configId, setConfigId] = useState<string>(CONFIGURATIONS[6][0].id);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlSize = parseInt(searchParams.get('size') ?? '6');
+  const initialSize: TeamSize = ([4, 5, 6] as const).includes(urlSize as TeamSize)
+    ? (urlSize as TeamSize)
+    : 6;
+  const urlConfig = searchParams.get('config');
+  const initialConfig =
+    urlConfig && CONFIGURATIONS[initialSize].some(c => c.id === urlConfig)
+      ? urlConfig
+      : CONFIGURATIONS[initialSize][0].id;
+
+  const [teamSize, setTeamSize] = useState<TeamSize>(initialSize);
+  const [configId, setConfigId] = useState<string>(initialConfig);
   const [selectedId, setSelectedId] = useState<ZoneId | null>(null);
+
+  // Keep URL in sync so the link can be shared / bookmarked
+  useEffect(() => {
+    setSearchParams({ size: String(teamSize), config: configId }, { replace: true });
+  }, [teamSize, configId, setSearchParams]);
 
   const configurations = CONFIGURATIONS[teamSize];
   const configuration = useMemo(
