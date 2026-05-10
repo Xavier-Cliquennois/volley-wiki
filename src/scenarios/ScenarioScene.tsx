@@ -183,20 +183,30 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   // Compute the augmented player list + timeline once per scenario.
   // - Decide if we need a ball source opponent (counts against teamSize budget)
   // - Fill remaining slots with template opponents
+  // - Hard-cap each side at `teamSize` so we never end up with 5 opponents in 4v4
   // - Append landing actions for any player still in the air at the end of their last scripted move
   const augmented = useMemo(() => {
+    const teamSize = scenario.config.teamSize;
+    const existingOpps = scenario.players.filter(p => p.role === 'opponent');
+    const ourTeam = scenario.players.filter(p => p.role !== 'opponent');
+
     const ballSrc = ballSourceCandidate(scenario);
-    const existingOppCount = scenario.players.filter(p => p.role === 'opponent').length;
     const ballSrcCount = ballSrc ? 1 : 0;
-    const fillerCount = Math.max(0, scenario.config.teamSize - existingOppCount - ballSrcCount);
+    const fillerCount = Math.max(0, teamSize - existingOpps.length - ballSrcCount);
     const filled = pickTemplateFillers(scenario, fillerCount, ballSrc?.player ?? null);
 
-    const players = [
-      ...scenario.players,
+    // Defensive: hard-cap each side at teamSize regardless of upstream data.
+    const opponents = [
+      ...existingOpps,
       ...filled,
       ...(ballSrc ? [ballSrc.player] : []),
-    ];
-    const baseTimeline = ballSrc ? [ballSrc.pose, ...scenario.timeline] : scenario.timeline;
+    ].slice(0, teamSize);
+    const ours = ourTeam.slice(0, teamSize);
+
+    const players = [...ours, ...opponents];
+    const baseTimeline = ballSrc && opponents.includes(ballSrc.player)
+      ? [ballSrc.pose, ...scenario.timeline]
+      : scenario.timeline;
     const timeline = ensureLandings(baseTimeline);
     return { players, timeline };
   }, [scenario]);
