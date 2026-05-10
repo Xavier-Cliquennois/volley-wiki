@@ -91,7 +91,13 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   return (
     <>
       <CameraSetup cameraRef={cameraRef} />
-      <OrbitControls enablePan={false} minDistance={4} maxDistance={30} target={[0, 1, 0]} />
+      <OrbitControls
+        enablePan={false}
+        minDistance={4}
+        maxDistance={30}
+        target={[0, 1, 0]}
+        maxPolarAngle={Math.PI / 2 - 0.05}
+      />
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
