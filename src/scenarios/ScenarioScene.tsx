@@ -50,24 +50,21 @@ function fillerTemplates(teamSize: 4 | 5 | 6) {
   ];
 }
 
-// If the ball starts mid-air on the opponent's side and no player is under it,
-// add an opponent there in BUMP / SPIKE pose so the ball visibly comes from
-// someone (the user kept seeing the ball appear from nowhere).
-function ballSourceAddition(
-  scenario: Scenario,
-  filledOpponents: ScenarioPlayerConfig[],
-): { player: ScenarioPlayerConfig; pose: TimelineAction } | null {
+// If the ball starts mid-air on the opponent's side and no explicit scenario
+// opponent is under it, return a "ball source" filler we'll place there.
+// We check ONLY scenario.players here (not the templated fillers) because
+// the ball-source filler counts against the teamSize budget the same way.
+function ballSourceCandidate(scenario: Scenario): { player: ScenarioPlayerConfig; pose: TimelineAction } | null {
   const [bx, by, bz] = scenario.initialBallPosition;
-  if (by < 0.3) return null; // ball is essentially on the floor — no source needed
+  if (by < 0.3) return null; // ball is essentially on the floor
   if (bz > -0.5) return null; // ball is on our side — let the scenario handle it
 
-  const allOpponents = [...scenario.players.filter(p => p.role === 'opponent'), ...filledOpponents];
-  const underBall = allOpponents.some(
+  const existingOpps = scenario.players.filter(p => p.role === 'opponent');
+  const underBall = existingOpps.some(
     p => Math.abs(p.position[0] - bx) < 1.8 && Math.abs(p.position[2] - bz) < 1.8,
   );
   if (underBall) return null;
 
-  // A high ball deep in their court = service ; otherwise = reception
   const isServe = bz < -7 && by > 1.0;
   const id = '_fill_BSRC';
 
@@ -89,16 +86,23 @@ function ballSourceAddition(
   };
 }
 
-function fillOpposingTeam(scenario: Scenario): ScenarioPlayerConfig[] {
+function pickTemplateFillers(
+  scenario: Scenario,
+  count: number,
+  ballSrcPlayer: ScenarioPlayerConfig | null,
+): ScenarioPlayerConfig[] {
+  if (count <= 0) return [];
   const existing = scenario.players.filter(p => p.role === 'opponent');
-  const needed = scenario.config.teamSize - existing.length;
-  if (needed <= 0) return [];
+  const blockers: Array<{ x: number; z: number }> = [
+    ...existing.map(p => ({ x: p.position[0], z: p.position[2] })),
+    ...(ballSrcPlayer ? [{ x: ballSrcPlayer.position[0], z: ballSrcPlayer.position[2] }] : []),
+  ];
 
   const templates = fillerTemplates(scenario.config.teamSize);
   const safe = templates.filter(
-    t => !existing.some(e => Math.abs(e.position[0] - t.pos[0]) < 1.5 && Math.abs(e.position[2] - t.pos[2]) < 1.5),
+    t => !blockers.some(b => Math.abs(b.x - t.pos[0]) < 1.5 && Math.abs(b.z - t.pos[2]) < 1.5),
   );
-  return safe.slice(0, needed).map(t => ({
+  return safe.slice(0, count).map(t => ({
     id: t.id,
     label: t.label,
     role: 'opponent' as const,
@@ -177,13 +181,21 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   };
 
   // Compute the augmented player list + timeline once per scenario.
-  // - Fill the opposing team
-  // - Add a ball source opponent if the ball appears in the air with nobody under it
+  // - Decide if we need a ball source opponent (counts against teamSize budget)
+  // - Fill remaining slots with template opponents
   // - Append landing actions for any player still in the air at the end of their last scripted move
   const augmented = useMemo(() => {
-    const filled = fillOpposingTeam(scenario);
-    const ballSrc = ballSourceAddition(scenario, filled);
-    const players = ballSrc ? [...scenario.players, ...filled, ballSrc.player] : [...scenario.players, ...filled];
+    const ballSrc = ballSourceCandidate(scenario);
+    const existingOppCount = scenario.players.filter(p => p.role === 'opponent').length;
+    const ballSrcCount = ballSrc ? 1 : 0;
+    const fillerCount = Math.max(0, scenario.config.teamSize - existingOppCount - ballSrcCount);
+    const filled = pickTemplateFillers(scenario, fillerCount, ballSrc?.player ?? null);
+
+    const players = [
+      ...scenario.players,
+      ...filled,
+      ...(ballSrc ? [ballSrc.player] : []),
+    ];
     const baseTimeline = ballSrc ? [ballSrc.pose, ...scenario.timeline] : scenario.timeline;
     const timeline = ensureLandings(baseTimeline);
     return { players, timeline };
