@@ -1,0 +1,1582 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Volley Wiki — Design System Rétro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5e9d4;
+      --paper: #ede0c4;
+      --ink: #1a1812;
+      --orange: #e2542e;
+      --teal: #1d8b8b;
+      --pink: #e88aa8;
+      --yellow: #f0c84c;
+      --mint: #b8dab2;
+      --plum: #6b2c5c;
+      --shadow: 5px 5px 0 var(--ink);
+      --shadow-sm: 3px 3px 0 var(--ink);
+      --shadow-lg: 8px 8px 0 var(--ink);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    /* Halftone overlay layer for body */
+    body::before {
+      content: "";
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background-image: radial-gradient(rgba(26,24,18,0.06) 1.2px, transparent 1.4px);
+      background-size: 14px 14px;
+    }
+    .page { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 56px; }
+
+    .display { font-family: "Bungee", sans-serif; font-weight: 400; letter-spacing: 0.01em; }
+    .mono { font-family: "DM Mono", monospace; }
+    h2.section { font-family: "Bungee", sans-serif; font-size: 28px; margin: 0; letter-spacing: 0.05em; }
+
+    /* Stripe banner */
+    .stripe {
+      height: 12px;
+      background: repeating-linear-gradient(90deg,
+        var(--orange) 0 48px,
+        var(--teal) 48px 96px,
+        var(--pink) 96px 144px,
+        var(--yellow) 144px 192px);
+    }
+    .stripe-thin {
+      height: 6px;
+      background: repeating-linear-gradient(90deg,
+        var(--ink) 0 12px,
+        transparent 12px 24px);
+    }
+
+    /* Section header chrome */
+    .section-head {
+      display: flex; align-items: center; gap: 18px;
+      padding: 56px 0 28px;
+    }
+    .section-head .rule { flex: 1; height: 3px; background: var(--ink); }
+    .section-head .star { font-family: "Bungee", sans-serif; color: var(--orange); font-size: 16px; letter-spacing: 0.2em; white-space: nowrap; flex-shrink: 0; }
+    .section-head h2.section { white-space: nowrap; flex-shrink: 0; }
+
+    /* Tile */
+    .tile {
+      background: var(--cream);
+      border: 3px solid var(--ink);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      position: relative;
+    }
+    .tile-flat { box-shadow: none; }
+
+    .label-cap {
+      font-family: "Bungee", sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+    }
+    .ticket-no {
+      position: absolute; top: -10px; right: 14px;
+      padding: 2px 10px;
+      background: var(--cream);
+      border: 2.5px solid var(--ink);
+      font-family: "Bungee", sans-serif;
+      font-size: 11px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px;
+      border: 3px solid var(--ink);
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Bungee", sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
+    .btn:hover { transform: translate(-1px, -1px); box-shadow: 6px 6px 0 var(--ink); }
+    .btn:active { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--ink); }
+    .btn-primary { background: var(--orange); }
+    .btn-secondary { background: var(--teal); color: var(--cream); }
+    .btn-accent { background: var(--pink); }
+    .btn-warning { background: var(--yellow); }
+    .btn-ghost { background: transparent; box-shadow: none; }
+    .btn-ghost:hover { background: var(--ink); color: var(--cream); transform: none; box-shadow: none; }
+    .btn-sm { padding: 7px 14px; font-size: 11px; }
+    .btn-lg { padding: 16px 28px; font-size: 16px; box-shadow: var(--shadow-lg); }
+
+    /* Badges */
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px;
+      border: 2.5px solid var(--ink);
+      background: var(--yellow);
+      font-family: "Bungee", sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+    .badge-orange { background: var(--orange); }
+    .badge-teal { background: var(--teal); color: var(--cream); }
+    .badge-pink { background: var(--pink); }
+    .badge-mint { background: var(--mint); }
+    .badge-tilt { transform: rotate(-3deg); box-shadow: 3px 3px 0 var(--ink); }
+
+    /* Inputs */
+    .field {
+      display: block;
+      width: 100%;
+      padding: 11px 14px;
+      border: 3px solid var(--ink);
+      background: var(--cream);
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      box-shadow: inset 3px 3px 0 rgba(26,24,18,0.08);
+    }
+    .field:focus { outline: none; background: #fff8e6; box-shadow: inset 3px 3px 0 rgba(26,24,18,0.08), 0 0 0 3px var(--orange); }
+    .field-label { font-family: "Bungee", sans-serif; font-size: 11px; letter-spacing: 0.12em; margin-bottom: 6px; display: block; }
+
+    /* Checkbox / radio */
+    .check { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; cursor: pointer; }
+    .check-box {
+      width: 22px; height: 22px; border: 3px solid var(--ink); background: var(--cream);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .check-box.is-on { background: var(--orange); }
+    .check-box.is-on::after { content: "✓"; font-family: "Bungee", sans-serif; color: var(--ink); font-size: 14px; }
+    .radio-dot {
+      width: 22px; height: 22px; border-radius: 50%; border: 3px solid var(--ink); background: var(--cream);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .radio-dot.is-on::after {
+      content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--orange);
+    }
+
+    /* Toggle */
+    .toggle {
+      width: 52px; height: 28px; border: 3px solid var(--ink); background: var(--cream);
+      border-radius: 999px; position: relative;
+    }
+    .toggle::after {
+      content: ""; position: absolute; top: 2px; left: 2px;
+      width: 18px; height: 18px; background: var(--ink); border-radius: 50%;
+      transition: left 0.15s;
+    }
+    .toggle.is-on { background: var(--teal); }
+    .toggle.is-on::after { left: 28px; background: var(--cream); }
+
+    /* Tabs */
+    .tabs { display: inline-flex; border: 3px solid var(--ink); box-shadow: var(--shadow-sm); background: var(--cream); }
+    .tab {
+      padding: 8px 18px; font-family: "Bungee", sans-serif; font-size: 11px;
+      letter-spacing: 0.08em; cursor: pointer; border-right: 3px solid var(--ink);
+    }
+    .tab:last-child { border-right: 0; }
+    .tab.is-on { background: var(--ink); color: var(--cream); }
+
+    /* Alert */
+    .alert {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px 18px;
+      border: 3px solid var(--ink); box-shadow: var(--shadow);
+      background: var(--yellow);
+    }
+    .alert-info { background: var(--mint); }
+    .alert-danger { background: var(--orange); }
+    .alert-success { background: var(--teal); color: var(--cream); }
+    .alert .icon {
+      width: 32px; height: 32px; border-radius: 50%; border: 3px solid var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      background: var(--cream); flex-shrink: 0;
+      font-family: "Bungee", sans-serif; font-size: 16px; color: var(--ink);
+    }
+    .alert-title { font-family: "Bungee", sans-serif; font-size: 13px; letter-spacing: 0.05em; margin: 2px 0 4px; }
+    .alert-body { font-size: 13.5px; line-height: 1.45; }
+
+    /* Avatar */
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 3px solid var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      font-family: "Bungee", sans-serif; font-size: 16px;
+    }
+
+    /* Progress */
+    .progress {
+      height: 22px; border: 3px solid var(--ink); background: var(--cream);
+      position: relative; overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%; background: var(--orange);
+      background-image: repeating-linear-gradient(45deg,
+        rgba(26,24,18,0.18) 0 8px,
+        transparent 8px 16px);
+    }
+
+    /* Tag chips */
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; background: var(--cream); border: 2.5px solid var(--ink);
+      font-family: "DM Mono", monospace; font-size: 12px; font-weight: 500;
+      border-radius: 999px;
+    }
+    .chip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+
+    /* Code */
+    code, .code {
+      font-family: "Space Mono", monospace;
+      background: var(--paper); padding: 1px 6px;
+      border: 1.5px solid rgba(26,24,18,0.2);
+      font-size: 12.5px;
+    }
+
+    /* Layout helpers */
+    .grid { display: grid; gap: 16px; }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .stack { display: flex; flex-direction: column; gap: 12px; }
+    .hairline { height: 1px; background: var(--ink); opacity: 0.2; margin: 0; }
+
+    a { color: var(--orange); font-weight: 600; }
+
+    /* ================= WIKI-SPECIFIC ================= */
+
+    /* Eyebrow */
+    .eyebrow { font-family: "Bungee", sans-serif; font-size: 11px; letter-spacing: 0.18em; color: var(--ink); }
+    .eyebrow-orange { color: var(--orange); }
+    .eyebrow-teal { color: var(--teal); }
+    .eyebrow-pink { color: var(--plum); }
+
+    /* Accordion */
+    .accordion { border: 3px solid var(--ink); background: var(--cream); box-shadow: var(--shadow-sm); }
+    .accordion.is-open { box-shadow: var(--shadow); }
+    .accordion-head {
+      width: 100%; display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px; background: transparent; border: 0; cursor: pointer; text-align: left;
+    }
+    .accordion.is-open .accordion-head { background: var(--paper); border-bottom: 3px solid var(--ink); }
+    .accordion-icon {
+      width: 36px; height: 36px; border: 3px solid var(--ink); border-radius: 50%;
+      display:flex; align-items:center; justify-content:center; font-size: 16px; flex-shrink:0;
+    }
+    .accordion-chip {
+      margin-left: auto; padding: 3px 10px; border: 2px solid var(--ink); background: var(--cream);
+      font-size: 11px; white-space: nowrap; flex-shrink: 0;
+    }
+    .accordion-plus {
+      width: 32px; height: 32px; border: 3px solid var(--ink); background: var(--yellow);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 18px; flex-shrink:0;
+    }
+    .accordion-body { padding: 4px 0; }
+    .accordion-row { padding: 12px 18px; border-bottom: 2px dashed rgba(26,24,18,0.18); }
+    .accordion-row:last-child { border-bottom: 0; }
+    .accordion-row-title { font-family: "Bungee", sans-serif; font-size: 12px; letter-spacing: 0.08em; color: var(--orange); margin-bottom: 4px; }
+    .accordion-row p { margin: 0; font-size: 13.5px; }
+
+    /* Court */
+    .court {
+      position: relative; width: 380px; height: 380px;
+      background: var(--paper);
+      border: 3px solid var(--ink); box-shadow: var(--shadow);
+      background-image:
+        repeating-linear-gradient(0deg, transparent 0 38px, rgba(26,24,18,0.05) 38px 39px),
+        repeating-linear-gradient(90deg, transparent 0 38px, rgba(26,24,18,0.05) 38px 39px);
+    }
+    .court-label {
+      position:absolute; left:50%; transform:translateX(-50%);
+      font-size: 10px; letter-spacing: 0.18em;
+    }
+    .court-label-top { top: 6px; font-family: "Bungee", sans-serif; color: rgba(26,24,18,0.45); }
+    .court-label-bot { bottom: 6px; font-size: 11px; color: var(--ink); }
+    .court-opp {
+      position:absolute; top:0; left:0; right:0; height: 48%;
+      background: repeating-linear-gradient(45deg, transparent 0 8px, rgba(26,24,18,0.06) 8px 9px);
+    }
+    .court-net {
+      position:absolute; left:-3px; right:-3px; top: 50%;
+      height: 6px; background: var(--orange); border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+      transform: translateY(-50%);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .court-3m {
+      position: absolute; left: 0; right: 0; height: 0;
+      border-top: 2px dashed rgba(26,24,18,0.4);
+    }
+    .court-player {
+      position:absolute; transform:translate(-50%,-50%);
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 3px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 12px;
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+    .court-ball {
+      position:absolute; transform:translate(-50%,-50%);
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--yellow); border: 3px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-size: 8px; color: var(--ink);
+      box-shadow: 0 0 0 3px var(--cream), 0 0 0 6px var(--orange);
+    }
+    .court-arrow { position:absolute; inset:0; pointer-events:none; }
+
+    .legend-row { display:flex; gap:10px; align-items:center; }
+    .legend-dot {
+      width: 32px; height: 32px; border-radius: 50%; border: 3px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 11px; flex-shrink:0;
+    }
+
+    /* Player controls */
+    .player-controls {
+      display:flex; align-items:center; justify-content:space-between; gap: 14px;
+      padding: 14px 18px; border: 3px solid var(--ink); background: var(--paper);
+      box-shadow: var(--shadow-sm);
+    }
+    .player-left, .player-center, .player-right { display:flex; align-items:center; gap: 8px; }
+    .player-speed, .player-toggle {
+      padding: 7px 12px; border: 3px solid var(--ink); background: var(--cream);
+      font-family: "DM Mono", monospace; font-size: 12px; cursor: pointer;
+    }
+    .player-toggle {
+      display:inline-flex; align-items:center; gap: 8px;
+      font-family: "Bungee", sans-serif; font-size: 11px; letter-spacing: 0.08em;
+    }
+    .player-toggle.is-on { background: var(--teal); color: var(--cream); }
+    .player-btn {
+      width: 40px; height: 40px; border: 3px solid var(--ink); background: var(--cream);
+      display:flex; align-items:center; justify-content:center; font-size: 14px; cursor:pointer;
+    }
+    .player-play {
+      width: 52px; height: 52px; border: 3px solid var(--ink); background: var(--orange);
+      display:flex; align-items:center; justify-content:center; font-size: 18px;
+      box-shadow: var(--shadow-sm); cursor:pointer;
+    }
+    .player-right { font-size: 18px; font-family: "Bungee", sans-serif; }
+
+    .scrubber { padding: 6px 4px; }
+    .scrubber-track {
+      position: relative; height: 14px; background: var(--cream);
+      border: 3px solid var(--ink);
+    }
+    .scrubber-fill {
+      position:absolute; top:0; left:0; height:100%;
+      background: var(--orange);
+      background-image: repeating-linear-gradient(45deg, rgba(26,24,18,0.18) 0 8px, transparent 8px 16px);
+    }
+    .scrubber-thumb {
+      position:absolute; top: 50%;
+      width: 22px; height: 22px; background: var(--yellow); border: 3px solid var(--ink);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .scrubber-ticks { display:flex; justify-content:space-between; padding: 6px 2px 0; font-size: 11px; }
+
+    /* Timeline */
+    .timeline {
+      display:flex; gap: 16px; padding: 18px 22px; overflow-x: auto;
+    }
+    .step {
+      flex-shrink: 0; width: 220px;
+      border: 3px solid var(--ink); background: var(--cream); padding: 14px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .step.is-past { opacity: 0.55; }
+    .step.is-past::after {
+      content: "✓"; position:absolute; top: -10px; right: -10px;
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--mint); border: 3px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 13px;
+    }
+    .step.is-active {
+      background: var(--yellow); box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .step.is-active::before {
+      content: "▶ EN COURS"; position:absolute; top: -12px; left: 12px;
+      padding: 2px 8px; background: var(--orange); border: 2.5px solid var(--ink);
+      font-family: "Bungee", sans-serif; font-size: 9px; letter-spacing: 0.12em;
+    }
+    .step-num { font-size: 22px; color: var(--teal); line-height: 1; }
+    .step.is-active .step-num { color: var(--orange); }
+    .step-title { font-size: 14px; letter-spacing: 0.04em; margin: 6px 0 6px; }
+    .step-desc { margin: 0; font-size: 12.5px; line-height: 1.4; }
+
+    /* Letter index */
+    .letter-index { display:flex; flex-wrap:wrap; gap: 6px; }
+    .letter {
+      width: 32px; height: 32px; border: 2.5px solid var(--ink); background: var(--cream);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 12px;
+      cursor: pointer; text-decoration: none; color: var(--ink);
+    }
+    .letter.is-active { background: var(--orange); box-shadow: 2px 2px 0 var(--ink); transform: translate(-1px,-1px); }
+    .letter.is-empty { opacity: 0.3; cursor: default; }
+
+    .letter-section { display:flex; align-items:center; gap: 12px; margin-top: 8px; }
+    .letter-section .display { font-size: 36px; color: var(--orange); line-height: 1; }
+    .letter-bar { flex: 1; height: 3px; background: var(--ink); }
+
+    .gloss-entry {
+      border-left: 5px solid var(--orange); padding: 4px 0 4px 14px;
+      background: linear-gradient(90deg, rgba(226,84,46,0.06), transparent 40%);
+    }
+    .gloss-term { font-family: "Bungee", sans-serif; font-size: 13px; letter-spacing: 0.03em; }
+    .gloss-tag {
+      margin-left: 8px; padding: 2px 8px; border: 2px solid var(--ink);
+      background: var(--mint); font-size: 9px; letter-spacing: 0.08em;
+    }
+    .gloss-def { margin: 4px 0 0; font-size: 13.5px; }
+
+    /* Empty state */
+    .empty-state {
+      border: 3px dashed var(--ink); padding: 28px 16px; text-align: center;
+      background: var(--paper);
+    }
+    .empty-ball {
+      display:inline-flex; align-items:center; justify-content:center;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--yellow); border: 3px solid var(--ink); font-size: 26px;
+      transform: rotate(-8deg); box-shadow: var(--shadow-sm);
+    }
+
+    /* Key points / errors lists */
+    .kp-list, .err-list { list-style: none; padding: 0; margin: 0; display:flex; flex-direction:column; gap: 10px; }
+    .kp-list li, .err-list li { display:flex; gap: 12px; align-items:flex-start; font-size: 14px; line-height: 1.45; }
+    .kp-arrow { font-family: "Bungee", sans-serif; color: var(--teal); flex-shrink:0; }
+    .err-x { font-family: "Bungee", sans-serif; color: var(--orange); flex-shrink:0; }
+
+    .qref-row { display:flex; gap: 10px; align-items:flex-start; font-size: 13.5px; }
+    .qref-x {
+      width: 22px; height: 22px; border: 2.5px solid var(--ink); background: var(--orange);
+      display:flex; align-items:center; justify-content:center;
+      font-family: "Bungee", sans-serif; font-size: 11px; flex-shrink:0;
+    }
+
+    /* Mobile nav */
+    .mobile-frame {
+      width: 280px; border: 3px solid var(--ink); background: var(--cream);
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+    .mobile-status { padding: 8px 14px; background: var(--ink); color: var(--cream); font-size: 10px; }
+    .mobile-header {
+      padding: 12px 14px; display:flex; align-items:center; justify-content:space-between;
+      border-bottom: 3px solid var(--ink); background: var(--paper);
+    }
+    .burger {
+      width: 36px; height: 36px; border: 3px solid var(--ink); background: var(--cream);
+      font-size: 16px; cursor:pointer;
+    }
+    .burger.is-open { background: var(--orange); }
+    .mobile-nav { display:flex; flex-direction:column; padding: 8px; gap: 4px; background: var(--cream); }
+    .mobile-nav-link {
+      padding: 10px 12px; font-family: "Bungee", sans-serif; font-size: 11px; letter-spacing: 0.06em;
+      color: var(--ink); text-decoration: none; cursor:pointer;
+      border: 2.5px solid transparent;
+    }
+    .mobile-nav-link:hover { border-color: var(--ink); background: var(--paper); }
+    .mobile-nav-link.is-active { background: var(--orange); border-color: var(--ink); box-shadow: 2px 2px 0 var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="stripe"></div>
+
+  <!-- Masthead -->
+  <header class="page" style="display:flex; align-items:center; justify-content:space-between; padding-top:28px; padding-bottom:24px; border-bottom: 3px solid var(--ink);">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div style="width:48px; height:48px; border-radius:50%; background:var(--orange); border:3px solid var(--ink); display:flex; align-items:center; justify-content:center; transform:rotate(-8deg); box-shadow: var(--shadow-sm);">
+        <span class="display" style="font-size:22px; color:var(--ink);">V</span>
+      </div>
+      <div>
+        <div class="display" style="font-size:22px; line-height:1;">VOLLEY·WIKI</div>
+        <div class="mono" style="font-size:11px; letter-spacing:0.18em; color:var(--teal);">DESIGN SYSTEM · v1.0</div>
+      </div>
+    </div>
+    <div style="display:flex; gap:10px;">
+      <span class="badge badge-tilt">★ RÉTRO ★</span>
+      <span class="badge badge-orange">EST. 1995</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="page" style="padding-top: 48px; padding-bottom: 24px;">
+    <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap: 36px; align-items:center;">
+      <div>
+        <div style="display:inline-block; padding:5px 14px; background:var(--pink); border:3px solid var(--ink); box-shadow:var(--shadow-sm); transform:rotate(-2deg); margin-bottom:18px;">
+          <span class="display" style="font-size:11px; letter-spacing:0.1em;">★ KIT VISUEL OFFICIEL ★</span>
+        </div>
+        <h1 class="display" style="font-size:84px; line-height:0.92; margin:0; letter-spacing:-0.01em;">
+          <span style="color:var(--orange); text-shadow: 4px 4px 0 var(--ink);">VOLLEY</span><br/>
+          <span style="color:var(--teal); text-shadow: 4px 4px 0 var(--ink);">DESIGN KIT</span>
+        </h1>
+        <p style="font-size:17px; max-width:480px; margin-top:18px;">
+          Couleurs, typo, ombres et composants pour le wiki <b>Volley Rétro</b>. Inspiré des affiches de tournoi 80s–90s : ombres dures, halftones, rubans colorés.
+        </p>
+      </div>
+      <!-- Big stamp -->
+      <div style="display:flex; justify-content:center;">
+        <div style="width:280px; height:280px; border-radius:50%; background:var(--yellow); border:4px solid var(--ink); position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-6deg); box-shadow: var(--shadow-lg);">
+          <div style="position:absolute; inset:14px; border-radius:50%; border:2px dashed var(--ink);"></div>
+          <div class="display" style="font-size:13px; letter-spacing:0.2em; color:var(--teal);">★ OFFICIEL ★</div>
+          <div class="display" style="font-size:56px; line-height:1; margin: 4px 0; color:var(--orange); text-shadow: 3px 3px 0 var(--ink);">v1.0</div>
+          <div class="display" style="font-size:12px; color:var(--ink);">FIVB · INDOOR</div>
+          <div class="mono" style="margin-top:8px; font-size:10px; font-weight:700;">MAI 2026 · BRUXELLES</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe-thin" style="margin: 24px 56px;"></div>
+
+  <!-- COLORS -->
+  <section class="page">
+    <div class="section-head">
+      <span class="star">★ 01 ★</span>
+      <h2 class="section">PALETTE</h2>
+      <div class="rule"></div>
+      <span class="mono" style="font-size:11px; letter-spacing:0.1em;">8 TEINTES</span>
+    </div>
+    <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
+      <!-- swatch -->
+      <div class="tile" style="background: var(--cream); padding: 0;">
+        <div style="height: 130px; background: var(--cream); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px;">CRÈME</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--cream · #F5E9D4</div>
+          <div style="font-size:12.5px; margin-top:4px;">Fond principal</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--ink); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px;">ENCRE</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--ink · #1A1812</div>
+          <div style="font-size:12.5px; margin-top:4px;">Texte, bordures, ombres</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--orange); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px; color:var(--orange);">ORANGE BALLON</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--orange · #E2542E</div>
+          <div style="font-size:12.5px; margin-top:4px;">Couleur primaire, CTA</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--teal); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px; color:var(--teal);">TEAL FILET</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--teal · #1D8B8B</div>
+          <div style="font-size:12.5px; margin-top:4px;">Couleur secondaire</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--pink); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px; color:var(--plum);">ROSE NÉON</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--pink · #E88AA8</div>
+          <div style="font-size:12.5px; margin-top:4px;">Accent ludique</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--yellow); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px;">JAUNE TROPHÉE</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--yellow · #F0C84C</div>
+          <div style="font-size:12.5px; margin-top:4px;">Accent chaud, warnings</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--mint); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px; color:var(--teal);">MENTHE</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--mint · #B8DAB2</div>
+          <div style="font-size:12.5px; margin-top:4px;">Succès, success</div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 0;">
+        <div style="height: 130px; background: var(--plum); border-bottom: 3px solid var(--ink);"></div>
+        <div style="padding: 14px 16px;">
+          <div class="display" style="font-size:14px; color:var(--plum);">PRUNE</div>
+          <div class="mono" style="font-size:11.5px; opacity:0.7;">--plum · #6B2C5C</div>
+          <div style="font-size:12.5px; margin-top:4px;">Couleur foncée alternative</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Combos -->
+    <div style="margin-top: 28px;">
+      <div class="label-cap" style="margin-bottom: 10px;">★ COMBINAISONS RECOMMANDÉES</div>
+      <div class="row">
+        <div class="tile tile-flat" style="display:flex; gap:6px; align-items:center; padding: 10px 14px;">
+          <span style="display:inline-block; width:22px; height:22px; background:var(--cream); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--ink); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--orange); border:2px solid var(--ink);"></span>
+          <span class="mono" style="font-size:12px; margin-left:6px;">Classique tournoi</span>
+        </div>
+        <div class="tile tile-flat" style="display:flex; gap:6px; align-items:center; padding: 10px 14px;">
+          <span style="display:inline-block; width:22px; height:22px; background:var(--cream); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--teal); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--pink); border:2px solid var(--ink);"></span>
+          <span class="mono" style="font-size:12px; margin-left:6px;">Pastel années 90</span>
+        </div>
+        <div class="tile tile-flat" style="display:flex; gap:6px; align-items:center; padding: 10px 14px;">
+          <span style="display:inline-block; width:22px; height:22px; background:var(--yellow); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--orange); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--ink); border:2px solid var(--ink);"></span>
+          <span class="mono" style="font-size:12px; margin-left:6px;">Affiche match</span>
+        </div>
+        <div class="tile tile-flat" style="display:flex; gap:6px; align-items:center; padding: 10px 14px;">
+          <span style="display:inline-block; width:22px; height:22px; background:var(--plum); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--mint); border:2px solid var(--ink);"></span>
+          <span style="display:inline-block; width:22px; height:22px; background:var(--yellow); border:2px solid var(--ink);"></span>
+          <span class="mono" style="font-size:12px; margin-left:6px;">Sombre rétro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY -->
+  <section class="page">
+    <div class="section-head">
+      <span class="star">★ 02 ★</span>
+      <h2 class="section">TYPOGRAPHIE</h2>
+      <div class="rule"></div>
+      <span class="mono" style="font-size:11px; letter-spacing:0.1em;">3 FAMILLES</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+      <!-- Display: Bungee -->
+      <div class="tile">
+        <span class="ticket-no">N° 01</span>
+        <div class="label-cap" style="color:var(--orange);">DISPLAY · TITRES IMPACT</div>
+        <div class="display" style="font-size:64px; line-height:1; margin-top:8px; color:var(--ink); text-shadow: 3px 3px 0 var(--orange);">BUNGEE</div>
+        <div class="mono" style="font-size:12px; margin-top:8px;">font-family: "Bungee"</div>
+        <div style="margin-top:14px; display:flex; gap:16px; align-items:baseline;">
+          <span class="display" style="font-size:32px;">Aa Bb 12</span>
+          <span class="display" style="font-size:18px;">Aa Bb 12</span>
+          <span class="display" style="font-size:14px;">Aa Bb 12</span>
+        </div>
+        <div style="font-size:13px; color:#5a4e3a; margin-top:12px;">À utiliser pour les titres, boutons et badges. Évite les longs paragraphes.</div>
+      </div>
+
+      <!-- Body: DM Sans -->
+      <div class="tile">
+        <span class="ticket-no">N° 02</span>
+        <div class="label-cap" style="color:var(--teal);">CORPS · LECTURE</div>
+        <div style="font-family:'DM Sans'; font-size:48px; font-weight:700; line-height:1; margin-top:8px;">DM Sans</div>
+        <div class="mono" style="font-size:12px; margin-top:8px;">font-family: "DM Sans"</div>
+        <div style="margin-top:14px;">
+          <p style="margin:0; font-size:15px;">Pour les paragraphes, descriptions et contenus longs. Très lisible, neutre, contemporaine — un contraste reposant face à Bungee.</p>
+          <p style="margin:8px 0 0; font-size:13px; font-style:italic; color:#5a4e3a;">« La manchette est le geste fondamental qui permet de relancer une attaque adverse. »</p>
+        </div>
+      </div>
+
+      <!-- Mono: DM Mono -->
+      <div class="tile" style="grid-column: 1 / 3;">
+        <span class="ticket-no">N° 03</span>
+        <div class="label-cap" style="color:var(--pink);">MONOSPACE · DÉTAILS TECHNIQUES</div>
+        <div class="mono" style="font-size:36px; font-weight:500; margin-top:8px;">DM Mono · 18 × 9 m · 2,43</div>
+        <div class="mono" style="font-size:12px; margin-top:8px;">font-family: "DM Mono"</div>
+        <div style="font-size:13px; color:#5a4e3a; margin-top:10px;">Pour les chiffres, mesures, métadonnées, codes, légendes — donne un côté technique « manuel d'instruction ».</div>
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <div style="margin-top: 28px;">
+      <div class="label-cap" style="margin-bottom: 12px;">★ ÉCHELLE TYPOGRAPHIQUE</div>
+      <div class="tile" style="padding: 0; overflow: hidden;">
+        <table style="width:100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: var(--ink); color: var(--cream);">
+              <th style="text-align:left; padding: 10px 18px; font-family:'Bungee'; font-size: 11px; letter-spacing: 0.12em;">RÔLE</th>
+              <th style="text-align:left; padding: 10px 18px; font-family:'Bungee'; font-size: 11px; letter-spacing: 0.12em;">EXEMPLE</th>
+              <th style="text-align:left; padding: 10px 18px; font-family:'Bungee'; font-size: 11px; letter-spacing: 0.12em;">FAMILLE</th>
+              <th style="text-align:left; padding: 10px 18px; font-family:'Bungee'; font-size: 11px; letter-spacing: 0.12em;">TAILLE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">Display XL</td><td style="padding: 14px 18px;"><span class="display" style="font-size:48px; line-height:1; color:var(--orange); text-shadow:2px 2px 0 var(--ink);">VOLLEY</span></td><td class="mono" style="padding:14px 18px; font-size:12.5px;">Bungee 400</td><td class="mono" style="padding:14px 18px;">96 / 0.92</td></tr>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">Display L</td><td style="padding: 14px 18px;"><span class="display" style="font-size:32px;">TECHNIQUES</span></td><td class="mono" style="padding:14px 18px; font-size:12.5px;">Bungee 400</td><td class="mono" style="padding:14px 18px;">64 / 0.95</td></tr>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">H1 / Section</td><td style="padding: 14px 18px;"><span class="display" style="font-size:24px;">SECTION</span></td><td class="mono" style="padding:14px 18px; font-size:12.5px;">Bungee 400</td><td class="mono" style="padding:14px 18px;">28 / 1.1</td></tr>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">H2 / Carte</td><td style="padding: 14px 18px; font-weight: 800; font-size: 20px;">Manchette haute</td><td class="mono" style="padding:14px 18px; font-size:12.5px;">DM Sans 800</td><td class="mono" style="padding:14px 18px;">20 / 1.2</td></tr>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">Corps</td><td style="padding: 14px 18px; font-size: 15px;">Texte courant, paragraphes</td><td class="mono" style="padding:14px 18px; font-size:12.5px;">DM Sans 400</td><td class="mono" style="padding:14px 18px;">15 / 1.55</td></tr>
+            <tr style="border-bottom:2px solid var(--ink);"><td style="padding: 14px 18px;">Légende</td><td style="padding: 14px 18px; font-size: 12.5px;">Notes, captions, métadonnées</td><td class="mono" style="padding:14px 18px; font-size:12.5px;">DM Sans 500</td><td class="mono" style="padding:14px 18px;">12.5 / 1.4</td></tr>
+            <tr><td style="padding: 14px 18px;">Mono / Cap</td><td style="padding: 14px 18px;"><span class="mono" style="font-size:13px; letter-spacing:0.12em;">FIVB · 2,43 m</span></td><td class="mono" style="padding:14px 18px; font-size:12.5px;">DM Mono</td><td class="mono" style="padding:14px 18px;">11–13</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHADOWS / BORDERS -->
+  <section class="page">
+    <div class="section-head">
+      <span class="star">★ 03 ★</span>
+      <h2 class="section">OMBRES & BORDURES</h2>
+      <div class="rule"></div>
+      <span class="mono" style="font-size:11px; letter-spacing:0.1em;">DURE, DURE</span>
+    </div>
+    <p style="max-width: 700px; margin-top: 0;">
+      Pas de soft-shadow ici. <b>Ombres dures décalées</b>, bordures noires épaisses (3 px), parfois rotation subtile (±2°) pour le côté affichette collée à la va-vite.
+    </p>
+    <div class="grid" style="grid-template-columns: repeat(4, 1fr); margin-top: 18px;">
+      <div style="background: var(--cream); border: 3px solid var(--ink); padding: 24px; box-shadow: 3px 3px 0 var(--ink); text-align:center;">
+        <div class="display" style="font-size:14px;">SM</div>
+        <div class="mono" style="font-size:12px; margin-top: 6px;">3px 3px 0</div>
+      </div>
+      <div style="background: var(--cream); border: 3px solid var(--ink); padding: 24px; box-shadow: 5px 5px 0 var(--ink); text-align:center;">
+        <div class="display" style="font-size:14px;">MD</div>
+        <div class="mono" style="font-size:12px; margin-top: 6px;">5px 5px 0</div>
+      </div>
+      <div style="background: var(--cream); border: 3px solid var(--ink); padding: 24px; box-shadow: 8px 8px 0 var(--ink); text-align:center;">
+        <div class="display" style="font-size:14px;">LG</div>
+        <div class="mono" style="font-size:12px; margin-top: 6px;">8px 8px 0</div>
+      </div>
+      <div style="background: var(--cream); border: 3px solid var(--ink); padding: 24px; box-shadow: 6px 6px 0 var(--orange), 9px 9px 0 var(--ink); text-align:center;">
+        <div class="display" style="font-size:14px;">DOUBLE</div>
+        <div class="mono" style="font-size:12px; margin-top: 6px;">orange + ink</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOTIFS -->
+  <section class="page">
+    <div class="section-head">
+      <span class="star">★ 04 ★</span>
+      <h2 class="section">MOTIFS & TEXTURES</h2>
+      <div class="rule"></div>
+      <span class="mono" style="font-size:11px; letter-spacing:0.1em;">5 PATTERNS</span>
+    </div>
+    <div class="grid" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="tile tile-flat" style="padding: 0; overflow:hidden; height: 160px; position:relative;">
+        <div style="position:absolute; inset:0; background: repeating-linear-gradient(90deg, var(--orange) 0 40px, var(--teal) 40px 80px, var(--pink) 80px 120px, var(--yellow) 120px 160px);"></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:8px 10px; background: var(--cream); border-top:3px solid var(--ink); font-family:'Bungee'; font-size:11px;">RUBAN</div>
+      </div>
+      <div class="tile tile-flat" style="padding: 0; overflow:hidden; height: 160px; position:relative;">
+        <div style="position:absolute; inset:0; background-color: var(--cream); background-image: radial-gradient(var(--ink) 1.6px, transparent 1.8px); background-size: 12px 12px;"></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:8px 10px; background: var(--cream); border-top:3px solid var(--ink); font-family:'Bungee'; font-size:11px;">HALFTONE</div>
+      </div>
+      <div class="tile tile-flat" style="padding: 0; overflow:hidden; height: 160px; position:relative;">
+        <div style="position:absolute; inset:0; background: repeating-linear-gradient(45deg, var(--orange) 0 12px, var(--cream) 12px 24px);"></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:8px 10px; background: var(--cream); border-top:3px solid var(--ink); font-family:'Bungee'; font-size:11px;">DIAGONALES</div>
+      </div>
+      <div class="tile tile-flat" style="padding: 0; overflow:hidden; height: 160px; position:relative;">
+        <div style="position:absolute; inset:0; background-color: var(--cream); background-image:
+          linear-gradient(var(--ink) 2px, transparent 2px),
+          linear-gradient(90deg, var(--ink) 2px, transparent 2px);
+          background-size: 24px 24px;"></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:8px 10px; background: var(--cream); border-top:3px solid var(--ink); font-family:'Bungee'; font-size:11px;">GRILLE</div>
+      </div>
+      <div class="tile tile-flat" style="padding: 0; overflow:hidden; height: 160px; position:relative;">
+        <div style="position:absolute; inset:0; background-color: var(--yellow); background-image: repeating-linear-gradient(0deg, transparent 0 22px, var(--ink) 22px 24px);"></div>
+        <div style="position:absolute; bottom:0; left:0; right:0; padding:8px 10px; background: var(--cream); border-top:3px solid var(--ink); font-family:'Bungee'; font-size:11px;">LIGNES TERRAIN</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ICONOGRAPHY / DECOR -->
+  <section class="page">
+    <div class="section-head">
+      <span class="star">★ 05 ★</span>
+      <h2 class="section">ICONOGRAPHIE & DÉCOR</h2>
+      <div class="rule"></div>
+      <span class="mono" style="font-size:11px; letter-spacing:0.1em;">SIGNES</span>
+    </div>
+    <p style="max-width: 700px; margin-top: 0;">
+      Pas d'emoji ni de pictos modernes. <b>Étoiles à 5 branches, points, flèches épaisses, bordures pointillées, tampons circulaires.</b>
+    </p>
+    <div class="grid" style="grid-template-columns: repeat(6, 1fr); margin-top: 18px;">
+      <div class="tile" style="text-align:center;">
+        <div style="font-size:36px;">★</div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">★ étoile</div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <div style="font-size:36px;">◆</div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">◆ losange</div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <div style="font-size:36px;">→</div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">→ flèche</div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <div style="font-size:36px; letter-spacing: 4px;">···</div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">· · · pointillés</div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <div style="width:44px; height:44px; border-radius:50%; background:var(--orange); border:3px solid var(--ink); margin:0 auto;"></div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">ballon</div>
+      </div>
+      <div class="tile" style="text-align:center;">
+        <div style="width:54px; height:32px; border:3px solid var(--ink); border-top:0; border-bottom: 8px solid var(--ink); margin:0 auto; position:relative; transform:translateY(-2px);"></div>
+        <div class="mono" style="font-size:11px; margin-top:6px;">filet</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe" style="margin: 40px 0;"></div>
+
+  <!-- ════════════════════ COMPONENTS ════════════════════ -->
+  <section class="page">
+    <div style="display:flex; align-items:baseline; gap:14px; padding: 16px 0 24px;">
+      <h1 class="display" style="font-size:60px; line-height:1; margin:0; color:var(--teal); text-shadow: 4px 4px 0 var(--ink);">COMPOSANTS</h1>
+      <span class="mono" style="font-size:12px; letter-spacing:0.18em; color:var(--orange);">// 12 PATTERNS</span>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="section-head" style="padding-top: 16px;">
+      <span class="star">★ A ★</span>
+      <h2 class="section">BOUTONS</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 28px 24px;">
+      <div class="label-cap" style="margin-bottom:14px;">Variantes</div>
+      <div class="row" style="gap: 16px;">
+        <button class="btn btn-primary">Voir les techniques →</button>
+        <button class="btn btn-secondary">Lire les règles</button>
+        <button class="btn btn-accent">★ Favori</button>
+        <button class="btn btn-warning">⚠ Attention</button>
+        <button class="btn">Annuler</button>
+        <button class="btn btn-ghost">Retour</button>
+      </div>
+      <div class="hairline" style="margin: 22px 0;"></div>
+      <div class="label-cap" style="margin-bottom:14px;">Tailles</div>
+      <div class="row" style="gap: 16px;">
+        <button class="btn btn-primary btn-sm">SM</button>
+        <button class="btn btn-primary">MD (défaut)</button>
+        <button class="btn btn-primary btn-lg">LG · IMPACT</button>
+      </div>
+      <div class="hairline" style="margin: 22px 0;"></div>
+      <div class="label-cap" style="margin-bottom:14px;">États (au hover : ombre 6px, à l'active : 3px)</div>
+      <div class="row" style="gap: 16px;">
+        <button class="btn btn-primary">Normal</button>
+        <button class="btn btn-primary" style="transform:translate(-1px,-1px); box-shadow:6px 6px 0 var(--ink);">Hover</button>
+        <button class="btn btn-primary" style="transform:translate(2px,2px); box-shadow:3px 3px 0 var(--ink);">Active</button>
+        <button class="btn btn-primary" disabled style="opacity:0.45; cursor:not-allowed;">Disabled</button>
+      </div>
+    </div>
+
+    <!-- BADGES -->
+    <div class="section-head">
+      <span class="star">★ B ★</span>
+      <h2 class="section">BADGES & CHIPS</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 28px 24px;">
+      <div class="label-cap" style="margin-bottom: 14px;">Badges affichette</div>
+      <div class="row" style="gap: 14px;">
+        <span class="badge">★ OFFICIEL ★</span>
+        <span class="badge badge-orange">NOUVEAU</span>
+        <span class="badge badge-teal">FIVB</span>
+        <span class="badge badge-pink">★ POPULAIRE</span>
+        <span class="badge badge-mint">★ TUTO</span>
+        <span class="badge badge-tilt">EST. 1995</span>
+        <span class="badge badge-tilt badge-orange" style="transform: rotate(3deg);">PRO</span>
+      </div>
+      <div class="hairline" style="margin: 22px 0;"></div>
+      <div class="label-cap" style="margin-bottom: 14px;">Chips de filtre</div>
+      <div class="row" style="gap: 10px;">
+        <span class="chip"><span class="chip-dot"></span>Toutes</span>
+        <span class="chip" style="background:var(--ink); color:var(--cream);"><span class="chip-dot" style="background:var(--orange);"></span>Attaque</span>
+        <span class="chip"><span class="chip-dot" style="background:var(--teal);"></span>Défense</span>
+        <span class="chip"><span class="chip-dot" style="background:var(--pink);"></span>Service</span>
+        <span class="chip"><span class="chip-dot" style="background:var(--yellow);"></span>Bloc</span>
+      </div>
+    </div>
+
+    <!-- FORMS -->
+    <div class="section-head">
+      <span class="star">★ C ★</span>
+      <h2 class="section">FORMULAIRES</h2>
+      <div class="rule"></div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+      <div class="tile" style="padding: 28px 24px;">
+        <div class="label-cap" style="margin-bottom: 14px;">Champs texte</div>
+        <div class="stack">
+          <div>
+            <label class="field-label">PSEUDO</label>
+            <input class="field" type="text" value="LiberoLou95" />
+          </div>
+          <div>
+            <label class="field-label">RECHERCHER UN TERME</label>
+            <input class="field" type="text" placeholder="ex : « touche de filet »" />
+          </div>
+          <div>
+            <label class="field-label">NIVEAU</label>
+            <select class="field">
+              <option>Loisir</option><option>Compétition · N3</option><option>Pro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 28px 24px;">
+        <div class="label-cap" style="margin-bottom: 14px;">Sélections</div>
+        <div class="stack">
+          <label class="check"><span class="check-box is-on"></span> Animations 3D activées</label>
+          <label class="check"><span class="check-box"></span> Mode entraîneur</label>
+          <label class="check"><span class="radio-dot is-on"></span> Système 5-1</label>
+          <label class="check"><span class="radio-dot"></span> Système 6-2</label>
+          <label class="check"><span class="radio-dot"></span> Système 4-2</label>
+          <div style="display:flex; align-items:center; gap:14px; margin-top:4px;">
+            <span class="toggle is-on"></span>
+            <span style="font-weight:600;">Notifications match</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px;">
+            <span class="toggle"></span>
+            <span style="font-weight:600; color:#6b5a4e;">Mode sombre auto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <div class="section-head">
+      <span class="star">★ D ★</span>
+      <h2 class="section">NAVIGATION</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 24px;">
+      <div class="label-cap" style="margin-bottom: 14px;">Barre principale</div>
+      <div style="border: 3px solid var(--ink); background: var(--cream); padding: 14px 22px; display: flex; align-items:center; justify-content:space-between; box-shadow: var(--shadow-sm);">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:32px; height:32px; border-radius:50%; background:var(--orange); border:3px solid var(--ink); display:flex; align-items:center; justify-content:center; transform:rotate(-8deg);">
+            <span class="display" style="font-size:15px;">V</span>
+          </div>
+          <span class="display" style="font-size:16px;">VOLLEY·WIKI</span>
+        </div>
+        <nav style="display:flex; gap:22px;" class="display">
+          <span style="font-size:12px;">ACCUEIL</span>
+          <span style="font-size:12px; color:var(--orange);">TECHNIQUES</span>
+          <span style="font-size:12px;">POSITIONS</span>
+          <span style="font-size:12px;">RÈGLES</span>
+          <span style="font-size:12px;">GLOSSAIRE</span>
+        </nav>
+        <button class="btn btn-primary btn-sm">CONNEXION</button>
+      </div>
+
+      <div class="label-cap" style="margin: 24px 0 14px;">Onglets</div>
+      <div class="tabs">
+        <div class="tab is-on">VUE D'ENSEMBLE</div>
+        <div class="tab">TECHNIQUE</div>
+        <div class="tab">VIDÉO</div>
+        <div class="tab">EXERCICES</div>
+      </div>
+
+      <div class="label-cap" style="margin: 24px 0 14px;">Fil d'Ariane</div>
+      <div class="mono" style="font-size:13px;">
+        <a href="#">ACCUEIL</a>
+        <span style="margin: 0 8px; color: var(--teal);">★</span>
+        <a href="#">TECHNIQUES</a>
+        <span style="margin: 0 8px; color: var(--teal);">★</span>
+        <a href="#">ATTAQUE</a>
+        <span style="margin: 0 8px; color: var(--teal);">★</span>
+        <span style="color: var(--ink);">SMASH PUISSANT</span>
+      </div>
+
+      <div class="label-cap" style="margin: 24px 0 14px;">Pagination</div>
+      <div style="display:flex; gap:8px;">
+        <button class="btn btn-sm">←</button>
+        <button class="btn btn-sm btn-primary">1</button>
+        <button class="btn btn-sm">2</button>
+        <button class="btn btn-sm">3</button>
+        <span class="btn btn-sm btn-ghost" style="cursor:default;">…</span>
+        <button class="btn btn-sm">12</button>
+        <button class="btn btn-sm">→</button>
+      </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="section-head">
+      <span class="star">★ E ★</span>
+      <h2 class="section">CARTES</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+      <!-- Card: technique -->
+      <div class="tile" style="background:var(--orange); padding: 20px; transform: rotate(-1deg); box-shadow: var(--shadow);">
+        <span class="ticket-no">N° 01</span>
+        <div class="label-cap" style="opacity:0.8;">LES GESTES</div>
+        <div class="display" style="font-size:26px; line-height:1; margin: 8px 0;">SMASH PUISSANT</div>
+        <p style="font-size:14px; margin:8px 0 14px;">Frappe d'attaque exécutée en pleine extension, en bout de course du saut.</p>
+        <div style="display:flex; align-items:center; justify-content:space-between;">
+          <div style="display:flex; gap:2px;">
+            <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ink);"></span>
+            <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ink);"></span>
+            <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ink);"></span>
+            <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--ink); opacity:0.4;"></span>
+          </div>
+          <span class="display" style="font-size:11px;">→ ENTRER</span>
+        </div>
+      </div>
+      <!-- Card: rule -->
+      <div class="tile" style="background:var(--teal); color:var(--cream); padding: 20px; transform: rotate(0.6deg);">
+        <span class="ticket-no" style="background:var(--cream); color:var(--ink);">N° 02</span>
+        <div class="label-cap" style="opacity:0.85;">RÈGLE FIVB</div>
+        <div class="display" style="font-size:26px; line-height:1; margin: 8px 0;">TOUCHE DE FILET</div>
+        <p style="font-size:14px; margin:8px 0 14px;">Lorsqu'un joueur touche le filet pendant la phase active du jeu, faute attribuée.</p>
+        <div style="font-family: 'Bungee'; font-size:11px;">→ ARTICLE 11.3.1</div>
+      </div>
+      <!-- Card: glossary -->
+      <div class="tile" style="background:var(--pink); padding: 20px; transform: rotate(-0.8deg);">
+        <span class="ticket-no">N° 03</span>
+        <div class="label-cap" style="color:var(--plum);">GLOSSAIRE</div>
+        <div class="display" style="font-size:26px; line-height:1; margin: 8px 0;">LIBERO</div>
+        <p style="font-size:14px; font-style:italic; margin:8px 0;">n.m. · prononcé /li.be.ʁo/</p>
+        <p style="font-size:14px; margin: 0 0 14px;">Joueur défensif portant un maillot de couleur différente. Ne peut ni attaquer ni servir.</p>
+        <div class="mono" style="font-size:12px;">EN : <b>libero</b> · IT : <b>libero</b></div>
+      </div>
+    </div>
+
+    <!-- ALERTS -->
+    <div class="section-head">
+      <span class="star">★ F ★</span>
+      <h2 class="section">ALERTES</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="stack" style="gap: 16px;">
+      <div class="alert alert-info">
+        <div class="icon">i</div>
+        <div>
+          <div class="alert-title">Info · Bon à savoir</div>
+          <div class="alert-body">Le libéro est une création récente du règlement : il a été introduit officiellement en 1998 par la FIVB pour favoriser un jeu plus défensif et plus long.</div>
+        </div>
+      </div>
+      <div class="alert">
+        <div class="icon" style="background:var(--orange);">!</div>
+        <div>
+          <div class="alert-title">Attention · Détail technique</div>
+          <div class="alert-body">La hauteur du filet est de <b>2,43 m pour les hommes</b> et <b>2,24 m pour les femmes</b>. Vérifie avant chaque match officiel.</div>
+        </div>
+      </div>
+      <div class="alert alert-success">
+        <div class="icon">★</div>
+        <div>
+          <div class="alert-title" style="color:var(--cream);">★ Succès — Leçon terminée</div>
+          <div class="alert-body" style="color:var(--cream);">Bravo ! Tu as complété le chapitre <b>« Lecture du bloc »</b>. Prochaine leçon recommandée : Couverture d'attaque.</div>
+        </div>
+      </div>
+      <div class="alert alert-danger">
+        <div class="icon" style="background:var(--cream);">×</div>
+        <div>
+          <div class="alert-title">Erreur · Faute de rotation</div>
+          <div class="alert-body">L'ordre des positions n'est pas respecté. Vérifie la position du passeur en zone 1.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS / STATS -->
+    <div class="section-head">
+      <span class="star">★ G ★</span>
+      <h2 class="section">PROGRESSION & STATS</h2>
+      <div class="rule"></div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1.3fr 1fr; gap: 18px;">
+      <div class="tile" style="padding: 24px;">
+        <div class="label-cap" style="margin-bottom: 16px;">Barres de progression</div>
+        <div class="stack" style="gap: 16px;">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:6px;"><b style="white-space:nowrap;">Techniques · 4/6</b><span class="mono" style="font-size:12px; white-space:nowrap;">67%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:67%;"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:6px;"><b style="white-space:nowrap;">Règles · 8/10</b><span class="mono" style="font-size:12px; white-space:nowrap;">80%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:80%; background:var(--teal); background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.25) 0 8px, transparent 8px 16px);"></div></div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:6px;"><b style="white-space:nowrap;">Glossaire · 24/60</b><span class="mono" style="font-size:12px; white-space:nowrap;">40%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:40%; background:var(--pink); background-image: repeating-linear-gradient(45deg, rgba(26,24,18,0.18) 0 8px, transparent 8px 16px);"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tile" style="padding: 24px;">
+        <div class="label-cap" style="margin-bottom: 16px;">Score-board</div>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="border:3px solid var(--ink); background:var(--yellow); padding: 16px; text-align:center;">
+            <div class="mono" style="font-size:11px;">SET 1</div>
+            <div class="display" style="font-size:42px; line-height:1;">25</div>
+            <div class="mono" style="font-size:11px;">— 21</div>
+          </div>
+          <div style="border:3px solid var(--ink); background:var(--cream); padding: 16px; text-align:center;">
+            <div class="mono" style="font-size:11px;">SET 2</div>
+            <div class="display" style="font-size:42px; line-height:1; color:var(--orange); text-shadow: 2px 2px 0 var(--ink);">23</div>
+            <div class="mono" style="font-size:11px;">— 25</div>
+          </div>
+          <div style="border:3px solid var(--ink); background:var(--cream); padding: 16px; text-align:center; grid-column: 1/3;">
+            <div class="mono" style="font-size:11px;">SET 3 · EN COURS</div>
+            <div class="display" style="font-size:42px; line-height:1;">14 — 12</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVATARS & TEAM -->
+    <div class="section-head">
+      <span class="star">★ H ★</span>
+      <h2 class="section">AVATARS & ÉQUIPE</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 24px;">
+      <div class="label-cap" style="margin-bottom: 16px;">L'équipe (6v6)</div>
+      <div style="display:flex; gap: 16px; flex-wrap: wrap;">
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--orange);">M</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Marie · P</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--teal); color:var(--cream);">L</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Léo · C</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--pink);">A</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Anna · R4</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--yellow);">J</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Jules · R4</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--mint);">S</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Sami · OP</div>
+        </div>
+        <div style="text-align:center;">
+          <div class="avatar" style="background:var(--cream);">L</div>
+          <div class="mono" style="font-size:11px; margin-top:6px;">Léa · LIB</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ============== COMPOSANTS SPÉCIFIQUES WIKI ============= -->
+    <!-- ====================================================== -->
+
+    <!-- I — EYEBROW -->
+    <div class="section-head">
+      <span class="star">★ I ★</span>
+      <h2 class="section">EYEBROW &amp; LABEL</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 28px;">
+      <div class="label-cap" style="margin-bottom: 18px;">Petits kickers au-dessus des titres (au-dessus de tous les titres de pages)</div>
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div>
+          <div class="eyebrow eyebrow-orange">★ Documentation ★</div>
+          <div class="display" style="font-size:32px; margin-top:6px;">Glossaire</div>
+        </div>
+        <div>
+          <div class="eyebrow eyebrow-teal">▸ Scénario tactique</div>
+          <div class="display" style="font-size:32px; margin-top:6px; color:var(--teal);">Attaque P4</div>
+        </div>
+        <div>
+          <div class="eyebrow eyebrow-pink">CHAPITRE 03</div>
+          <div class="display" style="font-size:32px; margin-top:6px;">Les règles</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- J — ACCORDÉON -->
+    <div class="section-head">
+      <span class="star">★ J ★</span>
+      <h2 class="section">ACCORDÉON</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 24px;">
+      <div class="label-cap" style="margin-bottom: 16px;">Sections de règles dépliables (page Règles)</div>
+      <div style="display:flex; flex-direction:column; gap: 14px;">
+        <!-- open -->
+        <div class="accordion is-open">
+          <button class="accordion-head">
+            <span class="accordion-icon" style="background:var(--orange);">📌</span>
+            <span class="display" style="font-size:14px; letter-spacing:0.05em;">L'ESSENTIEL</span>
+            <span class="accordion-chip mono">3 règles</span>
+            <span class="accordion-plus">×</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-row">
+              <div class="accordion-row-title">Format de jeu</div>
+              <p>Match en 3 sets gagnants (best of 5). Sets à 25 points, au moins 2 d'écart. 5e set à 15 points.</p>
+            </div>
+            <div class="accordion-row">
+              <div class="accordion-row-title">Équipes</div>
+              <p>6 joueurs de chaque côté, jusqu'à 6 remplaçants et un libero. 6 remplacements réguliers par set.</p>
+            </div>
+            <div class="accordion-row">
+              <div class="accordion-row-title">Service</div>
+              <p>Depuis la zone derrière la ligne de fond. 8 secondes après le coup de sifflet.</p>
+            </div>
+          </div>
+        </div>
+        <!-- closed -->
+        <div class="accordion">
+          <button class="accordion-head">
+            <span class="accordion-icon" style="background:var(--teal); color:var(--cream);">✋</span>
+            <span class="display" style="font-size:14px; letter-spacing:0.05em;">CONTACTS &amp; FAUTES</span>
+            <span class="accordion-chip mono">2 règles</span>
+            <span class="accordion-plus">+</span>
+          </button>
+        </div>
+        <div class="accordion">
+          <button class="accordion-head">
+            <span class="accordion-icon" style="background:var(--pink);">🔄</span>
+            <span class="display" style="font-size:14px; letter-spacing:0.05em;">ROTATION &amp; POSITIONS</span>
+            <span class="accordion-chip mono">2 règles</span>
+            <span class="accordion-plus">+</span>
+          </button>
+        </div>
+        <div class="accordion">
+          <button class="accordion-head">
+            <span class="accordion-icon" style="background:var(--yellow);">🆕</span>
+            <span class="display" style="font-size:14px; letter-spacing:0.05em;">FIVB 2025-2028</span>
+            <span class="accordion-chip mono">2 règles · NEW</span>
+            <span class="accordion-plus">+</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- K — TERRAIN & POSITIONS -->
+    <div class="section-head">
+      <span class="star">★ K ★</span>
+      <h2 class="section">TERRAIN &amp; POSITIONS</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 28px;">
+      <div class="label-cap" style="margin-bottom: 18px;">Diagramme tactique 6v6 (page Scénarios)</div>
+      <div style="display:grid; grid-template-columns: 380px 1fr; gap: 32px; align-items:start;">
+        <!-- Court -->
+        <div class="court">
+          <div class="court-label court-label-top mono">★ ADVERSAIRES ★</div>
+          <!-- opponents area faint -->
+          <div class="court-opp"></div>
+          <!-- net -->
+          <div class="court-net">
+            <span class="display" style="font-size:9px; letter-spacing:0.15em; background:var(--ink); color:var(--cream); padding:2px 6px;">NET</span>
+          </div>
+          <!-- 3m line -->
+          <div class="court-3m" style="top:60%;"></div>
+          <!-- our side label -->
+          <div class="court-label court-label-bot display">NOTRE CÔTÉ</div>
+          <!-- players -->
+          <div class="court-player" style="left:22%; top:60%; background:var(--teal); color:var(--cream);">P4</div>
+          <div class="court-player" style="left:50%; top:60%; background:var(--mint);">P3</div>
+          <div class="court-player" style="left:78%; top:60%; background:var(--orange);">P2</div>
+          <div class="court-player" style="left:22%; top:82%; background:var(--yellow);">P5</div>
+          <div class="court-player" style="left:50%; top:82%; background:var(--pink);">P6</div>
+          <div class="court-player" style="left:78%; top:82%; background:var(--plum); color:var(--cream);">P1</div>
+          <!-- libero indicator -->
+          <div class="court-player" style="left:50%; top:92%; background:var(--cream); width:22px; height:22px; font-size:9px;">L</div>
+          <!-- ball -->
+          <div class="court-ball" style="left:32%; top:76%;">●</div>
+          <!-- arrow -->
+          <svg class="court-arrow" viewBox="0 0 380 380">
+            <defs>
+              <marker id="ah" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 z" fill="#1a1812"/>
+              </marker>
+            </defs>
+            <path d="M122,288 Q200,200 274,213" stroke="#1a1812" stroke-width="3" fill="none" stroke-dasharray="6,5" marker-end="url(#ah)"/>
+          </svg>
+        </div>
+        <!-- Legend -->
+        <div>
+          <div class="display" style="font-size:18px; margin-bottom: 14px;">LÉGENDE DES POSTES</div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="legend-row"><span class="legend-dot" style="background:var(--teal); color:var(--cream);">P4</span><div><b>Réc.-Att. aile</b><div class="mono" style="font-size:11px;">Aile gauche · attaque</div></div></div>
+            <div class="legend-row"><span class="legend-dot" style="background:var(--mint);">P3</span><div><b>Central</b><div class="mono" style="font-size:11px;">Quick · contre</div></div></div>
+            <div class="legend-row"><span class="legend-dot" style="background:var(--orange);">P2</span><div><b>Passeur</b><div class="mono" style="font-size:11px;">Distribue · OP arrière</div></div></div>
+            <div class="legend-row"><span class="legend-dot" style="background:var(--yellow);">P5</span><div><b>Réc.-Att.</b><div class="mono" style="font-size:11px;">Arrière gauche</div></div></div>
+            <div class="legend-row"><span class="legend-dot" style="background:var(--pink);">P6</span><div><b>Arrière centre</b><div class="mono" style="font-size:11px;">Défense</div></div></div>
+            <div class="legend-row"><span class="legend-dot" style="background:var(--plum); color:var(--cream);">P1</span><div><b>Service</b><div class="mono" style="font-size:11px;">Arrière droite</div></div></div>
+            <div class="legend-row" style="grid-column:1/3;"><span class="legend-dot" style="background:var(--cream);">L</span><div><b>Libero</b><div class="mono" style="font-size:11px;">Maillot différent · pas de service ni d'attaque</div></div></div>
+          </div>
+          <div style="margin-top:18px; padding: 12px 14px; background:var(--paper); border: 2.5px solid var(--ink);">
+            <span class="mono" style="font-size:12px;"><b>● Ballon</b> · &nbsp; - - → <b>trajectoire</b> · &nbsp; <span style="border-top:3px solid var(--orange); display:inline-block; width:24px; vertical-align:middle;"></span> <b>filet</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- L — PLAYER CONTROLS -->
+    <div class="section-head">
+      <span class="star">★ L ★</span>
+      <h2 class="section">PLAYER CONTROLS</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 24px;">
+      <div class="label-cap" style="margin-bottom: 16px;">Lecteur de scénarios animés</div>
+      <div class="player-controls">
+        <div class="player-left">
+          <button class="player-speed mono">1×</button>
+          <button class="player-toggle is-on">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cream);"></span>
+            TRAIL
+          </button>
+        </div>
+        <div class="player-center">
+          <button class="player-btn"><span>⏮</span></button>
+          <button class="player-play"><span>▶</span></button>
+          <button class="player-btn"><span>⏭</span></button>
+          <button class="player-btn"><span>↺</span></button>
+        </div>
+        <div class="player-right mono">
+          <span style="color:var(--teal); font-weight:700;">02</span> / 05
+        </div>
+      </div>
+      <div style="height:14px;"></div>
+      <!-- scrubber -->
+      <div class="scrubber">
+        <div class="scrubber-track">
+          <div class="scrubber-fill" style="width:42%;"></div>
+          <div class="scrubber-thumb" style="left:42%;"></div>
+        </div>
+        <div class="scrubber-ticks">
+          <span>00:00</span><span>02:30</span><span>05:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- M — TIMELINE -->
+    <div class="section-head">
+      <span class="star">★ M ★</span>
+      <h2 class="section">TIMELINE D'ÉTAPES</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 0;">
+      <div style="padding: 14px 22px; border-bottom: 3px solid var(--ink); display:flex; justify-content:space-between; align-items:center; background:var(--paper); gap: 16px;">
+        <span class="label-cap" style="white-space:nowrap;">★ TIMELINE · 5 ÉTAPES</span>
+        <span class="mono" style="font-size:11px; white-space:nowrap;">cliquer pour sauter</span>
+      </div>
+      <div class="timeline">
+        <div class="step is-past">
+          <div class="step-num display">01</div>
+          <div class="display step-title">Service adverse</div>
+          <p class="step-desc">L'équipe en réception se met en formation 2-3.</p>
+        </div>
+        <div class="step is-past">
+          <div class="step-num display">02</div>
+          <div class="display step-title">Réception</div>
+          <p class="step-desc">Le libero (P5) prend le ballon en manchette vers P2.</p>
+        </div>
+        <div class="step is-active">
+          <div class="step-num display">03</div>
+          <div class="display step-title">Passe haute</div>
+          <p class="step-desc">Le passeur P2 distribue à l'aile (P4) en tempo 3.</p>
+        </div>
+        <div class="step">
+          <div class="step-num display">04</div>
+          <div class="display step-title">Attaque diagonale</div>
+          <p class="step-desc">P4 attaque en diagonale dans la zone 1 adverse.</p>
+        </div>
+        <div class="step">
+          <div class="step-num display">05</div>
+          <div class="display step-title">Couverture</div>
+          <p class="step-desc">Formation cover 3-2 autour de l'attaquant.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- N — GLOSSAIRE -->
+    <div class="section-head">
+      <span class="star">★ N ★</span>
+      <h2 class="section">GLOSSAIRE</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 24px;">
+      <div class="label-cap" style="margin-bottom: 16px;">Index alphabétique + entrées de termes (page Glossaire)</div>
+
+      <!-- Letter index -->
+      <div style="margin-bottom: 18px;">
+        <div class="eyebrow eyebrow-teal" style="margin-bottom: 8px;">▸ Index A-Z</div>
+        <div class="letter-index">
+          <a class="letter is-active">A</a>
+          <a class="letter">B</a>
+          <a class="letter is-empty">C</a>
+          <a class="letter is-empty">D</a>
+          <a class="letter is-empty">E</a>
+          <a class="letter is-empty">F</a>
+          <a class="letter is-empty">G</a>
+          <a class="letter is-empty">H</a>
+          <a class="letter is-empty">I</a>
+          <a class="letter is-empty">J</a>
+          <a class="letter is-empty">K</a>
+          <a class="letter">L</a>
+          <a class="letter is-empty">M</a>
+          <a class="letter is-empty">N</a>
+          <a class="letter is-empty">O</a>
+          <a class="letter">P</a>
+          <a class="letter">Q</a>
+          <a class="letter is-empty">R</a>
+          <a class="letter">S</a>
+          <a class="letter is-empty">T</a>
+          <a class="letter is-empty">U</a>
+          <a class="letter is-empty">V</a>
+          <a class="letter is-empty">W</a>
+          <a class="letter is-empty">X</a>
+          <a class="letter is-empty">Y</a>
+          <a class="letter is-empty">Z</a>
+        </div>
+      </div>
+
+      <!-- Letter section -->
+      <div class="letter-section">
+        <span class="display">A</span>
+        <div class="letter-bar"></div>
+        <span class="mono" style="font-size:11px; white-space:nowrap;">2 termes</span>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap: 14px; margin-top: 12px;">
+        <div class="gloss-entry">
+          <div class="gloss-term"><b>Ace</b> <span class="gloss-tag">★ offensif</span></div>
+          <p class="gloss-def">Service direct qui tombe dans le terrain adverse sans être touché — un point gratuit.</p>
+        </div>
+        <div class="gloss-entry">
+          <div class="gloss-term"><b>Attaque diagonale</b> <span class="gloss-tag">★ offensif</span></div>
+          <p class="gloss-def">Frappe orientée d'une zone vers la zone opposée du terrain adverse, traversant le filet en diagonale.</p>
+        </div>
+      </div>
+
+      <!-- Empty state -->
+      <div style="height: 24px;"></div>
+      <div class="empty-state">
+        <div class="empty-ball">🏐</div>
+        <div class="display" style="font-size:18px; margin-top: 8px;">RIEN TROUVÉ</div>
+        <p style="margin:6px 0 0; font-size:13.5px;">Aucun terme ne correspond à <code>« doublecontre »</code></p>
+        <button class="btn btn-sm" style="margin-top:14px;">EFFACER LA RECHERCHE</button>
+      </div>
+    </div>
+
+    <!-- O — LISTES PÉDAGOGIQUES -->
+    <div class="section-head">
+      <span class="star">★ O ★</span>
+      <h2 class="section">LISTES PÉDAGOGIQUES</h2>
+      <div class="rule"></div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div class="tile" style="padding: 22px; background: var(--mint);">
+        <div class="eyebrow eyebrow-teal" style="margin-bottom: 10px;">▸ Points clés</div>
+        <ul class="kp-list">
+          <li><span class="kp-arrow">▸</span><span>Réception orientée vers P2 ou P3.</span></li>
+          <li><span class="kp-arrow">▸</span><span>Passe haute en tempo 3 sur l'aile.</span></li>
+          <li><span class="kp-arrow">▸</span><span>L'attaquant lit le bloc avant de frapper.</span></li>
+          <li><span class="kp-arrow">▸</span><span>Couverture immédiate après la frappe.</span></li>
+        </ul>
+      </div>
+      <div class="tile" style="padding: 22px;">
+        <div class="eyebrow eyebrow-orange" style="margin-bottom: 10px;">✗ Erreurs fréquentes</div>
+        <ul class="err-list">
+          <li><span class="err-x">✗</span><span>Sauter avant le set.</span></li>
+          <li><span class="err-x">✗</span><span>Frapper sans regarder le bloc.</span></li>
+          <li><span class="err-x">✗</span><span>Couverture trop éloignée de l'attaquant.</span></li>
+          <li><span class="err-x">✗</span><span>Passe trop courte au filet.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="tile" style="padding: 24px;">
+      <div class="eyebrow eyebrow-orange" style="margin-bottom: 14px;">★ Référence rapide — fautes courantes</div>
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;">
+        <div class="qref-row"><span class="qref-x">✗</span><span>Toucher le filet pendant le jeu</span></div>
+        <div class="qref-row"><span class="qref-x">✗</span><span>Plus de 3 touches par équipe</span></div>
+        <div class="qref-row"><span class="qref-x">✗</span><span>Double touche d'un même joueur</span></div>
+        <div class="qref-row"><span class="qref-x">✗</span><span>Ballon tenu / porté</span></div>
+        <div class="qref-row"><span class="qref-x">✗</span><span>Attaque arrière au-dessus du filet</span></div>
+        <div class="qref-row"><span class="qref-x">✗</span><span>Faute de pied au service</span></div>
+      </div>
+    </div>
+
+    <!-- P — NAVIGATION MOBILE -->
+    <div class="section-head">
+      <span class="star">★ P ★</span>
+      <h2 class="section">NAV MOBILE</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 28px;">
+      <div class="label-cap" style="margin-bottom: 16px;">Header compact + menu burger déroulant</div>
+      <div style="display:flex; gap: 28px; align-items:flex-start;">
+        <!-- Mobile header collapsed -->
+        <div class="mobile-frame">
+          <div class="mobile-status mono">9:41 · 📶 ▮▮▮</div>
+          <div class="mobile-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--orange); border:2.5px solid var(--ink); display:flex; align-items:center; justify-content:center;"><span class="display" style="font-size:12px;">V</span></div>
+              <span class="display" style="font-size:13px;">VOLLEY·WIKI</span>
+            </div>
+            <button class="burger">☰</button>
+          </div>
+          <div style="padding: 30px 20px; text-align:center; color:rgba(26,24,18,0.4);" class="mono">[ contenu de page ]</div>
+        </div>
+        <!-- Mobile header open -->
+        <div class="mobile-frame">
+          <div class="mobile-status mono">9:41 · 📶 ▮▮▮</div>
+          <div class="mobile-header">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div style="width:28px; height:28px; border-radius:50%; background:var(--orange); border:2.5px solid var(--ink); display:flex; align-items:center; justify-content:center;"><span class="display" style="font-size:12px;">V</span></div>
+              <span class="display" style="font-size:13px;">VOLLEY·WIKI</span>
+            </div>
+            <button class="burger is-open">✕</button>
+          </div>
+          <nav class="mobile-nav">
+            <a class="mobile-nav-link is-active">🏠 &nbsp; ACCUEIL</a>
+            <a class="mobile-nav-link">🎯 &nbsp; TECHNIQUES</a>
+            <a class="mobile-nav-link">📍 &nbsp; POSITIONS</a>
+            <a class="mobile-nav-link">🎬 &nbsp; SCÉNARIOS</a>
+            <a class="mobile-nav-link">📚 &nbsp; GUIDES</a>
+            <a class="mobile-nav-link">📋 &nbsp; RÈGLES</a>
+            <a class="mobile-nav-link">📖 &nbsp; GLOSSAIRE</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q — FOOTER WIKI -->
+    <div class="section-head">
+      <span class="star">★ Q ★</span>
+      <h2 class="section">FOOTER PAGE</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="tile" style="padding: 0; overflow:hidden;">
+      <div class="stripe-thin" style="background: repeating-linear-gradient(90deg, var(--ink) 0 12px, transparent 12px 24px);"></div>
+      <div style="padding: 22px 24px; display:flex; justify-content:space-between; align-items:center; gap: 16px; flex-wrap:wrap;">
+        <div>
+          <div class="display" style="font-size:16px; color:var(--orange);">VOLLEY·WIKI</div>
+          <div class="mono" style="font-size:11px; letter-spacing:0.1em; margin-top:4px;">TECHNIQUES · RÈGLES · TACTIQUES · DEPUIS 2025</div>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <span class="chip">FIVB 2025-2028</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--teal);"></span> v2.4.1</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--pink);"></span> FR</span>
+        </div>
+      </div>
+      <div class="stripe" style="height: 8px;"></div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page" style="padding-top: 56px; padding-bottom: 32px;">
+    <div class="hairline" style="margin-bottom: 24px;"></div>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div class="mono" style="font-size:12px; letter-spacing:0.1em;">VOLLEY · WIKI · DESIGN SYSTEM · v1.0 · MAI 2026</div>
+      <div class="display" style="font-size:13px; letter-spacing:0.1em; color:var(--orange);">★ FAIT À BRUXELLES ★</div>
+    </div>
+  </footer>
+
+  <div class="stripe"></div>
+</body>
+</html>
