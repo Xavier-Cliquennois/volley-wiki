@@ -226,6 +226,7 @@ export default function Scenarios() {
       {/* Compact bar — shown once launched */}
       {launched && (
         <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {/* Row 1 — Format + Réinitialiser */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}>
             <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>FORMAT</span>
             {([4, 5, 6] as TeamSize[]).map(n => (
@@ -242,7 +243,18 @@ export default function Scenarios() {
                 {n}v{n}
               </button>
             ))}
-            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginLeft: 12, marginRight: 4 }}>PHASE</span>
+            <button
+              onClick={reset}
+              style={{ ...btnBase, padding: '5px 12px', fontSize: 9, marginLeft: 'auto' }}
+              title="Tout réinitialiser"
+            >
+              RÉINITIALISER
+            </button>
+          </div>
+
+          {/* Row 2 — Phase */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, paddingTop: 8, borderTop: '2px dashed rgba(26,24,18,0.18)' }}>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>PHASE</span>
             {(['attack', 'defense', 'reception'] as PhaseKind[]).map(p => (
               <button
                 key={p}
@@ -254,18 +266,12 @@ export default function Scenarios() {
                   ...(phase === p ? { background: PHASE_COLORS[p], boxShadow: '2px 2px 0 var(--ink)', transform: 'translate(-1px,-1px)' } : {}),
                 }}
               >
-                {PHASE_ICONS[p]} {PHASE_LABELS[p].toUpperCase()}
+                <span aria-hidden="true">{PHASE_ICONS[p]}</span> {PHASE_LABELS[p].toUpperCase()}
               </button>
             ))}
-            <button
-              onClick={reset}
-              style={{ ...btnBase, padding: '5px 12px', fontSize: 9, marginLeft: 'auto' }}
-              title="Tout réinitialiser"
-            >
-              RÉINITIALISER
-            </button>
           </div>
 
+          {/* Row 3 — Scénario picker */}
           {matchingScenarios.length > 0 && (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingTop: 8, borderTop: '2px dashed rgba(26,24,18,0.18)', alignItems: 'center' }}>
               <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>SCÉNARIO</span>
