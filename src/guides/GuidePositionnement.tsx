@@ -49,6 +49,111 @@ type DefenseLayout = {
 const Z = (zoneId: ZoneId, x: number, y: number, w: number, h: number, label: string): DefenseZone =>
   ({ zoneId, x, y, w, h, posNumber: zoneId, label } as DefenseZone & { zoneId: ZoneId });
 
+// Court SVG uses a 3:4 aspect ratio (width:height) — match the Court container.
+// Using a viewBox with the same aspect avoids the marker distortion that comes
+// with preserveAspectRatio="none" and lets us use markerUnits="userSpaceOnUse"
+// to keep arrowheads at a consistent visual size.
+const SX = (x: number) => x * 3;
+const SY = (y: number) => y * 4;
+
+// Pull the arrow tip back from its target so the marker stops in front of the
+// player circle instead of overlapping it. svgBackoff is in SVG user units
+// (viewBox is 300×400, players are ~26 units wide).
+function shortenShot(
+  fromX: number,
+  fromY: number,
+  toX: number,
+  toY: number,
+  svgBackoff: number,
+): { x: number; y: number } {
+  const dxs = (toX - fromX) * 3;
+  const dys = (toY - fromY) * 4;
+  const len = Math.sqrt(dxs * dxs + dys * dys);
+  if (len < svgBackoff) return { x: toX, y: toY };
+  const t = (len - svgBackoff) / len;
+  return { x: fromX + (toX - fromX) * t, y: fromY + (toY - fromY) * t };
+}
+
+function ShotArrows({
+  ballX,
+  ballY,
+  mainShot,
+  altShots,
+  idSuffix,
+}: {
+  ballX: number;
+  ballY: number;
+  mainShot: { toX: number; toY: number };
+  altShots: { toX: number; toY: number }[];
+  idSuffix: string;
+}) {
+  const main = shortenShot(ballX, ballY, mainShot.toX, mainShot.toY, 24);
+  return (
+    <svg
+      viewBox="0 0 300 400"
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 20,
+      }}
+    >
+      <defs>
+        <marker
+          id={`shot-main-${idSuffix}`}
+          markerUnits="userSpaceOnUse"
+          markerWidth="14"
+          markerHeight="11"
+          refX="13"
+          refY="5.5"
+          orient="auto"
+        >
+          <polygon points="0 0, 14 5.5, 0 11" fill="#e2542e" />
+        </marker>
+        <marker
+          id={`shot-alt-${idSuffix}`}
+          markerUnits="userSpaceOnUse"
+          markerWidth="11"
+          markerHeight="8"
+          refX="10"
+          refY="4"
+          orient="auto"
+        >
+          <polygon points="0 0, 11 4, 0 8" fill="#8a7a62" />
+        </marker>
+      </defs>
+      <line
+        x1={SX(ballX)}
+        y1={SY(ballY)}
+        x2={SX(main.x)}
+        y2={SY(main.y)}
+        stroke="#e2542e"
+        strokeWidth="4"
+        markerEnd={`url(#shot-main-${idSuffix})`}
+      />
+      {altShots.map((s, i) => {
+        const end = shortenShot(ballX, ballY, s.toX, s.toY, 18);
+        return (
+          <line
+            key={i}
+            x1={SX(ballX)}
+            y1={SY(ballY)}
+            x2={SX(end.x)}
+            y2={SY(end.y)}
+            stroke="#8a7a62"
+            strokeWidth="2"
+            strokeDasharray="6,5"
+            markerEnd={`url(#shot-alt-${idSuffix})`}
+          />
+        );
+      })}
+    </svg>
+  );
+}
+
 const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 15, ballY: 19,
@@ -351,34 +456,13 @@ function DataDrivenDefense({ layout }: { layout: DefenseLayout }) {
         {layout.zones.map((z, i) => (
           <ZoneLabel key={`zl-${i}`} x={z.x + z.w / 2 - 5} y={z.y + z.h / 2} label={z.label} type="arriere" />
         ))}
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          style={{ pointerEvents: 'none', zIndex: 20 }}
-        >
-          <defs>
-            <marker id="ddm" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <polygon points="0 0, 8 4, 0 8" fill="#e2542e" />
-            </marker>
-            <marker id="dda" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-              <polygon points="0 0, 7 3.5, 0 7" fill="#8a7a62" />
-            </marker>
-          </defs>
-          <line
-            x1={layout.ballX} y1={layout.ballY}
-            x2={layout.mainShot.toX} y2={layout.mainShot.toY}
-            stroke="#e2542e" strokeWidth="1.5" markerEnd="url(#ddm)"
-          />
-          {layout.altShots.map((s, i) => (
-            <line
-              key={i}
-              x1={layout.ballX} y1={layout.ballY}
-              x2={s.toX} y2={s.toY}
-              stroke="#8a7a62" strokeWidth="0.8" markerEnd="url(#dda)" strokeDasharray="3,2"
-            />
-          ))}
-        </svg>
+        <ShotArrows
+          ballX={layout.ballX}
+          ballY={layout.ballY}
+          mainShot={layout.mainShot}
+          altShots={layout.altShots}
+          idSuffix="dd"
+        />
         {layout.players.map(p => (
           <Player
             key={p.zoneId}
@@ -414,25 +498,17 @@ function Zone4Tab() {
         <ZoneLabel x={38} y={52} label="Zone 6" type="libero" />
         <ZoneLabel x={72} y={70} label="Zone 1" type="arriere" />
         <ZoneLabel x={78} y={40} label="Zone 2" type="avant" />
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          style={{ pointerEvents: 'none', zIndex: 20 }}
-        >
-          <defs>
-            <marker id="am" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <polygon points="0 0, 8 4, 0 8" fill="#e2542e" />
-            </marker>
-            <marker id="aa" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-              <polygon points="0 0, 7 3.5, 0 7" fill="#8a7a62" />
-            </marker>
-          </defs>
-          <line x1="15" y1="19" x2="75" y2="77.5" stroke="#e2542e" strokeWidth="1.5" markerEnd="url(#am)" />
-          <line x1="15" y1="19" x2="18" y2="47.5" stroke="#8a7a62" strokeWidth="0.8" markerEnd="url(#aa)" strokeDasharray="3,2" />
-          <line x1="15" y1="19" x2="40" y2="62.5" stroke="#8a7a62" strokeWidth="0.8" markerEnd="url(#aa)" strokeDasharray="3,2" />
-          <line x1="15" y1="19" x2="85" y2="40" stroke="#8a7a62" strokeWidth="0.8" markerEnd="url(#aa)" strokeDasharray="3,2" />
-        </svg>
+        <ShotArrows
+          ballX={15}
+          ballY={19}
+          mainShot={{ toX: 75, toY: 77.5 }}
+          altShots={[
+            { toX: 18, toY: 47.5 },
+            { toX: 40, toY: 62.5 },
+            { toX: 85, toY: 40 },
+          ]}
+          idSuffix="z4-6v6"
+        />
         <Player x={20} y={29.5} label="4" sub="BLK" type="avant" />
         <Player x={40} y={29.5} label="3" sub="BLK" type="avant" />
         <Player x={85} y={62.5} label="2" sub="DÉF" type="avant" />
@@ -472,6 +548,16 @@ function Zone3Tab() {
         <ZoneLabel x={10} y={70} label="Zone 5" type="arriere" />
         <ZoneLabel x={45} y={73} label="Zone 6" type="libero" />
         <ZoneLabel x={78} y={70} label="Zone 1" type="arriere" />
+        <ShotArrows
+          ballX={50}
+          ballY={19}
+          mainShot={{ toX: 50, toY: 80 }}
+          altShots={[
+            { toX: 20, toY: 65 },
+            { toX: 80, toY: 65 },
+          ]}
+          idSuffix="z3-6v6"
+        />
         <Player x={35} y={29.5} label="4" sub="BLK" type="avant" />
         <Player x={50} y={29.5} label="3" sub="BLK" type="avant" />
         <Player x={65} y={29.5} label="2" sub="BLK" type="avant" />
@@ -511,6 +597,17 @@ function Zone2Tab() {
         <ZoneLabel x={55} y={52} label="Zone 6" type="libero" />
         <ZoneLabel x={80} y={40} label="Zone 1" type="arriere" />
         <ZoneLabel x={7} y={40} label="Zone 4" type="avant" />
+        <ShotArrows
+          ballX={85}
+          ballY={19}
+          mainShot={{ toX: 25, toY: 77.5 }}
+          altShots={[
+            { toX: 82, toY: 47.5 },
+            { toX: 60, toY: 62.5 },
+            { toX: 15, toY: 40 },
+          ]}
+          idSuffix="z2-6v6"
+        />
         <Player x={60} y={29.5} label="3" sub="BLK" type="avant" />
         <Player x={80} y={29.5} label="2" sub="BLK" type="avant" />
         <Player x={15} y={62.5} label="4" sub="DÉF" type="avant" />
