@@ -1,19 +1,46 @@
 import { useState } from 'react';
 
+const S = {
+  section: { fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.08em', color: 'var(--ink)', marginBottom: 14, paddingBottom: 8, borderBottom: '2.5px solid var(--ink)' } as React.CSSProperties,
+  label: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--orange)', marginBottom: 4 },
+  labelTeal: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--teal)', marginBottom: 4 },
+  card: { background: 'var(--paper)', border: '2.5px solid var(--ink)', padding: '16px 20px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
+  alert: { background: 'var(--yellow)', border: '2.5px solid var(--ink)', padding: '14px 18px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
+  bullet: { color: 'var(--teal)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
+  bulletOrange: { color: 'var(--orange)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
+  stepBadge: { background: 'var(--orange)', color: '#fff', fontFamily: '"Bungee", sans-serif', fontSize: 12, width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 } as React.CSSProperties,
+};
+
 function VideoLink({ title, url }: { title: string; url: string }) {
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors"
+      style={{
+        display: 'flex', alignItems: 'center', gap: 8,
+        border: '2px solid var(--ink)', padding: '8px 12px',
+        fontFamily: '"DM Mono", monospace', fontSize: 12,
+        color: 'var(--ink)', textDecoration: 'none',
+        background: 'var(--cream)',
+      }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--teal)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--teal)'; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--ink)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--ink)'; }}
     >
-      <span className="text-yellow-400">▶</span>
-      <span className="flex-1">{title}</span>
-      <span className="text-gray-600 text-xs">YT</span>
+      <span style={{ color: 'var(--orange)' }}>▶</span>
+      <span style={{ flex: 1 }}>{title}</span>
+      <span style={{ fontSize: 10, opacity: 0.5 }}>YT</span>
     </a>
   );
 }
+
+const LEVEL_COLOR: Record<string, string> = {
+  'Débutant': 'var(--mint)',
+  'Débutant → Intermédiaire': 'var(--mint)',
+  'Intermédiaire': 'var(--yellow)',
+  'Intermédiaire+': 'var(--orange)',
+  'Avancé': 'var(--orange)',
+};
 
 const PHASES = [
   ['Initiation', "Lecture du set et décision de l'approche"],
@@ -155,56 +182,56 @@ export default function GuideAttaque() {
   const current = ATTACK_TYPES.find(t => t.id === activeAttack)!;
 
   return (
-    <div className="space-y-10">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
 
       {/* Biomécanique */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Les 5 phases du smash</h2>
-        <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5 space-y-3">
+      <section>
+        <h2 style={S.section}>Les 5 phases du smash</h2>
+        <div style={{ ...S.card, border: '2.5px solid var(--orange)', display: 'flex', flexDirection: 'column', gap: 12 }}>
           {PHASES.map(([phase, desc], i) => (
-            <div key={i} className="flex gap-3 items-start">
-              <span className="bg-yellow-400 text-black text-sm font-bold w-6 h-6 flex items-center justify-center flex-shrink-0">{i + 1}</span>
+            <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              <span style={S.stepBadge}>{i + 1}</span>
               <div>
-                <strong className="text-white text-sm">{phase} : </strong>
-                <span className="text-gray-400 text-sm">{desc}</span>
+                <strong style={{ fontSize: 14, color: 'var(--ink)' }}>{phase} : </strong>
+                <span style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75 }}>{desc}</span>
               </div>
             </div>
           ))}
         </div>
-        <div className="border-l-4 border-yellow-400 pl-4 py-1 text-sm text-gray-400">
-          <strong className="text-white">Contact idéal : </strong>
-          Légèrement en avant de l'épaule frappante, jamais derrière la tête (perte de puissance + risque blessure). Distance au filet à l'impulsion : 30-50 cm minimum.
+        <div style={{ marginTop: 12, borderLeft: '4px solid var(--orange)', paddingLeft: 16, paddingTop: 4, fontSize: 14 }}>
+          <strong style={{ color: 'var(--ink)' }}>Contact idéal : </strong>
+          <span style={{ color: 'var(--ink)', opacity: 0.7 }}>Légèrement en avant de l'épaule frappante, jamais derrière la tête (perte de puissance + risque blessure). Distance au filet à l'impulsion : 30-50 cm minimum.</span>
         </div>
       </section>
 
       {/* Approach */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Course d'approche</h2>
-        <div className="grid md:grid-cols-2 gap-3">
-          <div className="border-2 border-gray-700 p-4 space-y-3">
-            <h3 className="text-yellow-400 text-xs uppercase tracking-wider font-bold">3 pas — Débutant</h3>
-            <p className="text-gray-500 text-xs">Gauche-droite-gauche (droitier)</p>
-            <ul className="space-y-2">
+      <section>
+        <h2 style={S.section}>Course d'approche</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+          <div style={S.card}>
+            <div style={S.label}>3 pas — Débutant</div>
+            <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, color: 'var(--ink)', opacity: 0.5, marginBottom: 10 }}>Gauche-droite-gauche (droitier)</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
               {APPROACH_3.map(([label, text], i) => (
-                <li key={i} className="text-sm">
-                  <strong className="text-white">{label} : </strong>
-                  <span className="text-gray-400">{text}</span>
+                <li key={i} style={{ fontSize: 13 }}>
+                  <strong style={{ color: 'var(--ink)' }}>{label} : </strong>
+                  <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{text}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="border-2 border-yellow-400 bg-yellow-400/5 p-4 space-y-3">
-            <h3 className="text-yellow-400 text-xs uppercase tracking-wider font-bold">4 pas — Standard compétition</h3>
-            <p className="text-gray-500 text-xs">Droite-gauche-droite-gauche (droitier)</p>
-            <ul className="space-y-2">
+          <div style={{ ...S.card, border: '2.5px solid var(--orange)' }}>
+            <div style={S.label}>4 pas — Standard compétition</div>
+            <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, color: 'var(--ink)', opacity: 0.5, marginBottom: 10 }}>Droite-gauche-droite-gauche (droitier)</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
               {APPROACH_4.map(([label, text], i) => (
-                <li key={i} className="text-sm">
-                  <strong className="text-white">{label} : </strong>
-                  <span className="text-gray-400">{text}</span>
+                <li key={i} style={{ fontSize: 13 }}>
+                  <strong style={{ color: 'var(--ink)' }}>{label} : </strong>
+                  <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{text}</span>
                 </li>
               ))}
             </ul>
-            <div className="border-l-4 border-yellow-400 pl-3 text-xs text-yellow-400">
+            <div style={{ marginTop: 10, borderLeft: '3px solid var(--orange)', paddingLeft: 10, fontSize: 12, color: 'var(--orange)', fontFamily: '"DM Mono", monospace' }}>
               Règle d'or : les deux derniers pas sont les plus rapides — slow → fast.
             </div>
           </div>
@@ -212,21 +239,21 @@ export default function GuideAttaque() {
       </section>
 
       {/* Timing */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Timing selon le type de passe</h2>
-        <div className="border-2 border-gray-700 overflow-hidden">
-          <table className="w-full text-sm">
-            <thead className="border-b border-gray-700">
-              <tr>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Type de passe</th>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Quand commencer l'approche</th>
+      <section>
+        <h2 style={S.section}>Timing selon le type de passe</h2>
+        <div style={{ border: '2.5px solid var(--ink)', overflow: 'hidden' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ background: 'var(--ink)' }}>
+                <th style={{ padding: '8px 14px', textAlign: 'left', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', color: 'var(--cream)', fontWeight: 400 }}>Type de passe</th>
+                <th style={{ padding: '8px 14px', textAlign: 'left', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', color: 'var(--cream)', fontWeight: 400 }}>Quand commencer l'approche</th>
               </tr>
             </thead>
             <tbody>
               {TIMING_TABLE.map(([type, timing], i) => (
-                <tr key={i} className={`${i < TIMING_TABLE.length - 1 ? 'border-b border-gray-800' : ''} hover:bg-gray-900/50`}>
-                  <td className="px-4 py-3 text-yellow-400 font-bold text-sm">{type}</td>
-                  <td className="px-4 py-3 text-gray-400 text-sm">{timing}</td>
+                <tr key={i} style={{ borderBottom: i < TIMING_TABLE.length - 1 ? '1px solid var(--paper)' : 'none', background: i % 2 === 0 ? 'var(--cream)' : 'var(--paper)' }}>
+                  <td style={{ padding: '10px 14px', color: 'var(--orange)', fontFamily: '"Bungee", sans-serif', fontSize: 11 }}>{type}</td>
+                  <td style={{ padding: '10px 14px', color: 'var(--ink)', opacity: 0.75 }}>{timing}</td>
                 </tr>
               ))}
             </tbody>
@@ -235,46 +262,52 @@ export default function GuideAttaque() {
       </section>
 
       {/* Attack types */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Types d'attaque par poste</h2>
-        <div className="flex flex-wrap gap-1">
+      <section>
+        <h2 style={S.section}>Types d'attaque par poste</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 14 }}>
           {ATTACK_TYPES.map(t => (
             <button
               key={t.id}
               onClick={() => setActiveAttack(t.id)}
-              className={`px-3 py-2 text-xs uppercase tracking-wider border transition-colors ${
-                activeAttack === t.id
-                  ? 'border-yellow-400 text-yellow-400 bg-yellow-400/10'
-                  : 'border-gray-700 text-gray-400 hover:border-gray-600'
-              }`}
+              style={{
+                padding: '6px 14px',
+                fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.1em',
+                border: '2.5px solid var(--ink)',
+                background: activeAttack === t.id ? 'var(--orange)' : 'var(--cream)',
+                color: activeAttack === t.id ? '#fff' : 'var(--ink)',
+                cursor: 'pointer',
+                boxShadow: activeAttack === t.id ? 'var(--shadow-sm)' : 'none',
+              }}
             >
               {t.position}
             </button>
           ))}
         </div>
-        <div className="border-2 border-gray-700 p-5 space-y-4">
-          <div>
-            <h3 className="text-white font-bold text-lg">{current.name}</h3>
-            <div className="text-gray-500 text-xs uppercase tracking-wider mt-1">{current.position}</div>
+        <div style={S.card}>
+          <div style={{ marginBottom: 12 }}>
+            <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, color: 'var(--ink)', marginBottom: 4 }}>{current.name}</div>
+            <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.5, letterSpacing: '0.12em', textTransform: 'uppercase' }}>{current.position}</div>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed">{current.description}</p>
-          <div className="grid md:grid-cols-2 gap-4">
+          <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.8, lineHeight: 1.6, marginBottom: 16 }}>{current.description}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
             <div>
-              <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Points clés</div>
-              <ul className="space-y-1">
+              <div style={S.labelTeal}>Points clés</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {current.keyPoints.map((pt, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                    <span className="text-yellow-400 mt-0.5">▸</span>{pt}
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                    <span style={S.bullet}>▸</span>
+                    <span style={{ color: 'var(--ink)', opacity: 0.85 }}>{pt}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Choix de tirs</div>
-              <ul className="space-y-1">
+              <div style={S.label}>Choix de tirs</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {current.shots.map((s, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                    <span className="text-yellow-400 mt-0.5">▸</span>{s}
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                    <span style={S.bulletOrange}>▸</span>
+                    <span style={{ color: 'var(--ink)', opacity: 0.8 }}>{s}</span>
                   </li>
                 ))}
               </ul>
@@ -284,53 +317,58 @@ export default function GuideAttaque() {
       </section>
 
       {/* Special shots */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Attaques spéciales</h2>
-        <div className="space-y-3">
+      <section>
+        <h2 style={S.section}>Attaques spéciales</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {SPECIAL_SHOTS.map((s, i) => (
-            <div key={i} className="border-2 border-gray-700 p-4">
-              <div className="flex items-start justify-between gap-4 mb-2">
-                <h3 className="text-white font-bold text-sm">{s.name}</h3>
-                <span className="text-yellow-400 text-xs border border-yellow-400/50 px-2 py-0.5 flex-shrink-0">{s.level}</span>
+            <div key={i} style={S.card}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, marginBottom: 8 }}>
+                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, color: 'var(--ink)' }}>{s.name}</div>
+                <span style={{
+                  fontFamily: '"DM Mono", monospace', fontSize: 10, padding: '2px 10px',
+                  border: '1.5px solid var(--ink)',
+                  background: LEVEL_COLOR[s.level] || 'var(--paper)',
+                  color: 'var(--ink)', flexShrink: 0,
+                }}>{s.level}</span>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+              <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0, lineHeight: 1.6 }}>{s.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Errors */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Erreurs fréquentes</h2>
-        <div className="border-l-4 border-red-500 pl-5 py-1 space-y-3">
-          <div className="text-red-400 text-xs uppercase tracking-wider mb-2">À éviter</div>
+      <section>
+        <h2 style={S.section}>Erreurs fréquentes</h2>
+        <div style={{ borderLeft: '5px solid var(--orange)', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ ...S.label, color: 'var(--orange)' }}>À éviter</div>
           {ERRORS.map(([label, text], i) => (
-            <div key={i} className="text-sm">
-              <strong className="text-white">{label} : </strong>
-              <span className="text-gray-400">{text}</span>
+            <div key={i} style={{ fontSize: 13 }}>
+              <strong style={{ color: 'var(--ink)' }}>{label} : </strong>
+              <span style={{ color: 'var(--ink)', opacity: 0.7 }}>{text}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Videos */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Ressources vidéo</h2>
-        <div className="space-y-2">
+      <section>
+        <h2 style={S.section}>Ressources vidéo</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {VIDEOS.map((v, i) => (
             <VideoLink key={i} title={v.title} url={v.url} />
           ))}
         </div>
       </section>
 
-      {/* Rule d'or */}
+      {/* Règle d'or */}
       <section>
-        <div className="border-2 border-yellow-400 bg-yellow-400/5 p-6">
-          <div className="text-yellow-400 text-xs uppercase tracking-widest font-bold mb-3">Règle d'or</div>
-          <p className="text-white font-bold text-sm leading-relaxed tracking-wide">
+        <div style={{ ...S.alert, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--ink)' }}>Règle d'or</div>
+          <p style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.04em', color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>
             APPROCHE LENTE → RAPIDE → POWER STEP → CLOSING → SAUT VERTICAL → BRAS TENDU EN AVANT → SNAP DU POIGNET
           </p>
-          <p className="text-gray-400 text-sm mt-3 leading-relaxed">
+          <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0, lineHeight: 1.6 }}>
             La puissance vient de la chaîne cinétique complète, pas du bras seul. Une approche rythmée avec les deux derniers pas rapides génère 70% de la puissance finale.
           </p>
         </div>

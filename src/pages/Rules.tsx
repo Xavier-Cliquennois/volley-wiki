@@ -4,7 +4,7 @@ const RULE_SECTIONS = [
   {
     id: 'basics',
     title: "L'essentiel",
-    icon: '📌',
+    num: '01',
     rules: [
       { title: 'Format de jeu', content: "Un match se joue en 3 sets gagnants (best of 5). Chaque set se joue à 25 points, avec au moins 2 points d'écart. En cas de 5ème set, on joue à 15 points." },
       { title: 'Équipes', content: "6 joueurs de chaque côté sur le terrain. Une équipe peut avoir jusqu'à 6 remplaçants et un libero. Maximum 6 remplacements réguliers par set (libero non compté)." },
@@ -15,7 +15,7 @@ const RULE_SECTIONS = [
   {
     id: 'touches',
     title: 'Contacts et fautes',
-    icon: '✋',
+    num: '02',
     rules: [
       { title: 'Maximum 3 touches', content: "Une équipe a droit à 3 touches pour renvoyer le ballon. Le contre (block) ne compte pas comme une touche d'équipe — l'équipe a toujours 3 touches après un contre." },
       { title: 'Double touche', content: "Un joueur ne peut pas toucher le ballon deux fois consécutivement, sauf lors du premier contact d'équipe (réception/défense). Exception au contre. Nouveauté test FIVB 2025-2026 : double-contact autorisé lors de l'action de passe (2e touche) tant que le ballon reste du même côté." },
@@ -26,7 +26,7 @@ const RULE_SECTIONS = [
   {
     id: 'positions',
     title: 'Rotation et positions',
-    icon: '🔄',
+    num: '03',
     rules: [
       { title: 'Rotation obligatoire', content: "À chaque récupération de service, l'équipe gagnante tourne dans le sens des aiguilles d'une montre : P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. Le joueur en P2→P1 devient le nouveau serveur." },
       { title: 'Faute de position', content: "Au moment de la frappe du serveur, les joueurs doivent respecter leur ordre de rotation (pas de chevauchement diagonal). Faute = point + service à l'adversaire. Nouveauté 2025 : la règle d'overlap ne s'applique plus qu'à l'équipe en RÉCEPTION — l'équipe au service peut se positionner librement." },
@@ -37,7 +37,7 @@ const RULE_SECTIONS = [
   {
     id: 'special',
     title: 'Situations spéciales',
-    icon: '⚡',
+    num: '04',
     rules: [
       { title: 'Time-outs', content: 'Chaque équipe a droit à 2 time-outs de 30 secondes par set. Des time-outs techniques automatiques aux 8e et 16e points dans les sets 1-4 sont prévus dans certaines compétitions FIVB.' },
       { title: 'Service — règles clés', content: "8 secondes pour frapper après le sifflet. Un seul lancer autorisé, mais le serveur peut laisser tomber le ballon une fois sans pénalité. Faute de pied : au moment de la frappe (ou l'impulsion en saut), le serveur ne doit pas toucher la ligne de fond ni le terrain. Service masqué : les coéquipiers ne doivent pas lever les mains au-dessus de la tête pendant le service (règle 2025)." },
@@ -48,7 +48,7 @@ const RULE_SECTIONS = [
   {
     id: 'nouveautes2025',
     title: 'Nouveautés FIVB 2025-2028',
-    icon: '🆕',
+    num: '05',
     rules: [
       { title: 'Overlap : seulement en réception', content: "Depuis 2025, la règle d'overlap (chevauchement) ne s'applique plus qu'à l'équipe en réception. L'équipe au service peut occuper n'importe quelle position sur le terrain au moment du service." },
       { title: 'Anti-écran au service', content: "Il est désormais interdit pour les joueurs de l'équipe au service de lever les mains au-dessus de la tête pendant le service jusqu'au franchissement du filet. Un écran de ce type est directement sanctionné." },
@@ -58,64 +58,138 @@ const RULE_SECTIONS = [
   },
 ];
 
+const QUICK_FAULTS = [
+  'Toucher le filet pendant le jeu',
+  'Plus de 3 touches par équipe',
+  "Double touche d'un même joueur",
+  'Ballon tenu / porté',
+  'Attaque de la zone arrière au-dessus du filet',
+  'Faute de pied au service (marcher sur la ligne)',
+  'Service avant le coup de sifflet',
+  'Faute de position à la rotation',
+];
+
 export default function Rules() {
   const [open, setOpen] = useState<string | null>('basics');
 
   return (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Règles du volleyball</h1>
-        <p className="text-gray-400">Règlement FIVB simplifié — les règles essentielles pour comprendre et jouer.</p>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ DOCUMENTATION
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          RÈGLES DU VOLLEYBALL
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7, maxWidth: 600 }}>
+          Règlement FIVB simplifié — les règles essentielles pour comprendre et jouer.
+        </p>
       </div>
 
-      <div className="border-2 border-yellow-400/30 bg-yellow-400/5 px-6 py-4 text-sm text-yellow-200">
-        ⚠️ Cette page est un résumé pédagogique. Pour les compétitions officielles, référez-vous au <span className="text-yellow-400">règlement FIVB officiel</span>.
+      {/* Warning */}
+      <div style={{ border: '3px solid var(--ink)', background: 'var(--yellow)', boxShadow: 'var(--shadow-sm)', padding: '14px 20px', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+        <div style={{
+          width: 32, height: 32, borderRadius: '50%', border: '3px solid var(--ink)',
+          background: 'var(--cream)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontFamily: '"Bungee", sans-serif', fontSize: 16, flexShrink: 0,
+        }}>!</div>
+        <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5 }}>
+          Cette page est un résumé pédagogique. Pour les compétitions officielles, référez-vous au <strong>règlement FIVB officiel</strong>.
+        </p>
       </div>
 
-      <div className="space-y-2">
-        {RULE_SECTIONS.map(section => (
-          <div key={section.id} className="border-2 border-gray-700 overflow-hidden">
-            <button
-              className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-900 transition-colors"
-              onClick={() => setOpen(open === section.id ? null : section.id)}
+      {/* Accordion sections */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        {RULE_SECTIONS.map(section => {
+          const isOpen = open === section.id;
+          return (
+            <div
+              key={section.id}
+              style={{
+                border: '3px solid var(--ink)',
+                boxShadow: isOpen ? 'var(--shadow)' : 'var(--shadow-sm)',
+                background: 'var(--cream)',
+                overflow: 'hidden',
+                transition: 'box-shadow 0.1s',
+              }}
             >
-              <div className="flex items-center gap-3">
-                <span className="text-xl">{section.icon}</span>
-                <span className="text-white font-bold">{section.title}</span>
-              </div>
-              <span className={`text-yellow-400 text-lg transition-transform ${open === section.id ? 'rotate-45' : ''}`}>+</span>
-            </button>
-            {open === section.id && (
-              <div className="border-t border-gray-700 divide-y divide-gray-800">
-                {section.rules.map(rule => (
-                  <div key={rule.title} className="px-6 py-4">
-                    <div className="text-yellow-400 text-sm font-bold mb-1">{rule.title}</div>
-                    <p className="text-gray-400 text-sm leading-relaxed">{rule.content}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+              <button
+                onClick={() => setOpen(isOpen ? null : section.id)}
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 16,
+                  padding: '14px 20px',
+                  background: isOpen ? 'var(--paper)' : 'transparent',
+                  border: 'none',
+                  borderBottom: isOpen ? '3px solid var(--ink)' : 'none',
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                }}
+              >
+                <div style={{
+                  width: 36, height: 36, border: '3px solid var(--ink)', borderRadius: '50%',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  background: isOpen ? 'var(--orange)' : 'var(--cream)',
+                  fontFamily: '"Bungee", sans-serif', fontSize: 11, flexShrink: 0,
+                }}>
+                  {section.num}
+                </div>
+                <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 15, letterSpacing: '0.03em', flex: 1 }}>
+                  {section.title}
+                </span>
+                <div style={{
+                  width: 32, height: 32, border: '3px solid var(--ink)',
+                  background: 'var(--yellow)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontFamily: '"Bungee", sans-serif', fontSize: 18,
+                  transform: isOpen ? 'rotate(45deg)' : 'none',
+                  transition: 'transform 0.1s',
+                  flexShrink: 0,
+                }}>+</div>
+              </button>
+
+              {isOpen && (
+                <div>
+                  {section.rules.map((rule, idx) => (
+                    <div
+                      key={rule.title}
+                      style={{
+                        padding: '14px 20px',
+                        borderBottom: idx < section.rules.length - 1 ? '2px dashed rgba(26,24,18,0.18)' : 'none',
+                      }}
+                    >
+                      <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em', color: 'var(--orange)', marginBottom: 6 }}>
+                        {rule.title}
+                      </div>
+                      <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.55, opacity: 0.8 }}>{rule.content}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Quick reference */}
-      <div className="border-2 border-gray-700 p-6">
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-4">Référence rapide — fautes courantes</div>
-        <div className="grid md:grid-cols-2 gap-3">
-          {[
-            'Toucher le filet pendant le jeu',
-            'Plus de 3 touches par équipe',
-            "Double touche d'un même joueur",
-            'Ballon tenu / porté',
-            'Attaque de la zone arrière au-dessus du filet',
-            'Faute de pied au service (marcher sur la ligne)',
-            'Service avant le coup de sifflet',
-            'Faute de position à la rotation',
-          ].map(fault => (
-            <div key={fault} className="flex items-start gap-2 text-sm text-gray-400">
-              <span className="text-red-400 mt-0.5">✗</span>
+      <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>
+        <div style={{ position: 'relative', marginBottom: 20 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.06em' }}>FAUTES COURANTES</span>
+            <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+          </div>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: 12 }}>
+          {QUICK_FAULTS.map(fault => (
+            <div key={fault} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5 }}>
+              <div style={{
+                width: 22, height: 22, border: '2.5px solid var(--ink)', background: 'var(--orange)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: '"Bungee", sans-serif', fontSize: 11, flexShrink: 0,
+              }}>✗</div>
               {fault}
             </div>
           ))}

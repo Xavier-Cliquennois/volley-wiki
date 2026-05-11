@@ -74,33 +74,79 @@ export default function Glossary() {
   }, [filtered]);
 
   return (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Glossaire</h1>
-        <p className="text-gray-400">Vocabulaire technique du volleyball — {TERMS.length} termes.</p>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ DOCUMENTATION
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          GLOSSAIRE
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
+          Vocabulaire technique du volleyball — <span style={{ fontFamily: '"DM Mono", monospace', fontWeight: 500 }}>{TERMS.length}</span> termes.
+        </p>
       </div>
 
       {/* Search */}
-      <div className="relative">
-        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">🔍</span>
+      <div style={{ position: 'relative' }}>
+        <span style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', fontSize: 16, opacity: 0.5 }}>🔍</span>
         <input
           type="text"
           placeholder="Rechercher un terme…"
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="w-full bg-gray-900 border-2 border-gray-700 focus:border-yellow-400 outline-none px-10 py-3 text-white text-sm placeholder-gray-600 transition-colors"
+          style={{
+            width: '100%',
+            boxSizing: 'border-box',
+            padding: '12px 14px 12px 42px',
+            border: '3px solid var(--ink)',
+            background: search ? '#fff8e6' : 'var(--cream)',
+            fontFamily: '"DM Sans", sans-serif',
+            fontSize: 14,
+            outline: 'none',
+            boxShadow: 'inset 3px 3px 0 rgba(26,24,18,0.08)',
+            transition: 'background 0.1s',
+          }}
         />
         {search && (
-          <button onClick={() => setSearch('')} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300">✕</button>
+          <button
+            onClick={() => setSearch('')}
+            style={{
+              position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)',
+              background: 'none', border: 'none', cursor: 'pointer', fontSize: 14, opacity: 0.5,
+            }}
+          >✕</button>
         )}
       </div>
 
       {/* Letter index */}
       {!search && (
-        <div className="flex flex-wrap gap-1">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
           {letters.map(l => (
-            <a key={l} href={`#letter-${l}`} className="w-8 h-8 border border-gray-700 flex items-center justify-center text-xs text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors">
+            <a
+              key={l}
+              href={`#letter-${l}`}
+              style={{
+                width: 32, height: 32,
+                border: '2.5px solid var(--ink)',
+                background: 'var(--cream)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: '"Bungee", sans-serif', fontSize: 12,
+                color: 'var(--ink)',
+                textDecoration: 'none',
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.background = 'var(--orange)';
+                (e.currentTarget as HTMLElement).style.boxShadow = '2px 2px 0 var(--ink)';
+                (e.currentTarget as HTMLElement).style.transform = 'translate(-1px,-1px)';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.background = 'var(--cream)';
+                (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                (e.currentTarget as HTMLElement).style.transform = 'none';
+              }}
+            >
               {l}
             </a>
           ))}
@@ -109,20 +155,36 @@ export default function Glossary() {
 
       {/* Terms */}
       {filtered.length === 0 ? (
-        <div className="text-center text-gray-600 py-12">Aucun terme trouvé pour « {search} »</div>
+        <div style={{ border: '3px dashed var(--ink)', padding: '32px 20px', textAlign: 'center', background: 'var(--paper)' }}>
+          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, opacity: 0.6 }}>
+            AUCUN TERME POUR « {search} »
+          </div>
+        </div>
       ) : (
-        <div className="space-y-6">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
           {letters.map(letter => {
             const terms = filtered.filter(t => t.term[0]?.toUpperCase() === letter);
             if (terms.length === 0) return null;
             return (
               <div key={letter} id={`letter-${letter}`}>
-                <div className="text-yellow-400 font-bold text-2xl mb-3 border-b-2 border-gray-800 pb-2">{letter}</div>
-                <div className="space-y-3">
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                  <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 36, color: 'var(--orange)', lineHeight: 1 }}>{letter}</span>
+                  <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {terms.map(t => (
-                    <div key={t.term} className="border-l-2 border-gray-700 pl-4 hover:border-yellow-400 transition-colors">
-                      <div className="text-white font-bold text-sm mb-1">{t.term}</div>
-                      <p className="text-gray-400 text-sm leading-relaxed">{t.def}</p>
+                    <div
+                      key={t.term}
+                      style={{
+                        borderLeft: '5px solid var(--orange)',
+                        paddingLeft: 16,
+                        paddingTop: 4,
+                        paddingBottom: 4,
+                        background: 'linear-gradient(90deg, rgba(226,84,46,0.06), transparent 40%)',
+                      }}
+                    >
+                      <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.03em', marginBottom: 4 }}>{t.term}</div>
+                      <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5, opacity: 0.8 }}>{t.def}</p>
                     </div>
                   ))}
                 </div>

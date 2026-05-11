@@ -16,7 +16,7 @@ These colours are used everywhere positions are visualized: position cards, cour
 | P2       | `#e74c3c` | Passeur (setter)           | Red                                    |
 | P3       | `#2ecc71` | Central (middle, front)    | Green                                  |
 | P4       | `#3498db` | Aile (outside, front)      | Blue                                   |
-| P5       | `#facc15` | Aile (outside, back)       | Yellow — distinct from P4              |
+| P5       | `#f0c84c` | Aile (outside, back)       | Retro yellow (--yellow token) — harmonized with design system |
 | P6       | `#e67e22` | Central (middle, back)     | Orange                                 |
 | L        | `#ec4899` | Libéro                     | Magenta — distinct contrasting jersey  |
 

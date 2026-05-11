@@ -5,7 +5,6 @@ import { ROLE_COLORS } from '../constants/positions';
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6' | 'L';
 type TeamSize = 4 | 5 | 6;
 
-// Player position on the half-court diagram (% of container; 0 = net at top, 100 = baseline at bottom).
 type CourtPos = { x: number; y: number };
 
 type ConfigPosition = {
@@ -27,10 +26,6 @@ type Configuration = {
   hasLibero: boolean;
   positions: ConfigPosition[];
 };
-
-// ============================================================
-// 6v6 — la grille 3×2 reflète la disposition au service FIVB
-// ============================================================
 
 const POS_6v6_GRID: Record<ZoneId, CourtPos> = {
   P4: { x: 20, y: 22 },
@@ -162,11 +157,6 @@ const CONFIG_6V6_6_2: Configuration = {
   ],
 };
 
-// ============================================================
-// 5v5 — pas de règlement officiel ; 3 configurations courantes
-// ============================================================
-
-// Pentagone — 1 filet centre, 2 ailes avancées, 2 arrière
 const CONFIG_5V5_PENTAGON: Configuration = {
   id: 'pentagon',
   name: 'Pentagone (1-2-2)',
@@ -202,7 +192,6 @@ const CONFIG_5V5_PENTAGON: Configuration = {
   ],
 };
 
-// 3F/2B — passeur avant fixe, 3 attaquants devant
 const CONFIG_5V5_3F_2B: Configuration = {
   id: '3F-2B',
   name: '3 avant / 2 arrière',
@@ -238,7 +227,6 @@ const CONFIG_5V5_3F_2B: Configuration = {
   ],
 };
 
-// 2F/3B — passeur arrière pénétrant, défensif
 const CONFIG_5V5_2F_3B: Configuration = {
   id: '2F-3B',
   name: '2 avant / 3 arrière',
@@ -274,11 +262,6 @@ const CONFIG_5V5_2F_3B: Configuration = {
   ],
 };
 
-// ============================================================
-// 4v4 — règlement UNSS ; 3 configurations courantes
-// ============================================================
-
-// Losange (1-2-1) — la plus utilisée
 const CONFIG_4V4_LOSANGE: Configuration = {
   id: 'losange',
   name: 'Losange (1-2-1)',
@@ -309,12 +292,11 @@ const CONFIG_4V4_LOSANGE: Configuration = {
   ],
 };
 
-// Carré (2-2)
 const CONFIG_4V4_CARRE: Configuration = {
   id: 'carre',
   name: 'Carré (2-2)',
   shortName: 'Carré',
-  description: '2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Couverture équilibrée, permet le block à 2. Bien adapté quand on a 2 contreurs forts et 2 défenseurs forts. Mais arrières exposés sur les diagonales.',
+  description: '2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Couverture équilibrée, permet le block à 2. Bien adapté quand on a 2 contreurs forts et 2 défenseurs forts.',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche (filet)', role: 'Contreur / attaquant',
@@ -340,12 +322,11 @@ const CONFIG_4V4_CARRE: Configuration = {
   ],
 };
 
-// 3-1 passeur arrière pénétrant
 const CONFIG_4V4_3_1: Configuration = {
   id: '3-1',
   name: 'Passeur pénétrant (3-1)',
   shortName: '3-1',
-  description: 'Passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant — équivalent simplifié du 5-1. Exige une réception très propre car le passeur n\'est pas au filet.',
+  description: 'Passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant — équivalent simplifié du 5-1. Exige une réception très propre.',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche', role: 'Outside',
@@ -387,16 +368,12 @@ const TEAM_INTRO: Record<TeamSize, { tagline: string; rules: string }> = {
     rules: 'Plusieurs configurations possibles selon que le passeur est avant fixe ou arrière pénétrant. Libéro toléré en entraînement, pas en compétition.',
   },
   4: {
-    tagline: 'Format UNSS et loisir FFVB. Terrain 7×14 m ou 8×16 m, ligne d\'attaque à 3 m. Pas de libéro.',
+    tagline: "Format UNSS et loisir FFVB. Terrain 7×14 m ou 8×16 m, ligne d'attaque à 3 m. Pas de libéro.",
     rules: 'Au service : 3 avants alignés 4-3-2, P1 derrière. Après la frappe, déplacement libre selon la configuration choisie.',
   },
 };
 
 const LIBERO_HIGHLIGHTED_ZONES: ZoneId[] = ['P1', 'P5', 'P6'];
-
-// ============================================================
-// Components
-// ============================================================
 
 function CourtField({
   configuration,
@@ -414,17 +391,27 @@ function CourtField({
   };
 
   return (
-    <div className="relative w-full max-w-[480px] mx-auto" style={{ aspectRatio: '1 / 1.1' }}>
-      {/* Net at top */}
-      <div className="absolute top-0 left-0 right-0 border-t-2 border-yellow-400" />
-      {/* Court border */}
-      <div className="absolute inset-0 border-2 border-gray-700" />
-      {/* 3m attack line */}
-      <div
-        className="absolute left-0 right-0 border-t border-dashed border-gray-700"
-        style={{ top: '33%' }}
-      />
-      {/* Player chips */}
+    <div style={{ position: 'relative', width: '100%', maxWidth: 420, margin: '0 auto', aspectRatio: '1 / 1.1' }}>
+      {/* Court surface */}
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: 'var(--paper)',
+        border: '3px solid var(--ink)',
+        boxShadow: 'var(--shadow)',
+        backgroundImage: 'repeating-linear-gradient(0deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px), repeating-linear-gradient(90deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px)',
+      }} />
+      {/* Net */}
+      <div style={{
+        position: 'absolute', top: 0, left: -3, right: -3,
+        height: 6, background: 'var(--orange)',
+        borderTop: '3px solid var(--ink)', borderBottom: '3px solid var(--ink)',
+      }} />
+      {/* 3m line */}
+      <div style={{
+        position: 'absolute', left: 0, right: 0, top: '33%',
+        borderTop: '2px dashed rgba(26,24,18,0.35)',
+      }} />
+      {/* Players */}
       {configuration.positions.map(pos => {
         const active = isActive(pos.zoneId);
         const color = ROLE_COLORS[pos.zoneId];
@@ -432,26 +419,36 @@ function CourtField({
           <button
             key={pos.zoneId}
             onClick={() => onToggle(pos.zoneId)}
-            className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center transition-transform hover:scale-105 z-10"
-            style={{ left: `${pos.court.x}%`, top: `${pos.court.y}%` }}
+            style={{
+              position: 'absolute',
+              left: `${pos.court.x}%`,
+              top: `${pos.court.y}%`,
+              transform: 'translate(-50%, -50%)',
+              display: 'flex', flexDirection: 'column', alignItems: 'center',
+              background: 'none', border: 'none', cursor: 'pointer', zIndex: 2,
+              transition: 'transform 0.08s',
+            }}
             title={pos.name}
           >
-            <span
-              className={`w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-base md:text-lg font-bold border-2 transition-all ${active ? 'scale-110' : ''}`}
-              style={{
-                color: pos.zoneId === 'P5' ? '#000' : '#fff',
-                backgroundColor: color,
-                borderColor: active ? '#facc15' : 'rgba(0,0,0,0.4)',
-                boxShadow: active ? '0 0 0 3px rgba(250, 204, 21, 0.45)' : undefined,
-              }}
-            >
+            <span style={{
+              width: 44, height: 44,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: '"Bungee", sans-serif', fontSize: 13,
+              background: color,
+              border: active ? `3px solid var(--ink)` : '3px solid rgba(26,24,18,0.5)',
+              borderRadius: '50%',
+              color: pos.zoneId === 'P5' ? '#000' : '#fff',
+              boxShadow: active ? `0 0 0 3px var(--yellow), 2px 2px 0 var(--ink)` : '2px 2px 0 rgba(26,24,18,0.4)',
+              transform: active ? 'scale(1.15)' : 'scale(1)',
+              transition: 'transform 0.08s, box-shadow 0.08s',
+            }}>
               {pos.zoneId}
             </span>
-            <span
-              className="mt-1 text-[10px] uppercase tracking-wider whitespace-nowrap"
-              style={{ color: active ? color : '#9ca3af' }}
-            >
-              {pos.name}
+            <span style={{
+              marginTop: 4, fontSize: 9, letterSpacing: '0.06em', fontFamily: '"DM Mono", monospace',
+              color: active ? color : 'rgba(26,24,18,0.55)', whiteSpace: 'nowrap',
+            }}>
+              {pos.name.split(' ')[0]}
             </span>
           </button>
         );
@@ -459,10 +456,6 @@ function CourtField({
     </div>
   );
 }
-
-// ============================================================
-// Page
-// ============================================================
 
 export default function Positions() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -480,7 +473,6 @@ export default function Positions() {
   const [configId, setConfigId] = useState<string>(initialConfig);
   const [selectedId, setSelectedId] = useState<ZoneId | null>(null);
 
-  // Keep URL in sync so the link can be shared / bookmarked
   useEffect(() => {
     setSearchParams({ size: String(teamSize), config: configId }, { replace: true });
   }, [teamSize, configId, setSearchParams]);
@@ -491,7 +483,6 @@ export default function Positions() {
     [configurations, configId]
   );
 
-  // Inject the libero card on configurations that have one (6v6 5-1 / 6-2)
   const positions = useMemo(() => {
     if (!configuration.hasLibero) return configuration.positions;
     const libero = CONFIG_6V6_5_1.positions.find(p => p.zoneId === 'L')!;
@@ -517,120 +508,149 @@ export default function Positions() {
     setSelectedId(null);
   };
 
+  const btnBase: React.CSSProperties = {
+    padding: '7px 16px',
+    fontFamily: '"Bungee", sans-serif',
+    fontSize: 11,
+    letterSpacing: '0.06em',
+    border: '2.5px solid var(--ink)',
+    background: 'var(--cream)',
+    color: 'var(--ink)',
+    cursor: 'pointer',
+    transition: 'all 0.08s',
+  };
+
   return (
-    <div className="space-y-12">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Positions et rôles</h1>
-        <p className="text-gray-400">
-          Postes du volleyball indoor. Choisissez le format de jeu puis la configuration tactique pour adapter les rôles et la disposition.
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ DOCUMENTATION
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          POSITIONS & RÔLES
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7, maxWidth: 600 }}>
+          Postes du volleyball indoor. Choisissez le format de jeu puis la configuration tactique.
         </p>
       </div>
 
       {/* Team size selector */}
-      <div className="border-2 border-gray-700 p-4 space-y-3">
-        <div className="text-gray-500 text-xs uppercase tracking-widest">1. Format de jeu</div>
-        <div className="flex flex-wrap gap-2">
+      <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 20 }}>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', opacity: 0.6, marginBottom: 12 }}>
+          1. FORMAT DE JEU
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
           {([6, 5, 4] as const).map(size => (
             <button
               key={size}
               onClick={() => changeTeamSize(size)}
-              className={`px-4 py-2 text-xs uppercase tracking-wider border-2 transition-colors ${
-                teamSize === size
-                  ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400'
-                  : 'border-gray-700 text-gray-400 hover:border-gray-500'
-              }`}
+              style={{
+                ...btnBase,
+                fontSize: 16,
+                padding: '10px 24px',
+                ...(teamSize === size ? { background: 'var(--orange)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
+              }}
             >
               {size}v{size}
             </button>
           ))}
         </div>
-        <div className="text-gray-300 text-sm leading-relaxed">{TEAM_INTRO[teamSize].tagline}</div>
-        <div className="text-gray-500 text-xs leading-relaxed border-l-2 border-gray-700 pl-3">
+        <div style={{ fontSize: 14, marginBottom: 6 }}>{TEAM_INTRO[teamSize].tagline}</div>
+        <div style={{ borderLeft: '4px solid var(--teal)', paddingLeft: 12, fontSize: 13, opacity: 0.7 }}>
           {TEAM_INTRO[teamSize].rules}
         </div>
       </div>
 
       {/* Configuration selector */}
-      <div className="border-2 border-gray-700 p-4 space-y-3">
-        <div className="text-gray-500 text-xs uppercase tracking-widest">2. Configuration tactique</div>
-        <div className="flex flex-wrap gap-2">
+      <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 20 }}>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', opacity: 0.6, marginBottom: 12 }}>
+          2. CONFIGURATION TACTIQUE
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
           {configurations.map(c => (
             <button
               key={c.id}
               onClick={() => changeConfig(c.id)}
-              className={`px-4 py-2 text-xs uppercase tracking-wider border-2 transition-colors ${
-                configId === c.id
-                  ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400'
-                  : 'border-gray-700 text-gray-400 hover:border-gray-500'
-              }`}
+              style={{
+                ...btnBase,
+                ...(configId === c.id ? { background: 'var(--teal)', color: 'var(--cream)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
+              }}
             >
               {c.shortName}
             </button>
           ))}
         </div>
-        <div className="text-white font-bold text-sm">{configuration.name}</div>
-        <p className="text-gray-400 text-sm leading-relaxed">{configuration.description}</p>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, marginBottom: 8 }}>{configuration.name}</div>
+        <p style={{ margin: 0, fontSize: 14, opacity: 0.7, lineHeight: 1.5 }}>{configuration.description}</p>
       </div>
 
       {/* Court diagram */}
-      <div className="border-2 border-gray-700 p-6">
-        <div className="flex items-center justify-between mb-4">
-          <div className="text-gray-500 text-xs uppercase tracking-widest">
-            Demi-court — {configuration.name}
+      <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, letterSpacing: '0.1em', opacity: 0.6 }}>
+            DEMI-COURT — {configuration.name.toUpperCase()}
           </div>
           {selectedId && (
             <button
               onClick={() => setSelectedId(null)}
-              className="px-3 py-1 border border-yellow-400 text-yellow-400 text-xs uppercase tracking-wider hover:bg-yellow-400/10 transition-colors"
+              style={{ ...btnBase, fontSize: 9, padding: '5px 12px' }}
             >
-              Tout afficher
+              TOUT AFFICHER
             </button>
           )}
         </div>
 
-        <div className="grid md:grid-cols-[2fr_1fr] gap-6 items-start">
-          <div className="flex flex-col items-center w-full">
-            <div className="text-gray-500 text-xs uppercase tracking-widest mb-2">Filet</div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)', gap: 24, alignItems: 'start' }} className="md:grid-cols-[2fr_1fr] grid-cols-1">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+            <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.18em', opacity: 0.55, marginBottom: 8 }}>
+              ← FILET →
+            </div>
             <CourtField configuration={configuration} selectedId={selectedId} onToggle={toggle} />
-            <div className="flex w-full max-w-[480px] justify-between mt-2 text-gray-600 text-[10px] uppercase tracking-widest">
-              <span>Fond de court</span>
-              <span>{teamSize === 4 ? '7×14 m / 8×16 m' : '9 m × 9 m'}</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 420, marginTop: 8 }}>
+              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, opacity: 0.5 }}>FOND DE COURT</span>
+              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, opacity: 0.5 }}>
+                {teamSize === 4 ? '7×14 m / 8×16 m' : '9 m × 9 m'}
+              </span>
             </div>
           </div>
 
           {/* Side legend */}
-          <div className="flex flex-col gap-3 w-full">
-            <div className="border-2 border-gray-800 p-3 text-xs">
-              <div className="text-gray-500 uppercase tracking-widest mb-2">Repères</div>
-              <ul className="space-y-1 text-gray-400">
-                <li><span className="text-white font-bold">Filet</span> — ligne haute jaune</li>
-                <li><span className="text-white font-bold">3 m</span> — ligne pointillée d'attaque</li>
-                <li>Cliquez sur un joueur pour voir sa fiche</li>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', padding: '12px 14px' }}>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em', marginBottom: 10 }}>REPÈRES</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6, fontSize: 12 }}>
+                <li><strong>Filet</strong> — bande orange</li>
+                <li><strong>3 m</strong> — ligne pointillée</li>
+                <li style={{ opacity: 0.6, fontSize: 11 }}>Cliquez sur un joueur pour sa fiche</li>
               </ul>
             </div>
             {configuration.hasLibero ? (
               <button
                 onClick={() => toggle('L')}
-                className={`border-2 p-3 text-left transition-colors ${
-                  selectedId === 'L'
-                    ? 'border-yellow-400 bg-yellow-400/10'
-                    : 'border-gray-700 hover:border-gray-500'
-                }`}
+                style={{
+                  ...btnBase,
+                  padding: '12px 14px',
+                  textAlign: 'left',
+                  display: 'block',
+                  width: '100%',
+                  ...(selectedId === 'L' ? { background: ROLE_COLORS.L, color: '#fff' } : {}),
+                }}
               >
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="inline-flex items-center justify-center w-6 h-6 border-2 text-xs font-bold"
-                    style={{ borderColor: ROLE_COLORS.L, color: ROLE_COLORS.L }}>L</span>
-                  <span className={`text-xs uppercase tracking-wider font-bold ${
-                    selectedId === 'L' ? 'text-yellow-400' : 'text-white'
-                  }`}>Libéro</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                  <span style={{
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    width: 24, height: 24, borderRadius: '50%',
+                    border: `2.5px solid var(--ink)`, background: ROLE_COLORS.L,
+                    fontFamily: '"Bungee", sans-serif', fontSize: 10, color: '#fff',
+                  }}>L</span>
+                  <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>LIBÉRO</span>
                 </div>
-                <p className="text-gray-500 text-[10px] leading-relaxed">Hors rotation. Remplace les arrières (P1, P5, P6).</p>
+                <p style={{ margin: 0, fontSize: 11, opacity: 0.65 }}>Remplace les arrières (P1, P5, P6).</p>
               </button>
             ) : (
-              <div className="border-2 border-gray-800 p-3 text-gray-500 text-xs leading-relaxed">
-                <span className="text-white font-bold uppercase tracking-wider">Pas de libéro</span> dans cette configuration.
-                Tous les joueurs (sauf passeur dédié) doivent savoir réceptionner.
+              <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', padding: '12px 14px', fontSize: 12, opacity: 0.7 }}>
+                <strong>Pas de libéro</strong> dans cette configuration.
               </div>
             )}
           </div>
@@ -638,35 +658,67 @@ export default function Positions() {
       </div>
 
       {/* Position cards */}
-      <div className="space-y-6">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+          <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+          <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>★ FICHES POSTES</span>
+          <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+        </div>
+
         {visiblePositions.map(pos => {
           const roleColor = ROLE_COLORS[pos.zoneId];
           return (
-            <div key={pos.zoneId} className="border-2 border-gray-700 overflow-hidden">
-              <div className="px-6 py-4 flex items-center gap-4 border-l-4" style={{ borderLeftColor: roleColor }}>
-                <span className="text-4xl font-bold min-w-[2.5rem] text-center" style={{ color: roleColor }}>{pos.number}</span>
+            <div key={pos.zoneId} style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', overflow: 'hidden' }}>
+              {/* Card header */}
+              <div style={{
+                padding: '16px 22px',
+                borderBottom: '3px solid var(--ink)',
+                borderLeft: `6px solid ${roleColor}`,
+                background: 'var(--paper)',
+                display: 'flex', alignItems: 'center', gap: 16,
+              }}>
+                <span style={{
+                  width: 52, height: 52, flexShrink: 0,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontFamily: '"Bungee", sans-serif', fontSize: 15,
+                  background: roleColor,
+                  border: '3px solid var(--ink)',
+                  borderRadius: '50%',
+                  color: pos.zoneId === 'P5' ? '#1a1812' : '#fff',
+                  boxShadow: '3px 3px 0 var(--ink)',
+                }}>
+                  {pos.zoneId}
+                </span>
                 <div>
-                  <h2 className="text-white font-bold text-xl">{pos.name}</h2>
-                  <div className="text-gray-500 text-xs uppercase tracking-wider">{pos.role}</div>
+                  <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 18, margin: '0 0 4px 0', letterSpacing: '0.03em' }}>{pos.name}</h2>
+                  <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, letterSpacing: '0.08em', opacity: 0.6 }}>{pos.role}</div>
                 </div>
               </div>
-              <div className="px-6 pb-6 space-y-4">
-                <p className="text-gray-400 text-sm leading-relaxed">{pos.description}</p>
-                <div className="grid md:grid-cols-2 gap-4">
+              {/* Card body */}
+              <div style={{ padding: '18px 22px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, opacity: 0.8 }}>{pos.description}</p>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16 }}>
                   <div>
-                    <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Compétences principales</div>
-                    <div className="flex flex-wrap gap-2">
+                    <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--teal)', marginBottom: 10 }}>COMPÉTENCES</div>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                       {pos.skills.map(s => (
-                        <span key={s} className="px-2 py-1 border border-gray-600 text-gray-300 text-xs">{s}</span>
+                        <span key={s} style={{
+                          padding: '3px 10px',
+                          border: '2px solid var(--ink)',
+                          background: 'var(--paper)',
+                          fontFamily: '"DM Mono", monospace',
+                          fontSize: 11,
+                        }}>{s}</span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Caractéristiques</div>
-                    <ul className="space-y-1">
+                    <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--orange)', marginBottom: 10 }}>CARACTÉRISTIQUES</div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
                       {pos.traits.map(t => (
-                        <li key={t} className="text-xs text-gray-400 flex items-start gap-2">
-                          <span className="text-yellow-400">▸</span>{t}
+                        <li key={t} style={{ display: 'flex', gap: 8, alignItems: 'flex-start', fontSize: 13 }}>
+                          <span style={{ fontFamily: '"Bungee", sans-serif', color: roleColor, flexShrink: 0 }}>▸</span>
+                          {t}
                         </li>
                       ))}
                     </ul>
@@ -678,14 +730,16 @@ export default function Positions() {
         })}
       </div>
 
-      {/* Cross-link to defense guide */}
-      <div className="border-2 border-gray-800 bg-gray-900/50 p-6 space-y-3">
-        <div className="text-yellow-400 text-xs uppercase tracking-widest">Pour aller plus loin</div>
-        <p className="text-gray-400 text-sm">
+      {/* Cross-link */}
+      <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)', padding: 20 }}>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--teal)', marginBottom: 10 }}>
+          POUR ALLER PLUS LOIN
+        </div>
+        <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6 }}>
           Consultez le guide{' '}
           <Link
             to={`/guides/positionnement-defense?size=${teamSize}&config=${configuration.id}`}
-            className="text-yellow-400 hover:underline"
+            style={{ color: 'var(--orange)', fontWeight: 700 }}
           >
             Positionnement et défense
           </Link>{' '}
@@ -696,5 +750,4 @@ export default function Positions() {
   );
 }
 
-// Re-export configurations so the defense guide can share them
 export { CONFIGURATIONS, type TeamSize, type Configuration };

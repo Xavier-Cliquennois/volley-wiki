@@ -1,10 +1,14 @@
 import { useState } from 'react';
 
-const LEVEL_STYLE: Record<string, string> = {
-  'Débutant': 'text-green-400 border-green-400/50',
-  'Intermédiaire': 'text-yellow-400 border-yellow-400/50',
-  'Avancé': 'text-orange-400 border-orange-400/50',
-  'Compétition': 'text-red-400 border-red-400/50',
+const LEVEL_COLOR: Record<string, string> = {
+  'Débutant': 'var(--mint)',
+  'Intermédiaire': 'var(--yellow)',
+  'Avancé': 'var(--orange)',
+  'Compétition': 'var(--plum)',
+};
+
+const LEVEL_TEXT: Record<string, string> = {
+  'Compétition': '#fff',
 };
 
 function VideoLink({ title, url }: { title: string; url: string }) {
@@ -13,11 +17,29 @@ function VideoLink({ title, url }: { title: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors"
+      style={{
+        display: 'flex', alignItems: 'center', gap: 8,
+        padding: '8px 14px',
+        border: '2px solid var(--ink)',
+        background: 'var(--cream)',
+        fontFamily: '"DM Mono", monospace',
+        fontSize: 12,
+        color: 'var(--ink)',
+        textDecoration: 'none',
+        transition: 'all 0.08s',
+      }}
+      onMouseEnter={e => {
+        (e.currentTarget as HTMLElement).style.background = 'var(--teal)';
+        (e.currentTarget as HTMLElement).style.color = 'var(--cream)';
+      }}
+      onMouseLeave={e => {
+        (e.currentTarget as HTMLElement).style.background = 'var(--cream)';
+        (e.currentTarget as HTMLElement).style.color = 'var(--ink)';
+      }}
     >
-      <span className="text-yellow-400">▶</span>
-      <span className="flex-1">{title}</span>
-      <span className="text-gray-600 text-xs">YT</span>
+      <span style={{ color: 'var(--orange)', fontSize: 10 }}>▶</span>
+      <span style={{ flex: 1 }}>{title}</span>
+      <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, opacity: 0.5 }}>YT</span>
     </a>
   );
 }
@@ -198,91 +220,124 @@ const ZONES_TABLE: [string, string][] = [
   ['Zone 6 — arrière centre profond', 'Servir long contre les passeurs petits'],
 ];
 
+const S: Record<string, React.CSSProperties> = {
+  sectionTitle: {
+    fontFamily: '"Bungee", sans-serif', fontSize: 18, letterSpacing: '0.03em',
+    margin: '0 0 18px 0', paddingBottom: 10, borderBottom: '3px solid var(--ink)',
+  },
+  label: { fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', marginBottom: 10 },
+  labelTeal: { fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--teal)', marginBottom: 10 },
+  labelOrange: { fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--orange)', marginBottom: 10 },
+  card: { border: '3px solid var(--ink)', background: 'var(--cream)', boxShadow: 'var(--shadow)', padding: 20 },
+  alert: { border: '3px solid var(--ink)', background: 'var(--yellow)', boxShadow: 'var(--shadow-sm)', padding: '14px 20px' },
+};
+
 export default function GuideService() {
   const [activeId, setActiveId] = useState('cuillere');
   const current = SERVICE_TYPES.find(t => t.id === activeId)!;
 
   return (
-    <div className="space-y-10">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
 
       {/* Règle d'or */}
-      <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5">
-        <div className="text-yellow-400 text-xs uppercase tracking-wider mb-1">Règle d'or</div>
-        <p className="text-white font-bold text-sm">80% des erreurs au service viennent du lancer (toss). Stabiliser le lancer en priorité avant de chercher la puissance.</p>
+      <div style={S.alert}>
+        <div style={{ ...S.label, color: 'var(--ink)' }}>★ RÈGLE D'OR</div>
+        <p style={{ margin: 0, fontFamily: '"Bungee", sans-serif', fontSize: 14, lineHeight: 1.45 }}>
+          80% des erreurs au service viennent du lancer (toss). Stabiliser le lancer en priorité avant de chercher la puissance.
+        </p>
       </div>
 
-      {/* Selector */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Types de service</h2>
-        <div className="flex flex-wrap gap-1">
-          {SERVICE_TYPES.map(t => (
-            <button
-              key={t.id}
-              onClick={() => setActiveId(t.id)}
-              className={`px-3 py-2 text-xs uppercase tracking-wider border transition-colors ${
-                activeId === t.id
-                  ? 'border-yellow-400 text-yellow-400 bg-yellow-400/10'
-                  : 'border-gray-700 text-gray-400 hover:border-gray-600'
-              }`}
-            >
-              {t.name}
-            </button>
-          ))}
+      {/* Service type selector */}
+      <section style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <h2 style={S.sectionTitle}>TYPES DE SERVICE</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+          {SERVICE_TYPES.map(t => {
+            const on = activeId === t.id;
+            return (
+              <button
+                key={t.id}
+                onClick={() => setActiveId(t.id)}
+                style={{
+                  padding: '7px 16px',
+                  fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.06em',
+                  border: '2.5px solid var(--ink)',
+                  background: on ? LEVEL_COLOR[t.level] : 'var(--cream)',
+                  color: on && LEVEL_TEXT[t.level] ? LEVEL_TEXT[t.level] : 'var(--ink)',
+                  cursor: 'pointer',
+                  boxShadow: on ? 'var(--shadow-sm)' : 'none',
+                  transform: on ? 'translate(-1px,-1px)' : 'none',
+                  transition: 'all 0.08s',
+                }}
+              >
+                {t.name}
+              </button>
+            );
+          })}
         </div>
 
-        <span className={`inline-block text-xs border px-2 py-1 ${LEVEL_STYLE[current.level]}`}>{current.level}</span>
+        <span style={{
+          padding: '3px 12px',
+          border: '2.5px solid var(--ink)',
+          background: LEVEL_COLOR[current.level],
+          fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.1em',
+          display: 'inline-block',
+          color: LEVEL_TEXT[current.level] || 'var(--ink)',
+        }}>{current.level.toUpperCase()}</span>
 
-        <div className="border-2 border-gray-700 p-5 space-y-5">
-          <div>
-            <h3 className="text-white font-bold text-lg">{current.name}</h3>
-            <div className="text-gray-500 text-xs uppercase tracking-wider mt-1">{current.tagline}</div>
-          </div>
-          <p className="text-gray-400 text-sm leading-relaxed">{current.description}</p>
+        <div style={S.card}>
+          <h3 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 16, margin: '0 0 4px 0' }}>{current.name}</h3>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, letterSpacing: '0.08em', opacity: 0.6, marginBottom: 14 }}>{current.tagline}</div>
+          <p style={{ margin: '0 0 18px 0', fontSize: 14, lineHeight: 1.6, opacity: 0.8 }}>{current.description}</p>
 
-          <div>
-            <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Biomécanique clé</div>
-            <ul className="space-y-1">
+          <div style={{ marginBottom: 18 }}>
+            <div style={S.labelTeal}>BIOMÉCANIQUE CLÉ</div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
               {current.biomechanics.map((b, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                  <span className="text-yellow-400 mt-0.5">▸</span>{b}
+                <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5 }}>
+                  <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--teal)', flexShrink: 0 }}>▸</span>{b}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Étapes d'exécution (droitier)</div>
-            <ol className="space-y-2">
+          <div style={{ marginBottom: 18 }}>
+            <div style={{ ...S.label, opacity: 0.7 }}>ÉTAPES D'EXÉCUTION (DROITIER)</div>
+            <ol style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
               {current.steps.map((s, i) => (
-                <li key={i} className="flex gap-3 items-start text-sm">
-                  <span className="bg-yellow-400 text-black text-xs font-bold w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">{i + 1}</span>
-                  <span className="text-gray-300">{s}</span>
+                <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5 }}>
+                  <span style={{
+                    background: 'var(--orange)', color: 'var(--ink)',
+                    fontFamily: '"Bungee", sans-serif', fontSize: 11,
+                    width: 22, height: 22, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    flexShrink: 0,
+                  }}>{i + 1}</span>
+                  {s}
                 </li>
               ))}
             </ol>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
             <div>
-              <div className="text-red-400 text-xs uppercase tracking-wider mb-2">Erreurs fréquentes</div>
-              <ul className="space-y-3">
+              <div style={S.labelOrange}>✗ ERREURS FRÉQUENTES</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {current.errors.map(([label, fix], i) => (
-                  <li key={i} className="text-sm">
-                    <div className="flex items-start gap-2">
-                      <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
-                      <strong className="text-white">{label}</strong>
+                  <li key={i} style={{ fontSize: 13 }}>
+                    <div style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+                      <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--orange)', flexShrink: 0 }}>✗</span>
+                      <strong>{label}</strong>
                     </div>
-                    <div className="text-gray-500 text-xs pl-4 mt-0.5">{fix}</div>
+                    <div style={{ paddingLeft: 20, marginTop: 3, fontSize: 12, opacity: 0.65 }}>{fix}</div>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Exercices</div>
-              <ul className="space-y-1">
+              <div style={S.labelTeal}>★ EXERCICES</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 7 }}>
                 {current.exercises.map((e, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                    <span className="text-yellow-400 mt-0.5">▸</span>{e}
+                  <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5 }}>
+                    <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--teal)', flexShrink: 0 }}>▸</span>{e}
                   </li>
                 ))}
               </ul>
@@ -291,8 +346,8 @@ export default function GuideService() {
         </div>
 
         {current.videos.length > 0 && (
-          <div className="space-y-2">
-            <div className="text-gray-500 text-xs uppercase tracking-wider">Vidéos — {current.name}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div style={{ ...S.label, opacity: 0.6 }}>VIDÉOS — {current.name.toUpperCase()}</div>
             {current.videos.map((v, i) => (
               <VideoLink key={i} title={v.title} url={v.url} />
             ))}
@@ -301,35 +356,35 @@ export default function GuideService() {
       </section>
 
       {/* Zones */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Zones cibles et tactique</h2>
-        <div className="border-2 border-gray-700 overflow-hidden">
-          <table className="w-full text-sm">
-            <thead className="border-b border-gray-700">
-              <tr>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Zone adverse</th>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Effet tactique</th>
+      <section style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <h2 style={S.sectionTitle}>ZONES CIBLES & TACTIQUE</h2>
+        <div style={{ border: '3px solid var(--ink)', overflow: 'hidden' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+            <thead>
+              <tr style={{ background: 'var(--ink)', color: 'var(--cream)' }}>
+                <th style={{ padding: '10px 16px', textAlign: 'left', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em' }}>ZONE ADVERSE</th>
+                <th style={{ padding: '10px 16px', textAlign: 'left', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em' }}>EFFET TACTIQUE</th>
               </tr>
             </thead>
             <tbody>
               {ZONES_TABLE.map(([zone, effect], i) => (
-                <tr key={i} className={`${i < ZONES_TABLE.length - 1 ? 'border-b border-gray-800' : ''} hover:bg-gray-900/50`}>
-                  <td className="px-4 py-3 text-yellow-400 font-bold text-sm">{zone}</td>
-                  <td className="px-4 py-3 text-gray-400 text-sm">{effect}</td>
+                <tr key={i} style={{ borderBottom: i < ZONES_TABLE.length - 1 ? '2px solid var(--ink)' : 'none' }}>
+                  <td style={{ padding: '12px 16px', fontFamily: '"Bungee", sans-serif', fontSize: 12, color: 'var(--orange)' }}>{zone}</td>
+                  <td style={{ padding: '12px 16px', fontSize: 13.5, opacity: 0.8 }}>{effect}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div className="space-y-2">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {[
             ['Les seams', "Viser l'espace entre deux réceptionneurs est plus efficace que viser un joueur — la communication adverse est mise à l'épreuve."],
             ['Alterner court/long', "Empêche le passeur de savoir quand reculer. Le float court (zones 2-3-4) derrière la ligne d'attaque gêne particulièrement."],
             ['Métrique FBSO%', "Un service qui réduit le First Ball Side Out adverse de 70% à 45% sans faire d'ace est un service très efficace."],
           ].map(([title, text], i) => (
-            <div key={i} className="flex items-start gap-2 text-sm">
-              <span className="text-yellow-400 mt-0.5">▸</span>
-              <span><strong className="text-white">{title} : </strong><span className="text-gray-400">{text}</span></span>
+            <div key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5 }}>
+              <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--teal)', flexShrink: 0 }}>▸</span>
+              <span><strong>{title} : </strong><span style={{ opacity: 0.8 }}>{text}</span></span>
             </div>
           ))}
         </div>
@@ -337,17 +392,19 @@ export default function GuideService() {
 
       {/* Hierarchy */}
       <section>
-        <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5 space-y-3">
-          <div className="text-yellow-400 text-xs uppercase tracking-wider">Hiérarchie d'apprentissage</div>
-          <div className="grid md:grid-cols-4 gap-2">
+        <div style={{ border: '3px solid var(--ink)', background: 'var(--yellow)', boxShadow: 'var(--shadow)', padding: 20 }}>
+          <div style={{ ...S.label, marginBottom: 16 }}>★ HIÉRARCHIE D'APPRENTISSAGE</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, marginBottom: 14 }}>
             {SERVICE_TYPES.map(t => (
-              <div key={t.id} className="border border-gray-700 p-3 text-center text-xs">
-                <div className={`font-bold mb-1 ${LEVEL_STYLE[t.level].split(' ')[0]}`}>{t.name}</div>
-                <div className="text-gray-600">{t.level}</div>
+              <div key={t.id} style={{ border: '2px solid var(--ink)', background: 'var(--cream)', padding: '10px 12px', textAlign: 'center' }}>
+                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: LEVEL_COLOR[t.level] === 'var(--yellow)' ? 'var(--ink)' : LEVEL_COLOR[t.level], marginBottom: 4 }}>{t.name}</div>
+                <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, opacity: 0.6 }}>{t.level}</div>
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-sm">Maîtriser chaque niveau avant de passer au suivant. <strong className="text-white">La régularité prime sur la puissance.</strong></p>
+          <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5 }}>
+            Maîtriser chaque niveau avant de passer au suivant. <strong>La régularité prime sur la puissance.</strong>
+          </p>
         </div>
       </section>
 

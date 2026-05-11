@@ -3,37 +3,85 @@ import { GUIDES } from '../guides/data';
 
 export default function Guides() {
   return (
-    <div className="space-y-12">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Guides</h1>
-        <p className="text-gray-400">Guides techniques et tactiques détaillés pour progresser au volleyball.</p>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ DOCUMENTATION
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          GUIDES
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
+          Guides techniques et tactiques détaillés pour progresser au volleyball.
+        </p>
       </div>
 
-      <div className="space-y-4">
-        {GUIDES.map(guide => (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {GUIDES.map((guide, idx) => (
           <Link
             key={guide.slug}
             to={`/guides/${guide.slug}`}
-            className="border-2 border-gray-700 hover:border-yellow-400 p-6 flex flex-col md:flex-row md:items-start md:justify-between gap-4 transition-colors group block"
+            style={{
+              display: 'block',
+              border: '3px solid var(--ink)',
+              background: 'var(--cream)',
+              boxShadow: 'var(--shadow)',
+              padding: '20px 24px',
+              textDecoration: 'none',
+              color: 'var(--ink)',
+              transition: 'transform 0.08s, box-shadow 0.08s',
+              position: 'relative',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.transform = 'translate(-2px, -2px)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '7px 7px 0 var(--ink)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.transform = '';
+              (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow)';
+            }}
           >
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-400 text-xs uppercase tracking-wider">{guide.category}</span>
-                <span className="text-gray-700">·</span>
-                <span className="text-gray-600 text-xs">{guide.level}</span>
+            {/* Ticket number */}
+            <div style={{
+              position: 'absolute', top: -10, right: 14,
+              padding: '2px 10px',
+              background: 'var(--cream)',
+              border: '2.5px solid var(--ink)',
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 10,
+              letterSpacing: '0.1em',
+            }}>
+              N° {String(idx + 1).padStart(2, '0')}
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                <span style={{
+                  padding: '2px 10px',
+                  border: '2.5px solid var(--ink)',
+                  background: 'var(--teal)',
+                  fontFamily: '"Bungee", sans-serif',
+                  fontSize: 9,
+                  letterSpacing: '0.1em',
+                  color: 'var(--cream)',
+                }}>
+                  {guide.category.toUpperCase()}
+                </span>
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>{guide.level}</span>
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.4 }}>·</span>
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>{guide.readingTime}</span>
               </div>
-              <h2 className="text-white font-bold text-xl group-hover:text-yellow-400 transition-colors">
+
+              <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 18, margin: 0, letterSpacing: '0.03em' }}>
                 {guide.title}
               </h2>
-              <p className="text-gray-400 text-sm">{guide.subtitle}</p>
-              <p className="text-gray-600 text-sm">{guide.description}</p>
-            </div>
-            <div className="flex-shrink-0 flex items-center gap-4">
-              <span className="text-gray-600 text-xs border border-gray-700 px-2 py-1">{guide.readingTime}</span>
-              <span className="text-yellow-400 text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-                Lire →
-              </span>
+              <p style={{ margin: 0, fontSize: 14, opacity: 0.7, lineHeight: 1.5 }}>{guide.subtitle}</p>
+              <p style={{ margin: 0, fontSize: 13, opacity: 0.55, lineHeight: 1.4 }}>{guide.description}</p>
+
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em', color: 'var(--orange)', marginTop: 4 }}>
+                LIRE →
+              </div>
             </div>
           </Link>
         ))}

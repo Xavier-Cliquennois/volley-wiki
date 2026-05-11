@@ -17,24 +17,23 @@ const PHASE_ICONS: Record<PhaseKind, string> = {
   reception: '🤲',
 };
 
+const PHASE_COLORS: Record<PhaseKind, string> = {
+  attack: 'var(--orange)',
+  defense: 'var(--teal)',
+  reception: 'var(--pink)',
+};
+
 export default function Scenarios() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Hydrate state from ?id=... so the URL is shareable (deep link).
-  // We do this lazily via the initial useState value so it runs once on mount.
   const initialId = searchParams.get('id');
   const initialScenario = initialId ? getScenarioById(initialId) : undefined;
 
   const [teamSize, setTeamSize] = useState<TeamSize | null>(initialScenario?.config.teamSize ?? null);
   const [phase, setPhase] = useState<PhaseKind | null>(initialScenario?.config.phase ?? null);
   const [contextChoice, setContextChoice] = useState<string | null>(initialScenario?.id ?? null);
-  // When true, the filter section collapses into a compact bar and the
-  // selected scenario plays inline below.
   const [launched, setLaunched] = useState(!!initialScenario);
 
-  // Keep the URL in sync with the current launched scenario so it can be
-  // copied + shared. Use replaceState so we don't pollute history when the
-  // user swaps scenarios via the compact bar.
   const lastSyncedId = useRef<string | null>(initialId ?? null);
   useEffect(() => {
     const targetId = launched && contextChoice ? contextChoice : null;
@@ -66,15 +65,11 @@ export default function Scenarios() {
     if (contextChoice) setLaunched(true);
   };
 
-  // When the user changes a filter while a scenario is playing, we stay in
-  // "launched" mode and let them pick again from the compact bar — no need
-  // to walk back through the wizard.
   const handleTeamSizeChange = (n: TeamSize) => {
     if (n === teamSize) return;
     setTeamSize(n);
     setPhase(null);
     setContextChoice(null);
-    // Drop out of launched mode only if the wizard hasn't been launched yet.
   };
   const handlePhaseChange = (p: PhaseKind) => {
     if (p === phase) return;
@@ -83,40 +78,53 @@ export default function Scenarios() {
   };
   const handleContextChange = (id: string) => {
     setContextChoice(id);
-    // If launched=true, re-render with the new id swaps the player automatically.
-    // If launched=false, the user still needs to click "Lancer".
+  };
+
+  const btnBase: React.CSSProperties = {
+    border: '3px solid var(--ink)',
+    background: 'var(--cream)',
+    fontFamily: '"Bungee", sans-serif',
+    fontSize: 11,
+    letterSpacing: '0.06em',
+    cursor: 'pointer',
+    color: 'var(--ink)',
+    transition: 'all 0.08s',
   };
 
   return (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Tactique</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Scénarios de jeu</h1>
-        <p className="text-gray-400">
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ TACTIQUE
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          SCÉNARIOS DE JEU
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
           Visualisez des situations concrètes en 3D avec narration étape par étape.
         </p>
       </div>
 
-      {/* ────────────────────────────────────────────────────── */}
-      {/* Filter section — full when not launched, compact when launched */}
-      {/* ────────────────────────────────────────────────────── */}
+      {/* Wizard — full */}
       {!launched && (
-        <div className="border-2 border-gray-700 p-6 space-y-6">
+        <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>
           {/* Step 1: team size */}
-          <div className="space-y-3">
-            <div className="text-white text-sm font-bold uppercase tracking-wider">
-              1 · Combien de joueurs par équipe ?
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 24 }}>
+            <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
+              1 · COMBIEN DE JOUEURS PAR ÉQUIPE ?
             </div>
-            <div className="grid grid-cols-3 gap-2">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
               {([4, 5, 6] as TeamSize[]).map(n => (
                 <button
                   key={n}
                   onClick={() => handleTeamSizeChange(n)}
-                  className={`px-4 py-4 border-2 uppercase tracking-wider text-sm font-bold transition-colors ${
-                    teamSize === n
-                      ? 'border-yellow-400 bg-yellow-400 text-black'
-                      : 'border-gray-700 text-gray-300 hover:border-gray-500'
-                  }`}
+                  style={{
+                    ...btnBase,
+                    padding: '16px 8px',
+                    fontSize: 18,
+                    ...(teamSize === n ? { background: 'var(--orange)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
+                  }}
                 >
                   {n}v{n}
                 </button>
@@ -126,23 +134,24 @@ export default function Scenarios() {
 
           {/* Step 2: phase */}
           {teamSize !== null && (
-            <div className="space-y-3 border-t-2 border-gray-800 pt-6">
-              <div className="text-white text-sm font-bold uppercase tracking-wider">
-                2 · Quelle phase de jeu ?
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, marginBottom: 24 }}>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
+                2 · QUELLE PHASE DE JEU ?
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
                 {(['attack', 'defense', 'reception'] as PhaseKind[]).map(p => (
                   <button
                     key={p}
                     onClick={() => handlePhaseChange(p)}
-                    className={`px-3 py-4 border-2 uppercase tracking-wider text-xs font-bold transition-colors ${
-                      phase === p
-                        ? 'border-yellow-400 bg-yellow-400 text-black'
-                        : 'border-gray-700 text-gray-300 hover:border-gray-500'
-                    }`}
+                    style={{
+                      ...btnBase,
+                      padding: '16px 8px',
+                      display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
+                      ...(phase === p ? { background: PHASE_COLORS[p], boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
+                    }}
                   >
-                    <div className="text-2xl mb-1">{PHASE_ICONS[p]}</div>
-                    {PHASE_LABELS[p]}
+                    <span style={{ fontSize: 24 }}>{PHASE_ICONS[p]}</span>
+                    <span>{PHASE_LABELS[p].toUpperCase()}</span>
                   </button>
                 ))}
               </div>
@@ -151,29 +160,34 @@ export default function Scenarios() {
 
           {/* Step 3: context */}
           {teamSize !== null && phase !== null && (
-            <div className="space-y-3 border-t-2 border-gray-800 pt-6">
-              <div className="text-white text-sm font-bold uppercase tracking-wider">
-                3 · Quel contexte précis ?
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, marginBottom: 24 }}>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
+                3 · QUEL CONTEXTE PRÉCIS ?
               </div>
               {matchingScenarios.length > 0 ? (
-                <div className="space-y-2">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {matchingScenarios.map(s => (
                     <button
                       key={s.id}
                       onClick={() => handleContextChange(s.id)}
-                      className={`w-full text-left p-4 border-2 transition-colors ${
-                        contextChoice === s.id
-                          ? 'border-yellow-400 bg-yellow-400/10'
-                          : 'border-gray-700 hover:border-gray-500'
-                      }`}
+                      style={{
+                        ...btnBase,
+                        padding: '14px 16px',
+                        textAlign: 'left',
+                        width: '100%',
+                        display: 'block',
+                        ...(contextChoice === s.id
+                          ? { background: 'var(--yellow)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' }
+                          : {}),
+                      }}
                     >
-                      <div className="text-white font-bold text-sm mb-1">{s.title}</div>
-                      <div className="text-gray-500 text-xs">{s.config.contextLabel}</div>
+                      <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.03em', marginBottom: 4 }}>{s.title}</div>
+                      <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>{s.config.contextLabel}</div>
                     </button>
                   ))}
                 </div>
               ) : (
-                <div className="border-2 border-gray-800 p-4 text-gray-500 text-sm">
+                <div style={{ border: '3px dashed var(--ink)', padding: '16px', background: 'var(--paper)', fontFamily: '"DM Mono", monospace', fontSize: 12, opacity: 0.6 }}>
                   Aucun scénario disponible pour cette combinaison pour l'instant.
                 </div>
               )}
@@ -182,87 +196,92 @@ export default function Scenarios() {
 
           {/* Actions */}
           {(teamSize !== null || phase !== null || contextChoice !== null) && (
-            <div className="border-t-2 border-gray-800 pt-6 flex flex-wrap gap-2 justify-between items-center">
+            <div style={{ borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'space-between', alignItems: 'center' }}>
               <button
                 onClick={reset}
-                className="px-4 py-2 text-xs uppercase tracking-wider border-2 border-gray-700 text-gray-400 hover:border-gray-500"
+                style={{ ...btnBase, padding: '10px 18px', fontSize: 10 }}
               >
-                Réinitialiser
+                RÉINITIALISER
               </button>
               <button
                 onClick={handleLaunch}
                 disabled={!contextChoice}
-                className="px-6 py-3 text-xs uppercase tracking-wider border-2 border-yellow-600 bg-yellow-400 text-black font-bold hover:bg-yellow-300 disabled:opacity-30 disabled:cursor-not-allowed"
+                style={{
+                  ...btnBase,
+                  padding: '12px 24px',
+                  background: contextChoice ? 'var(--orange)' : 'var(--paper)',
+                  boxShadow: contextChoice ? 'var(--shadow)' : 'none',
+                  opacity: contextChoice ? 1 : 0.4,
+                  cursor: contextChoice ? 'pointer' : 'not-allowed',
+                  fontSize: 13,
+                }}
               >
-                Lancer le scénario →
+                LANCER LE SCÉNARIO →
               </button>
             </div>
           )}
         </div>
       )}
 
-      {/* ────────────────────────────────────────────────────── */}
-      {/* Compact filter bar — shown once the wizard has been launched */}
-      {/* Each pill is still clickable to switch to another value */}
-      {/* ────────────────────────────────────────────────────── */}
+      {/* Compact bar — shown once launched */}
       {launched && (
-        <div className="border-2 border-gray-700 p-3 space-y-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-gray-500 text-[10px] uppercase tracking-widest mr-1">Format</span>
+        <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>FORMAT</span>
             {([4, 5, 6] as TeamSize[]).map(n => (
               <button
                 key={n}
                 onClick={() => handleTeamSizeChange(n)}
-                className={`px-3 py-1 border-2 text-xs uppercase tracking-wider font-bold transition-colors ${
-                  teamSize === n
-                    ? 'border-yellow-400 bg-yellow-400 text-black'
-                    : 'border-gray-700 text-gray-400 hover:border-gray-500'
-                }`}
+                style={{
+                  ...btnBase,
+                  padding: '5px 12px',
+                  fontSize: 10,
+                  ...(teamSize === n ? { background: 'var(--orange)', boxShadow: '2px 2px 0 var(--ink)', transform: 'translate(-1px,-1px)' } : {}),
+                }}
               >
                 {n}v{n}
               </button>
             ))}
-
-            <span className="text-gray-500 text-[10px] uppercase tracking-widest ml-3 mr-1">Phase</span>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginLeft: 12, marginRight: 4 }}>PHASE</span>
             {(['attack', 'defense', 'reception'] as PhaseKind[]).map(p => (
               <button
                 key={p}
                 onClick={() => handlePhaseChange(p)}
-                className={`px-3 py-1 border-2 text-xs uppercase tracking-wider font-bold transition-colors ${
-                  phase === p
-                    ? 'border-yellow-400 bg-yellow-400 text-black'
-                    : 'border-gray-700 text-gray-400 hover:border-gray-500'
-                }`}
+                style={{
+                  ...btnBase,
+                  padding: '5px 12px',
+                  fontSize: 10,
+                  ...(phase === p ? { background: PHASE_COLORS[p], boxShadow: '2px 2px 0 var(--ink)', transform: 'translate(-1px,-1px)' } : {}),
+                }}
               >
-                {PHASE_ICONS[p]} {PHASE_LABELS[p]}
+                {PHASE_ICONS[p]} {PHASE_LABELS[p].toUpperCase()}
               </button>
             ))}
-
             <button
               onClick={reset}
-              className="ml-auto px-3 py-1 border-2 border-gray-700 text-gray-400 text-[10px] uppercase tracking-wider hover:border-gray-500"
+              style={{ ...btnBase, padding: '5px 12px', fontSize: 9, marginLeft: 'auto' }}
               title="Tout réinitialiser"
             >
-              Réinitialiser
+              RÉINITIALISER
             </button>
           </div>
 
-          {/* Scenario picker — list of scenarios in the current size+phase combo */}
           {matchingScenarios.length > 0 && (
-            <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-800">
-              <span className="text-gray-500 text-[10px] uppercase tracking-widest mt-1 mr-1">Scénario</span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingTop: 8, borderTop: '2px dashed rgba(26,24,18,0.18)', alignItems: 'center' }}>
+              <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>SCÉNARIO</span>
               {matchingScenarios.map(s => (
                 <button
                   key={s.id}
                   onClick={() => handleContextChange(s.id)}
-                  className={`px-3 py-1 border-2 text-xs uppercase tracking-wider transition-colors ${
-                    contextChoice === s.id
-                      ? 'border-yellow-400 bg-yellow-400/10 text-yellow-400 font-bold'
-                      : 'border-gray-700 text-gray-400 hover:border-gray-500'
-                  }`}
+                  style={{
+                    ...btnBase,
+                    padding: '5px 12px',
+                    fontSize: 9,
+                    ...(contextChoice === s.id ? { background: 'var(--yellow)', boxShadow: '2px 2px 0 var(--ink)', transform: 'translate(-1px,-1px)' } : {}),
+                  }}
                   title={s.config.contextLabel}
                 >
-                  {s.title.replace(/^(\d+v\d+\s*·\s*)/, '').replace(/^(Attaque|Défense|Réception|Couverture)\s*·\s*/, '')}
+                  {s.title.replace(/^(\d+v\d+\s*·\s*)/, '').replace(/^(Attaque|Défense|Réception|Couverture)\s*·\s*/, '').toUpperCase()}
                 </button>
               ))}
             </div>
@@ -270,33 +289,33 @@ export default function Scenarios() {
         </div>
       )}
 
-      {/* Placeholder when launched but no scenario picked (e.g. after a phase change) */}
+      {/* Placeholder */}
       {launched && !launchedScenario && (
-        <div className="border-2 border-dashed border-gray-700 p-12 text-center">
-          <div className="text-gray-500 text-sm uppercase tracking-wider mb-2">Choisissez un scénario</div>
-          <p className="text-gray-600 text-xs">
+        <div style={{ border: '3px dashed var(--ink)', padding: '48px 20px', textAlign: 'center', background: 'var(--paper)' }}>
+          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, opacity: 0.6, marginBottom: 8 }}>CHOISISSEZ UN SCÉNARIO</div>
+          <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, opacity: 0.5 }}>
             {!teamSize || !phase
-              ? 'Sélectionnez un format et une phase au-dessus pour voir les scénarios disponibles.'
+              ? 'Sélectionnez un format et une phase au-dessus.'
               : matchingScenarios.length === 0
                 ? 'Aucun scénario disponible pour cette combinaison.'
-                : 'Cliquez sur un scénario dans la liste au-dessus pour le lancer.'}
+                : 'Cliquez sur un scénario dans la liste au-dessus.'}
           </p>
         </div>
       )}
 
-      {/* ────────────────────────────────────────────────────── */}
-      {/* Inline scenario player */}
-      {/* ────────────────────────────────────────────────────── */}
+      {/* Player */}
       {launched && launchedScenario && (
-        <div className="space-y-4">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">{launchedScenario.title}</h2>
-            <p className="text-gray-400 text-sm">{launchedScenario.shortDescription}</p>
+            <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 24, margin: '0 0 6px 0', letterSpacing: '0.03em' }}>
+              {launchedScenario.title}
+            </h2>
+            <p style={{ margin: 0, fontSize: 14, opacity: 0.7 }}>{launchedScenario.shortDescription}</p>
           </div>
           <Suspense
             fallback={
-              <div className="border-2 border-gray-700 bg-gray-900 h-96 flex items-center justify-center">
-                <span className="text-gray-500 text-sm uppercase tracking-wider">Chargement du scénario…</span>
+              <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', height: 360, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.1em', opacity: 0.5 }}>CHARGEMENT…</span>
               </div>
             }
           >

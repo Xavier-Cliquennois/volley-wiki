@@ -14,7 +14,7 @@ export const CourtZones: React.FC = () => (
   <group>
     {ZONES.map(({ number, x, z, w, d }) => {
       const roleKey = ZONE_NUM_TO_ROLE[number];
-      const color = roleKey ? ROLE_COLORS[roleKey] : '#facc15';
+      const color = roleKey ? ROLE_COLORS[roleKey] : '#f0c84c';
       return (
         <group key={number}>
           <mesh rotation={[-Math.PI / 2, 0, 0]} position={[x, 0.018, z]}>

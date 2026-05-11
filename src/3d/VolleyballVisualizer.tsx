@@ -70,13 +70,7 @@ const Scene: React.FC<SceneProps> = ({ playerRefs, controllerRef, cameraRef, onU
   return (
     <>
       <CameraSetup cameraRef={cameraRef} />
-      <OrbitControls
-        enablePan={false}
-        minDistance={4}
-        maxDistance={20}
-        target={[0, 1, 0]}
-        maxPolarAngle={Math.PI / 2 - 0.05}
-      />
+      <OrbitControls enablePan={false} minDistance={4} maxDistance={20} target={[0, 1, 0]} maxPolarAngle={Math.PI / 2 - 0.05} />
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
@@ -97,6 +91,13 @@ const Scene: React.FC<SceneProps> = ({ playerRefs, controllerRef, cameraRef, onU
 type VolleyballVisualizerProps = {
   autoplay?: boolean;
 };
+
+const btnBase: React.CSSProperties = {
+  fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.1em',
+  border: '1.5px solid var(--ink)', background: 'var(--cream)', color: 'var(--ink)',
+  cursor: 'pointer', padding: '4px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+};
+const btnActiveStyle: React.CSSProperties = { ...btnBase, background: 'var(--orange)', color: '#fff', borderColor: 'var(--orange)' };
 
 export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisualizerProps) {
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
@@ -168,16 +169,16 @@ export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisu
   };
 
   return (
-    <div className="border-2 border-gray-700 bg-gray-900 font-mono">
+    <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow)', fontFamily: '"DM Mono", monospace' }}>
       {/* Header */}
-      <div className="border-b-2 border-gray-700 px-4 py-2 flex items-center justify-between">
-        <span className="text-yellow-400 text-xs uppercase tracking-wider">Technique: Réception — Passe — Attaque</span>
-        <div className="flex gap-1">
+      <div style={{ borderBottom: '2px solid var(--ink)', padding: '8px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--cream)', flexWrap: 'wrap', gap: 8 }}>
+        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--orange)' }}>Technique: Réception — Passe — Attaque</span>
+        <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
           {(Object.keys(CAMERA_PRESETS) as CameraPresetKey[]).map(key => (
             <button
               key={key}
               onClick={() => handlePresetChange(key)}
-              className={`px-2 py-1 text-xs border ${currentCameraPreset === key ? 'bg-yellow-400 text-black border-yellow-400' : 'text-gray-400 border-gray-600 hover:border-gray-400'}`}
+              style={currentCameraPreset === key ? btnActiveStyle : btnBase}
             >
               {CAMERA_PRESETS[key].label}
             </button>
@@ -186,7 +187,7 @@ export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisu
       </div>
 
       {/* 3D Canvas */}
-      <div className="relative" style={{ height: 360 }}>
+      <div style={{ position: 'relative', height: 360 }}>
         <Canvas shadows="percentage" camera={{ position: [0, 5, 10], fov: 50 }}>
           <Scene
             playerRefs={playerRefs}
@@ -200,59 +201,69 @@ export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisu
         {/* Play overlay */}
         {!hasStarted && (
           <div
-            className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center cursor-pointer"
+            style={{
+              position: 'absolute', inset: 0,
+              background: 'rgba(26,24,18,0.72)',
+              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+              cursor: 'pointer',
+            }}
             onClick={handleStart}
           >
-            <div className="w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center border-4 border-yellow-600 mb-3">
-              <span className="text-4xl ml-1">▶</span>
+            <div style={{
+              width: 72, height: 72, background: 'var(--orange)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              border: '2.5px solid var(--ink)', boxShadow: 'var(--shadow)', marginBottom: 10,
+            }}>
+              <span style={{ fontSize: 36, marginLeft: 4, color: '#fff' }}>▶</span>
             </div>
-            <span className="text-white text-xs">Cliquer pour lancer</span>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', color: 'var(--cream)', textTransform: 'uppercase' }}>Cliquer pour lancer</span>
           </div>
         )}
 
         {/* Description overlay */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/80 px-4 py-2 text-center">
-          <span className="text-white text-xs">{currentDescription}</span>
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'rgba(26,24,18,0.78)', padding: '6px 14px', textAlign: 'center' }}>
+          <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, color: 'var(--cream)' }}>{currentDescription}</span>
         </div>
       </div>
 
+      {/* Progress bar */}
+      <div style={{ height: 6, background: 'var(--paper)', borderTop: '1.5px solid var(--ink)' }}>
+        <div style={{ height: '100%', background: 'var(--orange)', transition: 'width 0.1s', width: `${progress * 100}%` }} />
+      </div>
+
       {/* Controls */}
-      <div className="border-t-2 border-gray-700 px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <button onClick={toggleSpeed} className="px-3 py-1 text-xs border border-gray-600 text-gray-400 hover:border-gray-400 min-w-[44px]">
-            {speed}x
-          </button>
+      <div style={{ borderTop: '2px solid var(--ink)', padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--cream)', flexWrap: 'wrap', gap: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <button onClick={toggleSpeed} style={{ ...btnBase, minWidth: 42 }}>{speed}x</button>
           <button
             onClick={() => setShowTrail(t => !t)}
-            className={`px-3 py-1 text-xs border ${showTrail ? 'border-yellow-400 text-yellow-400' : 'border-gray-600 text-gray-400 hover:border-gray-400'}`}
+            style={showTrail ? btnActiveStyle : btnBase}
           >
             Trail
           </button>
         </div>
 
-        <div className="flex items-center gap-2">
-          <button onClick={stepBackward} className="w-9 h-9 border border-gray-600 text-gray-400 hover:border-gray-400 flex items-center justify-center">⏮</button>
-          <button onClick={togglePlay} className="w-12 h-12 bg-yellow-400 border-2 border-yellow-600 text-black flex items-center justify-center text-lg font-bold">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <button onClick={stepBackward} style={{ ...btnBase, width: 36, height: 36 }}>⏮</button>
+          <button
+            onClick={togglePlay}
+            style={{ width: 48, height: 48, background: 'var(--orange)', border: '2.5px solid var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, cursor: 'pointer', boxShadow: 'var(--shadow-sm)' }}
+          >
             {isPlaying ? '⏸' : '▶'}
           </button>
-          <button onClick={stepForward} className="w-9 h-9 border border-gray-600 text-gray-400 hover:border-gray-400 flex items-center justify-center">⏭</button>
-          <button onClick={restart} className="w-9 h-9 border border-gray-600 text-gray-400 hover:border-gray-400 flex items-center justify-center">↺</button>
+          <button onClick={stepForward} style={{ ...btnBase, width: 36, height: 36 }}>⏭</button>
+          <button onClick={restart} style={{ ...btnBase, width: 36, height: 36 }}>↺</button>
         </div>
 
         {/* Player legend */}
-        <div className="flex items-center gap-3">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           {PLAYERS_CONFIG.map(p => (
-            <div key={p.id} className="flex items-center gap-1">
-              <div className="w-3 h-3 border border-gray-500" style={{ backgroundColor: p.color }} />
-              <span className="text-gray-400 text-xs">{p.label}</span>
+            <div key={p.id} style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+              <div style={{ width: 12, height: 12, border: '1.5px solid var(--ink)', backgroundColor: p.color }} />
+              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.75 }}>{p.label}</span>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Progress bar */}
-      <div className="h-2 bg-gray-800 border-t-2 border-gray-700">
-        <div className="h-full bg-yellow-400 transition-all" style={{ width: `${progress * 100}%` }} />
       </div>
     </div>
   );
