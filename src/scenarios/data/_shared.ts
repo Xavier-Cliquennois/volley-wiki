@@ -1,15 +1,29 @@
 import type { ScenarioPlayerConfig } from '../types';
+import { ROLE_COLORS } from '../../constants/positions';
+import type { RoleColorKey } from '../../constants/positions';
 
-// Color palette aligned with role conventions across all scenarios.
-// Must match ROLE_COLORS in src/constants/positions.ts and CLAUDE.md.
+// Color palette unified with ROLE_COLORS — single source of truth for all scenarios.
+// outside/middle = front-row zones (P4/P3); outside_back/middle_back = back-row zones (P5/P6).
 export const COLORS = {
-  setter: '#e74c3c',
-  opposite: '#9b59b6',
-  middle: '#2ecc71',
-  outside: '#3498db',
-  libero: '#ec4899',
-  opponent: '#7f8c8d',
+  setter:       ROLE_COLORS.P2,  // red   — P2 zone
+  opposite:     ROLE_COLORS.P1,  // purple — P1 zone
+  middle:       ROLE_COLORS.P3,  // green  — P3 zone (front)
+  outside:      ROLE_COLORS.P4,  // blue   — P4 zone (front)
+  outside_back: ROLE_COLORS.P5,  // yellow — P5 zone (back wing)
+  middle_back:  ROLE_COLORS.P6,  // orange — P6 zone (back middle)
+  libero:       ROLE_COLORS.L,   // magenta — libero jersey
+  opponent:     '#7f8c8d',       // grey   — all opponents
 } as const;
+
+// Resolve display color for a player.
+// Priority: opponents → grey; libero jersey → magenta; label zone "(P1-P6)" → ROLE_COLORS; fallback → explicit color.
+export function resolvePlayerColor(player: ScenarioPlayerConfig): string {
+  if (player.role === 'opponent') return COLORS.opponent;
+  if (player.role === 'libero' && /^Lib[eé]ro/.test(player.label)) return ROLE_COLORS.L;
+  const m = player.label.match(/\(P([1-6])\)/);
+  if (m) return ROLE_COLORS[`P${m[1]}` as RoleColorKey];
+  return player.color;
+}
 
 // Standard FIVB position coordinates on our side of the court
 // X: lateral (negative = left when facing the net)

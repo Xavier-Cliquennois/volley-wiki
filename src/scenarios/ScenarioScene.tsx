@@ -11,7 +11,7 @@ import { ImpactEffect } from '../3d/ImpactEffect';
 import type { ImpactEffectRef } from '../3d/ImpactEffect';
 import { useTactic } from '../3d/useTactic';
 import type { Scenario, ScenarioPlayerConfig, TimelineAction } from './types';
-import { COLORS } from './data/_shared';
+import { COLORS, resolvePlayerColor } from './data/_shared';
 
 // ──────────────────────────────────────────────────────────────────────────
 // Helpers — injected automatically so every scenario looks consistent
@@ -244,7 +244,7 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
           <Player
             key={player.id}
             ref={el => { playerRefs.current[player.id] = el; }}
-            color={player.color}
+            color={resolvePlayerColor(player)}
             position={player.position}
             facingRotation={facingRotation}
           />

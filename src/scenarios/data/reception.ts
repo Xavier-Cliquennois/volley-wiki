@@ -284,7 +284,7 @@ const RECEPTION_P4: Scenario = {
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [-1.0, 0, 0.6] },
     { id: 'R4b', label: 'R4* (P2)', role: 'outside', color: COLORS.outside, position: [3.0, 0, 0.6] },
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 4] },
-    { id: 'R4a', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
+    { id: 'R4a', label: 'R4 (P6)', role: 'outside', color: COLORS.middle_back, position: [0, 0, 5] },
     { id: 'Op', label: 'Pointu (P1)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 4] },
   ],
   initialBallPosition: [0, 2.8, -9],

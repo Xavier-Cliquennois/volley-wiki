@@ -5,6 +5,7 @@ import { ScenarioScene } from './ScenarioScene';
 import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
 import type { Scenario } from './types';
+import { resolvePlayerColor } from './data/_shared';
 
 type ScenarioPlayerProps = {
   scenario: Scenario;
@@ -377,11 +378,11 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
             </div>
           </div>
 
-          {/* Player legend */}
+          {/* Player legend — opponents excluded (all grey, no added value) */}
           <div style={{ borderTop: '2px solid var(--ink)', padding: '6px 12px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, background: 'var(--cream)' }}>
-            {scenario.players.map(p => (
+            {scenario.players.filter(p => p.role !== 'opponent').map(p => (
               <div key={p.id} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                <div style={{ width: 12, height: 12, border: '1.5px solid var(--ink)', backgroundColor: p.color }} />
+                <div style={{ width: 12, height: 12, border: '1.5px solid var(--ink)', backgroundColor: resolvePlayerColor(p) }} />
                 <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.75 }}>{p.label}</span>
               </div>
             ))}

@@ -19,7 +19,7 @@ const ATTACK_5_1_P1: Scenario = {
     // Le passeur est en P1 arrière, prêt à pénétrer.
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
     { id: 'R4a', label: 'R4 (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 4] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [1, 0, 5] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.middle_back, position: [1, 0, 5] },
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'Op', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3.2, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 4] },
@@ -88,7 +88,9 @@ const ATTACK_5_1_P1: Scenario = {
     { type: 'player_move', time: 3.0, id: 'OPP_BR', to: [-1.0, 0, -0.4], duration: 0.3 },
     // L'adversaire passe en défense après le block-out
     { type: 'player_move', time: 2.7, id: 'OPP_S', to: [3, 0, -1.5], duration: 0.5 },
-    { type: 'player_move', time: 2.7, id: 'OPP_BC', to: [1, 0, -5], duration: 0.4 },
+    // Libéro dives toward ball landing [2, 0, -6] — arrives 0.1 s late (ball at t=3.2)
+    { type: 'player_move', time: 2.7, id: 'OPP_BC', to: [2, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.1, id: 'OPP_BC', pose: 'BUMP', duration: 0.2 },
     { type: 'player_move', time: 2.7, id: 'OPP_BL', to: [-2.5, 0, -1.5], duration: 0.5 },
 
     // ── Phase 6 : RESET — retour à la position de base ──
@@ -143,13 +145,14 @@ const ATTACK_5_1_P2: Scenario = {
   },
   defaultCamera: 'DEFAULT',
   players: [
-    { id: 'R4a', label: 'R4 (P5)', role: 'outside', color: COLORS.outside, position: [-3, 0, 4] },
+    { id: 'R4a', label: 'R4 (P5)', role: 'outside', color: COLORS.outside_back, position: [-3, 0, 4] },
     { id: 'L', label: 'Libéro (P6)', role: 'libero', color: COLORS.libero, position: [0, 0, 5] },
     { id: 'R4b', label: 'R4 (P1)', role: 'outside', color: COLORS.outside, position: [3, 0, 4] },
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'Pt', label: 'Pointu (P4)', role: 'opposite', color: COLORS.opposite, position: [-3, 0, 0.6] },
     { id: 'P', label: 'Passeur (P2)', role: 'setter', color: COLORS.setter, position: [3, 0, 0.6] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -167,6 +170,12 @@ const ATTACK_5_1_P2: Scenario = {
     { type: 'player_pose', time: 2.5, id: 'Pt', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.7, id: 'Pt', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.7, from: [-3.2, 3.4, 0.6], to: [2.5, 0, -7], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.7, id: 'OPP_D1', to: [2.5, 0, -6.5], duration: 0.4 },
+    { type: 'player_pose', time: 3.1, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Service adverse', description: 'Service en zone 5-6. Le libéro annonce et se prépare à la manchette.' },
@@ -210,6 +219,7 @@ const ATTACK_5_1_P3: Scenario = {
     { id: 'P', label: 'Passeur (P3)', role: 'setter', color: COLORS.setter, position: [0, 0, 0.6] },
     { id: 'C', label: 'Central (P2)', role: 'middle', color: COLORS.middle, position: [3, 0, 0.6] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. diag. adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -4.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -227,9 +237,15 @@ const ATTACK_5_1_P3: Scenario = {
     { type: 'ball_move', time: 1.9, from: [1.0, 1.9, 0.8], to: [0, 3.2, 3.8], duration: 0.8, arc: 4.0 },
     { type: 'player_move', time: 2.0, id: 'Pt', to: [0, 0, 4.5], duration: 0.4 },
     { type: 'player_move', time: 2.4, id: 'Pt', to: [0, 1.5, 4.0], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-1.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [1.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'Pt', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.7, id: 'Pt', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.7, from: [0, 3.2, 3.8], to: [0, 0, -7], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.7, id: 'OPP_D1', to: [0, 0, -6.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.1, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Service côté droit', description: 'Service vers la zone 1. Le R4 en P1 prend la réception.' },
@@ -267,12 +283,13 @@ const ATTACK_5_1_P4: Scenario = {
   defaultCamera: 'DEFAULT',
   players: [
     { id: 'L', label: 'Libéro (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 4] },
-    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.outside, position: [0, 0, 5] },
+    { id: 'R4b', label: 'R4 (P6)', role: 'outside', color: COLORS.middle_back, position: [0, 0, 5] },
     { id: 'Pt', label: 'Pointu (P1)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 4] },
     { id: 'P', label: 'Passeur (P4)', role: 'setter', color: COLORS.setter, position: [-3, 0, 0.6] },
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'R4a', label: 'R4 (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 0.6] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. diag. adv.', role: 'opponent', color: COLORS.opponent, position: [3.0, 0, -3.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -295,9 +312,15 @@ const ATTACK_5_1_P4: Scenario = {
     { type: 'ball_move', time: 1.9, from: [1.5, 1.9, 0.8], to: [-3.3, 3.5, 0.6], duration: 0.8, arc: 4.5 },
     { type: 'player_move', time: 2.0, id: 'R4a', to: [-3.3, 0, 1.2], duration: 0.4 },
     { type: 'player_move', time: 2.4, id: 'R4a', to: [-3.3, 1.9, 0.6], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4a', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.7, id: 'R4a', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.7, from: [-3.3, 3.5, 0.6], to: [2, 0, -6], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.7, id: 'OPP_D1', to: [2, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.1, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration P4', description: 'Passeur en zone 4, R4* en zone 2 — placement croisé pour libérer le R4 en réception en zone 6.' },
@@ -341,6 +364,7 @@ const ATTACK_5_1_P5: Scenario = {
     { id: 'R4a', label: 'R4 (P3)', role: 'outside', color: COLORS.outside, position: [0, 0, 0.6] },
     { id: 'Pt', label: 'Pointu (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.6] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. diag. adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -4.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -363,6 +387,12 @@ const ATTACK_5_1_P5: Scenario = {
     { type: 'player_pose', time: 2.6, id: 'Pt', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.8, id: 'Pt', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.8, from: [3.3, 3.5, 0.6], to: [-2.5, 0, -6], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.5, id: 'OPP_BL', to: [1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.5, id: 'OPP_BR', to: [2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.5, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.5, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.8, id: 'OPP_D1', to: [-2.5, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.2, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Service côté droit', description: 'Le service vise la zone 1 où le R4 prend la réception.' },
@@ -406,6 +436,7 @@ const ATTACK_5_1_P6: Scenario = {
     { id: 'Pt', label: 'Pointu (P3)', role: 'opposite', color: COLORS.opposite, position: [0, 0, 0.6] },
     { id: 'C', label: 'Central (P2)', role: 'middle', color: COLORS.middle, position: [3, 0, 0.6] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. centrale adv.', role: 'opponent', color: COLORS.opponent, position: [0, 0, -3.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -428,6 +459,13 @@ const ATTACK_5_1_P6: Scenario = {
     { type: 'player_pose', time: 2.0, id: 'C', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.1, from: [0, 2.8, 0.4], to: [0, 0, -5], duration: 0.4, arc: false },
     { type: 'player_move', time: 2.5, id: 'C', to: [0, 0, 0.5], duration: 0.3 },
+    // Rapide: blockers react too late — shows why tempo 1 is so effective
+    { type: 'player_move', time: 2.0, id: 'OPP_BL', to: [-1.5, 1.0, -0.5], duration: 0.15 },
+    { type: 'player_pose', time: 2.0, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.0, id: 'OPP_BR', to: [1.5, 1.0, -0.5], duration: 0.15 },
+    { type: 'player_pose', time: 2.0, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.1, id: 'OPP_D1', to: [0, 0, -4.8], duration: 0.35 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Service côté gauche', description: 'Service vers la zone 5. Le libéro réceptionne dans son couloir.' },
@@ -468,9 +506,10 @@ const ATTACK_4_2: Scenario = {
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'P1', label: 'Passeur 1 (P2)', role: 'setter', color: COLORS.setter, position: [3, 0, 0.6] },
     { id: 'P2', label: 'Passeur 2 (P5)', role: 'setter', color: COLORS.setter, position: [-3, 0, 4] },
-    { id: 'C2', label: 'Central 2 (P6)', role: 'middle', color: COLORS.middle, position: [0, 0, 5] },
+    { id: 'C2', label: 'Central 2 (P6)', role: 'middle', color: COLORS.middle_back, position: [0, 0, 5] },
     { id: 'R4b', label: 'R4 (P1)', role: 'outside', color: COLORS.outside, position: [3, 0, 4] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [3.0, 0, -3.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -488,6 +527,12 @@ const ATTACK_4_2: Scenario = {
     { type: 'player_pose', time: 2.5, id: 'R4a', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.7, id: 'R4a', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.7, from: [-3.2, 3.5, 0.6], to: [2, 0, -6], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.7, id: 'OPP_D1', to: [2, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.1, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration 4-2', description: '2 passeurs en opposition diagonale (P2 et P5). Le passeur en avant (P1) fait toujours la 2ᵉ touche.' },
@@ -527,9 +572,10 @@ const ATTACK_6_2: Scenario = {
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'PA', label: 'Passeur-Att (P2)', role: 'opposite', color: COLORS.opposite, position: [3, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 4] },
-    { id: 'C2', label: 'Central (P6)', role: 'middle', color: COLORS.middle, position: [0, 0, 5] },
-    { id: 'R4b', label: 'R4 (P5)', role: 'outside', color: COLORS.outside, position: [-3, 0, 4] },
+    { id: 'C2', label: 'Central (P6)', role: 'middle', color: COLORS.middle_back, position: [0, 0, 5] },
+    { id: 'R4b', label: 'R4 (P5)', role: 'outside', color: COLORS.outside_back, position: [-3, 0, 4] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [-3.0, 0, -3.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -549,6 +595,12 @@ const ATTACK_6_2: Scenario = {
     { type: 'player_pose', time: 2.5, id: 'PA', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.6, id: 'PA', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.6, from: [3.2, 3.4, 0.6], to: [-2.5, 0, -6], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.6, id: 'OPP_D1', to: [-2.5, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.0, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration 6-2', description: '2 passeurs polyvalents : celui en avant attaque, celui en arrière distribue (et pénètre).' },
@@ -590,6 +642,7 @@ const ATTACK_5V5_PENTAGON: Scenario = {
     { id: 'A1', label: 'Arrière G (P5)', role: 'libero', color: COLORS.libero, position: [-2.5, 0, 5] },
     { id: 'A2', label: 'Arrière D (P1)', role: 'outside', color: COLORS.outside, position: [2.5, 0, 5] },
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2.5] },
   ],
   initialBallPosition: [0, 2.5, -9],
   timeline: [
@@ -607,6 +660,12 @@ const ATTACK_5V5_PENTAGON: Scenario = {
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.6, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.6, from: [-3.2, 3.4, 0.6], to: [2, 0, -6], duration: 0.5, arc: false },
+    { type: 'player_move', time: 2.4, id: 'OPP_BL', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.4, id: 'OPP_BR', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.4, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.6, id: 'OPP_D1', to: [2, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 3.0, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Pentagone offensif', description: '5 joueurs en pentagone : 3 devant (R4, C, P) + 2 arrière. Couverture régulière.' },
@@ -647,7 +706,11 @@ const ATTACK_4V4_LOSANGE: Scenario = {
     { id: 'R4', label: 'Aile G (P4)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 2.5] },
     { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [2.5, 0, 2.5] },
     { id: 'A', label: 'Arrière (P1)', role: 'libero', color: COLORS.libero, position: [0, 0, 5.5] },
-    { id: 'OPP_B', label: 'Bloc adverse', role: 'opponent', color: COLORS.opponent, position: [-1.5, 0, -0.5] },
+    // 4v4 defense: block on their right (our Z4 attacker at x=-3), cross defender covers diagonal
+    { id: 'OPP_B',   label: 'Bloc adverse',    role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -0.5] },
+    { id: 'OPP_OFF', label: 'Off-blocker adv.', role: 'opponent', color: COLORS.opponent, position: [-3.0, 0, -2.0] },
+    { id: 'OPP_D1',  label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2.5] },
+    { id: 'OPP_D2',  label: 'Arrière adv.',    role: 'opponent', color: COLORS.opponent, position: [0, 0, -5.5] },
   ],
   initialBallPosition: [0, 2.5, -7],
   timeline: [
@@ -664,8 +727,11 @@ const ATTACK_4V4_LOSANGE: Scenario = {
     // R4 enchaîne sa course d'élan vers la zone 4 (départ depuis la position losange)
     { type: 'player_move', time: 0.9, id: 'R4', to: [-3.5, 0, 1.5], duration: 0.7 },
 
-    // ── Phase 3 : passe en touche + bloc adverse ──
-    { type: 'player_move', time: 1.5, id: 'OPP_B', to: [-2.5, 0, -0.4], duration: 0.3 },
+    // ── Phase 3 : passe en touche + défense adverse en place ──
+    // Bloc glisse face à l'attaquant; off-blocker couvre la ligne; cross defender prend son couloir
+    { type: 'player_move', time: 1.5, id: 'OPP_B',   to: [-3.0, 0, -0.4], duration: 0.3 },
+    { type: 'player_move', time: 1.5, id: 'OPP_OFF', to: [-3.0, 0, -3.0], duration: 0.4 },
+    { type: 'player_move', time: 1.5, id: 'OPP_D1',  to: [2.5, 0, -4.0], duration: 0.5 },
     { type: 'player_pose', time: 1.8, id: 'P', pose: 'SET', duration: 0.2 },
     { type: 'ball_move', time: 1.8, from: [0, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
 
@@ -676,11 +742,14 @@ const ATTACK_4V4_LOSANGE: Scenario = {
 
     // ── Phase 4 : armé + frappe ──
     { type: 'player_move', time: 2.3, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
-    { type: 'player_move', time: 2.3, id: 'OPP_B', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.3, id: 'OPP_B', to: [-3.0, 1.6, -0.4], duration: 0.2 },
     { type: 'player_pose', time: 2.3, id: 'OPP_B', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.4, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2, 0, -5], duration: 0.5, arc: false },
+    // Cross defender plonge sur la diagonale — arrive 0.1 s trop tard (balle à t=3.0)
+    { type: 'player_move', time: 2.5, id: 'OPP_D1', to: [2.0, 0, -4.8], duration: 0.4 },
+    { type: 'player_pose', time: 2.9, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
 
     // ── Phase 5 : RESET — retour à la formation losange ──
     { type: 'player_move', time: 3.2, id: 'P', to: [0, 0, 0.6], duration: 0.7 },
@@ -726,9 +795,12 @@ const ATTACK_4V4_SQUARE: Scenario = {
   players: [
     { id: 'P', label: 'Passeur-Att (P2)', role: 'setter', color: COLORS.setter, position: [3, 0, 0.6] },
     { id: 'R4', label: 'Attaquant (P4)', role: 'outside', color: COLORS.outside, position: [-3, 0, 0.6] },
-    { id: 'A1', label: 'Arrière G (P5)', role: 'outside', color: COLORS.outside, position: [-2.5, 0, 5] },
+    { id: 'A1', label: 'Arrière G (P5)', role: 'outside', color: COLORS.outside_back, position: [-2.5, 0, 5] },
     { id: 'A2', label: 'Arrière D (P1)', role: 'libero', color: COLORS.libero, position: [2.5, 0, 5] },
+    // 4v4 defense: 2-blocker wall + 2 floor defenders covering diagonal and deep center
     ...opponentBlockers(),
+    { id: 'OPP_D1', label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2.5] },
+    { id: 'OPP_D2', label: 'Arrière adv.',    role: 'opponent', color: COLORS.opponent, position: [0, 0, -5.5] },
   ],
   initialBallPosition: [0, 2.5, -7],
   timeline: [
@@ -737,15 +809,25 @@ const ATTACK_4V4_SQUARE: Scenario = {
     { type: 'player_move', time: 0.3, id: 'A1', to: [-1.5, 0, 5], duration: 0.4 },
     { type: 'player_pose', time: 0.9, id: 'A1', pose: 'BUMP', duration: 0.2 },
     { type: 'ball_move', time: 0.9, from: [-1.5, 1.2, 5], to: [2.5, 1.9, 0.8], duration: 0.9, arc: 3.5 },
+    // Bloc à 2 slides left to face attacker; floor defenders position behind
     { type: 'player_move', time: 1.4, id: 'OPP_BL', to: [-2.5, 0, -0.4], duration: 0.5 },
     { type: 'player_move', time: 1.4, id: 'OPP_BR', to: [-1.0, 0, -0.4], duration: 0.6 },
+    { type: 'player_move', time: 1.4, id: 'OPP_D1', to: [2.5, 0, -4.0], duration: 0.5 },
     { type: 'player_pose', time: 1.8, id: 'P', pose: 'SET', duration: 0.2 },
     { type: 'ball_move', time: 1.8, from: [2.5, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
     { type: 'player_move', time: 1.9, id: 'R4', to: [-3.0, 0, 1.2], duration: 0.4 },
+    // Bloc à 2 jumps together
+    { type: 'player_move', time: 2.3, id: 'OPP_BL', to: [-2.5, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_move', time: 2.3, id: 'OPP_BR', to: [-1.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.3, id: 'OPP_BL', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_pose', time: 2.3, id: 'OPP_BR', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_move', time: 2.3, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
     { type: 'player_pose', time: 2.4, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2.5, 0, -6], duration: 0.5, arc: false },
+    // Cross defender dives on the diagonal — blocked shot passes over the 2-blocker wall
+    { type: 'player_move', time: 2.5, id: 'OPP_D1', to: [2.5, 0, -5.8], duration: 0.4 },
+    { type: 'player_pose', time: 2.9, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration carré', description: '2 joueurs au filet (P2 et P4), 2 joueurs au fond. Couverture équilibrée.' },
@@ -781,7 +863,11 @@ const ATTACK_4V4_PEN: Scenario = {
     { id: 'C', label: 'Central (P3)', role: 'middle', color: COLORS.middle, position: [0, 0, 0.6] },
     { id: 'A2', label: 'Aile D (P2)', role: 'outside', color: COLORS.outside, position: [3, 0, 0.6] },
     { id: 'P', label: 'Passeur (P1)', role: 'setter', color: COLORS.setter, position: [3, 0, 5] },
-    { id: 'OPP_B', label: 'Bloc adverse', role: 'opponent', color: COLORS.opponent, position: [-2, 0, -0.5] },
+    // 4v4 defense: block on their right (Z4 attacker), off-blocker line, cross defender, deep back
+    { id: 'OPP_B',   label: 'Bloc adverse',    role: 'opponent', color: COLORS.opponent, position: [-2.5, 0, -0.5] },
+    { id: 'OPP_OFF', label: 'Off-blocker adv.', role: 'opponent', color: COLORS.opponent, position: [-3.0, 0, -2.0] },
+    { id: 'OPP_D1',  label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent, position: [2.5, 0, -2.5] },
+    { id: 'OPP_D2',  label: 'Arrière adv.',    role: 'opponent', color: COLORS.opponent, position: [0, 0, -5.5] },
   ],
   initialBallPosition: [0, 2.5, -7],
   timeline: [
@@ -795,9 +881,18 @@ const ATTACK_4V4_PEN: Scenario = {
     { type: 'ball_move', time: 1.8, from: [2.0, 1.9, 0.8], to: [-3.0, 3.4, 0.6], duration: 0.7, arc: 4.0 },
     { type: 'player_move', time: 1.0, id: 'R4', to: [-3.0, 0, 1.5], duration: 0.7 },
     { type: 'player_move', time: 2.2, id: 'R4', to: [-3.0, 1.8, 0.6], duration: 0.2 },
+    // Bloc glisse face à R4; off-blocker décroche; cross defender se positionne
+    { type: 'player_move', time: 1.6, id: 'OPP_B',   to: [-3.0, 0, -0.4], duration: 0.3 },
+    { type: 'player_move', time: 1.6, id: 'OPP_OFF', to: [-3.0, 0, -3.0], duration: 0.4 },
+    { type: 'player_move', time: 1.6, id: 'OPP_D1',  to: [2.5, 0, -4.0], duration: 0.5 },
     { type: 'player_pose', time: 2.3, id: 'R4', pose: 'ARM_SPIKE', duration: 0.2 },
+    { type: 'player_move', time: 2.3, id: 'OPP_B', to: [-3.0, 1.6, -0.4], duration: 0.2 },
+    { type: 'player_pose', time: 2.3, id: 'OPP_B', pose: 'ARM_SPIKE', duration: 0.2 },
     { type: 'player_pose', time: 2.5, id: 'R4', pose: 'SPIKE', duration: 0.1 },
     { type: 'ball_move', time: 2.5, from: [-3.0, 3.4, 0.6], to: [2, 0, -5], duration: 0.5, arc: false },
+    // Cross defender dives for the diagonal — arrives 0.1 s late (ball lands at t=3.0)
+    { type: 'player_move', time: 2.5, id: 'OPP_D1', to: [2.0, 0, -4.8], duration: 0.4 },
+    { type: 'player_pose', time: 2.9, id: 'OPP_D1', pose: 'BUMP', duration: 0.2 },
   ],
   steps: [
     { id: 's1', startTime: 0, title: '1. Configuration 3-1', description: 'Passeur unique en P1 (arrière). 3 attaquants devant en P2, P3, P4.' },
