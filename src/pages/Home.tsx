@@ -14,84 +14,64 @@ export default function Home() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
       {/* Hero */}
       <section style={{ paddingTop: 24 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 40, alignItems: 'center' }}>
-          <div>
-            <div style={{
-              display: 'inline-block',
-              padding: '4px 14px',
-              background: 'var(--pink)',
-              border: '3px solid var(--ink)',
-              boxShadow: 'var(--shadow-sm)',
-              transform: 'rotate(-2deg)',
-              marginBottom: 20,
-              fontFamily: '"Bungee", sans-serif',
-              fontSize: 11,
-              letterSpacing: '0.1em',
-            }}>
-              ★ DOCUMENTATION INTERACTIVE ★
-            </div>
-            <h1 style={{
-              fontFamily: '"Bungee", sans-serif',
-              fontSize: 'clamp(56px, 8vw, 96px)',
-              lineHeight: 0.92,
-              margin: '0 0 20px 0',
-              letterSpacing: '-0.01em',
-            }}>
-              <span style={{ color: 'var(--orange)', textShadow: '4px 4px 0 var(--ink)' }}>VOLLEY</span>
-              <br />
-              <span style={{ color: 'var(--teal)', textShadow: '4px 4px 0 var(--ink)' }}>WIKI</span>
-            </h1>
-            <p style={{ fontSize: 17, maxWidth: 480, margin: '0 0 28px 0', color: 'var(--ink)', opacity: 0.75 }}>
-              La référence technique du volleyball — techniques animées en 3D, règles, positions et glossaire.
-            </p>
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <Link to="/techniques" style={{
-                padding: '12px 24px',
-                background: 'var(--orange)',
-                border: '3px solid var(--ink)',
-                boxShadow: 'var(--shadow)',
-                fontFamily: '"Bungee", sans-serif',
-                fontSize: 13,
-                letterSpacing: '0.06em',
-                color: 'var(--ink)',
-                textDecoration: 'none',
-                display: 'inline-block',
-                transition: 'transform 0.08s, box-shadow 0.08s',
-              }}>
-                VOIR LES TECHNIQUES
-              </Link>
-              <Link to="/rules" style={{
-                padding: '12px 24px',
-                background: 'var(--cream)',
-                border: '3px solid var(--ink)',
-                boxShadow: 'var(--shadow)',
-                fontFamily: '"Bungee", sans-serif',
-                fontSize: 13,
-                letterSpacing: '0.06em',
-                color: 'var(--ink)',
-                textDecoration: 'none',
-                display: 'inline-block',
-              }}>
-                LIRE LES RÈGLES
-              </Link>
-            </div>
-          </div>
-          {/* Stamp */}
-          <div style={{ display: 'flex', justifyContent: 'center' }} className="hidden md:flex">
-            <div style={{
-              width: 220, height: 220, borderRadius: '50%',
-              background: 'var(--yellow)',
-              border: '4px solid var(--ink)',
-              position: 'relative',
-              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-              transform: 'rotate(-6deg)',
-              boxShadow: 'var(--shadow-lg)',
-            }}>
-              <div style={{ position: 'absolute', inset: 12, borderRadius: '50%', border: '2px dashed var(--ink)' }} />
-              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.2em', color: 'var(--teal)' }}>★ BÊTA ★</div>
-              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 44, lineHeight: 1, color: 'var(--orange)', textShadow: '2px 2px 0 var(--ink)' }}>V0.5</div>
-            </div>
-          </div>
+        <div style={{
+          display: 'inline-block',
+          padding: '4px 14px',
+          background: 'var(--pink)',
+          border: '3px solid var(--ink)',
+          boxShadow: 'var(--shadow-sm)',
+          transform: 'rotate(-2deg)',
+          marginBottom: 20,
+          fontFamily: '"Bungee", sans-serif',
+          fontSize: 11,
+          letterSpacing: '0.1em',
+        }}>
+          ★ DOCUMENTATION INTERACTIVE ★
+        </div>
+        <h1 style={{
+          fontFamily: '"Bungee", sans-serif',
+          fontSize: 'clamp(56px, 8vw, 96px)',
+          lineHeight: 0.92,
+          margin: '0 0 20px 0',
+          letterSpacing: '-0.01em',
+        }}>
+          <span style={{ color: 'var(--orange)', textShadow: '4px 4px 0 var(--ink)' }}>VOLLEY</span>
+          <br />
+          <span style={{ color: 'var(--teal)', textShadow: '4px 4px 0 var(--ink)' }}>WIKI</span>
+        </h1>
+        <p style={{ fontSize: 17, maxWidth: 480, margin: '0 0 28px 0', color: 'var(--ink)', opacity: 0.75 }}>
+          La référence technique du volleyball — techniques animées en 3D, règles, positions et glossaire.
+        </p>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link to="/techniques" style={{
+            padding: '12px 24px',
+            background: 'var(--orange)',
+            border: '3px solid var(--ink)',
+            boxShadow: 'var(--shadow)',
+            fontFamily: '"Bungee", sans-serif',
+            fontSize: 13,
+            letterSpacing: '0.06em',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            display: 'inline-block',
+            transition: 'transform 0.08s, box-shadow 0.08s',
+          }}>
+            VOIR LES TECHNIQUES
+          </Link>
+          <Link to="/rules" style={{
+            padding: '12px 24px',
+            background: 'var(--cream)',
+            border: '3px solid var(--ink)',
+            boxShadow: 'var(--shadow)',
+            fontFamily: '"Bungee", sans-serif',
+            fontSize: 13,
+            letterSpacing: '0.06em',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            display: 'inline-block',
+          }}>
+            LIRE LES RÈGLES
+          </Link>
         </div>
       </section>
 
