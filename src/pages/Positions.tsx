@@ -51,19 +51,19 @@ const CONFIG_6V6_5_1: Configuration = {
   id: '5-1',
   name: 'Système 5-1 (standard)',
   shortName: '5-1',
-  description: '1 passeur unique distribuant dans toutes les rotations + 2 R4 + 2 centraux + 1 pointu + 1 libéro. Le système le plus utilisé en compétition.',
+  description: '1 passeur unique distribuant sur les 6 rotations (3 arrière avec pénétration + 3 avant) + 2 R4 + 2 centraux + 1 pointu (diagonalement opposé au passeur) + 1 libéro. Le système le plus utilisé en compétition haut niveau.',
   hasLibero: true,
   positions: [
     { ...COMMON_DESC.P4, zoneId: 'P4', role: 'Attaquant aile (Outside)', court: POS_6v6_GRID.P4,
-      description: "Zone d'attaque principale. L'aile reçoit la majorité des balles hautes et doit être polyvalent : attaque, contre, réception.",
+      description: "Zone d'attaque principale. L'aile reçoit la majorité des balles hautes et doit être polyvalent : attaque, contre, réception. C'est aussi l'off-blocker côté gauche sur attaque Z4 adverse.",
       skills: ['Attaque', 'Contre', 'Réception', 'Service'],
       traits: ["Puissance et précision d'attaque", 'Grande envergure', 'Polyvalence', 'Endurance'] },
     { ...COMMON_DESC.P3, zoneId: 'P3', role: 'Central (Middle)', court: POS_6v6_GRID.P3,
-      description: 'Joueur du filet en zone centrale. Contre les attaques adverses et frappe en tempo rapide.',
+      description: 'Joueur du filet en zone centrale. Contre les attaques adverses et frappe en tempo rapide (quick). Sur attaque adverse en aile, il ferme la diagonale en bloc à 2.',
       skills: ['Contre', 'Attaque rapide', 'Couverture de filet'],
       traits: ['Grande taille requise', 'Contre dominant', 'Tempos 1 et 2', 'Rôle défensif limité au filet'] },
     { ...COMMON_DESC.P2, zoneId: 'P2', role: 'Passeur (Setter)', court: POS_6v6_GRID.P2,
-      description: "Le chef d'orchestre. Reçoit la 2ᵉ touche et distribue le jeu. En 5-1 il distribue aussi quand il est arrière (avec pénétration).",
+      description: "Le chef d'orchestre. Reçoit la 2ᵉ touche et distribue le jeu. En 5-1 il joue toutes les rotations : pénétration depuis P1, P6 ou P5 (arrière), distribution depuis P4, P3 ou P2 (avant). Cible : entre Z2 et Z3, ~1 m du filet.",
       skills: ['Passe en touche', 'Lecture du bloc', 'Communication', 'Pénétration'],
       traits: ['Précision technique maximale', 'Vision 360°', 'Sang-froid', 'Leadership'] },
     { ...COMMON_DESC.P5, zoneId: 'P5', role: 'Réception / défense', court: POS_6v6_GRID.P5,
@@ -79,9 +79,9 @@ const CONFIG_6V6_5_1: Configuration = {
       skills: ['Attaque forte', 'Service', 'Contre', 'Attaque arrière'],
       traits: ['Puissance maximale', 'Attaque back-row 3 rotations/6', 'Libéré de la réception', 'Synonyme : "pointu"'] },
     { ...COMMON_DESC.L, zoneId: 'L', role: 'Spécialiste défensif', court: POS_6v6_GRID.L,
-      description: 'Spécialiste défensif en maillot contrastant. Remplace les arrières (P1, P5, P6) sans compter comme substitution.',
+      description: 'Spécialiste défensif en maillot contrastant. Remplace les arrières (P1, P5, P6) sans compter comme substitution. Restrictions FIVB : pas de contre, pas d\'attaque au-dessus du filet, pas de passe haute devant la ligne des 3 m pour un coéquipier qui attaque ensuite au-dessus du filet.',
       skills: ['Manchette', 'Réception', 'Défense', 'Lecture'],
-      traits: ['Agilité maximale', 'Ne peut pas bloquer/attaquer au-dessus du filet', 'Remplacements illimités', 'Peut servir (FIVB 2021)'] },
+      traits: ['Agilité maximale', 'Ne peut pas bloquer/attaquer au-dessus du filet', 'Pas de passe haute devant 3 m → attaquant', 'Remplacements illimités', 'Peut servir (FIVB 2021)'] },
   ],
 };
 
@@ -123,7 +123,7 @@ const CONFIG_6V6_6_2: Configuration = {
   id: '6-2',
   name: 'Système 6-2 (avancé)',
   shortName: '6-2',
-  description: '2 passeurs polyvalents (passent quand arrière, attaquent quand avant) + 2 centraux + 2 R4. Garantit toujours 3 attaquants devant avec pénétration systématique.',
+  description: '2 passeurs polyvalents : distribuent UNIQUEMENT depuis l\'arrière (avec pénétration), deviennent attaquants droits (right-side) quand ils passent en avant. + 2 centraux + 2 R4 + 1 libéro. Avantage : toujours 3 attaquants au filet. Inconvénient : chimie passeur-attaquants diluée, et en variante avec doubles substitutions, consomme rapidement les 6 substitutions par set (Règle 15.6 FIVB).',
   hasLibero: true,
   positions: [
     { ...COMMON_DESC.P4, zoneId: 'P4', role: 'R4 (Outside)', court: POS_6v6_GRID.P4,
@@ -161,7 +161,7 @@ const CONFIG_5V5_PENTAGON: Configuration = {
   id: 'pentagon',
   name: 'Pentagone (1-2-2)',
   shortName: 'Pentagone',
-  description: '1 joueur au filet centre, 2 ailes en milieu de terrain, 2 arrière. Couverture régulière de tout le terrain — bonne option en initiation et loisir.',
+  description: '1 joueur au filet centre, 2 ailes en milieu de terrain, 2 arrière. Couverture régulière du terrain — bonne option en initiation et loisir. Défense type : système 1-2-2 (man-up adapté, 1 contreur + 2 couvreurs + 2 défenseurs profonds).',
   hasLibero: false,
   positions: [
     { zoneId: 'P3', number: '③', name: 'Centre filet', role: 'Passeur ou central',
@@ -196,7 +196,7 @@ const CONFIG_5V5_3F_2B: Configuration = {
   id: '3F-2B',
   name: '3 avant / 2 arrière',
   shortName: '3F/2B',
-  description: '3 attaquants au filet (P4, P3, P2 dont passeur en P2) + 2 arrière (P5, P1). Configuration offensive : block à 2 ou 3 possible. Le passeur est avant fixe.',
+  description: '3 attaquants au filet (P4, P3, P2 dont passeur en P2) + 2 arrière (P5, P1). Configuration offensive : bloc à 2 ou 3 possible. Défense type : système 2-1-2 (2 contreurs + 1 off-blocker + 2 défenseurs profonds). Inconvénient : 30+ m² par défenseur en fond.',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche', role: 'Outside',
@@ -231,7 +231,7 @@ const CONFIG_5V5_2F_3B: Configuration = {
   id: '2F-3B',
   name: '2 avant / 3 arrière',
   shortName: '2F/3B',
-  description: '2 joueurs au filet + 3 arrière dont le passeur pénétrant (P1). Configuration la plus stable défensivement, idéale quand on a besoin de couverture. 2 attaquants devant seulement.',
+  description: '2 joueurs au filet + 3 arrière dont le passeur pénétrant (P1). Configuration la plus stable défensivement, la plus proche du 5-1 6v6. Défense type : système 1-1-3 (1 contreur + 1 off-blocker + 3 défenseurs profonds). Recommandée pour préparer la transition vers le 6v6.',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche', role: 'Outside',
@@ -264,9 +264,9 @@ const CONFIG_5V5_2F_3B: Configuration = {
 
 const CONFIG_4V4_LOSANGE: Configuration = {
   id: 'losange',
-  name: 'Losange (1-2-1)',
+  name: 'Losange / Diamant (1-2-1)',
   shortName: 'Losange',
-  description: 'Configuration la PLUS UTILISÉE en 4v4. 1 joueur au filet centre (P3, souvent passeur), 2 ailes en milieu de terrain (P4 et P2 reculés vers les 3 m), 1 arrière au fond. Un joueur dans chaque grande zone, mais un seul au filet limite le contre.',
+  description: 'Formation « diamant » : la PLUS UTILISÉE en 4v4 indoor. 1 joueur au filet centre (P3, souvent passeur), 2 ailes en milieu de terrain (P4 et P2 vers les 3 m), 1 arrière au fond. Défense type : système A (1 contreur + 3 défenseurs). Zone la plus vulnérable : grande diagonale longue (manque de monde au fond).',
   hasLibero: false,
   positions: [
     { zoneId: 'P3', number: '③', name: 'Centre filet', role: 'Passeur ou central',
@@ -294,9 +294,9 @@ const CONFIG_4V4_LOSANGE: Configuration = {
 
 const CONFIG_4V4_CARRE: Configuration = {
   id: 'carre',
-  name: 'Carré (2-2)',
+  name: 'Carré / Box (2-2)',
   shortName: 'Carré',
-  description: '2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Couverture équilibrée, permet le block à 2. Bien adapté quand on a 2 contreurs forts et 2 défenseurs forts.',
+  description: 'Formation « box » 2-2 : 2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Permet le bloc à 2 (système B) — mais à n\'utiliser que contre des frappeurs très puissants sans finesse, car laisse seulement 2 défenseurs profonds (tip non couvert). Plus souvent joué en système A avec un seul contreur.',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche (filet)', role: 'Contreur / attaquant',
@@ -324,9 +324,9 @@ const CONFIG_4V4_CARRE: Configuration = {
 
 const CONFIG_4V4_3_1: Configuration = {
   id: '3-1',
-  name: 'Passeur pénétrant (3-1)',
+  name: 'Ligne 3-1 (passeur pénétrant)',
   shortName: '3-1',
-  description: 'Passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant — équivalent simplifié du 5-1. Exige une réception très propre.',
+  description: 'Formation « ligne 3-1 » : passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant — équivalent simplifié du 5-1 6v6. Exige une réception très propre et un passeur rapide. Défense : système A possible (1 contreur central + 3 défenseurs).',
   hasLibero: false,
   positions: [
     { zoneId: 'P4', number: '④', name: 'Aile gauche', role: 'Outside',
@@ -360,16 +360,16 @@ const CONFIGURATIONS: Record<TeamSize, Configuration[]> = {
 
 const TEAM_INTRO: Record<TeamSize, { tagline: string; rules: string }> = {
   6: {
-    tagline: 'Format officiel FIVB / FFVolley : 6 joueurs + libéro, terrain 9×18 m.',
-    rules: 'Bloc à 1, 2 ou 3 selon la zone. Le libéro remplace les arrières (P1/P5/P6) sans compter comme substitution.',
+    tagline: 'Format officiel FIVB / FFVolley : 6 joueurs + libéro, terrain 9×18 m, ligne d\'attaque à 3 m, filet 2,43 m (H) / 2,24 m (F).',
+    rules: 'Zones numérotées dans le sens antihoraire vu depuis l\'arrière de son camp (Z1 = serveur). Rotation horaire au side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Règle 7.4 : au contact du serveur, les positions sont contrôlées par les pieds (Z2 plus près du filet que Z1, etc.). Bloc à 1, 2 ou 3. Le libéro remplace les arrières sans compter comme substitution.',
   },
   5: {
-    tagline: 'Format hybride (entraînement, loisir). Pas de règlement officiel français.',
-    rules: 'Plusieurs configurations possibles selon que le passeur est avant fixe ou arrière pénétrant. Libéro toléré en entraînement, pas en compétition.',
+    tagline: 'Format hybride non officiel FIVB/FFVb. Pratiqué en scolaire, intramurals, dépannage et pédagogie de transition entre 4v4 et 6v6.',
+    rules: '2+3 (passeur pénétrant recommandé) ou 3+2 (passeur avant fixe). Pas de libéro. Règle de chevauchement adaptée : Z4>Z5, Z3>Z6, Z2>Z1 (configuration 3-2) ou relations partielles (2-3). Les recommandations défensives sont des adaptations logiques du 6v6, pas un règlement codifié.',
   },
   4: {
-    tagline: "Format UNSS et loisir FFVB. Terrain 7×14 m ou 8×16 m, ligne d'attaque à 3 m. Pas de libéro.",
-    rules: 'Au service : 3 avants alignés 4-3-2, P1 derrière. Après la frappe, déplacement libre selon la configuration choisie.',
+    tagline: "Pas de règlement FIVB officiel. Pratiqué en intramurals universitaires (USA), tournois loisir, transition pédagogique (FFVb, Volleyball Canada).",
+    rules: 'Terrain 9×9 m (parfois réduit), 3 touches, contre autorisé, rotation horaire. 2 avants + 2 arrières à chaque rotation. Formations courantes : diamant (1-2-1 passeur centre), ligne 3-1 (passeur pénétrant), box 2-2. Certains organisateurs suppriment les fautes de chevauchement (Texas A&M).',
   },
 };
 
