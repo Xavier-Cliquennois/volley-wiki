@@ -51,7 +51,7 @@ jobs:
             cd "$APP_DIR"
 
             echo "=== Copying docker-compose.yml ==="
-            cp /tmp/volley-wiki-deploy/docker-compose.prod.yml docker-compose.yml
+            cp -f /tmp/volley-wiki-deploy/docker-compose.prod.yml docker-compose.yml
             rm -rf /tmp/volley-wiki-deploy
 
             echo "=== Starting container ==="
