@@ -106,6 +106,31 @@ export default function Scenarios() {
         </p>
       </div>
 
+      {/* Construction notice */}
+      <div
+        role="status"
+        style={{
+          border: '3px solid var(--ink)',
+          background: 'var(--yellow)',
+          boxShadow: 'var(--shadow-sm)',
+          padding: '14px 18px',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 14,
+        }}
+      >
+        <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>🚧</span>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em' }}>
+            PAGE EN COURS DE CONSTRUCTION
+          </div>
+          <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, lineHeight: 1.5 }}>
+            Certaines animations 3D peuvent encore comporter des erreurs ou être incomplètes.
+            Merci de votre indulgence — les scénarios sont en cours de finalisation.
+          </p>
+        </div>
+      </div>
+
       {/* Wizard — full */}
       {!launched && (
         <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>
