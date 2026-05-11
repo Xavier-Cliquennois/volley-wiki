@@ -67,9 +67,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     animateToPreset(initialCamera, 0.01);
   }, [scenario.id, scenario.defaultCamera, animateToPreset]);
 
-  const modeRef = useRef<PlaybackMode>('auto');
-  useEffect(() => { modeRef.current = mode; }, [mode]);
-
   const handleUpdate = useCallback((prog: number) => {
     setProgress(prog);
     const ctrl = controllerRef.current;
@@ -81,10 +78,10 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       stepBoundaryRef.current = null;
       setIsPlaying(false);
     }
-    if (modeRef.current === 'auto') {
-      const idx = findActiveStepIndex(scenario.steps, ctrl.time());
-      setActiveStepIdx(idx);
-    }
+    // Keep the active step in sync with the playhead regardless of mode —
+    // in step mode this is what advances the timeline + prev/next state
+    // after the player stops at a boundary.
+    setActiveStepIdx(findActiveStepIndex(scenario.steps, ctrl.time()));
   }, [scenario.steps]);
 
   useEffect(() => {
