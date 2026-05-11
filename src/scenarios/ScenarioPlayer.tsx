@@ -195,8 +195,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     setSpeed(next);
   };
 
-  const activeStep = scenario.steps[activeStepIdx];
-
   const totalDuration = useMemo(
     () => scenario.timeline.reduce((max, a) => Math.max(max, a.time + a.duration), 0),
     [scenario.timeline]
@@ -213,41 +211,23 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
-      {/* Header — context badges + mode toggle */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, justifyContent: hideHeader ? 'flex-end' : 'space-between' }}>
-        {!hideHeader && (
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
-            <div style={{ padding: '3px 12px', border: '2.5px solid var(--orange)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)' }}>
-              {scenario.config.teamSize}v{scenario.config.teamSize}
-            </div>
-            <div style={{ padding: '3px 12px', border: '2px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink)' }}>
-              {phaseLabel}
-            </div>
-            <div style={{ padding: '3px 12px', border: '1.5px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.6 }}>
-              {scenario.config.contextLabel}
-            </div>
+      {/* Header — context badges (mode toggle moved into the controls row below) */}
+      {!hideHeader && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
+          <div style={{ padding: '3px 12px', border: '2.5px solid var(--orange)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)' }}>
+            {scenario.config.teamSize}v{scenario.config.teamSize}
           </div>
-        )}
-        <div style={{ display: 'flex', alignItems: 'center', border: '2.5px solid var(--ink)' }}>
-          <button
-            onClick={() => handleModeChange('auto')}
-            style={mode === 'auto' ? { ...btnActive, padding: '6px 12px' } : { ...btnSm, padding: '6px 12px' }}
-          >
-            ▶ Auto
-          </button>
-          <button
-            onClick={() => handleModeChange('step')}
-            style={{ ...(mode === 'step' ? btnActive : btnSm), padding: '6px 12px', borderLeft: '2px solid var(--ink)' }}
-          >
-            ⏯ Étape
-          </button>
+          <div style={{ padding: '3px 12px', border: '2px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink)' }}>
+            {phaseLabel}
+          </div>
+          <div style={{ padding: '3px 12px', border: '1.5px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.6 }}>
+            {scenario.config.contextLabel}
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Main grid: 3D + active step */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 3fr) minmax(0, 2fr)', gap: 14 }}>
-        {/* 3D viewer */}
-        <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow)' }}>
+      {/* 3D viewer — full width */}
+      <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow)' }}>
           {/* Camera presets */}
           <div style={{ borderBottom: '2px solid var(--ink)', padding: '6px 10px', display: 'flex', alignItems: 'center', gap: 4, overflowX: 'auto', background: 'var(--cream)' }}>
             {(Object.keys(CAMERA_PRESETS) as CameraPresetKey[]).map(key => (
@@ -305,31 +285,59 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
             )}
           </div>
 
-          {/* Progress bar with clickable step markers */}
+          {/* Progress bar with clickable step markers
+              Markers stay inside the bar (no clipping at t=0 or t=end) and
+              duplicates that share a startTime get nudged apart so they
+              don't superpose. */}
           <div style={{ position: 'relative', height: 24, background: 'var(--paper)', borderTop: '2px solid var(--ink)' }}>
             <div style={{ position: 'absolute', inset: 0, right: 'auto', background: 'rgba(226,84,46,0.25)', width: `${progress * 100}%` }} />
-            {scenario.steps.map((step, idx) => {
-              const pct = totalDuration > 0 ? (step.startTime / totalDuration) * 100 : 0;
-              const isActive = idx === activeStepIdx;
-              const isPast = idx < activeStepIdx;
-              return (
-                <button
-                  key={step.id}
-                  onClick={() => jumpToStep(idx)}
-                  title={`Étape ${idx + 1} — ${step.title.replace(/^\d+\.\s*/, '')}`}
-                  aria-label={`Étape ${idx + 1}`}
-                  style={{ position: 'absolute', top: '50%', left: `${pct}%`, transform: 'translate(-50%, -50%)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
-                >
-                  <span style={{
-                    display: 'block', width: 12, height: 12,
-                    border: '2px solid var(--ink)',
-                    background: isActive ? 'var(--orange)' : isPast ? 'rgba(226,84,46,0.5)' : 'var(--cream)',
-                    transform: isActive ? 'scale(1.3)' : 'scale(1)',
-                    transition: 'all 0.15s',
-                  }} />
-                </button>
-              );
-            })}
+            {(() => {
+              const MARKER = 12; // marker visual size in px
+              const GAP = 4;     // gap between stacked markers in px
+              const STEP = MARKER + GAP;
+              // Group steps by startTime to spread duplicates around the cluster centre.
+              const groups = new Map<number, number[]>();
+              scenario.steps.forEach((s, i) => {
+                const arr = groups.get(s.startTime) ?? [];
+                arr.push(i);
+                groups.set(s.startTime, arr);
+              });
+              const offsets = new Map<number, number>();
+              groups.forEach(indices => {
+                const n = indices.length;
+                indices.forEach((idx, k) => {
+                  // centre the cluster: e.g. n=2 → [-0.5, +0.5] × STEP; n=3 → [-1, 0, +1] × STEP
+                  offsets.set(idx, (k - (n - 1) / 2) * STEP);
+                });
+              });
+              return scenario.steps.map((step, idx) => {
+                const pct = totalDuration > 0 ? (step.startTime / totalDuration) * 100 : 0;
+                const offsetPx = offsets.get(idx) ?? 0;
+                const isActive = idx === activeStepIdx;
+                const isPast = idx < activeStepIdx;
+                // Keep the marker fully inside the bar by clamping its centre
+                // to [MARKER/2 + |offset| margin, 100% − same].
+                const edge = MARKER / 2;
+                const left = `clamp(${edge}px, calc(${pct}% + ${offsetPx}px), calc(100% - ${edge}px))`;
+                return (
+                  <button
+                    key={step.id}
+                    onClick={() => jumpToStep(idx)}
+                    title={`Étape ${idx + 1} — ${step.title.replace(/^\d+\.\s*/, '')}`}
+                    aria-label={`Étape ${idx + 1}`}
+                    style={{ position: 'absolute', top: '50%', left, transform: 'translate(-50%, -50%)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                  >
+                    <span style={{
+                      display: 'block', width: MARKER, height: MARKER,
+                      border: '2px solid var(--ink)',
+                      background: isActive ? 'var(--orange)' : isPast ? 'rgba(226,84,46,0.5)' : 'var(--cream)',
+                      transform: isActive ? 'scale(1.3)' : 'scale(1)',
+                      transition: 'all 0.15s',
+                    }} />
+                  </button>
+                );
+              });
+            })()}
           </div>
 
           {/* Controls */}
@@ -354,7 +362,23 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
               </button>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', border: '2.5px solid var(--ink)' }} role="group" aria-label="Mode de lecture">
+                <button
+                  onClick={() => handleModeChange('auto')}
+                  style={mode === 'auto' ? { ...btnActive, padding: '6px 10px' } : { ...btnSm, padding: '6px 10px' }}
+                  aria-pressed={mode === 'auto'}
+                >
+                  ▶ Auto
+                </button>
+                <button
+                  onClick={() => handleModeChange('step')}
+                  style={{ ...(mode === 'step' ? btnActive : btnSm), padding: '6px 10px', borderLeft: '2px solid var(--ink)' }}
+                  aria-pressed={mode === 'step'}
+                >
+                  ⏯ Étape
+                </button>
+              </div>
               <button
                 onClick={stepBackward}
                 disabled={activeStepIdx === 0}
@@ -389,38 +413,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
           </div>
         </div>
 
-        {/* Active step card */}
-        <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', padding: '20px 22px', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow)' }}>
-          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 8 }}>
-            Étape {activeStepIdx + 1} / {scenario.steps.length}
-          </div>
-          <h3 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(16px, 2vw, 22px)', color: 'var(--ink)', margin: '0 0 12px 0' }}>
-            {activeStep?.title.replace(/^\d+\.\s*/, '')}
-          </h3>
-          <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.8, lineHeight: 1.6, flex: 1, margin: 0 }}>
-            {activeStep?.description}
-          </p>
-          {mode === 'step' && (
-            <div style={{ marginTop: 16, paddingTop: 14, borderTop: '2px solid var(--ink)', display: 'flex', alignItems: 'center', gap: 8 }}>
-              <button
-                onClick={stepBackward}
-                disabled={activeStepIdx === 0}
-                style={{ ...btnSm, padding: '6px 12px', opacity: activeStepIdx === 0 ? 0.3 : 1, fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.08em' }}
-              >
-                ← Précédent
-              </button>
-              <button
-                onClick={stepForward}
-                disabled={activeStepIdx === scenario.steps.length - 1}
-                style={{ flex: 1, padding: '8px 14px', border: '2.5px solid var(--ink)', background: 'var(--orange)', color: '#fff', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.1em', cursor: 'pointer', opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1, boxShadow: 'var(--shadow-sm)' }}
-              >
-                Suivant →
-              </button>
-            </div>
-          )}
-        </div>
-      </div>
-
       {/* Step timeline strip */}
       <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)' }}>
         <div style={{ borderBottom: '2px solid var(--ink)', padding: '6px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--cream)' }}>
@@ -439,20 +431,27 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                 key={step.id}
                 onClick={() => jumpToStep(idx)}
                 style={{
-                  flexShrink: 0, width: 192, textAlign: 'left', padding: '10px 12px',
+                  flexShrink: 0, width: isActive ? 280 : 192, textAlign: 'left', padding: '10px 12px',
                   border: `2.5px solid ${isActive ? 'var(--orange)' : 'var(--ink)'}`,
                   background: isActive ? 'rgba(226,84,46,0.08)' : isPast ? 'var(--paper)' : 'var(--cream)',
                   opacity: isPast && !isActive ? 0.55 : 1,
                   cursor: 'pointer',
+                  transition: 'width 0.2s',
                 }}
               >
                 <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: isActive ? 'var(--orange)' : 'var(--ink)', opacity: isActive ? 1 : 0.4, marginBottom: 4 }}>
-                  {String(idx + 1).padStart(2, '0')}
+                  {String(idx + 1).padStart(2, '0')} / {String(scenario.steps.length).padStart(2, '0')}
                 </div>
                 <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: isActive ? 'var(--orange)' : 'var(--ink)', marginBottom: 4, letterSpacing: '0.04em' }}>
                   {step.title.replace(/^\d+\.\s*/, '')}
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--ink)', opacity: 0.65, lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                <div
+                  style={
+                    isActive
+                      ? { fontSize: 12, color: 'var(--ink)', opacity: 0.8, lineHeight: 1.5 }
+                      : { fontSize: 11, color: 'var(--ink)', opacity: 0.65, lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }
+                  }
+                >
                   {step.description}
                 </div>
               </button>
