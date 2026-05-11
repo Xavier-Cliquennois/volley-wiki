@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+/* Design tokens — Retro 80s tournament poster */
+:root {
+  --cream: #f5e9d4;
+  --paper: #ede0c4;
+  --ink: #1a1812;
+  --orange: #e2542e;
+  --teal: #1d8b8b;
+  --pink: #e88aa8;
+  --yellow: #f0c84c;
+  --mint: #b8dab2;
+  --plum: #6b2c5c;
+  --shadow-sm: 3px 3px 0 var(--ink);
+  --shadow: 5px 5px 0 var(--ink);
+  --shadow-lg: 8px 8px 0 var(--ink);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Halftone overlay — rétro */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(26, 24, 18, 0.045) 1.2px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+a:visited {
+  color: inherit;
+  border-color: transparent;
+  outline-color: transparent;
+}
