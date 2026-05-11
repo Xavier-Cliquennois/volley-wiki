@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     labels:
       - traefik.enable=true
-      - traefik.http.routers.volley-wiki.rule=Host(`volley-wiki.apprendre-et-avancer.fr`) || Host(`www.volley-wiki.apprendre-et-avancer.fr`)
+      - traefik.http.routers.volley-wiki.rule=Host(`volley-wiki.fr`) || Host(`www.volley-wiki.fr`)
       - traefik.http.routers.volley-wiki.entrypoints=websecure
       - traefik.http.routers.volley-wiki.tls=true
       - traefik.http.routers.volley-wiki.tls.certresolver=mytlschallenge
