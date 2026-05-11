@@ -213,7 +213,7 @@ const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 85, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 62, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 72, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 82, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 20, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 25, y: 67 },
@@ -262,7 +262,7 @@ const LAYOUTS_5V5_PENTAGON: Record<ZoneTab, DefenseLayout> = {
   zone2: {
     ballX: 15, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 38, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 28, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 18, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 80, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 22, y: 70 },
@@ -289,7 +289,7 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 85, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 60, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 72, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 82, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 20, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 35, y: 70 },
@@ -314,9 +314,9 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
   zone3: {
     ballX: 50, ballY: 19,
     players: [
-      { zoneId: 'P4', x: 30, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P4', x: 40, y: 29.5, sub: 'BLK' },
       { zoneId: 'P3', x: 50, y: 29.5, sub: 'BLK' },
-      { zoneId: 'P2', x: 70, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 60, y: 29.5, sub: 'BLK' },
       { zoneId: 'P5', x: 25, y: 70 },
       { zoneId: 'P1', x: 75, y: 70 },
     ],
@@ -337,7 +337,7 @@ const LAYOUTS_5V5_3F2B: Record<ZoneTab, DefenseLayout> = {
   zone2: {
     ballX: 15, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 40, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 28, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 18, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 80, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 22, y: 70 },
@@ -364,7 +364,7 @@ const LAYOUTS_4V4_LOSANGE: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 85, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 62, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 78, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 82, y: 55, sub: 'OFF' },
       { zoneId: 'P4', x: 20, y: 47.5, sub: 'DÉF' },
       { zoneId: 'P1', x: 50, y: 73 },
@@ -412,7 +412,7 @@ const LAYOUTS_4V4_LOSANGE: Record<ZoneTab, DefenseLayout> = {
   zone2: {
     ballX: 15, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 38, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 22, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 18, y: 55, sub: 'OFF' },
       { zoneId: 'P2', x: 80, y: 47.5, sub: 'DÉF' },
       { zoneId: 'P1', x: 50, y: 73 },
@@ -438,7 +438,7 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 85, ballY: 19,
     players: [
-      { zoneId: 'P2', x: 78, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 82, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 22, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 25, y: 70 },
       { zoneId: 'P1', x: 75, y: 70 },
@@ -463,8 +463,8 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
   zone3: {
     ballX: 50, ballY: 19,
     players: [
-      { zoneId: 'P4', x: 35, y: 29.5, sub: 'BLK' },
-      { zoneId: 'P2', x: 65, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P4', x: 42, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 58, y: 29.5, sub: 'BLK' },
       { zoneId: 'P5', x: 25, y: 70 },
       { zoneId: 'P1', x: 75, y: 70 },
     ],
@@ -485,7 +485,7 @@ const LAYOUTS_4V4_CARRE: Record<ZoneTab, DefenseLayout> = {
   zone2: {
     ballX: 15, ballY: 19,
     players: [
-      { zoneId: 'P4', x: 22, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P4', x: 18, y: 29.5, sub: 'BLK' },
       { zoneId: 'P2', x: 78, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 25, y: 70 },
       { zoneId: 'P1', x: 75, y: 70 },
@@ -516,7 +516,7 @@ const LAYOUTS_5V5_2F3B: Record<ZoneTab, DefenseLayout> = {
   zone4: {
     ballX: 85, ballY: 19,
     players: [
-      { zoneId: 'P3', x: 62, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 78, y: 29.5, sub: 'BLK' },
       { zoneId: 'P4', x: 20, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 22, y: 70 },
       { zoneId: 'P6', x: 50, y: 70 },
@@ -566,7 +566,7 @@ const LAYOUTS_5V5_2F3B: Record<ZoneTab, DefenseLayout> = {
   zone2: {
     ballX: 15, ballY: 19,
     players: [
-      { zoneId: 'P4', x: 22, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P4', x: 18, y: 29.5, sub: 'BLK' },
       { zoneId: 'P3', x: 60, y: 47.5, sub: 'OFF' },
       { zoneId: 'P5', x: 22, y: 67 },
       { zoneId: 'P6', x: 50, y: 70 },
@@ -730,13 +730,13 @@ function Zone4Tab() {
             { toX: 15, toY: 40 },
           ]}
           players={[
-            { x: 60, y: 29.5 }, { x: 80, y: 29.5 }, { x: 18, y: 47.5 },
+            { x: 72, y: 29.5 }, { x: 82, y: 29.5 }, { x: 18, y: 47.5 },
             { x: 22, y: 70 }, { x: 48, y: 67 }, { x: 75, y: 62.5 },
           ]}
           idSuffix="z4-6v6"
         />
-        <Player x={60} y={29.5} label="3" sub="BLK" type="avant" />
-        <Player x={80} y={29.5} label="2" sub="BLK" type="avant" />
+        <Player x={72} y={29.5} label="3" sub="BLK" type="avant" />
+        <Player x={82} y={29.5} label="2" sub="BLK" type="avant" />
         <Player x={18} y={47.5} label="4" sub="OFF" type="avant" />
         <Player x={22} y={70} label="5" sub="LIB" type="libero" />
         <Player x={48} y={67} label="6" type="arriere" />
@@ -852,13 +852,13 @@ function Zone2Tab() {
             { toX: 85, toY: 40 },
           ]}
           players={[
-            { x: 20, y: 29.5 }, { x: 40, y: 29.5 }, { x: 82, y: 47.5 },
+            { x: 18, y: 29.5 }, { x: 28, y: 29.5 }, { x: 82, y: 47.5 },
             { x: 25, y: 62.5 }, { x: 52, y: 67 }, { x: 78, y: 70 },
           ]}
           idSuffix="z2-6v6"
         />
-        <Player x={20} y={29.5} label="4" sub="BLK" type="avant" />
-        <Player x={40} y={29.5} label="3" sub="BLK" type="avant" />
+        <Player x={18} y={29.5} label="4" sub="BLK" type="avant" />
+        <Player x={28} y={29.5} label="3" sub="BLK" type="avant" />
         <Player x={82} y={47.5} label="2" sub="OFF" type="avant" />
         <Player x={25} y={62.5} label="5" sub="LIB" type="libero" />
         <Player x={52} y={67} label="6" type="arriere" />
