@@ -122,7 +122,22 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       setIsPlaying(false);
       return;
     }
-    setMode('auto');
+    // In step mode, play until the next step boundary and stop there —
+    // do not silently fall back to auto.
+    if (mode === 'step') {
+      const currentIdx = findActiveStepIndex(scenario.steps, ctrl.time());
+      const stepEnd = getStepEndTime(scenario, currentIdx);
+      if (ctrl.time() >= stepEnd - 0.01) {
+        // sitting at the boundary already → replay this step from its start
+        playSingleStep(currentIdx);
+        return;
+      }
+      stepBoundaryRef.current = stepEnd;
+      ctrl.play();
+      setIsPlaying(true);
+      if (!hasStarted) setHasStarted(true);
+      return;
+    }
     stepBoundaryRef.current = null;
     const totalDuration = ctrl.duration();
     if (ctrl.time() >= totalDuration - 0.01) { ctrl.play(0); } else { ctrl.play(); }
@@ -431,12 +446,11 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                 key={step.id}
                 onClick={() => jumpToStep(idx)}
                 style={{
-                  flexShrink: 0, width: isActive ? 280 : 192, textAlign: 'left', padding: '10px 12px',
+                  flexShrink: 0, width: 220, textAlign: 'left', padding: '10px 12px',
                   border: `2.5px solid ${isActive ? 'var(--orange)' : 'var(--ink)'}`,
                   background: isActive ? 'rgba(226,84,46,0.08)' : isPast ? 'var(--paper)' : 'var(--cream)',
                   opacity: isPast && !isActive ? 0.55 : 1,
                   cursor: 'pointer',
-                  transition: 'width 0.2s',
                 }}
               >
                 <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: isActive ? 'var(--orange)' : 'var(--ink)', opacity: isActive ? 1 : 0.4, marginBottom: 4 }}>
@@ -445,13 +459,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                 <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: isActive ? 'var(--orange)' : 'var(--ink)', marginBottom: 4, letterSpacing: '0.04em' }}>
                   {step.title.replace(/^\d+\.\s*/, '')}
                 </div>
-                <div
-                  style={
-                    isActive
-                      ? { fontSize: 12, color: 'var(--ink)', opacity: 0.8, lineHeight: 1.5 }
-                      : { fontSize: 11, color: 'var(--ink)', opacity: 0.65, lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }
-                  }
-                >
+                <div style={{ fontSize: 11, color: 'var(--ink)', opacity: 0.7, lineHeight: 1.45, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                   {step.description}
                 </div>
               </button>
