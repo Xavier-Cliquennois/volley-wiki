@@ -327,11 +327,11 @@ export default function GuideContre() {
       <section>
         <h2 style={S.section}>La technique de saut pour le contre</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12 }}>
-          {[
+          {([
             { title: 'Position de départ', items: SAUT_POSITION.map(p => ({ text: p })) },
             { title: "L'impulsion", items: SAUT_IMPULSION.map(([l, t]) => ({ label: l, text: t })) },
             { title: "En l'air", items: SAUT_EN_LAIR.map(p => ({ text: p })) },
-          ].map((col, ci) => (
+          ] as Array<{ title: string; items: Array<{ label?: string; text: string }> }>).map((col, ci) => (
             <div key={ci} style={S.card}>
               <div style={S.label}>{col.title}</div>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>

@@ -116,7 +116,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   onClick={() => setMenuOpen(false)}
                   style={{
                     display: 'block',
-                    padding: '10px 12px',
                     fontFamily: '"Bungee", sans-serif',
                     fontSize: 11,
                     letterSpacing: '0.06em',
