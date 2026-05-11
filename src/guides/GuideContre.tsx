@@ -1,36 +1,6 @@
-const S = {
-  section: { fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.08em', color: 'var(--ink)', marginBottom: 14, paddingBottom: 8, borderBottom: '2.5px solid var(--ink)' } as React.CSSProperties,
-  label: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--orange)', marginBottom: 4 },
-  labelTeal: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--teal)', marginBottom: 4 },
-  card: { background: 'var(--paper)', border: '2.5px solid var(--ink)', padding: '16px 20px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
-  alert: { background: 'var(--yellow)', border: '2.5px solid var(--ink)', padding: '14px 18px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
-  bullet: { color: 'var(--teal)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
-  bulletOrange: { color: 'var(--orange)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
-  stepBadge: { background: 'var(--orange)', color: '#fff', fontFamily: '"Bungee", sans-serif', fontSize: 12, width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 } as React.CSSProperties,
-};
-
-function VideoLink({ title, url }: { title: string; url: string }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        display: 'flex', alignItems: 'center', gap: 8,
-        border: '2px solid var(--ink)', padding: '8px 12px',
-        fontFamily: '"DM Mono", monospace', fontSize: 12,
-        color: 'var(--ink)', textDecoration: 'none',
-        background: 'var(--cream)',
-      }}
-      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--teal)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--teal)'; }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--ink)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--ink)'; }}
-    >
-      <span style={{ color: 'var(--orange)' }}>▶</span>
-      <span style={{ flex: 1 }}>{title}</span>
-      <span style={{ fontSize: 10, opacity: 0.5 }}>YT</span>
-    </a>
-  );
-}
+import GoldenRule from './GoldenRule';
+import VideoLink from './VideoLink';
+import { S } from './styles';
 
 const TIMING_STEPS = [
   {
@@ -162,6 +132,11 @@ const CONSEILS_PRO = [
 export default function GuideContre() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+
+      {/* Règle d'or */}
+      <GoldenRule mantra="BALLON → PASSEUR → BALLON → ÉPAULE DU FRAPPEUR → SAUT → PÉNÉTRATION">
+        Avec de la pratique régulière et une attention particulière au timing, vous améliorerez considérablement vos contres. Mieux vaut un contre bien timé avec une détente moyenne qu'un saut très haut mais mal timé.
+      </GoldenRule>
 
       {/* Fondamentaux */}
       <section>
@@ -390,20 +365,6 @@ export default function GuideContre() {
               <span style={{ color: 'var(--ink)', opacity: 0.7 }}>{text}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Règle d'or */}
-      <section>
-        <div style={{ ...S.alert, display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--ink)' }}>La règle d'or</div>
-          <p style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.04em', color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>
-            BALLON → PASSEUR → BALLON → ÉPAULE DU FRAPPEUR → SAUT → PÉNÉTRATION
-          </p>
-          <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0, lineHeight: 1.6 }}>
-            Avec de la pratique régulière et une attention particulière au timing, vous améliorerez considérablement
-            vos contres. Mieux vaut un contre bien timé avec une détente moyenne qu'un saut très haut mais mal timé.
-          </p>
         </div>
       </section>
 

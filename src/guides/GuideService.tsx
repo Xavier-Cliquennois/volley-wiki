@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import GoldenRule from './GoldenRule';
+import VideoLink from './VideoLink';
 
 const LEVEL_COLOR: Record<string, string> = {
   'Débutant': 'var(--mint)',
@@ -10,39 +12,6 @@ const LEVEL_COLOR: Record<string, string> = {
 const LEVEL_TEXT: Record<string, string> = {
   'Compétition': '#fff',
 };
-
-function VideoLink({ title, url }: { title: string; url: string }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        display: 'flex', alignItems: 'center', gap: 8,
-        padding: '8px 14px',
-        border: '2px solid var(--ink)',
-        background: 'var(--cream)',
-        fontFamily: '"DM Mono", monospace',
-        fontSize: 12,
-        color: 'var(--ink)',
-        textDecoration: 'none',
-        transition: 'all 0.08s',
-      }}
-      onMouseEnter={e => {
-        (e.currentTarget as HTMLElement).style.background = 'var(--teal)';
-        (e.currentTarget as HTMLElement).style.color = 'var(--cream)';
-      }}
-      onMouseLeave={e => {
-        (e.currentTarget as HTMLElement).style.background = 'var(--cream)';
-        (e.currentTarget as HTMLElement).style.color = 'var(--ink)';
-      }}
-    >
-      <span style={{ color: 'var(--orange)', fontSize: 10 }}>▶</span>
-      <span style={{ flex: 1 }}>{title}</span>
-      <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, opacity: 0.5 }}>YT</span>
-    </a>
-  );
-}
 
 type ServiceType = {
   id: string;
@@ -240,12 +209,9 @@ export default function GuideService() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
 
       {/* Règle d'or */}
-      <div style={S.alert}>
-        <div style={{ ...S.label, color: 'var(--ink)' }}>★ RÈGLE D'OR</div>
-        <p style={{ margin: 0, fontFamily: '"Bungee", sans-serif', fontSize: 14, lineHeight: 1.45 }}>
-          80% des erreurs au service viennent du lancer (toss). Stabiliser le lancer en priorité avant de chercher la puissance.
-        </p>
-      </div>
+      <GoldenRule>
+        80% des erreurs au service viennent du lancer (toss). Stabiliser le lancer en priorité avant de chercher la puissance.
+      </GoldenRule>
 
       {/* Service type selector */}
       <section style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -392,15 +358,24 @@ export default function GuideService() {
 
       {/* Hierarchy */}
       <section>
-        <div style={{ border: '3px solid var(--ink)', background: 'var(--yellow)', boxShadow: 'var(--shadow)', padding: 20 }}>
+        <div style={{ border: '3px solid var(--ink)', background: 'var(--cream)', boxShadow: 'var(--shadow)', padding: 20 }}>
           <div style={{ ...S.label, marginBottom: 16 }}>★ HIÉRARCHIE D'APPRENTISSAGE</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, marginBottom: 14 }}>
-            {SERVICE_TYPES.map(t => (
-              <div key={t.id} style={{ border: '2px solid var(--ink)', background: 'var(--cream)', padding: '10px 12px', textAlign: 'center' }}>
-                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: LEVEL_COLOR[t.level] === 'var(--yellow)' ? 'var(--ink)' : LEVEL_COLOR[t.level], marginBottom: 4 }}>{t.name}</div>
-                <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, opacity: 0.6 }}>{t.level}</div>
-              </div>
-            ))}
+            {SERVICE_TYPES.map(t => {
+              const textColor = LEVEL_TEXT[t.level] || 'var(--ink)';
+              return (
+                <div key={t.id} style={{
+                  border: '2.5px solid var(--ink)',
+                  background: LEVEL_COLOR[t.level],
+                  padding: '10px 12px',
+                  textAlign: 'center',
+                  boxShadow: 'var(--shadow-sm)',
+                }}>
+                  <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: textColor, marginBottom: 4 }}>{t.name}</div>
+                  <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: textColor, opacity: 0.7 }}>{t.level}</div>
+                </div>
+              );
+            })}
           </div>
           <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5 }}>
             Maîtriser chaque niveau avant de passer au suivant. <strong>La régularité prime sur la puissance.</strong>
