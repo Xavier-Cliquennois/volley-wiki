@@ -4,7 +4,7 @@ export const Court = () => (
   <group>
     <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
       <planeGeometry args={[9, 18]} />
-      <ToonMaterial color="#e67e22" />
+      <ToonMaterial color="#c89558" />
     </mesh>
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]}>
       <planeGeometry args={[9, 0.05]} />

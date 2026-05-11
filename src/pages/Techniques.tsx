@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 type Level = 'Débutant' | 'Intermédiaire' | 'Avancé';
 
-const LEVEL_STYLE: Record<Level, string> = {
-  'Débutant': 'text-green-400 border-green-400/50',
-  'Intermédiaire': 'text-yellow-400 border-yellow-400/50',
-  'Avancé': 'text-orange-400 border-orange-400/50',
+const LEVEL_COLOR: Record<Level, string> = {
+  'Débutant': 'var(--mint)',
+  'Intermédiaire': 'var(--yellow)',
+  'Avancé': 'var(--orange)',
 };
 
 type Tag = 'Service' | 'Réception' | 'Passe' | 'Attaque' | 'Défense' | 'Débutant' | 'Intermédiaire' | 'Avancé';
@@ -190,113 +190,161 @@ export default function Techniques() {
     : TECHNIQUES.filter(t => activeTags.some(tag => t.tags.includes(tag)));
 
   return (
-    <div className="space-y-12">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+      {/* Header */}
       <div>
-        <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">Documentation</div>
-        <h1 className="text-4xl font-bold text-white mb-3">Techniques fondamentales</h1>
-        <p className="text-gray-400">Les gestes clés du volleyball — descriptions, points clés, erreurs à éviter et ressources vidéo.</p>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ DOCUMENTATION
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          TECHNIQUES FONDAMENTALES
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7, maxWidth: 600 }}>
+          Les gestes clés du volleyball — descriptions, points clés, erreurs à éviter et ressources vidéo.
+        </p>
       </div>
 
       {/* Filtres */}
-      <div className="space-y-3">
-        <div className="flex items-start gap-6 flex-wrap">
-          <div className="space-y-1.5">
-            <div className="text-gray-600 text-xs uppercase tracking-widest">Catégorie</div>
-            <div className="flex flex-wrap gap-1">
-              {CATEGORY_TAGS.map(tag => (
-                <button
-                  key={tag}
-                  onClick={() => toggle(tag)}
-                  className={`px-3 py-1 text-xs uppercase tracking-wider border transition-colors ${
-                    activeTags.includes(tag)
-                      ? 'border-yellow-400 text-yellow-400 bg-yellow-400/10'
-                      : 'border-gray-700 text-gray-400 hover:border-gray-500 hover:text-gray-200'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', marginBottom: 8, opacity: 0.6 }}>CATÉGORIE</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {CATEGORY_TAGS.map(tag => {
+                const on = activeTags.includes(tag);
+                return (
+                  <button
+                    key={tag}
+                    onClick={() => toggle(tag)}
+                    style={{
+                      padding: '6px 14px',
+                      fontFamily: '"Bungee", sans-serif',
+                      fontSize: 10,
+                      letterSpacing: '0.06em',
+                      border: '2.5px solid var(--ink)',
+                      background: on ? 'var(--orange)' : 'var(--cream)',
+                      color: 'var(--ink)',
+                      cursor: 'pointer',
+                      boxShadow: on ? 'var(--shadow-sm)' : 'none',
+                      transform: on ? 'translate(-1px,-1px)' : 'none',
+                      transition: 'all 0.08s',
+                    }}
+                  >
+                    {tag}
+                  </button>
+                );
+              })}
             </div>
           </div>
-          <div className="space-y-1.5">
-            <div className="text-gray-600 text-xs uppercase tracking-widest">Niveau</div>
-            <div className="flex flex-wrap gap-1">
-              {LEVEL_TAGS.map(tag => (
-                <button
-                  key={tag}
-                  onClick={() => toggle(tag)}
-                  className={`px-3 py-1 text-xs uppercase tracking-wider border transition-colors ${
-                    activeTags.includes(tag)
-                      ? `${LEVEL_STYLE[tag as Level]} bg-current/10`
-                      : 'border-gray-700 text-gray-400 hover:border-gray-500 hover:text-gray-200'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
+          <div>
+            <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', marginBottom: 8, opacity: 0.6 }}>NIVEAU</div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {LEVEL_TAGS.map(tag => {
+                const on = activeTags.includes(tag);
+                return (
+                  <button
+                    key={tag}
+                    onClick={() => toggle(tag)}
+                    style={{
+                      padding: '6px 14px',
+                      fontFamily: '"Bungee", sans-serif',
+                      fontSize: 10,
+                      letterSpacing: '0.06em',
+                      border: '2.5px solid var(--ink)',
+                      background: on ? LEVEL_COLOR[tag as Level] : 'var(--cream)',
+                      color: 'var(--ink)',
+                      cursor: 'pointer',
+                      boxShadow: on ? 'var(--shadow-sm)' : 'none',
+                      transform: on ? 'translate(-1px,-1px)' : 'none',
+                      transition: 'all 0.08s',
+                    }}
+                  >
+                    {tag}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
 
         {activeTags.length > 0 && (
-          <div className="flex items-center gap-3">
-            <span className="text-gray-600 text-xs">{filtered.length} technique{filtered.length !== 1 ? 's' : ''}</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 12, opacity: 0.6 }}>{filtered.length} technique{filtered.length !== 1 ? 's' : ''}</span>
             <button
               onClick={() => setActiveTags([])}
-              className="text-xs text-gray-600 hover:text-yellow-400 transition-colors underline underline-offset-2"
+              style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.08em', color: 'var(--orange)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}
             >
-              Tout afficher
+              TOUT AFFICHER
             </button>
           </div>
         )}
       </div>
 
-      {/* Cartes */}
-      <div className="space-y-6">
-        <div className="flex items-center gap-3">
-          <div className="h-px flex-1 bg-gray-800" />
-          <span className="text-gray-500 text-xs uppercase tracking-widest">Fiches techniques</span>
-          <div className="h-px flex-1 bg-gray-800" />
-        </div>
+      {/* Section header */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>★ FICHES TECHNIQUES</span>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+      </div>
 
+      {/* Cards */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         {filtered.length === 0 ? (
-          <div className="text-center text-gray-600 py-12 border-2 border-gray-800">
-            Aucune technique pour cette combinaison de filtres.
+          <div style={{ border: '3px dashed var(--ink)', padding: '32px 20px', textAlign: 'center', background: 'var(--paper)' }}>
+            <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, opacity: 0.6 }}>AUCUNE TECHNIQUE POUR CETTE COMBINAISON</div>
           </div>
         ) : (
           filtered.map(t => (
-            <div key={t.id} className="border-2 border-gray-700 overflow-hidden">
-              <div className="p-6 space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl">{t.icon}</span>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 flex-wrap mb-1">
-                      <h2 className="text-white font-bold text-xl">{t.name}</h2>
-                      <span className={`text-xs border px-2 py-0.5 ${LEVEL_STYLE[t.level]}`}>{t.level}</span>
-                    </div>
-                    <div className="text-yellow-400 text-xs uppercase tracking-wider">Quand : {t.when}</div>
+            <div key={t.id} style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', overflow: 'hidden' }}>
+              {/* Card header */}
+              <div style={{ padding: '20px 24px', borderBottom: '2px solid var(--ink)', background: 'var(--paper)', display: 'flex', alignItems: 'flex-start', gap: 16 }}>
+                <span style={{ fontSize: 30 }}>{t.icon}</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 4 }}>
+                    <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, margin: 0, letterSpacing: '0.03em' }}>{t.name}</h2>
+                    <span style={{
+                      padding: '2px 10px',
+                      border: '2.5px solid var(--ink)',
+                      background: LEVEL_COLOR[t.level],
+                      fontFamily: '"Bungee", sans-serif',
+                      fontSize: 9,
+                      letterSpacing: '0.1em',
+                    }}>{t.level.toUpperCase()}</span>
+                  </div>
+                  <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 12, letterSpacing: '0.08em', color: 'var(--teal)' }}>
+                    QUAND : {t.when}
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">{t.description}</p>
+              </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+              {/* Card body */}
+              <div style={{ padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: 18 }}>
+                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, opacity: 0.8 }}>{t.description}</p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
+                  {/* Key points */}
                   <div>
-                    <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Points clés</div>
-                    <ul className="space-y-1">
+                    <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--teal)', marginBottom: 10 }}>
+                      ★ POINTS CLÉS
+                    </div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {t.keyPoints.map((pt, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                          <span className="text-yellow-400 mt-0.5">▸</span>
+                        <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5, lineHeight: 1.45 }}>
+                          <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--teal)', flexShrink: 0 }}>▸</span>
                           {pt}
                         </li>
                       ))}
                     </ul>
                   </div>
+                  {/* Errors */}
                   <div>
-                    <div className="text-red-400 text-xs uppercase tracking-wider mb-2">Erreurs à éviter</div>
-                    <ul className="space-y-1">
+                    <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--orange)', marginBottom: 10 }}>
+                      ✗ ERREURS À ÉVITER
+                    </div>
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
                       {t.errors.map((err, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                          <span className="text-red-400 mt-0.5">✗</span>
+                        <li key={i} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13.5, lineHeight: 1.45 }}>
+                          <span style={{ fontFamily: '"Bungee", sans-serif', color: 'var(--orange)', flexShrink: 0 }}>✗</span>
                           {err}
                         </li>
                       ))}
@@ -305,17 +353,36 @@ export default function Techniques() {
                 </div>
               </div>
 
+              {/* Videos */}
               {t.videos.length > 0 && (
-                <div className="border-t border-gray-800 px-6 py-3 flex flex-wrap gap-2">
+                <div style={{ borderTop: '2px dashed rgba(26,24,18,0.18)', padding: '12px 24px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                   {t.videos.map((v, i) => (
                     <a
                       key={i}
                       href={v.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-yellow-400 transition-colors border border-gray-800 hover:border-yellow-400/50 px-2 py-1"
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 6,
+                        padding: '6px 12px',
+                        border: '2px solid var(--ink)',
+                        fontFamily: '"DM Mono", monospace',
+                        fontSize: 11,
+                        color: 'var(--ink)',
+                        textDecoration: 'none',
+                        background: 'var(--cream)',
+                        transition: 'all 0.08s',
+                      }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.background = 'var(--teal)';
+                        (e.currentTarget as HTMLElement).style.color = 'var(--cream)';
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.background = 'var(--cream)';
+                        (e.currentTarget as HTMLElement).style.color = 'var(--ink)';
+                      }}
                     >
-                      <span className="text-yellow-400">▶</span>
+                      <span style={{ color: 'var(--orange)', fontSize: 10 }}>▶</span>
                       {v.title}
                     </a>
                   ))}

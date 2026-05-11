@@ -1,57 +1,152 @@
 import { Link } from 'react-router-dom';
 
 const FEATURES = [
-  { icon: '🎯', title: 'Techniques', desc: 'Animations 3D interactives des gestes fondamentaux', to: '/techniques' },
-  { icon: '📍', title: 'Positions', desc: 'Rôles et responsabilités de chaque poste sur le terrain', to: '/positions' },
-  { icon: '📚', title: 'Guides', desc: 'Guides techniques et tactiques détaillés', to: '/guides' },
-  { icon: '📋', title: 'Règles', desc: 'Règlement officiel FIVB simplifié et expliqué', to: '/rules' },
-  { icon: '📖', title: 'Glossaire', desc: 'Vocabulaire technique du volleyball', to: '/glossary' },
+  { label: '01', title: 'Techniques', desc: 'Animations 3D interactives des gestes fondamentaux du volleyball.', to: '/techniques', accent: 'var(--orange)' },
+  { label: '02', title: 'Positions', desc: 'Rôles et responsabilités de chaque poste sur le terrain.', to: '/positions', accent: 'var(--teal)' },
+  { label: '03', title: 'Guides', desc: 'Guides techniques et tactiques détaillés avec diagrammes.', to: '/guides', accent: 'var(--pink)' },
+  { label: '04', title: 'Règles', desc: 'Règlement officiel FIVB simplifié et expliqué.', to: '/rules', accent: 'var(--yellow)' },
+  { label: '05', title: 'Glossaire', desc: 'Vocabulaire technique complet du volleyball.', to: '/glossary', accent: 'var(--mint)' },
+  { label: '06', title: 'Scénarios', desc: 'Séquences de jeu animées en 3D : attaque, défense, réception.', to: '/scenarios', accent: 'var(--plum)' },
 ];
 
 export default function Home() {
   return (
-    <div className="space-y-16">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
       {/* Hero */}
-      <section className="text-center space-y-6 py-8">
-        <div className="inline-block border-2 border-yellow-400 px-6 py-2 text-yellow-400 text-xs uppercase tracking-widest mb-4">
-          Documentation interactive
-        </div>
-        <h1 className="text-5xl md:text-7xl font-bold text-white leading-none">
-          Volley<span className="text-yellow-400">Wiki</span>
-        </h1>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          La référence technique du volleyball — techniques animées en 3D, règles, positions, et glossaire.
-        </p>
-        <div className="flex items-center justify-center gap-4 pt-2">
-          <Link to="/techniques" className="px-6 py-3 bg-yellow-400 text-black text-sm font-bold uppercase tracking-wider hover:bg-yellow-300 transition-colors border-2 border-yellow-600">
-            Voir les techniques
-          </Link>
-          <Link to="/rules" className="px-6 py-3 border-2 border-gray-600 text-gray-300 text-sm uppercase tracking-wider hover:border-gray-400 transition-colors">
-            Lire les règles
-          </Link>
+      <section style={{ paddingTop: 24 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 40, alignItems: 'center' }}>
+          <div>
+            <div style={{
+              display: 'inline-block',
+              padding: '4px 14px',
+              background: 'var(--pink)',
+              border: '3px solid var(--ink)',
+              boxShadow: 'var(--shadow-sm)',
+              transform: 'rotate(-2deg)',
+              marginBottom: 20,
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 11,
+              letterSpacing: '0.1em',
+            }}>
+              ★ DOCUMENTATION INTERACTIVE ★
+            </div>
+            <h1 style={{
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 'clamp(56px, 8vw, 96px)',
+              lineHeight: 0.92,
+              margin: '0 0 20px 0',
+              letterSpacing: '-0.01em',
+            }}>
+              <span style={{ color: 'var(--orange)', textShadow: '4px 4px 0 var(--ink)' }}>VOLLEY</span>
+              <br />
+              <span style={{ color: 'var(--teal)', textShadow: '4px 4px 0 var(--ink)' }}>WIKI</span>
+            </h1>
+            <p style={{ fontSize: 17, maxWidth: 480, margin: '0 0 28px 0', color: 'var(--ink)', opacity: 0.75 }}>
+              La référence technique du volleyball — techniques animées en 3D, règles, positions et glossaire.
+            </p>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <Link to="/techniques" style={{
+                padding: '12px 24px',
+                background: 'var(--orange)',
+                border: '3px solid var(--ink)',
+                boxShadow: 'var(--shadow)',
+                fontFamily: '"Bungee", sans-serif',
+                fontSize: 13,
+                letterSpacing: '0.06em',
+                color: 'var(--ink)',
+                textDecoration: 'none',
+                display: 'inline-block',
+                transition: 'transform 0.08s, box-shadow 0.08s',
+              }}>
+                VOIR LES TECHNIQUES
+              </Link>
+              <Link to="/rules" style={{
+                padding: '12px 24px',
+                background: 'var(--cream)',
+                border: '3px solid var(--ink)',
+                boxShadow: 'var(--shadow)',
+                fontFamily: '"Bungee", sans-serif',
+                fontSize: 13,
+                letterSpacing: '0.06em',
+                color: 'var(--ink)',
+                textDecoration: 'none',
+                display: 'inline-block',
+              }}>
+                LIRE LES RÈGLES
+              </Link>
+            </div>
+          </div>
+          {/* Stamp */}
+          <div style={{ display: 'flex', justifyContent: 'center' }} className="hidden md:flex">
+            <div style={{
+              width: 220, height: 220, borderRadius: '50%',
+              background: 'var(--yellow)',
+              border: '4px solid var(--ink)',
+              position: 'relative',
+              display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+              transform: 'rotate(-6deg)',
+              boxShadow: 'var(--shadow-lg)',
+            }}>
+              <div style={{ position: 'absolute', inset: 12, borderRadius: '50%', border: '2px dashed var(--ink)' }} />
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.2em', color: 'var(--teal)' }}>★ BÊTA ★</div>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 44, lineHeight: 1, color: 'var(--orange)', textShadow: '2px 2px 0 var(--ink)' }}>V0.5</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="flex items-center gap-4">
-        <div className="flex-1 h-px bg-gray-800" />
-        <span className="text-gray-600 text-xs uppercase tracking-widest">Sections</span>
-        <div className="flex-1 h-px bg-gray-800" />
+      {/* Section divider */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.2em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>★ SECTIONS ★</span>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
       </div>
 
       {/* Feature cards */}
-      <section className="grid md:grid-cols-2 gap-4">
+      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 20 }}>
         {FEATURES.map(f => (
           <Link
             key={f.to}
             to={f.to}
-            className="border-2 border-gray-700 hover:border-yellow-400 p-6 transition-colors group"
+            style={{
+              display: 'block',
+              background: 'var(--cream)',
+              border: '3px solid var(--ink)',
+              boxShadow: 'var(--shadow)',
+              padding: 24,
+              textDecoration: 'none',
+              color: 'var(--ink)',
+              transition: 'transform 0.08s, box-shadow 0.08s',
+              position: 'relative',
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.transform = 'translate(-2px, -2px)';
+              (e.currentTarget as HTMLElement).style.boxShadow = '7px 7px 0 var(--ink)';
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.transform = '';
+              (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow)';
+            }}
           >
-            <div className="text-3xl mb-3">{f.icon}</div>
-            <h2 className="text-white font-bold text-lg mb-2 group-hover:text-yellow-400 transition-colors">{f.title}</h2>
-            <p className="text-gray-500 text-sm">{f.desc}</p>
-            <div className="mt-4 text-yellow-400 text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-              Explorer →
+            <div style={{
+              position: 'absolute', top: -10, right: 14,
+              padding: '2px 10px',
+              background: f.accent,
+              border: '2.5px solid var(--ink)',
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 10,
+              letterSpacing: '0.1em',
+            }}>{f.label}</div>
+            <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 22, margin: '0 0 10px 0', letterSpacing: '0.03em' }}>{f.title}</h2>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, opacity: 0.75 }}>{f.desc}</p>
+            <div style={{
+              marginTop: 16,
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 10,
+              letterSpacing: '0.12em',
+              color: 'var(--orange)',
+            }}>
+              EXPLORER →
             </div>
           </Link>
         ))}

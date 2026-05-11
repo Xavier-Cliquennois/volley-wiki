@@ -8,14 +8,11 @@ import type { Scenario } from './types';
 
 type ScenarioPlayerProps = {
   scenario: Scenario;
-  /** When the player is embedded under a filter bar that already shows
-   *  the context, hide the redundant top badges. */
   hideHeader?: boolean;
 };
 
 type PlaybackMode = 'auto' | 'step';
 
-// Find the active narrative step from the current timeline time
 function findActiveStepIndex(steps: Scenario['steps'], time: number): number {
   let idx = 0;
   for (let i = 0; i < steps.length; i++) {
@@ -24,9 +21,6 @@ function findActiveStepIndex(steps: Scenario['steps'], time: number): number {
   return idx;
 }
 
-// End time of a step = start time of the next step with a STRICTLY greater
-// startTime (steps with the same startTime represent parallel actions and
-// should play together). Falls back to the timeline end for the last step.
 function getStepEndTime(scenario: Scenario, stepIdx: number): number {
   const currentStart = scenario.steps[stepIdx]?.startTime ?? 0;
   for (let i = stepIdx + 1; i < scenario.steps.length; i++) {
@@ -34,6 +28,13 @@ function getStepEndTime(scenario: Scenario, stepIdx: number): number {
   }
   return scenario.timeline.reduce((max, a) => Math.max(max, a.time + a.duration), 0);
 }
+
+const btnSm: React.CSSProperties = {
+  padding: '6px 10px', fontFamily: '"DM Mono", monospace', fontSize: 11,
+  border: '2px solid var(--ink)', background: 'var(--cream)', color: 'var(--ink)',
+  cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+};
+const btnActive: React.CSSProperties = { ...btnSm, background: 'var(--orange)', color: '#fff', borderColor: 'var(--orange)' };
 
 export default function ScenarioPlayer({ scenario, hideHeader = false }: ScenarioPlayerProps) {
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
@@ -54,7 +55,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
 
   const { animateToPreset } = useCameraControls(cameraRef);
 
-  // Reset when scenario changes
   useEffect(() => {
     setIsPlaying(false);
     setHasStarted(false);
@@ -74,26 +74,18 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     const ctrl = controllerRef.current;
     if (!ctrl) return;
     const time = ctrl.time();
-
-    // Step mode: pause when reaching the boundary of the current step
     if (stepBoundaryRef.current !== null && time >= stepBoundaryRef.current) {
       ctrl.time(stepBoundaryRef.current);
       ctrl.pause();
       stepBoundaryRef.current = null;
       setIsPlaying(false);
     }
-
-    // In step mode, the active step is driven by user clicks — do not let
-    // time-based detection override it (would skip past parallel-start steps).
     if (modeRef.current === 'auto') {
       const idx = findActiveStepIndex(scenario.steps, ctrl.time());
       setActiveStepIdx(idx);
     }
   }, [scenario.steps]);
 
-  // Auto-scroll the step strip to keep the active step visible.
-  // We scroll the strip element directly (not via scrollIntoView) to avoid
-  // moving the whole page on mobile when a step becomes active.
   useEffect(() => {
     const strip = stepStripRef.current;
     if (!strip) return;
@@ -108,7 +100,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     setCurrentCameraPreset(preset);
   }, [animateToPreset]);
 
-  // Play one step from start to its end then pause (used in step mode)
   const playSingleStep = useCallback((stepIdx: number) => {
     const ctrl = controllerRef.current;
     const step = scenario.steps[stepIdx];
@@ -121,27 +112,19 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     if (!hasStarted) setHasStarted(true);
   }, [scenario, hasStarted]);
 
-  // Play/Lancer always switches to auto mode — user requested behavior
   const togglePlay = () => {
     const ctrl = controllerRef.current;
     if (!ctrl) return;
-
     if (isPlaying) {
       ctrl.pause();
       stepBoundaryRef.current = null;
       setIsPlaying(false);
       return;
     }
-
-    // Switch to auto mode and play from current position (or restart if at end)
     setMode('auto');
     stepBoundaryRef.current = null;
     const totalDuration = ctrl.duration();
-    if (ctrl.time() >= totalDuration - 0.01) {
-      ctrl.play(0);
-    } else {
-      ctrl.play();
-    }
+    if (ctrl.time() >= totalDuration - 0.01) { ctrl.play(0); } else { ctrl.play(); }
     setIsPlaying(true);
     if (!hasStarted) setHasStarted(true);
   };
@@ -169,37 +152,26 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
   const jumpToStep = (stepIdx: number) => {
     const step = scenario.steps[stepIdx];
     if (!controllerRef.current || !step) return;
-    // Clicking a card always activates step mode and plays that step
     setMode('step');
     playSingleStep(stepIdx);
   };
 
   const stepForward = () => {
     if (activeStepIdx < scenario.steps.length - 1) {
-      if (mode === 'step') {
-        playSingleStep(activeStepIdx + 1);
-      } else {
+      if (mode === 'step') { playSingleStep(activeStepIdx + 1); }
+      else {
         const next = scenario.steps[activeStepIdx + 1];
-        if (next && controllerRef.current) {
-          controllerRef.current.time(next.startTime);
-          setActiveStepIdx(activeStepIdx + 1);
-          if (!hasStarted) setHasStarted(true);
-        }
+        if (next && controllerRef.current) { controllerRef.current.time(next.startTime); setActiveStepIdx(activeStepIdx + 1); if (!hasStarted) setHasStarted(true); }
       }
     }
   };
 
   const stepBackward = () => {
     if (activeStepIdx > 0) {
-      if (mode === 'step') {
-        playSingleStep(activeStepIdx - 1);
-      } else {
+      if (mode === 'step') { playSingleStep(activeStepIdx - 1); }
+      else {
         const prev = scenario.steps[activeStepIdx - 1];
-        if (prev && controllerRef.current) {
-          controllerRef.current.time(prev.startTime);
-          setActiveStepIdx(activeStepIdx - 1);
-          if (!hasStarted) setHasStarted(true);
-        }
+        if (prev && controllerRef.current) { controllerRef.current.time(prev.startTime); setActiveStepIdx(activeStepIdx - 1); if (!hasStarted) setHasStarted(true); }
       }
     }
   };
@@ -209,15 +181,8 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     const ctrl = controllerRef.current;
     if (!ctrl) { setMode(next); return; }
     stepBoundaryRef.current = null;
-    if (next === 'step') {
-      ctrl.pause();
-      setIsPlaying(false);
-    } else {
-      // Switch to auto: resume from current position
-      ctrl.play();
-      setIsPlaying(true);
-      if (!hasStarted) setHasStarted(true);
-    }
+    if (next === 'step') { ctrl.pause(); setIsPlaying(false); }
+    else { ctrl.play(); setIsPlaying(true); if (!hasStarted) setHasStarted(true); }
     setMode(next);
   };
 
@@ -231,7 +196,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
 
   const activeStep = scenario.steps[activeStepIdx];
 
-  // Total timeline duration — used to position step markers on the progress bar
   const totalDuration = useMemo(
     () => scenario.timeline.reduce((max, a) => Math.max(max, a.time + a.duration), 0),
     [scenario.timeline]
@@ -246,61 +210,55 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
   }, [scenario.config.phase]);
 
   return (
-    <div className="space-y-4">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+
       {/* Header — context badges + mode toggle */}
-      <div className={`flex flex-wrap items-center gap-3 ${hideHeader ? 'justify-end' : 'justify-between'}`}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, justifyContent: hideHeader ? 'flex-end' : 'space-between' }}>
         {!hideHeader && (
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="px-3 py-1 border-2 border-yellow-400 text-yellow-400 text-xs uppercase tracking-widest">
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
+            <div style={{ padding: '3px 12px', border: '2.5px solid var(--orange)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)' }}>
               {scenario.config.teamSize}v{scenario.config.teamSize}
             </div>
-            <div className="px-3 py-1 border-2 border-gray-700 text-gray-300 text-xs uppercase tracking-widest">
+            <div style={{ padding: '3px 12px', border: '2px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink)' }}>
               {phaseLabel}
             </div>
-            <div className="px-3 py-1 border border-gray-700 text-gray-400 text-xs uppercase tracking-wider">
+            <div style={{ padding: '3px 12px', border: '1.5px solid var(--ink)', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.6 }}>
               {scenario.config.contextLabel}
             </div>
           </div>
         )}
-        <div className="flex items-center border-2 border-gray-700">
+        <div style={{ display: 'flex', alignItems: 'center', border: '2.5px solid var(--ink)' }}>
           <button
             onClick={() => handleModeChange('auto')}
-            className={`px-3 py-2 text-xs uppercase tracking-wider transition-colors ${
-              mode === 'auto'
-                ? 'bg-yellow-400 text-black font-bold'
-                : 'text-gray-400 hover:text-gray-200'
-            }`}
+            style={mode === 'auto' ? { ...btnActive, padding: '6px 12px' } : { ...btnSm, padding: '6px 12px' }}
           >
             ▶ Auto
           </button>
           <button
             onClick={() => handleModeChange('step')}
-            className={`px-3 py-2 text-xs uppercase tracking-wider transition-colors border-l-2 border-gray-700 ${
-              mode === 'step'
-                ? 'bg-yellow-400 text-black font-bold'
-                : 'text-gray-400 hover:text-gray-200'
-            }`}
+            style={{ ...(mode === 'step' ? btnActive : btnSm), padding: '6px 12px', borderLeft: '2px solid var(--ink)' }}
           >
             ⏯ Étape
           </button>
         </div>
       </div>
 
-      {/* Main grid: 3D + active step (side-by-side desktop, stacked mobile) */}
-      <div className="grid md:grid-cols-5 gap-4">
+      {/* Main grid: 3D + active step */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 3fr) minmax(0, 2fr)', gap: 14 }}>
         {/* 3D viewer */}
-        <div className="border-2 border-gray-700 bg-gray-900 md:col-span-3">
+        <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow)' }}>
           {/* Camera presets */}
-          <div className="border-b-2 border-gray-700 px-3 py-2 flex items-center gap-1 overflow-x-auto">
+          <div style={{ borderBottom: '2px solid var(--ink)', padding: '6px 10px', display: 'flex', alignItems: 'center', gap: 4, overflowX: 'auto', background: 'var(--cream)' }}>
             {(Object.keys(CAMERA_PRESETS) as CameraPresetKey[]).map(key => (
               <button
                 key={key}
                 onClick={() => handlePresetChange(key)}
-                className={`px-2 py-1 text-xs border whitespace-nowrap transition-colors ${
-                  currentCameraPreset === key
-                    ? 'bg-yellow-400 text-black border-yellow-400'
-                    : 'text-gray-400 border-gray-600 hover:border-gray-400'
-                }`}
+                style={{
+                  padding: '3px 8px', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.1em',
+                  border: '1.5px solid var(--ink)', whiteSpace: 'nowrap', cursor: 'pointer',
+                  background: currentCameraPreset === key ? 'var(--orange)' : 'var(--cream)',
+                  color: currentCameraPreset === key ? '#fff' : 'var(--ink)',
+                }}
               >
                 {CAMERA_PRESETS[key].label}
               </button>
@@ -308,7 +266,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
           </div>
 
           {/* Canvas */}
-          <div className="relative aspect-[4/3] md:aspect-auto md:h-[440px]">
+          <div style={{ position: 'relative', aspectRatio: '4/3' }}>
             <Canvas shadows="percentage" camera={{ position: [0, 9, 18], fov: 50 }}>
               <ScenarioScene
                 scenario={scenario}
@@ -324,13 +282,22 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
             {/* Play overlay */}
             {!hasStarted && (
               <div
-                className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center cursor-pointer"
+                style={{
+                  position: 'absolute', inset: 0,
+                  background: 'rgba(26,24,18,0.72)',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                  cursor: 'pointer',
+                }}
                 onClick={handleStart}
               >
-                <div className="w-20 h-20 bg-yellow-400 flex items-center justify-center border-2 border-yellow-600 mb-3">
-                  <span className="text-4xl ml-1 text-black">▶</span>
+                <div style={{
+                  width: 72, height: 72, background: 'var(--orange)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  border: '2.5px solid var(--ink)', boxShadow: 'var(--shadow)', marginBottom: 12,
+                }}>
+                  <span style={{ fontSize: 36, marginLeft: 4, color: '#fff' }}>▶</span>
                 </div>
-                <span className="text-white text-xs uppercase tracking-widest">
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--cream)' }}>
                   {mode === 'step' ? 'Lancer étape par étape' : 'Lancer la séquence'}
                 </span>
               </div>
@@ -338,8 +305,8 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
           </div>
 
           {/* Progress bar with clickable step markers */}
-          <div className="relative h-6 bg-gray-800 border-t-2 border-gray-700">
-            <div className="absolute inset-y-0 left-0 bg-yellow-400/30" style={{ width: `${progress * 100}%` }} />
+          <div style={{ position: 'relative', height: 24, background: 'var(--paper)', borderTop: '2px solid var(--ink)' }}>
+            <div style={{ position: 'absolute', inset: 0, right: 'auto', background: 'rgba(226,84,46,0.25)', width: `${progress * 100}%` }} />
             {scenario.steps.map((step, idx) => {
               const pct = totalDuration > 0 ? (step.startTime / totalDuration) * 100 : 0;
               const isActive = idx === activeStepIdx;
@@ -350,67 +317,52 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                   onClick={() => jumpToStep(idx)}
                   title={`Étape ${idx + 1} — ${step.title.replace(/^\d+\.\s*/, '')}`}
                   aria-label={`Étape ${idx + 1}`}
-                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 group"
-                  style={{ left: `${pct}%` }}
+                  style={{ position: 'absolute', top: '50%', left: `${pct}%`, transform: 'translate(-50%, -50%)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
                 >
-                  <span
-                    className={`block w-3 h-3 border-2 transition-all ${
-                      isActive
-                        ? 'bg-yellow-400 border-yellow-300 scale-125'
-                        : isPast
-                          ? 'bg-yellow-600 border-yellow-700'
-                          : 'bg-gray-700 border-gray-500 hover:bg-gray-500 hover:border-gray-300'
-                    }`}
-                  />
-                  <span className="absolute left-1/2 -translate-x-1/2 -top-7 px-2 py-0.5 text-[10px] uppercase tracking-wider bg-gray-900 border border-gray-600 text-gray-200 whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
-                    {idx + 1}
-                  </span>
+                  <span style={{
+                    display: 'block', width: 12, height: 12,
+                    border: '2px solid var(--ink)',
+                    background: isActive ? 'var(--orange)' : isPast ? 'rgba(226,84,46,0.5)' : 'var(--cream)',
+                    transform: isActive ? 'scale(1.3)' : 'scale(1)',
+                    transition: 'all 0.15s',
+                  }} />
                 </button>
               );
             })}
           </div>
 
           {/* Controls */}
-          <div className="border-t-2 border-gray-700 px-3 py-3 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-2">
-              <button
-                onClick={cycleSpeed}
-                className="px-3 py-2 text-xs border border-gray-600 text-gray-300 hover:border-gray-400 min-w-[48px] uppercase tracking-wider"
-              >
+          <div style={{ borderTop: '2px solid var(--ink)', padding: '10px 12px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 10, background: 'var(--cream)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <button onClick={cycleSpeed} style={{ ...btnSm, minWidth: 44, fontFamily: '"Bungee", sans-serif', fontSize: 10 }}>
                 {speed}×
               </button>
               <button
                 onClick={() => setShowTrail(t => !t)}
                 title="Affiche une traînée derrière le ballon pour visualiser sa trajectoire"
-                className={`px-3 py-2 text-xs border uppercase tracking-wider ${
-                  showTrail ? 'border-yellow-400 text-yellow-400' : 'border-gray-600 text-gray-400 hover:border-gray-400'
-                }`}
+                style={showTrail ? { ...btnActive, padding: '4px 10px' } : { ...btnSm, padding: '4px 10px' }}
               >
                 Traînée
               </button>
               <button
                 onClick={() => setShowZones(z => !z)}
                 title="Affiche les 6 zones FIVB sur le terrain"
-                className={`px-3 py-2 text-xs border uppercase tracking-wider ${
-                  showZones ? 'border-yellow-400 text-yellow-400' : 'border-gray-600 text-gray-400 hover:border-gray-400'
-                }`}
+                style={showZones ? { ...btnActive, padding: '4px 10px' } : { ...btnSm, padding: '4px 10px' }}
               >
                 Zones
               </button>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <button
                 onClick={stepBackward}
                 disabled={activeStepIdx === 0}
-                className="w-10 h-10 border border-gray-600 text-gray-300 hover:border-gray-400 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed"
+                style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === 0 ? 0.3 : 1 }}
                 aria-label="Étape précédente"
-              >
-                ⏮
-              </button>
+              >⏮</button>
               <button
                 onClick={togglePlay}
-                className="w-12 h-12 bg-yellow-400 border-2 border-yellow-600 text-black flex items-center justify-center text-lg font-bold"
+                style={{ width: 48, height: 48, background: 'var(--orange)', border: '2.5px solid var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, cursor: 'pointer', boxShadow: 'var(--shadow-sm)' }}
                 aria-label={isPlaying ? 'Pause' : 'Lecture'}
               >
                 {isPlaying ? '⏸' : '▶'}
@@ -418,56 +370,48 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
               <button
                 onClick={stepForward}
                 disabled={activeStepIdx === scenario.steps.length - 1}
-                className="w-10 h-10 border border-gray-600 text-gray-300 hover:border-gray-400 flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed"
+                style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1 }}
                 aria-label="Étape suivante"
-              >
-                ⏭
-              </button>
-              <button
-                onClick={restart}
-                className="w-10 h-10 border border-gray-600 text-gray-300 hover:border-gray-400 flex items-center justify-center"
-                aria-label="Recommencer"
-              >
-                ↺
-              </button>
+              >⏭</button>
+              <button onClick={restart} style={{ ...btnSm, width: 38, height: 38 }} aria-label="Recommencer">↺</button>
             </div>
           </div>
 
           {/* Player legend */}
-          <div className="border-t-2 border-gray-700 px-3 py-2 flex flex-wrap items-center gap-3">
+          <div style={{ borderTop: '2px solid var(--ink)', padding: '6px 12px', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, background: 'var(--cream)' }}>
             {scenario.players.map(p => (
-              <div key={p.id} className="flex items-center gap-1">
-                <div className="w-3 h-3 border border-gray-500" style={{ backgroundColor: p.color }} />
-                <span className="text-gray-400 text-xs">{p.label}</span>
+              <div key={p.id} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <div style={{ width: 12, height: 12, border: '1.5px solid var(--ink)', backgroundColor: p.color }} />
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.75 }}>{p.label}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Active step card */}
-        <div className="border-2 border-gray-700 bg-gray-900 p-4 md:p-6 md:col-span-2 flex flex-col">
-          <div className="text-yellow-400 text-xs uppercase tracking-widest mb-2">
+        <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', padding: '20px 22px', display: 'flex', flexDirection: 'column', boxShadow: 'var(--shadow)' }}>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 8 }}>
             Étape {activeStepIdx + 1} / {scenario.steps.length}
           </div>
-          <h3 className="text-white text-xl md:text-2xl font-bold mb-3">
+          <h3 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(16px, 2vw, 22px)', color: 'var(--ink)', margin: '0 0 12px 0' }}>
             {activeStep?.title.replace(/^\d+\.\s*/, '')}
           </h3>
-          <p className="text-gray-300 text-sm leading-relaxed flex-1">
+          <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.8, lineHeight: 1.6, flex: 1, margin: 0 }}>
             {activeStep?.description}
           </p>
           {mode === 'step' && (
-            <div className="mt-4 pt-4 border-t-2 border-gray-800 flex items-center gap-2">
+            <div style={{ marginTop: 16, paddingTop: 14, borderTop: '2px solid var(--ink)', display: 'flex', alignItems: 'center', gap: 8 }}>
               <button
                 onClick={stepBackward}
                 disabled={activeStepIdx === 0}
-                className="px-3 py-2 text-xs border-2 border-gray-700 text-gray-300 hover:border-gray-500 disabled:opacity-30 disabled:cursor-not-allowed uppercase tracking-wider"
+                style={{ ...btnSm, padding: '6px 12px', opacity: activeStepIdx === 0 ? 0.3 : 1, fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.08em' }}
               >
                 ← Précédent
               </button>
               <button
                 onClick={stepForward}
                 disabled={activeStepIdx === scenario.steps.length - 1}
-                className="flex-1 px-4 py-2 text-xs border-2 border-yellow-600 bg-yellow-400 text-black font-bold hover:bg-yellow-300 disabled:opacity-30 disabled:cursor-not-allowed uppercase tracking-wider"
+                style={{ flex: 1, padding: '8px 14px', border: '2.5px solid var(--ink)', background: 'var(--orange)', color: '#fff', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.1em', cursor: 'pointer', opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1, boxShadow: 'var(--shadow-sm)' }}
               >
                 Suivant →
               </button>
@@ -477,15 +421,14 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       </div>
 
       {/* Step timeline strip */}
-      <div className="border-2 border-gray-700 bg-gray-900">
-        <div className="border-b-2 border-gray-700 px-3 py-2 flex items-center justify-between">
-          <span className="text-gray-400 text-xs uppercase tracking-widest">Timeline</span>
-          <span className="text-gray-600 text-xs">cliquer pour sauter</span>
+      <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)' }}>
+        <div style={{ borderBottom: '2px solid var(--ink)', padding: '6px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--cream)' }}>
+          <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--ink)' }}>Timeline</span>
+          <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.4 }}>cliquer pour sauter</span>
         </div>
         <div
           ref={stepStripRef}
-          className="flex gap-2 p-3 overflow-x-auto"
-          style={{ scrollbarWidth: 'thin' }}
+          style={{ display: 'flex', gap: 8, padding: 10, overflowX: 'auto', scrollbarWidth: 'thin' }}
         >
           {scenario.steps.map((step, idx) => {
             const isActive = idx === activeStepIdx;
@@ -494,21 +437,21 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
               <button
                 key={step.id}
                 onClick={() => jumpToStep(idx)}
-                className={`flex-shrink-0 w-48 md:w-56 text-left p-3 border-2 transition-colors ${
-                  isActive
-                    ? 'border-yellow-400 bg-yellow-400/10'
-                    : isPast
-                      ? 'border-gray-600 bg-gray-800 opacity-60'
-                      : 'border-gray-700 hover:border-gray-500'
-                }`}
+                style={{
+                  flexShrink: 0, width: 192, textAlign: 'left', padding: '10px 12px',
+                  border: `2.5px solid ${isActive ? 'var(--orange)' : 'var(--ink)'}`,
+                  background: isActive ? 'rgba(226,84,46,0.08)' : isPast ? 'var(--paper)' : 'var(--cream)',
+                  opacity: isPast && !isActive ? 0.55 : 1,
+                  cursor: 'pointer',
+                }}
               >
-                <div className={`text-xs uppercase tracking-widest mb-1 ${isActive ? 'text-yellow-400' : 'text-gray-500'}`}>
+                <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: isActive ? 'var(--orange)' : 'var(--ink)', opacity: isActive ? 1 : 0.4, marginBottom: 4 }}>
                   {String(idx + 1).padStart(2, '0')}
                 </div>
-                <div className={`text-sm font-bold mb-1 ${isActive ? 'text-yellow-400' : 'text-white'}`}>
+                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: isActive ? 'var(--orange)' : 'var(--ink)', marginBottom: 4, letterSpacing: '0.04em' }}>
                   {step.title.replace(/^\d+\.\s*/, '')}
                 </div>
-                <div className="text-gray-400 text-xs leading-relaxed line-clamp-3">
+                <div style={{ fontSize: 11, color: 'var(--ink)', opacity: 0.65, lineHeight: 1.4, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                   {step.description}
                 </div>
               </button>
@@ -518,24 +461,24 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       </div>
 
       {/* Summary card */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="border-2 border-gray-700 p-4 md:p-6">
-          <div className="text-yellow-400 text-xs uppercase tracking-widest mb-3">Points clés</div>
-          <ul className="space-y-2">
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
+        <div style={{ border: '2.5px solid var(--ink)', padding: '18px 20px', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)' }}>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: 12 }}>Points clés</div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {scenario.summary.keyPoints.map((point, idx) => (
-              <li key={idx} className="flex gap-3 text-gray-200 text-sm leading-relaxed">
-                <span className="text-yellow-400 font-bold flex-shrink-0">▸</span>
+              <li key={idx} style={{ display: 'flex', gap: 10, fontSize: 13, color: 'var(--ink)', lineHeight: 1.5 }}>
+                <span style={{ color: 'var(--teal)', fontWeight: 700, flexShrink: 0 }}>▸</span>
                 <span>{point}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="border-2 border-gray-800 p-4 md:p-6">
-          <div className="text-gray-500 text-xs uppercase tracking-widest mb-3">Erreurs fréquentes</div>
-          <ul className="space-y-2">
+        <div style={{ border: '2px solid var(--ink)', padding: '18px 20px', background: 'var(--cream)', opacity: 0.9 }}>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 12 }}>Erreurs fréquentes</div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {scenario.summary.commonMistakes.map((mistake, idx) => (
-              <li key={idx} className="flex gap-3 text-gray-400 text-sm leading-relaxed">
-                <span className="text-gray-600 font-bold flex-shrink-0">✗</span>
+              <li key={idx} style={{ display: 'flex', gap: 10, fontSize: 13, color: 'var(--ink)', opacity: 0.75, lineHeight: 1.5 }}>
+                <span style={{ color: 'var(--orange)', fontWeight: 700, flexShrink: 0 }}>✗</span>
                 <span>{mistake}</span>
               </li>
             ))}

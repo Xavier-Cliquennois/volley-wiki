@@ -1,14 +1,33 @@
+const S = {
+  section: { fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.08em', color: 'var(--ink)', marginBottom: 14, paddingBottom: 8, borderBottom: '2.5px solid var(--ink)' } as React.CSSProperties,
+  label: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--orange)', marginBottom: 4 },
+  labelTeal: { fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase' as const, color: 'var(--teal)', marginBottom: 4 },
+  card: { background: 'var(--paper)', border: '2.5px solid var(--ink)', padding: '16px 20px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
+  alert: { background: 'var(--yellow)', border: '2.5px solid var(--ink)', padding: '14px 18px', boxShadow: 'var(--shadow-sm)' } as React.CSSProperties,
+  bullet: { color: 'var(--teal)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
+  bulletOrange: { color: 'var(--orange)', marginTop: 2, flexShrink: 0 } as React.CSSProperties,
+  stepBadge: { background: 'var(--orange)', color: '#fff', fontFamily: '"Bungee", sans-serif', fontSize: 12, width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 } as React.CSSProperties,
+};
+
 function VideoLink({ title, url }: { title: string; url: string }) {
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 border border-gray-700 px-3 py-2 text-sm text-gray-400 hover:border-yellow-400 hover:text-yellow-400 transition-colors"
+      style={{
+        display: 'flex', alignItems: 'center', gap: 8,
+        border: '2px solid var(--ink)', padding: '8px 12px',
+        fontFamily: '"DM Mono", monospace', fontSize: 12,
+        color: 'var(--ink)', textDecoration: 'none',
+        background: 'var(--cream)',
+      }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--teal)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--teal)'; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--ink)'; (e.currentTarget as HTMLElement).style.borderColor = 'var(--ink)'; }}
     >
-      <span className="text-yellow-400">▶</span>
-      <span className="flex-1">{title}</span>
-      <span className="text-gray-600 text-xs">YT</span>
+      <span style={{ color: 'var(--orange)' }}>▶</span>
+      <span style={{ flex: 1 }}>{title}</span>
+      <span style={{ fontSize: 10, opacity: 0.5 }}>YT</span>
     </a>
   );
 }
@@ -99,19 +118,21 @@ const VIDEOS = [
 
 export default function GuideReception() {
   return (
-    <div className="space-y-10">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
 
       {/* Règle d'or */}
-      <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5">
-        <div className="text-yellow-400 text-xs uppercase tracking-wider mb-1">Règle d'or</div>
-        <p className="text-white font-bold text-sm">La manchette détermine 60% du succès offensif d'une équipe. Sans bonne réception, pas d'attaque rapide. La plateforme est passive — les jambes sont actives.</p>
+      <div style={S.alert}>
+        <div style={S.label}>Règle d'or</div>
+        <p style={{ fontFamily: '"DM Sans", sans-serif', fontWeight: 700, fontSize: 14, color: 'var(--ink)', margin: 0 }}>
+          La manchette détermine 60% du succès offensif d'une équipe. Sans bonne réception, pas d'attaque rapide. La plateforme est passive — les jambes sont actives.
+        </p>
       </div>
 
       {/* Ready position */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Position de base (ready position)</h2>
-        <div className="border-2 border-gray-700 p-5 space-y-3">
-          <ul className="space-y-2">
+      <section>
+        <h2 style={S.section}>Position de base (ready position)</h2>
+        <div style={S.card}>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {[
               'Pieds légèrement plus larges que les épaules, un pied légèrement avancé',
               "Genoux fléchis vers l'intérieur des pieds, hanches basses, tronc incliné à 30-45°",
@@ -119,92 +140,100 @@ export default function GuideReception() {
               'Bras DISSOCIÉS (non joints), fléchis à 90-145°, à hauteur de la taille',
               'Regard sur le serveur dès le lancer du ballon',
             ].map((pt, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                <span className="text-yellow-400 mt-0.5">▸</span>{pt}
+              <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 14 }}>
+                <span style={S.bullet}>▸</span>
+                <span style={{ color: 'var(--ink)', opacity: 0.85 }}>{pt}</span>
               </li>
             ))}
           </ul>
-          <div className="border-l-4 border-red-500 pl-3 text-sm">
-            <strong className="text-red-400">Erreur principale : </strong>
-            <span className="text-gray-400">avoir les bras déjà joints en plateau avant que le ballon n'arrive — cela ralentit le déplacement et empêche le choix tardif manchette/mains.</span>
+          <div style={{ marginTop: 12, borderLeft: '4px solid var(--orange)', paddingLeft: 12, fontSize: 13 }}>
+            <strong style={{ color: 'var(--orange)' }}>Erreur principale : </strong>
+            <span style={{ color: 'var(--ink)', opacity: 0.7 }}>avoir les bras déjà joints en plateau avant que le ballon n'arrive — cela ralentit le déplacement et empêche le choix tardif manchette/mains.</span>
           </div>
         </div>
       </section>
 
       {/* Platform */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">La plateforme</h2>
-        <div className="space-y-2">
+      <section>
+        <h2 style={S.section}>La plateforme</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {PLATFORM_TIPS.map(([title, text], i) => (
-            <div key={i} className="flex items-start gap-3 text-sm">
-              <span className="text-yellow-400 mt-0.5 flex-shrink-0">▸</span>
-              <span><strong className="text-white">{title} : </strong><span className="text-gray-400">{text}</span></span>
+            <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 12, fontSize: 14 }}>
+              <span style={S.bullet}>▸</span>
+              <span>
+                <strong style={{ color: 'var(--ink)', fontFamily: '"DM Sans", sans-serif' }}>{title} : </strong>
+                <span style={{ color: 'var(--ink)', opacity: 0.7 }}>{text}</span>
+              </span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Execution steps */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Exécution — étapes clés</h2>
-        <div className="border-2 border-yellow-400 bg-yellow-400/5 p-5 space-y-3">
+      <section>
+        <h2 style={S.section}>Exécution — étapes clés</h2>
+        <div style={{ ...S.card, background: 'var(--cream)', border: '2.5px solid var(--orange)', display: 'flex', flexDirection: 'column', gap: 12 }}>
           {STEPS.map((step, i) => (
-            <div key={i} className="flex gap-3 items-start">
-              <span className="bg-yellow-400 text-black text-sm font-bold w-6 h-6 flex items-center justify-center flex-shrink-0">{i + 1}</span>
-              <p className="text-gray-300 text-sm">{step}</p>
+            <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              <span style={S.stepBadge}>{i + 1}</span>
+              <p style={{ fontSize: 14, color: 'var(--ink)', opacity: 0.85, margin: 0 }}>{step}</p>
             </div>
           ))}
         </div>
-        <div className="border-l-4 border-yellow-400 pl-4 py-1 text-sm text-gray-400">
-          <strong className="text-white">Le freeze : </strong>
+        <div style={{ marginTop: 12, borderLeft: '4px solid var(--orange)', paddingLeft: 16, paddingTop: 4, fontSize: 14, color: 'var(--ink)', opacity: 0.7 }}>
+          <strong style={{ color: 'var(--ink)', opacity: 1 }}>Le freeze : </strong>
           "Pose for a picture" — se figer complètement 1-2 secondes après le contact. À 50-90 km/h, un défenseur en mouvement ne peut pas ajuster son angle. Immobile, il peut partir dans n'importe quelle direction.
         </div>
       </section>
 
       {/* Displacements */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Déplacements</h2>
-        <div className="space-y-3">
+      <section>
+        <h2 style={S.section}>Déplacements</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {DISPLACEMENTS.map((d, i) => (
-            <div key={i} className="border-2 border-gray-700 p-4">
-              <h3 className="text-white font-bold text-sm mb-2">{d.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{d.desc}</p>
+            <div key={i} style={S.card}>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, color: 'var(--ink)', marginBottom: 6 }}>{d.name}</div>
+              <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0, lineHeight: 1.6 }}>{d.desc}</p>
             </div>
           ))}
-        </div>
-        <div className="border-2 border-gray-700 p-4">
-          <div className="text-yellow-400 text-xs uppercase tracking-wider mb-2">Manchette à une main — urgence</div>
-          <p className="text-gray-400 text-sm leading-relaxed">Geste de dernier recours quand le ballon est trop loin pour deux bras. Bras tendu, plateforme plate sur l'avant-bras intérieur, pas de swing — juste un piqué (stab) pour dévier vers le haut. Variante : one-arm stab (poing sur smash puissant), one-arm scoop (paume ouverte vers le haut, ballon bas).</p>
+          <div style={S.card}>
+            <div style={S.label}>Manchette à une main — urgence</div>
+            <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0, lineHeight: 1.6 }}>
+              Geste de dernier recours quand le ballon est trop loin pour deux bras. Bras tendu, plateforme plate sur l'avant-bras intérieur, pas de swing — juste un piqué (stab) pour dévier vers le haut. Variante : one-arm stab (poing sur smash puissant), one-arm scoop (paume ouverte vers le haut, ballon bas).
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Systems */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Systèmes de réception</h2>
-        <div className="grid md:grid-cols-2 gap-3">
+      <section>
+        <h2 style={S.section}>Systèmes de réception</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
           {SYSTEMS.map((s, i) => (
-            <div key={i} className={`border-2 p-5 space-y-3 ${i === 1 ? 'border-yellow-400 bg-yellow-400/5' : 'border-gray-700'}`}>
+            <div key={i} style={{ ...S.card, borderColor: i === 1 ? 'var(--orange)' : 'var(--ink)', display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div>
-                <h3 className="text-white font-bold text-sm">{s.name}</h3>
-                <span className={`text-xs ${i === 1 ? 'text-yellow-400' : 'text-gray-500'}`}>{s.level}</span>
+                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, color: 'var(--ink)', marginBottom: 2 }}>{s.name}</div>
+                <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: i === 1 ? 'var(--orange)' : 'var(--ink)', opacity: i === 1 ? 1 : 0.5 }}>{s.level}</span>
               </div>
-              <p className="text-gray-400 text-sm">{s.desc}</p>
+              <p style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.75, margin: 0 }}>{s.desc}</p>
               <div>
-                <div className="text-gray-500 text-xs uppercase tracking-wider mb-1">Avantages</div>
-                <ul className="space-y-1">
+                <div style={S.labelTeal}>Avantages</div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
                   {s.pros.map((p, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-400">
-                      <span className="text-yellow-400 mt-0.5">▸</span>{p}
+                    <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                      <span style={S.bullet}>▸</span>
+                      <span style={{ color: 'var(--ink)', opacity: 0.8 }}>{p}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <div className="text-gray-500 text-xs uppercase tracking-wider mb-1">Inconvénients</div>
-                <ul className="space-y-1">
+                <div style={{ ...S.label, color: 'var(--ink)', opacity: 0.5 }}>Inconvénients</div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
                   {s.cons.map((c, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-500">
-                      <span className="text-gray-600 mt-0.5">▸</span>{c}
+                    <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                      <span style={{ color: 'var(--ink)', opacity: 0.35, marginTop: 2 }}>▸</span>
+                      <span style={{ color: 'var(--ink)', opacity: 0.55 }}>{c}</span>
                     </li>
                   ))}
                 </ul>
@@ -215,32 +244,33 @@ export default function GuideReception() {
       </section>
 
       {/* Reading the serve */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Lire le service pour se placer</h2>
-        <div className="border-2 border-gray-700 overflow-hidden">
-          <table className="w-full text-sm">
-            <thead className="border-b border-gray-700">
-              <tr>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Type de service</th>
-                <th className="px-4 py-2 text-left text-gray-500 text-xs uppercase tracking-wider">Adaptation du réceptionneur</th>
+      <section>
+        <h2 style={S.section}>Lire le service pour se placer</h2>
+        <div style={{ border: '2.5px solid var(--ink)', overflow: 'hidden', marginBottom: 12 }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13 }}>
+            <thead>
+              <tr style={{ background: 'var(--ink)' }}>
+                <th style={{ padding: '8px 14px', textAlign: 'left', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', color: 'var(--cream)', fontWeight: 400 }}>Type de service</th>
+                <th style={{ padding: '8px 14px', textAlign: 'left', fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', color: 'var(--cream)', fontWeight: 400 }}>Adaptation du réceptionneur</th>
               </tr>
             </thead>
             <tbody>
               {READING_TABLE.map(([type, adapt], i) => (
-                <tr key={i} className={`${i < READING_TABLE.length - 1 ? 'border-b border-gray-800' : ''} hover:bg-gray-900/50`}>
-                  <td className="px-4 py-3 text-yellow-400 font-bold text-sm">{type}</td>
-                  <td className="px-4 py-3 text-gray-400 text-sm">{adapt}</td>
+                <tr key={i} style={{ borderBottom: i < READING_TABLE.length - 1 ? '1px solid var(--paper)' : 'none', background: i % 2 === 0 ? 'var(--cream)' : 'var(--paper)' }}>
+                  <td style={{ padding: '10px 14px', color: 'var(--orange)', fontFamily: '"Bungee", sans-serif', fontSize: 11 }}>{type}</td>
+                  <td style={{ padding: '10px 14px', color: 'var(--ink)', opacity: 0.75 }}>{adapt}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div>
-          <div className="text-gray-500 text-xs uppercase tracking-wider mb-2">Indices avant le contact du serveur</div>
-          <ul className="space-y-1">
+        <div style={{ marginBottom: 8 }}>
+          <div style={S.labelTeal}>Indices avant le contact du serveur</div>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
             {READING_CUES.map((cue, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                <span className="text-yellow-400 mt-0.5">▸</span>{cue}
+              <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
+                <span style={S.bullet}>▸</span>
+                <span style={{ color: 'var(--ink)', opacity: 0.8 }}>{cue}</span>
               </li>
             ))}
           </ul>
@@ -248,23 +278,23 @@ export default function GuideReception() {
       </section>
 
       {/* Errors */}
-      <section className="space-y-4">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Erreurs fréquentes</h2>
-        <div className="border-l-4 border-red-500 pl-5 py-1 space-y-3">
-          <div className="text-red-400 text-xs uppercase tracking-wider mb-2">À éviter</div>
+      <section>
+        <h2 style={S.section}>Erreurs fréquentes</h2>
+        <div style={{ borderLeft: '5px solid var(--orange)', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ ...S.label, color: 'var(--orange)' }}>À éviter</div>
           {ERRORS.map(([label, text], i) => (
-            <div key={i} className="text-sm">
-              <strong className="text-white">{label} : </strong>
-              <span className="text-gray-400">{text}</span>
+            <div key={i} style={{ fontSize: 13 }}>
+              <strong style={{ color: 'var(--ink)' }}>{label} : </strong>
+              <span style={{ color: 'var(--ink)', opacity: 0.7 }}>{text}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Videos */}
-      <section className="space-y-3">
-        <h2 className="text-xl font-bold text-white border-b border-gray-700 pb-2">Ressources vidéo</h2>
-        <div className="space-y-2">
+      <section>
+        <h2 style={S.section}>Ressources vidéo</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {VIDEOS.map((v, i) => (
             <VideoLink key={i} title={v.title} url={v.url} />
           ))}

@@ -21,27 +21,64 @@ export default function GuideDetail() {
 
   if (!guide || !Component) {
     return (
-      <div className="space-y-4">
-        <Link to="/guides" className="text-gray-500 text-xs hover:text-yellow-400 transition-colors">← Guides</Link>
-        <p className="text-gray-400">Guide introuvable.</p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <Link
+          to="/guides"
+          style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em', color: 'var(--orange)', textDecoration: 'none' }}
+        >
+          ← GUIDES
+        </Link>
+        <p style={{ opacity: 0.6 }}>Guide introuvable.</p>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      {/* Breadcrumb */}
+      <Link
+        to="/guides"
+        style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em', color: 'var(--orange)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}
+      >
+        ← GUIDES
+      </Link>
+
+      {/* Guide header */}
       <div>
-        <Link to="/guides" className="text-gray-500 text-xs hover:text-yellow-400 transition-colors">← Guides</Link>
-      </div>
-      <div className="space-y-3">
-        <div className="text-yellow-400 text-xs uppercase tracking-widest">{guide.category}</div>
-        <h1 className="text-4xl font-bold text-white">{guide.title}</h1>
-        <p className="text-gray-400">{guide.subtitle}</p>
-        <div className="flex gap-2">
-          <span className="text-xs text-gray-600 border border-gray-700 px-2 py-1">{guide.level}</span>
-          <span className="text-xs text-gray-600 border border-gray-700 px-2 py-1">{guide.readingTime}</span>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
+          ★ {guide.category.toUpperCase()}
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(26px, 4vw, 38px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          {guide.title}
+        </h1>
+        <p style={{ margin: '0 0 14px 0', fontSize: 15, opacity: 0.7 }}>{guide.subtitle}</p>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <span style={{
+            padding: '3px 12px',
+            border: '2.5px solid var(--ink)',
+            background: 'var(--cream)',
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 11,
+          }}>{guide.level}</span>
+          <span style={{
+            padding: '3px 12px',
+            border: '2.5px solid var(--ink)',
+            background: 'var(--cream)',
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 11,
+          }}>{guide.readingTime}</span>
         </div>
       </div>
+
+      {/* Horizontal rule */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.2em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>
+          ★ CONTENU DU GUIDE ★
+        </span>
+        <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
+      </div>
+
       <Component />
     </div>
   );

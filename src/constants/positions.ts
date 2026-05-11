@@ -5,7 +5,7 @@ export const ROLE_COLORS = {
   P2: '#e74c3c',  // setter — red
   P3: '#2ecc71',  // middle (front) — green
   P4: '#3498db',  // outside (front) — blue
-  P5: '#facc15',  // outside (back) — yellow
+  P5: '#f0c84c',  // outside (back) — retro yellow (harmonized with --yellow token)
   P6: '#e67e22',  // middle (back) — orange
   L:  '#ec4899',  // libero — magenta (distinct from team palette)
 } as const;

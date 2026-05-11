@@ -2,33 +2,68 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const NAV_LINKS = [
-  { to: '/', label: 'Accueil', icon: '🏠' },
-  { to: '/techniques', label: 'Techniques', icon: '🎯' },
-  { to: '/positions', label: 'Positions', icon: '📍' },
-  { to: '/scenarios', label: 'Scénarios', icon: '🎬' },
-  { to: '/guides', label: 'Guides', icon: '📚' },
-  { to: '/rules', label: 'Règles', icon: '📋' },
-  { to: '/glossary', label: 'Glossaire', icon: '📖' },
+  { to: '/', label: 'Accueil' },
+  { to: '/techniques', label: 'Techniques' },
+  { to: '/positions', label: 'Positions' },
+  { to: '/scenarios', label: 'Scénarios' },
+  { to: '/guides', label: 'Guides' },
+  { to: '/rules', label: 'Règles' },
+  { to: '/glossary', label: 'Glossaire' },
 ];
+
+const STRIPE_STYLE: React.CSSProperties = {
+  height: 10,
+  background: 'repeating-linear-gradient(90deg, var(--orange) 0 44px, var(--teal) 44px 88px, var(--pink) 88px 132px, var(--yellow) 132px 176px)',
+};
+
+const NAV_ACTIVE: React.CSSProperties = {
+  background: 'var(--orange)',
+  border: '2px solid var(--ink)',
+  color: 'var(--ink)',
+  boxShadow: '2px 2px 0 var(--ink)',
+  transform: 'translate(-1px, -1px)',
+  padding: '7px 14px',
+};
+const NAV_IDLE: React.CSSProperties = {
+  border: 'none',
+  padding: '9px 16px',
+  color: 'var(--ink)',
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 font-mono flex flex-col">
-      {/* Top bar */}
-      <header className="border-b-2 border-yellow-400 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <span className="text-yellow-400 text-2xl">🏐</span>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* Stripe banner */}
+      <div style={STRIPE_STYLE} />
+
+      {/* Header */}
+      <header style={{ background: 'var(--paper)', borderBottom: '3px solid var(--ink)' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
+          {/* Logo */}
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
+            <div style={{
+              width: 44, height: 44, borderRadius: '50%',
+              background: 'var(--orange)', border: '3px solid var(--ink)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transform: 'rotate(-6deg)', boxShadow: 'var(--shadow-sm)', flexShrink: 0,
+            }}>
+              <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, color: 'var(--ink)' }}>V</span>
+            </div>
             <div>
-              <div className="text-yellow-400 font-bold text-sm tracking-widest uppercase">Volley Wiki</div>
-              <div className="text-gray-500 text-xs">Techniques · Règles · Tactiques</div>
+              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 16, letterSpacing: '0.06em', color: 'var(--ink)', lineHeight: 1 }}>
+                VOLLEY·WIKI
+              </div>
+              <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.16em', color: 'var(--teal)', marginTop: 2 }}>
+                TECHNIQUES · RÈGLES · TACTIQUES
+              </div>
             </div>
           </Link>
+
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav style={{ display: 'flex', gap: 4 }} className="hidden md:flex">
             {NAV_LINKS.map(link => {
               const isActive = link.to === '/'
                 ? location.pathname === '/'
@@ -37,23 +72,39 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`px-3 py-2 text-xs uppercase tracking-wider border transition-colors ${
-                    isActive
-                      ? 'border-yellow-400 text-yellow-400 bg-yellow-400/10'
-                      : 'border-transparent text-gray-400 hover:border-gray-600 hover:text-gray-200'
-                  }`}
+                  style={{
+                    fontFamily: '"Bungee", sans-serif',
+                    fontSize: 11,
+                    letterSpacing: '0.06em',
+                    textDecoration: 'none',
+                    transition: 'transform 0.08s, box-shadow 0.08s',
+                    ...(isActive ? NAV_ACTIVE : NAV_IDLE),
+                  }}
                 >
                   {link.label}
                 </Link>
               );
             })}
           </nav>
-          {/* Mobile hamburger */}
-          <button className="md:hidden text-gray-400 text-xl" onClick={() => setMenuOpen(o => !o)}>☰</button>
+
+          {/* Mobile burger */}
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(o => !o)}
+            style={{
+              width: 38, height: 38,
+              border: '3px solid var(--ink)',
+              background: menuOpen ? 'var(--orange)' : 'var(--cream)',
+              fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
+          >
+            ☰
+          </button>
         </div>
+
         {/* Mobile nav */}
         {menuOpen && (
-          <nav className="md:hidden border-t border-gray-700 px-4 py-2 flex flex-col gap-1">
+          <nav style={{ borderTop: '3px solid var(--ink)', background: 'var(--cream)', padding: '8px' }} className="md:hidden">
             {NAV_LINKS.map(link => {
               const isActive = link.to === '/'
                 ? location.pathname === '/'
@@ -63,11 +114,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   key={link.to}
                   to={link.to}
                   onClick={() => setMenuOpen(false)}
-                  className={`px-3 py-2 text-xs uppercase tracking-wider ${
-                    isActive ? 'text-yellow-400' : 'text-gray-400'
-                  }`}
+                  style={{
+                    display: 'block',
+                    padding: '10px 12px',
+                    fontFamily: '"Bungee", sans-serif',
+                    fontSize: 11,
+                    letterSpacing: '0.06em',
+                    textDecoration: 'none',
+                    marginBottom: 4,
+                    ...(isActive ? { background: 'var(--orange)', border: '2px solid var(--ink)', color: 'var(--ink)', padding: '10px 12px' } : { color: 'var(--ink)', border: 'none', padding: '12px 14px' }),
+                  }}
                 >
-                  {link.icon} {link.label}
+                  {link.label}
                 </Link>
               );
             })}
@@ -76,12 +134,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+      <main style={{ flex: 1, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '40px 24px' }}>
         {children}
       </main>
 
-      <footer className="border-t-2 border-gray-800 py-4 text-center text-gray-600 text-xs">
-        Volley Wiki — Techniques, règles & tactiques du volleyball
+      {/* Footer */}
+      <div style={{ height: 6, background: 'repeating-linear-gradient(90deg, var(--ink) 0 10px, transparent 10px 20px)' }} />
+      <footer style={{ background: 'var(--paper)', borderTop: '3px solid var(--ink)', padding: '16px 24px', textAlign: 'center' }}>
+        <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, letterSpacing: '0.14em', color: 'var(--ink)', opacity: 0.6 }}>
+          VOLLEY·WIKI — TECHNIQUES · RÈGLES · TACTIQUES
+        </span>
       </footer>
     </div>
   );
