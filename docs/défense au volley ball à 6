@@ -1,0 +1,263 @@
+# Document de référence technique : positions et zones de défense au volleyball à 6
+
+Ce document de référence synthétise la doctrine défensive du volleyball indoor à 6 joueurs, telle qu'elle est codifiée par la **FIVB**, déclinée par les fédérations nationales (**FFVB**, **USA Volleyball**, **AVCA**) et enseignée par les principaux théoriciens du jeu (Hebert, McGown, Liskevych, Stone, Blain). Il est destiné à servir de référence pour la correction d'un article technique. Les positions sont décrites avec des coordonnées relatives (distance au filet et à la ligne de touche), les zones FIVB officielles 1-6, et systématiquement croisées avec la rotation, le système (5-1, 6-2, 4-2) et la zone d'attaque adverse. **La terminologie classique anglo-saxonne (« W-formation », « perimeter », « rotation ») cache d'importants pièges sémantiques signalés en introduction et tout au long du document.**
+
+---
+
+## 1. Cadre officiel : terrain, zones FIVB et règle de chevauchement
+
+**Le terrain mesure 18 m × 9 m**, soit **9 m × 9 m par camp**, séparés par le filet (2,43 m hommes, 2,24 m femmes). La **ligne d'attaque** est tracée à **3 m du filet** et délimite la zone avant (entre filet et 3 m) de la zone arrière (de 3 m à 9 m). La zone de service mesure 9 m de large derrière la ligne de fond (FIVB *Official Volleyball Rules 2025-2028*, Règle 1).
+
+**Les six zones FIVB sont numérotées dans le sens antihoraire vu depuis l'arrière de son propre camp**, en partant du coin arrière-droit (où sert le joueur en position 1) :
+
+| Zone | Nom français | Anglais | Localisation |
+|------|--------------|---------|--------------|
+| **1** | Arrière droit | Right Back | Coin arrière droit, position du serveur |
+| **2** | Avant droit | Right Front | Coin avant droit, au filet |
+| **3** | Avant centre | Middle Front | Centre, au filet |
+| **4** | Avant gauche | Left Front | Coin avant gauche, au filet |
+| **5** | Arrière gauche | Left Back | Coin arrière gauche |
+| **6** | Arrière centre | Middle Back | Centre du fond du terrain |
+
+Les joueurs en zones 2-3-4 sont **avants** (autorisés à bloquer et attaquer librement) ; ceux en zones 1-6-5 sont **arrières** (interdits de contre, et attaque saut autorisée uniquement si l'appel est pris **derrière la ligne des 3 m**, Règle 13.2.2-13.2.3). **À chaque side-out, l'équipe tourne d'une position dans le sens horaire** : Z2→Z1, Z1→Z6, Z6→Z5, Z5→Z4, Z4→Z3, Z3→Z2.
+
+### La règle de chevauchement (Règle 7.4)
+
+Au **moment précis où le serveur frappe la balle**, la position de chaque joueur est contrôlée d'après ses **pieds en contact avec le sol**. Les relations à respecter sont :
+
+- **Front/back** : Z2 plus près du filet que Z1 ; Z3 plus près que Z6 ; Z4 plus près que Z5.
+- **Gauche/droite (même ligne)** : Z4 à gauche de Z3, Z3 à gauche de Z2 ; Z5 à gauche de Z6, Z6 à gauche de Z1.
+
+Les positions Z2-Z4 et Z1-Z5 n'entretiennent **aucune relation** entre elles ; le serveur est exempté. Dès que la balle est frappée, tout le monde peut se déplacer librement, ce qui ouvre les **stacks** (empilement pour cacher la cible du passeur) et les **switchs** (chacun rejoint son poste spécialisé : MB en Z3, OH en Z4, OPP en Z2, S à la cible entre Z2 et Z3).
+
+---
+
+## 2. Avertissement terminologique majeur : « W », « perimeter » et « rotation »
+
+La consigne employait **« W-formation »** comme synonyme de défense en 2-1-3. **Cet usage est imprécis** au regard de la doctrine internationale (Liskevych, Stone, USAV IMPACT Manual 2015) :
+
+- La **« W-formation »** désigne historiquement une **formation de réception de service à 5 joueurs** (en W), pas un système défensif.
+- Dans la typologie Keller (USA Volleyball), la **« white defense »** correspond à la **défense périmétrique** (4 défenseurs sur le pourtour, aucun monté derrière le bloc).
+- La **« red defense »** désigne la défense **man-up / 6-up / 2-1-3**, avec un défenseur monté derrière le contre. C'est ce que la consigne appelle improprement « W ».
+- La **« rotational defense »** est un troisième système où les trois arrières **glissent** vers le côté d'attaque.
+
+Le présent document conserve les trois grandes familles demandées en les rebaptisant correctement : **défense man-up (2-1-3) / défense périmétrique (2-0-4) / défense en rotation (3-2-1)**.
+
+---
+
+## 3. Les trois grands systèmes défensifs
+
+### 3.1 Défense man-up / 2-1-3 (improprement « défense en W »)
+
+**Principe.** Un défenseur (souvent l'arrière correspondant au côté d'attaque) **monte à hauteur de la ligne des 3 m derrière le contre** pour intercepter feintes, amorties et balles courtes. Les deux contreurs sont au filet, le 4ᵉ défenseur (off-blocker) décroche au bord de la ligne d'attaque, et **trois joueurs profonds** se répartissent les angles longs.
+
+**Forces** : couverture exceptionnelle des **tips, roll shots et balles « pourries »** derrière le bloc ; transition rapide vers l'attaque si le joueur monté est le passeur ; système simple à enseigner aux jeunes équipes.
+
+**Faiblesses** : **trois défenseurs seulement en profondeur** → vulnérable aux smashs puissants en diagonale serrée et aux coins profonds. Un attaquant qui frappe fort entre les contreurs traverse facilement le joueur up.
+
+**Indication** : équipes jeunes, scolaires, et adversaires tactiques jouant beaucoup de feintes ou off-speed shots.
+
+### 3.2 Défense périmétrique / 2-0-4 (« white defense »)
+
+**Principe.** Les **quatre défenseurs arrière forment un U ouvert vers le filet**, presque sur les lignes de touche et de fond, **« un pied sur la ligne »** (Liskevych). La philosophie : « il est plus efficace de se déplacer vers le centre que de s'en éloigner ». Le milieu du terrain est volontairement abandonné pour mieux peupler les zones où atterrissent statistiquement les attaques puissantes.
+
+**Forces** : excellente couverture des **smashs puissants**, des lignes et des coins profonds ; mouvement collectif simple ; **système prédominant en volley masculin moderne et international** où la puissance domine.
+
+**Faiblesses** : **très vulnérable aux tips courts derrière le bloc** — zone centrale entre 3 et 5 m laissée libre. Demande des défenseurs athlétiques capables de plonger vers l'avant.
+
+**Indication** : senior, masculin, niveau international, adversaires puissants.
+
+### 3.3 Défense en rotation / 3-2-1 (« rotational » ou « slide »)
+
+**Principe.** Les **trois défenseurs arrière « glissent »** vers le côté d'attaque adverse : l'arrière opposé monte derrière le bloc (couverture tip), le milieu arrière glisse vers la ligne du côté attaqué, et le défenseur du côté attaqué se met en angle court. Variante « counter-rotate » : rotation dans le sens inverse.
+
+**Forces** : excellente couverture de la **ligne profonde** et du **tip** simultanément ; système très adaptable ; **transition setter rapide** quand le passeur est en P1 et monte au bloc.
+
+**Faiblesses** : **un défenseur en moins en profondeur** car un joueur est dédié au tip ; le coin diagonal opposé peut être vulnérable ; demande une forte capacité de lecture et coordination.
+
+**Indication** : équipes adverses qui mêlent puissance et lignes/tips ; niveau intermédiaire à élite.
+
+### Tableau comparatif synthétique
+
+| Critère | Man-up 2-1-3 | Périmétrique 2-0-4 | Rotation 3-2-1 |
+|---|---|---|---|
+| Joueur up derrière bloc | Oui | Non | Oui |
+| Défenseurs profonds | 3 | 4 | 2 |
+| Couverture tip | ★★★ | ★ | ★★ |
+| Couverture smash puissant | ★★ | ★★★ | ★★ |
+| Couverture ligne profonde | ★★ | ★★ | ★★★ |
+| Couverture diagonale serrée | ★ | ★★★ | ★★ |
+| Position type du libéro | Z5 ou Z6 | Z5 (un pied sur ligne) | Z5 glisse selon attaque |
+| Complexité | Faible | Moyenne | Élevée |
+
+---
+
+## 4. Positions exactes des 6 défenseurs selon la zone d'attaque adverse (système 5-1, exemple périmétrique)
+
+**Convention** : les coordonnées sont exprimées en **mètres depuis le filet** et **mètres depuis la ligne de touche concernée**. Le rôle indiqué décrit la zone de responsabilité défensive primaire. Les valeurs sont issues du croisement de plusieurs sources concordantes (Stone, Liskevych, USAV IMPACT, Wheeler Volleyball, Brooke Behnke). **Elles représentent des zones de responsabilité, pas des points fixes** : « le pire qu'un coach puisse dire est que ses joueurs doivent être à 12 pieds du filet exactement comme sur le schéma » (Liskevych).
+
+### 4.1 Attaque adverse en zone 4 adverse (= balle arrive dans notre coin avant-droit)
+
+C'est la configuration la plus fréquente (l'outside hitter adverse est l'attaquant le plus sollicité).
+
+| Joueur | Zone FIVB | Distance du filet | Distance ligne de touche | Rôle défensif |
+|---|---|---|---|---|
+| **Pointu (OPP)** | Z2 | 0,3 m (au saut) | 0,5 m de la ligne droite | Contreur ligne |
+| **Central (MB)** | Z3 | 0,3 m | ~3-4 m (face à l'attaquant) | Ferme le bloc à 2, scelle la diagonale haute |
+| **OH off-blocker (R4)** | Z4 / ligne 3 m | 2-2,5 m | 0,5-1 m de la ligne gauche | Décroche, couvre **cut shot court** (diagonale aiguë) et tip côté gauche |
+| **Libéro** | Z5 | 7-8 m | 0,5 m de la ligne gauche, **un pied sur la ligne** | Défend la **diagonale longue cross-court**, aligné sur l'épaule intérieure du central contreur |
+| **Arrière centre (OH2 ou OPP)** | Z6 | 8-8,5 m (sur ligne de fond) | ~4,5 m (axe), légèrement décalé côté ballon | Balles hautes par-dessus le bloc, touches de bloc longues |
+| **Arrière droit (passeur si P1, sinon OH/OPP)** | Z1 | 7-7,5 m | 0,5 m de la ligne droite, **dans l'ombre du bloc** | Défend la **ligne profonde** |
+
+**Variante en défense rotationnelle** sur cette même attaque : l'arrière droit (P1) **monte à ~3-3,5 m du filet sur la ligne d'attaque** pour couvrir le tip ; le milieu arrière (Z6) glisse vers la ligne droite à ~8,5 m du filet à 1-1,5 m de la ligne ; le libéro reste en diagonale longue.
+
+### 4.2 Attaque adverse en zone 2 adverse (= balle arrive dans notre coin avant-gauche)
+
+**Configuration en miroir parfait** de la précédente. Le contre principal devient OH (Z4) + central (Z3). L'off-blocker est le pointu (Z2). **Inversion de rôle géométrique pour le libéro** : il défend désormais la **ligne profonde gauche** (depuis Z5, à 7-7,5 m du filet, 0,5 m de la ligne gauche, dans l'ombre du R4 contreur), tandis que l'arrière droit (Z1) prend la **diagonale longue cross-court**.
+
+C'est ici que la **gestion du passeur devient critique** : s'il est en P2, c'est lui qui doit bloquer ligne (à droite) — donc l'attaque adverse vise typiquement sa zone, et la transition vers la passe est tendue.
+
+### 4.3 Attaque rapide centrale (attaque en zone 3, « quick » ou « 1 »)
+
+L'attaque rapide centrale (premier temps) ne laisse que 0,3 à 0,5 seconde entre la sortie de balle du passeur et la frappe. Le bloc est généralement à 1 seul bloqueur (central défensif), parfois à 2 si un ailier rejoint en tandem.
+
+| Joueur | Position défensive | Rôle |
+|---|---|---|
+| **Central** | Z3, 0,3 m du filet | Bloc en lecture (read) ou en commitment selon le scouting |
+| **OH (Z4) et pointu (Z2)** | Sur la ligne d'attaque, ~2-2,5 m du filet, 0,5 m des lignes | Couvrent les **déviations de bloc** et balles frappées à travers le bloc |
+| **Libéro** | Z5, 7-8 m du filet | **Face à l'attaquant central**, dans son couloir de frappe |
+| **Arrière centre** | Z6, 8-8,5 m, axe | Épaules face à l'attaquant ; défend la balle puissante traversant le bloc |
+| **Arrière droit** | Z1, 7,5 m, 1 m de la ligne droite | Attaques décalées et rebonds longs |
+
+La règle clé sur quick : **« stopped on contact »** (Stone) — tous les défenseurs doivent être à l'arrêt et équilibrés à l'instant exact de la frappe.
+
+### 4.4 Attaque arrière (pipe en Z6 ou slide derrière le passeur)
+
+**Pipe (attaque depuis Z6, frappe par OH2 ou OPP arrière)** : l'arrière centre devient le **pivot défensif** ; il doit avancer (« cinch the court », Josephson) à ~6-7 m du filet, axe exact, sacrifiant un peu les lignes pour défendre l'axe central. Les arrières latéraux (Z1 et Z5) se rapprochent du centre à ~7 m du filet, 1,5 m des lignes. **La pipe rapide (BIC) est l'une des attaques les plus difficiles à défendre** car le central défenseur ne peut honorer simultanément quick + pipe + deux ailes avec seulement trois bloqueurs.
+
+**Slide (central qui court derrière le passeur pour attaquer côté droit)** : configuration similaire à l'attaque en Z2 mais plus rapide. Le pointu (Z2) est contreur principal ; le central poursuit en glissant (slide block). L'arrière droit avance à ~6-7 m du filet pour la diagonale ; le libéro ou Z6 couvre la ligne profonde gauche.
+
+---
+
+## 5. Position du passeur en système 5-1 selon la rotation
+
+Le 5-1 est **le système dominant au haut niveau** : un seul passeur joue les 6 rotations, garantissant une chimie maximale avec ses attaquants. Le pointu (OPP), toujours **diagonalement opposé** au passeur, sert de **contre-passeur** sur les premières balles que le passeur ne peut atteindre.
+
+### Les six rotations du 5-1
+
+Convention : la « rotation 1 » désigne la rotation où le **passeur est en Z1**.
+
+| Rotation | Z1 | Z2 | Z3 | Z4 | Z5 | Z6 |
+|----------|----|----|----|----|----|----|
+| **P1** | **S** | OH1 | MB2 | OPP | OH2 | MB1 (→ L) |
+| **P2** | OH1 | MB2 | OPP | OH2 | MB1 (→ L) | **S** |
+| **P3** | MB2 | OPP | OH2 | MB1 (→ L) | **S** | OH1 |
+| **P4** | OPP | OH2 | MB1 (→ L) | **S** | OH1 | MB2 |
+| **P5** | OH2 | MB1 (→ L) | **S** | OH1 | MB2 | OPP |
+| **P6** | MB1 (→ L) | **S** | OH1 | MB2 | OPP | OH2 |
+
+### Passeur arrière (rotations P1, P6, P5)
+
+Trois rotations sur six. Le passeur démarre dans sa zone arrière (Z1, Z6 ou Z5) puis **pénètre** vers la cible (entre Z2 et Z3, ~1 m du filet, ~3 m à droite du centre) **dès le contact du service adverse**.
+
+- **En P1** : démarre à ~7,5 m du filet, 1 m de la ligne droite ; la pénétration est la plus courte. En défense, après une attaque adverse, il reste en Z1 (périmétrique) ou monte derrière le bloc (rotation). Cette rotation est idéale car la transition est rapide.
+- **En P6** : démarre vers le centre arrière ; doit éviter l'overlap avec Z3 (être plus loin du filet que MB) et avec Z5/Z1 (positionnement latéral).
+- **En P5** : pénétration la plus longue diagonalement. L'OH (Z4) doit couvrir son côté en défense car le passeur est éloigné.
+
+**Avantage défensif** : trois attaquants avant disponibles (OH + MB + OPP) + back-row attacks possibles.
+
+### Passeur avant (rotations P4, P3, P2)
+
+Trois rotations sur six. **Seulement 2 attaquants devant** (compensé par pipe en Z6 et back-row par OPP en Z1).
+
+- **En P2** : déjà à la cible. **Devient contreur ligne face à l'OH adverse de Z4** — c'est une rotation à haute charge défensive car il doit bloquer puis transitionner immédiatement pour passer.
+- **En P3** : au filet centre ; switch latéral vers la cible après contact.
+- **En P4** : tout à gauche ; traverse rapidement pour atteindre la cible.
+
+### Position du libéro
+
+Le libéro **remplace systématiquement le central** quand celui-ci passe en zone arrière (substitutions illimitées et non comptées). Il joue donc **trois rotations consécutives en Z5-Z6-Z1**, puis ressort quand le central revient en avant. En réception, il est généralement positionné en **Z6** (cible principale des serveurs adverses) ou **Z5**. En défense, sa position de prédilection est **Z5 sur attaque adverse en Z4** (diagonale longue) ; il défend la ligne profonde sur attaque adverse en Z2.
+
+**Restrictions FIVB** : pas de contre, pas d'attaque au-dessus du filet, pas de passe haute devant la ligne des 3 m pour un coéquipier qui attaque ensuite au-dessus du filet.
+
+---
+
+## 6. Les systèmes 6-2 et 4-2 : positions en défense
+
+### Système 6-2 (2 passeurs, 6 attaquants)
+
+Les deux passeurs ne distribuent **que depuis l'arrière** ; quand un passeur arrive en zone avant, il devient attaquant droit (right-side) et l'autre passeur, désormais en arrière, prend le relais. Avantage majeur : **toujours 3 attaquants au filet** dans toutes les rotations. Inconvénient : chimie passeur-attaquants diluée entre deux profils ; en variante avec doubles substitutions (un OPP entre quand un passeur passe avant), consomme rapidement les 6 substitutions par set autorisées par la Règle 15.6 FIVB.
+
+Les positions défensives sont **identiques au 5-1** (mêmes principes périmétrique/rotation/man-up), avec un détail : le passeur arrière actif occupe toujours Z1, Z6 ou Z5 — et c'est lui qui joue le rôle défensif spécifique (couverture derrière le bloc en rotation, ou ligne profonde en périmétrique).
+
+### Système 4-2 (2 passeurs, 4 attaquants)
+
+Les deux passeurs distribuent **depuis l'avant** (cible en Z2 ou Z3 après switch). **Seulement 2 attaquants au filet** car le passeur avant est neutralisé offensivement (hors setter dump). Système classique pour débutants et scolaires.
+
+**Conséquences défensives** : pas de pénétration de passeur, mouvements minimaux, mais le passeur **doit bloquer en Z2 ou Z3** quand il est devant, ce qui implique qu'il est constamment en première ligne contre les attaques adverses. Le bloc est souvent à 1 seul bloqueur (le passeur ne s'engage pas) ou à 2 maladroits. La défense arrière compense en occupant un **périmétrique strict** ou en plaçant un joueur monté tip (man-up) pour pallier les faiblesses du contre.
+
+---
+
+## 7. Les dix erreurs fréquentes de positionnement défensif
+
+Cette typologie s'appuie sur Mike Hebert (*Thinking Volleyball*, 2013), John Forman (CoachingVB), USA Volleyball et le manuel FIVB *Top Volley*.
+
+**1. La dérive dans l'ombre du contre.** Les défenseurs arrière se réfugient instinctivement derrière les contreurs au lieu de se positionner **autour de l'ombre du bloc** — laissant ouvertes les diagonales et les trajectoires « off the block ». Hebert l'appelle *« creeping into the block shadow »*.
+
+**2. La lecture défaillante.** Le défenseur fixe la balle au lieu de suivre la séquence visuelle correcte **« ballon → passeur → ballon → attaquant »**. Conséquence : il devine au lieu de lire, et **n'est pas arrêté et équilibré au moment du contact de l'attaquant** (« stopped and balanced at the moment of contact »). Si le défenseur bouge encore quand l'attaquant frappe, sa réactivité s'effondre.
+
+**3. Le libéro mal placé en profondeur.** Trop près du filet, il ne défend pas les smashs profonds ; trop loin (collé à la ligne de fond), il ne couvre pas les tips. La règle pratique : aligner son épaule extérieure sur l'épaule intérieure du contreur central, à 6-8 m du filet selon le bloc.
+
+**4. Le passeur défenseur mal préparé.** Position de défense trop basse ou mal orientée empêchant de voir simultanément la balle et le terrain adverse ; départ prématuré vers la cible créant un trou en Z1 ; absence de « release call » signalant qu'il quitte la défense.
+
+**5. Les fautes de chevauchement.** Les plus fréquentes : Z6 dérive devant Z3, Z5 plus à droite que Z6, et **le passeur quitte trop tôt sa position pour pénétrer** (faute n°1 en 5-1). À l'instant du contact du serveur adverse, tous les pieds doivent respecter les relations front/back et gauche/droite.
+
+**6. La transition réception → défense oubliée.** Les joueurs restent figés dans leur formation de réception en W au lieu de basculer en **position de base défensive dès que le passeur adverse touche la balle**. Hebert appelle ce défaut *« sluggish recovery after play on the ball »*.
+
+**7. La mauvaise gestion de la zone 6.** Confusion entre « 6-up » (rotation), « 6-back » (périmétrique) et « 6-deep ». Le joueur en Z6 doit décaler latéralement selon le côté d'attaque adverse, pas rester centré. **Se pencher en arrière pour digger** (*« leaning back »*, Hebert) place le poids sur les talons et tue toute réactivité.
+
+**8. La défense ratée sur attaque rapide centrale.** Lecture trop tardive du central adverse ; **arrières non avancés** (sur quick, Z1 et Z5 doivent gagner un mètre vers le filet car les angles sont plus courts) ; *« false stepping »* (premier appui reculé) qui fait perdre le temps disponible.
+
+**9. La couverture des feintes orpheline.** Aucun défenseur explicitement assigné au tip ; *« standing up on tips »* — le défenseur est en posture basse pour le smash, puis se redresse et tend les mains sur la feinte, laissant le ballon tomber juste devant lui. Le focus doit rester sur l'attaque puissante en posture basse permettant un sursaut tip.
+
+**10. Le silence collectif.** Absence de calls (« tip ! », « line ! », « out ! », « mine ! ») ; contreurs qui ne communiquent pas leur orientation ligne vs diagonale ; aucun capitaine de rotation pour vérifier les chevauchements avant le service.
+
+---
+
+## 8. Sources de référence
+
+### Sources fédérales primaires (autorité maximale)
+
+**FIVB** — *Official Volleyball Rules 2025-2028* (Règle 1 sur le terrain, Règle 7 sur les positions et chevauchements, Règle 13 sur l'attaque, Règle 15 sur les substitutions) ; *FIVB Coaches Manual Level I et II* ; ***FIVB Top Volley Manual*** dont la Partie 5 est entièrement consacrée à la défense (contributions de Philippe Blain, Glenn Hoag, Andrei Egortchev). Site : fivb.com.
+
+**FFVB** — Direction Technique Nationale, formations BEF1/BEF2/DEPVB, cycle pédagogique fédéral. Site : ffvb.org.
+
+**USA Volleyball** — *IMPACT Plus Manual 2015* (référence canonique sur les systèmes défensifs 2-1-3, 2-0-4 et 3-2-1) ; *USA Volleyball Coach Academy* (plateforme qui a remplacé le CAP en 2024). Site : usavolleyball.org.
+
+**AVCA (American Volleyball Coaches Association)** — *Coaching Volleyball Magazine*, AVCA Convention, certifications. Site : avca.org.
+
+### Coaches reconnus et leurs productions
+
+**Hugh McCutcheon** (or olympique 2008, argent 2012, Secrétaire Général FIVB depuis 2024) — *Championship Behaviors* (Triumph Books, 2022). **Karch Kiraly** (or olympique entraîneur Tokyo 2020) — contributions *Volleyball Coaching Bible*. **Marv Dunphy** (or 1988, cofondateur Gold Medal Squared). ***Mike Hebert*** (Illinois, Minnesota) — ***Thinking Volleyball*** (Human Kinetics, 2013), **référence absolue pour la défense de lecture**. **Carl McGown** (BYU, cofondateur GMS). **John Dunning** (Stanford, 3 NCAA). **Russ Rose** (Penn State, 7 NCAA). **Terry Liskevych** (USA féminine 1985-1996, cofondateur The Art of Coaching Volleyball).
+
+**Coaches français** : ***Philippe Blain*** — ***Volley-ball : De l'apprentissage à la compétition de haut niveau*** (Vigot, 2006, ISBN 978-2-7114-1734-6), **la référence en langue française**. **Laurent Tillie** (or Ligue Mondiale 2015 et 2017). **Stéphane Antiga** (champion du monde 2014 comme sélectionneur Pologne).
+
+### Manuels techniques majeurs
+
+***Thinking Volleyball*** (Hebert, Human Kinetics 2013) ; ***The Volleyball Coaching Bible Vol. I et II*** (AVCA, Human Kinetics 2002 et 2015) ; *Coaching Volleyball Technical and Tactical Skills* (AVCA) ; *Volleyball Systems & Strategies* (AVCA) ; *Championship Behaviors* (McCutcheon, 2022) ; *Volleyball Skills & Drills* (AVCA) ; ***Volley-ball*** (Blain, Vigot 2006) ; *Cahier de l'entraîneur* (Swiss Volley, en français).
+
+### Sites web techniques de référence
+
+**The Art of Coaching Volleyball** (theartofcoachingvolleyball.com — plateforme fondée par Liskevych, Dunning, Rose) — article phare *Volleyball Defense Systems and Strategies*. **Coaching Volleyball** de John Forman (coachingvb.com) — articles *Common Violations of Defensive Principles* et *Volleyball Overlap Rule Explained*. **Gold Medal Squared** (goldmedalsquared.com — McGown, Dunphy, Beal) — méthode middle-middle defense. **Volleyball Advisors** (volleyballadvisors.com), **VolleyballXL** (volleyballxl.com), **Strength and Power for Volleyball** (strength-and-power-for-volleyball.com), **Striveon** (joinstriveon.com), **Best Volleyball Drills** (bestvolleyballdrills.com), **Athletes Untapped**.
+
+### Ressources francophones
+
+**BalezOVolley** (balezovolley.fr/le-position-au-volleyball-en-5-1), **Paul Bert Volley 37** (document PDF de positionnement 5-1), **Volley Ermont** (clubeo.com), **Volley Balma Quint-Fonsegrives** (vbqf.fr), **Sikana** (sikana.tv), **FCM-Basket** (article francophone sur la défense rotationnelle en 5-1), **Volleyball Canada** (volleyball.ca, documents bilingues).
+
+---
+
+## Conclusion : ce qu'un article correct doit affirmer
+
+Trois points méritent d'être consolidés dans tout article francophone sur la défense au volleyball. Premièrement, **abandonner l'expression « défense en W »** au profit de la terminologie internationale rigoureuse : la défense avec un joueur monté derrière le contre s'appelle **« défense man-up » ou « 2-1-3 »**, et la « W-formation » désigne historiquement une formation de **réception**. Deuxièmement, **les coordonnées défensives sont des zones de responsabilité, pas des points cartésiens** : un libéro à « 7,5 m du filet, 0,5 m de la ligne gauche » est une orientation, ajustable selon la qualité du bloc, le profil de l'attaquant et le niveau de jeu. Troisièmement, **la défense moderne se définit moins par la formation que par la lecture** : Hebert, Liskevych et le manuel FIVB *Top Volley* convergent pour faire de la séquence visuelle « ballon-passeur-ballon-attaquant » et de l'arrêt équilibré à l'instant du contact les deux fondamentaux qui distinguent une défense organisée d'une défense statique.
+
+Le choix entre périmétrique, man-up et rotation n'est donc pas une question d'orthodoxie mais d'**adéquation au profil offensif adverse et aux qualités de ses propres défenseurs** — un principe que les manuels FIVB et USAV répètent depuis trente ans et que tout article technique sérieux doit énoncer en préambule.
