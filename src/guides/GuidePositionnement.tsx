@@ -1,9 +1,13 @@
-import { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Court, Player, Zone, Ball, ZoneLabel } from './CourtDiagram';
 import { ROLE_COLORS } from '../constants/positions';
 import { CONFIGURATIONS, type TeamSize } from '../pages/Positions';
 import { S } from './styles';
+import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
+
+const SLUG_TO_SIZE: Record<TeamSizeSlug, TeamSize> = { '4v4': 4, '5v5': 5, '6v6': 6 };
+const SIZE_TO_SLUG: Record<TeamSize, TeamSizeSlug> = { 4: '4v4', 5: '5v5', 6: '6v6' };
 
 type ZoneTab = 'zone4' | 'zone3' | 'zone2';
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6';
@@ -1146,35 +1150,24 @@ const EXERCICES = [
     steps: ["L'attaquant alterne smash, feinte, pointe sans prévenir", `Avant qu'il frappe, le défenseur crie sa prédiction : "Smash !" ou "Feinte !"`, 'Point si la prédiction est correcte ET la balle défendue', 'Focus sur : épaule, élan, position par rapport au filet'] },
 ];
 
-export default function GuidePositionnement() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const urlSize = parseInt(searchParams.get('size') ?? '6');
-  const initialSize: TeamSize = [4, 5, 6].includes(urlSize) ? (urlSize as TeamSize) : 6;
-  // Validate the config against the known list for this team size — otherwise
-  // an unknown value (e.g. arriving from a scenario link like `5-1-p1`) would
-  // stick in state, no button would light up, and the URL would silently
-  // rewrite to the fallback via the sync effect below.
-  const urlConfig = searchParams.get('config');
-  const initialConfig =
-    urlConfig && CONFIGURATIONS[initialSize].some(c => c.id === urlConfig)
-      ? urlConfig
-      : CONFIGURATIONS[initialSize][0].id;
+type GuidePositionnementProps = {
+  teamSize?: TeamSize;
+  configId?: string;
+};
 
-  const [teamSize, setTeamSize] = useState<TeamSize>(initialSize);
-  const [configId, setConfigId] = useState<string>(initialConfig);
+export default function GuidePositionnement({ teamSize: teamSizeProp, configId: configIdProp }: GuidePositionnementProps = {}) {
+  const teamSize: TeamSize = teamSizeProp ?? 6;
+  const configurations = CONFIGURATIONS[teamSize];
+
+  // Config is fully URL-driven via the parent route. Fallback to the first
+  // configuration when not provided (e.g. the deprecated /:size route).
+  const configId = configIdProp && configurations.some(c => c.id === configIdProp)
+    ? configIdProp
+    : configurations[0].id;
+
   const [zone, setZone] = useState<ZoneTab>('zone4');
 
-  const configurations = CONFIGURATIONS[teamSize];
   const configuration = configurations.find(c => c.id === configId) ?? configurations[0];
-
-  useEffect(() => {
-    setSearchParams({ size: String(teamSize), config: configuration.id }, { replace: true });
-  }, [teamSize, configuration.id, setSearchParams]);
-
-  const changeTeamSize = (size: TeamSize) => {
-    setTeamSize(size);
-    setConfigId(CONFIGURATIONS[size][0].id);
-  };
 
   const renderZoneTab = () => {
     if (teamSize === 6) {
@@ -1211,11 +1204,18 @@ export default function GuidePositionnement() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.5 }}>Format de jeu</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            {([6, 5, 4] as const).map(size => (
-              <button key={size} onClick={() => changeTeamSize(size)} style={teamSize === size ? btnActive : btnBase}>
-                {size}v{size}
-              </button>
-            ))}
+            {TEAM_SIZES.map(slug => {
+              const isActive = SLUG_TO_SIZE[slug] === teamSize;
+              return (
+                <Link
+                  key={slug}
+                  to={`/guides/positionnement-defense/${slug}`}
+                  style={{ ...(isActive ? btnActive : btnBase), textDecoration: 'none' }}
+                >
+                  {slug}
+                </Link>
+              );
+            })}
           </div>
         </div>
 
@@ -1223,9 +1223,13 @@ export default function GuidePositionnement() {
           <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.5 }}>Configuration tactique</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {configurations.map(c => (
-              <button key={c.id} onClick={() => setConfigId(c.id)} style={configId === c.id ? btnActive : btnBase}>
+              <Link
+                key={c.id}
+                to={`/guides/positionnement-defense/${SIZE_TO_SLUG[teamSize]}/${c.id}`}
+                style={{ ...(configId === c.id ? btnActive : btnBase), textDecoration: 'none' }}
+              >
                 {c.shortName}
-              </button>
+              </Link>
             ))}
           </div>
           <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--ink)', marginTop: 4 }}>{configuration.name}</div>
@@ -1290,7 +1294,7 @@ export default function GuidePositionnement() {
           </div>
           <div style={{ textAlign: 'center', marginTop: 16 }}>
             <Link
-              to={`/positions?size=${teamSize}&config=${configuration.id}`}
+              to={`/positions/${SIZE_TO_SLUG[teamSize]}/${configuration.id}`}
               style={{
                 display: 'inline-block', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em',
                 color: 'var(--orange)', border: '2.5px solid var(--orange)', padding: '6px 16px',

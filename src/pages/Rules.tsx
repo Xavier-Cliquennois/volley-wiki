@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb } from '../seo/structuredData';
 
 const RULE_SECTIONS = [
   {
@@ -74,6 +76,15 @@ export default function Rules() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      <Head
+        title="Règles du volley-ball — Règlement FIVB simplifié | Volley-Wiki"
+        description="Le règlement officiel FIVB du volley-ball expliqué simplement : format, terrain, rotations, fautes, contacts. L'essentiel pour comprendre et jouer."
+        path="/rules"
+        jsonLd={buildBreadcrumb([
+          { name: 'Accueil', path: '/' },
+          { name: 'Règles', path: '/rules' },
+        ])}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>

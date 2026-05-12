@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb, buildWebSite } from '../seo/structuredData';
 
 const FEATURES = [
   { label: '01', title: 'Techniques', desc: 'Animations 3D interactives des gestes fondamentaux du volleyball.', to: '/techniques', accent: 'var(--orange)' },
@@ -12,6 +14,15 @@ const FEATURES = [
 export default function Home() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
+      <Head
+        title="Volley-Wiki — Guide du volley-ball indoor 6v6, 5v5 et 4v4"
+        description="Wiki francophone du volley-ball indoor : positions, techniques, scénarios 3D, règles et glossaire. Adapté aux formats 6v6, 5v5 et 4v4."
+        path="/"
+        jsonLd={[
+          buildWebSite(),
+          buildBreadcrumb([{ name: 'Accueil', path: '/' }]),
+        ]}
+      />
       {/* Hero */}
       <section style={{ paddingTop: 24 }}>
         <div style={{

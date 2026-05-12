@@ -1,9 +1,20 @@
 import { Link } from 'react-router-dom';
 import { GUIDES } from '../guides/data';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb } from '../seo/structuredData';
 
 export default function Guides() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      <Head
+        title="Guides techniques et tactiques du volley-ball | Volley-Wiki"
+        description="Guides complets sur le service, la réception, l'attaque, le contre et le positionnement défensif au volley-ball. Diagrammes, vidéos et conseils par niveau."
+        path="/guides"
+        jsonLd={buildBreadcrumb([
+          { name: 'Accueil', path: '/' },
+          { name: 'Guides', path: '/guides' },
+        ])}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>

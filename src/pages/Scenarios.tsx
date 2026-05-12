@@ -1,9 +1,17 @@
-import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { SCENARIOS, getScenarioById } from '../scenarios/data';
 import type { PhaseKind, TeamSize } from '../scenarios/types';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb, buildHowTo } from '../seo/structuredData';
 
 const ScenarioPlayer = lazy(() => import('../scenarios/ScenarioPlayer'));
+
+const PHASE_LABEL_FR: Record<PhaseKind, string> = {
+  attack: 'Attaque',
+  defense: 'Défense',
+  reception: 'Réception',
+};
 
 const PHASE_LABELS: Record<PhaseKind, string> = {
   attack: 'Attaque',
@@ -24,45 +32,39 @@ const PHASE_COLORS: Record<PhaseKind, string> = {
 };
 
 export default function Scenarios() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const { id: routeId } = useParams<{ id: string }>();
+  const navigate = useNavigate();
 
-  const initialId = searchParams.get('id');
-  const initialScenario = initialId ? getScenarioById(initialId) : undefined;
+  const launchedScenario = routeId ? getScenarioById(routeId) : undefined;
+  const launched = !!launchedScenario;
 
-  const [teamSize, setTeamSize] = useState<TeamSize | null>(initialScenario?.config.teamSize ?? null);
-  const [phase, setPhase] = useState<PhaseKind | null>(initialScenario?.config.phase ?? null);
-  const [contextChoice, setContextChoice] = useState<string | null>(initialScenario?.id ?? null);
-  const [launched, setLaunched] = useState(!!initialScenario);
+  const [teamSize, setTeamSize] = useState<TeamSize | null>(launchedScenario?.config.teamSize ?? null);
+  const [phase, setPhase] = useState<PhaseKind | null>(launchedScenario?.config.phase ?? null);
+  const [contextChoice, setContextChoice] = useState<string | null>(launchedScenario?.id ?? null);
 
-  const lastSyncedId = useRef<string | null>(initialId ?? null);
+  // Sync wizard state when the URL changes (component stays mounted across /scenarios/:id navigations).
   useEffect(() => {
-    const targetId = launched && contextChoice ? contextChoice : null;
-    if (targetId === lastSyncedId.current) return;
-    lastSyncedId.current = targetId;
-    if (targetId) {
-      setSearchParams({ id: targetId }, { replace: true });
-    } else if (searchParams.has('id')) {
-      setSearchParams({}, { replace: true });
+    if (launchedScenario) {
+      setTeamSize(launchedScenario.config.teamSize);
+      setPhase(launchedScenario.config.phase);
+      setContextChoice(launchedScenario.id);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [launched, contextChoice]);
+  }, [launchedScenario?.id]);
 
   const matchingScenarios = useMemo(() => {
     if (!teamSize || !phase) return [];
     return SCENARIOS.filter(s => s.config.teamSize === teamSize && s.config.phase === phase);
   }, [teamSize, phase]);
 
-  const launchedScenario = launched && contextChoice ? getScenarioById(contextChoice) : undefined;
-
   const reset = () => {
     setTeamSize(null);
     setPhase(null);
     setContextChoice(null);
-    setLaunched(false);
+    if (launched) navigate('/scenarios');
   };
 
   const handleLaunch = () => {
-    if (contextChoice) setLaunched(true);
+    if (contextChoice) navigate(`/scenarios/${contextChoice}`);
   };
 
   const handleTeamSizeChange = (n: TeamSize) => {
@@ -77,7 +79,11 @@ export default function Scenarios() {
     setContextChoice(null);
   };
   const handleContextChange = (id: string) => {
-    setContextChoice(id);
+    if (launched) {
+      navigate(`/scenarios/${id}`);
+    } else {
+      setContextChoice(id);
+    }
   };
 
   const btnBase: React.CSSProperties = {
@@ -91,8 +97,46 @@ export default function Scenarios() {
     transition: 'all 0.08s',
   };
 
+  const seoTitle = launchedScenario
+    ? `${launchedScenario.title} — Scénario ${launchedScenario.config.teamSize}v${launchedScenario.config.teamSize} | Volley-Wiki`
+    : 'Scénarios 3D de volley-ball — Attaque, défense, réception | Volley-Wiki';
+  const seoDescription = launchedScenario
+    ? `${launchedScenario.shortDescription} Visualisez ce scénario ${PHASE_LABEL_FR[launchedScenario.config.phase].toLowerCase()} en 3D avec narration étape par étape.`
+    : "Visualisez en 3D des scénarios concrets d'attaque, défense et réception au volley-ball. Adapté aux formats 6v6, 5v5 et 4v4.";
+  const seoPath = launchedScenario ? `/scenarios/${launchedScenario.id}` : '/scenarios';
+  const breadcrumbCrumbs = launchedScenario
+    ? [
+        { name: 'Accueil', path: '/' },
+        { name: 'Scénarios', path: '/scenarios' },
+        { name: launchedScenario.title, path: seoPath },
+      ]
+    : [
+        { name: 'Accueil', path: '/' },
+        { name: 'Scénarios', path: '/scenarios' },
+      ];
+  const jsonLd: Record<string, unknown>[] = [buildBreadcrumb(breadcrumbCrumbs)];
+  if (launchedScenario && launchedScenario.steps.length) {
+    jsonLd.push(
+      buildHowTo({
+        name: launchedScenario.title,
+        description: launchedScenario.shortDescription,
+        steps: launchedScenario.steps.map((step, idx) => ({
+          name: step.title || `Étape ${idx + 1}`,
+          text: step.description || step.title || `Étape ${idx + 1}`,
+        })),
+      }),
+    );
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      <Head
+        title={seoTitle}
+        description={seoDescription}
+        path={seoPath}
+        ogType={launchedScenario ? 'article' : 'website'}
+        jsonLd={jsonLd}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>

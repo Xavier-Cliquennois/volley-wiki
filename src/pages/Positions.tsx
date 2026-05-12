@@ -1,6 +1,11 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useMemo, useState } from 'react';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { ROLE_COLORS } from '../constants/positions';
+import { Head } from '../seo/Head';
+import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, TEAM_SIZE_LABEL, type TeamSizeSlug } from '../seo/constants';
+import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
+
+const SLUG_TO_SIZE: Record<TeamSizeSlug, 4 | 5 | 6> = { '4v4': 4, '5v5': 5, '6v6': 6 };
 
 type ZoneId = 'P1' | 'P2' | 'P3' | 'P4' | 'P5' | 'P6' | 'L';
 type TeamSize = 4 | 5 | 6;
@@ -397,7 +402,6 @@ function CourtField({
         position: 'absolute', inset: 0,
         background: 'var(--paper)',
         border: '3px solid var(--ink)',
-        boxShadow: 'var(--shadow)',
         backgroundImage: 'repeating-linear-gradient(0deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px), repeating-linear-gradient(90deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px)',
       }} />
       {/* Net */}
@@ -458,26 +462,18 @@ function CourtField({
 }
 
 export default function Positions() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const urlSize = parseInt(searchParams.get('size') ?? '6');
-  const initialSize: TeamSize = ([4, 5, 6] as const).includes(urlSize as TeamSize)
-    ? (urlSize as TeamSize)
-    : 6;
-  const urlConfig = searchParams.get('config');
-  const initialConfig =
-    urlConfig && CONFIGURATIONS[initialSize].some(c => c.id === urlConfig)
-      ? urlConfig
-      : CONFIGURATIONS[initialSize][0].id;
+  const { size: sizeParam, config: configParam } = useParams<{ size: string; config: string }>();
 
-  const [teamSize, setTeamSize] = useState<TeamSize>(initialSize);
-  const [configId, setConfigId] = useState<string>(initialConfig);
+  const isValidSize = !!sizeParam && (TEAM_SIZES as readonly string[]).includes(sizeParam);
+  const sizeSlug = (isValidSize ? sizeParam : '6v6') as TeamSizeSlug;
+  const teamSize: TeamSize = SLUG_TO_SIZE[sizeSlug];
+  const configurations = CONFIGURATIONS[teamSize];
+
+  const configIsValid = !!configParam && configurations.some(c => c.id === configParam);
+  const configId = configIsValid ? configParam! : DEFAULT_POSITION_CONFIG[sizeSlug];
+
   const [selectedId, setSelectedId] = useState<ZoneId | null>(null);
 
-  useEffect(() => {
-    setSearchParams({ size: String(teamSize), config: configId }, { replace: true });
-  }, [teamSize, configId, setSearchParams]);
-
-  const configurations = CONFIGURATIONS[teamSize];
   const configuration = useMemo(
     () => configurations.find(c => c.id === configId) ?? configurations[0],
     [configurations, configId]
@@ -497,16 +493,13 @@ export default function Positions() {
 
   const toggle = (id: ZoneId) => setSelectedId(prev => (prev === id ? null : id));
 
-  const changeTeamSize = (size: TeamSize) => {
-    setTeamSize(size);
-    setConfigId(CONFIGURATIONS[size][0].id);
-    setSelectedId(null);
-  };
-
-  const changeConfig = (id: string) => {
-    setConfigId(id);
-    setSelectedId(null);
-  };
+  if (!isValidSize) {
+    return <Navigate to="/positions" replace />;
+  }
+  // Invalid config slug in URL: redirect to default config for this size.
+  if (configParam && !configIsValid) {
+    return <Navigate to={`/positions/${sizeSlug}/${DEFAULT_POSITION_CONFIG[sizeSlug]}`} replace />;
+  }
 
   const btnBase: React.CSSProperties = {
     padding: '7px 16px',
@@ -520,18 +513,43 @@ export default function Positions() {
     transition: 'all 0.08s',
   };
 
+  const seoTitle = `Positions au volley-ball ${sizeSlug} — ${configuration.shortName} | Volley-Wiki`;
+  const seoDescription = `Postes et rôles au volley-ball ${TEAM_SIZE_LABEL[sizeSlug]} : système ${configuration.name}. ${configuration.description.slice(0, 100)}`;
+  // Canonical always points to the explicit /:size/:config URL — visiting
+  // /:size alone (default config) consolidates ranking to /:size/:defaultConfig.
+  const canonicalPath = `/positions/${sizeSlug}/${configId}`;
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      <Head
+        title={seoTitle}
+        description={seoDescription}
+        path={canonicalPath}
+        ogType="article"
+        jsonLd={[
+          buildBreadcrumb([
+            { name: 'Accueil', path: '/' },
+            { name: 'Positions', path: '/positions' },
+            { name: sizeSlug.toUpperCase(), path: `/positions/${sizeSlug}` },
+            { name: configuration.shortName, path: canonicalPath },
+          ]),
+          buildArticle({
+            headline: `Positions au volley-ball ${sizeSlug} — ${configuration.shortName}`,
+            description: seoDescription,
+            path: canonicalPath,
+          }),
+        ]}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
-          ★ DOCUMENTATION
+          ★ DOCUMENTATION · {sizeSlug.toUpperCase()}
         </div>
         <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
-          POSITIONS & RÔLES
+          POSITIONS — {sizeSlug.toUpperCase()}
         </h1>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.7, maxWidth: 600 }}>
-          Postes du volleyball indoor. Choisissez le format de jeu puis la configuration tactique.
+          Postes et systèmes tactiques pour le volley-ball {TEAM_SIZE_LABEL[sizeSlug]}.
         </p>
       </div>
 
@@ -541,20 +559,27 @@ export default function Positions() {
           1. FORMAT DE JEU
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
-          {([6, 5, 4] as const).map(size => (
-            <button
-              key={size}
-              onClick={() => changeTeamSize(size)}
-              style={{
-                ...btnBase,
-                fontSize: 16,
-                padding: '10px 24px',
-                ...(teamSize === size ? { background: 'var(--orange)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
-              }}
-            >
-              {size}v{size}
-            </button>
-          ))}
+          {TEAM_SIZES.map(slug => {
+            const isActive = slug === sizeSlug;
+            const activeStyle = isActive
+              ? { background: 'var(--orange)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' }
+              : {};
+            return (
+              <Link
+                key={slug}
+                to={`/positions/${slug}`}
+                style={{
+                  ...btnBase,
+                  fontSize: 16,
+                  padding: '10px 24px',
+                  textDecoration: 'none',
+                  ...activeStyle,
+                }}
+              >
+                {slug}
+              </Link>
+            );
+          })}
         </div>
         <div style={{ fontSize: 14, marginBottom: 6 }}>{TEAM_INTRO[teamSize].tagline}</div>
         <div style={{ borderLeft: '4px solid var(--teal)', paddingLeft: 12, fontSize: 13, opacity: 0.7 }}>
@@ -568,18 +593,23 @@ export default function Positions() {
           2. CONFIGURATION TACTIQUE
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 14 }}>
-          {configurations.map(c => (
-            <button
-              key={c.id}
-              onClick={() => changeConfig(c.id)}
-              style={{
-                ...btnBase,
-                ...(configId === c.id ? { background: 'var(--teal)', color: 'var(--cream)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
-              }}
-            >
-              {c.shortName}
-            </button>
-          ))}
+          {configurations.map(c => {
+            const isActive = configId === c.id;
+            return (
+              <Link
+                key={c.id}
+                to={`/positions/${sizeSlug}/${c.id}`}
+                onClick={() => setSelectedId(null)}
+                style={{
+                  ...btnBase,
+                  textDecoration: 'none',
+                  ...(isActive ? { background: 'var(--teal)', color: 'var(--cream)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' } : {}),
+                }}
+              >
+                {c.shortName}
+              </Link>
+            );
+          })}
         </div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, marginBottom: 8 }}>{configuration.name}</div>
         <p style={{ margin: 0, fontSize: 14, opacity: 0.7, lineHeight: 1.5 }}>{configuration.description}</p>
@@ -607,11 +637,8 @@ export default function Positions() {
               ← FILET →
             </div>
             <CourtField configuration={configuration} selectedId={selectedId} onToggle={toggle} />
-            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 420, marginTop: 8 }}>
-              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, opacity: 0.5 }}>FOND DE COURT</span>
-              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, opacity: 0.5 }}>
-                {teamSize === 4 ? '7×14 m / 8×16 m' : '9 m × 9 m'}
-              </span>
+            <div style={{ width: '100%', maxWidth: 420, marginTop: 8, textAlign: 'center' }}>
+              <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.18em', opacity: 0.55 }}>FOND DE COURT</span>
             </div>
           </div>
 
@@ -738,7 +765,7 @@ export default function Positions() {
         <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6 }}>
           Consultez le guide{' '}
           <Link
-            to={`/guides/positionnement-defense?size=${teamSize}&config=${configuration.id}`}
+            to={`/guides/positionnement-defense/${sizeSlug}/${configuration.id}`}
             style={{ color: 'var(--orange)', fontWeight: 700 }}
           >
             Positionnement et défense

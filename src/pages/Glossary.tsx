@@ -1,4 +1,6 @@
 import { useState, useMemo } from 'react';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb } from '../seo/structuredData';
 
 const TERMS = [
   { term: 'Ace', def: 'Service direct qui tombe dans le terrain adverse sans être touché, ou touché mais impossible à relever.' },
@@ -75,6 +77,15 @@ export default function Glossary() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+      <Head
+        title="Glossaire du volley-ball — Tous les termes expliqués | Volley-Wiki"
+        description="Dictionnaire complet du vocabulaire du volley-ball : ace, manchette, contre, pipe, libéro, side-out et plus. Définitions claires et précises."
+        path="/glossary"
+        jsonLd={buildBreadcrumb([
+          { name: 'Accueil', path: '/' },
+          { name: 'Glossaire', path: '/glossary' },
+        ])}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>

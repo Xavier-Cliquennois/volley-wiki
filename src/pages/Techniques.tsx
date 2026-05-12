@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb } from '../seo/structuredData';
 
 type Level = 'Débutant' | 'Intermédiaire' | 'Avancé';
 
@@ -191,6 +193,15 @@ export default function Techniques() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+      <Head
+        title="Techniques de volley-ball — Service, réception, attaque, défense | Volley-Wiki"
+        description="Apprenez les techniques fondamentales du volley-ball : service, réception, attaque, contre, défense. Animations 3D interactives et conseils par niveau."
+        path="/techniques"
+        jsonLd={buildBreadcrumb([
+          { name: 'Accueil', path: '/' },
+          { name: 'Techniques', path: '/techniques' },
+        ])}
+      />
       {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>

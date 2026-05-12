@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const NAV_LINKS = [
   { to: '/', label: 'Accueil' },
@@ -30,9 +30,16 @@ const NAV_IDLE: React.CSSProperties = {
   color: 'var(--ink)',
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Scroll to top on every route change
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, [location.pathname]);
 
   // Close the mobile menu when the route changes
   useEffect(() => {
@@ -206,7 +213,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Main content */}
       <main style={{ flex: 1, maxWidth: 1200, margin: '0 auto', width: '100%', padding: '40px 24px' }}>
-        {children}
+        <Outlet />
       </main>
 
       {/* Footer */}

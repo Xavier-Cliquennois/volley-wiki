@@ -44,16 +44,28 @@ function matchKnownConfig(teamSize: TeamSize, raw: string | undefined): string |
   return null;
 }
 
-// Build a guide URL that carries the scenario's format (team size + tactical
-// configuration). Configs that don't map to a known formation are omitted so
-// the guide loads with its default rather than displaying a deselected state.
+// Build a guide URL that carries the scenario's format when the target guide
+// actually reads it. `positionnement-defense` lives at /:size/:config (both as
+// path segments); `reception` reads ?size= as a UI hint; other guides ignore params.
+const SIZE_TO_SLUG = { 4: '4v4', 5: '5v5', 6: '6v6' } as const;
+const SIZE_AWARE_GUIDES = new Set(['reception']);
+
 function guideHref(guide: GuideRef, scenario: Scenario): string {
-  const params = new URLSearchParams();
-  params.set('size', String(scenario.config.teamSize));
-  const match = scenario.id.match(/^\d+v\d+-(?:attack|defense|reception)-(.+)$/);
-  const config = matchKnownConfig(scenario.config.teamSize, match?.[1]);
-  if (config) params.set('config', config);
-  return `/guides/${guide.slug}?${params.toString()}`;
+  const sizeSlug = SIZE_TO_SLUG[scenario.config.teamSize];
+
+  if (guide.slug === 'positionnement-defense') {
+    const match = scenario.id.match(/^\d+v\d+-(?:attack|defense|reception)-(.+)$/);
+    const config = matchKnownConfig(scenario.config.teamSize, match?.[1]);
+    return config
+      ? `/guides/positionnement-defense/${sizeSlug}/${config}`
+      : `/guides/positionnement-defense/${sizeSlug}`;
+  }
+
+  if (SIZE_AWARE_GUIDES.has(guide.slug)) {
+    return `/guides/${guide.slug}?size=${scenario.config.teamSize}`;
+  }
+
+  return `/guides/${guide.slug}`;
 }
 
 // Heuristic: pick the most relevant guide for a step from keywords in its
