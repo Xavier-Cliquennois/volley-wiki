@@ -1,0 +1,140 @@
+import type { CourtArrow, CourtPoint } from './types';
+
+// Court SVG uses a 3:4 aspect ratio (width:height) — match the Court container.
+// Using a viewBox with the same aspect avoids the marker distortion that comes
+// with preserveAspectRatio="none" and lets us use markerUnits="userSpaceOnUse"
+// to keep arrowheads at a consistent visual size.
+const VB_W = 300;
+const VB_H = 400;
+const SX = (x: number) => (x / 100) * VB_W;
+const SY = (y: number) => (y / 100) * VB_H;
+
+// Player circle is 36 px on a court rendered at up to 420 px wide. The SVG
+// uses a 300x400 viewBox with preserveAspectRatio=meet, so 1 SVG unit is roughly
+// the court-width / 300 in pixels. 20 SVG units clears the player circle on all
+// common screen sizes.
+const PLAYER_AVOID_RADIUS_SVG = 20;
+
+// Pull the arrow tip back from its target so the marker stops in front of the
+// player circle instead of overlapping it. svgBackoff is in SVG user units.
+// The line is allowed to PASS through players along the way — only the
+// endpoint is adjusted: if it would land inside any player's avoidance radius,
+// pull it back to that player's entry point so the arrowhead stays visible
+// just before the circle.
+function shortenAvoidingPlayers(
+  from: CourtPoint,
+  to: CourtPoint,
+  players: CourtPoint[],
+  svgBackoff: number,
+): CourtPoint {
+  const dxs = SX(to.x) - SX(from.x);
+  const dys = SY(to.y) - SY(from.y);
+  const len2 = dxs * dxs + dys * dys;
+  const len = Math.sqrt(len2);
+  if (len < 1) return { x: to.x, y: to.y };
+
+  let t = Math.max(0, (len - svgBackoff) / len);
+  const r2 = PLAYER_AVOID_RADIUS_SVG * PLAYER_AVOID_RADIUS_SVG;
+
+  // Iterate so that pulling back for one player doesn't push the endpoint
+  // inside a second player further upstream along the line.
+  for (let iter = 0; iter <= players.length; iter++) {
+    let changed = false;
+    for (const p of players) {
+      const pxs = SX(p.x) - SX(from.x);
+      const pys = SY(p.y) - SY(from.y);
+      const ex = t * dxs - pxs;
+      const ey = t * dys - pys;
+      if (ex * ex + ey * ey >= r2) continue;
+      const b = -2 * (dxs * pxs + dys * pys);
+      const c = pxs * pxs + pys * pys - r2;
+      const disc = b * b - 4 * len2 * c;
+      if (disc < 0) continue;
+      const tEnter = (-b - Math.sqrt(disc)) / (2 * len2);
+      if (tEnter >= 0 && tEnter < t) {
+        t = tEnter;
+        changed = true;
+      }
+    }
+    if (!changed) break;
+  }
+
+  return {
+    x: from.x + (to.x - from.x) * t,
+    y: from.y + (to.y - from.y) * t,
+  };
+}
+
+type ArrowsProps = {
+  arrows: CourtArrow[];
+  players: CourtPoint[];
+  idSuffix: string;
+};
+
+export function Arrows({ arrows, players, idSuffix }: ArrowsProps) {
+  if (arrows.length === 0) return null;
+  const mainMarkerId = `arrow-main-${idSuffix}`;
+  const altMarkerId = `arrow-alt-${idSuffix}`;
+
+  return (
+    <svg
+      viewBox={`0 0 ${VB_W} ${VB_H}`}
+      preserveAspectRatio="xMidYMid meet"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 1,
+      }}
+    >
+      <defs>
+        <marker
+          id={mainMarkerId}
+          markerUnits="userSpaceOnUse"
+          markerWidth="14"
+          markerHeight="11"
+          refX="13"
+          refY="5.5"
+          orient="auto"
+        >
+          <polygon points="0 0, 14 5.5, 0 11" fill="#e2542e" />
+        </marker>
+        <marker
+          id={altMarkerId}
+          markerUnits="userSpaceOnUse"
+          markerWidth="11"
+          markerHeight="8"
+          refX="10"
+          refY="4"
+          orient="auto"
+        >
+          <polygon points="0 0, 11 4, 0 8" fill="#8a7a62" />
+        </marker>
+      </defs>
+      {arrows.map(arrow => {
+        const isMain = arrow.kind !== 'alt';
+        const backoff = isMain ? 24 : 18;
+        const end = shortenAvoidingPlayers(arrow.from, arrow.to, players, backoff);
+        const stroke = isMain ? '#e2542e' : '#8a7a62';
+        const strokeWidth = isMain ? 4 : 2;
+        const dash = isMain ? undefined : '6,5';
+        const markerId = isMain ? mainMarkerId : altMarkerId;
+        return (
+          <line
+            key={arrow.id}
+            x1={SX(arrow.from.x)}
+            y1={SY(arrow.from.y)}
+            x2={SX(end.x)}
+            y2={SY(end.y)}
+            stroke={stroke}
+            strokeWidth={strokeWidth}
+            strokeDasharray={dash}
+            markerEnd={`url(#${markerId})`}
+          />
+        );
+      })}
+    </svg>
+  );
+}

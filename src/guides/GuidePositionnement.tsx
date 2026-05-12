@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Court, Player, Zone, Ball, ZoneLabel } from './CourtDiagram';
-import { ROLE_COLORS } from '../constants/positions';
+import { Court, type CourtLayout } from '../components/court';
+import type { RoleColorKey } from '../constants/positions';
 import { CONFIGURATIONS, type TeamSize } from '../pages/Positions';
 import { S } from './styles';
 import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
@@ -16,19 +16,30 @@ type DefensePlayer = {
   zoneId: ZoneId;
   x: number;
   y: number;
-  sub?: 'BLK' | 'DÉF' | 'OFF';
+  sub?: string;
+  // Optional overrides for the colour and label shown.
+  role?: RoleColorKey;
+  label?: string;
 };
 
 type DefenseZone = {
   x: number; y: number; w: number; h: number;
   posNumber: ZoneId;
   label: string;
+  // Optional override of the zone fill colour (defaults to posNumber's role).
+  role?: RoleColorKey;
+  // Optional manual label colour (defaults to neutral fallback).
+  labelRole?: RoleColorKey;
+  // Optional manual label position (already final; no auto-offset).
+  labelPos?: { x: number; y: number };
 };
 
 type Shot = {
   toX: number;
   toY: number;
 };
+
+type DefenseNote = string | { label: string; text: string };
 
 type DefenseLayout = {
   ballX: number;
@@ -37,159 +48,49 @@ type DefenseLayout = {
   zones: DefenseZone[];
   mainShot: Shot;
   altShots: Shot[];
-  notes: string[];
+  notes: DefenseNote[];
 };
 
 const Z = (zoneId: ZoneId, x: number, y: number, w: number, h: number, label: string): DefenseZone =>
-  ({ zoneId, x, y, w, h, posNumber: zoneId, label } as DefenseZone & { zoneId: ZoneId });
+  ({ x, y, w, h, posNumber: zoneId, label });
 
-// Court SVG uses a 3:4 aspect ratio (width:height) — match the Court container.
-// Using a viewBox with the same aspect avoids the marker distortion that comes
-// with preserveAspectRatio="none" and lets us use markerUnits="userSpaceOnUse"
-// to keep arrowheads at a consistent visual size.
-const SX = (x: number) => x * 3;
-const SY = (y: number) => y * 4;
-
-// Pull the arrow tip back from its target so the marker stops in front of the
-// player circle instead of overlapping it. svgBackoff is in SVG user units
-// (viewBox is 300×400). The line is allowed to PASS through players along the
-// way — only the endpoint is adjusted: if it would land inside any player's
-// avoidance radius, pull it back to that player's entry point so the arrowhead
-// stays visible just before the circle.
-function shortenAvoidingPlayers(
-  fromX: number,
-  fromY: number,
-  toX: number,
-  toY: number,
-  players: { x: number; y: number }[],
-  svgBackoff: number,
-  playerAvoidRadius: number,
-): { x: number; y: number } {
-  const dxs = (toX - fromX) * 3;
-  const dys = (toY - fromY) * 4;
-  const len2 = dxs * dxs + dys * dys;
-  const len = Math.sqrt(len2);
-  if (len < 1) return { x: toX, y: toY };
-
-  let t = Math.max(0, (len - svgBackoff) / len);
-  const r2 = playerAvoidRadius * playerAvoidRadius;
-
-  // Iterate so that pulling back for one player doesn't push the endpoint
-  // inside a second player further upstream along the line.
-  for (let iter = 0; iter <= players.length; iter++) {
-    let changed = false;
-    for (const p of players) {
-      const pxs = (p.x - fromX) * 3;
-      const pys = (p.y - fromY) * 4;
-      const ex = t * dxs - pxs;
-      const ey = t * dys - pys;
-      if (ex * ex + ey * ey >= r2) continue;
-      const b = -2 * (dxs * pxs + dys * pys);
-      const c = pxs * pxs + pys * pys - r2;
-      const disc = b * b - 4 * len2 * c;
-      if (disc < 0) continue;
-      const tEnter = (-b - Math.sqrt(disc)) / (2 * len2);
-      if (tEnter >= 0 && tEnter < t) {
-        t = tEnter;
-        changed = true;
-      }
-    }
-    if (!changed) break;
-  }
-
-  return { x: fromX + (toX - fromX) * t, y: fromY + (toY - fromY) * t };
-}
-
-// Player circle is 36 px on a court rendered at up to 420 px wide. The SVG
-// uses a 300×400 viewBox with preserveAspectRatio=meet, so 1 SVG unit ≈ the
-// court-width / 300 in pixels. We use 20 SVG units as the avoidance radius so
-// the arrowhead clears the player circle on all common screen sizes.
-const PLAYER_AVOID_RADIUS_SVG = 20;
-
-function ShotArrows({
-  ballX,
-  ballY,
-  mainShot,
-  altShots,
-  players,
-  idSuffix,
-}: {
-  ballX: number;
-  ballY: number;
-  mainShot: { toX: number; toY: number };
-  altShots: { toX: number; toY: number }[];
-  players: { x: number; y: number }[];
-  idSuffix: string;
-}) {
-  const main = shortenAvoidingPlayers(
-    ballX, ballY, mainShot.toX, mainShot.toY, players, 24, PLAYER_AVOID_RADIUS_SVG,
-  );
-  return (
-    <svg
-      viewBox="0 0 300 400"
-      preserveAspectRatio="xMidYMid meet"
-      style={{
-        position: 'absolute',
-        inset: 0,
-        width: '100%',
-        height: '100%',
-        pointerEvents: 'none',
-        zIndex: 1,
-      }}
-    >
-      <defs>
-        <marker
-          id={`shot-main-${idSuffix}`}
-          markerUnits="userSpaceOnUse"
-          markerWidth="14"
-          markerHeight="11"
-          refX="13"
-          refY="5.5"
-          orient="auto"
-        >
-          <polygon points="0 0, 14 5.5, 0 11" fill="#e2542e" />
-        </marker>
-        <marker
-          id={`shot-alt-${idSuffix}`}
-          markerUnits="userSpaceOnUse"
-          markerWidth="11"
-          markerHeight="8"
-          refX="10"
-          refY="4"
-          orient="auto"
-        >
-          <polygon points="0 0, 11 4, 0 8" fill="#8a7a62" />
-        </marker>
-      </defs>
-      <line
-        x1={SX(ballX)}
-        y1={SY(ballY)}
-        x2={SX(main.x)}
-        y2={SY(main.y)}
-        stroke="#e2542e"
-        strokeWidth="4"
-        markerEnd={`url(#shot-main-${idSuffix})`}
-      />
-      {altShots.map((s, i) => {
-        const end = shortenAvoidingPlayers(
-          ballX, ballY, s.toX, s.toY, players, 18, PLAYER_AVOID_RADIUS_SVG,
-        );
-        return (
-          <line
-            key={i}
-            x1={SX(ballX)}
-            y1={SY(ballY)}
-            x2={SX(end.x)}
-            y2={SY(end.y)}
-            stroke="#8a7a62"
-            strokeWidth="2"
-            strokeDasharray="6,5"
-            markerEnd={`url(#shot-alt-${idSuffix})`}
-          />
-        );
-      })}
-    </svg>
-  );
+function defenseToCourtLayout(layout: DefenseLayout): CourtLayout {
+  return {
+    ball: { x: layout.ballX, y: layout.ballY },
+    players: layout.players.map((p, i) => ({
+      id: `${p.zoneId}-${i}`,
+      x: p.x,
+      y: p.y,
+      label: p.label ?? p.zoneId.slice(1),
+      role: p.role ?? p.zoneId,
+      sub: p.sub,
+    })),
+    zones: layout.zones.map((z, i) => ({
+      id: `${z.posNumber}-${i}`,
+      x: z.x,
+      y: z.y,
+      w: z.w,
+      h: z.h,
+      role: z.role ?? z.posNumber,
+      label: z.label,
+      labelRole: z.labelRole,
+      labelPos: z.labelPos,
+    })),
+    arrows: [
+      {
+        id: 'main',
+        kind: 'main',
+        from: { x: layout.ballX, y: layout.ballY },
+        to: { x: layout.mainShot.toX, y: layout.mainShot.toY },
+      },
+      ...layout.altShots.map((s, i) => ({
+        id: `alt-${i}`,
+        kind: 'alt' as const,
+        from: { x: layout.ballX, y: layout.ballY },
+        to: { x: s.toX, y: s.toY },
+      })),
+    ],
+  };
 }
 
 // Convention FIVB : Z4 adverse (sa gauche) → balle arrive sur notre côté DROIT (ballX ~85).
@@ -583,296 +484,145 @@ const LAYOUTS_5V5_2F3B: Record<ZoneTab, DefenseLayout> = {
   },
 };
 
+// Zone label colour for the 6v6 perimeter layout where labels were originally
+// rendered in a neutral fallback; only "Ombre bloc" is in the libero colour.
+const LIBERO_LABEL: Pick<DefenseZone, 'role' | 'labelRole'> = { role: 'L', labelRole: 'L' };
+
+const LAYOUTS_6V6_PERIMETER: Record<ZoneTab, DefenseLayout> = {
+  zone4: {
+    // Attaque adverse en Z4 (sa GAUCHE) -> balle arrive sur NOTRE coin avant-DROIT.
+    // Bloc a 2 = P2 (pointu, contreur ligne) + P3 (central, ferme diagonale).
+    ballX: 85, ballY: 19,
+    players: [
+      { zoneId: 'P3', x: 72, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 82, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P4', x: 18, y: 47.5, sub: 'OFF' },
+      { zoneId: 'P5', x: 22, y: 70, sub: 'LIB', role: 'L' },
+      { zoneId: 'P6', x: 48, y: 67 },
+      { zoneId: 'P1', x: 75, y: 62.5 },
+    ],
+    zones: [
+      { posNumber: 'P5', x: 0, y: 43, w: 50, h: 57, label: 'Grande diag.', labelPos: { x: 18, y: 75 } },
+      { posNumber: 'P6', x: 33, y: 52, w: 34, h: 36, label: 'Ombre bloc', labelPos: { x: 36, y: 88 }, ...LIBERO_LABEL },
+      { posNumber: 'P1', x: 62, y: 34, w: 38, h: 42, label: 'Ligne', labelPos: { x: 70, y: 40 } },
+      { posNumber: 'P4', x: 0, y: 25, w: 30, h: 36, label: 'Off-blocker', labelPos: { x: 4, y: 33 } },
+    ],
+    mainShot: { toX: 22, toY: 77.5 },
+    altShots: [
+      { toX: 78, toY: 47.5 },
+      { toX: 45, toY: 62.5 },
+      { toX: 15, toY: 40 },
+    ],
+    notes: [
+      { label: 'Poste 2 (pointu / OPP)', text: 'Contreur ligne — bloque, monte au filet côté droit.' },
+      { label: 'Poste 3 (central)', text: 'Ferme la diagonale en bloc à 2 avec le pointu.' },
+      { label: 'Poste 4 (R4 off-blocker)', text: "Décroche sur la ligne des 3 m côté gauche — couvre le cut shot court (diagonale aiguë) et les feintes." },
+      { label: 'Poste 5 (Libéro)', text: "Défend la grande diagonale longue, ~7-8 m du filet, dans l'épaule intérieure du central contreur." },
+      { label: 'Poste 6 (arrière centre)', text: "Balles hautes passant le bloc, touches de bloc longues, axe ~8-8,5 m." },
+      { label: 'Poste 1 (arrière droit)', text: "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne droite." },
+    ],
+  },
+  zone3: {
+    // Attaque rapide centrale (quick / tempo 1) : 0,3-0,5 s entre passe et frappe.
+    // Bloc a 1 (central) en lecture. "Stopped on contact" — tous arretes au moment du contact.
+    // Arrieres Z1 et Z5 gagnent un metre vers le filet (angles plus courts qu'en haute balle).
+    ballX: 50, ballY: 19,
+    players: [
+      { zoneId: 'P4', x: 20, y: 47.5, sub: 'OFF' },
+      { zoneId: 'P3', x: 50, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 80, y: 47.5, sub: 'OFF' },
+      { zoneId: 'P5', x: 22, y: 67, sub: 'LIB', role: 'L' },
+      { zoneId: 'P6', x: 50, y: 70 },
+      { zoneId: 'P1', x: 78, y: 65 },
+    ],
+    zones: [
+      { posNumber: 'P5', x: 0, y: 34, w: 36, h: 66, label: 'Diag. G', labelPos: { x: 10, y: 70 } },
+      { posNumber: 'P6', x: 32, y: 52, w: 36, h: 48, label: 'Axe', labelPos: { x: 42, y: 73 }, ...LIBERO_LABEL },
+      { posNumber: 'P1', x: 64, y: 34, w: 36, h: 66, label: 'Diag. D', labelPos: { x: 75, y: 70 } },
+      { posNumber: 'P4', x: 0, y: 25, w: 28, h: 28, label: 'Couv.', labelPos: { x: 4, y: 36 } },
+      { posNumber: 'P2', x: 72, y: 25, w: 28, h: 28, label: 'Couv.', labelPos: { x: 78, y: 36 } },
+    ],
+    mainShot: { toX: 75, toY: 65 },
+    altShots: [
+      { toX: 25, toY: 65 },
+      { toX: 50, toY: 80 },
+    ],
+    notes: [
+      { label: 'Poste 3 (central)', text: "Bloc à 1 en lecture (read) ou en commitment selon le scouting adverse." },
+      { label: 'Postes 4 et 2 (ailiers)', text: "Sur la ligne d'attaque (~2-2,5 m du filet, 0,5 m des lignes) : couvrent déviations de bloc et balles à travers le bloc." },
+      { label: 'Poste 5 (Libéro)', text: "Face à l'attaquant central, dans son couloir de frappe (~7-8 m du filet)." },
+      { label: 'Poste 6 (arrière centre)', text: "Épaules face à l'attaquant ; défend la balle puissante traversant le bloc (axe ~8-8,5 m)." },
+      { label: 'Poste 1 (arrière droit)', text: "Avance d'un mètre (~7,5 m du filet, 1 m de la ligne droite) : angles plus courts sur quick." },
+      { label: 'Règle clé', text: '« Stopped on contact » : tous arrêtés et équilibrés à l\'instant exact de la frappe.' },
+    ],
+  },
+  zone2: {
+    // Attaque adverse en Z2 (sa DROITE) -> balle arrive sur NOTRE coin avant-GAUCHE.
+    // Miroir parfait de Z4. Bloc a 2 = P4 (R4, ligne) + P3 (central, diagonale).
+    ballX: 15, ballY: 19,
+    players: [
+      { zoneId: 'P4', x: 18, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P3', x: 28, y: 29.5, sub: 'BLK' },
+      { zoneId: 'P2', x: 82, y: 47.5, sub: 'OFF' },
+      { zoneId: 'P5', x: 25, y: 62.5, sub: 'LIB', role: 'L' },
+      { zoneId: 'P6', x: 52, y: 67 },
+      { zoneId: 'P1', x: 78, y: 70 },
+    ],
+    zones: [
+      { posNumber: 'P1', x: 50, y: 43, w: 50, h: 57, label: 'Grande diag.', labelPos: { x: 68, y: 75 } },
+      { posNumber: 'P6', x: 33, y: 52, w: 34, h: 36, label: 'Ombre bloc', labelPos: { x: 36, y: 88 }, ...LIBERO_LABEL },
+      { posNumber: 'P5', x: 0, y: 34, w: 38, h: 42, label: 'Ligne', labelPos: { x: 10, y: 40 } },
+      { posNumber: 'P2', x: 70, y: 25, w: 30, h: 36, label: 'Off-blocker', labelPos: { x: 76, y: 33 } },
+    ],
+    mainShot: { toX: 78, toY: 77.5 },
+    altShots: [
+      { toX: 22, toY: 47.5 },
+      { toX: 55, toY: 62.5 },
+      { toX: 85, toY: 40 },
+    ],
+    notes: [
+      { label: 'Poste 4 (R4)', text: 'Contreur ligne — bloque au filet côté gauche.' },
+      { label: 'Poste 3 (central)', text: 'Ferme la diagonale en bloc à 2 avec le R4.' },
+      { label: 'Poste 2 (pointu / OPP)', text: 'Devient off-blocker côté droit — décroche sur les 3 m, couvre cut shot court et feintes.' },
+      { label: 'Poste 5 (Libéro)', text: "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne gauche." },
+      { label: 'Poste 6 (arrière centre)', text: "Balles hautes par-dessus le bloc, axe ~8-8,5 m du filet." },
+      { label: 'Poste 1 (passeur ou OH/OPP)', text: 'Défend la grande diagonale longue cross-court, ~7-8 m du filet.' },
+    ],
+  },
+};
+
 const LAYOUTS_BY_CONFIG: Record<string, Record<ZoneTab, DefenseLayout>> = {
+  // 6v6 — defense doctrine is the same across all offensive configurations.
+  '5-1': LAYOUTS_6V6_PERIMETER,
+  '4-2': LAYOUTS_6V6_PERIMETER,
+  '6-2': LAYOUTS_6V6_PERIMETER,
+  // 5v5
   'pentagon': LAYOUTS_5V5_PENTAGON,
   '3F-2B': LAYOUTS_5V5_3F2B,
   '2F-3B': LAYOUTS_5V5_2F3B,
+  // 4v4
   'losange': LAYOUTS_4V4_LOSANGE,
   'carre': LAYOUTS_4V4_CARRE,
   '3-1': LAYOUTS_4V4_31,
 };
 
-// Place a zone label so it never sits under a player circle. The label's
-// `x` prop is its LEFT edge (with a -5 offset applied later to nudge the text),
-// and `y` is its TOP. Player circles are ~8.5% × 6.4% of the court; labels are
-// short Bungee text — we approximate the box as ~16% × 2.5% and check AABB
-// overlap. Prefer the zone center; fall back to inset corner candidates.
-function pickLabelPosition(
-  zone: DefenseZone,
-  players: { x: number; y: number }[],
-): { x: number; y: number } {
-  const insetX = Math.min(8, zone.w * 0.25);
-  const insetY = Math.min(6, zone.h * 0.2);
-  const cx = zone.x + zone.w / 2;
-  const cy = zone.y + zone.h / 2;
-
-  const candidates = [
-    { x: cx, y: cy },
-    { x: cx, y: zone.y + zone.h - insetY },
-    { x: cx, y: zone.y + insetY },
-    { x: zone.x + insetX, y: zone.y + zone.h - insetY },
-    { x: zone.x + zone.w - insetX, y: zone.y + zone.h - insetY },
-    { x: zone.x + insetX, y: zone.y + insetY },
-    { x: zone.x + zone.w - insetX, y: zone.y + insetY },
-  ];
-
-  const labelHalfW = 8;
-  const labelHalfH = 1.3;
-  const playerHalfX = 4.5;
-  const playerHalfY = 3.4;
-
-  function isClear(c: { x: number; y: number }) {
-    const labelCx = c.x - 5 + labelHalfW;
-    const labelCy = c.y + labelHalfH;
-    for (const p of players) {
-      if (
-        Math.abs(labelCx - p.x) < playerHalfX + labelHalfW &&
-        Math.abs(labelCy - p.y) < playerHalfY + labelHalfH
-      ) return false;
-    }
-    return true;
-  }
-
-  for (const c of candidates) {
-    if (isClear(c)) return c;
-  }
-
-  let best = candidates[0];
-  let bestDist = -Infinity;
-  for (const c of candidates) {
-    let minDist = Infinity;
-    for (const p of players) {
-      const dx = c.x - p.x;
-      const dy = (c.y - p.y) * (4 / 3);
-      const d = Math.sqrt(dx * dx + dy * dy);
-      if (d < minDist) minDist = d;
-    }
-    if (minDist > bestDist) {
-      bestDist = minDist;
-      best = c;
-    }
-  }
-  return best;
-}
-
 function DataDrivenDefense({ layout, idSuffix }: { layout: DefenseLayout; idSuffix: string }) {
+  const courtLayout = defenseToCourtLayout(layout);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <Court>
-        <Ball x={layout.ballX} y={layout.ballY} />
-        {layout.zones.map((z, i) => (
-          <Zone key={`z-${i}`} x={z.x} y={z.y} w={z.w} h={z.h} type="arriere" posNumber={parseInt(z.posNumber.slice(1))} />
-        ))}
-        {layout.zones.map((z, i) => {
-          const pos = pickLabelPosition(z, layout.players);
-          return (
-            <ZoneLabel key={`zl-${i}`} x={pos.x - 5} y={pos.y} label={z.label} type="arriere" />
-          );
-        })}
-        <ShotArrows
-          ballX={layout.ballX}
-          ballY={layout.ballY}
-          mainShot={layout.mainShot}
-          altShots={layout.altShots}
-          players={layout.players}
-          idSuffix={idSuffix}
-        />
-        {layout.players.map(p => (
-          <Player
-            key={p.zoneId}
-            x={p.x} y={p.y}
-            label={p.zoneId.slice(1)}
-            sub={p.sub}
-            type={['P4', 'P3', 'P2'].includes(p.zoneId) ? 'avant' : 'arriere'}
-          />
-        ))}
-      </Court>
+      <Court layout={courtLayout} view="full" idSuffix={idSuffix} />
       <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
         {layout.notes.map((n, i) => (
           <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
             <span style={S.bulletOrange}>▸</span>
-            <span style={{ color: 'var(--ink)', opacity: 0.8 }}>{n}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Zone4Tab() {
-  // Attaque adverse en Z4 (sa GAUCHE) → balle arrive sur NOTRE coin avant-DROIT
-  // Convention FIVB. Bloc à 2 = P2 (pointu, contreur ligne) + P3 (central, ferme diagonale).
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <Court>
-        <Ball x={85} y={19} />
-        <Zone x={0} y={43} w={50} h={57} type="arriere" posNumber={5} />
-        <Zone x={33} y={52} w={34} h={36} type="libero" posNumber={6} />
-        <Zone x={62} y={34} w={38} h={42} type="arriere" posNumber={1} />
-        <Zone x={0} y={25} w={30} h={36} type="avant" posNumber={4} />
-        <ZoneLabel x={18} y={75} label="Grande diag." type="arriere" />
-        <ZoneLabel x={36} y={88} label="Ombre bloc" type="libero" />
-        <ZoneLabel x={70} y={40} label="Ligne" type="arriere" />
-        <ZoneLabel x={4} y={33} label="Off-blocker" type="avant" />
-        <ShotArrows
-          ballX={85}
-          ballY={19}
-          mainShot={{ toX: 22, toY: 77.5 }}
-          altShots={[
-            { toX: 78, toY: 47.5 },
-            { toX: 45, toY: 62.5 },
-            { toX: 15, toY: 40 },
-          ]}
-          players={[
-            { x: 72, y: 29.5 }, { x: 82, y: 29.5 }, { x: 18, y: 47.5 },
-            { x: 22, y: 70 }, { x: 48, y: 67 }, { x: 75, y: 62.5 },
-          ]}
-          idSuffix="z4-6v6"
-        />
-        <Player x={72} y={29.5} label="3" sub="BLK" type="avant" />
-        <Player x={82} y={29.5} label="2" sub="BLK" type="avant" />
-        <Player x={18} y={47.5} label="4" sub="OFF" type="avant" />
-        <Player x={22} y={70} label="5" sub="LIB" type="libero" />
-        <Player x={48} y={67} label="6" type="arriere" />
-        <Player x={75} y={62.5} label="1" type="arriere" />
-      </Court>
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-        {[
-          ['Poste 2 (pointu / OPP)', 'Contreur ligne — bloque, monte au filet côté droit.'],
-          ['Poste 3 (central)', 'Ferme la diagonale en bloc à 2 avec le pointu.'],
-          ['Poste 4 (R4 off-blocker)', "Décroche sur la ligne des 3 m côté gauche — couvre le cut shot court (diagonale aiguë) et les feintes."],
-          ['Poste 5 (Libéro)', 'Défend la grande diagonale longue, ~7-8 m du filet, dans l\'épaule intérieure du central contreur.'],
-          ['Poste 6 (arrière centre)', "Balles hautes passant le bloc, touches de bloc longues, axe ~8-8,5 m."],
-          ['Poste 1 (arrière droit)', "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne droite."],
-        ].map(([l, t], i) => (
-          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
-            <span style={S.bulletOrange}>▸</span>
-            <span>
-              <strong style={{ color: 'var(--ink)' }}>{l} : </strong>
-              <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{t}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Zone3Tab() {
-  // Attaque rapide centrale (quick / tempo 1) : 0,3-0,5 s entre passe et frappe.
-  // Bloc à 1 (central) en lecture, parfois à 2 si un ailier vient en tandem.
-  // Règle clé : « stopped on contact » — tous les défenseurs arrêtés et équilibrés à l'instant de la frappe.
-  // Arrières Z1 et Z5 GAGNENT un mètre vers le filet (angles plus courts qu'en haute balle).
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <Court>
-        <Ball x={50} y={19} />
-        <Zone x={0} y={34} w={36} h={66} type="arriere" posNumber={5} />
-        <Zone x={32} y={52} w={36} h={48} type="libero" posNumber={6} />
-        <Zone x={64} y={34} w={36} h={66} type="arriere" posNumber={1} />
-        <Zone x={0} y={25} w={28} h={28} type="avant" posNumber={4} />
-        <Zone x={72} y={25} w={28} h={28} type="avant" posNumber={2} />
-        <ZoneLabel x={10} y={70} label="Diag. G" type="arriere" />
-        <ZoneLabel x={42} y={73} label="Axe" type="libero" />
-        <ZoneLabel x={75} y={70} label="Diag. D" type="arriere" />
-        <ZoneLabel x={4} y={36} label="Couv." type="avant" />
-        <ZoneLabel x={78} y={36} label="Couv." type="avant" />
-        <ShotArrows
-          ballX={50}
-          ballY={19}
-          mainShot={{ toX: 75, toY: 65 }}
-          altShots={[
-            { toX: 25, toY: 65 },
-            { toX: 50, toY: 80 },
-          ]}
-          players={[
-            { x: 20, y: 47.5 }, { x: 50, y: 29.5 }, { x: 80, y: 47.5 },
-            { x: 22, y: 67 }, { x: 50, y: 70 }, { x: 78, y: 65 },
-          ]}
-          idSuffix="z3-6v6"
-        />
-        <Player x={20} y={47.5} label="4" sub="OFF" type="avant" />
-        <Player x={50} y={29.5} label="3" sub="BLK" type="avant" />
-        <Player x={80} y={47.5} label="2" sub="OFF" type="avant" />
-        <Player x={22} y={67} label="5" sub="LIB" type="libero" />
-        <Player x={50} y={70} label="6" type="arriere" />
-        <Player x={78} y={65} label="1" type="arriere" />
-      </Court>
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-        {[
-          ['Poste 3 (central)', "Bloc à 1 en lecture (read) ou en commitment selon le scouting adverse."],
-          ['Postes 4 et 2 (ailiers)', "Sur la ligne d'attaque (~2-2,5 m du filet, 0,5 m des lignes) : couvrent déviations de bloc et balles à travers le bloc."],
-          ['Poste 5 (Libéro)', "Face à l'attaquant central, dans son couloir de frappe (~7-8 m du filet)."],
-          ['Poste 6 (arrière centre)', "Épaules face à l'attaquant ; défend la balle puissante traversant le bloc (axe ~8-8,5 m)."],
-          ['Poste 1 (arrière droit)', "Avance d'un mètre (~7,5 m du filet, 1 m de la ligne droite) : angles plus courts sur quick."],
-          ['Règle clé', '« Stopped on contact » : tous arrêtés et équilibrés à l\'instant exact de la frappe.'],
-        ].map(([l, t], i) => (
-          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
-            <span style={S.bulletOrange}>▸</span>
-            <span>
-              <strong style={{ color: 'var(--ink)' }}>{l} : </strong>
-              <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{t}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function Zone2Tab() {
-  // Attaque adverse en Z2 (sa DROITE) → balle arrive sur NOTRE coin avant-GAUCHE
-  // Miroir parfait de Z4. Bloc à 2 = P4 (R4, contreur ligne) + P3 (central, ferme diagonale).
-  // Le passeur (P1) défend la grande diagonale longue ; le pointu (P2) devient off-blocker.
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <Court>
-        <Ball x={15} y={19} />
-        <Zone x={50} y={43} w={50} h={57} type="arriere" posNumber={1} />
-        <Zone x={33} y={52} w={34} h={36} type="libero" posNumber={6} />
-        <Zone x={0} y={34} w={38} h={42} type="arriere" posNumber={5} />
-        <Zone x={70} y={25} w={30} h={36} type="avant" posNumber={2} />
-        <ZoneLabel x={68} y={75} label="Grande diag." type="arriere" />
-        <ZoneLabel x={36} y={88} label="Ombre bloc" type="libero" />
-        <ZoneLabel x={10} y={40} label="Ligne" type="arriere" />
-        <ZoneLabel x={76} y={33} label="Off-blocker" type="avant" />
-        <ShotArrows
-          ballX={15}
-          ballY={19}
-          mainShot={{ toX: 78, toY: 77.5 }}
-          altShots={[
-            { toX: 22, toY: 47.5 },
-            { toX: 55, toY: 62.5 },
-            { toX: 85, toY: 40 },
-          ]}
-          players={[
-            { x: 18, y: 29.5 }, { x: 28, y: 29.5 }, { x: 82, y: 47.5 },
-            { x: 25, y: 62.5 }, { x: 52, y: 67 }, { x: 78, y: 70 },
-          ]}
-          idSuffix="z2-6v6"
-        />
-        <Player x={18} y={29.5} label="4" sub="BLK" type="avant" />
-        <Player x={28} y={29.5} label="3" sub="BLK" type="avant" />
-        <Player x={82} y={47.5} label="2" sub="OFF" type="avant" />
-        <Player x={25} y={62.5} label="5" sub="LIB" type="libero" />
-        <Player x={52} y={67} label="6" type="arriere" />
-        <Player x={78} y={70} label="1" type="arriere" />
-      </Court>
-      <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-        {[
-          ['Poste 4 (R4)', 'Contreur ligne — bloque au filet côté gauche.'],
-          ['Poste 3 (central)', 'Ferme la diagonale en bloc à 2 avec le R4.'],
-          ['Poste 2 (pointu / OPP)', 'Devient off-blocker côté droit — décroche sur les 3 m, couvre cut shot court et feintes.'],
-          ['Poste 5 (Libéro)', "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne gauche."],
-          ['Poste 6 (arrière centre)', "Balles hautes par-dessus le bloc, axe ~8-8,5 m du filet."],
-          ['Poste 1 (passeur ou OH/OPP)', 'Défend la grande diagonale longue cross-court, ~7-8 m du filet.'],
-        ].map(([l, t], i) => (
-          <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, fontSize: 13 }}>
-            <span style={S.bulletOrange}>▸</span>
-            <span>
-              <strong style={{ color: 'var(--ink)' }}>{l} : </strong>
-              <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{t}</span>
-            </span>
+            {typeof n === 'string' ? (
+              <span style={{ color: 'var(--ink)', opacity: 0.8 }}>{n}</span>
+            ) : (
+              <span>
+                <strong style={{ color: 'var(--ink)' }}>{n.label} : </strong>
+                <span style={{ color: 'var(--ink)', opacity: 0.75 }}>{n.text}</span>
+              </span>
+            )}
           </li>
         ))}
       </ul>
@@ -1170,11 +920,6 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
   const configuration = configurations.find(c => c.id === configId) ?? configurations[0];
 
   const renderZoneTab = () => {
-    if (teamSize === 6) {
-      if (zone === 'zone4') return <Zone4Tab />;
-      if (zone === 'zone3') return <Zone3Tab />;
-      return <Zone2Tab />;
-    }
     const layouts = LAYOUTS_BY_CONFIG[configuration.id];
     if (!layouts) {
       return <div style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.5 }}>Diagramme non disponible pour cette configuration.</div>;
@@ -1258,40 +1003,24 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
           <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.5, textAlign: 'center', marginBottom: 16 }}>
             Disposition de votre équipe en {configuration.name}
           </div>
-          <div style={{
-            position: 'relative', width: '100%', maxWidth: 440, margin: '0 auto',
-            background: 'var(--paper)', border: '2.5px solid var(--ink)',
-            aspectRatio: '1 / 1.1',
-          }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 3, background: 'var(--orange)', zIndex: 5 }} />
-            <div style={{ position: 'absolute', left: 0, right: 0, borderTop: '1px dashed var(--ink)', opacity: 0.2, top: '33%' }} />
-            {configuration.positions.filter(p => p.zoneId !== 'L').map(p => (
-              <div
-                key={p.zoneId}
-                style={{
-                  position: 'absolute',
-                  left: `${p.court.x}%`, top: `${p.court.y}%`,
-                  transform: 'translate(-50%, -50%)',
-                  display: 'flex', flexDirection: 'column', alignItems: 'center',
-                }}
-              >
-                <span style={{
-                  width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontFamily: '"Bungee", sans-serif', fontSize: 13,
-                  color: ROLE_COLORS[p.zoneId] === '#f0c84c' ? '#1a1812' : '#ffffff',
-                  backgroundColor: ROLE_COLORS[p.zoneId],
-                  border: '2.5px solid rgba(26,24,18,0.5)',
-                  borderRadius: '50%',
-                  boxShadow: '2px 2px 0 rgba(26,24,18,0.35)',
-                }}>
-                  {p.zoneId}
-                </span>
-                <span style={{ marginTop: 3, fontFamily: '"DM Mono", monospace', fontSize: 9, textTransform: 'uppercase', color: 'var(--ink)', opacity: 0.5, whiteSpace: 'nowrap' }}>{p.name}</span>
-              </div>
-            ))}
-            <div style={{ position: 'absolute', bottom: 4, left: '50%', transform: 'translateX(-50%)', fontFamily: '"DM Mono", monospace', fontSize: 9, fontWeight: 700, color: 'var(--ink)', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>Notre côté</div>
-            <div style={{ position: 'absolute', top: 6, left: '50%', transform: 'translateX(-50%)', fontFamily: '"DM Mono", monospace', fontSize: 9, color: 'var(--ink)', opacity: 0.35, textTransform: 'uppercase', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>Adversaires</div>
-          </div>
+          <Court
+            view="our-side"
+            show3mLine
+            withShadow={false}
+            idSuffix={`guide-postes-${configuration.id}`}
+            layout={{
+              players: configuration.positions
+                .filter(p => p.zoneId !== 'L')
+                .map(p => ({
+                  id: p.zoneId,
+                  x: p.court.x,
+                  y: p.court.y,
+                  label: p.zoneId,
+                  role: p.zoneId,
+                  caption: p.name,
+                })),
+            }}
+          />
           <div style={{ textAlign: 'center', marginTop: 16 }}>
             <Link
               to={`/positions/${SIZE_TO_SLUG[teamSize]}/${configuration.id}`}

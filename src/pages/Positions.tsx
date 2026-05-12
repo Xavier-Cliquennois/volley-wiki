@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ROLE_COLORS } from '../constants/positions';
+import { Court, type CourtLayout } from '../components/court';
 import { Head } from '../seo/Head';
 import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, TEAM_SIZE_LABEL, type TeamSizeSlug } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
@@ -395,69 +396,28 @@ function CourtField({
     return selectedId === id;
   };
 
+  const layout: CourtLayout = {
+    players: configuration.positions.map(pos => ({
+      id: pos.zoneId,
+      x: pos.court.x,
+      y: pos.court.y,
+      label: pos.zoneId,
+      role: pos.zoneId,
+      caption: pos.name.split(' ')[0],
+      active: isActive(pos.zoneId),
+      onClick: () => onToggle(pos.zoneId),
+      title: pos.name,
+    })),
+  };
+
   return (
-    <div style={{ position: 'relative', width: '100%', maxWidth: 420, margin: '0 auto', aspectRatio: '1 / 1.1' }}>
-      {/* Court surface */}
-      <div style={{
-        position: 'absolute', inset: 0,
-        background: 'var(--paper)',
-        border: '3px solid var(--ink)',
-        backgroundImage: 'repeating-linear-gradient(0deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px), repeating-linear-gradient(90deg, transparent 0 37px, rgba(26,24,18,0.04) 37px 38px)',
-      }} />
-      {/* Net */}
-      <div style={{
-        position: 'absolute', top: 0, left: -3, right: -3,
-        height: 6, background: 'var(--orange)',
-        borderTop: '3px solid var(--ink)', borderBottom: '3px solid var(--ink)',
-      }} />
-      {/* 3m line */}
-      <div style={{
-        position: 'absolute', left: 0, right: 0, top: '33%',
-        borderTop: '2px dashed rgba(26,24,18,0.35)',
-      }} />
-      {/* Players */}
-      {configuration.positions.map(pos => {
-        const active = isActive(pos.zoneId);
-        const color = ROLE_COLORS[pos.zoneId];
-        return (
-          <button
-            key={pos.zoneId}
-            onClick={() => onToggle(pos.zoneId)}
-            style={{
-              position: 'absolute',
-              left: `${pos.court.x}%`,
-              top: `${pos.court.y}%`,
-              transform: 'translate(-50%, -50%)',
-              display: 'flex', flexDirection: 'column', alignItems: 'center',
-              background: 'none', border: 'none', cursor: 'pointer', zIndex: 2,
-              transition: 'transform 0.08s',
-            }}
-            title={pos.name}
-          >
-            <span style={{
-              width: 44, height: 44,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontFamily: '"Bungee", sans-serif', fontSize: 13,
-              background: color,
-              border: active ? `3px solid var(--ink)` : '3px solid rgba(26,24,18,0.5)',
-              borderRadius: '50%',
-              color: pos.zoneId === 'P5' ? '#000' : '#fff',
-              boxShadow: active ? `0 0 0 3px var(--yellow), 2px 2px 0 var(--ink)` : '2px 2px 0 rgba(26,24,18,0.4)',
-              transform: active ? 'scale(1.15)' : 'scale(1)',
-              transition: 'transform 0.08s, box-shadow 0.08s',
-            }}>
-              {pos.zoneId}
-            </span>
-            <span style={{
-              marginTop: 4, fontSize: 9, letterSpacing: '0.06em', fontFamily: '"DM Mono", monospace',
-              color: active ? color : 'rgba(26,24,18,0.55)', whiteSpace: 'nowrap',
-            }}>
-              {pos.name.split(' ')[0]}
-            </span>
-          </button>
-        );
-      })}
-    </div>
+    <Court
+      layout={layout}
+      view="our-side"
+      show3mLine
+      withShadow={false}
+      idSuffix={`positions-${configuration.id}`}
+    />
   );
 }
 
