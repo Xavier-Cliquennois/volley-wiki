@@ -4,8 +4,82 @@ import * as THREE from 'three';
 import { ScenarioScene } from './ScenarioScene';
 import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
-import type { Scenario } from './types';
+import type { PhaseKind, Scenario, ScenarioStep, TeamSize } from './types';
 import { resolvePlayerColor } from './data/_shared';
+import { CONFIGURATIONS } from '../pages/Positions';
+
+// Guide pointers used by the per-step deep-dive link. Slugs match the routes
+// registered in App.tsx (`/guides/:slug`).
+type GuideRef = { slug: string; label: string };
+const GUIDE_RECEPTION: GuideRef = { slug: 'reception', label: 'Guide de la réception' };
+const GUIDE_SERVICE: GuideRef = { slug: 'service', label: 'Guide du service' };
+const GUIDE_ATTAQUE: GuideRef = { slug: 'attaque', label: "Guide de l'attaque" };
+const GUIDE_CONTRE: GuideRef = { slug: 'contre', label: 'Guide du contre' };
+const GUIDE_DEFENSE: GuideRef = { slug: 'positionnement-defense', label: 'Guide du positionnement défensif' };
+
+// In a defense scenario the reader's own role is defending — so opponent
+// actions ("réception adverse", "frappe adverse") point back to the defense
+// guide, not to the reception/attack guide.
+const PHASE_GUIDE: Record<PhaseKind, GuideRef> = {
+  attack: GUIDE_ATTAQUE,
+  reception: GUIDE_RECEPTION,
+  defense: GUIDE_DEFENSE,
+};
+
+// Map the raw "rest" segment of a scenario id (e.g. "5-1-p1", "vs-z4",
+// "losange") onto a Positions formation id that the guides actually
+// understand. Tries the full string first, then progressively drops trailing
+// `-X` segments — that's how `5-1-p1` collapses to the canonical `5-1`.
+// Returns null when no known formation matches.
+function matchKnownConfig(teamSize: TeamSize, raw: string | undefined): string | null {
+  if (!raw) return null;
+  const known = CONFIGURATIONS[teamSize].map(c => c.id);
+  let candidate = raw;
+  while (candidate.length > 0) {
+    if (known.includes(candidate)) return candidate;
+    const cut = candidate.lastIndexOf('-');
+    if (cut < 0) return null;
+    candidate = candidate.slice(0, cut);
+  }
+  return null;
+}
+
+// Build a guide URL that carries the scenario's format (team size + tactical
+// configuration). Configs that don't map to a known formation are omitted so
+// the guide loads with its default rather than displaying a deselected state.
+function guideHref(guide: GuideRef, scenario: Scenario): string {
+  const params = new URLSearchParams();
+  params.set('size', String(scenario.config.teamSize));
+  const match = scenario.id.match(/^\d+v\d+-(?:attack|defense|reception)-(.+)$/);
+  const config = matchKnownConfig(scenario.config.teamSize, match?.[1]);
+  if (config) params.set('config', config);
+  return `/guides/${guide.slug}?${params.toString()}`;
+}
+
+// Heuristic: pick the most relevant guide for a step from keywords in its
+// title + description. The scenario phase disambiguates ambiguous keywords
+// (e.g. a "frappe" mentioned in a defense scenario describes the opponent).
+function inferStepGuide(step: ScenarioStep, phase: PhaseKind): GuideRef | null {
+  const text = `${step.title} ${step.description}`.toLowerCase();
+
+  // Offensive transition after defending → attack guide, regardless of phase.
+  if (/contre-attaque|contre attaque/.test(text)) return GUIDE_ATTAQUE;
+
+  // Anything tagged as the opponent's action belongs to the reader's role.
+  if (/\badvers/.test(text)) return PHASE_GUIDE[phase];
+
+  // In defense scenarios, attack-related verbs without "adverse" usually
+  // still describe what the attacker is doing — route to defense guide so
+  // the reader gets advice on positioning, not on hitting.
+  if (phase === 'defense' && /frapp|smash|spike|\battaqu/.test(text)) return GUIDE_DEFENSE;
+
+  if (/r[ée]ception|manchette|plateforme/.test(text)) return GUIDE_RECEPTION;
+  if (/\bservice\b|servir|jump float|jump topspin/.test(text)) return GUIDE_SERVICE;
+  if (/frapp|smash|spike|course d'élan|approche|\battaqu|\bélan\b/.test(text)) return GUIDE_ATTAQUE;
+  if (/contre|\bbloc\b|block/.test(text)) return GUIDE_CONTRE;
+  if (/d[ée]fens|positionn|couverture|placement/.test(text)) return GUIDE_DEFENSE;
+  return null;
+}
 
 type ScenarioPlayerProps = {
   scenario: Scenario;
@@ -78,6 +152,10 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       stepBoundaryRef.current = null;
       setIsPlaying(false);
     }
+    // gsap stops firing onUpdate after the timeline completes but leaves
+    // React's isPlaying = true. Catch the last frame and flip it off so the
+    // play button can switch to the replay state.
+    if (prog >= 0.999) setIsPlaying(false);
     // Keep the active step in sync with the playhead regardless of mode —
     // in step mode this is what advances the timeline + prev/next state
     // after the player stops at a boundary.
@@ -110,6 +188,27 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
     if (!hasStarted) setHasStarted(true);
   }, [scenario, hasStarted]);
 
+  const isAtEnd = !isPlaying && progress >= 0.999;
+
+  // Replay from the very beginning, respecting the current mode so step mode
+  // never silently falls back to auto.
+  const replayFromStart = useCallback(() => {
+    const ctrl = controllerRef.current;
+    if (!ctrl) return;
+    stepBoundaryRef.current = null;
+    // Force the step strip back to the leftmost position. The activeStepIdx
+    // useEffect only scrolls when the index changes, so if we're already on
+    // step 0 (e.g. fast double-replay) the scroll wouldn't fire on its own.
+    stepStripRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+    if (mode === 'step') {
+      playSingleStep(0);
+      return;
+    }
+    ctrl.play(0);
+    setIsPlaying(true);
+    if (!hasStarted) setHasStarted(true);
+  }, [mode, playSingleStep, hasStarted]);
+
   const togglePlay = () => {
     const ctrl = controllerRef.current;
     if (!ctrl) return;
@@ -117,6 +216,11 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       ctrl.pause();
       stepBoundaryRef.current = null;
       setIsPlaying(false);
+      return;
+    }
+    // Timeline finished → the play button is now a replay button.
+    if (isAtEnd) {
+      replayFromStart();
       return;
     }
     // In step mode, play until the next step boundary and stop there —
@@ -136,30 +240,14 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
       return;
     }
     stepBoundaryRef.current = null;
-    const totalDuration = ctrl.duration();
-    if (ctrl.time() >= totalDuration - 0.01) { ctrl.play(0); } else { ctrl.play(); }
+    ctrl.play();
     setIsPlaying(true);
     if (!hasStarted) setHasStarted(true);
   };
 
   const handleStart = () => {
-    const ctrl = controllerRef.current;
-    if (!ctrl || hasStarted) return;
-    setMode('auto');
-    stepBoundaryRef.current = null;
-    ctrl.play(0);
-    setIsPlaying(true);
-    setHasStarted(true);
-  };
-
-  const restart = () => {
-    const ctrl = controllerRef.current;
-    if (!ctrl) return;
-    stepBoundaryRef.current = null;
-    setMode('auto');
-    ctrl.play(0);
-    setIsPlaying(true);
-    setHasStarted(true);
+    if (hasStarted) return;
+    replayFromStart();
   };
 
   const jumpToStep = (stepIdx: number) => {
@@ -258,21 +346,38 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
             ))}
           </div>
 
-          {/* Canvas */}
-          <div style={{ position: 'relative', aspectRatio: '4/3' }}>
-            <Canvas shadows="percentage" camera={{ position: [0, 9, 18], fov: 50 }}>
-              <ScenarioScene
-                scenario={scenario}
-                playerRefs={playerRefs}
-                controllerRef={controllerRef}
-                cameraRef={cameraRef}
-                onUpdate={handleUpdate}
-                showTrail={showTrail}
-                showZones={showZones}
-              />
-            </Canvas>
+          {/* Canvas — height-capped so the timeline strip below stays visible
+              when the viewer is pinned to the top of the viewport. The outer
+              flex container spans the full card width so the start overlay
+              ("voile gris") also covers the full width; the inner box keeps
+              the 4/3 aspect of the 3D scene and gets centered. */}
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: 'min(55vh, calc(100vh - 360px), 600px)',
+            minHeight: 280,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: 'var(--paper)',
+            overflow: 'hidden',
+          }}>
+            <div style={{ position: 'relative', height: '100%', aspectRatio: '4/3', maxWidth: '100%' }}>
+              <Canvas shadows="percentage" camera={{ position: [0, 9, 18], fov: 50 }}>
+                <ScenarioScene
+                  scenario={scenario}
+                  playerRefs={playerRefs}
+                  controllerRef={controllerRef}
+                  cameraRef={cameraRef}
+                  onUpdate={handleUpdate}
+                  showTrail={showTrail}
+                  showZones={showZones}
+                />
+              </Canvas>
+            </div>
 
-            {/* Play overlay */}
+            {/* Play overlay — spans the outer container so the dark veil
+                covers the full card width, not just the centered canvas. */}
             {!hasStarted && (
               <div
                 style={{
@@ -375,17 +480,34 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center', border: '2.5px solid var(--ink)' }} role="group" aria-label="Mode de lecture">
+              <div style={{ display: 'flex', alignItems: 'center', border: '2px solid var(--ink)', background: 'var(--cream)' }} role="group" aria-label="Mode de lecture">
                 <button
                   onClick={() => handleModeChange('auto')}
-                  style={mode === 'auto' ? { ...btnActive, padding: '6px 10px' } : { ...btnSm, padding: '6px 10px' }}
+                  style={{
+                    padding: '6px 12px',
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: 11,
+                    border: 'none',
+                    background: mode === 'auto' ? 'var(--orange)' : 'transparent',
+                    color: mode === 'auto' ? '#fff' : 'var(--ink)',
+                    cursor: 'pointer',
+                  }}
                   aria-pressed={mode === 'auto'}
                 >
                   ▶ Auto
                 </button>
                 <button
                   onClick={() => handleModeChange('step')}
-                  style={{ ...(mode === 'step' ? btnActive : btnSm), padding: '6px 10px', borderLeft: '2px solid var(--ink)' }}
+                  style={{
+                    padding: '6px 12px',
+                    fontFamily: '"DM Mono", monospace',
+                    fontSize: 11,
+                    border: 'none',
+                    borderLeft: '2px solid var(--ink)',
+                    background: mode === 'step' ? 'var(--orange)' : 'transparent',
+                    color: mode === 'step' ? '#fff' : 'var(--ink)',
+                    cursor: 'pointer',
+                  }}
                   aria-pressed={mode === 'step'}
                 >
                   ⏯ Étape
@@ -400,9 +522,9 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
               <button
                 onClick={togglePlay}
                 style={{ width: 48, height: 48, background: 'var(--orange)', border: '2.5px solid var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, cursor: 'pointer', boxShadow: 'var(--shadow-sm)' }}
-                aria-label={isPlaying ? 'Pause' : 'Lecture'}
+                aria-label={isPlaying ? 'Pause' : isAtEnd ? 'Recommencer' : 'Lecture'}
               >
-                {isPlaying ? '⏸' : '▶'}
+                {isPlaying ? '⏸' : isAtEnd ? '↺' : '▶'}
               </button>
               <button
                 onClick={stepForward}
@@ -410,7 +532,6 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                 style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1 }}
                 aria-label="Étape suivante"
               >⏭</button>
-              <button onClick={restart} style={{ ...btnSm, width: 38, height: 38 }} aria-label="Recommencer">↺</button>
             </div>
           </div>
 
@@ -438,28 +559,55 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
           {scenario.steps.map((step, idx) => {
             const isActive = idx === activeStepIdx;
             const isPast = idx < activeStepIdx;
+            const guide = inferStepGuide(step, scenario.config.phase);
             return (
-              <button
+              <div
                 key={step.id}
-                onClick={() => jumpToStep(idx)}
                 style={{
-                  flexShrink: 0, width: 220, textAlign: 'left', padding: '10px 12px',
+                  flexShrink: 0, width: 220,
                   border: `2.5px solid ${isActive ? 'var(--orange)' : 'var(--ink)'}`,
                   background: isActive ? 'rgba(226,84,46,0.08)' : isPast ? 'var(--paper)' : 'var(--cream)',
                   opacity: isPast && !isActive ? 0.55 : 1,
-                  cursor: 'pointer',
+                  display: 'flex', flexDirection: 'column',
                 }}
               >
-                <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: isActive ? 'var(--orange)' : 'var(--ink)', opacity: isActive ? 1 : 0.4, marginBottom: 4 }}>
-                  {String(idx + 1).padStart(2, '0')} / {String(scenario.steps.length).padStart(2, '0')}
-                </div>
-                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: isActive ? 'var(--orange)' : 'var(--ink)', marginBottom: 4, letterSpacing: '0.04em' }}>
-                  {step.title.replace(/^\d+\.\s*/, '')}
-                </div>
-                <div style={{ fontSize: 11, color: 'var(--ink)', opacity: 0.7, lineHeight: 1.45, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                  {step.description}
-                </div>
-              </button>
+                <button
+                  onClick={() => jumpToStep(idx)}
+                  style={{
+                    flex: 1, textAlign: 'left', padding: '10px 12px',
+                    background: 'transparent', border: 'none', cursor: 'pointer',
+                    color: 'inherit', font: 'inherit',
+                  }}
+                >
+                  <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 9, letterSpacing: '0.16em', textTransform: 'uppercase', color: isActive ? 'var(--orange)' : 'var(--ink)', opacity: isActive ? 1 : 0.4, marginBottom: 4 }}>
+                    {String(idx + 1).padStart(2, '0')} / {String(scenario.steps.length).padStart(2, '0')}
+                  </div>
+                  <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, color: isActive ? 'var(--orange)' : 'var(--ink)', marginBottom: 4, letterSpacing: '0.04em' }}>
+                    {step.title.replace(/^\d+\.\s*/, '')}
+                  </div>
+                  <div style={{ fontSize: 11, color: 'var(--ink)', opacity: 0.7, lineHeight: 1.45, display: '-webkit-box', WebkitLineClamp: 4, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {step.description}
+                  </div>
+                </button>
+                {guide && (
+                  <a
+                    href={guideHref(guide, scenario)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '8px 12px',
+                      borderTop: '1.5px dashed rgba(26,24,18,0.3)',
+                      fontSize: 13, lineHeight: 1.3,
+                      color: 'var(--orange)', textDecoration: 'none',
+                    }}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span>{guide.label}</span>
+                    <span aria-hidden="true" style={{ fontFamily: '"DM Mono", monospace' }}>↗</span>
+                  </a>
+                )}
+              </div>
             );
           })}
         </div>

@@ -1148,10 +1148,19 @@ const EXERCICES = [
 
 export default function GuidePositionnement() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialSize = (parseInt(searchParams.get('size') ?? '6') as TeamSize);
-  const initialConfig = searchParams.get('config') ?? CONFIGURATIONS[initialSize][0].id;
+  const urlSize = parseInt(searchParams.get('size') ?? '6');
+  const initialSize: TeamSize = [4, 5, 6].includes(urlSize) ? (urlSize as TeamSize) : 6;
+  // Validate the config against the known list for this team size — otherwise
+  // an unknown value (e.g. arriving from a scenario link like `5-1-p1`) would
+  // stick in state, no button would light up, and the URL would silently
+  // rewrite to the fallback via the sync effect below.
+  const urlConfig = searchParams.get('config');
+  const initialConfig =
+    urlConfig && CONFIGURATIONS[initialSize].some(c => c.id === urlConfig)
+      ? urlConfig
+      : CONFIGURATIONS[initialSize][0].id;
 
-  const [teamSize, setTeamSize] = useState<TeamSize>([4, 5, 6].includes(initialSize) ? initialSize : 6);
+  const [teamSize, setTeamSize] = useState<TeamSize>(initialSize);
   const [configId, setConfigId] = useState<string>(initialConfig);
   const [zone, setZone] = useState<ZoneTab>('zone4');
 
