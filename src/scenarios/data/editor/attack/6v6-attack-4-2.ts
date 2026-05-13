@@ -1,0 +1,198 @@
+import type { EditorState } from '../../../../editor/types';
+import { COLORS } from '../../_shared';
+
+// 6v6 4-2 system: 2 setters in diagonal opposition, the front-row setter always
+// makes the 2nd touch. Simple beginner system — only 2 front-row attackers.
+const STATE: EditorState = {
+  metadata: {
+    id: '6v6-attack-4-2',
+    title: 'Attaque · Système 4-2',
+    shortDescription: 'Système 4-2 débutant : passeur avant fixe en zone 2, 2 attaquants disponibles.',
+    teamSize: 6,
+    phase: 'attack',
+    contextLabel: '4-2 · 2 passeurs en opposition · M13/M15',
+    defaultCamera: 'DEFAULT',
+  },
+  players: [
+    { id: 'R4a',     label: 'R4 (P4)',        role: 'outside',  color: COLORS.outside },
+    { id: 'C',       label: 'Central (P3)',   role: 'middle',   color: COLORS.middle },
+    { id: 'P1',      label: 'Passeur 1 (P2)', role: 'setter',   color: COLORS.setter },
+    { id: 'P2',      label: 'Passeur 2 (P5)', role: 'setter',   color: COLORS.setter },
+    { id: 'C2',      label: 'Central 2 (P6)', role: 'middle',   color: COLORS.middle_back },
+    { id: 'R4b',     label: 'R4 (P1)',        role: 'outside',  color: COLORS.outside },
+    { id: 'OPP_SRV', label: 'Serveur adv.',   role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BL',  label: 'Bloc adv. G',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BR',  label: 'Bloc adv. D',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D1',  label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent },
+  ],
+  steps: [
+    {
+      id: 's1',
+      title: '1. Configuration 4-2',
+      description: '2 passeurs en opposition diagonale (P2 et P5). Le passeur en avant (P1) fait toujours la 2ᵉ touche. Réception en W avec C2 au centre.',
+      tempo: 'pause',
+      snapshot: {
+        positions: {
+          R4a:     [-3, 0, 0.6],
+          C:       [0, 0, 0.6],
+          P1:      [3, 0, 0.6],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -8.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [0, 1.5, -8.5],
+        poses: {
+          OPP_SRV: 'SPIKE',
+          C2: 'READY', R4b: 'READY', P2: 'READY',
+        },
+      },
+    },
+    {
+      id: 's2',
+      title: '2. Service + réception centrale',
+      description: 'Le central arrière fait la première touche dans une réception en W classique. Trajectoire haute vers le passeur avant en P2.',
+      tempo: 'standard',
+      durationOverride: 1.0,
+      snapshot: {
+        positions: {
+          R4a:     [-3, 0, 0.6],
+          C:       [0, 0, 0.6],
+          P1:      [3, 0, 0.6],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 4.5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [0, 1.2, 4.5],
+      },
+      ballTrajectory: { curve: 'arc', apex: 4 },
+      actions: [
+        { kind: 'MANCHETTE', id: 'b-s2-recv', playerId: 'C2', impact: [0, 0, 4.5] },
+      ],
+    },
+    {
+      id: 's3',
+      title: "3. Passe directe + course d'élan",
+      description: "Le passeur avant n'a qu'à distribuer : pas de pénétration, pas de permutation. Il envoie une passe haute vers le R4 en zone 4. Bloc à 2 sur l'aile.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          R4a:     [-3.2, 0, 1.2],
+          C:       [0, 0, 0.6],
+          P1:      [2.5, 0, 0.8],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 4.5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [2.5, 1.9, 0.8],
+      },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s3-set',  playerId: 'P1',  impact: [2.5, 0, 0.8] },
+        { kind: 'COURSE_ELAN', id: 'b-s3-elan', playerId: 'R4a', to: [-3.2, 0, 1.2] },
+      ],
+    },
+    {
+      id: 's4',
+      title: "4. Attaque sur l'aile + double bloc",
+      description: "Le R4 attaque en zone 4. Pas d'option centrale puisque le central a réceptionné. Frappe en diagonale longue contre un bloc à 2.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          R4a:     [-3.2, 0, 1.0],
+          C:       [0, 0, 0.6],
+          P1:      [2.5, 0, 0.8],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 4.5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [2, 0, -6],
+      },
+      ballTrajectory: { curve: 'flat' },
+      actions: [
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'R4a',    impact: [-3.2, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocL', playerId: 'OPP_BL', impact: [-2.5, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'OPP_BR', impact: [-1.0, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+      ],
+    },
+    {
+      id: 's5',
+      title: '5. Récupération adverse',
+      description: 'Le défenseur cross adverse plonge en diagonale pour tenter de relever la balle.',
+      tempo: 'rapide',
+      durationOverride: 0.5,
+      snapshot: {
+        positions: {
+          R4a:     [-3.2, 0, 0.6],
+          C:       [0, 0, 0.6],
+          P1:      [2.5, 0, 0.8],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 4.5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [2, 0, -5.8],
+        },
+        ballPosition: [2, 0, -6],
+      },
+      actions: [
+        { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_D1', impact: [2, 0, -5.8] },
+      ],
+    },
+    {
+      id: 's6',
+      title: '6. RESET — retour formation',
+      description: 'Tout le monde reprend sa position. Le 4-2 reste le système le plus simple : aucune permutation à faire.',
+      tempo: 'calme',
+      durationOverride: 1.2,
+      snapshot: {
+        positions: {
+          R4a:     [-3, 0, 0.6],
+          C:       [0, 0, 0.6],
+          P1:      [3, 0, 0.6],
+          P2:      [-3, 0, 4],
+          C2:      [0, 0, 5],
+          R4b:     [3, 0, 4],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [2, 0, -6],
+      },
+    },
+  ],
+  summary: {
+    keyPoints: [
+      '4-2 : 2 passeurs + 2 centraux + 2 R4. Toujours 2 attaquants devant.',
+      'Le passeur avant (en P2 ou P3 selon variante) fait systématiquement la 2ᵉ touche.',
+      'Pas de pénétration, pas de permutation : système le plus simple à apprendre.',
+      "Idéal en M13/M15 ou en initiation adulte. Favorise l'apprentissage des rotations.",
+    ],
+    commonMistakes: [
+      'Passeur avant qui réceptionne aussi → impossible de faire la 2ᵉ touche.',
+      'Passeur arrière qui veut faire la passe → règle du passeur avant non respectée.',
+      'Central qui ne fixe pas → bloc à 2 facile.',
+    ],
+  },
+};
+
+export default STATE;

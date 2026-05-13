@@ -101,12 +101,16 @@ export function compileScenario(state: EditorState): Scenario {
   }
 
   // After the step-0 intro pause, transitions begin.
-  let cumulativeTime = TEMPO_DURATIONS[firstStep.tempo];
+  // `durationOverride` (when set) wins over the discrete tempo bucket so
+  // migrated scenarios can preserve their exact original pacing.
+  const stepDuration = (step: EditorStep): number =>
+    step.durationOverride ?? TEMPO_DURATIONS[step.tempo];
+  let cumulativeTime = stepDuration(firstStep);
 
   for (let i = 1; i < state.steps.length; i++) {
     const prev = state.steps[i - 1];
     const curr = state.steps[i];
-    const transitionDuration = TEMPO_DURATIONS[curr.tempo];
+    const transitionDuration = stepDuration(curr);
     const transitionStart = roundTime(cumulativeTime);
     const arrivalTime = roundTime(transitionStart + transitionDuration);
 
@@ -334,23 +338,29 @@ function findJumpInterceptor(
 ): JumpingBrick | null {
   if (!actions || actions.length === 0) return null;
   // When the step has multiple jumping bricks (e.g. a real SMASH on R4a plus
-  // decoy FEINTEs on Op and C1 to misdirect the block), pick the one whose
-  // impact XZ is closest to where the ball is actually going. That's the
-  // brick that physically meets the ball — the other jumpers are distractors.
-  let best: JumpingBrick | null = null;
-  let bestDist = Infinity;
-  for (const brick of actions) {
-    if (!JUMPING_BRICKS.has(brick.kind)) continue;
-    if (!('impact' in brick)) continue;
-    const dx = currBallPos[0] - brick.impact[0];
-    const dz = currBallPos[2] - brick.impact[2];
-    const d = Math.hypot(dx, dz);
-    if (d < bestDist) {
-      bestDist = d;
-      best = brick as JumpingBrick;
+  // BLOC bricks on the opposing blockers), the OFFENSIVE jump (SMASH /
+  // JUMP_SERVE / FEINTE) is the one that physically meets the ball — the
+  // BLOC bricks are defensive distractors that may or may not touch it.
+  // First pass tries offensive bricks only; if none, fall back to any.
+  const OFFENSIVE = new Set<BrickAction['kind']>(['SMASH', 'JUMP_SERVE', 'FEINTE']);
+  const pickClosest = (filter: (k: BrickAction['kind']) => boolean): JumpingBrick | null => {
+    let best: JumpingBrick | null = null;
+    let bestDist = Infinity;
+    for (const brick of actions) {
+      if (!JUMPING_BRICKS.has(brick.kind)) continue;
+      if (!('impact' in brick)) continue;
+      if (!filter(brick.kind)) continue;
+      const dx = currBallPos[0] - brick.impact[0];
+      const dz = currBallPos[2] - brick.impact[2];
+      const d = Math.hypot(dx, dz);
+      if (d < bestDist) {
+        bestDist = d;
+        best = brick as JumpingBrick;
+      }
     }
-  }
-  return best;
+    return best;
+  };
+  return pickClosest(k => OFFENSIVE.has(k)) ?? pickClosest(() => true);
 }
 
 // Split the step's ball_move into two segments at the brick's contact point.

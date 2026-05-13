@@ -88,6 +88,11 @@ export type EditorStep = {
   // Explicit ball trajectory for the transition INTO this step.
   // When omitted, compileScenario falls back to a heuristic (existing behaviour).
   ballTrajectory?: BallTrajectory;
+  // Exact transition duration in seconds. When set, this wins over `tempo` for
+  // timing — used by migrations from legacy scenarios that need to preserve
+  // their original pacing exactly. The editor UI may still expose `tempo` as
+  // the primary input; `durationOverride` is the escape hatch.
+  durationOverride?: number;
 };
 
 export type EditorState = {

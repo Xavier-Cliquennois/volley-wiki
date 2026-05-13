@@ -1,0 +1,198 @@
+import type { EditorState } from '../../../../editor/types';
+import { COLORS } from '../../_shared';
+
+// Defense vs opponent Z3 (fast central / tempo 1): block-of-1 (read), wings on the 3m line.
+// Z1 and Z5 advance ~1 m forward because angles are shorter on a quick set.
+const STATE: EditorState = {
+  metadata: {
+    id: '6v6-defense-vs-z3',
+    title: 'Défense · attaque adverse Z3 (rapide / tempo 1)',
+    shortDescription: "Bloc à 1 en lecture (central) sur attaque rapide centrale adverse — arrières avancés d'un mètre.",
+    teamSize: 6,
+    phase: 'defense',
+    contextLabel: '5-1 · Bloc à 1 (read) · Stopped on contact',
+    defaultCamera: 'TOP_DOWN',
+  },
+  players: [
+    { id: 'P',      label: 'Passeur (P1)',       role: 'setter',   color: COLORS.setter },
+    { id: 'Op',     label: 'Pointu (P2)',        role: 'opposite', color: COLORS.opposite },
+    { id: 'C',      label: 'Central (P3)',       role: 'middle',   color: COLORS.middle },
+    { id: 'R4',     label: 'R4 (P4)',            role: 'outside',  color: COLORS.outside },
+    { id: 'L',      label: 'Libéro (P5)',        role: 'libero',   color: COLORS.libero },
+    { id: 'R4b',    label: 'R4 (P6)',            role: 'outside',  color: COLORS.middle_back },
+    { id: 'OPP_A',  label: 'Central adverse',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_S',  label: 'Passeur adv.',       role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_R4', label: 'R4 adverse',         role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_R',  label: 'Réceptionneur adv.', role: 'opponent', color: COLORS.opponent },
+  ],
+  steps: [
+    {
+      id: 's1',
+      title: '1. Réception adverse + pénétration éclair',
+      description: "Leur arrière vient de manchetter. Le passeur sprint vers le filet pour une rapide. Tempo 1 = 0,3-0,5 s entre passe et frappe. Notre central scrute le déplacement du central adverse, déjà en course.",
+      tempo: 'pause',
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [3, 0, 1.0],
+          C:      [0, 0, 1.0],
+          R4:     [-3, 0, 1.0],
+          L:      [-3, 0, 4.5],
+          R4b:    [0, 0, 5],
+          OPP_A:  [0, 0, -1.5],
+          OPP_S:  [-1.5, 0, -0.8],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [-1.5, 1.8, -0.8],
+        poses: {
+          OPP_R: 'BUMP',
+          C: 'READY', L: 'READY', P: 'READY', R4b: 'READY',
+        },
+      },
+    },
+    {
+      id: 's2',
+      title: '2. Passe tendue rapide + central en l\'air',
+      description: "Le passeur adverse lance une passe tendue très basse vers le central qui a déjà décollé. Nos ailiers reculent sur les 3 m pour libérer les déviations de bloc.",
+      tempo: 'rapide',
+      durationOverride: 0.6,
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [3, 0, 2.2],
+          C:      [0, 0, 0.3],
+          R4:     [-3, 0, 2.2],
+          L:      [-3, 0, 4.5],
+          R4b:    [0, 0, 5],
+          OPP_A:  [0, 0, -1.0],
+          OPP_S:  [-1.5, 0, -0.8],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [0, 2.5, -0.5],
+      },
+      ballTrajectory: { curve: 'arc', apex: 2.6 },
+      actions: [
+        { kind: 'PASSE_TENDUE', id: 'b-s2-quick', playerId: 'OPP_S', impact: [-1.5, 0, -0.8] },
+      ],
+    },
+    {
+      id: 's3',
+      title: '3. Bloc à 1 + smash rapide',
+      description: "Notre central seul saute en lecture. Le central adverse frappe en diagonale courte. Coup le plus dangereux : balle plongeante sous le bloc.",
+      tempo: 'rapide',
+      durationOverride: 0.7,
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [3, 0, 2.2],
+          C:      [0, 0, 0.4],
+          R4:     [-3, 0, 2.2],
+          L:      [-2.5, 0, 5],
+          R4b:    [0, 0, 6],
+          OPP_A:  [0, 0, -0.7],
+          OPP_S:  [-1.5, 0, -0.8],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [2.5, 0.8, 5],
+      },
+      ballTrajectory: { curve: 'flat' },
+      actions: [
+        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+      ],
+    },
+    {
+      id: 's4',
+      title: '4. Défense du passeur sur la ligne droite',
+      description: "Z1 (passeur) et Z5 (libéro) sont avancés à ~7 m car les angles sont courts sur rapide. Le passeur (Z1) récupère sur son couloir.",
+      tempo: 'rapide',
+      durationOverride: 0.6,
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [3, 0, 2.2],
+          C:      [0, 0, 0.4],
+          R4:     [-3, 0, 2.2],
+          L:      [-2.5, 0, 5],
+          R4b:    [0, 0, 6],
+          OPP_A:  [0, 0, -0.7],
+          OPP_S:  [-1, 0, -3],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [1.5, 2.2, 1.0],
+      },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      actions: [
+        { kind: 'MANCHETTE', id: 'b-s4-dig', playerId: 'P', impact: [2.5, 0, 5] },
+      ],
+    },
+    {
+      id: 's5',
+      title: "5. 2ᵉ touche par le pointu (contre-passeur)",
+      description: "Comme notre passeur a défendu, le pointu en P2 prend la 2ᵉ touche pour relayer. Notre R4 prépare une contre-attaque en zone 4.",
+      tempo: 'standard',
+      durationOverride: 1.0,
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [2.5, 0, 1.0],
+          C:      [0, 0, 1.0],
+          R4:     [-3, 0, 1.5],
+          L:      [-2.5, 0, 5],
+          R4b:    [0, 0, 6],
+          OPP_A:  [0, 0, -0.7],
+          OPP_S:  [-1, 0, -3],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [-3.0, 3.0, 1.0],
+      },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s5-set', playerId: 'Op', impact: [2.5, 0, 1.0] },
+      ],
+    },
+    {
+      id: 's6',
+      title: '6. RESET — retour à la base',
+      description: "Bascule en position de base dès que le passeur adverse touche la balle. La défense se réorganise pour la séquence suivante.",
+      tempo: 'calme',
+      durationOverride: 1.2,
+      snapshot: {
+        positions: {
+          P:      [3, 0, 5],
+          Op:     [3, 0, 1.0],
+          C:      [0, 0, 1.0],
+          R4:     [-3, 0, 1.0],
+          L:      [-3, 0, 4.5],
+          R4b:    [0, 0, 5],
+          OPP_A:  [0, 0, -1.5],
+          OPP_S:  [-2.5, 0, -2],
+          OPP_R4: [3, 0, -0.6],
+          OPP_R:  [0, 0, -3.2],
+        },
+        ballPosition: [-3.0, 0, -6],
+      },
+    },
+  ],
+  summary: {
+    keyPoints: [
+      'Bloc à 1 sur la rapide centrale : seul le central saute (read le plus fréquent, commit si scouting fort).',
+      "Z1 et Z5 AVANCENT d'un mètre (~7,5 m) car les angles sont plus courts sur quick.",
+      'Les ailiers restent sur les 3 m (~2-2,5 m du filet) pour les déviations de bloc.',
+      "« Stopped on contact » : tous arrêtés et équilibrés à l'instant exact de la frappe.",
+    ],
+    commonMistakes: [
+      'Tous les avants sautent → laisse les ailes ouvertes pour la passe suivante.',
+      'Bloc trop tardif → balle passe au-dessus des mains.',
+      '« False stepping » (premier appui reculé) → on perd le peu de temps disponible.',
+      "Z1/Z5 figés en fond (8 m+) → balle rapide tombe court avant qu'ils n'aient bougé.",
+    ],
+  },
+};
+
+export default STATE;

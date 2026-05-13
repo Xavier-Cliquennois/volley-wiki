@@ -1,0 +1,190 @@
+import type { EditorState } from '../../../../editor/types';
+import { COLORS } from '../../_shared';
+
+// 4v4 losange (diamond) — most common 4v4 formation: setter at center net (P3),
+// 2 wings on the 3m line, 1 deep back. Single block expected.
+const STATE: EditorState = {
+  metadata: {
+    id: '4v4-attack-losange',
+    title: '4v4 · Attaque losange',
+    shortDescription: 'Losange canonique : passeur en P3 + 2 ailes sur les 3 m + arrière. Réception → attaque en zone 4.',
+    teamSize: 4,
+    phase: 'attack',
+    contextLabel: '4v4 · Losange (1-2-1) · UNSS / loisir',
+    defaultCamera: 'DEFAULT',
+  },
+  players: [
+    { id: 'P',       label: 'Passeur (P3)',    role: 'setter',   color: COLORS.setter },
+    { id: 'R4',      label: 'Aile G (P4)',     role: 'outside',  color: COLORS.outside },
+    { id: 'A2',      label: 'Aile D (P2)',     role: 'outside',  color: COLORS.outside },
+    { id: 'A',       label: 'Arrière (P1)',    role: 'libero',   color: COLORS.libero },
+    { id: 'OPP_SRV', label: 'Serveur adv.',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_B',   label: 'Bloc adverse',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_OFF', label: 'Off-blocker adv.', role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D1',  label: 'Déf. cross adv.', role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D2',  label: 'Arrière adv.',    role: 'opponent', color: COLORS.opponent },
+  ],
+  steps: [
+    {
+      id: 's1',
+      title: '1. Formation losange',
+      description: 'Disposition canonique : passeur AU CENTRE du filet (P3) + 2 ailes sur les 3 m + arrière au fond.',
+      tempo: 'pause',
+      snapshot: {
+        positions: {
+          P:       [0, 0, 0.6],
+          R4:      [-2.5, 0, 2.5],
+          A2:      [2.5, 0, 2.5],
+          A:       [0, 0, 5.5],
+          OPP_SRV: [0, 0, -7],
+          OPP_B:   [-2.5, 0, -0.5],
+          OPP_OFF: [-3.0, 0, -2.0],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [0, 1.5, -7],
+        poses: {
+          OPP_SRV: 'SPIKE',
+          R4: 'READY', A2: 'READY', A: 'READY',
+        },
+      },
+    },
+    {
+      id: 's2',
+      title: "2. Service + réception de l'arrière",
+      description: "L'arrière unique avance et reçoit en manchette. Trajectoire haute vers le passeur au filet.",
+      tempo: 'standard',
+      durationOverride: 1.0,
+      snapshot: {
+        positions: {
+          P:       [0, 0, 0.6],
+          R4:      [-2.5, 0, 2.5],
+          A2:      [2.5, 0, 2.5],
+          A:       [0, 0, 4.5],
+          OPP_SRV: [0, 0, -6],
+          OPP_B:   [-2.5, 0, -0.5],
+          OPP_OFF: [-3.0, 0, -2.0],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [0, 1.2, 4.5],
+      },
+      ballTrajectory: { curve: 'arc', apex: 4 },
+      actions: [
+        { kind: 'MANCHETTE', id: 'b-s2-recv', playerId: 'A', impact: [0, 0, 4.5] },
+      ],
+    },
+    {
+      id: 's3',
+      title: "3. Passe + course d'élan + couverture",
+      description: "R4 enchaîne sa course d'élan vers la zone 4. Passeur, A2 et A se rapprochent en triangle pour la couverture. Bloc adverse glisse face à l'attaquant.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          P:       [-1.5, 0, 1.5],
+          R4:      [-3.0, 0, 1.5],
+          A2:      [-0.5, 0, 2.0],
+          A:       [-1, 0, 3.5],
+          OPP_SRV: [0, 0, -6],
+          OPP_B:   [-3.0, 0, -0.4],
+          OPP_OFF: [-3.0, 0, -3.0],
+          OPP_D1:  [2.5, 0, -4.0],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [-3.0, 3.4, 0.6],
+      },
+      ballTrajectory: { curve: 'arc', apex: 4 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s3-set',  playerId: 'P',  impact: [0, 0, 0.8] },
+        { kind: 'COURSE_ELAN', id: 'b-s3-elan', playerId: 'R4', to: [-3.0, 0, 1.5] },
+      ],
+    },
+    {
+      id: 's4',
+      title: '4. Frappe en diagonale + bloc à 1',
+      description: "Frappe puissante. Avec un bloc à 1, l'angle est large : l'attaquant peut viser la diagonale longue ou la ligne courte.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          P:       [-1.5, 0, 1.5],
+          R4:      [-3.0, 0, 1.0],
+          A2:      [-0.5, 0, 2.0],
+          A:       [-1, 0, 3.5],
+          OPP_SRV: [0, 0, -6],
+          OPP_B:   [-3.0, 0, -0.4],
+          OPP_OFF: [-3.0, 0, -3.0],
+          OPP_D1:  [2.5, 0, -4.0],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2, 0, -5],
+      },
+      ballTrajectory: { curve: 'flat' },
+      actions: [
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'R4',    impact: [-3.0, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-bloc',  playerId: 'OPP_B', impact: [-3.0, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+      ],
+    },
+    {
+      id: 's5',
+      title: '5. Récupération adverse',
+      description: 'Le défenseur cross adverse plonge sur la diagonale longue — arrive un poil trop tard, la balle a déjà touché le sol.',
+      tempo: 'rapide',
+      durationOverride: 0.5,
+      snapshot: {
+        positions: {
+          P:       [-1.5, 0, 1.5],
+          R4:      [-3.0, 0, 0.6],
+          A2:      [-0.5, 0, 2.0],
+          A:       [-1, 0, 3.5],
+          OPP_SRV: [0, 0, -6],
+          OPP_B:   [-3.0, 0, -0.4],
+          OPP_OFF: [-3.0, 0, -3.0],
+          OPP_D1:  [2.0, 0, -4.8],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2, 0, -5],
+      },
+      actions: [
+        { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_D1', impact: [2.0, 0, -4.8] },
+      ],
+    },
+    {
+      id: 's6',
+      title: '6. RESET — retour au losange',
+      description: 'Tout le monde reprend sa position dans le losange pour le coup suivant. Le passeur revient au centre du filet.',
+      tempo: 'calme',
+      durationOverride: 1.2,
+      snapshot: {
+        positions: {
+          P:       [0, 0, 0.6],
+          R4:      [-2.5, 0, 2.5],
+          A2:      [2.5, 0, 2.5],
+          A:       [0, 0, 5.5],
+          OPP_SRV: [0, 0, -6],
+          OPP_B:   [-2.5, 0, -0.5],
+          OPP_OFF: [-3.0, 0, -2.0],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2, 0, -5],
+      },
+    },
+  ],
+  summary: {
+    keyPoints: [
+      'Losange canonique = formation 4v4 la plus utilisée.',
+      'Variante "passeur centre" : passeur en P3, distribue à gauche ou à droite.',
+      "Bloc adverse à 1 standard en 4v4 : angle d'attaque large.",
+      "Couverture limitée : 3 joueurs autour de l'attaquant.",
+    ],
+    commonMistakes: [
+      'Passeur qui réceptionne aussi → impossible de passer derrière.',
+      'Ailes trop reculées → passe difficile pour le passeur central.',
+      'Arrière trop reculé → pas de couverture du contre court.',
+    ],
+  },
+};
+
+export default STATE;

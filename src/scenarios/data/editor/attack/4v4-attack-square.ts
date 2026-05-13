@@ -1,0 +1,191 @@
+import type { EditorState } from '../../../../editor/types';
+import { COLORS } from '../../_shared';
+
+// 4v4 square (2-2) — 2 players at the net + 2 players at the back. Allows 2-block,
+// but only 2 floor defenders → vulnerable to long diagonals.
+const STATE: EditorState = {
+  metadata: {
+    id: '4v4-attack-square',
+    title: '4v4 · Attaque carré',
+    shortDescription: 'Formation carré (2 avant / 2 arrière) : 2 contreurs + 2 défenseurs équilibrés.',
+    teamSize: 4,
+    phase: 'attack',
+    contextLabel: '4v4 · Carré · Bloc à 2 possible',
+    defaultCamera: 'DEFAULT',
+  },
+  players: [
+    { id: 'P',       label: 'Passeur-Att (P2)', role: 'setter',   color: COLORS.setter },
+    { id: 'R4',      label: 'Attaquant (P4)',   role: 'outside',  color: COLORS.outside },
+    { id: 'A1',      label: 'Arrière G (P5)',   role: 'outside',  color: COLORS.outside_back },
+    { id: 'A2',      label: 'Arrière D (P1)',   role: 'libero',   color: COLORS.libero },
+    { id: 'OPP_SRV', label: 'Serveur adv.',     role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BL',  label: 'Bloc adv. G',      role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BR',  label: 'Bloc adv. D',      role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D1',  label: 'Déf. cross adv.',  role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D2',  label: 'Arrière adv.',     role: 'opponent', color: COLORS.opponent },
+  ],
+  steps: [
+    {
+      id: 's1',
+      title: '1. Configuration carré',
+      description: '2 joueurs au filet (P2 et P4), 2 joueurs au fond. Couverture équilibrée du terrain en avant et en arrière.',
+      tempo: 'pause',
+      snapshot: {
+        positions: {
+          P:       [3, 0, 0.6],
+          R4:      [-3, 0, 0.6],
+          A1:      [-2.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -7],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [0, 1.5, -7],
+        poses: {
+          OPP_SRV: 'SPIKE',
+          A1: 'READY', A2: 'READY', P: 'READY',
+        },
+      },
+    },
+    {
+      id: 's2',
+      title: '2. Service + réception haute',
+      description: "L'arrière gauche réceptionne en manchette en cloche vers le passeur-attaquant en zone 2.",
+      tempo: 'standard',
+      durationOverride: 1.0,
+      snapshot: {
+        positions: {
+          P:       [3, 0, 0.6],
+          R4:      [-3, 0, 0.6],
+          A1:      [-1.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -6],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [-1.5, 1.2, 5],
+      },
+      ballTrajectory: { curve: 'arc', apex: 4 },
+      actions: [
+        { kind: 'MANCHETTE', id: 'b-s2-recv', playerId: 'A1', impact: [-1.5, 0, 5] },
+      ],
+    },
+    {
+      id: 's3',
+      title: "3. Passe vers l'aile + course d'élan",
+      description: "Le passeur distribue vers l'attaquant en zone 4. Pas d'option centrale (pas de central spécialisé). Le bloc à 2 glisse face à l'attaquant.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          P:       [2.5, 0, 0.8],
+          R4:      [-3.0, 0, 1.2],
+          A1:      [-1.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -6],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [2.5, 0, -4.0],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2.5, 1.9, 0.8],
+      },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s3-set',  playerId: 'P',  impact: [2.5, 0, 0.8] },
+        { kind: 'COURSE_ELAN', id: 'b-s3-elan', playerId: 'R4', to: [-3.0, 0, 1.2] },
+      ],
+    },
+    {
+      id: 's4',
+      title: '4. Frappe contre bloc à 2',
+      description: "L'attaquant doit choisir : ligne courte, diagonale longue ou tip dans le couloir laissé. Bloc à 2 (vs bloc à 1 du losange) — défense plus difficile à l'attaque.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          P:       [2.5, 0, 0.8],
+          R4:      [-3.0, 0, 1.0],
+          A1:      [-1.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -6],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [2.5, 0, -4.0],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2.5, 0, -6],
+      },
+      ballTrajectory: { curve: 'flat' },
+      actions: [
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'R4',     impact: [-3.0, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocL', playerId: 'OPP_BL', impact: [-2.5, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'OPP_BR', impact: [-1.0, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+      ],
+    },
+    {
+      id: 's5',
+      title: '5. Récupération adverse',
+      description: 'Le défenseur cross adverse plonge sur la diagonale longue. Avec seulement 2 joueurs au sol, la zone est vulnérable.',
+      tempo: 'rapide',
+      durationOverride: 0.5,
+      snapshot: {
+        positions: {
+          P:       [2.5, 0, 0.8],
+          R4:      [-3.0, 0, 0.6],
+          A1:      [-1.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -6],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [2.5, 0, -5.8],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2.5, 0, -6],
+      },
+      actions: [
+        { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_D1', impact: [2.5, 0, -5.8] },
+      ],
+    },
+    {
+      id: 's6',
+      title: '6. RESET — retour formation',
+      description: 'Tout le monde reprend le carré pour le coup suivant. Cette formation conviendra aux équipes avec 2 bons contreurs et 2 bons défenseurs.',
+      tempo: 'calme',
+      durationOverride: 1.2,
+      snapshot: {
+        positions: {
+          P:       [3, 0, 0.6],
+          R4:      [-3, 0, 0.6],
+          A1:      [-2.5, 0, 5],
+          A2:      [2.5, 0, 5],
+          OPP_SRV: [0, 0, -6],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [2.5, 0, -2.5],
+          OPP_D2:  [0, 0, -5.5],
+        },
+        ballPosition: [2.5, 0, -6],
+      },
+    },
+  ],
+  summary: {
+    keyPoints: [
+      'Formation carré : équilibre attaque/défense, 2 zones avant + 2 zones arrière.',
+      'Permet le bloc à 2 (vs bloc à 1 du losange) — meilleure défense au filet.',
+      'Mais seulement 2 joueurs au sol → vulnérable aux grandes diagonales.',
+      'Bonne pour des équipes avec 2 contreurs forts et 2 défenseurs forts.',
+    ],
+    commonMistakes: [
+      'Joueurs au filet trop éloignés du centre → bloc adverse facile.',
+      'Arrières figés au fond → pas de couverture courte.',
+      'Confusion sur qui passe : le passeur-attaquant doit toujours être en avant.',
+    ],
+  },
+};
+
+export default STATE;

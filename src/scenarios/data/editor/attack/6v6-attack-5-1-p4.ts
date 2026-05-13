@@ -1,0 +1,198 @@
+import type { EditorState } from '../../../../editor/types';
+import { COLORS } from '../../_shared';
+
+// 5-1 rotation P4: setter front-left, permutes from P4 to zone 2-3 while R4* (in P2)
+// permutes to zone 4 to attack. Crossed placement is essential.
+const STATE: EditorState = {
+  metadata: {
+    id: '6v6-attack-5-1-p4',
+    title: 'Attaque · 5-1 rotation P4',
+    shortDescription: 'Passeur avant en P4 permute vers la droite ; R4* attaque en 4, central en 3, pointu arrière en 1.',
+    teamSize: 6,
+    phase: 'attack',
+    contextLabel: '5-1 · Rotation P4 · Passeur avant',
+    defaultCamera: 'DEFAULT',
+  },
+  players: [
+    { id: 'L',       label: 'Libéro (P5)',    role: 'libero',   color: COLORS.libero },
+    { id: 'R4b',     label: 'R4 (P6)',        role: 'outside',  color: COLORS.middle_back },
+    { id: 'Pt',      label: 'Pointu (P1)',    role: 'opposite', color: COLORS.opposite },
+    { id: 'P',       label: 'Passeur (P4)',   role: 'setter',   color: COLORS.setter },
+    { id: 'C',       label: 'Central (P3)',   role: 'middle',   color: COLORS.middle },
+    { id: 'R4a',     label: 'R4 (P2)',        role: 'outside',  color: COLORS.outside },
+    { id: 'OPP_SRV', label: 'Serveur adv.',   role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BL',  label: 'Bloc adv. G',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_BR',  label: 'Bloc adv. D',    role: 'opponent', color: COLORS.opponent },
+    { id: 'OPP_D1',  label: 'Déf. diag. adv.', role: 'opponent', color: COLORS.opponent },
+  ],
+  steps: [
+    {
+      id: 's1',
+      title: '1. Configuration P4 + décalage',
+      description: 'Passeur en zone 4, R4* en zone 2 — placement croisé. Passeur et central se décalent à gauche pour libérer la zone de réception au libéro.',
+      tempo: 'pause',
+      snapshot: {
+        positions: {
+          L:       [-2.5, 0, 4],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [-3.5, 0, 0.6],
+          C:       [-1.0, 0, 0.6],
+          R4a:     [3, 0, 0.6],
+          OPP_SRV: [0, 0, -8.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [0, 1.5, -8.5],
+        poses: {
+          OPP_SRV: 'SPIKE',
+          L: 'READY', R4b: 'READY', Pt: 'READY',
+        },
+      },
+    },
+    {
+      id: 's2',
+      title: '2. Service + réception libéro',
+      description: "Le service vise la zone 6. Le libéro avance et fait manchette vers la cible classique (entre P2 et P3).",
+      tempo: 'standard',
+      durationOverride: 1.0,
+      snapshot: {
+        positions: {
+          L:       [0, 0, 4.5],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [-3.5, 0, 0.6],
+          C:       [-1.0, 0, 0.6],
+          R4a:     [3, 0, 0.6],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [0, 1.2, 4.5],
+      },
+      ballTrajectory: { curve: 'arc', apex: 4 },
+      actions: [
+        { kind: 'MANCHETTE', id: 'b-s2-recv', playerId: 'L', impact: [0, 0, 4.5] },
+      ],
+    },
+    {
+      id: 's3',
+      title: '3. Permutation P↔R4* + passe haute',
+      description: "Croisement essentiel : le passeur quitte P4 vers 2-3, le R4* quitte P2 vers 4 pour attaquer. Passe haute en cloche vers l'aile gauche.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          L:       [0, 0, 4.5],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [1.5, 0, 0.8],
+          C:       [0, 0, 0.6],
+          R4a:     [-3.3, 0, 1.2],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [1.5, 1.9, 0.8],
+      },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s3-set',  playerId: 'P',   impact: [1.5, 0, 0.8] },
+        { kind: 'COURSE_ELAN', id: 'b-s3-elan', playerId: 'R4a', to: [-3.3, 0, 1.2] },
+      ],
+    },
+    {
+      id: 's4',
+      title: "4. Attaque sur l'aile + double bloc",
+      description: "Frappe en diagonale longue. Avec un passeur avant (donc petit au bloc), l'attaque doit conclure rapidement. Bloc à 2 décalé sur l'aile.",
+      tempo: 'standard',
+      durationOverride: 0.9,
+      snapshot: {
+        positions: {
+          L:       [0, 0, 4.5],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [1.5, 0, 0.8],
+          C:       [0, 0, 0.6],
+          R4a:     [-3.3, 0, 1.0],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [2, 0, -6],
+      },
+      ballTrajectory: { curve: 'flat' },
+      actions: [
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'R4a',    impact: [-3.3, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocL', playerId: 'OPP_BL', impact: [-2.5, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'OPP_BR', impact: [-1.0, 0, -0.4], jumpHeight: 1.5, contactAtRatio: 0.45 },
+      ],
+    },
+    {
+      id: 's5',
+      title: '5. Récupération adverse',
+      description: 'Le défenseur diagonale adverse plonge sur la trajectoire longue pour tenter une manchette désespérée.',
+      tempo: 'rapide',
+      durationOverride: 0.5,
+      snapshot: {
+        positions: {
+          L:       [0, 0, 4.5],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [1.5, 0, 0.8],
+          C:       [0, 0, 0.6],
+          R4a:     [-3.3, 0, 0.6],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.4],
+          OPP_BR:  [-1.0, 0, -0.4],
+          OPP_D1:  [2, 0, -5.8],
+        },
+        ballPosition: [2, 0, -6],
+      },
+      actions: [
+        { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_D1', impact: [2, 0, -5.8] },
+      ],
+    },
+    {
+      id: 's6',
+      title: '6. RESET — retour formation',
+      description: 'Tout le monde reprend sa position initiale. Le décalage passeur/central à gauche est conservé pour le service suivant.',
+      tempo: 'calme',
+      durationOverride: 1.2,
+      snapshot: {
+        positions: {
+          L:       [-2.5, 0, 4],
+          R4b:     [0, 0, 5],
+          Pt:      [3, 0, 4],
+          P:       [-3, 0, 0.6],
+          C:       [0, 0, 0.6],
+          R4a:     [3, 0, 0.6],
+          OPP_SRV: [0, 0, -7.5],
+          OPP_BL:  [-2.5, 0, -0.5],
+          OPP_BR:  [2.5, 0, -0.5],
+          OPP_D1:  [3.0, 0, -3.5],
+        },
+        ballPosition: [2, 0, -6],
+      },
+    },
+  ],
+  summary: {
+    keyPoints: [
+      'Rotation P4 = passeur avant. Permutation P↔R4* obligatoire.',
+      '2 attaquants devant : R4* en 4, central en 3. Pipe ou pointu arrière en option.',
+      'Le passeur et le central se décalent à gauche au service pour libérer la zone 6.',
+      "Le pointu (en P1) ne réceptionne pas et reste prêt pour l'attaque arrière.",
+    ],
+    commonMistakes: [
+      'Permutation oubliée → le R4* reste à droite, attaquant en mauvaise position.',
+      'Passeur et central trop à droite au service → conflit de réception en zone 6.',
+      "Bloc adverse non fixé par le central → bloc à 2 facile sur l'aile gauche.",
+    ],
+  },
+};
+
+export default STATE;

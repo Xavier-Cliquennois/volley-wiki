@@ -1,13 +1,13 @@
 import type { Scenario } from '../types';
-import { ATTACK_SCENARIOS } from './attack';
-import { DEFENSE_SCENARIOS } from './defense';
-import { RECEPTION_SCENARIOS } from './reception';
+import { compileScenario } from '../../editor/compileScenario';
+import { EDITOR_STATES } from './editor';
 
-export const SCENARIOS: Scenario[] = [
-  ...ATTACK_SCENARIOS,
-  ...DEFENSE_SCENARIOS,
-  ...RECEPTION_SCENARIOS,
-];
+// Sources of truth: EditorState files under data/editor/ (one per scenario,
+// authored using the brick-based editor format). Compiled at module load —
+// the runtime Scenario is what /scenarios renders.
+export const SCENARIOS: Scenario[] = EDITOR_STATES
+  .map(compileScenario)
+  .sort((a, b) => a.id.localeCompare(b.id));
 
 export function getScenarioById(id: string): Scenario | undefined {
   return SCENARIOS.find(s => s.id === id);
