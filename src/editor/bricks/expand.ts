@@ -85,6 +85,12 @@ export function expandBrick(brick: BrickAction, ctx: ExpandContext): TimelineAct
 type JumpPlan = {
   // Pose to fire at the apex (synchronized with ball arrival when possible).
   apexPose: 'SPIKE' | 'ARM_SPIKE' | 'SET';
+  // Windup pose to fire DURING the jump-up. The arm is loaded into striking
+  // position so the apex strike reads as a real movement instead of a single
+  // jolt. Set for SMASH/JUMP_SERVE where the spike is a two-beat gesture
+  // (arm loads back → arm whips forward); omitted for FEINTE (a soft poke)
+  // and BLOC (the apex pose IS the arm-up position).
+  windupPose?: 'ARM_SPIKE';
   // How long the jump (going up + coming down) takes.
   jumpDuration: number;
   // Approach duration — capped to 60 % of the window so jump + land have room.
@@ -158,13 +164,30 @@ function approachJumpLand(
   };
   actions.push(jumpUp);
 
-  // 3. Contact pose at ball arrival.
+  // 2b. Windup pose during the jump-up. For SMASH/JUMP_SERVE this loads the
+  // arm into ARM_SPIKE position so the apex strike reads as a real motion
+  // (arm goes back/up → whips forward). Without this, the apex SPIKE tween
+  // gets visually cut off by a too-close RESET.
+  if (plan.windupPose) {
+    const windup: PlayerPoseAction = {
+      type: 'player_pose',
+      time: jumpStartAt,
+      id: brick.playerId,
+      pose: plan.windupPose,
+      duration: jumpUpDur,
+    };
+    actions.push(windup);
+  }
+
+  // 3. Contact pose at ball arrival. Duration is short so the strike snaps
+  // visibly when paired with the windup, but long enough to read on its own.
+  const contactDur = 0.25;
   const pose: PlayerPoseAction = {
     type: 'player_pose',
     time: contactAt,
     id: brick.playerId,
     pose: plan.apexPose,
-    duration: 0.2,
+    duration: contactDur,
   };
   actions.push(pose);
 
@@ -178,10 +201,14 @@ function approachJumpLand(
   };
   actions.push(land);
 
-  // 5. Reset stance after landing.
+  // 5. Reset stance — only after the apex pose has had time to play out.
+  // When the apex falls at the very end of the window (contactAtRatio=1 case),
+  // the landing slot is squeezed to MIN_DUR and the reset would otherwise
+  // override SPIKE 0.1s into its tween, hiding the strike entirely.
+  const resetAt = Math.max(apexAt + landDur, contactAt + contactDur);
   const reset: PlayerPoseAction = {
     type: 'player_pose',
-    time: apexAt + landDur,
+    time: resetAt,
     id: brick.playerId,
     pose: 'RESET',
     duration: 0.2,
@@ -194,6 +221,7 @@ function approachJumpLand(
 function expandSmash(brick: SmashBrick, ctx: ExpandContext): TimelineAction[] {
   return approachJumpLand(brick, ctx, {
     apexPose: 'SPIKE',
+    windupPose: 'ARM_SPIKE',
     jumpDuration: 0.7,
     approachDuration: 0.6,
   }, DEFAULT_JUMP.smash);
@@ -211,6 +239,7 @@ function expandFeinte(brick: FeinteBrick, ctx: ExpandContext): TimelineAction[] 
 function expandJumpServe(brick: JumpServeBrick, ctx: ExpandContext): TimelineAction[] {
   return approachJumpLand(brick, ctx, {
     apexPose: 'SPIKE',
+    windupPose: 'ARM_SPIKE',
     jumpDuration: 0.8,
     approachDuration: 0.7,
   }, DEFAULT_JUMP.jumpServe);
