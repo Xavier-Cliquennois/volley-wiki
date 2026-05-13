@@ -8,20 +8,28 @@ import type {
 import type { EditorState, EditorStep, PoseName } from './types';
 import { TEMPO_DURATIONS } from './types';
 import { expandBrick, BRICK_BY_KIND } from './bricks';
-import type { BrickAction, ExpandContext } from './bricks';
+import { DEFAULT_JUMP } from './bricks/expand';
+import type {
+  BrickAction,
+  ExpandContext,
+} from './bricks';
+import { SYNC_RADIUS, type JumpingBrick } from './smashSync';
 
 const EPSILON = 0.001;
 const CONTACT_DURATION = 0.2;
-// Auto-snap radius: if the ball lands within this distance of a player who
-// owns a contact-flavoured brick in the same step, the brick's apex pose is
-// synchronized with the ball arrival. Larger than 0.9 (auto-pose radius) so
-// authors get the snap even when their impact spot is approximate.
-const AUTO_SNAP_RADIUS = 1.2;
 
 // Bricks for which auto-snap on ball arrival makes sense.
 const SNAPPING_BRICKS = new Set<BrickAction['kind']>([
   'SMASH', 'BIDOUILLE', 'FEINTE', 'JUMP_SERVE', 'FLOAT_SERVE',
   'PASSE_HAUTE', 'PASSE_TENDUE', 'BLOC', 'MANCHETTE', 'DEFENSE_PLONGEE',
+]);
+
+// Jumping bricks intercept the ball IN MID-AIR rather than at its landing spot.
+// For these, the snap check looks at where the ball comes FROM (the previous
+// step's ballPosition) instead of where it lands — and when contactAtRatio is
+// set, the ball_move gets split into two segments at the contact point.
+const JUMPING_BRICKS = new Set<BrickAction['kind']>([
+  'SMASH', 'FEINTE', 'JUMP_SERVE', 'BLOC',
 ]);
 
 // Poses that represent a moment of contact with the ball — fired right when the
@@ -121,23 +129,57 @@ export function compileScenario(state: EditorState): Scenario {
       }
     }
 
-    // 2. Ball move — same window. Honor explicit ballTrajectory when present.
-    let ballAction: BallMoveAction | null = null;
-    if (!positionsEqual(prev.snapshot.ballPosition, curr.snapshot.ballPosition)) {
-      ballAction = buildBallMove(prev, curr, transitionStart, transitionDuration);
-      timeline.push(ballAction);
+    // 2. Ball move — emit either a single segment, or a split pair when a
+    //    jumping brick intercepts the ball mid-flight. The split lets the ball
+    //    physically pass through the player's hand at apex.
+    const ballMoved = !positionsEqual(prev.snapshot.ballPosition, curr.snapshot.ballPosition);
+    const interceptor = findJumpInterceptor(curr.actions, prev.snapshot.ballPosition, curr.snapshot.ballPosition);
+
+    // The "primary" ball action is the segment that ends at the contact point —
+    // its arrival time is what jumping bricks snap onto. For a single-segment
+    // ball_move, primary === sole action.
+    let primaryBallAction: BallMoveAction | null = null;
+    let contactArrivalTime: number | undefined;
+
+    if (ballMoved) {
+      // We only split the ball_move into two segments when the ball clearly
+      // flies PAST the contact point during this window — i.e. the ball's
+      // destination XZ is meaningfully different from the brick's impact XZ.
+      // When the ball just arrives ON the contact zone (e.g. a "ball arrives
+      // at the smasher's hand" step where the spike itself happens in the
+      // next window), splitting would invent a fake second segment. In that
+      // case we emit a single ball_move and the contact pose snaps to its end.
+      const dxImpact = interceptor
+        ? curr.snapshot.ballPosition[0] - interceptor.impact[0]
+        : 0;
+      const dzImpact = interceptor
+        ? curr.snapshot.ballPosition[2] - interceptor.impact[2]
+        : 0;
+      const ballFliesPastImpact = interceptor
+        ? Math.hypot(dxImpact, dzImpact) > SYNC_RADIUS
+        : false;
+
+      if (interceptor && interceptor.contactAtRatio !== undefined && ballFliesPastImpact) {
+        const segments = buildSplitBallMove(prev, curr, transitionStart, transitionDuration, interceptor);
+        timeline.push(...segments);
+        primaryBallAction = segments[0];
+        contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
+      } else {
+        primaryBallAction = buildBallMove(prev, curr, transitionStart, transitionDuration);
+        timeline.push(primaryBallAction);
+        contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
+      }
     }
 
-    // 3. Auto-snap: figure out if the ball lands near a brick owner this step.
-    //    When yes, the brick's apex/contact is timed exactly on ball arrival.
-    const ballArrivalTime = ballAction ? ballAction.time + ballAction.duration : undefined;
-
-    // 4. Bricks — expand each into sub-actions inside the transition window.
+    // 3. Bricks — expand each into sub-actions inside the transition window.
+    //    Jumping bricks snap onto the contact arrival (= end of segment 1 when
+    //    split, or end of the single ball_move otherwise). Ground bricks still
+    //    snap onto the ball's final destination.
     if (curr.actions?.length) {
       for (const brick of curr.actions) {
         const startPos = prev.snapshot.positions[brick.playerId] ?? [0, 0, 0];
-        const snapTime = shouldSnap(brick, ballAction)
-          ? ballArrivalTime
+        const snapTime = shouldSnap(brick, primaryBallAction, prev.snapshot.ballPosition)
+          ? contactArrivalTime
           : undefined;
         const ctx: ExpandContext = {
           windowStart: transitionStart,
@@ -247,15 +289,145 @@ function buildBallMove(
 
 // Decide if a brick should auto-snap onto the ball arrival in its window.
 // Only snap if (a) the brick is a contact-flavoured one, and (b) the ball
-// actually lands close to the brick's impact spot.
-function shouldSnap(brick: BrickAction, ballAction: BallMoveAction | null): boolean {
+// actually meets the brick's impact spot at some point during its flight.
+//
+// For jumping bricks (smash, feinte, jump_serve, bloc), the ball is intercepted
+// MID-FLIGHT — so the right proximity check is against the ball's ORIGIN (where
+// it comes from in this step). For ground bricks (manchette, set, etc.), the
+// ball lands on the player so we check against the destination as before.
+function shouldSnap(
+  brick: BrickAction,
+  ballAction: BallMoveAction | null,
+  prevBallPos: [number, number, number],
+): boolean {
   if (!ballAction) return false;
   if (!SNAPPING_BRICKS.has(brick.kind)) return false;
   // Movement-only bricks (no `impact`) won't pass the type narrowing; guard.
   if (!('impact' in brick)) return false;
-  const dx = ballAction.to[0] - brick.impact[0];
-  const dz = ballAction.to[2] - brick.impact[2];
-  return Math.hypot(dx, dz) < AUTO_SNAP_RADIUS;
+
+  const isJumping = JUMPING_BRICKS.has(brick.kind);
+  // When the ball_move was split, ballAction.to IS the contact point — so
+  // checking against ballAction.to works for both jumping and ground bricks.
+  // For unsplit jumping bricks, we fall back to the previous position (where
+  // the ball is "coming from") since the impact happens mid-flight.
+  const refX = isJumping ? prevBallPos[0] : ballAction.to[0];
+  const refZ = isJumping ? prevBallPos[2] : ballAction.to[2];
+  // For ground bricks, prefer the destination point (where it lands).
+  const destX = ballAction.to[0];
+  const destZ = ballAction.to[2];
+
+  const distFromOrigin = Math.hypot(refX - brick.impact[0], refZ - brick.impact[2]);
+  const distFromDest = Math.hypot(destX - brick.impact[0], destZ - brick.impact[2]);
+
+  // Either origin OR destination near the impact triggers the snap — covers
+  // both "ball is here at start of step" (jumping) and "ball lands here" (ground).
+  return Math.min(distFromOrigin, distFromDest) < SYNC_RADIUS;
+}
+
+// Find a jumping brick that intercepts the ball mid-flight in this step.
+// Returns the first matching brick whose `impact` is "between" the ball's
+// origin and destination (XZ) — i.e. the ball plausibly passes through it.
+function findJumpInterceptor(
+  actions: ReadonlyArray<BrickAction> | undefined,
+  _prevBallPos: [number, number, number],
+  currBallPos: [number, number, number],
+): JumpingBrick | null {
+  if (!actions || actions.length === 0) return null;
+  // When the step has multiple jumping bricks (e.g. a real SMASH on R4a plus
+  // decoy FEINTEs on Op and C1 to misdirect the block), pick the one whose
+  // impact XZ is closest to where the ball is actually going. That's the
+  // brick that physically meets the ball — the other jumpers are distractors.
+  let best: JumpingBrick | null = null;
+  let bestDist = Infinity;
+  for (const brick of actions) {
+    if (!JUMPING_BRICKS.has(brick.kind)) continue;
+    if (!('impact' in brick)) continue;
+    const dx = currBallPos[0] - brick.impact[0];
+    const dz = currBallPos[2] - brick.impact[2];
+    const d = Math.hypot(dx, dz);
+    if (d < bestDist) {
+      bestDist = d;
+      best = brick as JumpingBrick;
+    }
+  }
+  return best;
+}
+
+// Split the step's ball_move into two segments at the brick's contact point.
+// Segment 1 = ball travels from previous position to the contact point (arc).
+// Segment 2 = ball travels from contact point to its final destination (flat,
+// since this models the spike's flat trajectory).
+function buildSplitBallMove(
+  prev: EditorStep,
+  curr: EditorStep,
+  transitionStart: number,
+  transitionDuration: number,
+  brick: JumpingBrick,
+): BallMoveAction[] {
+  const from = prev.snapshot.ballPosition;
+  const to = curr.snapshot.ballPosition;
+  const ratio = clamp01(brick.contactAtRatio ?? 0.55);
+
+  // Allocate the two segment durations so their sum equals transitionDuration
+  // exactly. The minimum-duration floor would otherwise let seg1+seg2 exceed
+  // the window when ratio is extreme (e.g. 0.95 with a 0.15s window). We honor
+  // the ratio as best we can while keeping each segment above MIN_SEG.
+  const MIN_SEG = 0.1;
+  let seg1Dur = transitionDuration * ratio;
+  let seg2Dur = transitionDuration - seg1Dur;
+  if (transitionDuration >= 2 * MIN_SEG) {
+    seg1Dur = Math.max(MIN_SEG, Math.min(transitionDuration - MIN_SEG, seg1Dur));
+    seg2Dur = transitionDuration - seg1Dur;
+  }
+
+  // Contact point in 3D: XZ from the brick's impact, Y slightly above the
+  // jump apex so the ball is at the player's striking hand height.
+  const jumpHeight = brick.jumpHeight ?? defaultJumpHeightFor(brick.kind);
+  const contactY = Math.max(jumpHeight + 0.5, 2.4);
+  const contact: [number, number, number] = [brick.impact[0], contactY, brick.impact[2]];
+
+  const seg1: BallMoveAction = {
+    type: 'ball_move',
+    time: transitionStart,
+    from,
+    to: contact,
+    duration: seg1Dur,
+    // Approach arc — the ball rises from the setter towards the striking zone.
+    arc: Math.max(from[1], contactY, 2.5),
+    curve: 'arc',
+    apex: contactY,
+  };
+
+  // Segment 2: the spike. Flat, fast trajectory to the final destination.
+  // For BLOC, the "spike" segment is the rebound — still flat but slower.
+  const isBloc = brick.kind === 'BLOC';
+  const seg2: BallMoveAction = {
+    type: 'ball_move',
+    time: roundTime(transitionStart + seg1Dur),
+    from: contact,
+    to,
+    duration: seg2Dur,
+    arc: false,
+    curve: isBloc ? 'arc' : 'flat',
+    apex: isBloc ? Math.max(contactY, to[1]) : undefined,
+  };
+
+  return [seg1, seg2];
+}
+
+function clamp01(n: number): number {
+  return Math.max(0, Math.min(1, n));
+}
+
+// Look up the canonical jump height for a jumping brick — sourced from the
+// expansion module so UI and compiler stay in sync.
+function defaultJumpHeightFor(kind: JumpingBrick['kind']): number {
+  switch (kind) {
+    case 'SMASH':      return DEFAULT_JUMP.smash;
+    case 'FEINTE':     return DEFAULT_JUMP.feinte;
+    case 'JUMP_SERVE': return DEFAULT_JUMP.jumpServe;
+    case 'BLOC':       return DEFAULT_JUMP.bloc;
+  }
 }
 
 function roundTime(t: number): number {

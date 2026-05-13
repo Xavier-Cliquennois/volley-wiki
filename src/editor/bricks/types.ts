@@ -42,6 +42,13 @@ type BrickBase = {
   description?: string;
 };
 
+// Fraction of the transition window [0..1] at which the ball contact happens.
+// 0.55 is a good default for a smash: the ball arrives a bit past mid-window so
+// the jump has time to reach apex AND the spiked ball has time to travel to its
+// destination. When omitted, the legacy behavior is used (ball lands at end of
+// window, jump apex clamped to leave room for landing — often desynced).
+export type ContactRatio = number;
+
 export type SmashBrick = BrickBase & {
   kind: 'SMASH';
   // Where the player hits the ball (at jump apex). z near 0 = at the net.
@@ -50,6 +57,10 @@ export type SmashBrick = BrickBase & {
   jumpHeight?: number;
   // Where the player lands. Defaults to (impact.x, 0, impact.z + 0.4).
   landing?: [number, number, number];
+  // Mid-window contact ratio — see ContactRatio. Triggers the compile-time
+  // ball-split: the ball_move is cut into "approach to contact" + "spike away"
+  // at this ratio, so the player's hand actually meets the ball at apex.
+  contactAtRatio?: ContactRatio;
 };
 
 export type BidouilleBrick = BrickBase & {
@@ -62,6 +73,7 @@ export type FeinteBrick = BrickBase & {
   impact: [number, number, number];
   jumpHeight?: number;
   landing?: [number, number, number];
+  contactAtRatio?: ContactRatio;
 };
 
 export type JumpServeBrick = BrickBase & {
@@ -69,6 +81,7 @@ export type JumpServeBrick = BrickBase & {
   impact: [number, number, number];
   jumpHeight?: number;
   landing?: [number, number, number];
+  contactAtRatio?: ContactRatio;
 };
 
 export type FloatServeBrick = BrickBase & {
@@ -93,6 +106,7 @@ export type BlocBrick = BrickBase & {
   impact: [number, number, number];
   jumpHeight?: number;
   landing?: [number, number, number];
+  contactAtRatio?: ContactRatio;
 };
 
 export type ManchetteBrick = BrickBase & {

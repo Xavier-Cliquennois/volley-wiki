@@ -102,26 +102,33 @@ function approachJumpLand(
   const landing = brick.landing ?? [brick.impact[0], 0, brick.impact[2] + 0.4];
   const windowEnd = windowStart + windowDuration;
 
-  // Reserve room for the landing so the jump-down doesn't bleed into the next
-  // step. We always want the player back on the ground by windowEnd.
-  const landDurTarget = plan.jumpDuration / 2;
-  const apexLatest = windowEnd - landDurTarget;
+  // When contactAtRatio is set, the ball_move was split at the contact point —
+  // ballArrivalTime is now in the middle of the window, not at its end. The
+  // player's apex must land EXACTLY on the ball arrival, without the legacy
+  // "leave room for landing" clamp (which forced the apex back towards mid-window).
+  // The landing then runs from apex to windowEnd naturally.
+  const hasExplicitContact = brick.contactAtRatio !== undefined && ballArrivalTime !== undefined;
 
   // Apex time:
-  //  - snap to ball arrival when known, BUT clamp so we leave landing room
-  //  - otherwise default to 70% through the window
-  // The contact pose stays on ballArrivalTime regardless (a bit after apex
-  // when we had to clamp — physically realistic: hand strikes just past peak).
-  const physicalApexAt = ballArrivalTime !== undefined
-    ? Math.min(ballArrivalTime, apexLatest)
-    : windowStart + windowDuration * 0.7;
+  //  - when contactAtRatio is set: apex = ballArrivalTime (no clamp)
+  //  - when ballArrivalTime is set (legacy snap): clamp to leave landing room
+  //  - otherwise: default to 70% through the window
+  const landDurTarget = plan.jumpDuration / 2;
+  const apexLatest = windowEnd - landDurTarget;
+  const physicalApexAt = hasExplicitContact
+    ? ballArrivalTime
+    : ballArrivalTime !== undefined
+      ? Math.min(ballArrivalTime, apexLatest)
+      : windowStart + windowDuration * 0.7;
   const apexAt = Math.max(windowStart, physicalApexAt);
   const contactAt = ballArrivalTime ?? apexAt;
 
   const jumpUpDur = clampDur(plan.jumpDuration / 2);
   const jumpStartAt = Math.max(windowStart, apexAt - jumpUpDur);
   const approachDur = jumpStartAt - windowStart;
-  const landDur = clampDur(Math.min(landDurTarget, windowEnd - apexAt));
+  // Landing duration grows naturally when the contact happens mid-window —
+  // the player has all the time from apex to windowEnd to come back down.
+  const landDur = clampDur(Math.min(plan.jumpDuration, windowEnd - apexAt));
 
   const actions: TimelineAction[] = [];
 

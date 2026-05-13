@@ -19,8 +19,14 @@ import {
 } from './bricks';
 import { DEFAULT_JUMP } from './bricks/expand';
 import type { EditorPlayer, BallTrajectory } from './types';
-import type { BallCurve } from '../scenarios/types';
+import type { BallCurve, PlayerRole } from '../scenarios/types';
 import { BallTrajectoryEditor } from './BallTrajectoryEditor';
+
+// Roles that can perform an attacking jumping action — drives the visibility
+// of the "smash sequence" macro button in the player panel.
+const ATTACKER_ROLES: ReadonlySet<PlayerRole> = new Set([
+  'outside', 'opposite', 'middle', 'opponent',
+]);
 
 const CATEGORY_LABELS: Record<BrickCategory, string> = {
   attack: 'Attaque',
@@ -84,6 +90,10 @@ export type ContextSidebarProps = {
   // Mutations.
   onAddBrick: (kind: BrickKind) => void;
   onRemoveBrick: () => void;
+  // Macro: insert a two-card "pass → smash" sequence after the current step.
+  // Surfaced as a primary button on attacker-role players. Optional so the
+  // sidebar can be embedded outside the editor page later.
+  onInsertSmashSequence?: () => void;
   onSetBallHeight: (y: number) => void;
   onSetBallCurve: (c: BallCurve) => void;
   onSetBallApex: (apex: number) => void;
@@ -108,6 +118,7 @@ export function ContextSidebar(props: ContextSidebarProps) {
             brick={props.playerBrick}
             onAddBrick={props.onAddBrick}
             onRemoveBrick={props.onRemoveBrick}
+            onInsertSmashSequence={props.onInsertSmashSequence}
           />
         : props.ballSelected
           ? <BallPanel
@@ -137,13 +148,16 @@ function PlayerPanel({
   brick,
   onAddBrick,
   onRemoveBrick,
+  onInsertSmashSequence,
 }: {
   player: EditorPlayer;
   brick: BrickAction | null;
   onAddBrick: (kind: BrickKind) => void;
   onRemoveBrick: () => void;
+  onInsertSmashSequence?: () => void;
 }) {
   const [hover, setHover] = useState<BrickMeta | null>(null);
+  const canAttack = ATTACKER_ROLES.has(player.role);
 
   return (
     <>
@@ -161,6 +175,27 @@ function PlayerPanel({
           </div>
         </div>
       </div>
+
+      {/* Macro: insert a coordinated smash sequence (only for attacker roles).
+          This creates two cards after the current one — pass + smash — with
+          all the ball/jump timing pre-configured. The author can still edit
+          afterwards, but the default is "ready to play". */}
+      {canAttack && onInsertSmashSequence && (
+        <div>
+          <span style={SECTION_LABEL}>Enchaînement rapide</span>
+          <button
+            type="button"
+            onClick={onInsertSmashSequence}
+            title="Crée deux cartes : une passe haute + le smash, déjà synchronisés."
+            style={PRIMARY_BTN}
+          >
+            + ATTAQUE SMASH (2 cartes)
+          </button>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, opacity: 0.55, marginTop: 4, lineHeight: 1.4 }}>
+            Génère une passe haute puis un smash coordonné — pas besoin d'aligner la balle à la main.
+          </div>
+        </div>
+      )}
 
       {/* Current brick (if any) */}
       <div>

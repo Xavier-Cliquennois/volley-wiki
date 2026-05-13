@@ -1,7 +1,7 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Head } from '../seo/Head';
 import { EditorCanvas } from '../editor/EditorCanvas';
-import type { BrickMarker, PlayerBrickBadge } from '../editor/EditorCanvas';
+import type { BrickMarker, PlayerBrickBadge, SmashSyncIndicator } from '../editor/EditorCanvas';
 import { ContextSidebar } from '../editor/ContextSidebar';
 import { ROLE_OPTIONS, buildDefaultEditorState } from '../editor/defaults';
 import { compileScenario } from '../editor/compileScenario';
@@ -21,6 +21,8 @@ import {
   type BrickAction,
   type BrickKind,
 } from '../editor/bricks';
+import { computeBallSnapForJumpingBrick, computeSyncStatuses, isJumpingBrick } from '../editor/smashSync';
+import { buildSmashSequence } from '../editor/smashSequence';
 import type {
   EditorPlayer,
   EditorState,
@@ -209,6 +211,11 @@ export default function ScenarioEditor() {
   // One brick per player per card: posing a new brick replaces the existing
   // one for that player. The author can never end up with two SMASHes on the
   // same R4 in the same transition.
+  //
+  // When the brick is a jumping one (smash/feinte/jump_serve/bloc) AND we
+  // have a previous step, also snap the previous step's ball position to the
+  // impact XZ — that's the silent auto-sync that makes the smash "just work"
+  // without manual ball positioning. See src/editor/smashSync.ts.
   const addBrick = useCallback((kind: BrickKind, playerId: string) => {
     applyMutation(prev => {
       const step = prev.steps[activeStepIdx];
@@ -219,8 +226,50 @@ export default function ScenarioEditor() {
       const brick = createBrickWithDefaults(kind, brickId, playerId, playerPos);
       const steps = prev.steps.slice();
       steps[activeStepIdx] = { ...step, actions: [...others, brick] };
+
+      // Auto-sync: realign previous step's ball position so it lines up with
+      // the impact XZ. Only triggers for jumping bricks AND when we have a
+      // previous step to mutate. Y is preserved. We skip when the step
+      // already has another jumping brick (decoy jumpers shouldn't reposition
+      // the ball — only the FIRST jumper drives the alignment).
+      if (isJumpingBrick(brick) && activeStepIdx > 0) {
+        const alreadyHasJumper = others.some(b => isJumpingBrick(b));
+        if (!alreadyHasJumper) {
+          const prevStep = prev.steps[activeStepIdx - 1];
+          const snapped = computeBallSnapForJumpingBrick(brick, prevStep);
+          if (snapped) {
+            steps[activeStepIdx - 1] = {
+              ...prevStep,
+              snapshot: { ...prevStep.snapshot, ballPosition: snapped },
+            };
+          }
+        }
+      }
       return { ...prev, steps };
     });
+  }, [activeStepIdx, applyMutation]);
+
+  // One-click macro: insert two well-synced steps right after the active card,
+  // forming a complete "pass → smash" sequence for the given attacker. The
+  // generated steps use the same ball-split / contactAtRatio mechanism as a
+  // manually-added SMASH brick, so the spike compiles to a properly-timed
+  // jump-and-hit. Author can still tweak any step afterwards.
+  const insertSmashSequence = useCallback((attackerId: string) => {
+    applyMutation(prev => {
+      const baseStep = prev.steps[activeStepIdx];
+      if (!baseStep) return prev;
+      const [passId, smashId] = reserveStepIds(prev.steps, 2);
+      const { passStep, smashStep } = buildSmashSequence(attackerId, baseStep, prev, passId, smashId);
+      const steps = [
+        ...prev.steps.slice(0, activeStepIdx + 1),
+        passStep,
+        smashStep,
+        ...prev.steps.slice(activeStepIdx + 1),
+      ];
+      return { ...prev, steps };
+    });
+    // Jump to the smash card so the author sees the result of their click.
+    setActiveStepIdx(activeStepIdx + 2);
   }, [activeStepIdx, applyMutation]);
 
   const removeBrick = useCallback((brickId: string) => {
@@ -469,14 +518,25 @@ export default function ScenarioEditor() {
   // (so we can draw ghosts + arrows) and per-player arrow colours derived
   // from each player's brick category.
   const previousSnapshot = activeStepIdx > 0 ? state.steps[activeStepIdx - 1].snapshot : null;
+  const previousStep = activeStepIdx > 0 ? state.steps[activeStepIdx - 1] : null;
+
+  // Smash sync indicators — list every jumping brick on the active step and
+  // tell the canvas whether each one is properly aligned with the previous
+  // step's ball position. Empty when activeStepIdx === 0.
+  const smashSyncIndicators: SmashSyncIndicator[] = useMemo(() => {
+    return computeSyncStatuses(activeStep ?? null, previousStep);
+  }, [activeStep, previousStep]);
+
+  // Movement arrows use the player's OWN colour, so the eye can immediately
+  // tie an arrow to its jersey on the canvas. Brick category info is already
+  // conveyed by the brick marker ring + the badge under the player.
   const arrowColors = useMemo(() => {
-    if (!activeStep?.actions) return {};
     const out: Record<string, string> = {};
-    for (const brick of activeStep.actions) {
-      out[brick.playerId] = BRICK_CATEGORY_COLORS[BRICK_BY_KIND[brick.kind].category];
+    for (const player of state.players) {
+      out[player.id] = player.color;
     }
     return out;
-  }, [activeStep]);
+  }, [state.players]);
 
   // Wrappers that drive add/remove via the sidebar API (bound to the
   // currently-selected player so the sidebar doesn't need to know its id).
@@ -487,6 +547,10 @@ export default function ScenarioEditor() {
   const removeBrickForSelected = useCallback(() => {
     if (selectedPlayerBrick) removeBrick(selectedPlayerBrick.id);
   }, [selectedPlayerBrick, removeBrick]);
+
+  const insertSmashSequenceForSelected = useCallback(() => {
+    if (selectedPlayerId) insertSmashSequence(selectedPlayerId);
+  }, [selectedPlayerId, insertSmashSequence]);
 
   // -- Compile + export --------------------------------------------------
   const compiled = useMemo(() => compileScenario(state), [state]);
@@ -782,6 +846,7 @@ export default function ScenarioEditor() {
                 previousBallPosition={previousSnapshot?.ballPosition}
                 arrowColors={arrowColors}
                 ballAttachedTo={activeStep.snapshot.ballAttachedTo}
+                smashSyncIndicators={smashSyncIndicators}
               />
             </div>
             <ContextSidebar
@@ -796,6 +861,7 @@ export default function ScenarioEditor() {
               onToggleShowOtherBricks={setShowOtherBricks}
               onAddBrick={addBrickForSelected}
               onRemoveBrick={removeBrickForSelected}
+              onInsertSmashSequence={insertSmashSequenceForSelected}
               onSetBallHeight={setBallHeight}
               onSetBallCurve={setBallCurve}
               onSetBallApex={setBallApex}
@@ -1001,6 +1067,19 @@ function nextBrickId(existing: { id: string }[]): string {
   let i = 1;
   while (existing.some(b => b.id === `b${i}`)) i++;
   return `b${i}`;
+}
+
+// Reserve `count` step ids that won't collide with any existing one. Each
+// returned id is checked individually (rather than `first + offset`) so a gap
+// like [s1, s3] correctly produces [s2, s4] for count=2 instead of {s2, s3}.
+function reserveStepIds(existing: { id: string }[], count: number): string[] {
+  const ids: string[] = [];
+  let i = 1;
+  while (ids.length < count) {
+    const candidate = `s${i++}`;
+    if (!existing.some(s => s.id === candidate)) ids.push(candidate);
+  }
+  return ids;
 }
 
 

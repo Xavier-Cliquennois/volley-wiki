@@ -11,6 +11,11 @@ const TOTAL_LENGTH = (COURT_HALF_LENGTH + PADDING) * 2;
 // Pointer snap, in canvas pixels — prevents pixel-perfect dragging hell.
 const SNAP_PX = 5;
 
+// Stroke for any line that represents the ball's motion or attachment —
+// matches the ball's high-contrast ring on the canvas so the eye groups all
+// ball-related dashed lines together regardless of brick categories around.
+const BALL_LINE_COLOR = 'var(--orange)';
+
 // Convert a court coordinate (metres) to a percentage inside the canvas.
 function xToPct(xMetres: number): number {
   return ((xMetres + COURT_HALF_WIDTH + PADDING) / TOTAL_WIDTH) * 100;
@@ -62,6 +67,18 @@ export type PlayerBrickBadge = {
   color: string;
 };
 
+// Visual hint for a jumping brick's ball-contact sync state. When the
+// previous step's ball XZ lines up with the impact, the sync is "ok" (green
+// ring + check); otherwise the indicator goes amber so the author sees that
+// the ball won't actually meet the player's hand at apex.
+export type SmashSyncIndicator = {
+  brickId: string;
+  playerId: string;
+  contactPoint: [number, number, number];
+  isSynced: boolean;
+  distance: number;
+};
+
 export type EditorCanvasProps = {
   players: EditorPlayer[];
   positions: Record<string, [number, number, number]>;
@@ -88,6 +105,10 @@ export type EditorCanvasProps = {
   // When set, the ball is "carried" by this player — render a yellow link
   // between them so the carrying relationship is obvious.
   ballAttachedTo?: string;
+  // Per-brick sync indicators — rendered as a ring + dashed line + label at
+  // the contact point. Green when the previous step's ball lines up with the
+  // impact (the smash WILL meet the ball at apex), amber otherwise.
+  smashSyncIndicators?: SmashSyncIndicator[];
 };
 
 type DragTarget =
@@ -110,6 +131,7 @@ export function EditorCanvas({
   previousBallPosition,
   arrowColors,
   ballAttachedTo,
+  smashSyncIndicators,
 }: EditorCanvasProps) {
   const selectedPlayerId = selection?.kind === 'player' ? selection.id : null;
   const ballSelected = selection?.kind === 'ball';
@@ -246,7 +268,7 @@ export function EditorCanvas({
           >
             <defs>
               {/* Generate one arrowhead per used colour. We always include the
-                  neutral and orange ones; arrowColors values supply the rest. */}
+                  neutral and ball ones; arrowColors values supply the rest. */}
               {Array.from(new Set([
                 'rgba(26,24,18,0.55)',
                 ...Object.values(arrowColors ?? {}),
@@ -262,16 +284,29 @@ export function EditorCanvas({
                   <path d="M 0 0 L 10 5 L 0 10 z" fill={stroke} />
                 </marker>
               ))}
+              {/* Dedicated ball-arrow marker — kept distinct so the ball line
+                  arrowhead always matches BALL_LINE_COLOR regardless of which
+                  player colours are present this step. */}
+              <marker
+                id="arrow-ball"
+                viewBox="0 0 10 10"
+                refX="8" refY="5"
+                markerWidth="6" markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path d="M 0 0 L 10 5 L 0 10 z" fill={BALL_LINE_COLOR} />
+              </marker>
             </defs>
 
-            {/* Ball carry link — solid yellow line ball ↔ owning player */}
+            {/* Ball carry link — solid ball-coloured line between the ball
+                and the player carrying it. */}
             {ballAttachedTo && positions[ballAttachedTo] && (
               <line
                 x1={`${xToPct(positions[ballAttachedTo][0])}%`}
                 y1={`${zToPct(positions[ballAttachedTo][2])}%`}
                 x2={`${xToPct(ballPosition[0])}%`}
                 y2={`${zToPct(ballPosition[2])}%`}
-                stroke="var(--orange)"
+                stroke={BALL_LINE_COLOR}
                 strokeWidth={3}
                 opacity={0.8}
               />
@@ -304,7 +339,8 @@ export function EditorCanvas({
               );
             })}
 
-            {/* Ball movement arrow */}
+            {/* Ball movement arrow — dashed, ball-coloured. Uses a dedicated
+                arrowhead so the marker fill matches the ball line stroke. */}
             {previousBallPosition && (() => {
               const dx = ballPosition[0] - previousBallPosition[0];
               const dz = ballPosition[2] - previousBallPosition[2];
@@ -315,11 +351,11 @@ export function EditorCanvas({
                   y1={`${zToPct(previousBallPosition[2])}%`}
                   x2={`${xToPct(ballPosition[0])}%`}
                   y2={`${zToPct(ballPosition[2])}%`}
-                  stroke="var(--orange)"
+                  stroke={BALL_LINE_COLOR}
                   strokeWidth={2.5}
                   strokeDasharray="3 5"
-                  markerEnd="url(#arrow-0)"
-                  opacity={0.65}
+                  markerEnd="url(#arrow-ball)"
+                  opacity={0.85}
                 />
               );
             })()}
@@ -376,7 +412,9 @@ export function EditorCanvas({
 
         {/* Brick anchor markers — drawn UNDER the ball/players so they don't
             steal pointer events from those primary draggables. The line from
-            the player to the anchor uses an SVG overlay so it stays crisp. */}
+            the player to the anchor uses the player's jersey colour (so it's
+            clear WHO owns the brick); the marker ring itself stays category-
+            coloured (so the type of action is still legible). */}
         {brickMarkers && brickMarkers.length > 0 && (
           <svg
             style={{
@@ -389,6 +427,8 @@ export function EditorCanvas({
             {brickMarkers.map(marker => {
               const playerPos = positions[marker.playerId];
               if (!playerPos) return null;
+              const owner = players.find(p => p.id === marker.playerId);
+              const lineColor = owner?.color ?? marker.color;
               return (
                 <line
                   key={`${marker.brickId}-${marker.anchorKey}-line`}
@@ -396,11 +436,71 @@ export function EditorCanvas({
                   y1={`${zToPct(playerPos[2])}%`}
                   x2={`${xToPct(marker.position[0])}%`}
                   y2={`${zToPct(marker.position[2])}%`}
-                  stroke={marker.color}
+                  stroke={lineColor}
                   strokeWidth={2}
                   strokeDasharray="4 3"
-                  opacity={0.65}
+                  opacity={0.75}
                 />
+              );
+            })}
+          </svg>
+        )}
+
+        {/* Smash sync indicators — green ring + label when the ball will meet
+            the player's hand at apex, amber when desynced. Drawn at the
+            impact XZ. Sits in its own SVG so the ring layers cleanly above
+            the brick marker line but below the player buttons. */}
+        {smashSyncIndicators && smashSyncIndicators.length > 0 && (
+          <svg
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              pointerEvents: 'none',
+              zIndex: 7,
+            }}
+          >
+            {smashSyncIndicators.map(ind => {
+              const okColor = '#27ae60';
+              const warnColor = '#e67e22';
+              const color = ind.isSynced ? okColor : warnColor;
+              const label = ind.isSynced ? '✓ SYNCHRO' : '⚠ DÉSYNC.';
+              return (
+                <g key={`sync-${ind.brickId}`}>
+                  <circle
+                    cx={`${xToPct(ind.contactPoint[0])}%`}
+                    cy={`${zToPct(ind.contactPoint[2])}%`}
+                    r="22"
+                    fill="none"
+                    stroke={color}
+                    strokeWidth={2.5}
+                    strokeDasharray={ind.isSynced ? '0' : '4 3'}
+                    opacity={0.85}
+                  />
+                  {ind.isSynced && (
+                    <circle
+                      cx={`${xToPct(ind.contactPoint[0])}%`}
+                      cy={`${zToPct(ind.contactPoint[2])}%`}
+                      r="30"
+                      fill="none"
+                      stroke={color}
+                      strokeWidth={1.5}
+                      opacity={0.35}
+                    />
+                  )}
+                  <text
+                    x={`${xToPct(ind.contactPoint[0])}%`}
+                    y={`${zToPct(ind.contactPoint[2])}%`}
+                    dy="40"
+                    textAnchor="middle"
+                    fill={color}
+                    fontSize="9"
+                    fontFamily='"Bungee", sans-serif'
+                    letterSpacing="0.08em"
+                    style={{ paintOrder: 'stroke', stroke: 'var(--paper)', strokeWidth: 3 }}
+                  >
+                    {label}
+                  </text>
+                </g>
               );
             })}
           </svg>

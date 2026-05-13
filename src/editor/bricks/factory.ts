@@ -18,12 +18,14 @@ export function createBrickWithDefaults(
     case 'FEINTE':
     case 'JUMP_SERVE':
       // Default impact = 0.4 m closer to the net than the player. Hits at the
-      // player's lateral position.
+      // player's lateral position. contactAtRatio=0.55 means the ball arrives
+      // a bit past mid-window so the jump apex and the contact are aligned.
       return {
         kind,
         id: brickId,
         playerId,
         impact: [px, 0, pz < 0 ? pz + 0.4 : Math.max(0.4, pz - 0.4)],
+        contactAtRatio: 0.55,
       };
     case 'BIDOUILLE':
     case 'FLOAT_SERVE':
@@ -38,11 +40,14 @@ export function createBrickWithDefaults(
       };
     case 'BLOC':
       // Block goes UP at the net, on the player's lateral side.
+      // contactAtRatio=0.5 (mid-window) is the natural moment a blocker meets
+      // the incoming spike.
       return {
         kind,
         id: brickId,
         playerId,
         impact: [px, 0, pz < 0 ? -0.4 : 0.4],
+        contactAtRatio: 0.5,
       };
     case 'DEFENSE_PLONGEE':
       // Default plunge target ≈ 1.5 m towards the net (room to dive forward).
