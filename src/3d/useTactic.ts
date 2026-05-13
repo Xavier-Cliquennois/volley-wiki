@@ -74,13 +74,27 @@ export const useTactic = (
       if (action.type === 'ball_move') {
         const mesh = ballRef.current?.mesh;
         if (mesh) {
+          // Resolve trajectory: explicit curve+apex wins, otherwise fall back to legacy arc.
+          const explicitCurve: 'arc' | 'flat' | 'floater' | null = action.curve ?? null;
+          const curve: 'arc' | 'flat' | 'floater' = explicitCurve
+            ?? (action.arc === false ? 'flat' : 'arc');
+          const apex = action.apex
+            ?? (typeof action.arc === 'number' ? action.arc : Math.max(action.from[1], action.to[1], 2.5));
+
           tl.to(mesh.position, { x: action.to[0], z: action.to[2], duration: action.duration, ease: 'none' }, action.time);
-          if (action.arc) {
-            tl.to(mesh.position, { y: action.arc, duration: action.duration / 2, ease: 'power1.out' }, action.time);
-            tl.to(mesh.position, { y: action.to[1], duration: action.duration / 2, ease: 'power1.in' }, action.time + action.duration / 2);
-          } else {
+
+          if (curve === 'flat') {
             tl.to(mesh.position, { y: action.to[1], duration: action.duration, ease: 'none' }, action.time);
+          } else if (curve === 'floater') {
+            // Slow rise, then sharp drop — the signature of a float serve that « tombe » brusquement.
+            tl.to(mesh.position, { y: apex, duration: action.duration * 0.7, ease: 'power1.out' }, action.time);
+            tl.to(mesh.position, { y: action.to[1], duration: action.duration * 0.3, ease: 'power3.in' }, action.time + action.duration * 0.7);
+          } else {
+            // Symmetric parabola.
+            tl.to(mesh.position, { y: apex, duration: action.duration / 2, ease: 'power1.out' }, action.time);
+            tl.to(mesh.position, { y: action.to[1], duration: action.duration / 2, ease: 'power1.in' }, action.time + action.duration / 2);
           }
+
           if (onImpact) {
             tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) onImpact(m.position); }, [], action.time + action.duration);
           }

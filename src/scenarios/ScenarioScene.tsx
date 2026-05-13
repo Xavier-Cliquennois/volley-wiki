@@ -154,6 +154,9 @@ type ScenarioSceneProps = {
   onUpdate: (progress: number, actionIndex: number) => void;
   showTrail: boolean;
   showZones: boolean;
+  // Used by the editor preview to render exactly the authored roster —
+  // no template opponents, no implicit "ball source" filler.
+  disableAutoFill?: boolean;
 };
 
 const CameraSetup: React.FC<{ cameraRef: React.RefObject<THREE.PerspectiveCamera | null> }> = ({ cameraRef }) => {
@@ -172,6 +175,7 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   onUpdate,
   showTrail,
   showZones,
+  disableAutoFill = false,
 }) => {
   const ballRef = useRef<BallWithTrailRef>(null);
   const impactRef = useRef<ImpactEffectRef>(null);
@@ -185,7 +189,17 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   // - Fill remaining slots with template opponents
   // - Hard-cap each side at `teamSize` so we never end up with 5 opponents in 4v4
   // - Append landing actions for any player still in the air at the end of their last scripted move
+  //
+  // When `disableAutoFill` is set (editor preview), every step above is skipped:
+  // we render exactly the authored roster so the WYSIWYG promise holds.
   const augmented = useMemo(() => {
+    if (disableAutoFill) {
+      return {
+        players: scenario.players,
+        timeline: ensureLandings(scenario.timeline),
+      };
+    }
+
     const teamSize = scenario.config.teamSize;
     const existingOpps = scenario.players.filter(p => p.role === 'opponent');
     const ourTeam = scenario.players.filter(p => p.role !== 'opponent');
@@ -209,7 +223,7 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
       : scenario.timeline;
     const timeline = ensureLandings(baseTimeline);
     return { players, timeline };
-  }, [scenario]);
+  }, [scenario, disableAutoFill]);
 
   const script = useMemo(
     () => ({ id: scenario.id, timeline: augmented.timeline }),

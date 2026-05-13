@@ -96,6 +96,10 @@ function inferStepGuide(step: ScenarioStep, phase: PhaseKind): GuideRef | null {
 type ScenarioPlayerProps = {
   scenario: Scenario;
   hideHeader?: boolean;
+  // When true, ScenarioScene renders only the players declared in scenario.players
+  // and skips the automatic opponent fillers + the implicit "ball source" filler.
+  // Used by the in-app scenario editor so the preview matches the authored data.
+  disableAutoFill?: boolean;
 };
 
 type PlaybackMode = 'auto' | 'step';
@@ -123,7 +127,7 @@ const btnSm: React.CSSProperties = {
 };
 const btnActive: React.CSSProperties = { ...btnSm, background: 'var(--orange)', color: '#fff', borderColor: 'var(--orange)' };
 
-export default function ScenarioPlayer({ scenario, hideHeader = false }: ScenarioPlayerProps) {
+export default function ScenarioPlayer({ scenario, hideHeader = false, disableAutoFill = false }: ScenarioPlayerProps) {
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const playerRefs = useRef<Record<string, any>>({});
@@ -384,6 +388,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false }: Scenari
                   onUpdate={handleUpdate}
                   showTrail={showTrail}
                   showZones={showZones}
+                  disableAutoFill={disableAutoFill}
                 />
               </Canvas>
             </div>

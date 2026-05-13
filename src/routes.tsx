@@ -10,6 +10,7 @@ import Glossary from './pages/Glossary';
 import Guides from './pages/Guides';
 import GuideDetail from './pages/GuideDetail';
 import GuideDefenseSized from './pages/GuideDefenseSized';
+import ScenarioEditor from './pages/ScenarioEditor';
 import NotFound from './pages/NotFound';
 
 export const routes: RouteObject[] = [
@@ -30,6 +31,8 @@ export const routes: RouteObject[] = [
       { path: 'guides/positionnement-defense/:size', Component: GuideDefenseSized },
       { path: 'guides/positionnement-defense/:size/:config', Component: GuideDefenseSized },
       { path: 'guides/:slug', Component: GuideDetail },
+      // Internal authoring tool — intentionally not listed in the nav and not in the sitemap.
+      { path: 'editor', Component: ScenarioEditor },
       { path: '*', Component: NotFound },
     ],
   },

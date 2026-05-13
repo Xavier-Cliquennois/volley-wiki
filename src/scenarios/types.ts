@@ -28,7 +28,15 @@ export type ScenarioPlayerConfig = {
   position: [number, number, number];
 };
 
-// Action shapes match what useTactic already understands
+// Trajectory styles for the ball.
+// - 'arc'     : symmetric parabola (default — passe haute, smash en cloche)
+// - 'flat'    : straight tween (smash tendu, manchette tendue)
+// - 'floater' : ease-in then sharp drop (service flottant, balle qui « tombe »)
+export type BallCurve = 'arc' | 'flat' | 'floater';
+
+// Action shapes match what useTactic already understands.
+// Legacy `arc: number | false` is still accepted for backwards compatibility:
+// arc=number → curve='arc' with apex=arc; arc=false → curve='flat'.
 export type BallMoveAction = {
   type: 'ball_move';
   time: number;
@@ -36,6 +44,9 @@ export type BallMoveAction = {
   to: [number, number, number];
   duration: number;
   arc: number | false;
+  // Optional explicit trajectory. When provided, takes precedence over `arc`.
+  curve?: BallCurve;
+  apex?: number;
   description?: string;
 };
 
