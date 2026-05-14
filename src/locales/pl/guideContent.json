@@ -1,3 +1,1715 @@
 {
-  "_note": "Tłumaczenia treści dla poszczególnych poradników znajdują się bezpośrednio w komponentach poradników poprzez wywołania t()."
+  "attaque": {
+    "goldenRule": {
+      "mantra": "DOSKOK WOLNY → SZYBKI → POWER STEP → KROK ZAMYKAJĄCY → WYSKOK PIONOWY → RAMIĘ WYPROSTOWANE DO PRZODU → SNAP NADGARSTKA",
+      "body": "Moc pochodzi z pełnego łańcucha kinetycznego, a nie tylko z ramienia. Rytmiczny doskok z dwoma ostatnimi szybkimi krokami generuje 70% końcowej mocy."
+    },
+    "phases": {
+      "title": "5 faz ataku (smecz)",
+      "items": [
+        { "name": "Inicjacja", "desc": "Odczytanie wystawy i decyzja o doskoku" },
+        { "name": "Wind-up", "desc": "Początek rozbiegu" },
+        { "name": "Cocking", "desc": "Łokieć nad barkiem, dłoń za uchem — pozycja mocy" },
+        { "name": "Akceleracja", "desc": "Rotacja sekwencyjna: biodra → tułów → bark → łokieć → nadgarstek" },
+        { "name": "Kontakt + ruch końcowy", "desc": "Snap nadgarstka, dłoń \"chwyta\" piłkę po wierzchu → topspin" }
+      ],
+      "footerLabel": "Idealny kontakt",
+      "footer": "Lekko przed bijącym barkiem, nigdy za głową (utrata mocy + ryzyko kontuzji). Odległość od siatki w momencie wybicia: minimum 30-50 cm."
+    },
+    "approach": {
+      "title": "Rozbieg do ataku",
+      "three": {
+        "title": "3 kroki — Początkujący",
+        "sub": "Lewa-prawa-lewa (praworęczny)",
+        "items": [
+          { "label": "Krok 1 (lewa)", "text": "Krótki krok kierunkowy, orientacja w stronę ataku" },
+          { "label": "Krok 2 (prawa)", "text": "Power step — długi i niski, najpierw pięta, obniżenie środka ciężkości" },
+          { "label": "Krok 3 (lewa)", "text": "Krok zamykający — krótki, hamuje ruch poziomy i zamienia go w pionowy" }
+        ]
+      },
+      "four": {
+        "title": "4 kroki — Standard wyczynowy",
+        "sub": "Prawa-lewa-prawa-lewa (praworęczny)",
+        "items": [
+          { "label": "Krok 1 (prawa)", "text": "Krok obserwacyjny, wolny rytm" },
+          { "label": "Krok 2 (lewa)", "text": "Akceleracja" },
+          { "label": "Krok 3 (prawa)", "text": "Power step — najważniejszy, długi i niski" },
+          { "label": "Krok 4 (lewa)", "text": "Krok zamykający równolegle do siatki" }
+        ],
+        "rule": "Złota zasada: dwa ostatnie kroki są najszybsze — slow → fast."
+      }
+    },
+    "timing": {
+      "title": "Timing według typu wystawy",
+      "headerType": "Typ wystawy",
+      "headerWhen": "Kiedy rozpocząć doskok",
+      "rows": [
+        { "type": "Wysoka piłka (3. tempo)", "timing": "Zacząć PÓŹNO — gdy piłka opuszcza ręce rozgrywającego" },
+        { "type": "2. tempo (Hut/Go)", "timing": "Zacząć gdy piłka dociera do rozgrywającego" },
+        { "type": "1. tempo (Quick)", "timing": "Zacząć WCZEŚNIE — być już w powietrzu, gdy rozgrywający dotyka piłki" },
+        { "type": "Slide", "timing": "Zacząć w momencie, gdy rozgrywający odbiera piłkę" }
+      ]
+    },
+    "types": {
+      "title": "Typy ataku według pozycji",
+      "keyPointsLabel": "Kluczowe punkty",
+      "shotsLabel": "Wybór uderzeń",
+      "items": [
+        {
+          "id": "outside",
+          "name": "Atak ze strefy 4 (Outside / OH)",
+          "position": "Lewe skrzydło",
+          "description": "Podstawa nauki ataku. Przyjmujący (Outside Hitter) otrzymuje największą liczbę piłek — to opcja \"bezpieczna\" dla rozgrywającego. Doskok pod kątem 45° z lewej strony.",
+          "keyPoints": [
+            "Doskok 4-krokowy pod kątem ~45° względem siatki",
+            "Wybicie 30-50 cm od siatki",
+            "Wystawa \"Hut\" (wysoka 3. tempo) lub \"Go\" (szybkie 2. tempo)",
+            "Skakać PIONOWO — nie w stronę siatki",
+            "Kontakt lekko przed bijącym barkiem"
+          ],
+          "shots": ["Krzyżowa (po przekątnej)", "Po linii (linia boczna)", "Cut shot (ostry kąt <3 m)", "Tip (kiwka)", "Roll shot (atak topspin z mniejszą siłą)"]
+        },
+        {
+          "id": "middle",
+          "name": "Atak środkowy (Quick / 1. tempo)",
+          "position": "Środek przedniej linii",
+          "description": "Najszybszy atak. Środkowy jest w powietrzu PRZED lub w momencie, gdy rozgrywający dotyka piłki. Wystawa bardzo niska (30-50 cm) i bardzo krótka.",
+          "keyPoints": [
+            "Rozpocząć doskok WCZEŚNIE — być już w powietrzu w momencie wystawy",
+            "Doskok 2-3 krokowy, ramię już naciągnięte podczas wspinania",
+            "Koncept \"Ghost Middle\": nawet jeśli piłka nie nadchodzi, biec quick pełną parą, aby zafiksować blok przeciwnika → uwolni skrzydłowych",
+            "Kontakt 30-50 cm nad siatką",
+            "Szybka tranzycja: blok → doskok w 1-2 sekundy"
+          ],
+          "shots": ["Quick przed rozgrywającym (\"1\")", "Back-1 za rozgrywającym", "Slide (start od tyłu wzdłuż siatki)", "31/Gap (między rozgrywającym a antenką)"]
+        },
+        {
+          "id": "opposite",
+          "name": "Atak ze strefy 2 (Atakujący / opposite)",
+          "position": "Prawe skrzydło",
+          "description": "Atakujący atakuje ze strefy 2. Idealne dla leworęcznych (bijący bark od strony prawej antenki = maksymalne okno). Dla praworęcznych: bardziej wyraźna rotacja tułowia, ustawić się dalej od antenki.",
+          "keyPoints": [
+            "Doskok symetryczny do Outside, ale z prawej strony",
+            "Zakończenie z kciukiem w dół dla cut shotu",
+            "Rozwiązanie \"release\" rozgrywającego, gdy odbiór jest słaby",
+            "Atak z drugiej linii z P1 (strefa D) gdy w tylnej linii"
+          ],
+          "shots": ["Krzyżowa", "Po linii", "Pipe/D z drugiej linii", "Cut shot po przekątnej do strefy 5"]
+        },
+        {
+          "id": "backrow",
+          "name": "Atak z drugiej linii (Back-row / Pipe)",
+          "position": "Tylny środek lub prawy",
+          "description": "Atak ze strefy tylnej. Wybicie MUSI nastąpić ZA linią ataku (3 m). Pozwala mieć 4 atakujących przeciwko 3 blokującym.",
+          "keyPoints": [
+            "Wybicie obowiązkowo za linią 3 m (inaczej błąd)",
+            "Lądowanie w strefie ataku po legalnym wybiciu = OK",
+            "Pipe: z P6, wystawa za quickiem (BIC = tuż nad quickiem)",
+            "Strefa D: z P1, często atak-schronienie atakującego"
+          ],
+          "shots": ["Pipe (tylny środek)", "Strefa D (tylny prawy)", "Strefa A (tylny lewy, rzadko)", "Kiwka po słabej wystawie"]
+        }
+      ]
+    },
+    "special": {
+      "title": "Ataki specjalne",
+      "items": [
+        {
+          "name": "Kiwka / Tip",
+          "level": "beginner-intermediate",
+          "levelLabel": "Początkujący → Średniozaawansowany",
+          "desc": "Doskok IDENTYCZNY jak przy smeczu (kluczowy kamuflaż), potem przy kontakcie spowolnić ramię i umieścić piłkę uderzeniem palców. Kierunek: puste miejsce wypatrzone PRZED skokiem."
+        },
+        {
+          "name": "Roll shot / atak topspin z mniejszą siłą",
+          "level": "intermediate",
+          "levelLabel": "Średniozaawansowany",
+          "desc": "Uderzenie z mniejszą prędkością (~50-70%) z silnym topspinem, by piłka opadała krótko za blokiem. Trudniejsze do odczytania niż kiwka, bo szybsze."
+        },
+        {
+          "name": "Cut shot / ostry kąt",
+          "level": "intermediate-plus",
+          "levelLabel": "Średniozaawansowany+",
+          "desc": "Ostry kąt do strefy 1 (z 4) lub strefy 5 (z 2). Zakończenie z kciukiem w dół, dłoń tnąca bocznie przez piłkę. Uderzyć bok piłki, nie wierzch."
+        },
+        {
+          "name": "Tooling / Wipe",
+          "level": "intermediate-plus",
+          "levelLabel": "Średniozaawansowany+",
+          "desc": "Świadome wybicie piłki za pomocą rąk blokujących. Przy ciasnej wystawie przy siatce, skoczyć pionowo i pchnąć piłkę bocznie, używając zewnętrznej ręki blokującego jako \"szyny\"."
+        }
+      ]
+    },
+    "errors": {
+      "title": "Częste błędy",
+      "subtitle": "Czego unikać",
+      "items": [
+        { "label": "Timing doskoku", "text": "Za wcześnie: ponowny skok bez mocy. Za późno: ramię wyciągnięte do tyłu w momencie kontaktu." },
+        { "label": "Zła kolejność stóp", "text": "Zawsze kończyć na lewa-prawa (praworęczny) — obie stopy niemal jednocześnie." },
+        { "label": "Brak topspinu", "text": "Płaska dłoń = brak snapu = piłka za długa. \"Chwytać\" piłkę po wierzchu." },
+        { "label": "Błąd siatki", "text": "Skok do przodu przy ciasnej wystawie. Skakać PIONOWO, nie do przodu." },
+        { "label": "Błąd drugiej linii", "text": "Stopa na lub przed linią 3 m w momencie wybicia." },
+        { "label": "Lądowanie na jednej nodze", "text": "Z wyjątkiem slide: lądować na obie stopy, aby chronić kolano (ryzyko ACL)." }
+      ]
+    },
+    "videos": {
+      "title": "Materiały wideo",
+      "items": [
+        { "title": "Jak atakować — 3 etapy (Sikana)", "url": "https://www.youtube.com/watch?v=3aQgfk0VtEA" },
+        { "title": "Smecz w siatkówce (CEPSUM)", "url": "https://www.youtube.com/watch?v=Gn1Otje3beg" },
+        { "title": "Szczegółowy rozbieg do ataku", "url": "https://www.youtube.com/watch?v=ub4XoCJMUzU" },
+        { "title": "Sekwencja Seba — wszystko o smeczu", "url": "https://www.youtube.com/watch?v=JvxZgViw_os" },
+        { "title": "Skakać, by atakować (Sikana)", "url": "https://www.youtube.com/watch?v=6GOHF5cNIKs" },
+        { "title": "Atak z plasowaniem (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
+      ]
+    }
+  },
+  "contre": {
+    "goldenRule": {
+      "mantra": "PIŁKA → ROZGRYWAJĄCY → PIŁKA → BARK ATAKUJĄCEGO → SKOK → PENETRACJA",
+      "body": "Dzięki regularnej praktyce i szczególnej uwadze na timing, znacznie poprawisz swoje bloki. Lepszy dobrze wytaimowany blok ze średnim wyskokiem niż bardzo wysoki skok, ale źle wytaimowany."
+    },
+    "fundamentals": {
+      "title": "Podstawy bloku",
+      "html": "Blok jest kluczowym gestem defensywnym, który może stać się bronią ofensywną. Klucz tkwi w <strong>idealnym timingu</strong> i dobrym czytaniu gry."
+    },
+    "timingSteps": {
+      "title": "Timing: klucz do sukcesu",
+      "items": [
+        {
+          "title": "Obserwuj atakującego, nie piłkę",
+          "desc": "Patrz na barki i ramię atakującego, aby przewidzieć moment i kierunek uderzenia."
+        },
+        {
+          "title": "Skacz PO atakującym",
+          "desc": "Czekaj, aż atakujący wejdzie w fazę wybicia. Jeśli skoczysz w tym samym czasie lub wcześniej, opadniesz za wcześnie."
+        },
+        {
+          "title": "Idealne opóźnienie: 0,2 do 0,3 sekundy",
+          "desc": "Policz w myślach \"JEDEN\", gdy atakujący skacze, potem skocz natychmiast po nim. Ten ułamek sekundy jest kluczowy."
+        },
+        {
+          "title": "Spenetruj nad siatką",
+          "desc": "Na szczycie skoku popchnij dłonie i ramiona do przodu i w dół — nie tylko w górę."
+        }
+      ]
+    },
+    "types": {
+      "title": "Różne rodzaje bloków",
+      "objectiveLabel": "Cel",
+      "items": [
+        {
+          "name": "Blok ofensywny",
+          "objective": "Odbić piłkę bezpośrednio na pole przeciwnika",
+          "points": [
+            { "label": "Pozycja", "text": "Dłonie rozłożone, palce naprężone i rozstawione" },
+            { "label": "Akcja", "text": "Spenetrować maksymalnie nad siatką, ramiona wyprostowane do przodu" },
+            { "label": "Cel", "text": "Napnij nadgarstki, aby skierować piłkę w stronę ziemi przeciwnika" },
+            { "label": "Kiedy", "text": "Gdy jesteś dobrze ustawiony i odczytałeś atak" }
+          ]
+        },
+        {
+          "name": "Blok osłaniający",
+          "objective": "Spowolnić piłkę, aby dać obronie czas na reakcję",
+          "points": [
+            { "label": "Pozycja", "text": "Dłonie blisko siebie, wnętrza skierowane do ciebie" },
+            { "label": "Akcja", "text": "Pochłonąć uderzenie zamiast popychać" },
+            { "label": "Rezultat", "text": "Piłka spada delikatnie na twoje pole, by można było ją zagrać" },
+            { "label": "Kiedy", "text": "Gdy jesteś spóźniony lub źle ustawiony" }
+          ]
+        },
+        {
+          "name": "Blok ukierunkowujący",
+          "objective": "Zamknąć konkretne strefy ataku",
+          "points": [
+            { "label": "Pozycja", "text": "Zablokować konkretną strefę (linia lub przekątna)" },
+            { "label": "Akcja", "text": "Skierować dłonie w stronę chronionej strefy" },
+            { "label": "Taktyka", "text": "Zmusić atakującego do uderzenia w strefę, gdzie twoi obrońcy są gotowi" },
+            { "label": "Kiedy", "text": "W koordynacji z obroną w drugiej linii" }
+          ]
+        },
+        {
+          "name": "Blok na 2 lub 3 (blok zbiorowy)",
+          "objective": "Stworzyć nieprzeniknioną ścianę",
+          "points": [
+            { "label": "Koordynacja", "text": "Skoczyć razem w tym samym momencie" },
+            { "label": "Ustawienie", "text": "Zewnętrzni blokujący ustawiają się względem środkowego" },
+            { "label": "Dłonie", "text": "Połączyć dłonie z partnerami (bez przerw)" },
+            { "label": "Komunikacja", "text": "Jeden z blokujących sygnalizuje \"linia\" lub \"przekątna\" do koordynacji" }
+          ]
+        }
+      ]
+    },
+    "timingTips": {
+      "title": "Wskazówki, jak poprawić timing",
+      "items": [
+        { "label": "Ćwiczenie \"raz-dwa\"", "text": "Na treningu mów \"RAZ\", gdy atakujący skacze, \"DWA\", gdy ty skaczesz. To tworzy potrzebne opóźnienie." },
+        { "label": "Patrz na barki", "text": "Orientacja barków atakującego wskazuje kierunek uderzenia." },
+        { "label": "Analizuj wystawę", "text": "Wysoka wystawa = więcej czasu. Naciągnięta wystawa = szybka reakcja." },
+        { "label": "Ustaw się wcześnie", "text": "Lepiej być w pozycji oczekiwania niż biec w ostatniej chwili." },
+        { "label": "Pracuj nad wyskokiem", "text": "Im wyżej skaczesz, tym więcej masz marginesu błędu w timingu." }
+      ]
+    },
+    "visualSequence": {
+      "title": "Elitarna sekwencja wzrokowa",
+      "intro": "Najlepsi blokujący nie patrzą na piłkę — śledzą precyzyjną sekwencję:",
+      "chips": ["PIŁKA", "ROZGRYWAJĄCY", "PIŁKA", "BARK ATAKUJĄCEGO"],
+      "items": [
+        { "label": "1. PIŁKA", "text": "Zobacz piłkę zmierzającą do rozgrywającego" },
+        { "label": "2. ROZGRYWAJĄCY", "text": "Odczytaj dłonie rozgrywającego w momencie kontaktu — kierunek wystawy" },
+        { "label": "3. PIŁKA", "text": "Krótko śledź piłkę, by potwierdzić kierunek" },
+        { "label": "4. BARK ATAKUJĄCEGO", "text": "Zafiksuj wzrok na barku atakującego — daje kierunek uderzenia przed kontaktem" }
+      ]
+    },
+    "timingByAttack": {
+      "title": "Precyzyjny timing według typu ataku",
+      "headerType": "Typ ataku",
+      "headerWhen": "Timing skoku blokującego",
+      "rows": [
+        { "type": "Quick / 1. tempo (środkowy)", "timing": "RAZEM lub odrobinę przed atakującym (commit block)" },
+        { "type": "Naciągnięta / 2. tempo skrzydłowy", "timing": "~0,1s po atakującym" },
+        { "type": "Wysoka piłka skrzydłowy (3. tempo)", "timing": "0,2–0,3s po atakującym" },
+        { "type": "Wystawa ciasno przy siatce", "timing": "RAZEM z atakującym" },
+        { "type": "Wystawa daleko od siatki", "timing": "~0,5s po lub nie skakać" },
+        { "type": "Slide (środkowy)", "timing": "RAZEM lub tuż po — podążać bocznie" }
+      ]
+    },
+    "blockStyles": {
+      "title": "Read blocking vs Commit blocking",
+      "read": {
+        "label": "Read blocking — zalecane",
+        "body": "Blokujący czeka na decyzję rozgrywającego, czyta piłkę i atakującego, potem się przemieszcza. Pozycja \"bunch read\" (wszyscy blisko środka, potem eksplozja w stronę pina).",
+        "points": [
+          "Stabilny i obecny przy większości wystaw",
+          "Oszczędza biodra i kolana",
+          "Odpowiedni dla wszystkich poziomów amatorskich"
+        ]
+      },
+      "commit": {
+        "label": "Commit blocking — zaawansowany/zawodowy",
+        "body": "Środkowy decyduje PRZED wystawą rozgrywającego, że skoczy z quickiem. Eliminuje szybki atak przeciwnika, ale jeśli rozgrywający wystawi gdzie indziej, środkowy jest całkowicie poza grą.",
+        "points": [
+          "Skuteczne przeciwko dominującym środkowym",
+          "Wysokie ryzyko, jeśli rozgrywający się dostosuje",
+          "Zarezerwowane dla graczy z doskonałą umiejętnością czytania gry"
+        ]
+      }
+    },
+    "jumpTechnique": {
+      "title": "Technika skoku do bloku",
+      "columns": [
+        {
+          "title": "Pozycja startowa",
+          "items": [
+            { "text": "Stopy rozstawione na szerokość barków" },
+            { "text": "Ciężar na przedniej części stóp" },
+            { "text": "Kolana lekko ugięte" },
+            { "text": "Ramiona wzdłuż ciała lub lekko z przodu" },
+            { "text": "Pozycja około 30–50 cm od siatki" }
+          ]
+        },
+        {
+          "title": "Wybicie",
+          "items": [
+            { "label": "Krok dostawny", "text": "Jeśli musisz się przemieścić, użyj szybkiego kroku dostawnego" },
+            { "label": "Ugnij nogi", "text": "Ugnij nogi szybko (nie schodź zbyt nisko)" },
+            { "label": "Wymach ramion", "text": "Wyrzuć ramiona w górę w sposób eksplozywny" },
+            { "label": "Pełne wyprostowanie", "text": "Wyprostuj całkowicie nogi, aby maksymalizować wysokość" }
+          ]
+        },
+        {
+          "title": "W powietrzu",
+          "items": [
+            { "text": "Trzymaj ramiona wyprostowane i blisko siebie" },
+            { "text": "Dłonie rozłożone, palce naprężone i rozstawione" },
+            { "text": "Spenetruj nad siatką (bez dotknięcia siatki!)" },
+            { "text": "Napnij tułów, aby pozostać stabilnym" }
+          ]
+        }
+      ]
+    },
+    "errors": {
+      "title": "Częste błędy do uniknięcia",
+      "subtitle": "Częste błędy",
+      "items": [
+        { "label": "Skok za wcześnie", "text": "Opadasz, gdy atakujący uderza — czekaj dłużej!" },
+        { "label": "Patrzenie na piłkę", "text": "Tracisz informacje o atakującym — patrz na zawodnika!" },
+        { "label": "Zbyt miękkie dłonie", "text": "Piłka odbija się na twoje pole — naprężaj i wzmacniaj palce!" },
+        { "label": "Skok do przodu", "text": "Dotykasz siatki — skacz pionowo!" },
+        { "label": "Zbyt wczesne opuszczenie ramion", "text": "Trzymaj ramiona wzniesione aż do lądowania." }
+      ]
+    },
+    "exercises": {
+      "title": "Ćwiczenia treningowe",
+      "items": [
+        {
+          "title": "Timing z partnerem",
+          "desc": "Partner udaje atak (bez piłki). Pracujesz wyłącznie nad timingiem swojego skoku. Powtórz 20 razy."
+        },
+        {
+          "title": "Blok na atak ze stałej pozycji",
+          "desc": "Atakujący uderza z ustalonej pozycji. Skup się na timingu i technice. Stopniowo zwiększaj prędkość."
+        },
+        {
+          "title": "Czytanie barków",
+          "desc": "Atakujący zmienia uderzenia (linia/przekątna). Spróbuj czytać jego barki, by przewidzieć kierunek."
+        },
+        {
+          "title": "Przemieszczenia + blok",
+          "desc": "Pracuj nad szybkimi bocznymi przemieszczeniami zakończonymi blokiem. Symuluje sytuacje meczowe."
+        }
+      ]
+    },
+    "proTips": {
+      "title": "Wskazówki od profesjonalistów",
+      "items": [
+        { "label": "Cierpliwość", "text": "Blok to jedna z najtrudniejszych technik. Bądź cierpliwy wobec siebie." },
+        { "label": "Powtarzanie", "text": "Pamięć mięśniowa tworzy się dzięki setkom powtórzeń." },
+        { "label": "Wideo", "text": "Filmuj się, by analizować timing i technikę." },
+        { "label": "Obserwuj zawodowców", "text": "Patrz, jak zawodowi gracze czytają grę i taimują skoki." },
+        { "label": "Zaczynaj prosto", "text": "Opanuj blok przeciwko wolnym atakom, zanim przejdziesz do szybkich." }
+      ]
+    },
+    "videos": {
+      "title": "Materiały wideo",
+      "items": [
+        { "title": "Nauka bloku (Sikana)", "url": "https://www.youtube.com/watch?v=hJKueZn-tNQ" },
+        { "title": "Blok w siatkówce (CEPSUM)", "url": "https://www.youtube.com/watch?v=_MchJmDMn0E" },
+        { "title": "Ćwiczenie: skakać, by blokować", "url": "https://www.youtube.com/watch?v=GDS8PoWxO6Q" },
+        { "title": "Ćwiczenie: blokować atak", "url": "https://www.youtube.com/watch?v=S6TcodMWFz4" }
+      ]
+    }
+  },
+  "service": {
+    "goldenRule": {
+      "mantra": "",
+      "body": "80% błędów przy zagrywce wynika z podrzutu (toss). W pierwszej kolejności ustabilizować podrzut, zanim szukać mocy."
+    },
+    "types": {
+      "title": "TYPY ZAGRYWKI",
+      "biomechanicsLabel": "KLUCZOWA BIOMECHANIKA",
+      "stepsLabel": "ETAPY WYKONANIA (PRAWORĘCZNY)",
+      "errorsLabel": "✗ CZĘSTE BŁĘDY",
+      "exercisesLabel": "★ ĆWICZENIA",
+      "videosLabel": "WIDEO",
+      "items": [
+        {
+          "id": "cuillere",
+          "name": "Zagrywka dolna",
+          "level": "beginner",
+          "levelLabel": "Początkujący",
+          "tagline": "underhand — wahadło pod pasem",
+          "description": "Wahadłowy gest bijącego ramienia pod pasem. Legalna na wszystkich poziomach, polecana początkującym lub w przypadku kontuzji barku. Praktycznie nieobecna powyżej poziomu regionalnego seniorów.",
+          "biomechanics": [
+            "Krótki łańcuch kinetyczny: miednica → bark → ramię → dłoń",
+            "Ruch wahadłowy bez rotacji tułowia",
+            "Przeniesienie ciężaru: tylna noga → przednia noga",
+            "Kontakt: pięta dłoni lub zamknięta pięść pod środkiem piłki"
+          ],
+          "steps": [
+            "Lewa stopa z przodu, ciężar na tylnej nodze",
+            "Lewa dłoń trzyma piłkę na wysokości miednicy w osi ramienia",
+            "Prawe ramię naciągnięte do tyłu, wnętrze dłoni otwarte lub zamknięta pięść",
+            "Puścić piłkę tuż przed kontaktem — nie podrzucać",
+            "Wahadło do przodu, uderzenie pod środkiem piłki",
+            "Ramię podąża i wskazuje cel, ciężar przeniesiony na przednią stopę"
+          ],
+          "errors": [
+            { "label": "Piłka trzymana za nisko lub na boku", "text": "Trzymać piłkę na wysokości miednicy, w osi bijącego ramienia" },
+            { "label": "Uderzenie palcami", "text": "Używać pięty dłoni — większa i stabilniejsza powierzchnia" },
+            { "label": "Zbyt wysoki podrzut", "text": "Po prostu puścić piłkę, nie podrzucać jej w górę" },
+            { "label": "Miękki nadgarstek", "text": "Zablokować ramię w momencie kontaktu dla czystego uderzenia" }
+          ],
+          "exercises": [
+            "Bowling-obręcze: celować w strefy 4 m od siatki",
+            "10 zagrywek z 4 m, potem cofać się o 1 m co serię aż do linii końcowej",
+            "Cele 4×3 m na podłodze — cel 50% precyzji"
+          ],
+          "videos": [
+            { "title": "Zagrywka dolna + zagrywka tenisowa (Sikana)", "url": "https://www.youtube.com/watch?v=xl6twpn3Qs8" },
+            { "title": "Jak zagrywać od dołu", "url": "https://www.youtube.com/watch?v=MWna318SrKo" }
+          ]
+        },
+        {
+          "id": "float",
+          "name": "Zagrywka float stojąca",
+          "level": "intermediate",
+          "levelLabel": "Średniozaawansowany",
+          "tagline": "standing float — domyślna zagrywka 90% amatorów",
+          "description": "Zagrywka bez rotacji dająca nieprzewidywalny tor lotu (efekt \"knuckleball\"). Przy krytycznej prędkości (~12-13 m/s) asymetryczne wiry tworzą losowe boczne siły nośne. To zagrywka do opanowania w pierwszej kolejności.",
+          "biomechanics": [
+            "Pełny łańcuch kinetyczny: nogi → miednica → tułów → bark → łokieć → dłoń",
+            "Pozycja \"łuk i strzała\": łokieć wysoko nad barkiem, dłoń za uchem",
+            "Nadgarstek ZABLOKOWANY i mocny — bezwzględny warunek dla efektu float",
+            "Kontakt: pięta dłoni w środek piłki",
+            "\"Punch and freeze\": KRÓTKI ruch końcowy — dłoń zatrzymuje się natychmiast po kontakcie"
+          ],
+          "steps": [
+            "Ciało pod kątem 45° do siatki, stopy rozstawione na szerokość barków",
+            "Lewe ramię wyciągnięte przed barkiem, piłka na wysokości głowy",
+            "Bardzo krótki podrzut: \"umieścić\" piłkę 30-50 cm nad barkiem — piłka się nie obraca",
+            "Lewa stopa idzie do przodu w kierunku celu tuż po umieszczeniu piłki",
+            "Pełne wyprostowanie ramienia w momencie kontaktu, dłoń mocna i płaska",
+            "FREEZE: natychmiastowe zatrzymanie ruchu po kontakcie — żadnego ruchu końcowego ramienia"
+          ],
+          "errors": [
+            { "label": "Przedłużony ruch końcowy ramienia", "text": "Przyczyna #1 niepowodzenia: ruch końcowy dodaje spin, który niweluje efekt float — natychmiastowy freeze" },
+            { "label": "Zbyt wysoki podrzut", "text": "Piłka spada w siatkę — podrzut krótki, tylko 30-50 cm" },
+            { "label": "Obracający się podrzut", "text": "Wywołuje spin na piłce — umieścić piłkę, nie podrzucać" },
+            { "label": "Kontakt samym wnętrzem dłoni", "text": "Używać pięty dłoni (dolnej części dłoni) dla płaskiej powierzchni" }
+          ],
+          "exercises": [
+            "Toss & Drop: zaznaczyć strefę na podłodze, podrzucić 20 razy bez uderzania — cel 18/20 trafień",
+            "Ściana \"punch and freeze\" z 3 m: pracować nad natychmiastowym zatrzymaniem ruchu",
+            "5 kolejnych zagrywek bez rotacji potwierdzonych wzrokowo przez partnera"
+          ],
+          "videos": [
+            { "title": "Zagrywka float w 4 minuty", "url": "https://www.youtube.com/watch?v=0z2_R2cMU7g" },
+            { "title": "Poprawa zagrywki float", "url": "https://www.youtube.com/watch?v=mdEXHKNjfQ8" },
+            { "title": "Zagrywka: float + tenisowa (CEPSUM)", "url": "https://www.youtube.com/watch?v=_e00ogqoNZw" }
+          ]
+        },
+        {
+          "id": "jumpfloat",
+          "name": "Zagrywka jump float",
+          "level": "advanced",
+          "levelLabel": "Zaawansowany",
+          "tagline": "jump float — standard elity kobiecej",
+          "description": "Float z krótkim rozbiegiem i skokiem. Zyskuje na wysokości kontaktu, prędkości i kącie opadania. Stał się standardem elity kobiecej (86% zagrywek w zawodowej siatkówce kobiet według ostatnich badań). Mniej ryzykowny niż jump topspin, a jednocześnie bardziej destabilizujący niż float stojący.",
+          "biomechanics": [
+            "Krótki rozbieg (2 do 4 kroków)",
+            "Ramiona w pozycji łuk-i-strzała podczas skoku — inaczej niż przy ataku, gdzie ramiona napędzają",
+            "Rozbieg dostarcza prędkości piłce, nie tylko ramię",
+            "Kontakt w wysokim punkcie lekko przed głową",
+            "Zablokowany nadgarstek + freeze identyczne jak przy float stojącym"
+          ],
+          "steps": [
+            "Pozycja 2-3 m za linią, piłka w lewej dłoni",
+            "Krok 1 (prawa) wprowadzający, ramiona rozluźnione",
+            "Krok 2 (lewa): podrzut piłki na ~1,5 m wysokości, bez rotacji",
+            "Krok 3 + hop: wybicie z obu stóp za linią — ramiona idą w górę w łuk-i-strzała",
+            "Skok pionowy i lekko do przodu, ciało napięte",
+            "Uderzenie wyprostowanym ramieniem, pięta dłoni w środek piłki",
+            "Natychmiastowy FREEZE — lądowanie na boisku"
+          ],
+          "errors": [
+            { "label": "Zbyt wysoki podrzut", "text": "Odruch jump spin — utrzymać krótki podrzut jak przy float stojącym" },
+            { "label": "Ramiona, które machają jak przy ataku", "text": "Staje się smeczem ze spinem — utrzymać pozycję łuk-i-strzała" },
+            { "label": "Przedłużony ruch końcowy", "text": "Identycznie jak przy float stojącym: freeze obowiązkowy" },
+            { "label": "Błąd stopy przy wybiciu", "text": "Sprawdzić, czy wybicie następuje za linią końcową" }
+          ],
+          "exercises": [
+            "Opanować float stojący (solidny freeze) przed dodaniem rozbiegu",
+            "Sam rozbieg bez uderzania: pracować nad stabilnym podrzutem na małą wysokość",
+            "Jump float z kontrolowaną prędkością: regularność przed mocą"
+          ],
+          "videos": [
+            { "title": "Zagrywka skokowa float — INF'AUX ENTRAÎNEURS (Bretania)", "url": "https://www.youtube.com/watch?v=P5xCgV7nfO8" },
+            { "title": "Jump float + smecz (Volleyball Canada)", "url": "https://www.youtube.com/watch?v=X1Mq9K90FCk" }
+          ]
+        },
+        {
+          "id": "jumpspin",
+          "name": "Zagrywka jump topspin",
+          "level": "competition",
+          "levelLabel": "Wyczynowy",
+          "tagline": "jump serve — smecz zza linii",
+          "description": "\"Smecz zza linii\": piłka uderzona z pełną prędkością z topspinem (50-60 mph w mocnym klubie). Najwyższy potencjał na ace, ale także najwyższy wskaźnik błędów. Zarezerwowane dla tych, którzy zainwestowali 1000+ powtórzeń na treningach.",
+          "biomechanics": [
+            "Rozbieg 3-4 kroki identyczny jak przy smeczu z drugiej linii",
+            "Wysoki podrzut (1-1,5 m przed sobą) z lekkim wywołanym przednim spinem",
+            "Rotacja sekwencyjna: miednica → tułów → bark → łokieć → nadgarstek",
+            "Kontakt w strefie 10-11h na piłce",
+            "Pełny snap nadgarstka dla topspinu (~30 obrotów/s w elicie)",
+            "Pełny ruch końcowy — przeciwieństwo float"
+          ],
+          "steps": [
+            "Pozycja 3-4 m za linią, piłka w bijącej dłoni",
+            "Krok 1 (prawa) + wysoki podrzut z lekko wywołanym topspinem",
+            "Krok 2 (lewa): akceleracja",
+            "Krok 3 (prawa): power step długi, środek ciężkości się obniża",
+            "Krok 4 (lewa): wybicie, ramiona wyrzucają się w górę",
+            "Eksplozywny skok pionowy-do przodu",
+            "Uderzenie na szczycie: dłoń przechodzi po piłce (10h), wnętrze, potem palce, które się przewijają",
+            "Pełny snap nadgarstka + ruch końcowy — lądowanie 1-2 m na boisku"
+          ],
+          "errors": [
+            { "label": "Podrzut za niski lub za sobą", "text": "Przyczyna #1 piłki w siatce — podrzut musi być wysoki i przed sobą" },
+            { "label": "Podrzut zbyt daleko do przodu", "text": "Błąd stopy — przestrzegać limitów strefy zagrywki" },
+            { "label": "Brak snapu nadgarstka", "text": "Piłka wychodzi daleko bez opadającego spinu" },
+            { "label": "Użycie w meczu bez przygotowania", "text": "Najpierw 1000 powtórzeń na treningu — złota zasada" }
+          ],
+          "exercises": [
+            "Złota zasada: 1000 powtórzeń na treningu przed użyciem w meczu",
+            "Jump spin \"control\": niższy podrzut, zmniejszona prędkość, by celować w konkretne strefy",
+            "Filmowanie podrzutu: 80% błędów wynika z ustawienia tossa"
+          ],
+          "videos": [
+            { "title": "Mocna zagrywka jump topspin + float (Sikana)", "url": "https://www.youtube.com/watch?v=50TUVvPLKr8" }
+          ]
+        }
+      ]
+    },
+    "zones": {
+      "title": "STREFY CELU & TAKTYKA",
+      "headerZone": "STREFA PRZECIWNIKA",
+      "headerEffect": "EFEKT TAKTYCZNY",
+      "rows": [
+        { "zone": "Strefa 1 — tylny prawy", "effect": "Blokuje wyjście rozgrywającego w systemie 5-1" },
+        { "zone": "Strefa 2 — przedni prawy krótki", "effect": "Łamie start po prawej stronie, wyklucza libero" },
+        { "zone": "Strefa 3 — przedni środkowy krótki", "effect": "Blokuje środkowego, łamie szybkie ataki" },
+        { "zone": "Strefa 4 — przedni lewy krótki", "effect": "Zmusza głównego atakującego do wystawienia I zaatakowania" },
+        { "zone": "Strefa 5 — tylny lewy głęboki", "effect": "Długa przekątna, wysoki wskaźnik błędu" },
+        { "zone": "Strefa 6 — tylny środkowy głęboki", "effect": "Zagrywać długo przeciwko niskim rozgrywającym" }
+      ],
+      "tips": [
+        { "label": "Seamy", "text": "Celowanie w przestrzeń między dwoma przyjmującymi jest skuteczniejsze niż celowanie w zawodnika — komunikacja przeciwnika jest wystawiona na próbę." },
+        { "label": "Naprzemienne krótkie/długie", "text": "Uniemożliwia rozgrywającemu wiedzę, kiedy się cofać. Krótki float (strefy 2-3-4) za linią ataku szczególnie przeszkadza." },
+        { "label": "Metryka FBSO%", "text": "Zagrywka, która redukuje First Ball Side Out przeciwnika z 70% do 45% bez asów, jest bardzo skuteczną zagrywką." }
+      ]
+    },
+    "learningHierarchy": {
+      "label": "★ HIERARCHIA NAUKI",
+      "footer": "Opanować każdy poziom przed przejściem do następnego. <strong>Regularność jest ważniejsza od mocy.</strong>"
+    }
+  },
+  "reception": {
+    "goldenRule": {
+      "body": "Odbiór sposobem dolnym decyduje o 60% sukcesu ofensywnego drużyny. Bez dobrego odbioru nie ma szybkiego ataku. Platforma jest pasywna — nogi są aktywne."
+    },
+    "format": {
+      "title": "Format gry",
+      "description": "<strong>Systemy odbioru</strong>, <strong>rola rozgrywającego</strong> oraz <strong>częste błędy</strong> poniżej dostosowują się do wybranego formatu."
+    },
+    "readyPosition": {
+      "title": "Pozycja wyjściowa (ready position)",
+      "points": [
+        "Stopy nieco szerzej niż barki, jedna stopa lekko z przodu",
+        "Kolana ugięte w stronę wewnętrznej części stóp, biodra nisko, tułów pochylony pod kątem 30-45°",
+        "Plecy proste, ciężar na śródstopiu (pięty lekko odciążone, ale nie oderwane)",
+        "Ramiona ROZDZIELONE (nie połączone), ugięte pod kątem 90-145°, na wysokości pasa",
+        "Wzrok na zagrywającym od momentu podrzutu piłki"
+      ],
+      "errorLabel": "Główny błąd",
+      "errorText": "mieć ramiona już połączone w platformę zanim piłka dotrze — to spowalnia przemieszczenie i uniemożliwia późny wybór odbiór dolny/górny."
+    },
+    "platform": {
+      "title": "Platforma",
+      "tips": [
+        { "title": "Sweet spot", "text": "Idealna powierzchnia kontaktu znajduje się między 2,5 a 15 cm nad nadgarstkami." },
+        { "title": "Cup and fold", "text": "Zalecana technika: jedna pięść zamknięta, druga dłoń owinięta wierzchem — kciuki równoległe skierowane w dół." },
+        { "title": "Kciuki w dół", "text": "Wskazanie kciukami w stronę podłogi obraca przedramiona na zewnątrz i zacieśnia platformę." },
+        { "title": "Nigdy nie splatać", "text": "NIGDY nie splatać palców przy mocnej zagrywce — ryzyko złamania." },
+        { "title": "Kąt rządzi", "text": "\"Piłka idzie tam, gdzie patrzy platforma\" — przy głębokim odbiorze: platforma pod kątem 45°; krótki odbiór: platforma bardziej równoległa do podłogi." }
+      ]
+    },
+    "steps": {
+      "title": "Wykonanie — kluczowe etapy",
+      "items": [
+        "Czytaj zagrywającego: zidentyfikuj typ zagrywki przed kontaktem.",
+        "Pozycja wyjściowa z rozdzielonymi ramionami (NIE połączonymi z góry).",
+        "Czytaj tor lotu od uderzenia przeciwnika.",
+        "Przemieszczaj się (kroki dostawne), znajdź się ZA piłką zanim połączysz ręce.",
+        "Build the platform early: łącz dłonie, gdy piłka nadlatuje, nie za wcześnie.",
+        "FREEZE: zastygnij tuż przed kontaktem, ciężar na przedniej stopie — utrzymaj 1-2 sekundy.",
+        "Kontakt na sweet spocie, barki skierowane na rozgrywającego.",
+        "Ruch końcowy: miednica i barki idą w stronę celu — bez wymachu ramion."
+      ],
+      "freezeLabel": "Freeze",
+      "freezeText": "\"Pose for a picture\" — zastygnąć całkowicie 1-2 sekundy po kontakcie. Przy 50-90 km/h obrońca w ruchu nie może dostosować swojego kąta. Nieruchomy może ruszyć w dowolnym kierunku."
+    },
+    "displacements": {
+      "title": "Przemieszczenia",
+      "items": [
+        {
+          "name": "Bocznie (kroki dostawne)",
+          "desc": "Stopa od strony piłki rusza pierwsza. Kroki dostawne bez krzyżowania, biodra nisko. Znajdź się za piłką, zorientuj się w stronę celu, freeze + platforma w ostatniej chwili. Dla dużych dystansów: kroki krzyżowane, potem obrót."
+        },
+        {
+          "name": "Do przodu (krótka piłka)",
+          "desc": "Dla krótkich zagrywek lub kiwek. Często kończy się wykrokiem (lunge): kolano zapada w stronę podłogi, platforma umieszczona przed przednim kolanem."
+        },
+        {
+          "name": "Do tyłu (drop step)",
+          "desc": "Obrót stopy, potem kroki dostawne do tyłu. NIGDY nie biec tyłem (utrata równowagi). Jeśli za późno na cofnięcie: obrócić się i stworzyć platformę z boku."
+        }
+      ],
+      "oneHand": {
+        "label": "Odbiór dolny jedną ręką — sytuacja awaryjna",
+        "text": "Gest ostateczny, gdy piłka jest zbyt daleko dla dwóch ramion. Ramię wyprostowane, płaska platforma na wewnętrznym przedramieniu, bez wymachu — tylko pchnięcie (stab) by odbić w górę. Warianty: one-arm stab (pięść przy mocnym smeczu), one-arm scoop (otwarte wnętrze dłoni w górę, niska piłka)."
+      }
+    },
+    "systems": {
+      "titlePrefix": "Systemy odbioru",
+      "nonOfficialLabel": "⚠ Format nieoficjalny FIVB",
+      "alert5": "Siatkówka halowa 5v5 nie ma dedykowanych przepisów FIVB ani FFVb. Poniższe systemy to logiczne adaptacje 5-1 z 6v6 udokumentowane przez VolleyballXL, The Art of Coaching Volleyball oraz Volleyball Canada.",
+      "alert4": "Siatkówka halowa 4v4 nie ma oficjalnych przepisów FIVB. Poniższe formacje pochodzą z intramurals uniwersyteckich (USA), z podręczników pedagogicznych FFVb / Volleyball Canada oraz z literatury beach (Brandon Joyner, Better at Beach).",
+      "prosLabel": "Zalety",
+      "consLabel": "Wady",
+      "byTeamSize": {
+        "6": [
+          {
+            "name": "System W — 5 przyjmujących",
+            "level": "Początkujący",
+            "desc": "3 graczy w pierwszej linii, 2 w drugiej — wszyscy oprócz rozgrywającego uczestniczą. Historyczna forma, od której pochodzi nazwa \"W-formation\" (FIVB, USAV IMPACT).",
+            "pros": ["Zmniejszone strefy na gracza (~1,8 m korytarza)", "Niewiele wymaganej komunikacji", "Idealne dla szkółki siatkarskiej i U13-U15"],
+            "cons": ["Liczne strefy nakładania między 5 graczami", "Słabi przyjmujący zmuszeni do uczestnictwa", "Dezorganizuje atakujących (3 atakujących w odbiorze)"]
+          },
+          {
+            "name": "System U — 3 przyjmujących",
+            "level": "Nowoczesny standard",
+            "desc": "Libero w strefie 6 (główny cel zagrywających), skrzydłowi w strefach 5 i 1. 3 najlepsi przyjmujący biorą wszystkie piłki, wszyscy atakujący z pierwszej linii wychodzą.",
+            "pros": ["Uproszczona komunikacja na 3", "3 najlepszych przyjmujących pokrywa wszystko", "Atakujący z pierwszej linii wolni do rozbiegu"],
+            "cons": ["Większe strefy boczne do pokrycia (~3 m na gracza)", "Wymaga sprawnego libero", "Wrażliwy na krótkie zagrywki w narożniki"],
+            "recommended": true
+          },
+          {
+            "name": "Odbiór 2-osobowy — libero + R4",
+            "level": "Elita",
+            "desc": "Tylko 2 przyjmujących (libero + wybrany R4) pokrywa całą szerokość. Stosowane na wysokim poziomie, aby uwolnić 2. R4 i przygotować go do ataku bez zmęczenia odbiorem.",
+            "pros": ["Wszyscy atakujący dostępni do tranzycji ofensywnej", "Wydajniejszy blok/atak, bo atakujący nie są zmęczeni odbiorem", "System preferowany przez drużyny zawodowe (Polska, Francja, Włochy)"],
+            "cons": ["Wymaga 2 bardzo atletycznych przyjmujących (~4,5 m korytarza każdy)", "Żadnego marginesu błędu — źle odczytana zagrywka = punkt dla przeciwnika", "Nie do zastosowania bez libero na poziomie międzynarodowym"]
+          }
+        ],
+        "5": [
+          {
+            "name": "Odbiór 3-osobowy — konfiguracja 2F-3B",
+            "level": "Zalecany",
+            "desc": "3 tylni (P5, P6, P1) przyjmują. Rozgrywający w P1 wychodzi z odbioru i penetruje od kontaktu zagrywającego, jak w 5-1 z 6v6. 2 przedni (P4, P3) są wolni do doskoku.",
+            "pros": ["Konfiguracja najbliższa 5-1 z 6v6 (pedagogicznie idealna)", "Dobra tranzycja odbiór → atak", "2 atakujących z przodu + możliwa pipe z drugiej linii"],
+            "cons": ["3 przyjmujących na 9 m (~3 m na gracza)", "Rozgrywający musi szybko czytać i decydować o penetracji w < 1 sekundę", "Dziura w P1, jeśli rozgrywający ruszy za wcześnie"],
+            "recommended": true
+          },
+          {
+            "name": "Odbiór 4-osobowy — konfiguracja 3F-2B",
+            "level": "Standard",
+            "desc": "2 tylni (P5, P1) + 2 przedni (typowo P4 i P3 — rozgrywający w P2 wychodzi) przyjmują. Rozgrywający pozostaje przy celu: bez penetracji, natychmiastowa dystrybucja.",
+            "pros": ["Zmniejszone strefy (~2,25 m na gracza)", "Idealny dla drużyn mieszanych lub początkujących", "Rozgrywający już przy celu — bez tranzycji"],
+            "cons": ["Tylko 2 atakujących dostępnych z przodu (P4 + P3 lub P4 + środkowy)", "Przedni, którzy przyjmują, muszą potem biec do doskoku", "Blok na 2 trudny, bo rozgrywający idzie pod siatkę"]
+          },
+          {
+            "name": "Odbiór w pięciokącie — 4 lub 5 graczy",
+            "level": "Początkujący / rekreacja",
+            "desc": "5 przyjmujących (odpowiednik W na 5 graczy). 1 gracz przy siatce w środku (często stały rozgrywający), 2 skrzydła w środku, 2 tylnych w głębi. Wszyscy uczestniczą, chyba że środkowy gracz jest dedykowanym rozgrywającym.",
+            "pros": ["Regularne pokrycie boiska", "Bardzo niskie wymagania techniczne", "Odpowiednie dla zajęć pedagogicznych odkrywania"],
+            "cons": ["Wiele nakładań przy 5", "Żaden atakujący nie jest uwolniony", "Nieskuteczne, gdy podnosi się poziom"]
+          }
+        ],
+        "4": [
+          {
+            "name": "Diament (3 przyjmujących)",
+            "level": "Standard 4v4",
+            "desc": "Rozgrywający przy siatce w środku (P3, wychodzi z odbioru). 2 skrzydła (P4, P2) w środku boiska + jedyny tylny (P1) w głębi przyjmują. Formacja najczęściej używana w 4v4 halowym (intramurals uniwersyteckie).",
+            "pros": ["Rozgrywający już przy celu — bez penetracji", "3 strefy jasne i symetryczne", "Idealne dla intramurals, rekreacji, beach 4s"],
+            "cons": ["Pokrycie 9 m szerokości na 3 = ~3 m na gracza", "Jedyny tylny musi bronić całej głębi po odbiorze", "Tylko 2 atakujących z przodu"],
+            "recommended": true
+          },
+          {
+            "name": "Linia 3-1 (3 przyjmujących)",
+            "level": "Średniozaawansowany",
+            "desc": "Jedyny rozgrywający w P1 (tył), który penetruje od kontaktu zagrywki przeciwnika do strefy 2. 3 atakujący z przodu (P4, P3, P2) przyjmują. Uproszczony odpowiednik 5-1 z 6v6.",
+            "pros": ["3 atakujących z przodu cały czas", "Pedagogiczny do przygotowania 5-1 z 6v6", "Rozgrywający może też atakować po dystrybucji"],
+            "cons": ["Wymaga bardzo czystego odbioru (penetracja nie wybacza)", "Dziura w P1, jeśli rozgrywający ruszy, zanim piłka zostanie obroniona", "Wszyscy atakujący muszą umieć przyjmować"]
+          },
+          {
+            "name": "Box 2-2 (4 przyjmujących)",
+            "level": "Początkujący",
+            "desc": "2 przedni (P4, P2) + 2 tylni (P5, P1), bez dedykowanego rozgrywającego przy siatce. Najlepiej ustawiony gracz robi 2. odbicie. Typowe dla zajęć odkrywczych lub U11-U13.",
+            "pros": ["Pokrywa całe boisko (4 strefy po 2,25 m)", "Żadnych wymagań technicznych wobec rozgrywającego", "Wszyscy przyjmują — bardzo pedagogiczne"],
+            "cons": ["Brak dedykowanego rozgrywającego — losowa dystrybucja", "Żaden atakujący nie jest uwolniony do doskoku", "Nieskuteczne, gdy podnosi się poziom"]
+          }
+        ]
+      }
+    },
+    "passeur": {
+      "titlePrefix": "Rola rozgrywającego w odbiorze",
+      "noteLabel": "Uwaga",
+      "byTeamSize": {
+        "6": [
+          {
+            "title": "Rozgrywający TYLNY (P1 / P6 / P5) — rotacje P1, P6, P5 systemu 5-1",
+            "bullets": [
+              "Wychodzi z odbioru: żadna piłka nie jest dla niego przeznaczona.",
+              "Startuje w specjalnej pozycji (np. P1: ~7,5 m od siatki, 1 m od linii prawej), zamaskowany za innym graczem (stack).",
+              "Penetruje do celu (między Z2 i Z3, ~1 m od siatki, 3 m na prawo od środka) OD KONTAKTU zagrywki przeciwnika — nie wcześniej (błąd nakładania).",
+              "P1: najkrótsza penetracja; P6: penetracja centralna; P5: najdłuższa penetracja (po przekątnej).",
+              "3 atakujący z przodu dostępni (R4 + środkowy + atakujący) + ataki z drugiej linii."
+            ]
+          },
+          {
+            "title": "Rozgrywający PRZEDNI (P2 / P3 / P4) — rotacje P2, P3, P4 systemu 5-1",
+            "bullets": [
+              "Wychodzi z odbioru: jest już blisko celu.",
+              "W P2: już przy celu — staje się też blokującym po linii naprzeciw przeciwnika R4 ze Z4 (podwójne obciążenie defensywne).",
+              "W P3: boczny switch w stronę celu natychmiast po kontakcie zagrywki.",
+              "W P4: przemierza całą siatkę, by dotrzeć do celu (najdłuższe przemieszczenie z przodu).",
+              "Tylko 2 atakujących z przodu (kompensowane przez pipe w P6 i atak z drugiej linii atakującego w P1)."
+            ]
+          }
+        ],
+        "5": [
+          {
+            "title": "Rozgrywający PENETRUJĄCY (konfiguracja 2F-3B, zalecana)",
+            "bullets": [
+              "Startuje w P1 tył, wychodzi z odbioru.",
+              "Penetruje do celu (Z2/Z3, ~1 m od siatki) OD kontaktu zagrywki przeciwnika — identycznie jak w 5-1 z 6v6.",
+              "3 tylnych (P5 + P6 + P1 odchodzący) pokrywa odbiór na 3.",
+              "Musi poczekać, aż piłka zostanie obroniona przed wyjściem (częsty błąd: przedwczesny start → dziura w P1)."
+            ],
+            "note": "Konfiguracja najbliższa 6v6 — zalecana do przygotowania tranzycji."
+          },
+          {
+            "title": "Rozgrywający PRZEDNI STAŁY (konfiguracja 3F-2B lub pięciokąt)",
+            "bullets": [
+              "Pozostaje przy celu (P2 lub P3 w zależności od konfiguracji): bez penetracji.",
+              "Wychodzi z odbioru: żadna piłka nie jest dla niego przeznaczona.",
+              "Natychmiastowa dystrybucja po wystawie — bez tranzycji.",
+              "W P2: staje się też blokującym po linii naprzeciw lewego skrzydła przeciwnika (jak w 5-1 z 6v6)."
+            ]
+          }
+        ],
+        "4": [
+          {
+            "title": "Rozgrywający PRZEDNI w diamencie (P3 środek siatki)",
+            "bullets": [
+              "Pozostaje przy celu (Z3, ~1 m od siatki): bez penetracji.",
+              "Wychodzi z odbioru: pozostała 3 (2 skrzydła + 1 tylny) przyjmuje.",
+              "Szybka dystrybucja do Z4 lub Z2 w zależności od jakości odbioru.",
+              "Jego tranzycja obrona → wystawa musi być wykonana w mniej niż 2 sekundy (1 jedyny tylny = dużo pokrycia)."
+            ],
+            "note": "Formacja najczęściej używana w 4v4 halowym."
+          },
+          {
+            "title": "Rozgrywający PENETRUJĄCY w linii 3-1 (P1 tył)",
+            "bullets": [
+              "Startuje w P1 tył, wychodzi z odbioru.",
+              "Penetruje do strefy 2 od kontaktu zagrywki przeciwnika.",
+              "3 atakujący z przodu (P4, P3, P2) przyjmuje.",
+              "Wymaga bardzo czystego odbioru — inaczej rozgrywający nie może dotrzeć do celu na czas."
+            ]
+          },
+          {
+            "title": "Bez dedykowanego rozgrywającego (box 2-2)",
+            "bullets": [
+              "Najlepiej ustawiony gracz po 1. odbiciu robi 2. odbicie.",
+              "Wszyscy przyjmują — 4 strefy po ~2,25 m.",
+              "Losowa dystrybucja do jednego z 3 pozostałych graczy.",
+              "Zarezerwowane dla zajęć odkrywczych (U11-U13, szkolne)."
+            ]
+          }
+        ]
+      }
+    },
+    "libero": {
+      "title": "Libero — wyspecjalizowany odbiór",
+      "byTeamSize": {
+        "6": {
+          "title": "Libero — kluczowy element odbioru w 6v6",
+          "text": "Specjalista defensywny w kontrastującej koszulce. Systematycznie zastępuje środkowych, gdy przechodzą do rotacji tylnej (substytucje nieograniczone, nieliczone według Reguły FIVB 19). Gra 3 kolejne rotacje w Z5-Z6-Z1. Preferowana pozycja odbioru: Z6 (główny cel zagrywających) lub Z5. Ograniczenia FIVB: bez bloku, bez ataku nad siatką, bez górnego wystawienia (rękami) przed linią 3 m, jeśli kolega z drużyny następnie atakuje nad siatką.",
+          "accent": "orange"
+        },
+        "5": {
+          "title": "Brak oficjalnego libero w 5v5",
+          "text": "Siatkówka halowa 5v5 nie ma przepisów FIVB. W praktyce żadna federacja nie zezwala na libero w tym formacie. Najlepszy przyjmujący jest umieszczany w P6 lub P5 i gra systematycznie w tylnej linii — staje się \"libero de facto\" bez kontrastującej koszulki ani ograniczeń. Może więc blokować i atakować w razie potrzeby.",
+          "accent": "teal"
+        },
+        "4": {
+          "title": "Brak libero w 4v4",
+          "text": "Żadne libero nie jest dopuszczone w przepisach 4v4 (intramurals uniwersyteckie, FFVb pedagogiczne, beach 4s). Jedyny tylny w diamencie — lub rozgrywający penetrujący w linii 3-1 — pełni rolę najlepszego przyjmującego/obrońcy. Przy ~3 m korytarza na przyjmującego w diamencie antycypacja jest ważniejsza od techniki.",
+          "accent": "plum"
+        }
+      }
+    },
+    "reading": {
+      "title": "Czytać zagrywkę, by się ustawić",
+      "headerType": "Typ zagrywki",
+      "headerWhen": "Adaptacja przyjmującego",
+      "rows": [
+        { "type": "Dolna / underhand", "adapt": "Pozycja normalna, brać piłkę wysoko" },
+        { "type": "Float stojący", "adapt": "Pozycja wysoka, ruszać do przodu, by wziąć ją wcześnie, zanim zboczy" },
+        { "type": "Topspin", "adapt": "Pozycja niska, gotowy do cofnięcia, platforma pod kątem" },
+        { "type": "Jump float", "adapt": "Może być przyjęty odbiciem górnym (overhand) z 4 m od siatki" },
+        { "type": "Jump topspin", "adapt": "Pozycja niska, przewidywane cofnięcie, sztywna pasywna platforma" },
+        { "type": "Zagrywka hybrydowa", "adapt": "Platforma gotowa na oba scenariusze (float lub topspin)" }
+      ],
+      "cuesLabel": "Wskazówki przed kontaktem zagrywającego",
+      "cues": [
+        "Pozycja zagrywającego na linii → preferowany kąt",
+        "Wysokość i umiejscowienie podrzutu: wysoki+do tyłu → topspin; niski+z przodu → float",
+        "Długość rozbiegu: długi → jump topspin; krótki → jump float",
+        "Kierunek barków zagrywającego w momencie kontaktu → kierunek piłki"
+      ]
+    },
+    "errors": {
+      "title": "Częste błędy",
+      "commonLabel": "Błędy techniczne (wszystkie formaty)",
+      "common": [
+        { "label": "Swinging arms", "text": "Przyczyna #1 — ramiona, które machają w momencie kontaktu, piłka nieprzewidywalna. Korekta: \"platforma jest pasywna, nogi są aktywne\"." },
+        { "label": "Złamana platforma", "text": "Jedno przedramię wyżej niż drugie — zablokować łokcie i pchnąć kciuki w dół." },
+        { "label": "Ramiona połączone za wcześnie", "text": "Spowalnia przemieszczenie i uniemożliwia późny wybór odbiór dolny/górny. Łączyć dłonie tylko po dotarciu." },
+        { "label": "Zbyt prosty tułów", "text": "Platforma przechodzi pod piłką → piłka za daleko od siatki. Pochylić się pod kątem 30-45° do przodu." },
+        { "label": "Kontakt powyżej pępka", "text": "Za wysoko = zmniejszona kontrola. Celować w kontakt na wysokości pasa lub niżej." },
+        { "label": "Brak freeze", "text": "Wciąż w ruchu w momencie kontaktu = niemożliwy do kontrolowania kierunek. Całkowicie się zatrzymać." }
+      ],
+      "sizeLabelPrefix": "Błędy specyficzne dla",
+      "byTeamSize": {
+        "6": [
+          { "label": "Źle ustawione libero", "text": "Zbyt wycentrowane — przegapia krótkie zagrywki w narożniki; zbyt boczne — oddaje środek. Cel referencyjny: Z6 ustawiony na zagrywającego przeciwnika." },
+          { "label": "Nakładanie rozgrywającego", "text": "Rozgrywający opuszcza pozycję przed kontaktem zagrywającego przeciwnika — błąd nr 1 w 5-1 (Reguła 7.4 FIVB). Jego stopy muszą respektować relacje przód/tył aż do kontaktu." },
+          { "label": "Odbiór na 5 bez jasnej roli", "text": "W W 3 przedni przeszkadzają sobie w strefie centralnej. Wyraźnie określić, kto bierze piłkę między P3 i P6 na zagrywkach osiowych." }
+        ],
+        "5": [
+          { "label": "Rozgrywający odchodzi za wcześnie", "text": "W konfiguracji 2F-3B z rozgrywającym penetrującym, odejście przed obroną piłki = dziura w P1. Czekać na potwierdzenie." },
+          { "label": "2 przyjmujących obok siebie", "text": "W konfiguracji 3F-2B P5 i P1 muszą być rozstawieni (jeden po każdej stronie). Wycentrowani razem = linie odkryte." },
+          { "label": "Przedni przyjmujący, który zapomina atakować", "text": "W konfiguracji 3F-2B przedni, który przyjmuje, musi potem pobiec do swojego doskoku — odruch do specyficznego treningu." },
+          { "label": "Brak zdefiniowanego libero de facto", "text": "Bez jasnej roli 3 tylnych odpycha sobie odpowiedzialność. Wyraźnie wyznaczyć najlepszego przyjmującego jako priorytetowego w strefie centralnej." }
+        ],
+        "4": [
+          { "label": "Rozgrywający w diamencie, który przyjmuje", "text": "W diamencie rozgrywający w P3 musi WYJŚĆ z odbioru — inaczej niemożliwe szybkie wystawienie. Pozostała 3 bierze." },
+          { "label": "Jedyny tylny przeciążony", "text": "W diamencie tylny P1 pokrywa ~3,5 m głębi sam. Antycypacja = umiejętność nr 1; stałe kroki dostawne i wczesne czytanie." },
+          { "label": "Box 2-2 bez wezwania na 2. odbicie", "text": "Bez dedykowanego rozgrywającego kto wystawia? Krzyczeć \"JA!\" na 2. odbicie od odbioru jest nienegocjowalne." },
+          { "label": "Skrzydła diamentu w linii prostej", "text": "P4 i P2 w środku boiska na tym samym poziomie co P1 → krótki cut shot spada między nimi. Stopniować pozycje." }
+        ]
+      }
+    },
+    "videos": {
+      "title": "Materiały wideo",
+      "items": [
+        { "title": "Jak zrobić odbiór sposobem dolnym (Sikana)", "url": "https://www.youtube.com/watch?v=aZkZwAFeye0" },
+        { "title": "Odbiór sposobem dolnym (CEPSUM)", "url": "https://www.youtube.com/watch?v=qIPlthgJvHU" },
+        { "title": "Kontrolowany odbiór dolny do rozgrywającego", "url": "https://www.youtube.com/watch?v=eUDY6AGS1-A" },
+        { "title": "Nauka odbioru wysokiego i niskiego (Sikana)", "url": "https://www.youtube.com/watch?v=ZLRy_Gu9LVA" },
+        { "title": "Indywidualna rozgrzewka odbioru dolnego", "url": "https://www.youtube.com/watch?v=nGiE_y09vTY" }
+      ]
+    }
+  },
+  "positionnement": {
+    "selectors": {
+      "title": "Konfiguracja twojej drużyny",
+      "description": "Wybierz format i konfigurację taktyczną: <strong>cała zawartość przewodnika</strong> (pozycje, strefy, obrona według ataku) się dostosuje.",
+      "formatLabel": "Format gry",
+      "configLabel": "Konfiguracja taktyczna"
+    },
+    "principle": {
+      "label": "Podstawowa zasada obrony",
+      "lead": "Ustawienie defensywne zależy od 3 głównych czynników:",
+      "points": [
+        "Twojej pozycji (przód lub tył)",
+        "Strefy ataku przeciwnika (strefa 4, 3, 2)",
+        "Typu ataku (mocny smecz, kiwka, plasowanie)"
+      ]
+    },
+    "postes": {
+      "titlePrefix": "1. Pozycje i strefy",
+      "layoutCaptionPrefix": "Ustawienie twojej drużyny w",
+      "detailCta": "Zobacz szczegóły każdej pozycji na /positions →",
+      "ruleLabel": "Ważna zasada",
+      "ruleByTeamSize": {
+        "6": "Gracze tylni (5, 6, 1) NIE mogą blokować przy siatce. Bronią w głębi boiska.",
+        "5": "Przy 5 graczach każdy obrońca pokrywa ~30 m² (vs 20 m² w 6v6). Czytanie staje się krytyczne.",
+        "4": "Brak libero. Każdy gracz broni ~30-40 m². Antycypacja jest umiejętnością nr 1."
+      }
+    },
+    "zonePositioning": {
+      "title": "2. Ustawienie według strefy ataku przeciwnika",
+      "tabLabels": {
+        "zone4": "Atak Strefa 4",
+        "zone3": "Atak Strefa 3",
+        "zone2": "Atak Strefa 2"
+      },
+      "captionsByZone": {
+        "zone4": "Obrona przeciwko atakowi w Strefie 4 (lewe skrzydło przeciwnika)",
+        "zone3": "Obrona przeciwko atakowi w Strefie 3 (środek)",
+        "zone2": "Obrona przeciwko atakowi w Strefie 2 (prawe skrzydło przeciwnika)"
+      },
+      "legend": {
+        "zone": "Strefa odpowiedzialności",
+        "blk": "BLK",
+        "blkDesc": "= w bloku",
+        "off": "OFF",
+        "offDesc": "= off-blocker",
+        "def": "OBR",
+        "defDesc": "= obrona"
+      },
+      "unavailable": "Diagram niedostępny dla tej konfiguracji."
+    },
+    "layoutLabels": {
+      "5-1": {
+        "zone4": ["Duża przek.", "Cień bloku", "Linia", "Off-blocker"],
+        "zone3": ["Przek. L", "Oś", "Przek. P", "Pokr.", "Pokr."],
+        "zone2": ["Duża przek.", "Cień bloku", "Linia", "Off-blocker"]
+      },
+      "pentagon": {
+        "zone4": ["Z1 krótki", "Duża przek.", "Off-blk"],
+        "zone3": ["Przek. L", "Przek. P"],
+        "zone2": ["Z5 krótki", "Duża przek.", "Off-blk"]
+      },
+      "3F-2B": {
+        "zone4": ["Z1 krótki", "Duża przek.", "Off-blk"],
+        "zone3": ["Przek. L", "Przek. P"],
+        "zone2": ["Z5 krótki", "Duża przek.", "Off-blk"]
+      },
+      "2F-3B": {
+        "zone4": ["Linia P", "Oś", "Przek. L", "Off-blk"],
+        "zone3": ["Przek. L", "Oś", "Przek. P"],
+        "zone2": ["Linia L", "Oś", "Przek. P", "Off-blk"]
+      },
+      "losange": {
+        "zone4": ["Krótka linia", "Przek. L", "Głąb"],
+        "zone3": ["Przek. L", "Przek. P", "Głąb"],
+        "zone2": ["Krótka linia", "Przek. P", "Głąb"]
+      },
+      "carre": {
+        "zone4": ["Mała przek.", "Duża przek.", "Off-blk"],
+        "zone3": ["Przek. L", "Przek. P"],
+        "zone2": ["Mała przek.", "Duża przek.", "Off-blk"]
+      }
+    },
+    "layoutNotes": {
+      "5-1": {
+        "zone4": [
+          { "label": "Pozycja 2 (atakujący / OPP)", "text": "Blokujący po linii — blokuje, idzie do siatki po prawej stronie." },
+          { "label": "Pozycja 3 (środkowy)", "text": "Zamyka przekątną w bloku na 2 z atakującym." },
+          { "label": "Pozycja 4 (R4 off-blocker)", "text": "Odchodzi na linię 3 m po lewej stronie — pokrywa krótki cut shot (ostra przekątna) i kiwki." },
+          { "label": "Pozycja 5 (Libero)", "text": "Broni długiej dużej przekątnej, ~7-8 m od siatki, w wewnętrznym barku środkowego blokującego." },
+          { "label": "Pozycja 6 (tylny środkowy)", "text": "Wysokie piłki przechodzące blok, długie dotknięcia bloku, oś ~8-8,5 m." },
+          { "label": "Pozycja 1 (tylny prawy)", "text": "Broni głębokiej linii w cieniu bloku, ~7-7,5 m od siatki, 0,5 m od linii prawej." }
+        ],
+        "zone3": [
+          { "label": "Pozycja 3 (środkowy)", "text": "Blok na 1 w czytaniu (read) lub w commitment w zależności od scoutingu przeciwnika." },
+          { "label": "Pozycje 4 i 2 (skrzydłowi)", "text": "Na linii ataku (~2-2,5 m od siatki, 0,5 m od linii): pokrywają odbicia od bloku i piłki przez blok." },
+          { "label": "Pozycja 5 (Libero)", "text": "Naprzeciw środkowego atakującego, w jego korytarzu uderzenia (~7-8 m od siatki)." },
+          { "label": "Pozycja 6 (tylny środkowy)", "text": "Barki naprzeciw atakującego; broni mocnej piłki przechodzącej blok (oś ~8-8,5 m)." },
+          { "label": "Pozycja 1 (tylny prawy)", "text": "Posuwa się o metr (~7,5 m od siatki, 1 m od linii prawej): krótsze kąty przy quicku." },
+          { "label": "Kluczowa zasada", "text": "\"Stopped on contact\": wszyscy zatrzymani i zrównoważeni w dokładnym momencie uderzenia." }
+        ],
+        "zone2": [
+          { "label": "Pozycja 4 (R4)", "text": "Blokujący po linii — blokuje przy siatce po lewej stronie." },
+          { "label": "Pozycja 3 (środkowy)", "text": "Zamyka przekątną w bloku na 2 z R4." },
+          { "label": "Pozycja 2 (atakujący / OPP)", "text": "Staje się off-blockerem po prawej stronie — odchodzi na 3 m, pokrywa krótki cut shot i kiwki." },
+          { "label": "Pozycja 5 (Libero)", "text": "Broni głębokiej linii w cieniu bloku, ~7-7,5 m od siatki, 0,5 m od linii lewej." },
+          { "label": "Pozycja 6 (tylny środkowy)", "text": "Wysokie piłki nad blokiem, oś ~8-8,5 m od siatki." },
+          { "label": "Pozycja 1 (rozgrywający lub OH/OPP)", "text": "Broni długiej dużej przekątnej krzyżowej, ~7-8 m od siatki." }
+        ]
+      },
+      "pentagon": {
+        "zone4": [
+          "Atak Z4 przeciwnika (lewe skrzydło przeciwnika) → piłka leci na naszą prawą stronę.",
+          "System 2-1-2: blok na 2 (P2 atakujący linia + P3 przekątna) + 2 obrońców głębokich.",
+          "P4 (lewe skrzydło) w off-blockerze 2-2,5 m od siatki, 1 m od linii — pokrywa kiwkę i cut shot.",
+          "P5 (~7-7,5 m, 0,5 m linia lewa) broni długiej dużej przekątnej krzyżowej.",
+          "P1 (~7-7,5 m, 0,5 m linia prawa) broni głębokiej linii, w cieniu bloku.",
+          "Główne uderzenie bronione: długa przekątna krzyżowa (statystycznie najczęstszy tor)."
+        ],
+        "zone3": [
+          "Szybki atak środkowy (Z3) — krótkie kąty, mało czasu na reakcję.",
+          "Blok na 1: P3 (środkowy) w czytaniu (read), brak możliwego commitmentu.",
+          "P4 i P2 (off-blockerzy) 2 m od siatki na linii ataku — pokrywają odbicia.",
+          "P5 i P1 wysunięci o 1 m (~7 m od siatki) — krótsze kąty niż przy wysokiej piłce.",
+          "Słabość: brak dedykowanego obrońcy w głębi środkowej (tylko 2 tylnych w 5v5).",
+          "Kluczowa zasada: \"stopped on contact\" — wszyscy zatrzymani i zrównoważeni w momencie kontaktu."
+        ],
+        "zone2": [
+          "Atak Z2 przeciwnika (prawe skrzydło przeciwnika) → piłka leci na naszą lewą stronę. Idealne lustro Z4.",
+          "Blok na 2: P4 (R4 linia) + P3 (środkowy przekątna).",
+          "P2 (atakujący / rozgrywający) w off-blockerze 2-2,5 m od siatki po prawej stronie.",
+          "P1 (~7-7,5 m, 1 m linia prawa) broni długiej dużej przekątnej.",
+          "P5 (~7-7,5 m, 0,5 m linia lewa) broni głębokiej linii w cieniu bloku."
+        ]
+      },
+      "3F-2B": {
+        "zone4": [
+          "Atak Z4 przeciwnika → piłka leci na naszą prawą stronę.",
+          "Konfiguracja 3F-2B: 3 przedni → korzystny blok na 2 (P3 + P2 rozgrywający-blokujący).",
+          "P4 (R4) off-blocker krótki po lewej stronie na linii ataku (~2-2,5 m od siatki).",
+          "P5 broni długiej dużej przekątnej krzyżowej (~7 m, 0,5 m linia lewa).",
+          "P1 broni głębokiej linii prawej w cieniu bloku (~7 m, 0,5 m linia prawa).",
+          "Wada: tylko 2 obrońców w głębi → 30+ m² na obrońcę (vs 20 m² w 6v6)."
+        ],
+        "zone3": [
+          "Szybki atak środkowy (Z3) — krótkie kąty.",
+          "Z 3 przednimi blok na 3 możliwy, ale zostawia tylko 2 obrońców na podłodze — odradzane.",
+          "Zalecane: blok na 2 (P3 + skrzydło najbliższe korytarzowi uderzenia).",
+          "P5 i P1 wysunięci o 1 m (~7 m), bo kąty są krótsze przy quicku.",
+          "Słabość: głęboka piłka osiowa niepokryta (brak Z6 obrońcy w 5v5 3F-2B)."
+        ],
+        "zone2": [
+          "Atak Z2 przeciwnika → piłka leci na naszą lewą stronę. Idealne lustro Z4.",
+          "Blok na 2: P4 (R4 linia) + P3 (środkowy przekątna).",
+          "Rozgrywający (P2) w off-blockerze 2-2,5 m od siatki po prawej stronie (anty-kiwka + szybka tranzycja do celu).",
+          "P1 broni długiej dużej przekątnej (~7-7,5 m).",
+          "P5 broni głębokiej linii lewej w cieniu bloku."
+        ]
+      },
+      "2F-3B": {
+        "zone4": [
+          "Atak Z4 przeciwnika → piłka leci na naszą prawą stronę.",
+          "Konfiguracja 2F-3B (P4+P3 przedni, P5+P6+P1 tylni, P1 penetrujący): blok na 1.",
+          "P3 (środkowy) blokuje sam po prawej stronie — brak P2 dostępnego do bloku na 2.",
+          "P4 (R4) off-blocker 2-2,5 m od siatki po lewej stronie.",
+          "3 obrońców głębokich: P5 duża przekątna, P6 oś centralna (~7-8 m), P1 linia prawa.",
+          "System 1-1-3 (1 blokujący + 1 off-blocker + 3 obrońców) to obrona najbliższa 6v6 perymetrycznej."
+        ],
+        "zone3": [
+          "Szybki atak środkowy (Z3) — krótkie kąty.",
+          "Blok na 1 (P3) w czytaniu — szybka jest najtrudniejszym celem w 2F-3B.",
+          "P4 zlateralizowany na środku boiska (~2 m od siatki) na odbicia.",
+          "Zaleta: 3 obrońców głębokich (P5, P6, P1) pokrywa 3 duże strefy głębi.",
+          "P6 naprzeciw środkowego atakującego w jego korytarzu uderzenia (~7,5-8 m, oś)."
+        ],
+        "zone2": [
+          "Atak Z2 przeciwnika → piłka leci na naszą lewą stronę. Lustro Z4.",
+          "Blok na 1: P4 blokuje sam po lewej stronie (brak P2 w 2F-3B).",
+          "P3 (środkowy) staje się off-blockerem po prawej stronie 2-2,5 m od siatki.",
+          "P5 broni głębokiej linii lewej, P6 osi, P1 długiej dużej przekątnej."
+        ]
+      },
+      "losange": {
+        "zone4": [
+          "Atak Z4 przeciwnika → piłka leci na naszą prawą stronę.",
+          "Formacja diament (1-2-1) → system A: 1 blokujący (P3) + 3 obrońców.",
+          "P3 idzie w blok solo po prawej stronie (naprzeciw atakującego przeciwnika).",
+          "P2 (przedni prawy) cofa się na 3 m do 3,5-4 m od siatki — pokrywa kiwkę i zwody za blokiem.",
+          "P4 (przedni lewy) cofa się na środek boiska po lewej stronie — pokrycie krótkiej małej przekątnej.",
+          "P1 (jedyny tylny) broni długiej dużej przekątnej krzyżowej (~7-7,5 m, 1 m linia prawa).",
+          "Antycypacja = umiejętność nr 1: 1 jedyny tylny → ~40 m² do pokrycia."
+        ],
+        "zone3": [
+          "Szybki atak środkowy (Z3) — najtrudniejsza konfiguracja w 4v4: mało czasu, 1 jedyny blokujący.",
+          "Blok na 1 (P3 sam) w stałym CZYTANIU (brak możliwego commitmentu).",
+          "P4 i P2 cofają się na środek boiska (~3,5-4 m od siatki, pokrywają obie krótkie przekątne).",
+          "Jedyny tylny P1 pełni rolę Z6 obrońcy (oś centralna, 7-8 m od siatki).",
+          "Główne uderzenie: mocna piłka osiowa (w stronę P1), bo blok na 1 pokrywa tylko środek."
+        ],
+        "zone2": [
+          "Atak Z2 przeciwnika → piłka leci na naszą lewą stronę. Idealne lustro Z4.",
+          "System A: 1 blokujący (P3) + 3 obrońców.",
+          "P4 (przedni lewy) cofa się na 3 m do 3,5-4 m — pokrywa kiwkę i zwody po lewej stronie.",
+          "P2 (przedni prawy) cofa się na środek boiska po prawej stronie — pokrywa krótką małą przekątną.",
+          "Jedyny tylny P1 broni długiej dużej przekątnej krzyżowej (~7-7,5 m, 1 m linia lewa)."
+        ]
+      },
+      "carre": {
+        "zone4": [
+          "Atak Z4 przeciwnika → piłka leci na naszą prawą stronę.",
+          "Formacja kwadrat (2-2 / box) → system A: 1 blokujący (P2) + 3 obrońców.",
+          "P2 (przedni prawy) blok solo naprzeciw atakującego przeciwnika, fiksuje linię.",
+          "P4 (przedni lewy) w off-blockerze 2-2,5 m od siatki — pokrywa kiwkę i cut shot po lewej stronie.",
+          "P5 broni długiej dużej przekątnej (~7 m, 0,5 m linia lewa).",
+          "P1 broni głębokiej linii / krótkiej małej przekątnej (~7 m, w cieniu bloku).",
+          "System B (blok na 2 P2+P4) możliwy, ale zostawia tylko 2 obrońców — zarezerwowany dla mocnych atakujących."
+        ],
+        "zone3": [
+          "Szybki atak środkowy (Z3) — krótkie kąty, mało czasu.",
+          "Blok na 2 (P4 + P2) zamyka środek — system B z 2 obrońcami z tyłu.",
+          "P5 i P1 biorą krótkie przekątne (~7 m, 0,5-1 m od linii).",
+          "Główna słabość: brak krótkiego pokrycia za blokiem, kwadrat nie ma gracza na środku boiska.",
+          "Alternatywa: blok na 1 (rola podobna do P3, tutaj P4 lub P2 sam) by uwolnić obrońcę kiwki."
+        ],
+        "zone2": [
+          "Atak Z2 przeciwnika → piłka leci na naszą lewą stronę. Idealne lustro Z4.",
+          "System A: 1 blokujący (P4) + 3 obrońców.",
+          "P4 (przedni lewy) blok solo naprzeciw atakującego przeciwnika, fiksuje linię.",
+          "P2 (rozgrywający-atakujący przedni prawy) w off-blockerze 2-2,5 m od siatki — anty-kiwka + szybka tranzycja do celu.",
+          "P1 broni długiej dużej przekątnej (~7 m, 0,5 m linia prawa).",
+          "P5 broni głębokiej krótkiej linii (~7 m, w cieniu bloku)."
+        ]
+      }
+    },
+    "generalPrinciples": {
+      "title": "3. Ogólne zasady ustawienia",
+      "responsibilityLabel": "Strefy odpowiedzialności",
+      "cards": {
+        "front": {
+          "title": "Gracze przedni",
+          "points": [
+            "Priorytet: Blokowanie przy siatce",
+            "Jeśli nie w bloku: bronić przeciwnej linii",
+            "Odległość: przy siatce lub w głębi boiska"
+          ]
+        },
+        "pivotByTeamSize": {
+          "6": {
+            "title": "Pivot defensywny (Libero / P6)",
+            "points": [
+              "Pozycja: środek, adaptowalny",
+              "Odległość: 5–6m od siatki",
+              "Rola: filar obrony, pokrywa środek"
+            ]
+          },
+          "5": {
+            "title": "Pivot defensywny (Libero / P6)",
+            "points": [
+              "Pozycja: środek, adaptowalny",
+              "Odległość: 5–6m od siatki",
+              "Rola: filar obrony, pokrywa środek"
+            ]
+          },
+          "4": {
+            "title": "Jedyny tylny (P1)",
+            "points": [
+              "Pozycja: środek, ~40 m² do pokrycia",
+              "Odległość: 5–6m od siatki",
+              "Rola: jedyny filar defensywny, maksymalna antycypacja"
+            ]
+          }
+        },
+        "back": {
+          "title": "Tylni boczni",
+          "points": [
+            "Rola zmienna: posuwają się lub cofają",
+            "Strona atakowana: posuwają się (3–4m)",
+            "Strona przeciwna: cofają się (6–7m)"
+          ]
+        }
+      },
+      "universalsCard": {
+        "title": "★ Uniwersalne zasady defensywne (4v4 / 5v5 / 6v6)",
+        "intro": "Te zasady zaczerpnięte z Hebert, Liskevych i Volleyball Canada stosują się niezależnie od liczby graczy na boisku.",
+        "items": [
+          ["Blok jest fundamentem", "Obrońcy z tyłu ustawiają się w zależności od cienia i orientacji bloku — nie niezależnie."],
+          ["Zatrzymany i zrównoważony w momencie kontaktu", "Każdy obrońca, który wciąż się porusza, gdy atakujący uderza, traci reaktywność (\"stopped on contact\")."],
+          ["Sekwencyjne czytanie wzrokowe", "\"Piłka → rozgrywający przeciwnika → piłka → atakujący przeciwnika\". W 4v4 i 5v5 deficyt graczy wymusza jeszcze wcześniejsze czytanie."],
+          ["Komunikacja sygnałów", "Nawet w rekreacji blokujący musi sygnalizować \"linia\" lub \"przekątna\" — bez tego obrońcy z tyłu nie wiedzą, co pokrywać."],
+          ["Pokryta strefa przed", "Ktoś musi pokrywać 3-5 m za blokiem — to strefa najbardziej zaniedbywana w formatach skróconych (4v4 / 5v5)."],
+          ["Szybka tranzycja", "Rozgrywający nigdy nie powinien wyruszać do celu, zanim nie potwierdzi, że piłka została obroniona (\"release call\")."]
+        ]
+      }
+    },
+    "readingAttacker": {
+      "title": "4. Czytać atakującego: wskazówki wzrokowe",
+      "intro": "Twoje ustawienie musi się dostosować do tego, co widzisz. Oto kluczowe wskazówki:",
+      "indicators": [
+        {
+          "title": "Atakujący daleko od siatki",
+          "action": "POSUŃ SIĘ",
+          "accentColor": "var(--orange)",
+          "points": [
+            "Wystawa 2–3m od siatki",
+            "Nie może mocno smeczować",
+            "Wysokie ryzyko kiwki lub plasowania",
+            "Posuń się o 1–2 metry"
+          ]
+        },
+        {
+          "title": "Atakujący blisko siatki",
+          "action": "COFAJ SIĘ",
+          "accentColor": "var(--plum)",
+          "points": [
+            "Wystawa mniej niż 1m od siatki",
+            "Może smeczować z pełną mocą",
+            "Szybki opadający tor lotu",
+            "Cofnij się maksymalnie"
+          ]
+        },
+        {
+          "title": "Bark atakującego",
+          "action": "Patrz na jego bijący bark",
+          "accentColor": "var(--teal)",
+          "points": [
+            "Bark wysoko i w tyle = mocny smecz",
+            "Bark nisko = prawdopodobna kiwka",
+            "Rotacja barku = kierunek piłki",
+            "Dostosuj się w 0,5s"
+          ]
+        },
+        {
+          "title": "Rozbieg atakującego",
+          "action": "Obserwuj jego rozbieg",
+          "accentColor": "var(--ink)",
+          "points": [
+            "Długi i szybki rozbieg = mocny smecz",
+            "Mały rozbieg lub zatrzymanie = kiwka",
+            "Kąt rozbiegu = celowana strefa",
+            "Przewiduj moc"
+          ]
+        }
+      ],
+      "proTipLabel": "Wskazówka pro",
+      "proTipText": "W ciągu pierwszych 2 sekund po zagrywce przeciwnika skup wzrok na rozgrywającym, potem NATYCHMIAST na atakującym, który będzie uderzał."
+    },
+    "advanceRetreat": {
+      "title": "5. Kiedy się posuwać lub cofać?",
+      "label": "Szybkie drzewo decyzyjne",
+      "advance": {
+        "title": "Posuwać się (3–4m od siatki), gdy:",
+        "items": [
+          "Jesteś po tej samej stronie co atakujący",
+          "Atakujący jest daleko od siatki (zła wystawa)",
+          "Przewidujesz kiwkę lub plasowanie",
+          "Blok jest solidny — mniej mocnych piłek przechodzi"
+        ]
+      },
+      "retreat": {
+        "title": "Cofać się (6–7m od siatki), gdy:",
+        "items": [
+          "Jesteś po stronie przeciwnej do atakującego",
+          "Atakujący ma dobrą wystawę blisko siatki",
+          "Atakujący jest mocny lub wysoki",
+          "Blok jest słaby (1 jedyny blokujący)",
+          "Bronisz przekątnej (najdłuższy tor lotu)"
+        ]
+      }
+    },
+    "mistakes": {
+      "titlePrefix": "6.",
+      "byTeamSize": {
+        "6": {
+          "title": "Dziesięć częstych błędów ustawienia defensywnego",
+          "intro": "Typologia zaczerpnięta od Mike'a Heberta (Thinking Volleyball), Johna Formana (CoachingVB), USA Volleyball oraz podręcznika FIVB Top Volley.",
+          "mistakes": [
+            ["1. Dryf w cieniu bloku", "Obrońcy instynktownie chronią się za blokującymi zamiast ustawiać się wokół cienia bloku — zostawiając otwarte przekątne i tory \"off the block\". Hebert: \"creeping into the block shadow\"."],
+            ["2. Wadliwe czytanie", "Obrońca fiksuje wzrok na piłce zamiast śledzić sekwencję \"piłka → rozgrywający → piłka → atakujący\". Konsekwencja: zgaduje zamiast czytać i nie jest zatrzymany ani zrównoważony w momencie kontaktu (\"stopped and balanced at the moment of contact\")."],
+            ["3. Libero źle ustawione w głębi", "Zbyt blisko siatki nie broni głębokich smeczów; zbyt daleko nie pokrywa kiwek. Zasada: wyrównać zewnętrzny bark z wewnętrznym barkiem środkowego blokującego, 6-8 m od siatki w zależności od bloku."],
+            ["4. Źle przygotowany rozgrywający-obrońca", "Pozycja zbyt niska lub źle zorientowana uniemożliwiająca widzenie piłka + boisko przeciwnika; przedwczesny start do celu tworzący dziurę w Z1; brak \"release call\" sygnalizującego, że opuszcza obronę."],
+            ["5. Błędy nakładania", "Najczęstsze: Z6 dryfuje przed Z3, Z5 bardziej w prawo niż Z6 i rozgrywający za wcześnie opuszcza pozycję, by penetrować (błąd nr 1 w 5-1). W momencie kontaktu zagrywającego wszystkie stopy muszą respektować relacje przód/tył i lewo/prawo (Reguła 7.4)."],
+            ["6. Zapomniana tranzycja odbiór → obrona", "Gracze pozostają zamrożeni w swojej formacji odbioru W zamiast przechodzić do podstawowej pozycji defensywnej, gdy rozgrywający przeciwnika dotyka piłki. Hebert: \"sluggish recovery after play on the ball\"."],
+            ["7. Zła obsługa strefy 6", "Mylenie \"6-up\" (rotacja), \"6-back\" (perymetryczna) i \"6-deep\". Gracz w Z6 musi przesunąć się bocznie w zależności od strony ataku przeciwnika, nie pozostawać wycentrowany. Odchylanie się do tyłu, by dig (\"leaning back\"), kładzie ciężar na piętach i zabija reaktywność."],
+            ["8. Nieudana obrona przy szybkim ataku środkowym", "Zbyt późne czytanie środkowego przeciwnika; tylni nie wysunięci (przy quicku Z1 i Z5 muszą zyskać metr w stronę siatki, bo kąty są krótsze); \"false stepping\" (pierwsze podparcie cofnięte), które powoduje utratę dostępnego czasu."],
+            ["9. Osierocone pokrycie kiwek", "Żaden obrońca wyraźnie nieprzypisany do kiwki; \"standing up on tips\" — obrońca jest w niskiej pozycji na smecz, potem wyprostowuje się i wyciąga ręce na kiwkę, pozwalając piłce spaść tuż przed sobą. Skupienie musi pozostać na smeczu w niskiej pozycji pozwalającej na zryw do kiwki."],
+            ["10. Zbiorowa cisza", "Brak callów (\"tip!\", \"line!\", \"out!\", \"mine!\"); blokujący nie komunikują swojej orientacji linia vs przekątna; brak kapitana rotacji do weryfikacji nakładań przed zagrywką."]
+          ]
+        },
+        "5": {
+          "title": "Częste błędy w 5v5",
+          "intro": "Błędy specyficzne dla formatu 5v5 (adaptacje z doc Volleyball Canada, VolleyballXL i doktryny 6v6).",
+          "mistakes": [
+            ["1. Mechaniczne odtwarzanie 6v6", "Pokrywanie 3 stref głębokich z 3 obrońcami działa (konfiguracja 2F-3B), ale brakuje off-blockera, który odchodzi — strefa 3 m nie jest pokryta, jeśli nikt nie jest wyraźnie przypisany."],
+            ["2. Przedni off-blocker przykleja się do siatki", "Po uderzeniu bloku przedni off-blocker musi odejść 2-2,5 m, by pokryć kiwki. Jeśli pozostaje przy siatce, strefa za blokiem jest odsłonięta."],
+            ["3. 2 obrońców stojących obok siebie", "W konfiguracji 3F-2B 2 głębokich obrońców musi być rozstawionych (jeden lewa strona, jeden prawa) a nie wycentrowani razem. Inaczej linie boczne są odkryte."],
+            ["4. Rozgrywający idzie za wcześnie (konfiguracja penetrująca)", "W konfiguracji 2F-3B z rozgrywającym penetrującym z P1 musi czekać, aż piłka zostanie obroniona, przed pobiegnięciem do celu — inaczej dziura w Z1."],
+            ["5. Pomieszanie przód/tył", "Z 5 graczami pokusa, by przedni bronili swojej strony pozostając na linii 3 m, jest silna — ale to zostawia tył otwarty. Przedni idą w blok, tylni bronią w głębi."],
+            ["6. Wadliwe czytanie", "Deficyt jednego gracza wymusza jeszcze wcześniejsze czytanie niż w 6v6. Sekwencja \"piłka → rozgrywający → piłka → atakujący\" + zrównoważone zatrzymanie w momencie kontaktu."]
+          ]
+        },
+        "4": {
+          "title": "Częste błędy w 4v4",
+          "intro": "Błędy specyficzne dla 4v4 halowego (intramurals uniwersyteckie, doktryna FFVb / Volleyball Canada, beach 4s).",
+          "mistakes": [
+            ["1. Izolowany blokujący bez pokrycia kiwki", "3 obrońców idzie w głąb, zostawiając strefę 3-5 m pustą. Ktoś musi zawsze być przypisany do kiwki na 3,5-4 m od siatki."],
+            ["2. 2 obrońców w linii prostej", "Obok siebie na tej samej głębokości → cut shot spada między nich. W 4v4 obrońcy muszą być zawsze stopniowani (jeden blisko, jeden daleko) lub rozstawieni bocznie."],
+            ["3. Rozgrywający, który biegnie do wystawy zanim piłka zostanie obroniona", "Przedwczesna tranzycja zostawia dziurę w obronie. Rozgrywający czeka na potwierdzenie, że piłka jest odzyskana, przed wyruszeniem do celu."],
+            ["4. Brak sygnału między blokującym a obrońcami", "Blokujący MUSI sygnalizować \"linia\" lub \"przekątna\" przed wyruszeniem ataku. Bez tego 3 obrońców nie wie, co pokrywać — każdy improwizuje."],
+            ["5. Obrońca kiwki zbyt daleko od siatki", "Cofa się z innymi tylnymi i nie może już pokrywać krótkich kiwek. Jego pozycja to 3,5-4 m od siatki, oś — nie 7 m."],
+            ["6. \"Przypadkowe\" blokowanie złym graczem", "W 4v4 blokowanie ze źle ustawionym graczem (daleko od atakującego) zostawia przeciwnika naprzeciw 3 źle wyrównanym obrońcom. Blokujący musi być tym, który jest naprzeciw głównego atakującego."],
+            ["7. Wadliwe czytanie", "Przy ~40 m² na obrońcę (vs 20 m² w 6v6) błąd czytania jest niemożliwy do nadrobienia. Antycypacja = umiejętność nr 1 w 4v4."]
+          ]
+        }
+      }
+    },
+    "serviceTransition": {
+      "title": "7. Ustawienie przy zagrywce",
+      "intro": "<strong>Twoje ustawienie przy zagrywce jest INNE niż twoja pozycja defensywna. </strong>Gdy tylko zagrywka wychodzi, musisz się przemieścić.",
+      "stepsLabel": "Tranzycja zagrywka → obrona",
+      "steps": [
+        ["Twoja drużyna serwuje", "Jesteś w pozycji rotacji"],
+        ["Zagrywający uderza", "Patrzysz na rozgrywającego przeciwnika"],
+        ["Rozgrywający dotyka piłki", "Przemieszczasz się do swojej strefy defensywnej"],
+        ["Atakujący skacze", "Jesteś w końcowej pozycji, gotowy do reakcji"]
+      ]
+    },
+    "communication": {
+      "title": "8. Komunikacja defensywna",
+      "intro": "Milcząca obrona jest obroną nieskuteczną.",
+      "groups": [
+        {
+          "moment": "Przed atakiem przeciwnika",
+          "calls": [
+            ["\"Numer 4!\"", "Sygnalizuje strefę, z której nadchodzi atak"],
+            ["\"Dwóch w bloku!\"", "Wskazuje liczbę blokujących"],
+            ["\"Linia wolna!\"", "Jeśli blok nie pokrywa linii"],
+            ["\"Idę do przodu!\" / \"Cofam się!\"", "Sygnalizuje twój ruch"]
+          ]
+        },
+        {
+          "moment": "Podczas akcji",
+          "calls": [
+            ["\"Moja!\" / \"Mam!\"", "Bierzesz piłkę (NAJWAŻNIEJSZE)"],
+            ["\"Twoja!\" / \"Do ciebie!\"", "Zostawiasz piłkę koledze"],
+            ["\"Aut!\"", "Piłka wyjdzie, nie dotykaj jej"],
+            ["\"Blok!\"", "Jeśli blokujesz, ogłoś to"]
+          ]
+        },
+        {
+          "moment": "Po akcji",
+          "calls": [
+            ["\"Asekuracja!\"", "Prosisz o asekurację ataku"],
+            ["\"Wolna!\"", "Wolna piłka, ustawcie się"],
+            ["\"Zostajemy!\"", "Utrzymujemy obronę na miejscu"]
+          ]
+        }
+      ],
+      "ruleLabel": "Złota zasada",
+      "ruleText": "W razie wątpliwości między dwoma graczami ZAWSZE bierze piłkę gracz bardziej wysunięty do przodu."
+    },
+    "defenseSystems": {
+      "titlePrefix": "9.",
+      "warningLabel": "⚠ Ostrzeżenie terminologiczne",
+      "warningLabelNonOfficial": "⚠ Format nieoficjalny FIVB",
+      "forcesLabel": "Mocne strony",
+      "weaknessesLabel": "Słabe strony",
+      "indicationLabel": "Wskazanie",
+      "tableLabel": "Tabela porównawcza syntetyczna",
+      "tableHeaderCriterion": "Kryterium",
+      "byTeamSize": {
+        "6": {
+          "title": "Trzy główne systemy defensywne (FIVB / USAV)",
+          "warning": {
+            "label": "⚠ Ostrzeżenie terminologiczne",
+            "text": "Wyrażenie \"obrona w W\" często słyszane we Francji jest niewłaściwe. \"W-formation\" oznacza historycznie formację odbioru zagrywki na 5 graczy — nie system defensywny. Doktryna międzynarodowa (FIVB, USAV IMPACT, Liskevych, Stone) wyróżnia trzy systemy: man-up (2-1-3), perymetryczny (2-0-4) i rotacyjny (3-2-1)."
+          },
+          "systems": [
+            {
+              "name": "Obrona man-up (2-1-3)",
+              "tag": "Dawniej \"obrona w W\" / red defense",
+              "principe": "Jeden obrońca podchodzi na wysokość 3 m za blokiem, by przechwytywać kiwki i plasowania. Dwóch blokujących przy siatce, off-blocker odchodzi, a trzech graczy w głębi pokrywa długie kąty.",
+              "forces": [
+                "Wyjątkowe pokrycie kiwek, roll shotów i \"zepsutych\" piłek za blokiem",
+                "Szybka tranzycja do ataku, jeśli zaangażowany gracz to rozgrywający",
+                "Proste do nauczenia młodym drużynom"
+              ],
+              "faiblesses": [
+                "Tylko 3 obrońców w głębi — wrażliwy na mocne smecze po ciasnej przekątnej",
+                "Atakujący, który mocno bije między blokujących, łatwo przechodzi"
+              ],
+              "indication": "Drużyny młode, szkolne, przeciwnicy taktyczni grający dużo kiwek lub off-speed.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Obrona perymetryczna (2-0-4)",
+              "tag": "White defense — dominujący system w wysokim poziomie męskim",
+              "principe": "Czterech obrońców z tyłu tworzy U otwarte w stronę siatki, niemal na liniach bocznych i końcowej — \"stopa na linii\" (Liskevych). Środek boiska jest świadomie porzucony.",
+              "forces": [
+                "Doskonałe pokrycie mocnych smeczów, linii i głębokich narożników",
+                "Prosty zbiorowy ruch",
+                "System dominujący w nowoczesnej międzynarodowej siatkówce męskiej"
+              ],
+              "faiblesses": [
+                "Bardzo wrażliwy na krótkie kiwki za blokiem — strefa centralna między 3 a 5 m wolna",
+                "Wymaga atletycznych obrońców zdolnych do nurkowania do przodu"
+              ],
+              "indication": "Seniorzy, mężczyźni, poziom międzynarodowy, mocni przeciwnicy.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Obrona rotacyjna (3-2-1)",
+              "tag": "Rotational / slide defense",
+              "principe": "Trzech obrońców z tyłu przesuwa się w stronę ataku przeciwnika: tylny przeciwny podchodzi za blokiem (kiwka), środkowy przesuwa się w stronę atakowanej linii, obrońca po stronie atakowanej staje pod ostrym kątem.",
+              "forces": [
+                "Doskonałe pokrycie głębokiej linii ORAZ kiwki jednocześnie",
+                "Bardzo adaptowalny system",
+                "Szybka tranzycja setter, gdy rozgrywający jest w P1"
+              ],
+              "faiblesses": [
+                "Jeden obrońca mniej w głębi (jeden gracz dedykowany kiwce)",
+                "Przeciwny narożnik przekątnej wrażliwy",
+                "Wymagana mocna umiejętność czytania i koordynacja"
+              ],
+              "indication": "Przeciwnicy łączący moc i linie/kiwki; poziom średniozaawansowany do elity.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["Man-up 2-1-3", "Peryme. 2-0-4", "Rotacja 3-2-1"],
+          "tableRows": [
+            ["Gracz wysunięty za blokiem", "Tak", "Nie", "Tak"],
+            ["Obrońcy w głębi", "3", "4", "2"],
+            ["Pokrycie kiwki", "★★★", "★", "★★"],
+            ["Pokrycie mocnego smecza", "★★", "★★★", "★★"],
+            ["Pokrycie głębokiej linii", "★★", "★★", "★★★"],
+            ["Pokrycie ciasnej przekątnej", "★", "★★★", "★★"],
+            ["Typowa pozycja libero", "Z5 lub Z6", "Z5 (na linii)", "Z5 przesuwa"],
+            ["Złożoność", "Niska", "Średnia", "Wysoka"]
+          ],
+          "footer": {
+            "strong": "Wybór nie jest kwestią ortodoksji: ",
+            "text": "zależy od profilu ofensywnego przeciwnika i jakości twoich obrońców. Nowoczesna obrona definiuje się mniej przez formację niż przez czytanie — sekwencja wzrokowa \"piłka → rozgrywający → piłka → atakujący\" i zrównoważone zatrzymanie w momencie kontaktu."
+          }
+        },
+        "5": {
+          "title": "Trzy systemy defensywne w 5v5",
+          "warning": {
+            "label": "⚠ Format nieoficjalny FIVB",
+            "text": "Siatkówka halowa 5v5 nie ma dedykowanych przepisów FIVB ani FFVb. Te trzy systemy to logiczne adaptacje 6v6 udokumentowane przez VolleyballXL, The Art of Coaching Volleyball oraz Volleyball Canada. Nie istnieje oficjalny techniczny podręcznik 5v5 — wybierzcie system w zależności od konfiguracji waszej drużyny (2-3 lub 3-2)."
+          },
+          "systems": [
+            {
+              "name": "System 1-1-3",
+              "tag": "1 blokujący + 1 osłaniający kiwkę + 3 obrońców głębokich",
+              "principe": "Dostosowany do konfiguracji 2F-3B (2 przednich, 3 tylnych). Blokujący skacze sam; 2. przedni odchodzi w off-blockerze 2-3 m od siatki na kiwki; 3 obrońców głębokich pokrywa linię, oś i dużą przekątną.",
+              "forces": [
+                "3 obrońców głębokich jak w 6v6 perymetrycznym — dobre pokrycie smeczów",
+                "Konfiguracja najbliższa 5-1 z 6v6 (przygotowanie do tranzycji do 6v6)",
+                "Kiwka pokryta przez off-blockera"
+              ],
+              "faiblesses": [
+                "Tylko blok na 1 → kruchy wobec mocnych atakujących",
+                "Off-blocker 2-3 m musi być bardzo reaktywny"
+              ],
+              "indication": "Konfiguracja 2F-3B (rozgrywający penetrujący), przeciwnicy umiarkowanie mocni. System zalecany do pedagogiki tranzycji do 6v6.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "System 2-1-2",
+              "tag": "2 blokujących + 1 kiwka + 2 obrońców głębokich",
+              "principe": "Dostosowany do konfiguracji 3F-2B (3 przednich, 2 tylnych). Blok na 2 przy siatce, środkowy przedni pokrywa kiwkę 2-3 m od siatki, 2 obrońców głębokich bierze dużą przekątną i linię.",
+              "forces": [
+                "Blok na 2 jak w 6v6 — znacznie skuteczniejszy przeciwko mocnym smeczom",
+                "3 atakujących przy siatce do kontrataku"
+              ],
+              "faiblesses": [
+                "Tylko 2 obrońców głębokich → 9 m głębi bardzo trudne do pokrycia",
+                "Wysokie wymagania atletyczne wobec 2 tylnych"
+              ],
+              "indication": "Konfiguracja 3F-2B przeciwko bardzo mocnym drużynom. Preferować pod koniec seta, gdy każdy punkt się liczy.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "System 1-2-2",
+              "tag": "Man-up dostosowany (odpowiednik 2-1-3 z 6v6)",
+              "principe": "Blokujący solo + 2 osłaniających strefę przednią (kiwka + tyłbloku) + 2 obrońców głębokich. Dostosowany, gdy przeciwnik dużo kiwa lub w drużynach początkujących.",
+              "forces": [
+                "Doskonałe pokrycie krótkich kiwek (2 osłaniających strefę przednią)",
+                "Kiwka trudna do wykorzystania przez przeciwnika"
+              ],
+              "faiblesses": [
+                "Tylko 2 obrońców głębokich → mocne smecze trudne",
+                "Wymaga koordynacji między 2 osłaniającymi strefę przednią"
+              ],
+              "indication": "Przeciwnicy, którzy dużo kiwają; siatkówka kobieca, młode kategorie, drużyny techniczne.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["1-1-3", "2-1-2", "1-2-2 (man-up)"],
+          "tableRows": [
+            ["Blokujący", "1", "2", "1"],
+            ["Osłaniający strefę przednią", "1 (off-blocker)", "1 (kiwka)", "2 (kiwka + tyłbloku)"],
+            ["Obrońcy głębocy", "3", "2", "2"],
+            ["Pokrycie kiwki", "★★", "★★", "★★★"],
+            ["Pokrycie mocnego smecza", "★★", "★★★", "★★"],
+            ["Pokrycie głębi", "★★★", "★★", "★★"],
+            ["Dostosowana konfiguracja", "2F-3B", "3F-2B", "2F-3B / 3F-2B"],
+            ["Złożoność", "Niska", "Średnia", "Wysoka"]
+          ],
+          "footer": {
+            "strong": "Zalecenie 5v5: ",
+            "text": "system 1-1-3 w konfiguracji 2F-3B z rozgrywającym penetrującym jest obroną najbliższą 6v6 — idealną jako tranzycja pedagogiczna. 2-1-2 uzasadnia się tylko przeciwko naprawdę mocnym atakującym."
+          }
+        },
+        "4": {
+          "title": "Trzy systemy defensywne w 4v4",
+          "warning": {
+            "label": "⚠ Format nieoficjalny FIVB",
+            "text": "Siatkówka halowa 4v4 nie ma oficjalnych przepisów FIVB. Te trzy systemy pochodzą z praktyki intramurals uniwersyteckich (USA), z podręczników tranzycji pedagogicznej FFVb / Volleyball Canada oraz z literatury beach (Brandon Joyner, Better at Beach). Z 4 graczami każdy obrońca pokrywa ~30-40 m² (vs 20 m² w 6v6) — antycypacja jest umiejętnością nr 1."
+          },
+          "systems": [
+            {
+              "name": "System A: 1 blokujący + 3 obrońców",
+              "tag": "Najbardziej rozpowszechniony w 4v4 halowym",
+              "principe": "Tylko jeden gracz idzie w blok naprzeciw głównego atakującego. 3 pozostałych rozdziela się: obrońca kiwki (3-4 m od siatki, oś), obrońca cross (7-7,5 m, linia prawa, długa przekątna), obrońca linii (7-7,5 m, w cieniu bloku).",
+              "forces": [
+                "Pokrywa kiwkę, linię i dużą przekątną jednocześnie",
+                "Najbardziej zbalansowany w 4v4",
+                "Sygnał blokującego linia/przekątna bardzo skuteczny"
+              ],
+              "faiblesses": [
+                "Blok na 1 — wrażliwy na mocnych atakujących",
+                "Wymaga zdyscyplinowanego obrońcy kiwki, który się nie cofa"
+              ],
+              "indication": "Przeciwnicy równorzędnego lub umiarkowanego poziomu. Najbardziej uniwersalna konfiguracja w 4v4 (formacja diament lub linia 3-1).",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "System B: 2 blokujących + 2 obrońców",
+              "tag": "Blok na 2 (rzadki w 4v4)",
+              "principe": "2 przednich idzie razem naprzeciw głównego atakującego. 2 tylnych ustawia się: jeden po stronie linii (7 m, 1 m od linii), jeden na osi lekko przesunięty w stronę przekątnej. Kiwka nie jest pokryta.",
+              "forces": [
+                "Blok na 2 znacznie skuteczniejszy przeciwko mocnym smeczom",
+                "Maksymalna presja na atakującego przeciwnika"
+              ],
+              "faiblesses": [
+                "Tylko 2 obrońców na podłodze → niemożliwe pokrycie wszystkiego",
+                "Kiwka za blokiem całkowicie odsłonięta",
+                "Wymusza wybór: linia LUB przekątna, nie obie"
+              ],
+              "indication": "Używać tylko przeciwko bardzo mocnym atakującym bez finezji (bez kiwek). Konfiguracja box 2-2 lub linia 3-1.",
+              "accent": "var(--plum)"
+            },
+            {
+              "name": "System C: 0 blokujących",
+              "tag": "Niska obrona (przeciwnicy bez smeczu)",
+              "principe": "Żaden gracz nie idzie w blok. 4 graczy broni w głębi: 2 na środku boiska (3-4 m) na kiwki, 2 w głębi (7-8 m) na głębsze piłki. Rozgrywający pełni rolę 4. obrońcy.",
+              "forces": [
+                "Pokrywa całą głębię boiska",
+                "Dobrze dostosowany do wolnych wymian"
+              ],
+              "faiblesses": [
+                "PRZECIWPRODUKTYWNY, gdy tylko przeciwnik zaczyna mocno bić (smecz przechodzi bez przeszkód)",
+                "Brak presji przy siatce"
+              ],
+              "indication": "Poziom szkolny, rekreacja początkujących, przeciwnicy, którzy nie smeczują. Unikać, gdy tylko opozycja zyskuje na mocy.",
+              "accent": "var(--teal)"
+            }
+          ],
+          "tableHeaders": ["System A", "System B", "System C"],
+          "tableRows": [
+            ["Blokujący", "1", "2", "0"],
+            ["Obrońcy głębocy", "3", "2", "4"],
+            ["Pokrycie kiwki", "★★", "★", "★★★"],
+            ["Pokrycie mocnego smecza", "★★", "★★★", "★ (∅ bloku)"],
+            ["Pokrycie głębokiej linii", "★★", "★★", "★★"],
+            ["Pokrycie dużej przekątnej", "★★★", "★★", "★★"],
+            ["Zalecani przeciwnicy", "Wszystkie poziomy", "Bardzo mocni", "Bez smeczu"],
+            ["Złożoność", "Niska", "Średnia", "Niska"]
+          ],
+          "footer": {
+            "strong": "Zalecenie 4v4: ",
+            "text": "system A (1 blokujący + 3 obrońców) jest niemal uniwersalnym domyślnym. System B uzasadnia się tylko w obliczu naprawdę mocnych atakujących pod koniec seta. System C działa tylko na poziomie rekreacji początkujących — gdy tylko przeciwnik smeczuje, powrót do systemu A."
+          }
+        }
+      }
+    },
+    "transitions": {
+      "title": "10. Tranzycje atak ↔ obrona",
+      "intro": "Siatkówka to gra szybkich tranzycji. Stale przechodzisz z ataku do obrony i odwrotnie.",
+      "groups": [
+        {
+          "label": "Tranzycja atak → obrona",
+          "items": [
+            ["Twój kolega atakuje", "Przygotuj się mentalnie do obrony"],
+            ["Piłka jest odbita", "Natychmiast zidentyfikuj, kto zaatakuje"],
+            ["Szybki bieg", "Idź do swojej strefy defensywnej (max 2–3 sekundy)"],
+            ["Niska pozycja", "Ugnij nogi, gotowy do nurkowania"]
+          ]
+        },
+        {
+          "label": "Tranzycja obrona → atak",
+          "items": [
+            ["Bronisz piłki", "Precyzyjny odbiór do rozgrywającego"],
+            ["Jeśli jesteś PRZÓD", "Biegnij do siatki, by atakować lub blokować"],
+            ["Jeśli jesteś TYŁ", "Cofnij się lekko, gotowy do asekuracji ataku"],
+            ["Asekuracja ataku", "Otocz swojego atakującego (w półkolu na 2–3m)"]
+          ]
+        }
+      ]
+    },
+    "exercises": {
+      "title": "11. Ćwiczenia, by się rozwijać",
+      "durationLabel": "Czas trwania",
+      "materialLabel": "Materiał",
+      "objectiveLabel": "Cel",
+      "items": [
+        {
+          "title": "Czytanie sytuacji",
+          "level": "Początkujący",
+          "duration": "10 min",
+          "materiel": "1 trener lub partner z piłkami",
+          "objectif": "Nauczyć się szybko identyfikować strefę ataku",
+          "steps": [
+            "Trener ustawia się po drugiej stronie siatki w strefie 4, 3 lub 2",
+            "Wychodzisz ze środka boiska",
+            "Trener sygnalizuje strefę i podrzuca piłkę",
+            "Musisz ustawić się w swojej strefie defensywnej w 2–3 sekundy",
+            "Powtórz 20 razy zmieniając strefy"
+          ]
+        },
+        {
+          "title": "Posuwanie/Cofanie w zależności od wystawy",
+          "level": "Średniozaawansowany",
+          "duration": "15 min",
+          "materiel": "1 rozgrywający, 1 atakujący, kilku obrońców",
+          "objectif": "Dostosować pozycję do jakości wystawy",
+          "steps": [
+            "Rozgrywający wykonuje wystawy o zmiennej jakości do atakującego",
+            "Wystawa blisko siatki → Cofasz się (oczekiwany mocny smecz)",
+            "Wystawa daleko od siatki → Posuwasz się (prawdopodobna kiwka)",
+            "Atakujący uderza, a ty bronisz",
+            "Trener koryguje twoją pozycję po każdej piłce"
+          ]
+        },
+        {
+          "title": "Komunikacja defensywna",
+          "level": "Wszystkie poziomy",
+          "duration": "10 min",
+          "materiel": "Cała drużyna",
+          "objectif": "Rozwinąć automatyczną komunikację",
+          "steps": [
+            "Mecz w waszym formacie (4v4, 5v5 lub 6v6), ale z KRZYCZENIEM wszystkich callów",
+            "Kara: -1 punkt, jeśli gracz nie krzyknie \"Moja!\" na swojej piłce",
+            "Bonus: +1 punkt, jeśli cała drużyna komunikuje się w wymianie",
+            "Każdy gracz musi sygnalizować strefę ataku przeciwnika"
+          ]
+        },
+        {
+          "title": "Obrona przeciw kiwkom",
+          "level": "Średniozaawansowany",
+          "duration": "15 min",
+          "materiel": "1 atakujący, 3 tylnych obrońców",
+          "objectif": "Poprawić obronę krótkich piłek",
+          "steps": [
+            "Atakujący wykonuje TYLKO kiwki i plasowania",
+            "Obrońcy wszyscy muszą się posunąć (3–4m)",
+            "Cel: odzyskać 8 piłek na 10",
+            "Potem naprzemiennie: 5 kiwek, 5 smeczy, by ćwiczyć adaptację"
+          ]
+        },
+        {
+          "title": "Szybkie tranzycje",
+          "level": "Zaawansowany",
+          "duration": "20 min",
+          "materiel": "Cała drużyna",
+          "objectif": "Opanować zmiany atak-obrona",
+          "steps": [
+            "Normalna gra, ale trener mierzy czas tranzycji",
+            "Cel: być w pozycji defensywnej w mniej niż 3 sekundy",
+            "Jeśli za wolno, drużyna robi 5 pompek i zaczyna od nowa",
+            "Stopniowo zwiększaj rytm wymian"
+          ]
+        },
+        {
+          "title": "Czytać atakującego",
+          "level": "Zaawansowany",
+          "duration": "15 min",
+          "materiel": "1 atakujący, obrońcy",
+          "objectif": "Antycypować na podstawie mowy ciała",
+          "steps": [
+            "Atakujący zmienia smecz, kiwkę, plasowanie bez ostrzeżenia",
+            "Zanim uderzy, obrońca krzyczy swoją prognozę: \"Smecz!\" lub \"Kiwka!\"",
+            "Punkt, jeśli prognoza poprawna ORAZ piłka obroniona",
+            "Skupienie na: bark, rozbieg, pozycja względem siatki"
+          ]
+        }
+      ]
+    },
+    "commandments": {
+      "title": "12. 10 przykazań obrońcy",
+      "items": [
+        ["Patrz na rozgrywającego", "Potem na atakującego, nie na piłkę"],
+        ["Ta sama strona = Posuń się", "Strona przeciwna = Cofnij się"],
+        ["Zła wystawa przeciwnika", "→ Posuń się o 1–2m (prawdopodobna kiwka)"],
+        ["Nigdy w środku", "Wybierz: wysunięty LUB cofnięty"],
+        ["Komunikuj się ZAWSZE", "\"Moja!\" przy każdej piłce, którą bierzesz"],
+        ["Ruszaj się po zagrywce", "Pozycja zagrywki ≠ Pozycja defensywna"],
+        ["Czytaj bark", "Bark wysoko = smecz, nisko = kiwka"],
+        ["Niska pozycja", "Nogi ugięte, ręce gotowe"],
+        ["Szybkie tranzycje", "Max 3 sekundy, by się ustawić"],
+        ["Broń swojej strefy", "Każdy gracz ma swoją odpowiedzialność"]
+      ],
+      "sameSide": {
+        "title": "Ta sama strona co atakujący",
+        "action": "→ POSUNĄĆ SIĘ (3–4m)",
+        "desc": "Bronić kiwek i plasowań"
+      },
+      "oppositeSide": {
+        "title": "Strona przeciwna do atakującego",
+        "action": "→ COFNĄĆ SIĘ (6–7m)",
+        "desc": "Bronić długich przekątnych"
+      }
+    },
+    "conclusion": {
+      "label": "Podsumowanie",
+      "body1": "Ustawienie defensywne uczy się z praktyką i doświadczeniem. Nie zniechęcaj się, gdy popełniasz błędy na początku — nawet profesjonaliści stale dostosowują swoje ustawienie.",
+      "body2": "Klucz: zastosuj podstawową zasadę (ta sama strona = posuń się, przeciwna = cofnij się), obserwuj atakującego, komunikuj się z kolegami z drużyny i nigdy nie bój się nurkować po piłkę.",
+      "mantra": "Obrona wygrywa mecze."
+    }
+  }
 }
