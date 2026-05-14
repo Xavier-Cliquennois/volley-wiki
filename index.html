@@ -34,6 +34,16 @@
     <meta name="twitter:image" content="https://volley-wiki.fr/og-image.png" />
 
     <script defer src="https://umami.opusvoid.fr/script.js" data-website-id="27b1a364-17a8-4c00-9db3-03efda3c63d6"></script>
+    <script>
+      // Sync the html lang attribute with the URL path before React hydrates,
+      // so the browser does not offer to translate French pages from English.
+      (function () {
+        var seg = (location.pathname || '').split('/')[1];
+        if (seg === 'fr' || seg === 'en') {
+          document.documentElement.lang = seg;
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>

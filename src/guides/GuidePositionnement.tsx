@@ -5,6 +5,7 @@ import type { RoleColorKey } from '../constants/positions';
 import { CONFIGURATIONS, type TeamSize } from '../pages/Positions';
 import { S } from './styles';
 import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
+import { useCurrentLang } from '../i18n/paths';
 
 const SLUG_TO_SIZE: Record<TeamSizeSlug, TeamSize> = { '4v4': 4, '5v5': 5, '6v6': 6 };
 const SIZE_TO_SLUG: Record<TeamSize, TeamSizeSlug> = { 4: '4v4', 5: '5v5', 6: '6v6' };
@@ -906,6 +907,7 @@ type GuidePositionnementProps = {
 };
 
 export default function GuidePositionnement({ teamSize: teamSizeProp, configId: configIdProp }: GuidePositionnementProps = {}) {
+  const lang = useCurrentLang();
   const teamSize: TeamSize = teamSizeProp ?? 6;
   const configurations = CONFIGURATIONS[teamSize];
 
@@ -954,7 +956,7 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
               return (
                 <Link
                   key={slug}
-                  to={`/guides/positionnement-defense/${slug}`}
+                  to={`/${lang}/guides/positionnement-defense/${slug}`}
                   style={{ ...(isActive ? btnActive : btnBase), textDecoration: 'none' }}
                 >
                   {slug}
@@ -970,7 +972,7 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
             {configurations.map(c => (
               <Link
                 key={c.id}
-                to={`/guides/positionnement-defense/${SIZE_TO_SLUG[teamSize]}/${c.id}`}
+                to={`/${lang}/guides/positionnement-defense/${SIZE_TO_SLUG[teamSize]}/${c.id}`}
                 style={{ ...(configId === c.id ? btnActive : btnBase), textDecoration: 'none' }}
               >
                 {c.shortName}
@@ -1023,7 +1025,7 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
           />
           <div style={{ textAlign: 'center', marginTop: 16 }}>
             <Link
-              to={`/positions/${SIZE_TO_SLUG[teamSize]}/${configuration.id}`}
+              to={`/${lang}/positions/${SIZE_TO_SLUG[teamSize]}/${configuration.id}`}
               style={{
                 display: 'inline-block', fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em',
                 color: 'var(--orange)', border: '2.5px solid var(--orange)', padding: '6px 16px',
