@@ -1,3 +1,1715 @@
 {
-  "_note": "Per-guide content translations live inline in the guide components via t() calls."
+  "attaque": {
+    "goldenRule": {
+      "mantra": "SLOW APPROACH → FAST → POWER STEP → CLOSING → VERTICAL JUMP → ARM EXTENDED FORWARD → WRIST SNAP",
+      "body": "Power comes from the full kinetic chain, not the arm alone. A well-timed approach with fast last two steps generates 70% of final power."
+    },
+    "phases": {
+      "title": "The 5 phases of the spike",
+      "items": [
+        { "name": "Initiation", "desc": "Reading the set and deciding on the approach" },
+        { "name": "Wind-up", "desc": "Start of the approach" },
+        { "name": "Cocking", "desc": "Elbow above the shoulder, hand behind the ear — power position" },
+        { "name": "Acceleration", "desc": "Sequential rotation: hips → torso → shoulder → elbow → wrist" },
+        { "name": "Contact + follow-through", "desc": "Wrist snap, the hand \"claws\" over the top of the ball → topspin" }
+      ],
+      "footerLabel": "Ideal contact",
+      "footer": "Slightly in front of the hitting shoulder, never behind the head (power loss + injury risk). Distance to the net at takeoff: 30-50 cm minimum."
+    },
+    "approach": {
+      "title": "Approach footwork",
+      "three": {
+        "title": "3 steps — Beginner",
+        "sub": "Left-right-left (right-handed)",
+        "items": [
+          { "label": "Step 1 (left)", "text": "Short directional step, oriented toward the attack" },
+          { "label": "Step 2 (right)", "text": "Power step — long and low, heel first, center of gravity drops" },
+          { "label": "Step 3 (left)", "text": "Closing step — short, brakes horizontal momentum and converts it into vertical" }
+        ]
+      },
+      "four": {
+        "title": "4 steps — Competition standard",
+        "sub": "Right-left-right-left (right-handed)",
+        "items": [
+          { "label": "Step 1 (right)", "text": "Observation step, slow tempo" },
+          { "label": "Step 2 (left)", "text": "Acceleration" },
+          { "label": "Step 3 (right)", "text": "Power step — the most important, long and low" },
+          { "label": "Step 4 (left)", "text": "Closing step parallel to the net" }
+        ],
+        "rule": "Golden rule: the last two steps are the fastest — slow → fast."
+      }
+    },
+    "timing": {
+      "title": "Timing by set type",
+      "headerType": "Set type",
+      "headerWhen": "When to start the approach",
+      "rows": [
+        { "type": "High ball (3rd tempo)", "timing": "Start LATE — when the ball leaves the setter's hands" },
+        { "type": "2nd tempo (Hut/Go)", "timing": "Start when the pass is on its way to the setter" },
+        { "type": "1st tempo (Quick)", "timing": "Start EARLY — already in the air when the setter touches the ball" },
+        { "type": "Slide", "timing": "Start the moment the setter receives the pass" }
+      ]
+    },
+    "types": {
+      "title": "Attack types by position",
+      "keyPointsLabel": "Key points",
+      "shotsLabel": "Shot selection",
+      "items": [
+        {
+          "id": "outside",
+          "name": "Zone 4 attack (Outside / OH)",
+          "position": "Left wing",
+          "description": "The foundation of learning to attack. The outside hitter receives the largest volume of sets — the setter's \"safety\" option. Approach at 45° from the left.",
+          "keyPoints": [
+            "4-step approach at ~45° relative to the net",
+            "Takeoff 30-50 cm from the net",
+            "\"Hut\" set (high 3rd tempo) or \"Go\" (fast 2nd tempo)",
+            "Jump VERTICALLY — not toward the net",
+            "Contact slightly in front of the hitting shoulder"
+          ],
+          "shots": ["Cross-court (diagonal)", "Line shot (sideline)", "Cut shot (sharp angle <3 m)", "Tip", "Roll shot (topspin off-speed)"]
+        },
+        {
+          "id": "middle",
+          "name": "Middle attack (Quick / 1st tempo)",
+          "position": "Front middle",
+          "description": "The fastest attack. The middle is in the air BEFORE or as the setter touches the ball. Very low (30-50 cm) and very short set.",
+          "keyPoints": [
+            "Trigger the approach EARLY — already in the air when the setter releases",
+            "2-3 step approach, arm already loaded on the way up",
+            "\"Ghost Middle\" concept: even if the ball doesn't come, run the quick full speed to fix the opposing block → frees the outsides",
+            "Contact 30-50 cm above the net",
+            "Fast transition: block → approach in 1-2 seconds"
+          ],
+          "shots": ["Quick in front of setter (\"1\")", "Back-1 behind the setter", "Slide (back-set along the net)", "31/Gap (offset between setter and antenna)"]
+        },
+        {
+          "id": "opposite",
+          "name": "Zone 2 attack (Opposite)",
+          "position": "Right wing",
+          "description": "The opposite attacks from zone 2. Ideal for left-handers (hitting shoulder on the right antenna side = maximum hitting window). For right-handers: more pronounced torso rotation, position farther from the antenna.",
+          "keyPoints": [
+            "Approach symmetrical to the outside hitter but from the right",
+            "Finish with thumb down for the cut shot",
+            "Setter's \"release\" option when the reception is broken",
+            "Back-row attack from P1 (zone D) when in back row"
+          ],
+          "shots": ["Cross-court", "Line shot", "Pipe/D from back-row", "Diagonal cut shot toward zone 5"]
+        },
+        {
+          "id": "backrow",
+          "name": "Back-row attack (Pipe)",
+          "position": "Back middle or right",
+          "description": "Attack from the back row. The plant MUST happen BEHIND the 3 m line. Allows 4 attackers against 3 blockers.",
+          "keyPoints": [
+            "Takeoff mandatory behind the 3 m line (otherwise a fault)",
+            "Landing in the front zone after a legal jump is OK",
+            "Pipe: from P6, set above the quick (BIC = just above the quick)",
+            "Zone D: from P1, often the opposite's safety attack"
+          ],
+          "shots": ["Pipe (back-middle)", "Zone D (back-right)", "Zone A (back-left, rare)", "Tip on a bad set"]
+        }
+      ]
+    },
+    "special": {
+      "title": "Special attacks",
+      "items": [
+        {
+          "name": "Tip",
+          "level": "beginner-intermediate",
+          "levelLabel": "Beginner → Intermediate",
+          "desc": "IDENTICAL approach to the spike (disguise is crucial), then at contact slow the arm and place the ball with a fingertip touch. Direction: empty zone identified BEFORE the jump."
+        },
+        {
+          "name": "Roll shot / topspin off-speed",
+          "level": "intermediate",
+          "levelLabel": "Intermediate",
+          "desc": "Reduced-speed contact (~50-70%) with heavy topspin so the ball drops short behind the block. Harder to read than the tip because it's faster."
+        },
+        {
+          "name": "Cut shot / sharp angle",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermediate+",
+          "desc": "Sharp angle toward zone 1 (from 4) or zone 5 (from 2). Finish with thumb down, hand cutting laterally across the ball. Hit the side of the ball, not the top."
+        },
+        {
+          "name": "Tooling / Wipe",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermediate+",
+          "desc": "Intentionally push the ball out off the block. On a tight set, jump vertically and push the ball laterally using the blocker's outside hand as a \"rail\"."
+        }
+      ]
+    },
+    "errors": {
+      "title": "Common errors",
+      "subtitle": "Things to avoid",
+      "items": [
+        { "label": "Approach timing", "text": "Too early: powerless re-jump. Too late: arm extended behind you at contact." },
+        { "label": "Wrong foot order", "text": "Always finish on left-right (right-handed) — both feet nearly simultaneous." },
+        { "label": "No topspin", "text": "Flat hand = no snap = ball sails long. \"Claw\" over the top of the ball." },
+        { "label": "Net fault", "text": "Jumping forward on a tight set. Jump VERTICALLY, not forward." },
+        { "label": "Back-row fault", "text": "Foot on or in front of the 3 m line at takeoff." },
+        { "label": "One-foot landing", "text": "Except for the slide: land on both feet to protect the knee (ACL risk)." }
+      ]
+    },
+    "videos": {
+      "title": "Video resources",
+      "items": [
+        { "title": "How to spike — 3 steps (Sikana)", "url": "https://www.youtube.com/watch?v=3aQgfk0VtEA" },
+        { "title": "The spike in volleyball (CEPSUM)", "url": "https://www.youtube.com/watch?v=Gn1Otje3beg" },
+        { "title": "Approach footwork in detail", "url": "https://www.youtube.com/watch?v=ub4XoCJMUzU" },
+        { "title": "Seb's sequence — everything about spiking", "url": "https://www.youtube.com/watch?v=JvxZgViw_os" },
+        { "title": "Jumping to attack (Sikana)", "url": "https://www.youtube.com/watch?v=6GOHF5cNIKs" },
+        { "title": "Placed attacks (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
+      ]
+    }
+  },
+  "contre": {
+    "goldenRule": {
+      "mantra": "BALL → SETTER → BALL → HITTER'S SHOULDER → JUMP → PENETRATION",
+      "body": "With regular practice and special attention to timing, you'll dramatically improve your blocks. A well-timed block with moderate jump height beats a very high jump that's poorly timed."
+    },
+    "fundamentals": {
+      "title": "The fundamentals of blocking",
+      "html": "The block is a crucial defensive skill that can become an offensive weapon. The key lies in <strong>perfect timing</strong> and good reading of the play."
+    },
+    "timingSteps": {
+      "title": "Timing: the key to success",
+      "items": [
+        {
+          "title": "Watch the hitter, not the ball",
+          "desc": "Watch the hitter's shoulders and arm to anticipate the moment and direction of the strike."
+        },
+        {
+          "title": "Jump AFTER the hitter",
+          "desc": "Wait until the hitter is in their takeoff phase. If you jump at the same time or earlier, you'll come down too early."
+        },
+        {
+          "title": "The ideal delay: 0.2 to 0.3 seconds",
+          "desc": "Mentally count \"ONE\" when the hitter jumps, then jump immediately after. That fraction of a second is crucial."
+        },
+        {
+          "title": "Penetrate over the net",
+          "desc": "At the peak of your jump, push your hands and arms forward and downward — not just upward."
+        }
+      ]
+    },
+    "types": {
+      "title": "The different types of blocks",
+      "objectiveLabel": "Objective",
+      "items": [
+        {
+          "name": "The offensive block",
+          "objective": "Send the ball directly back into the opponent's court",
+          "points": [
+            { "label": "Position", "text": "Hands spread, fingers extended and spread" },
+            { "label": "Action", "text": "Penetrate as far as possible over the net, arms extended forward" },
+            { "label": "Target", "text": "Brace your wrists to drive the ball down into the opponent's floor" },
+            { "label": "When", "text": "When you're well placed and have read the attack" }
+          ]
+        },
+        {
+          "name": "The soft block (cover block)",
+          "objective": "Slow the ball down so your defense can recover",
+          "points": [
+            { "label": "Position", "text": "Hands close together, palms angled toward you" },
+            { "label": "Action", "text": "Absorb the impact rather than push" },
+            { "label": "Result", "text": "The ball falls softly into your court to be played" },
+            { "label": "When", "text": "When you're late or out of position" }
+          ]
+        },
+        {
+          "name": "The zone block",
+          "objective": "Take away specific attack zones",
+          "points": [
+            { "label": "Position", "text": "Block a specific area (line or cross-court)" },
+            { "label": "Action", "text": "Orient your hands toward the area you want to protect" },
+            { "label": "Tactic", "text": "Force the hitter to swing into a zone where your defenders are ready" },
+            { "label": "When", "text": "Coordinated with your back-row defense" }
+          ]
+        },
+        {
+          "name": "Double or triple block (collective block)",
+          "objective": "Create an impenetrable wall",
+          "points": [
+            { "label": "Coordination", "text": "Jump together at the same moment" },
+            { "label": "Placement", "text": "Outside blockers position themselves based on the middle blocker" },
+            { "label": "Hands", "text": "Join your hands with your teammates' (no gaps)" },
+            { "label": "Communication", "text": "One blocker calls \"line\" or \"cross\" to coordinate" }
+          ]
+        }
+      ]
+    },
+    "timingTips": {
+      "title": "Tips to improve your timing",
+      "items": [
+        { "label": "The \"one-two\" drill", "text": "In practice, say \"ONE\" when the hitter jumps, \"TWO\" when you jump. It builds the necessary delay." },
+        { "label": "Watch the shoulders", "text": "The hitter's shoulder orientation tells you the direction of the strike." },
+        { "label": "Analyze the set", "text": "A high set = more time. A low set = quick reaction." },
+        { "label": "Get into position early", "text": "Better to wait in position than to run there at the last second." },
+        { "label": "Work on your vertical", "text": "The higher you jump, the more margin for error on timing." }
+      ]
+    },
+    "visualSequence": {
+      "title": "Elite visual sequence",
+      "intro": "The best blockers don't watch the ball — they follow a precise sequence:",
+      "chips": ["BALL", "SETTER", "BALL", "HITTER'S SHOULDER"],
+      "items": [
+        { "label": "1. BALL", "text": "See the ball heading toward the setter" },
+        { "label": "2. SETTER", "text": "Read the setter's hands at the moment of contact — direction of the set" },
+        { "label": "3. BALL", "text": "Briefly track the ball to confirm direction" },
+        { "label": "4. HITTER'S SHOULDER", "text": "Lock onto the hitter's shoulder — it gives you the direction of the strike before contact" }
+      ]
+    },
+    "timingByAttack": {
+      "title": "Precise timing by attack type",
+      "headerType": "Attack type",
+      "headerWhen": "Blocker's jump timing",
+      "rows": [
+        { "type": "Quick / 1st tempo (middle)", "timing": "WITH or a hair before the hitter (commit block)" },
+        { "type": "Tight / 2nd tempo outside", "timing": "~0.1s after the hitter" },
+        { "type": "High ball outside (3rd tempo)", "timing": "0.2–0.3s after the hitter" },
+        { "type": "Tight set near the net", "timing": "WITH the hitter" },
+        { "type": "Off the net set", "timing": "~0.5s after, or don't jump" },
+        { "type": "Slide (middle)", "timing": "WITH or just after — track laterally" }
+      ]
+    },
+    "blockStyles": {
+      "title": "Read blocking vs Commit blocking",
+      "read": {
+        "label": "Read blocking — recommended",
+        "body": "The blocker waits for the setter's decision, reads the ball and the hitter, then moves. \"Bunch read\" position (all close to the middle, then explode to the pin).",
+        "points": [
+          "Stable and present on the majority of sets",
+          "Saves the hips and knees",
+          "Suitable for all amateur levels"
+        ]
+      },
+      "commit": {
+        "label": "Commit blocking — advanced/pro",
+        "body": "The middle decides BEFORE the setter releases to jump with the quick. Eliminates the opponent's quick attack, but if the setter sets elsewhere, the middle is completely out of the play.",
+        "points": [
+          "Effective against dominant middles",
+          "High risk if the setter adjusts",
+          "Reserved for players with excellent reading"
+        ]
+      }
+    },
+    "jumpTechnique": {
+      "title": "Block jump technique",
+      "columns": [
+        {
+          "title": "Starting position",
+          "items": [
+            { "text": "Feet shoulder-width apart" },
+            { "text": "Weight on the balls of the feet" },
+            { "text": "Knees slightly bent" },
+            { "text": "Arms along the body or slightly in front" },
+            { "text": "Stand about 30–50 cm from the net" }
+          ]
+        },
+        {
+          "title": "The takeoff",
+          "items": [
+            { "label": "Shuffle step", "text": "If you need to move, use a fast shuffle step" },
+            { "label": "Load", "text": "Bend your legs quickly (don't drop too low)" },
+            { "label": "Arm swing", "text": "Throw your arms upward explosively" },
+            { "label": "Full extension", "text": "Fully extend your legs to maximize height" }
+          ]
+        },
+        {
+          "title": "In the air",
+          "items": [
+            { "text": "Keep your arms extended and tight" },
+            { "text": "Hands spread, fingers extended and spread" },
+            { "text": "Penetrate over the net (no net touch!)" },
+            { "text": "Brace your core to stay stable" }
+          ]
+        }
+      ]
+    },
+    "errors": {
+      "title": "Common errors to avoid",
+      "subtitle": "Frequent mistakes",
+      "items": [
+        { "label": "Jumping too early", "text": "You're coming down as the hitter swings — wait longer!" },
+        { "label": "Watching the ball", "text": "You miss information on the hitter — watch the player!" },
+        { "label": "Soft hands", "text": "The ball bounces back into your court — extend and tense your fingers!" },
+        { "label": "Jumping forward", "text": "You touch the net — jump vertically!" },
+        { "label": "Lowering arms too early", "text": "Keep your arms up until you land." }
+      ]
+    },
+    "exercises": {
+      "title": "Training drills",
+      "items": [
+        {
+          "title": "Partner timing",
+          "desc": "A partner fakes an attack (no ball). You work only on your jump timing. Repeat 20 times."
+        },
+        {
+          "title": "Block on fixed attack",
+          "desc": "A hitter swings from a fixed position. Focus on timing and technique. Gradually increase speed."
+        },
+        {
+          "title": "Shoulder reading",
+          "desc": "The hitter varies their swings (line/cross). Try to read their shoulders to anticipate direction."
+        },
+        {
+          "title": "Footwork + block",
+          "desc": "Work on fast lateral footwork followed by a block. Simulates match situations."
+        }
+      ]
+    },
+    "proTips": {
+      "title": "Pro tips",
+      "items": [
+        { "label": "Patience", "text": "Blocking is one of the hardest skills. Be patient with yourself." },
+        { "label": "Repetition", "text": "Muscle memory is built through hundreds of reps." },
+        { "label": "Video", "text": "Film yourself to analyze your timing and technique." },
+        { "label": "Watch the pros", "text": "Watch how professional players read the game and time their jumps." },
+        { "label": "Start simple", "text": "Master blocking slow attacks before moving on to fast ones." }
+      ]
+    },
+    "videos": {
+      "title": "Video resources",
+      "items": [
+        { "title": "Learning to block (Sikana)", "url": "https://www.youtube.com/watch?v=hJKueZn-tNQ" },
+        { "title": "Blocking in volleyball (CEPSUM)", "url": "https://www.youtube.com/watch?v=_MchJmDMn0E" },
+        { "title": "Drill: jumping to block", "url": "https://www.youtube.com/watch?v=GDS8PoWxO6Q" },
+        { "title": "Drill: blocking an attack", "url": "https://www.youtube.com/watch?v=S6TcodMWFz4" }
+      ]
+    }
+  },
+  "service": {
+    "goldenRule": {
+      "mantra": "",
+      "body": "80% of serving errors come from the toss. Stabilize the toss first, before chasing power."
+    },
+    "types": {
+      "title": "SERVE TYPES",
+      "biomechanicsLabel": "KEY BIOMECHANICS",
+      "stepsLabel": "EXECUTION STEPS (RIGHT-HANDED)",
+      "errorsLabel": "✗ COMMON ERRORS",
+      "exercisesLabel": "★ DRILLS",
+      "videosLabel": "VIDEOS",
+      "items": [
+        {
+          "id": "cuillere",
+          "name": "Underhand serve",
+          "level": "beginner",
+          "levelLabel": "Beginner",
+          "tagline": "underhand — pendulum below the waist",
+          "description": "Pendulum motion of the hitting arm below the waist. Legal at every level, recommended for beginners or in case of a shoulder injury. Almost nonexistent above adult regional level.",
+          "biomechanics": [
+            "Short kinetic chain: hips → shoulder → arm → hand",
+            "Pendulum motion without torso rotation",
+            "Weight transfer: back foot → front foot",
+            "Contact: heel of the hand or closed fist beneath the center of the ball"
+          ],
+          "steps": [
+            "Left foot forward, weight on the back leg",
+            "Left hand holds the ball at hip height, aligned with the arm",
+            "Right arm cocked back, palm open or fist closed",
+            "Release the ball just before contact — don't toss it",
+            "Swing forward, strike below the center of the ball",
+            "Arm follows through and points at the target, weight transferred to the front foot"
+          ],
+          "errors": [
+            { "label": "Ball held too low or off to the side", "text": "Keep the ball at hip height, aligned with the hitting arm" },
+            { "label": "Striking with the fingers", "text": "Use the heel of the hand — broader, more stable surface" },
+            { "label": "Tossing too high", "text": "Just release the ball, don't toss it up" },
+            { "label": "Soft wrist", "text": "Lock the arm at contact for a clean impact" }
+          ],
+          "exercises": [
+            "Hoops bowling: aim at zones 4 m from the net",
+            "10 serves from 4 m, then back up 1 m per set until the end line",
+            "4×3 m floor targets — aim for 50% accuracy"
+          ],
+          "videos": [
+            { "title": "Underhand + tennis serve (Sikana)", "url": "https://www.youtube.com/watch?v=xl6twpn3Qs8" },
+            { "title": "How to serve underhand", "url": "https://www.youtube.com/watch?v=MWna318SrKo" }
+          ]
+        },
+        {
+          "id": "float",
+          "name": "Standing float serve",
+          "level": "intermediate",
+          "levelLabel": "Intermediate",
+          "tagline": "standing float — the default serve for 90% of amateurs",
+          "description": "A serve with no rotation that produces an unpredictable trajectory (\"knuckleball\" effect). At a critical speed (~12-13 m/s), asymmetrical vortices create random lateral lift forces. This is the serve to master first.",
+          "biomechanics": [
+            "Full kinetic chain: legs → hips → torso → shoulder → elbow → hand",
+            "\"Bow and arrow\" position: elbow high above the shoulder, hand behind the ear",
+            "Wrist LOCKED and firm — absolutely required for the float effect",
+            "Contact: heel of the hand on the center of the ball",
+            "\"Punch and freeze\": SHORT follow-through — the hand stops immediately after contact"
+          ],
+          "steps": [
+            "Body at 45° to the net, feet shoulder-width apart",
+            "Left arm extended in front of the shoulder, ball at head height",
+            "Very short toss: \"place\" the ball 30-50 cm above the shoulder — the ball does not spin",
+            "Left foot steps toward the target right after placing the ball",
+            "Full arm extension at contact, hand firm and flat",
+            "FREEZE: stop the motion immediately after contact — no arm follow-through"
+          ],
+          "errors": [
+            { "label": "Extended follow-through", "text": "Failure cause #1: follow-through adds spin that kills the float — freeze immediately" },
+            { "label": "Toss too high", "text": "The ball drops into the net — keep the toss short, only 30-50 cm" },
+            { "label": "Spinning toss", "text": "Puts spin on the ball — place the ball, don't toss it" },
+            { "label": "Contact with the palm alone", "text": "Use the heel of the hand (base of the palm) for a flat surface" }
+          ],
+          "exercises": [
+            "Toss & Drop: mark a spot on the floor, toss 20 times without hitting — aim for 18/20 on the mark",
+            "\"Punch and freeze\" against a wall at 3 m: work on stopping the motion instantly",
+            "5 consecutive no-spin serves visually validated by a partner"
+          ],
+          "videos": [
+            { "title": "Float serve in 4 minutes", "url": "https://www.youtube.com/watch?v=0z2_R2cMU7g" },
+            { "title": "Improving your float serve", "url": "https://www.youtube.com/watch?v=mdEXHKNjfQ8" },
+            { "title": "Serving: float + tennis (CEPSUM)", "url": "https://www.youtube.com/watch?v=_e00ogqoNZw" }
+          ]
+        },
+        {
+          "id": "jumpfloat",
+          "name": "Jump float serve",
+          "level": "advanced",
+          "levelLabel": "Advanced",
+          "tagline": "jump float — the standard for elite women's volleyball",
+          "description": "Float with a short approach and a jump. Gains contact height, speed, and angle of descent. Has become the standard at elite women's level (86% of serves in pro women according to recent studies). Lower risk than the jump topspin while being more disruptive than the standing float.",
+          "biomechanics": [
+            "Short approach (2 to 4 steps)",
+            "Arms in bow-and-arrow position during the jump — different from the spike where the arms drive upward",
+            "The approach provides the ball speed, not the arm alone",
+            "Contact at the highest point, slightly in front of the head",
+            "Locked wrist + freeze identical to the standing float"
+          ],
+          "steps": [
+            "Position 2-3 m behind the line, ball in the left hand",
+            "Step 1 (right) initiates, arms relaxed",
+            "Step 2 (left): toss the ball to ~1.5 m height, no rotation",
+            "Step 3 + hop: takeoff on both feet behind the line — arms rise into bow-and-arrow",
+            "Vertical jump, slightly forward, body braced",
+            "Strike with arm extended, heel of the hand on the center of the ball",
+            "Immediate FREEZE — land inside the court"
+          ],
+          "errors": [
+            { "label": "Toss too high", "text": "Jump spin reflex — keep the toss short, like the standing float" },
+            { "label": "Arms swinging like in a spike", "text": "Turns into a spin serve — maintain the bow-and-arrow position" },
+            { "label": "Extended follow-through", "text": "Same as the standing float: freeze is mandatory" },
+            { "label": "Foot fault at takeoff", "text": "Make sure the takeoff is behind the end line" }
+          ],
+          "exercises": [
+            "Master the standing float (solid freeze) before adding the approach",
+            "Approach only without hitting: work on a stable, low toss",
+            "Jump float at controlled speed: consistency before power"
+          ],
+          "videos": [
+            { "title": "Jump float serve — INF'AUX ENTRAÎNEURS (Bretagne)", "url": "https://www.youtube.com/watch?v=P5xCgV7nfO8" },
+            { "title": "Jump float + jump spike (Volleyball Canada)", "url": "https://www.youtube.com/watch?v=X1Mq9K90FCk" }
+          ]
+        },
+        {
+          "id": "jumpspin",
+          "name": "Jump topspin serve",
+          "level": "competition",
+          "levelLabel": "Competition",
+          "tagline": "jump serve — a spike from behind the line",
+          "description": "\"A spike from behind the end line\": ball struck at full speed with topspin (50-60 mph in strong clubs). Highest ace potential but also the highest error rate. Reserved for those who have invested 1000+ reps in training.",
+          "biomechanics": [
+            "3-4 step approach identical to a back-row spike",
+            "High toss (1-1.5 m in front of you) with slight forward spin",
+            "Sequential rotation: hips → torso → shoulder → elbow → wrist",
+            "Contact in the 10-11 o'clock zone of the ball",
+            "Full wrist snap for topspin (~30 rotations/s at elite level)",
+            "Full follow-through — opposite of the float"
+          ],
+          "steps": [
+            "Position 3-4 m behind the line, ball in the hitting hand",
+            "Step 1 (right) + high toss with slight induced topspin",
+            "Step 2 (left): acceleration",
+            "Step 3 (right): long power step, center of gravity dropping",
+            "Step 4 (left): takeoff, arms swinging upward",
+            "Explosive vertical-forward jump",
+            "Strike at the top: hand passes over the ball (10 o'clock), palm then fingers rolling over",
+            "Full wrist snap + follow-through — land 1-2 m inside the court"
+          ],
+          "errors": [
+            { "label": "Toss too low or behind you", "text": "Net fault cause #1 — the toss must be high and in front" },
+            { "label": "Toss too far in front", "text": "Foot fault — respect the limits of the service zone" },
+            { "label": "No wrist snap", "text": "The ball sails long without descending spin" },
+            { "label": "Using it in matches without prep", "text": "1000 reps in training first — golden rule" }
+          ],
+          "exercises": [
+            "Golden rule: 1000 reps in training before using it in a match",
+            "\"Control\" jump spin: lower toss, reduced speed, aim at specific zones",
+            "Film your toss: 80% of errors come from toss placement"
+          ],
+          "videos": [
+            { "title": "Powerful jump spike serve + float (Sikana)", "url": "https://www.youtube.com/watch?v=50TUVvPLKr8" }
+          ]
+        }
+      ]
+    },
+    "zones": {
+      "title": "TARGET ZONES & TACTICS",
+      "headerZone": "OPPONENT ZONE",
+      "headerEffect": "TACTICAL EFFECT",
+      "rows": [
+        { "zone": "Zone 1 — back right", "effect": "Blocks the setter release in a 5-1 system" },
+        { "zone": "Zone 2 — short front right", "effect": "Disrupts the right-side start, excludes the libero" },
+        { "zone": "Zone 3 — short front middle", "effect": "Blocks the middle, breaks up quick attacks" },
+        { "zone": "Zone 4 — short front left", "effect": "Forces the main hitter to pass AND attack" },
+        { "zone": "Zone 5 — deep back left", "effect": "Long diagonal, high error rate" },
+        { "zone": "Zone 6 — deep back middle", "effect": "Serve deep against short setters" }
+      ],
+      "tips": [
+        { "label": "Seams", "text": "Aiming at the space between two passers is more effective than aiming at a player — it stresses the opponent's communication." },
+        { "label": "Alternate short/long", "text": "Prevents the setter from knowing when to back off. The short float (zones 2-3-4) behind the attack line is particularly disruptive." },
+        { "label": "FBSO% metric", "text": "A serve that drops the opponent's First Ball Side Out from 70% to 45% without producing an ace is a very effective serve." }
+      ]
+    },
+    "learningHierarchy": {
+      "label": "★ LEARNING HIERARCHY",
+      "footer": "Master each level before moving on to the next. <strong>Consistency beats power.</strong>"
+    }
+  },
+  "reception": {
+    "goldenRule": {
+      "body": "Passing determines 60% of a team's offensive success. Without a good reception, no quick attack. The platform is passive — the legs are active."
+    },
+    "format": {
+      "title": "Game format",
+      "description": "The <strong>reception systems</strong>, the <strong>setter's role</strong> and the <strong>common errors</strong> below adapt to the chosen format."
+    },
+    "readyPosition": {
+      "title": "Ready position",
+      "points": [
+        "Feet slightly wider than shoulders, one foot slightly forward",
+        "Knees flexed toward the inside of the feet, hips low, torso angled at 30-45°",
+        "Back straight, weight on the balls of the feet (heels slightly light but not lifted)",
+        "Arms SEPARATED (not joined), bent at 90-145°, at waist height",
+        "Eyes on the server from the toss"
+      ],
+      "errorLabel": "Main error",
+      "errorText": "having arms already joined into a platform before the ball arrives — it slows down movement and prevents the late choice between bump and hands."
+    },
+    "platform": {
+      "title": "The platform",
+      "tips": [
+        { "title": "Sweet spot", "text": "The ideal contact surface is between 2.5 and 15 cm above the wrists." },
+        { "title": "Cup and fold", "text": "Recommended technique: one closed fist, the other hand wraps over the top — thumbs parallel and pointing down." },
+        { "title": "Thumbs down", "text": "Pointing the thumbs toward the floor rotates the forearms outward and tightens the platform." },
+        { "title": "Never interlace", "text": "NEVER interlace fingers on a powerful serve — risk of fracture." },
+        { "title": "Angle is everything", "text": "\"The ball goes where the platform looks\" — for a deep pass: platform at 45°; for a short pass: platform more parallel to the floor." }
+      ]
+    },
+    "steps": {
+      "title": "Execution — key steps",
+      "items": [
+        "Read the server: identify the serve type before contact.",
+        "Ready position with arms separated (NOT joined in advance).",
+        "Read the trajectory from the moment of the opponent's contact.",
+        "Move (shuffle steps), arrive BEHIND the ball before the arms come together.",
+        "Build the platform early: join the hands when the ball arrives, not too soon.",
+        "FREEZE: stop completely just before contact, weight on the front foot — hold for 1-2 seconds.",
+        "Contact on the sweet spot, shoulders oriented toward the target setter.",
+        "Follow-through: hips and shoulders move toward the target — no arm swing."
+      ],
+      "freezeLabel": "The freeze",
+      "freezeText": "\"Pose for a picture\" — freeze completely 1-2 seconds after contact. At 50-90 km/h, a defender in motion cannot adjust their angle. Still, they can move in any direction."
+    },
+    "displacements": {
+      "title": "Movement",
+      "items": [
+        {
+          "name": "Lateral (shuffle steps)",
+          "desc": "The foot on the ball side leaves first. Shuffle without crossing, hips low. Arrive behind the ball, reorient toward the target, freeze + platform at the last moment. For longer distances: cross-over step, then pivot."
+        },
+        {
+          "name": "Forward (short ball)",
+          "desc": "For short serves or tips. Often ends in a forward lunge: knee collapses toward the floor, platform placed in front of the front knee."
+        },
+        {
+          "name": "Backward (drop step)",
+          "desc": "Pivot the foot then shuffle backward. NEVER run backward (loss of balance). If too late to back up: pivot and create a platform off to the side."
+        }
+      ],
+      "oneHand": {
+        "label": "One-arm pass — emergency",
+        "text": "Last-resort technique when the ball is too far for two arms. Arm extended, flat platform on the inner forearm, no swing — just a stab to deflect upward. Variants: one-arm stab (fist on a hard-driven ball), one-arm scoop (open palm up, ball low)."
+      }
+    },
+    "systems": {
+      "titlePrefix": "Reception systems",
+      "nonOfficialLabel": "⚠ Format not FIVB-official",
+      "alert5": "Indoor 5v5 has no dedicated FIVB or FFVb rulebook. The systems below are logical adaptations of the 6v6 5-1 documented by VolleyballXL, The Art of Coaching Volleyball and Volleyball Canada.",
+      "alert4": "Indoor 4v4 has no official FIVB rulebook. The formations below come from university intramurals (USA), FFVb / Volleyball Canada coaching manuals, and the beach literature (Brandon Joyner, Better at Beach).",
+      "prosLabel": "Pros",
+      "consLabel": "Cons",
+      "byTeamSize": {
+        "6": [
+          {
+            "name": "W system — 5 passers",
+            "level": "Beginner",
+            "desc": "3 players in the front line, 2 in the back — everyone except the setter participates. Historical formation that gives its name to the \"W-formation\" (FIVB, USAV IMPACT).",
+            "pros": ["Smaller zones per player (~1.8 m lane)", "Little communication required", "Ideal for volleyball schools and U13-U15"],
+            "cons": ["Many overlap zones between 5 players", "Weaker passers forced to participate", "Disorganizes attackers (3 front-row players in reception)"]
+          },
+          {
+            "name": "U system — 3 passers",
+            "level": "Modern standard",
+            "desc": "Libero in zone 6 (main target of servers), outsides in zones 5 and 1. The 3 best passers take all the balls, all front-row attackers release.",
+            "pros": ["Simplified 3-person communication", "The 3 best passers cover everything", "Front-row attackers free for their approach"],
+            "cons": ["Wider side lanes to cover (~3 m per player)", "Requires a high-performing libero", "Vulnerable to short serves in the corners"],
+            "recommended": true
+          },
+          {
+            "name": "2-passer reception — libero + R4",
+            "level": "Elite",
+            "desc": "Only 2 passers (libero + a selected R4) cover the full width. Used at high levels to free the 2nd R4 and let them prepare to attack without reception fatigue.",
+            "pros": ["All attackers available for the offensive transition", "Stronger block/attack because attackers aren't worn down by reception", "Preferred system for pro teams (Poland, France, Italy)"],
+            "cons": ["Requires 2 highly athletic passers (~4.5 m lane each)", "No margin for error — a poorly read serve = point for the opponent", "Unusable without an international-level libero"]
+          }
+        ],
+        "5": [
+          {
+            "name": "3-passer reception — 2F-3B setup",
+            "level": "Recommended",
+            "desc": "The 3 back-row players (P5, P6, P1) pass. The setter in P1 releases from reception and penetrates the moment the server contacts the ball, like in 6v6 5-1. The 2 front-row players (P4, P3) are free for their approach.",
+            "pros": ["Setup closest to 6v6 5-1 (pedagogically ideal)", "Good reception → attack transition", "2 front-row attackers + back-row pipe possible"],
+            "cons": ["3 passers across 9 m (~3 m per player)", "The setter must read fast and decide to penetrate in < 1 second", "Hole in P1 if the setter leaves too early"],
+            "recommended": true
+          },
+          {
+            "name": "4-passer reception — 3F-2B setup",
+            "level": "Standard",
+            "desc": "The 2 back-row players (P5, P1) + 2 front-row players (typically P4 and P3 — the setter in P2 releases) pass. The setter stays at the target: no penetration, immediate distribution.",
+            "pros": ["Smaller zones (~2.25 m per player)", "Ideal for mixed or beginner teams", "Setter already at the target — no transition"],
+            "cons": ["Only 2 front-row attackers available (P4 + P3 or P4 + middle)", "Front-row passers then have to run their approach", "Double block hard since the setter goes up to the net"]
+          },
+          {
+            "name": "Pentagon reception — 4 or 5 players",
+            "level": "Beginner / recreational",
+            "desc": "5 passers (equivalent to the W with 5 players). 1 player at the front middle (often a dedicated setter), the 2 outsides at midcourt, the 2 back-row players deep. Everyone passes unless the middle player is a dedicated setter.",
+            "pros": ["Even coverage of the court", "Very low technical demand", "Suited to introductory coaching sessions"],
+            "cons": ["Lots of overlaps with 5 players", "No attacker is released", "Ineffective as the level rises"]
+          }
+        ],
+        "4": [
+          {
+            "name": "Diamond (3 passers)",
+            "level": "4v4 standard",
+            "desc": "Setter at the front middle (P3, released from reception). The 2 outsides (P4, P2) at midcourt + the lone back-row player (P1) deep do the passing. The most widely used formation in indoor 4v4 (university intramurals).",
+            "pros": ["Setter already at the target — no penetration", "3 clear, symmetrical zones", "Ideal for intramurals, recreational, beach 4s"],
+            "cons": ["Covering 9 m of width with 3 = ~3 m per player", "The lone back-row player must defend the entire back after the pass", "Only 2 front-row attackers"],
+            "recommended": true
+          },
+          {
+            "name": "Line 3-1 (3 passers)",
+            "level": "Intermediate",
+            "desc": "Lone setter in P1 (back row) who penetrates the moment the opponent's serve makes contact, heading toward zone 2. The 3 front-row players (P4, P3, P2) pass. Simplified equivalent of the 6v6 5-1.",
+            "pros": ["3 front-row attackers at all times", "Pedagogical, prepares for 6v6 5-1", "The setter can also attack after distribution"],
+            "cons": ["Requires very clean reception (penetration is unforgiving)", "Hole in P1 if the setter leaves before the ball is defended", "All attackers have to know how to pass"]
+          },
+          {
+            "name": "Box 2-2 (4 passers)",
+            "level": "Beginner",
+            "desc": "2 front-row players (P4, P2) + 2 back-row players (P5, P1), no dedicated setter at the net. The best-placed player makes the 2nd touch. Typical of introductory sessions or U11-U13.",
+            "pros": ["Covers the entire court (4 zones of 2.25 m)", "No technical demand on the setter", "Everyone passes — very pedagogical"],
+            "cons": ["No dedicated setter — random distribution", "No attacker is released for their approach", "Ineffective as the level rises"]
+          }
+        ]
+      }
+    },
+    "passeur": {
+      "titlePrefix": "The setter's role in reception",
+      "noteLabel": "Note",
+      "byTeamSize": {
+        "6": [
+          {
+            "title": "BACK-ROW setter (P1 / P6 / P5) — 5-1 rotations P1, P6, P5",
+            "bullets": [
+              "Releases from reception: no ball is intended for them.",
+              "Starts in a special position (e.g. P1: ~7.5 m from the net, 1 m from the right line), hidden behind another player (stack).",
+              "Penetrates toward the target (between Z2 and Z3, ~1 m from the net, 3 m right of center) THE MOMENT the opposing serve makes contact — not before (overlap fault).",
+              "P1: shortest penetration; P6: central penetration; P5: longest (diagonal) penetration.",
+              "3 front-row attackers available (R4 + middle + opposite) + back-row attacks."
+            ]
+          },
+          {
+            "title": "FRONT-ROW setter (P2 / P3 / P4) — 5-1 rotations P2, P3, P4",
+            "bullets": [
+              "Releases from reception: already near the target.",
+              "In P2: already at the target — also becomes the line blocker against the opponent's Z4 outside (double defensive load).",
+              "In P3: lateral switch to the target immediately after the serve contact.",
+              "In P4: crosses the entire net to reach the target (the longest front-row movement).",
+              "Only 2 front-row attackers (offset by a pipe from P6 and a back-row attack from the opposite in P1)."
+            ]
+          }
+        ],
+        "5": [
+          {
+            "title": "PENETRATING setter (2F-3B setup, recommended)",
+            "bullets": [
+              "Starts in P1 back row, releases from reception.",
+              "Penetrates toward the target (Z2/Z3, ~1 m from the net) THE MOMENT the opposing serve makes contact — same as 6v6 5-1.",
+              "The 3 back-row players (P5 + P6 + P1 leaving) handle the 3-passer reception.",
+              "Must wait for the ball to be defended before leaving (common error: premature start → hole in P1)."
+            ],
+            "note": "Setup closest to 6v6 — recommended to prepare for the transition."
+          },
+          {
+            "title": "FIXED FRONT-ROW setter (3F-2B or pentagon setup)",
+            "bullets": [
+              "Stays at the target (P2 or P3 depending on setup): no penetration.",
+              "Releases from reception: no ball is intended for them.",
+              "Immediate distribution as soon as the pass arrives — no transition.",
+              "In P2: also becomes the line blocker against the opposing outside hitter (as in 6v6 5-1)."
+            ]
+          }
+        ],
+        "4": [
+          {
+            "title": "FRONT-ROW setter in diamond (P3 center net)",
+            "bullets": [
+              "Stays at the target (Z3, ~1 m from the net): no penetration.",
+              "Releases from reception: the 3 others (2 outsides + 1 back-row) pass.",
+              "Quick distribution to Z4 or Z2 depending on pass quality.",
+              "Their defense → set transition has to be done in under 2 seconds (only 1 back-row player = lots of coverage)."
+            ],
+            "note": "Most widely used formation in indoor 4v4."
+          },
+          {
+            "title": "PENETRATING setter in line 3-1 (P1 back row)",
+            "bullets": [
+              "Starts in P1 back row, releases from reception.",
+              "Penetrates toward zone 2 as soon as the opposing serve makes contact.",
+              "The 3 front-row players (P4, P3, P2) pass.",
+              "Requires very clean reception — otherwise the setter can't reach the target in time."
+            ]
+          },
+          {
+            "title": "No dedicated setter (box 2-2)",
+            "bullets": [
+              "The best-placed player after the 1st touch makes the 2nd touch.",
+              "Everyone passes — 4 zones of ~2.25 m.",
+              "Random distribution to one of the 3 other players.",
+              "Reserved for introductory sessions (U11-U13, school)."
+            ]
+          }
+        ]
+      }
+    },
+    "libero": {
+      "title": "The libero — specialized reception",
+      "byTeamSize": {
+        "6": {
+          "title": "The libero — keystone of reception in 6v6",
+          "text": "Defensive specialist in a contrasting jersey. Systematically replaces the middles when they rotate to the back row (unlimited substitutions, not counted under FIVB Rule 19). Plays 3 consecutive rotations in Z5-Z6-Z1. Preferred reception position: Z6 (main target of servers) or Z5. FIVB restrictions: no block, no attack above the net, no overhand set in front of the 3 m line if a teammate then attacks above the net.",
+          "accent": "orange"
+        },
+        "5": {
+          "title": "No official libero in 5v5",
+          "text": "Indoor 5v5 has no FIVB rulebook. In practice, no federation authorizes a libero in this format. The best passer is placed in P6 or P5 and systematically plays the back row — they become the \"de facto libero\" without the contrasting jersey or the restrictions. So they can block and attack if needed.",
+          "accent": "teal"
+        },
+        "4": {
+          "title": "No libero in 4v4",
+          "text": "No libero is authorized in 4v4 rules (university intramurals, FFVb coaching, beach 4s). The lone back-row player in the diamond — or the penetrating setter in line 3-1 — takes on the role of best passer/defender. With ~3 m of lane per passer in the diamond, anticipation matters more than technique.",
+          "accent": "plum"
+        }
+      }
+    },
+    "reading": {
+      "title": "Reading the serve to position yourself",
+      "headerType": "Serve type",
+      "headerWhen": "Passer adjustment",
+      "rows": [
+        { "type": "Underhand", "adapt": "Normal position, take the ball high" },
+        { "type": "Standing float", "adapt": "Upright position, move forward to take it early before it deviates" },
+        { "type": "Topspin", "adapt": "Low position, ready to back up, angled platform" },
+        { "type": "Jump float", "adapt": "Can be taken with an overhand set 4 m from the net" },
+        { "type": "Jump topspin", "adapt": "Low position, anticipate backing up, rigid passive platform" },
+        { "type": "Hybrid serve", "adapt": "Platform ready for both scenarios (float or topspin)" }
+      ],
+      "cuesLabel": "Cues before the server's contact",
+      "cues": [
+        "Server's position on the line → preferred angle",
+        "Height and placement of the toss: high+behind → topspin; low+in front → float",
+        "Approach length: long → jump topspin; short → jump float",
+        "Direction of the server's shoulders at contact → direction of the ball"
+      ]
+    },
+    "errors": {
+      "title": "Common errors",
+      "commonLabel": "Technical errors (all formats)",
+      "common": [
+        { "label": "Swinging arms", "text": "Cause #1 — arms swinging at contact, unpredictable ball. Fix: \"the platform is passive, the legs are active\"." },
+        { "label": "Broken platform", "text": "One forearm higher than the other — lock the elbows and push the thumbs down." },
+        { "label": "Arms joined too early", "text": "Slows movement and prevents the late bump/hands choice. Join the hands only on arrival." },
+        { "label": "Torso too upright", "text": "The platform passes under the ball → pass too far from the net. Lean forward 30-45°." },
+        { "label": "Contact above the navel", "text": "Too high = reduced control. Aim for contact at waist height or lower." },
+        { "label": "No freeze", "text": "Still moving at contact = direction impossible to control. Freeze completely." }
+      ],
+      "sizeLabelPrefix": "Errors specific to",
+      "byTeamSize": {
+        "6": [
+          { "label": "Libero out of position", "text": "Too centered, they miss short serves in the corners; too lateral, they give up the middle. Reference target: Z6 lined up with the opposing server." },
+          { "label": "Setter overlap", "text": "The setter leaves their position before the opposing serve contact — fault #1 in 5-1 (FIVB Rule 7.4). Their feet must respect front/back relationships until contact." },
+          { "label": "5-passer reception with no clear roles", "text": "In the W, the 3 front-row players get in each other's way in the middle zone. Explicitly define who takes the ball between P3 and P6 on axial serves." }
+        ],
+        "5": [
+          { "label": "Setter leaving too early", "text": "In 2F-3B setup with a penetrating setter, leaving before the ball is defended = hole in P1. Wait for confirmation." },
+          { "label": "2 passers side by side", "text": "In 3F-2B setup, P5 and P1 must be spaced (one per side) and not centered together. Otherwise, the sidelines are uncovered." },
+          { "label": "Front-row passer forgetting to attack", "text": "In 3F-2B setup, the front-row player who passes then has to run their attack approach — a reflex to drill specifically." },
+          { "label": "No de facto libero defined", "text": "Without a clear role, the 3 back-row players defer to each other. Explicitly designate the best passer as the priority in the central zone." }
+        ],
+        "4": [
+          { "label": "Diamond setter who passes", "text": "In the diamond, the setter in P3 must RELEASE from reception — otherwise they can't distribute quickly. The 3 others take it." },
+          { "label": "Lone back-row player overloaded", "text": "In the diamond, the back-row P1 covers ~3.5 m of backcourt alone. Anticipation = skill #1; constant shuffling and early reading." },
+          { "label": "Box 2-2 with no call on 2nd touch", "text": "Without a dedicated setter, who sets? Shouting \"MINE!\" on the 2nd touch right after reception is non-negotiable." },
+          { "label": "Diamond outsides in a straight line", "text": "P4 and P2 at midcourt at the same depth as P1 → the short cut shot drops between them. Stagger the positions." }
+        ]
+      }
+    },
+    "videos": {
+      "title": "Video resources",
+      "items": [
+        { "title": "How to bump (Sikana)", "url": "https://www.youtube.com/watch?v=aZkZwAFeye0" },
+        { "title": "The forearm pass (CEPSUM)", "url": "https://www.youtube.com/watch?v=qIPlthgJvHU" },
+        { "title": "Controlled pass to the setter", "url": "https://www.youtube.com/watch?v=eUDY6AGS1-A" },
+        { "title": "Learning high and low reception (Sikana)", "url": "https://www.youtube.com/watch?v=ZLRy_Gu9LVA" },
+        { "title": "Solo passing warm-up", "url": "https://www.youtube.com/watch?v=nGiE_y09vTY" }
+      ]
+    }
+  },
+  "positionnement": {
+    "selectors": {
+      "title": "Your team configuration",
+      "description": "Choose your format and tactical configuration: <strong>all guide content</strong> (positions, zones, defense by attack) will adapt.",
+      "formatLabel": "Game format",
+      "configLabel": "Tactical configuration"
+    },
+    "principle": {
+      "label": "Defensive base principle",
+      "lead": "Defensive positioning depends on 3 main factors:",
+      "points": [
+        "Your position (front or back row)",
+        "The opposing attack zone (zone 4, 3, 2)",
+        "The type of attack (hard spike, tip, off-speed)"
+      ]
+    },
+    "postes": {
+      "titlePrefix": "1. Positions and zones",
+      "layoutCaptionPrefix": "Your team layout in",
+      "detailCta": "See each position in detail on /positions →",
+      "ruleLabel": "Important rule",
+      "ruleByTeamSize": {
+        "6": "Back-row players (5, 6, 1) CANNOT block at the net. They defend the backcourt.",
+        "5": "With 5 players, each defender covers ~30 m² (vs 20 m² in 6v6). Reading becomes critical.",
+        "4": "No libero. Each player defends ~30-40 m². Anticipation is skill #1."
+      }
+    },
+    "zonePositioning": {
+      "title": "2. Positioning by opposing attack zone",
+      "tabLabels": {
+        "zone4": "Zone 4 attack",
+        "zone3": "Zone 3 attack",
+        "zone2": "Zone 2 attack"
+      },
+      "captionsByZone": {
+        "zone4": "Defense against a Zone 4 attack (opposing left wing)",
+        "zone3": "Defense against a Zone 3 attack (middle)",
+        "zone2": "Defense against a Zone 2 attack (opposing right wing)"
+      },
+      "legend": {
+        "zone": "Responsibility zone",
+        "blk": "BLK",
+        "blkDesc": "= on the block",
+        "off": "OFF",
+        "offDesc": "= off-blocker",
+        "def": "DEF",
+        "defDesc": "= defense"
+      },
+      "unavailable": "Diagram unavailable for this configuration."
+    },
+    "layoutLabels": {
+      "5-1": {
+        "zone4": ["Deep cross", "Block shadow", "Line", "Off-blocker"],
+        "zone3": ["Cross L", "Axis", "Cross R", "Cover", "Cover"],
+        "zone2": ["Deep cross", "Block shadow", "Line", "Off-blocker"]
+      },
+      "pentagon": {
+        "zone4": ["Z1 short", "Deep cross", "Off-blk"],
+        "zone3": ["Cross L", "Cross R"],
+        "zone2": ["Z5 short", "Deep cross", "Off-blk"]
+      },
+      "3F-2B": {
+        "zone4": ["Z1 short", "Deep cross", "Off-blk"],
+        "zone3": ["Cross L", "Cross R"],
+        "zone2": ["Z5 short", "Deep cross", "Off-blk"]
+      },
+      "2F-3B": {
+        "zone4": ["Line R", "Axis", "Cross L", "Off-blk"],
+        "zone3": ["Cross L", "Axis", "Cross R"],
+        "zone2": ["Line L", "Axis", "Cross R", "Off-blk"]
+      },
+      "losange": {
+        "zone4": ["Short line", "Cross L", "Deep"],
+        "zone3": ["Cross L", "Cross R", "Deep"],
+        "zone2": ["Short line", "Cross R", "Deep"]
+      },
+      "carre": {
+        "zone4": ["Short cross", "Deep cross", "Off-blk"],
+        "zone3": ["Cross L", "Cross R"],
+        "zone2": ["Short cross", "Deep cross", "Off-blk"]
+      }
+    },
+    "layoutNotes": {
+      "5-1": {
+        "zone4": [
+          { "label": "Position 2 (opposite / OPP)", "text": "Line blocker — blocks, goes up to the net on the right side." },
+          { "label": "Position 3 (middle)", "text": "Closes the cross-court on the double block with the opposite." },
+          { "label": "Position 4 (R4 off-blocker)", "text": "Pulls back to the 3 m line on the left side — covers the short cut shot (sharp diagonal) and tips." },
+          { "label": "Position 5 (Libero)", "text": "Defends the long deep cross, ~7-8 m from the net, in the inside shoulder of the middle blocker." },
+          { "label": "Position 6 (back middle)", "text": "High balls over the block, long block deflections, axis ~8-8.5 m." },
+          { "label": "Position 1 (back right)", "text": "Defends the deep line in the block shadow, ~7-7.5 m from the net, 0.5 m from the right line." }
+        ],
+        "zone3": [
+          { "label": "Position 3 (middle)", "text": "Solo block in read or commit depending on opponent scouting." },
+          { "label": "Positions 4 and 2 (outsides)", "text": "On the attack line (~2-2.5 m from the net, 0.5 m from the sidelines): cover block deflections and balls through the block." },
+          { "label": "Position 5 (Libero)", "text": "Facing the middle attacker, in their hitting lane (~7-8 m from the net)." },
+          { "label": "Position 6 (back middle)", "text": "Shoulders facing the attacker; defends the hard ball through the block (axis ~8-8.5 m)." },
+          { "label": "Position 1 (back right)", "text": "Moves up one meter (~7.5 m from the net, 1 m from the right line): shorter angles on a quick." },
+          { "label": "Key rule", "text": "\"Stopped on contact\": everyone stopped and balanced at the exact moment of the hit." }
+        ],
+        "zone2": [
+          { "label": "Position 4 (R4)", "text": "Line blocker — blocks at the net on the left side." },
+          { "label": "Position 3 (middle)", "text": "Closes the cross-court on the double block with the R4." },
+          { "label": "Position 2 (opposite / OPP)", "text": "Becomes the off-blocker on the right side — pulls to the 3 m line, covers the short cut shot and tips." },
+          { "label": "Position 5 (Libero)", "text": "Defends the deep line in the block shadow, ~7-7.5 m from the net, 0.5 m from the left line." },
+          { "label": "Position 6 (back middle)", "text": "High balls over the block, axis ~8-8.5 m from the net." },
+          { "label": "Position 1 (setter or OH/OPP)", "text": "Defends the long deep cross-court, ~7-8 m from the net." }
+        ]
+      },
+      "pentagon": {
+        "zone4": [
+          "Opposing Z4 attack (opponent's left wing) → ball arrives on our right.",
+          "2-1-2 system: double block (P2 opposite line + P3 cross) + 2 deep defenders.",
+          "P4 (left outside) as off-blocker at 2-2.5 m from the net, 1 m from the line — covers tip and cut shot.",
+          "P5 (~7-7.5 m, 0.5 m from left line) defends the long deep cross-court.",
+          "P1 (~7-7.5 m, 0.5 m from right line) defends the deep line in the block shadow.",
+          "Main shot defended: long deep cross-court (statistically the most frequent trajectory)."
+        ],
+        "zone3": [
+          "Quick middle attack (Z3) — short angles, little reaction time.",
+          "Solo block: P3 (middle) reading, no commit possible.",
+          "P4 and P2 (off-blockers) at 2 m from the net on the attack line — cover deflections.",
+          "P5 and P1 moved up 1 m (~7 m from the net) — shorter angles than on a high ball.",
+          "Weakness: no dedicated central deep defender (only 2 back-row players in 5v5).",
+          "Key rule: \"stopped on contact\" — everyone stopped and balanced at the moment of contact."
+        ],
+        "zone2": [
+          "Opposing Z2 attack (opponent's right wing) → ball arrives on our left. Perfect mirror of Z4.",
+          "Double block: P4 (R4 line) + P3 (middle cross).",
+          "P2 (opposite / setter) as off-blocker at 2-2.5 m from the net on the right side.",
+          "P1 (~7-7.5 m, 1 m from right line) defends the long deep cross.",
+          "P5 (~7-7.5 m, 0.5 m from left line) defends the deep line in the block shadow."
+        ]
+      },
+      "3F-2B": {
+        "zone4": [
+          "Opposing Z4 attack → ball arrives on our right side.",
+          "3F-2B configuration: 3 front-row players → favorable double block (P3 + P2 setter-blocker).",
+          "P4 (R4) short off-blocker on the left on the attack line (~2-2.5 m from the net).",
+          "P5 defends the long deep cross-court (~7 m, 0.5 m from left line).",
+          "P1 defends the deep right line in the block shadow (~7 m, 0.5 m from right line).",
+          "Drawback: only 2 deep defenders → 30+ m² per defender (vs 20 m² in 6v6)."
+        ],
+        "zone3": [
+          "Quick middle attack (Z3) — short angles.",
+          "With 3 front-row players, a triple block is possible but leaves only 2 floor defenders — not recommended.",
+          "Recommended: double block (P3 + the outside closest to the hitting lane).",
+          "P5 and P1 moved up 1 m (~7 m) because angles are shorter on a quick.",
+          "Weakness: deep axial ball uncovered (no Z6 defender in 5v5 3F-2B)."
+        ],
+        "zone2": [
+          "Opposing Z2 attack → ball arrives on our left side. Perfect mirror of Z4.",
+          "Double block: P4 (R4 line) + P3 (middle cross).",
+          "The setter (P2) as off-blocker at 2-2.5 m from the net on the right (anti-tip + fast transition to the target).",
+          "P1 defends the long deep cross (~7-7.5 m).",
+          "P5 defends the deep left line in the block shadow."
+        ]
+      },
+      "2F-3B": {
+        "zone4": [
+          "Opposing Z4 attack → ball arrives on our right.",
+          "2F-3B configuration (P4+P3 front, P5+P6+P1 back, P1 penetrating): solo block.",
+          "P3 (middle) blocks alone on the right side — no P2 available for a double block.",
+          "P4 (R4) off-blocker at 2-2.5 m from the net on the left side.",
+          "3 deep defenders: P5 long cross, P6 central axis (~7-8 m), P1 right line.",
+          "The 1-1-3 system (1 blocker + 1 off-blocker + 3 defenders) is the closest defense to 6v6 perimeter."
+        ],
+        "zone3": [
+          "Quick middle attack (Z3) — short angles.",
+          "Solo block (P3) reading — the quick is the hardest target in 2F-3B.",
+          "P4 shifted laterally midcourt (~2 m from the net) for deflections.",
+          "Advantage: 3 deep defenders (P5, P6, P1) cover the 3 main back zones.",
+          "P6 faces the middle attacker in their hitting lane (~7.5-8 m, axis)."
+        ],
+        "zone2": [
+          "Opposing Z2 attack → ball arrives on our left. Mirror of Z4.",
+          "Solo block: P4 blocks alone on the left side (no P2 in 2F-3B).",
+          "P3 (middle) becomes the off-blocker on the right side at 2-2.5 m from the net.",
+          "P5 defends the deep left line, P6 the axis, P1 the long deep cross."
+        ]
+      },
+      "losange": {
+        "zone4": [
+          "Opposing Z4 attack → ball arrives on our right side.",
+          "Diamond formation (1-2-1) → system A: 1 blocker (P3) + 3 defenders.",
+          "P3 goes up to a solo block on the right side (facing the opposing hitter).",
+          "P2 (front right) drops back to the 3 m line at 3.5-4 m from the net — covers tip and tips behind the block.",
+          "P4 (front left) drops back to midcourt on the left side — covers the short cross.",
+          "P1 (lone back-row) defends the long deep cross (~7-7.5 m, 1 m from right line).",
+          "Anticipation = skill #1: only 1 back-row player → ~40 m² to cover."
+        ],
+        "zone3": [
+          "Quick middle attack (Z3) — the hardest setup in 4v4: little time, only 1 blocker.",
+          "Solo block (P3 alone) in permanent READ mode (no commit possible).",
+          "P4 and P2 drop back to midcourt (~3.5-4 m from the net, cover both short crosses).",
+          "The lone back-row P1 acts as the Z6 defender (central axis, 7-8 m from the net).",
+          "Main shot: hard axial ball (toward P1) since the solo block only covers the middle."
+        ],
+        "zone2": [
+          "Opposing Z2 attack → ball arrives on our left side. Perfect mirror of Z4.",
+          "System A: 1 blocker (P3) + 3 defenders.",
+          "P4 (front left) drops back to the 3 m line at 3.5-4 m — covers tip and tips on the left side.",
+          "P2 (front right) drops back to midcourt on the right side — covers the short cross.",
+          "The lone back-row P1 defends the long deep cross (~7-7.5 m, 1 m from left line)."
+        ]
+      },
+      "carre": {
+        "zone4": [
+          "Opposing Z4 attack → ball arrives on our right side.",
+          "Box formation (2-2 / box) → system A: 1 blocker (P2) + 3 defenders.",
+          "P2 (front right) solo block facing the opposing hitter, takes the line.",
+          "P4 (front left) as off-blocker at 2-2.5 m from the net — covers tip and cut shot on the left side.",
+          "P5 defends the long deep cross (~7 m, 0.5 m from left line).",
+          "P1 defends the deep line / short cross (~7 m, in the block shadow).",
+          "System B (double block P2+P4) is possible but leaves only 2 defenders — reserve for big hitters."
+        ],
+        "zone3": [
+          "Quick middle attack (Z3) — short angles, little time.",
+          "Double block (P4 + P2) closes the middle — system B with 2 defenders behind.",
+          "P5 and P1 take the short crosses (~7 m, 0.5-1 m from the lines).",
+          "Major weakness: no short coverage behind the block — the box has no midcourt player.",
+          "Alternative: solo block (P3-like role, here P4 or P2 alone) to free a tip defender."
+        ],
+        "zone2": [
+          "Opposing Z2 attack → ball arrives on our left side. Perfect mirror of Z4.",
+          "System A: 1 blocker (P4) + 3 defenders.",
+          "P4 (front left) solo block facing the opposing hitter, takes the line.",
+          "P2 (front-right setter-attacker) as off-blocker at 2-2.5 m from the net — anti-tip + fast transition to the target.",
+          "P1 defends the long deep cross (~7 m, 0.5 m from right line).",
+          "P5 defends the short deep line (~7 m, in the block shadow)."
+        ]
+      }
+    },
+    "generalPrinciples": {
+      "title": "3. General positioning principles",
+      "responsibilityLabel": "Responsibility zones",
+      "cards": {
+        "front": {
+          "title": "Front-row players",
+          "points": [
+            "Priority: block at the net",
+            "If not on the block: defend the opposite line",
+            "Distance: at the net or in the backcourt"
+          ]
+        },
+        "pivotByTeamSize": {
+          "6": {
+            "title": "Defensive pivot (Libero / P6)",
+            "points": [
+              "Position: center, adaptable",
+              "Distance: 5–6 m from the net",
+              "Role: defensive anchor, covers the middle"
+            ]
+          },
+          "5": {
+            "title": "Defensive pivot (Libero / P6)",
+            "points": [
+              "Position: center, adaptable",
+              "Distance: 5–6 m from the net",
+              "Role: defensive anchor, covers the middle"
+            ]
+          },
+          "4": {
+            "title": "Lone back-row (P1)",
+            "points": [
+              "Position: center, ~40 m² to cover",
+              "Distance: 5–6 m from the net",
+              "Role: sole defensive anchor, maximum anticipation"
+            ]
+          }
+        },
+        "back": {
+          "title": "Side back-row players",
+          "points": [
+            "Variable role: move up or back",
+            "Attacked side: move up (3–4 m)",
+            "Opposite side: move back (6–7 m)"
+          ]
+        }
+      },
+      "universalsCard": {
+        "title": "★ Universal defensive principles (4v4 / 5v5 / 6v6)",
+        "intro": "These principles drawn from Hebert, Liskevych and Volleyball Canada apply regardless of the number of players on the court.",
+        "items": [
+          ["The block is the foundation", "Back-row defenders position based on the block's shadow and orientation — not independently."],
+          ["Stopped and balanced at the moment of contact", "Any defender still moving when the hitter swings sees their reactivity collapse (\"stopped on contact\")."],
+          ["Sequential visual read", "\"Ball → opposing setter → ball → opposing hitter\". In 4v4 and 5v5, the player deficit demands an even earlier read."],
+          ["Signal communication", "Even in recreational play, the blocker must call \"line\" or \"cross\" — without it, the back-row defenders don't know what to cover."],
+          ["Front zone covered", "Someone has to cover the 3-5 m behind the block — it's the most neglected zone in smaller formats (4v4 / 5v5)."],
+          ["Fast transition", "The setter must never leave for the target before confirming the ball is defended (\"release call\")."]
+        ]
+      }
+    },
+    "readingAttacker": {
+      "title": "4. Reading the attacker: visual cues",
+      "intro": "Your positioning has to adjust based on what you see. Here are the key cues:",
+      "indicators": [
+        {
+          "title": "Attacker far from the net",
+          "action": "MOVE UP",
+          "accentColor": "var(--orange)",
+          "points": [
+            "Set 2–3 m from the net",
+            "Can't spike hard",
+            "High risk of tip or off-speed",
+            "Move up 1–2 meters"
+          ]
+        },
+        {
+          "title": "Attacker close to the net",
+          "action": "BACK UP",
+          "accentColor": "var(--plum)",
+          "points": [
+            "Set less than 1 m from the net",
+            "Can spike at full power",
+            "Fast downward trajectory",
+            "Back up as far as possible"
+          ]
+        },
+        {
+          "title": "The attacker's shoulder",
+          "action": "Watch the hitting shoulder",
+          "accentColor": "var(--teal)",
+          "points": [
+            "Shoulder high and back = hard spike",
+            "Shoulder low = probable tip",
+            "Shoulder rotation = direction of the ball",
+            "Adjust within 0.5 s"
+          ]
+        },
+        {
+          "title": "The attacker's approach",
+          "action": "Observe their approach",
+          "accentColor": "var(--ink)",
+          "points": [
+            "Long, fast approach = hard spike",
+            "Short approach or stop = tip",
+            "Approach angle = target zone",
+            "Anticipate the power"
+          ]
+        }
+      ],
+      "proTipLabel": "Pro tip",
+      "proTipText": "In the first 2 seconds after the opposing serve, focus your eyes on the setter, then IMMEDIATELY on the attacker about to swing."
+    },
+    "advanceRetreat": {
+      "title": "5. When to move up or back?",
+      "label": "Quick decision tree",
+      "advance": {
+        "title": "Move up (3–4 m from the net) when:",
+        "items": [
+          "You are on the same side as the attacker",
+          "The attacker is far from the net (bad pass)",
+          "You anticipate a tip or off-speed",
+          "The block is solid — fewer hard balls get through"
+        ]
+      },
+      "retreat": {
+        "title": "Move back (6–7 m from the net) when:",
+        "items": [
+          "You are on the opposite side from the attacker",
+          "The attacker has a good pass close to the net",
+          "The attacker is powerful or tall",
+          "The block is weak (only 1 blocker)",
+          "You defend the cross-court (longest trajectory)"
+        ]
+      }
+    },
+    "mistakes": {
+      "titlePrefix": "6.",
+      "byTeamSize": {
+        "6": {
+          "title": "The ten common defensive positioning mistakes",
+          "intro": "Typology drawn from Mike Hebert (Thinking Volleyball), John Forman (CoachingVB), USA Volleyball and the FIVB Top Volley manual.",
+          "mistakes": [
+            ["1. Drifting into the block shadow", "Defenders instinctively take shelter behind the blockers instead of positioning around the block shadow — leaving the cross-courts and off-the-block trajectories open. Hebert: \"creeping into the block shadow\"."],
+            ["2. Faulty reading", "The defender locks onto the ball instead of following the sequence \"ball → setter → ball → hitter\". Result: they guess instead of reading, and aren't stopped or balanced at the moment of contact (\"stopped and balanced at the moment of contact\")."],
+            ["3. Libero out of depth", "Too close to the net, they can't defend deep spikes; too far, they miss the tips. Rule: line up your outside shoulder with the inside shoulder of the middle blocker, 6-8 m from the net depending on the block."],
+            ["4. Defending setter unprepared", "Stance too low or oriented wrong, preventing them from seeing ball + opposing court; premature start toward the target creating a Z1 hole; no \"release call\" signaling they're leaving the defense."],
+            ["5. Overlap faults", "Most common: Z6 drifts in front of Z3, Z5 ends up right of Z6, and the setter leaves too early to penetrate (fault #1 in 5-1). At the instant the server contacts the ball, every foot must respect front/back and left/right relationships (Rule 7.4)."],
+            ["6. Forgotten reception → defense transition", "Players stay frozen in their W reception formation instead of shifting into base defensive position the moment the opposing setter touches the ball. Hebert: \"sluggish recovery after play on the ball\"."],
+            ["7. Bad zone 6 management", "Confusion between \"6-up\" (rotation), \"6-back\" (perimeter) and \"6-deep\". The Z6 player must shift laterally based on the opposing attack side, not stay centered. Leaning back to dig puts the weight on the heels and kills reactivity."],
+            ["8. Failed defense against the quick", "Reading the opposing middle too late; back-row not moved up (on a quick, Z1 and Z5 must gain a meter toward the net because angles are shorter); \"false stepping\" (first step backward) loses available time."],
+            ["9. Orphaned tip coverage", "No defender explicitly assigned to the tip; \"standing up on tips\" — the defender is low for the spike, then stands up and extends their hands on the tip, letting the ball drop right in front of them. Focus must stay on the spike in a low stance, with a tip jump available."],
+            ["10. Collective silence", "No calls (\"tip!\", \"line!\", \"out!\", \"mine!\"); blockers who don't communicate their line vs cross orientation; no rotation captain checking overlaps before the serve."]
+          ]
+        },
+        "5": {
+          "title": "Common errors in 5v5",
+          "intro": "Errors specific to the 5v5 format (adaptations from the Volleyball Canada doc, VolleyballXL, and 6v6 doctrine).",
+          "mistakes": [
+            ["1. Mechanically copying 6v6", "Covering 3 deep zones with 3 defenders works (2F-3B setup), but the off-blocker who pulls back is missing — the 3 m zone isn't covered if no one is explicitly assigned."],
+            ["2. The off-blocker stuck at the net", "After the block, the off-blocker has to pull back to 2-2.5 m to cover tips. If they stay at the net, the zone behind the block is wide open."],
+            ["3. 2 defenders standing side by side", "In 3F-2B setup, the 2 deep defenders must be spread (one left side, one right side), not centered together. Otherwise, the sidelines are uncovered."],
+            ["4. Setter leaves too early (penetrating setup)", "In 2F-3B setup with a penetrating setter from P1, they have to wait for the ball to be defended before running to the target — otherwise hole in Z1."],
+            ["5. Front/back confusion", "With 5 players, the temptation is to let the front-row players defend their side by staying on the 3 m line — but that leaves the back open. Front-row players go up to the block, back-row players defend deep."],
+            ["6. Faulty reading", "The one-player deficit demands an even earlier read than in 6v6. \"Ball → setter → ball → hitter\" sequence + balanced stop at contact."]
+          ]
+        },
+        "4": {
+          "title": "Common errors in 4v4",
+          "intro": "Errors specific to indoor 4v4 (university intramurals, FFVb / Volleyball Canada doctrine, beach 4s).",
+          "mistakes": [
+            ["1. Isolated blocker with no tip coverage", "The 3 defenders all go deep, leaving the 3-5 m zone empty. Someone has to always be assigned to the tip at 3.5-4 m from the net."],
+            ["2. 2 defenders in a straight line", "Side by side at the same depth → the cut shot drops between them. In 4v4, defenders must always be staggered (one close, one far) or spread laterally."],
+            ["3. The setter running to set before the ball is defended", "Premature transition leaves a defensive hole. The setter waits for confirmation that the ball is up before leaving for the target."],
+            ["4. No signal between blocker and defenders", "The blocker MUST call \"line\" or \"cross\" before the attack starts. Otherwise, the 3 defenders don't know what to cover — everyone improvises."],
+            ["5. Tip defender too far from the net", "They back up with the other back-row players and can no longer cover short tips. Their position is 3.5-4 m from the net, in the axis — not 7 m."],
+            ["6. \"Random\" block by the wrong player", "In 4v4, blocking with a poorly placed player (far from the hitter) leaves the opponent facing 3 misaligned defenders. The blocker has to be the one in front of the main hitter."],
+            ["7. Faulty reading", "With ~40 m² per defender (vs 20 m² in 6v6), a reading error is unrecoverable. Anticipation = skill #1 in 4v4."]
+          ]
+        }
+      }
+    },
+    "serviceTransition": {
+      "title": "7. Positioning at the serve",
+      "intro": "<strong>Your serve position is DIFFERENT from your defensive position. </strong>The moment the serve leaves, you need to reposition.",
+      "stepsLabel": "Serve → defense transition",
+      "steps": [
+        ["Your team serves", "You're in rotation position"],
+        ["The server hits", "You watch the opposing setter"],
+        ["The setter touches the ball", "You move toward your defensive zone"],
+        ["The hitter jumps", "You're in your final position, ready to react"]
+      ]
+    },
+    "communication": {
+      "title": "8. Defensive communication",
+      "intro": "A silent defense is an ineffective defense.",
+      "groups": [
+        {
+          "moment": "Before the opposing attack",
+          "calls": [
+            ["\"Four!\"", "Calls out the zone the attack is coming from"],
+            ["\"Double block!\"", "Indicates how many blockers"],
+            ["\"Line open!\"", "If the block doesn't cover the line"],
+            ["\"Moving up!\" / \"Moving back!\"", "Announces your movement"]
+          ]
+        },
+        {
+          "moment": "During the play",
+          "calls": [
+            ["\"Mine!\" / \"Got it!\"", "You take the ball (the MOST important)"],
+            ["\"Yours!\" / \"You got it!\"", "You leave the ball for a teammate"],
+            ["\"Out!\"", "The ball is going out, don't touch it"],
+            ["\"Block!\"", "If you block, announce it"]
+          ]
+        },
+        {
+          "moment": "After the play",
+          "calls": [
+            ["\"Cover!\"", "Asks for attack coverage"],
+            ["\"Free ball!\"", "Free ball, reset positions"],
+            ["\"Stay!\"", "We keep the defense in place"]
+          ]
+        }
+      ],
+      "ruleLabel": "Golden rule",
+      "ruleText": "In doubt between two players, it's ALWAYS the player further forward who takes the ball."
+    },
+    "defenseSystems": {
+      "titlePrefix": "9.",
+      "warningLabel": "⚠ Terminology warning",
+      "warningLabelNonOfficial": "⚠ Format not FIVB-official",
+      "forcesLabel": "Strengths",
+      "weaknessesLabel": "Weaknesses",
+      "indicationLabel": "Use case",
+      "tableLabel": "Comparison table",
+      "tableHeaderCriterion": "Criterion",
+      "byTeamSize": {
+        "6": {
+          "title": "The three major defensive systems (FIVB / USAV)",
+          "warning": {
+            "label": "⚠ Terminology warning",
+            "text": "The expression \"W defense\" often heard in France is incorrect. The \"W-formation\" historically refers to a 5-passer service reception formation — not a defensive system. International doctrine (FIVB, USAV IMPACT, Liskevych, Stone) distinguishes three systems: man-up (2-1-3), perimeter (2-0-4) and rotational (3-2-1)."
+          },
+          "systems": [
+            {
+              "name": "Man-up defense (2-1-3)",
+              "tag": "Formerly \"W defense\" / red defense",
+              "principe": "A defender moves up to the 3 m line behind the block to intercept tips and off-speeds. Two blockers at the net, the off-blocker pulls back, and three deep players cover the long angles.",
+              "forces": [
+                "Outstanding coverage of tips, roll shots and \"junk\" balls behind the block",
+                "Fast transition to attack if the player who came up is the setter",
+                "Simple to teach to young teams"
+              ],
+              "faiblesses": [
+                "Only 3 deep defenders — vulnerable to hard sharp cross-courts",
+                "A hitter who swings hard between the blockers gets through easily"
+              ],
+              "indication": "Young teams, school teams, tactical opponents who use a lot of tips or off-speed.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Perimeter defense (2-0-4)",
+              "tag": "White defense — dominant system at high-level men's volleyball",
+              "principe": "The four back-row defenders form a U open toward the net, almost on the sidelines and end line — \"one foot on the line\" (Liskevych). The middle of the court is intentionally given up.",
+              "forces": [
+                "Excellent coverage of hard spikes, lines, and deep corners",
+                "Simple collective movement",
+                "Dominant system in modern international men's volleyball"
+              ],
+              "faiblesses": [
+                "Very vulnerable to short tips behind the block — central zone between 3 and 5 m open",
+                "Requires athletic defenders capable of diving forward"
+              ],
+              "indication": "Senior, men's, international level, powerful opponents.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Rotational defense (3-2-1)",
+              "tag": "Rotational / slide defense",
+              "principe": "The three back-row defenders slide toward the opposing attack side: the opposite back-row player moves up behind the block (tip), the middle slides toward the attacked line, the defender on the attacked side covers the sharp angle.",
+              "forces": [
+                "Excellent coverage of the deep line AND the tip simultaneously",
+                "Highly adaptable system",
+                "Fast setter transition when the setter is in P1"
+              ],
+              "faiblesses": [
+                "One fewer defender deep (one player dedicated to the tip)",
+                "Opposite diagonal corner vulnerable",
+                "Requires strong reading and coordination"
+              ],
+              "indication": "Opponents who mix power and lines/tips; intermediate to elite level.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["Man-up 2-1-3", "Perim. 2-0-4", "Rotation 3-2-1"],
+          "tableRows": [
+            ["Player up behind block", "Yes", "No", "Yes"],
+            ["Deep defenders", "3", "4", "2"],
+            ["Tip coverage", "★★★", "★", "★★"],
+            ["Hard spike coverage", "★★", "★★★", "★★"],
+            ["Deep line coverage", "★★", "★★", "★★★"],
+            ["Sharp cross-court coverage", "★", "★★★", "★★"],
+            ["Typical libero position", "Z5 or Z6", "Z5 (on line)", "Z5 slides"],
+            ["Complexity", "Low", "Medium", "High"]
+          ],
+          "footer": {
+            "strong": "The choice is not about orthodoxy: ",
+            "text": "it depends on the opponent's offensive profile and your defenders' qualities. Modern defense is defined less by the formation than by reading — visual sequence \"ball → setter → ball → hitter\" and balanced stop at the moment of contact."
+          }
+        },
+        "5": {
+          "title": "The three defensive systems in 5v5",
+          "warning": {
+            "label": "⚠ Format not FIVB-official",
+            "text": "Indoor 5v5 has no dedicated FIVB or FFVb rulebook. These three systems are logical adaptations of 6v6 documented by VolleyballXL, The Art of Coaching Volleyball and Volleyball Canada. There is no official 5v5 technical manual — choose the system based on your team configuration (2-3 or 3-2)."
+          },
+          "systems": [
+            {
+              "name": "1-1-3 system",
+              "tag": "1 blocker + 1 tip cover + 3 deep defenders",
+              "principe": "Suited to the 2F-3B configuration (2 front, 3 back). The blocker jumps alone; the 2nd front-row player pulls back as off-blocker at 2-3 m from the net for tips; 3 deep defenders cover line, axis, and long cross.",
+              "forces": [
+                "3 deep defenders like in 6v6 perimeter — good spike coverage",
+                "Setup closest to 6v6 5-1 (prep for transition to 6v6)",
+                "Tip covered by the off-blocker"
+              ],
+              "faiblesses": [
+                "Solo block only → fragile against big hitters",
+                "The off-blocker at 2-3 m must be very reactive"
+              ],
+              "indication": "2F-3B configuration (penetrating setter), moderately powerful opponents. Recommended system for transitioning to 6v6.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "2-1-2 system",
+              "tag": "2 blockers + 1 tip + 2 deep defenders",
+              "principe": "Suited to the 3F-2B configuration (3 front, 2 back). Double block at the net, the front middle covers the tip at 2-3 m from the net, 2 deep defenders take the long cross and the line.",
+              "forces": [
+                "Double block like in 6v6 — clearly more effective against hard spikes",
+                "3 attackers at the net for the counter-attack"
+              ],
+              "faiblesses": [
+                "Only 2 deep defenders → 9 m of backcourt very hard to cover",
+                "High athletic demand on the 2 back-row players"
+              ],
+              "indication": "3F-2B configuration against very powerful teams. Use at the end of a set when every point counts.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "1-2-2 system",
+              "tag": "Adapted man-up (equivalent to 6v6 2-1-3)",
+              "principe": "Solo blocker + 2 front-zone covers (tip + behind block) + 2 deep defenders. Suited when the opponent uses lots of tips or against beginner teams.",
+              "forces": [
+                "Excellent short-tip coverage (2 front-zone covers)",
+                "Tip hard for the opponent to exploit"
+              ],
+              "faiblesses": [
+                "Only 2 deep defenders → hard spikes are difficult",
+                "Requires coordination between the 2 front-zone covers"
+              ],
+              "indication": "Opponents who tip a lot; women's volleyball, youth categories, technical teams.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["1-1-3", "2-1-2", "1-2-2 (man-up)"],
+          "tableRows": [
+            ["Blockers", "1", "2", "1"],
+            ["Front-zone covers", "1 (off-blocker)", "1 (tip)", "2 (tip + behind block)"],
+            ["Deep defenders", "3", "2", "2"],
+            ["Tip coverage", "★★", "★★", "★★★"],
+            ["Hard spike coverage", "★★", "★★★", "★★"],
+            ["Backcourt coverage", "★★★", "★★", "★★"],
+            ["Suited configuration", "2F-3B", "3F-2B", "2F-3B / 3F-2B"],
+            ["Complexity", "Low", "Medium", "High"]
+          ],
+          "footer": {
+            "strong": "5v5 recommendation: ",
+            "text": "the 1-1-3 system in 2F-3B configuration with a penetrating setter is the closest defense to 6v6 — ideal as a pedagogical bridge. The 2-1-2 is only justified against truly powerful hitters."
+          }
+        },
+        "4": {
+          "title": "The three defensive systems in 4v4",
+          "warning": {
+            "label": "⚠ Format not FIVB-official",
+            "text": "Indoor 4v4 has no official FIVB rulebook. These three systems come from university intramurals practice (USA), FFVb / Volleyball Canada transition coaching manuals, and the beach literature (Brandon Joyner, Better at Beach). With 4 players, each defender covers ~30-40 m² (vs 20 m² in 6v6) — anticipation is skill #1."
+          },
+          "systems": [
+            {
+              "name": "System A: 1 blocker + 3 defenders",
+              "tag": "Most widely used in indoor 4v4",
+              "principe": "A single player goes up to block the main hitter. The 3 others spread out: tip defender (3-4 m from the net, axis), cross defender (7-7.5 m, right line, long cross), line defender (7-7.5 m, in the block shadow).",
+              "forces": [
+                "Covers tip, line, and long cross simultaneously",
+                "The most balanced setup in 4v4",
+                "Blocker line/cross signal is very effective"
+              ],
+              "faiblesses": [
+                "Solo block — vulnerable to big hitters",
+                "Requires a disciplined tip defender who doesn't back up"
+              ],
+              "indication": "Opponents of equivalent or moderate level. The most versatile configuration in 4v4 (diamond or line 3-1).",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "System B: 2 blockers + 2 defenders",
+              "tag": "Double block (rare in 4v4)",
+              "principe": "Both front-row players go up together against the main hitter. The 2 back-row players take position: one on the line side (7 m, 1 m from the line), one on the axis slightly shifted toward the cross. The tip is uncovered.",
+              "forces": [
+                "Double block clearly more effective against hard spikes",
+                "Maximum pressure on the opposing hitter"
+              ],
+              "faiblesses": [
+                "Only 2 floor defenders → impossible to cover everything",
+                "Tip behind the block completely exposed",
+                "Forces a choice: line OR cross, not both"
+              ],
+              "indication": "Use only against very powerful hitters without finesse (no tips). Box 2-2 or line 3-1 configuration.",
+              "accent": "var(--plum)"
+            },
+            {
+              "name": "System C: 0 blockers",
+              "tag": "Low defense (against non-spikers)",
+              "principe": "No one goes up to block. All 4 players defend deep: 2 at midcourt (3-4 m) for tips, 2 deep (7-8 m) for deeper balls. The setter acts as the 4th defender.",
+              "forces": [
+                "Covers the full depth of the court",
+                "Well suited to slow rallies"
+              ],
+              "faiblesses": [
+                "COUNTERPRODUCTIVE as soon as an opponent swings seriously (the spike goes through unopposed)",
+                "No pressure at the net"
+              ],
+              "indication": "School level, beginner recreational, opponents who don't spike. To be avoided as soon as the opposition gains power.",
+              "accent": "var(--teal)"
+            }
+          ],
+          "tableHeaders": ["System A", "System B", "System C"],
+          "tableRows": [
+            ["Blockers", "1", "2", "0"],
+            ["Deep defenders", "3", "2", "4"],
+            ["Tip coverage", "★★", "★", "★★★"],
+            ["Hard spike coverage", "★★", "★★★", "★ (no block)"],
+            ["Deep line coverage", "★★", "★★", "★★"],
+            ["Long cross coverage", "★★★", "★★", "★★"],
+            ["Recommended opponents", "All levels", "Very powerful", "Non-spikers"],
+            ["Complexity", "Low", "Medium", "Low"]
+          ],
+          "footer": {
+            "strong": "4v4 recommendation: ",
+            "text": "system A (1 blocker + 3 defenders) is the near-universal default. System B is only justified against truly powerful hitters at the end of a set. System C only works at beginner recreational level — as soon as an opponent spikes, return to system A."
+          }
+        }
+      }
+    },
+    "transitions": {
+      "title": "10. Attack ↔ defense transitions",
+      "intro": "Volleyball is a game of fast transitions. You're constantly switching from attack to defense and back.",
+      "groups": [
+        {
+          "label": "Attack → defense transition",
+          "items": [
+            ["Your teammate attacks", "Mentally prepare to defend"],
+            ["The ball comes back", "Immediately identify who will attack"],
+            ["Quick movement", "Go to your defensive zone (2–3 seconds max)"],
+            ["Low stance", "Bend the legs, ready to dig"]
+          ]
+        },
+        {
+          "label": "Defense → attack transition",
+          "items": [
+            ["You dig the ball", "Accurate pass to the setter"],
+            ["If you're FRONT-ROW", "Run to the net to attack or block"],
+            ["If you're BACK-ROW", "Move back slightly, ready to cover the attack"],
+            ["Attack coverage", "Surround your hitter (in a semicircle at 2–3 m)"]
+          ]
+        }
+      ]
+    },
+    "exercises": {
+      "title": "11. Drills to improve",
+      "durationLabel": "Duration",
+      "materialLabel": "Equipment",
+      "objectiveLabel": "Objective",
+      "items": [
+        {
+          "title": "Reading the situation",
+          "level": "Beginner",
+          "duration": "10 min",
+          "materiel": "1 coach or partner with balls",
+          "objectif": "Learn to identify the attack zone quickly",
+          "steps": [
+            "The coach stands on the other side of the net in zone 4, 3, or 2",
+            "You start from the center of the court",
+            "The coach calls the zone and tosses the ball",
+            "You have to reach your defensive zone in 2–3 seconds",
+            "Repeat 20 times varying zones"
+          ]
+        },
+        {
+          "title": "Move up/back based on the set",
+          "level": "Intermediate",
+          "duration": "15 min",
+          "materiel": "1 setter, 1 hitter, several defenders",
+          "objectif": "Adjust your position based on set quality",
+          "steps": [
+            "The setter delivers sets of varying quality to the hitter",
+            "Set close to the net → back up (hard spike expected)",
+            "Set off the net → move up (tip likely)",
+            "The hitter swings and you defend",
+            "The coach corrects your position after each ball"
+          ]
+        },
+        {
+          "title": "Defensive communication",
+          "level": "All levels",
+          "duration": "10 min",
+          "materiel": "Full team",
+          "objectif": "Build automatic communication",
+          "steps": [
+            "Scrimmage in your format (4v4, 5v5 or 6v6) but SHOUTING every call",
+            "Penalty: -1 point if a player doesn't call \"Mine!\" on their ball",
+            "Bonus: +1 point if the whole team communicates on a rally",
+            "Every player has to call out the opposing attack zone"
+          ]
+        },
+        {
+          "title": "Defense against tips",
+          "level": "Intermediate",
+          "duration": "15 min",
+          "materiel": "1 hitter, 3 back-row defenders",
+          "objectif": "Improve defense on short balls",
+          "steps": [
+            "The hitter ONLY tips and off-speeds",
+            "Defenders must all move up (3–4 m)",
+            "Goal: dig 8 out of 10 balls",
+            "Then alternate: 5 tips, 5 spikes to work on adaptation"
+          ]
+        },
+        {
+          "title": "Fast transitions",
+          "level": "Advanced",
+          "duration": "20 min",
+          "materiel": "Full team",
+          "objectif": "Master attack-defense switches",
+          "steps": [
+            "Normal scrimmage but the coach times the transitions",
+            "Goal: be in defensive position in under 3 seconds",
+            "If too slow, the team does 5 push-ups and restarts",
+            "Gradually increase the rally pace"
+          ]
+        },
+        {
+          "title": "Reading the hitter",
+          "level": "Advanced",
+          "duration": "15 min",
+          "materiel": "1 hitter, defenders",
+          "objectif": "Anticipate based on body language",
+          "steps": [
+            "The hitter alternates spike, tip, and roll without warning",
+            "Before they swing, the defender calls their prediction: \"Spike!\" or \"Tip!\"",
+            "Point if the prediction is correct AND the ball is dug",
+            "Focus on: shoulder, approach, position relative to the net"
+          ]
+        }
+      ]
+    },
+    "commandments": {
+      "title": "12. The 10 commandments of the defender",
+      "items": [
+        ["Watch the setter", "Then the hitter, not the ball"],
+        ["Same side = move up", "Opposite side = move back"],
+        ["Bad pass for the opponent", "→ Move up 1–2 m (tip likely)"],
+        ["Never in the middle", "Choose: forward OR back"],
+        ["ALWAYS communicate", "\"Mine!\" on every ball you take"],
+        ["Move after the serve", "Serve position ≠ defensive position"],
+        ["Read the shoulder", "Shoulder high = spike, low = tip"],
+        ["Low stance", "Legs bent, arms ready"],
+        ["Fast transitions", "3 seconds max to reposition"],
+        ["Defend your zone", "Every player has their responsibility"]
+      ],
+      "sameSide": {
+        "title": "Same side as the hitter",
+        "action": "→ MOVE UP (3–4 m)",
+        "desc": "Defend tips and off-speeds"
+      },
+      "oppositeSide": {
+        "title": "Opposite side from the hitter",
+        "action": "→ MOVE BACK (6–7 m)",
+        "desc": "Defend long cross-courts"
+      }
+    },
+    "conclusion": {
+      "label": "Conclusion",
+      "body1": "Defensive positioning is learned through practice and experience. Don't get discouraged if you make mistakes at first — even pros adjust their placement constantly.",
+      "body2": "The key: apply the base rule (same side = move up, opposite = move back), watch the hitter, communicate with your teammates, and never be afraid to dive for a ball.",
+      "mantra": "Defense wins matches."
+    }
+  }
 }
