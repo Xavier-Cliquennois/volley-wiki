@@ -1,0 +1,181 @@
+{
+  "hub": {
+    "kicker": "★ DOKUMENTACJA",
+    "title": "POZYCJE I ROLE",
+    "intro": "W siatkówce halowej pozycje numerowane są <strong>P1 do P6</strong> w kierunku przeciwnym do ruchu wskazówek zegara, patrząc zza własnego boiska. Rotacja odbywa się zgodnie z ruchem wskazówek zegara po każdej zmianie zagrywki. Liczba zawodników i systemy taktyczne różnią się w zależności od formatu — wybierz ten, który odpowiada Twojej praktyce.",
+    "formats": {
+      "6v6": {
+        "tagline": "Oficjalny format FIVB / FFVolley",
+        "description": "6 zawodników + libero, boisko 9×18 m, siatka 2,43 m. Systemy 5-1, 4-2, 6-2 z rotacją zgodnie z ruchem wskazówek zegara."
+      },
+      "5v5": {
+        "tagline": "Hybrydowy format edukacyjny",
+        "description": "Etap przejściowy między 4 na 4 a 6 na 6. Brak libero. Konfiguracje pentagon, 3F/2B, 2F/3B w zależności od wybranego ustawienia."
+      },
+      "4v4": {
+        "tagline": "Rekreacja, rozgrywki amatorskie, przejście",
+        "description": "Zmniejszone boisko, 2 z przodu + 2 z tyłu. Formacje romb, kwadrat, linia 3-1 z rozgrywającym wbiegającym."
+      }
+    }
+  },
+  "page": {
+    "kickerPrefix": "★ DOKUMENTACJA ·",
+    "titlePrefix": "POZYCJE —",
+    "subtitle": "Pozycje i systemy taktyczne dla siatkówki {{label}}.",
+    "step1": "1. FORMAT GRY",
+    "step2": "2. USTAWIENIE TAKTYCZNE",
+    "courtTitle": "POŁOWA BOISKA —",
+    "showAll": "POKAŻ WSZYSTKO",
+    "legendTitle": "LEGENDA",
+    "legendItems": [
+      "<strong>Siatka</strong> — pomarańczowy pas",
+      "<strong>3 m</strong> — linia przerywana"
+    ],
+    "legendHint": "Kliknij zawodnika, aby zobaczyć jego kartę",
+    "liberoLabel": "LIBERO",
+    "liberoCardDescription": "Zastępuje zawodników linii obrony (P1, P5, P6).",
+    "noLibero": "<strong>Brak libero</strong> w tej konfiguracji.",
+    "cardsTitle": "★ KARTY POZYCJI",
+    "skillsTitle": "UMIEJĘTNOŚCI",
+    "traitsTitle": "CECHY",
+    "crossLink": {
+      "kicker": "POGŁĘB WIEDZĘ",
+      "html": "Sprawdź poradnik <link>Ustawienie i obrona</link>, aby zobaczyć, jak ta konfiguracja ustawia się w zależności od strefy ataku przeciwnika."
+    }
+  },
+  "teamIntros": {
+    "6": {
+      "tagline": "Oficjalny format FIVB / FFVolley: 6 zawodników + libero, boisko 9×18 m, linia ataku 3 m, siatka 2,43 m (M) / 2,24 m (K).",
+      "rules": "Strefy numerowane przeciwnie do ruchu wskazówek zegara zza własnego boiska (Z1 = zagrywający). Rotacja zgodnie z ruchem wskazówek zegara przy zmianie zagrywki (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Przepis 7.4: w momencie kontaktu zagrywającego z piłką pozycje są kontrolowane przez stopy (Z2 bliżej siatki niż Z1, itd.). Blok pojedynczy, podwójny lub potrójny. Libero zastępuje zawodników linii obrony bez liczenia jako zmiana."
+    },
+    "5": {
+      "tagline": "Format hybrydowy, oficjalnie nieuznawany przez FIVB/FFVb. Używany w szkołach, rozgrywkach amatorskich, sytuacjach zastępczych oraz jako etap przejściowy między 4 na 4 a 6 na 6.",
+      "rules": "2+3 (zalecany rozgrywający wbiegający) lub 3+2 (stały rozgrywający z przodu). Brak libero. Zaadaptowana zasada overlap: Z4>Z5, Z3>Z6, Z2>Z1 (ustawienie 3-2) lub częściowe relacje (2-3). Zalecenia defensywne są logicznymi adaptacjami z 6 na 6, a nie skodyfikowanym przepisem."
+    },
+    "4": {
+      "tagline": "Brak oficjalnego przepisu FIVB. Grany w amerykańskich rozgrywkach uniwersyteckich, turniejach rekreacyjnych, etapie edukacyjnym (FFVb, Volleyball Canada).",
+      "rules": "Boisko 9×9 m (czasem zmniejszone), 3 odbicia, blok dozwolony, rotacja zgodnie z ruchem wskazówek zegara. 2 z przodu + 2 z tyłu w każdej rotacji. Popularne formacje: romb (1-2-1 z rozgrywającym w środku), linia 3-1 (rozgrywający wbiegający), kwadrat 2-2. Niektórzy organizatorzy rezygnują z błędów overlap (Texas A&M)."
+    }
+  },
+  "commonZones": {
+    "P4": { "name": "Lewa strefa ataku" },
+    "P3": { "name": "Środek z przodu" },
+    "P2": { "name": "Prawa strefa ataku" },
+    "P5": { "name": "Lewa strefa obrony" },
+    "P6": { "name": "Środek z tyłu" },
+    "P1": { "name": "Prawa strefa obrony (zagrywka)" },
+    "L":  { "name": "Libero" }
+  },
+  "configurations": {
+    "5-1": {
+      "name": "System 5-1 (standardowy)",
+      "shortName": "5-1",
+      "description": "1 jedyny rozgrywający rozprowadzający piłki we wszystkich 6 rotacjach (3 z tyłu z wbieganiem + 3 z przodu) + 2 przyjmujących + 2 środkowych + 1 atakujący (po przekątnej od rozgrywającego) + 1 libero. Najczęściej używany system w siatkówce wyczynowej.",
+      "positions": {
+        "P4": { "role": "Przyjmujący", "description": "Główna strefa ataku. Przyjmujący otrzymuje większość wysokich piłek i musi być wszechstronny: atak, blok, odbiór. Pełni także rolę off-blockera po lewej stronie przy ataku przeciwnika ze strefy 4.", "skills": ["Atak", "Blok", "Odbiór", "Zagrywka"], "traits": ["Siła i precyzja ataku", "Długi zasięg", "Wszechstronność", "Wytrzymałość"] },
+        "P3": { "role": "Środkowy", "description": "Zawodnik przy siatce w strefie środkowej. Blokuje ataki przeciwnika i atakuje w krótkim tempie. Przy ataku skrzydłowym przeciwnika zamyka piłkę krzyżową blokiem podwójnym.", "skills": ["Blok", "Atak szybki", "Obrona przy siatce"], "traits": ["Wymagany wysoki wzrost", "Dominujący blok", "Tempo 1 i 2", "Ograniczona rola obronna przy siatce"] },
+        "P2": { "role": "Rozgrywający", "description": "Dyrygent zespołu. Przyjmuje drugie odbicie i prowadzi atak. W systemie 5-1 gra we wszystkich rotacjach: wbiega z P1, P6 lub P5 (z tyłu), rozprowadza z P4, P3 lub P2 (z przodu). Cel: między Z2 a Z3, ~1 m od siatki.", "skills": ["Wystawa", "Czytanie bloku", "Komunikacja", "Wbieganie"], "traits": ["Maksymalna precyzja techniczna", "Widzenie 360°", "Opanowanie", "Przywództwo"] },
+        "P5": { "role": "Odbiór / obrona", "description": "Strefa odbioru i obrony po lewej. Często obsadzana przez drugiego przyjmującego w rotacji obronnej. Libero może go zastąpić.", "skills": ["Odbiór sposobem dolnym", "Odbiór", "Obrona", "Czytanie gry"], "traits": ["Czytanie ataków", "Pierwsza linia obrony", "Asekuracja lewej strony", "Często zastępowany przez libero"] },
+        "P6": { "role": "Obrona środkowa", "description": "Defensywny pivot z tyłu. Pokrywa długie piłki i wspiera kolegów. Często gra tu libero.", "skills": ["Obrona w głębi", "Asekuracja", "Wsparcie", "Odbiór sposobem dolnym"], "traits": ["Czytanie gry", "Maksymalna mobilność", "Komunikacja z tyłu", "Często zastępowany przez libero"] },
+        "P1": { "role": "Atakujący", "description": "Atakujący (\"point hitter\") znajduje się po przekątnej od rozgrywającego. Nie uczestniczy w odbiorze — to finiszer. Spędza 3 z 6 rotacji z tyłu (atakuje z głębi — pipe).", "skills": ["Silny atak", "Zagrywka", "Blok", "Atak z głębi"], "traits": ["Maksymalna moc", "Atak z głębi 3 rotacje/6", "Zwolniony z odbioru", "Zwany też \"point hitter\""] },
+        "L":  { "role": "Specjalista obrony", "description": "Specjalista defensywny w kontrastującej koszulce. Zastępuje zawodników linii obrony (P1, P5, P6) bez liczenia jako zmiana. Ograniczenia FIVB: brak bloku, brak ataku ponad siatką, brak wystawy sposobem górnym ze strefy ataku do partnera, który następnie atakuje ponad siatką.", "skills": ["Odbiór sposobem dolnym", "Odbiór", "Obrona", "Czytanie gry"], "traits": ["Maksymalna zwinność", "Nie może blokować / atakować ponad siatką", "Brak wystawy górnej z przodu → atakujący", "Nieograniczone zmiany", "Może zagrywać (FIVB 2021)"] }
+      }
+    },
+    "4-2": {
+      "name": "System 4-2 (początkujący)",
+      "shortName": "4-2",
+      "description": "2 rozgrywających po przekątnej (P2 i P5) + 2 środkowych + 2 przyjmujących. Rozgrywający z PRZODU zawsze wykonuje drugie odbicie. Brak wbiegania: najprostszy system do nauki.",
+      "positions": {
+        "P4": { "role": "Przyjmujący", "description": "Lewe skrzydło. Główny cel rozgrywającego w strefie 4.", "skills": ["Atak", "Blok", "Odbiór"], "traits": ["Wszechstronność", "Cel nr 1 rozgrywającego", "Odbiór w formacji W"] },
+        "P3": { "role": "Środkowy", "description": "Środkowy z przodu: blok + atak szybki, gdy odbiór na to pozwala.", "skills": ["Blok", "Atak szybki"], "traits": ["Dominujący blok", "Centralna pozycja w odbiorze W"] },
+        "P2": { "role": "Rozgrywający z przodu", "description": "Rozgrywający z przodu: wykonuje drugie odbicie. Brak wbiegania, brak odbioru. Rozprowadza ze swojej pozycji.", "skills": ["Wystawa", "Rozprowadzanie", "Komunikacja"], "traits": ["Zawsze z przodu przy wystawie", "Poza odbiorem", "Brak wbiegania"] },
+        "P5": { "role": "Rozgrywający z tyłu (poza dyżurem)", "description": "Drugi rozgrywający, po przekątnej. Gra tylko w linii obrony, NIE wykonuje drugiego odbicia będąc z tyłu. Odbiera i broni.", "skills": ["Odbiór", "Obrona", "Odbiór sposobem dolnym"], "traits": ["Staje się rozgrywającym z przodu po rotacji", "Brak wystaw, gdy z tyłu", "W parze w odbiorze"] },
+        "P6": { "role": "Środkowy z tyłu", "description": "Środkowy przechodzący przez pozycje w linii obrony. Odbiór środkowy + obrona.", "skills": ["Obrona", "Odbiór sposobem dolnym", "Odbiór"], "traits": ["Defensywny pivot", "Pokrywa środek z tyłu"] },
+        "P1": { "role": "Przyjmujący / zagrywający", "description": "Przyjmujący w rotacji obronnej, zagrywa z P1, następnie gra w odbiorze/obronie.", "skills": ["Zagrywka", "Odbiór", "Obrona"], "traits": ["Główny zagrywający", "Odbiór w formacji W"] }
+      }
+    },
+    "6-2": {
+      "name": "System 6-2 (zaawansowany)",
+      "shortName": "6-2",
+      "description": "2 wszechstronnych rozgrywających: rozgrywają TYLKO z linii obrony (z wbieganiem), a stają się atakującymi prawoskrzydłowymi po rotacji na front. + 2 środkowych + 2 przyjmujących + 1 libero. Zaleta: zawsze 3 atakujących z przodu. Wada: rozmyta chemia rozgrywający-atakujący, a w wariancie podwójnej zmiany szybko zużywa 6 zmian na set (Przepis FIVB 15.6).",
+      "positions": {
+        "P4": { "role": "Przyjmujący", "description": "Lewe skrzydło, główny atakujący w strefie 4.", "skills": ["Atak", "Blok", "Odbiór"], "traits": ["Wszechstronność", "Odbiór w 3 osoby"] },
+        "P3": { "role": "Środkowy", "description": "Środkowy z przodu: blok + tempo 1.", "skills": ["Blok", "Atak szybki"], "traits": ["Dominujący blok", "Zamiana skrzydeł"] },
+        "P2": { "role": "Rozgrywający-atakujący", "description": "W systemie 6-2 zawodnik z przodu (rozgrywający lub nie) atakuje. Gdy rozgrywający jest z przodu, staje się atakującym ze strefy 2. Rozgrywający z tyłu rozprowadza piłki.", "skills": ["Atak ze strefy 2", "Blok", "Zagrywka"], "traits": ["Wszechstronność wystawa + atak", "Atakuje strefę 2", "Zawsze 3 atakujących z przodu"] },
+        "P5": { "role": "Przyjmujący (z tyłu)", "description": "Skrzydłowy w rotacji obronnej. Odbiór i obrona.", "skills": ["Odbiór", "Odbiór sposobem dolnym", "Obrona"], "traits": ["Odbiór w 3 osoby", "Często zastępowany przez libero"] },
+        "P6": { "role": "Środkowy z tyłu", "description": "Środkowy w rotacji obronnej, często zastępowany przez libero w odbiorze i obronie.", "skills": ["Obrona", "Odbiór sposobem dolnym"], "traits": ["Często zastępowany przez libero", "Defensywny pivot"] },
+        "P1": { "role": "Rozgrywający wbiegający", "description": "Rozgrywający z linii obrony, który wbiega gdy tylko zagrywka zostanie wykonana, w stronę strefy 2-3, by rozprowadzić piłkę. Naprzeciwko niego drugi rozgrywający na P2 atakuje.", "skills": ["Wbieganie", "Wystawa", "Zagrywka"], "traits": ["Wbiega z P1 → strefa 2/3", "Rozprowadza", "Rotacja na przemian z drugim rozgrywającym"] },
+        "L":  { "role": "Libero", "description": "Standardowe libero, zastępuje środkowych w rotacji obronnej.", "skills": ["Odbiór sposobem dolnym", "Odbiór", "Obrona"], "traits": ["Zastępuje P5/P6", "Kontrastująca koszulka"] }
+      }
+    },
+    "pentagon": {
+      "name": "Pentagon (1-2-2)",
+      "shortName": "Pentagon",
+      "description": "1 zawodnik w środku przy siatce, 2 skrzydłowych w połowie boiska, 2 z tyłu. Równomierne pokrycie boiska — dobre dla początkujących i graczy rekreacyjnych. Typowa obrona: system 1-2-2 (zaadaptowany man-up, 1 blokujący + 2 asekurujących + 2 obrońców w głębi).",
+      "positions": {
+        "P3": { "name": "Środek przy siatce", "role": "Rozgrywający lub środkowy", "description": "W środku przy siatce. Często rozgrywający (jeśli stały); w przeciwnym razie główny blokujący.", "skills": ["Wystawa", "Blok", "Komunikacja"], "traits": ["Centrum gry", "Centralny blok", "Częściowe zwolnienie z odbioru"] },
+        "P4": { "name": "Lewe skrzydło", "role": "Przyjmujący", "description": "Lewe skrzydło w połowie boiska: odbiera i atakuje ze strefy 4.", "skills": ["Atak", "Odbiór", "Blok"], "traits": ["Wszechstronność", "Średni doskok", "Asekuracja krótkiej krzyżowej"] },
+        "P2": { "name": "Prawe skrzydło", "role": "Przyjmujący / atakujący", "description": "Prawe skrzydło. Jeśli rozgrywający gra w środku, ten zawodnik jest atakującym ze strefy 2.", "skills": ["Atak po linii", "Blok", "Zagrywka"], "traits": ["Atak długą krzyżową", "Blok podwójny ze środkowym", "Asekuracja długiej krzyżowej"] },
+        "P5": { "name": "Lewy z tyłu", "role": "Odbiór / obrona", "description": "Lewy z tyłu: pokrywa obronę po lewej, często najlepszy w odbiorze.", "skills": ["Odbiór sposobem dolnym", "Odbiór", "Obrona"], "traits": ["Filar obrony", "~30 m² do pokrycia", "Czyta długą krzyżową"] },
+        "P1": { "name": "Prawy z tyłu", "role": "Obrona / zagrywka", "description": "Prawy z tyłu: pokrywa obronę po prawej + zagrywa.", "skills": ["Zagrywka", "Obrona", "Odbiór sposobem dolnym"], "traits": ["Główny zagrywający", "Asekuracja linii", "Wsparcie ataku ze strefy 2"] }
+      }
+    },
+    "3F-2B": {
+      "name": "3 z przodu / 2 z tyłu",
+      "shortName": "3F/2B",
+      "description": "3 atakujących przy siatce (P4, P3, P2 z rozgrywającym na P2) + 2 z tyłu (P5, P1). Ustawienie ofensywne: możliwy blok podwójny lub potrójny. Typowa obrona: system 2-1-2 (2 blokujących + 1 off-blocker + 2 obrońców w głębi). Wada: ponad 30 m² na obrońcę z linii obrony.",
+      "positions": {
+        "P4": { "name": "Lewe skrzydło", "role": "Przyjmujący", "description": "Lewe skrzydło przy siatce. Główny cel rozgrywającego w strefie 4.", "skills": ["Atak", "Blok", "Odbiór"], "traits": ["Wszechstronność", "Blok podwójny ze środkowym", "Ulubiony cel rozgrywającego"] },
+        "P3": { "name": "Środkowy", "role": "Środkowy", "description": "Środkowy przy siatce. Blok + atak szybki, gdy odbiór na to pozwala.", "skills": ["Blok", "Atak szybki"], "traits": ["Centralny blok", "Zachowane tempo 1", "Możliwa zamiana"] },
+        "P2": { "name": "Rozgrywający z przodu", "role": "Rozgrywający", "description": "Stały rozgrywający z przodu. Brak wbiegania. Rozprowadza piłki od siatki; może atakować w strefie 2, jeśli piłka przyjdzie wysoko po prawej stronie.", "skills": ["Wystawa", "Rozprowadzanie", "Blok po prawej stronie"], "traits": ["Stale z przodu", "Brak wbiegania", "Okazjonalny atak ze strefy 2"] },
+        "P5": { "name": "Lewy z tyłu", "role": "Odbiór / obrona", "description": "Lewy z tyłu: odbiór po lewej + obrona długiej krzyżowej.", "skills": ["Odbiór sposobem dolnym", "Obrona", "Odbiór"], "traits": ["Idealnie najlepszy w odbiorze", "Długa krzyżowa", "Pokrycie ~30 m²"] },
+        "P1": { "name": "Prawy z tyłu", "role": "Zagrywka / obrona", "description": "Prawy z tyłu: zagrywa, następnie broni linii i krótkiej krzyżowej.", "skills": ["Zagrywka", "Obrona", "Odbiór sposobem dolnym"], "traits": ["Zagrywający", "Linia + korytarz", "Wsparcie ataku ze strefy 2"] }
+      }
+    },
+    "2F-3B": {
+      "name": "2 z przodu / 3 z tyłu",
+      "shortName": "2F/3B",
+      "description": "2 zawodników przy siatce + 3 z tyłu, w tym rozgrywający wbiegający (P1). Najbardziej stabilne ustawienie obronne, najbliższe systemowi 5-1 w 6 na 6. Typowa obrona: system 1-1-3 (1 blokujący + 1 off-blocker + 3 obrońców w głębi). Zalecane do przygotowania przejścia do 6 na 6.",
+      "positions": {
+        "P4": { "name": "Lewe skrzydło", "role": "Przyjmujący", "description": "Lewe skrzydło przy siatce. Główny atakujący w strefie 4.", "skills": ["Atak", "Blok", "Odbiór"], "traits": ["Cel nr 1 rozgrywającego", "Blok podwójny", "Wszechstronność"] },
+        "P3": { "name": "Środkowy", "role": "Środkowy / atakujący", "description": "Wszechstronny środkowy: centralny blok + atak w strefie 3 lub 2 w zależności od wystawy.", "skills": ["Blok", "Atak szybki", "Obrona przy siatce"], "traits": ["Centralny blok", "Częsta zamiana do strefy 2", "Brak czystego atakującego P2"] },
+        "P5": { "name": "Lewy z tyłu", "role": "Odbiór / obrona", "description": "Lewy z tyłu: odbiór po lewej + długa krzyżowa.", "skills": ["Odbiór sposobem dolnym", "Odbiór", "Obrona"], "traits": ["Filar obrony", "Odbiór w 3 osoby z P6"] },
+        "P6": { "name": "Środek z tyłu", "role": "Filar obrony", "description": "Środek z tyłu: pokrywa cały środek boiska, czyta długie piłki.", "skills": ["Obrona w głębi", "Odbiór sposobem dolnym", "Asekuracja"], "traits": ["Maksymalna mobilność", "Odbiera pipe'y i długie piłki", "Odbiór centralny"] },
+        "P1": { "name": "Rozgrywający wbiegający", "role": "Rozgrywający", "description": "Rozgrywający z linii obrony na P1, który wbiega do strefy 2-3, gdy tylko zagrywka zostanie wykonana. Zagrywa, następnie rozprowadza.", "skills": ["Wbieganie", "Wystawa", "Zagrywka"], "traits": ["Wbiega z P1", "Rozprowadza z 2 atakującymi z przodu", "Krótka asekuracja po wystawie"] }
+      }
+    },
+    "losange": {
+      "name": "Romb (1-2-1)",
+      "shortName": "Romb",
+      "description": "Formacja \"romb\": NAJCZĘŚCIEJ używana w halowej siatkówce 4 na 4. 1 zawodnik w środku przy siatce (P3, często rozgrywający), 2 skrzydłowych w połowie boiska (P4 i P2 wokół linii 3 m), 1 z tyłu. Typowa obrona: system A (1 blokujący + 3 obrońców). Najbardziej narażona strefa: długa krzyżowa (brak zawodników z tyłu).",
+      "positions": {
+        "P3": { "name": "Środek przy siatce", "role": "Rozgrywający lub środkowy", "description": "W środku przy siatce. Często ROZGRYWAJĄCY (wariant \"rozgrywający w środku\") rozprowadzający na obie strony. W przeciwnym razie główny blokujący.", "skills": ["Wystawa", "Blok", "Komunikacja"], "traits": ["Centrum gry rombu", "Standardowy blok pojedynczy", "Rozprowadza bez wbiegania"] },
+        "P4": { "name": "Lewe skrzydło", "role": "Główny atakujący", "description": "Lewe skrzydło, w połowie boiska (wokół linii 3 m). Preferowany cel rozgrywającego.", "skills": ["Atak", "Odbiór", "Asekuracja"], "traits": ["Krótki doskok", "Odbiór po lewej", "Wszechstronność (~35 m²)"] },
+        "P2": { "name": "Prawe skrzydło", "role": "Drugorzędny atakujący", "description": "Prawe skrzydło, w połowie boiska. Atakuje w strefie 2, gdy rozgrywający rozprowadza w prawo.", "skills": ["Atak po linii", "Odbiór", "Zagrywka"], "traits": ["Atak długą krzyżową", "Odbiór po prawej", "Krótka asekuracja po prawej"] },
+        "P1": { "name": "Jedyny z tyłu", "role": "Główny obrońca", "description": "Brak libero: to najlepszy obrońca z tyłu w drużynie. Sam pokrywa cały tył.", "skills": ["Odbiór", "Obrona w głębi", "Czytanie gry"], "traits": ["~40 m² samodzielnie", "Antycypacja to umiejętność nr 1", "Musi umieć wystawić drugie odbicie"] }
+      }
+    },
+    "carre": {
+      "name": "Kwadrat (2-2)",
+      "shortName": "Kwadrat",
+      "description": "Formacja \"kwadrat\" 2-2: 2 zawodników przy siatce (P4 i P2) + 2 z tyłu (P5 i P1). Umożliwia blok podwójny (system B) — ale przydatny tylko przeciwko bardzo silnym atakującym bez wyczucia, ponieważ pozostawia tylko 2 obrońców w głębi (kiwka niezabezpieczona). Częściej grany w systemie A z pojedynczym blokującym.",
+      "positions": {
+        "P4": { "name": "Lewe skrzydło (siatka)", "role": "Blokujący / atakujący", "description": "Przy siatce po lewej. Blok + atak w strefie 4.", "skills": ["Blok", "Atak", "Obrona przy siatce"], "traits": ["Blok podwójny z prawym skrzydłem", "Możliwa zamiana z rozgrywającym", "Brak tradycyjnego tempa 1"] },
+        "P2": { "name": "Rozgrywający-atakujący (siatka)", "role": "Rozgrywający z przodu", "description": "Rozgrywający-atakujący przy siatce po prawej. Zawsze wykonuje drugie odbicie (brak wbiegania w kwadracie).", "skills": ["Wystawa", "Blok", "Atak ze strefy 2"], "traits": ["Zawsze z przodu", "Brak wbiegania", "Blok podwójny z lewym skrzydłem"] },
+        "P5": { "name": "Lewy z tyłu", "role": "Obrona / odbiór", "description": "Lewy z tyłu: odbiór po lewej + długa krzyżowa.", "skills": ["Odbiór", "Obrona", "Odbiór sposobem dolnym"], "traits": ["Filar obrony", "Pokrycie ~35 m²", "Wsparcie ataku ze strefy 4"] },
+        "P1": { "name": "Prawy z tyłu", "role": "Obrona / zagrywka", "description": "Prawy z tyłu: zagrywa, następnie broni linii i długiej krzyżowej.", "skills": ["Zagrywka", "Obrona", "Odbiór sposobem dolnym"], "traits": ["Zagrywający", "Linia + krzyżowa", "Wsparcie ataku ze strefy 2"] }
+      }
+    },
+    "3-1": {
+      "name": "Linia 3-1 (rozgrywający wbiegający)",
+      "shortName": "3-1",
+      "description": "Formacja \"linia 3-1\": jedyny rozgrywający na P1 (z tyłu), który wbiega do strefy 2, gdy tylko piłka zostanie zagrana. Uwalnia 3 atakujących z przodu — uproszczony odpowiednik systemu 5-1 w 6 na 6. Wymaga bardzo czystego odbioru i szybkiego rozgrywającego. Obrona: możliwy system A (1 środkowy blokujący + 3 obrońców).",
+      "positions": {
+        "P4": { "name": "Lewe skrzydło", "role": "Przyjmujący", "description": "Lewe skrzydło przy siatce. Główny atakujący w strefie 4 + odbiór.", "skills": ["Atak", "Odbiór", "Blok"], "traits": ["Cel nr 1", "Odbiór w 3 osoby", "Doskok ze strefy 4"] },
+        "P3": { "name": "Środkowy", "role": "Środkowy", "description": "Środkowy przy siatce. Blok + atak w strefie 3, jeśli wystawa jest blisko siatki.", "skills": ["Blok", "Atak szybki"], "traits": ["Centralny blok", "Możliwe tempo 2", "Brak odbioru"] },
+        "P2": { "name": "Prawe skrzydło", "role": "Przyjmujący", "description": "Prawe skrzydło. Atakuje w strefie 2, gdy rozgrywający rozprowadza w prawo.", "skills": ["Atak", "Blok", "Odbiór"], "traits": ["Atak ze strefy 2", "Odbiór w 3 osoby", "Blok podwójny ze środkowym"] },
+        "P1": { "name": "Rozgrywający wbiegający", "role": "Rozgrywający", "description": "Jedyny rozgrywający na P1. Zagrywa, następnie wbiega do strefy 2, by rozprowadzić piłkę.", "skills": ["Wbieganie", "Wystawa", "Zagrywka"], "traits": ["Wbiega z P1", "Zawsze 3 atakujących z przodu", "Krótka asekuracja po wystawie"] }
+      }
+    }
+  }
+}

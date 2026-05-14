@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ インタラクティブ・ドキュメント ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "バレーボールの技術リファレンス — 3Dアニメーションによる技術解説、ルール、ポジション、用語集。",
+    "ctaPrimary": "技術を見る",
+    "ctaSecondary": "ルールを読む"
+  },
+  "sectionsLabel": "★ セクション ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "技術",
+      "desc": "バレーボールの基礎技術をインタラクティブな3Dアニメーションで解説。",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "ポジション",
+      "desc": "コート上の各ポジションの役割と責任。",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "ガイド",
+      "desc": "図解付きの詳細な技術・戦術ガイド。",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "ルール",
+      "desc": "FIVB公式規則をわかりやすく解説。",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "用語集",
+      "desc": "バレーボールの専門用語を完全網羅。",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "シナリオ",
+      "desc": "3Dアニメーションによる試合場面: 攻撃、守備、レセプション。",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

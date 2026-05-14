@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTAÇÃO",
+    "title": "REGRAS DO VOLEIBOL",
+    "subtitle": "Regulamento FIVB simplificado — as regras essenciais para compreender e jogar."
+  },
+  "warning": "Esta página é um resumo pedagógico. Para competições oficiais, consulte o <strong>regulamento oficial FIVB</strong>.",
+  "quickFaultsTitle": "FALTAS COMUNS",
+  "quickFaults": [
+    "Tocar na rede durante a jogada",
+    "Mais de 3 toques por equipa",
+    "Duplo contacto pelo mesmo jogador",
+    "Bola conduzida / transportada",
+    "Ataque da linha de trás acima da rede a partir da zona de ataque",
+    "Pisar a linha no serviço",
+    "Servir antes do apito",
+    "Falta de posição na rotação"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "O essencial",
+      "num": "01",
+      "rules": [
+        { "title": "Formato do encontro", "content": "Um encontro disputa-se à melhor de 5 sets. Cada set joga-se a 25 pontos com pelo menos 2 pontos de vantagem. Se for necessário um 5º set, joga-se a 15 pontos." },
+        { "title": "Equipas", "content": "6 jogadores por lado em campo. Uma equipa pode ter até 6 suplentes e um líbero. Máximo de 6 substituições regulares por set (líbero não contabilizado)." },
+        { "title": "Serviço", "content": "O serviço é executado a partir da zona de serviço atrás da linha de fundo. A bola tem de atravessar a rede para o campo adversário. O servidor tem 8 segundos após o apito para bater. Um serviço que toque na rede e caia no campo adversário é VÁLIDO (let serve legal desde 2001)." },
+        { "title": "Ponto em cada jogada", "content": "Desde 1999 (sistema de pontuação em cada jogada), marca-se um ponto em cada jogada, independentemente de quem serviu. A equipa que marca recebe o serviço." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Contactos e faltas",
+      "num": "02",
+      "rules": [
+        { "title": "Máximo de 3 toques", "content": "Uma equipa dispõe de até 3 toques para devolver a bola. O bloco não conta como toque da equipa — a equipa continua a ter 3 toques após um bloco." },
+        { "title": "Duplo contacto", "content": "Um jogador não pode tocar duas vezes seguidas na bola, exceto no primeiro toque da equipa (receção/defesa). Exceção para o bloco. Nova experiência FIVB 2025-2026: duplo contacto autorizado no passe (2º toque), desde que a bola permaneça do mesmo lado." },
+        { "title": "Falta de rede", "content": "Tocar na rede durante a ação de jogar a bola é falta. Tocar fora da ação ou fora das antenas não é falta. Atravessar parcialmente por baixo da rede é permitido se não interferir com o adversário. Objetivo FIVB 2025: \"promover um jogo fluido\"." },
+        { "title": "Bola na linha", "content": "Uma bola que toque na linha está \"dentro\". Uma bola que passe fora das antenas ou fora do espaço de passagem é fora." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotação e posições",
+      "num": "03",
+      "rules": [
+        { "title": "Rotação obrigatória", "content": "Em cada side-out, a equipa que ganha o serviço roda no sentido dos ponteiros do relógio: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. O jogador que passa de P2→P1 torna-se o novo servidor." },
+        { "title": "Falta de posição", "content": "No momento em que o servidor bate, os jogadores têm de respeitar a sua ordem de rotação (sem sobreposição diagonal). Falta = ponto + serviço para o adversário. Atualização 2025: a regra de sobreposição agora aplica-se apenas à equipa que RECEBE — a equipa que serve pode posicionar-se livremente." },
+        { "title": "Regra dos 3 metros", "content": "Os jogadores da linha de trás (P1, P5, P6) não podem atacar acima da rede a partir da zona de ataque. Podem saltar de trás da linha dos 3 m e aterrar na zona de ataque — isto é legal." },
+        { "title": "Líbero", "content": "O líbero usa uma camisola contrastante e joga apenas na linha de trás (P1, P5, P6). Substituições ilimitadas e não contabilizadas. Não pode bloquear nem atacar acima da rede. Pode servir desde 2021 numa única rotação por set. Pode ser capitão desde 2021. Restrição: se o líbero fizer passe de cima a partir da zona de ataque, um companheiro não pode atacar a bola acima da rede." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Situações especiais",
+      "num": "04",
+      "rules": [
+        { "title": "Tempos mortos", "content": "Cada equipa dispõe de 2 tempos mortos de 30 segundos por set. Os tempos mortos técnicos automáticos aos 8º e 16º pontos nos sets 1-4 são utilizados em algumas competições FIVB." },
+        { "title": "Serviço — regras essenciais", "content": "8 segundos para bater após o apito. Apenas um lançamento permitido, mas o servidor pode deixar cair a bola uma vez sem penalização. Pisar: no momento do contacto (ou da chamada de salto), o servidor não pode tocar na linha de fundo nem no campo. Cortina no serviço: os companheiros não podem levantar as mãos acima da cabeça durante o serviço (regra 2025)." },
+        { "title": "Ataque da linha de trás", "content": "Um jogador da linha de trás pode atacar se a sua chamada for atrás da linha dos 3 m (ambos os pés). Pode também bater na bola se alguma parte estiver abaixo da rede. Bloquear ou atacar o serviço acima da rede a partir da zona de ataque é falta." },
+        { "title": "Bola conduzida", "content": "O contacto com a bola tem de ser breve e limpo. \"Contacto feio ≠ falta\": um contacto imperfeito não é automaticamente falta se a bola ressaltar. Critério mais permissivo na manchete do que no passe de cima." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "Atualizações FIVB 2025-2028",
+      "num": "05",
+      "rules": [
+        { "title": "Sobreposição: apenas na receção", "content": "Desde 2025, a regra de sobreposição aplica-se apenas à equipa que recebe. A equipa que serve pode ocupar qualquer posição em campo no momento do serviço." },
+        { "title": "Sem cortina no serviço", "content": "Os jogadores da equipa que serve estão agora proibidos de levantar as mãos acima da cabeça durante o serviço até a bola atravessar a rede. Uma cortina deste tipo é sancionada diretamente." },
+        { "title": "Duplo contacto no passe — experiência", "content": "Experiência FIVB 2025-2026: o duplo contacto no passe (2º toque) é autorizado desde que a bola permaneça do mesmo lado. Se a experiência for bem-sucedida, a regra poderá tornar-se permanente." },
+        { "title": "O líbero pode servir (desde 2021)", "content": "O líbero pode servir desde 2021 numa única rotação por set. A regra varia por federação (alguns torneios USAV e NFHS não o permitem — consultar o regulamento da competição)." }
+      ]
+    }
+  ]
+}

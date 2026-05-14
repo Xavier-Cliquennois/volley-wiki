@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TACTICS",
+    "title": "GAME SCENARIOS",
+    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+  },
+  "construction": {
+    "label": "PAGE UNDER CONSTRUCTION",
+    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+  },
+  "wizard": {
+    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
+    "step2": "2 · WHICH GAME PHASE?",
+    "step3": "3 · WHICH SPECIFIC CONTEXT?",
+    "noMatch": "No scenario available for this combination yet.",
+    "reset": "RESET",
+    "launch": "LAUNCH SCENARIO →"
+  },
+  "compactBar": {
+    "format": "FORMAT",
+    "phase": "PHASE",
+    "scenario": "SCENARIO",
+    "reset": "RESET",
+    "resetTitle": "Reset everything"
+  },
+  "placeholder": {
+    "title": "PICK A SCENARIO",
+    "selectFormatAndPhase": "Select a format and a phase above.",
+    "noScenarios": "No scenario available for this combination.",
+    "clickInList": "Click a scenario in the list above."
+  },
+  "phase": {
+    "attack": "Attack",
+    "defense": "Defense",
+    "reception": "Reception"
+  },
+  "player": {
+    "controls": {
+      "play": "Play",
+      "pause": "Pause",
+      "replay": "Replay",
+      "previousStep": "Previous step",
+      "nextStep": "Next step",
+      "camera": "Camera",
+      "speed": "Speed",
+      "auto": "Auto",
+      "stepMode": "Step",
+      "playbackModeLabel": "Playback mode"
+    },
+    "toggles": {
+      "trail": "Trail",
+      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
+      "zones": "Zones",
+      "zonesTitle": "Show the 6 FIVB zones on the court"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "clickHint": "click to jump"
+    },
+    "cameras": {
+      "DEFAULT": "Wide",
+      "TOP_DOWN": "Top",
+      "BEHIND_SERVE": "Server",
+      "ATTACKER_VIEW": "Hitter"
+    },
+    "summary": {
+      "keyPoints": "KEY POINTS",
+      "commonMistakes": "COMMON MISTAKES",
+      "context": "Context"
+    },
+    "step": {
+      "label": "Step {{current}} / {{total}}",
+      "defaultTitle": "Step {{index}}"
+    },
+    "loading": "LOADING…"
+  }
+}

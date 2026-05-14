@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTACIÓN",
+    "title": "GUÍAS",
+    "subtitle": "Guías técnicas y tácticas detalladas para mejorar en el voleibol."
+  },
+  "ticketPrefix": "Nº",
+  "list": {
+    "service": {
+      "title": "Guía del saque",
+      "subtitle": "Saque bajo, flotante, jump float y jump topspin",
+      "category": "Técnica",
+      "description": "Los 4 tipos de saque con biomecánica, etapas, errores comunes, ejercicios y zonas tácticas.",
+      "readingTime": "~15 min",
+      "level": "Principiante"
+    },
+    "reception": {
+      "title": "Guía de la recepción",
+      "subtitle": "Antebrazos, plataforma, sistemas y lectura del saque",
+      "category": "Técnica",
+      "description": "Técnica de la plataforma, freeze en el contacto, desplazamiento, sistemas en W/U y lectura del sacador.",
+      "readingTime": "~15 min",
+      "level": "Principiante"
+    },
+    "attaque": {
+      "title": "Guía del ataque",
+      "subtitle": "Aproximación, timing, golpes y posiciones",
+      "category": "Técnica",
+      "description": "Las 5 fases del remate, aproximación de 3-4 pasos, timing según la colocación, golpes especiales y errores.",
+      "readingTime": "~15 min",
+      "level": "Intermedio"
+    },
+    "contre": {
+      "title": "Guía del bloqueo",
+      "subtitle": "Timing, tipos de bloqueo y lectura del juego",
+      "category": "Técnica",
+      "description": "Timing, tipos de bloqueo, secuencia visual de élite, read vs commit blocking y ejercicios.",
+      "readingTime": "~10 min",
+      "level": "Intermedio"
+    },
+    "positionnement-defense": {
+      "title": "Colocación defensiva",
+      "subtitle": "Colócate según tu posición y la situación",
+      "category": "Táctica",
+      "description": "Responsabilidades por zona, colocación según la zona de ataque rival, sistemas y comunicación.",
+      "readingTime": "~20 min",
+      "level": "Intermedio"
+    }
+  },
+  "detail": {
+    "backLink": "← GUÍAS",
+    "sectionTitle": "★ CONTENIDO DE LA GUÍA ★",
+    "notFound": "Guía no encontrada."
+  },
+  "defenseHub": {
+    "backLink": "← GUÍAS",
+    "description": "La colocación defensiva cambia según el número de jugadores en cancha. Elige tu formato para acceder a la guía completa: responsabilidades por zona, sistemas (A/B, man-up, 1-2-2…) y adaptación según la zona de ataque rival.",
+    "cardDescription": "Defensa adaptada al formato {{size}}, zonas, sistemas y colocaciones detalladas."
+  },
+  "defenseSized": {
+    "backLink": "← TODOS LOS FORMATOS"
+  }
+}

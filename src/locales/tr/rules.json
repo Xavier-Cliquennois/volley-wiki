@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTATION",
+    "title": "VOLLEYBALL RULES",
+    "subtitle": "Simplified FIVB regulation — the essential rules to understand and play."
+  },
+  "warning": "This page is an educational summary. For official competitions, refer to the <strong>official FIVB regulation</strong>.",
+  "quickFaultsTitle": "COMMON FAULTS",
+  "quickFaults": [
+    "Touching the net during play",
+    "More than 3 team touches",
+    "Double contact by the same player",
+    "Held / carried ball",
+    "Back-row attack above the net from the front zone",
+    "Foot fault on the serve (stepping on the line)",
+    "Serving before the whistle",
+    "Position fault at rotation"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "The essentials",
+      "num": "01",
+      "rules": [
+        { "title": "Match format", "content": "A match is played as best of 5 sets. Each set is played to 25 points with at least a 2-point lead. If a 5th set is needed, it is played to 15 points." },
+        { "title": "Teams", "content": "6 players per side on court. A team can have up to 6 substitutes and one libero. Maximum 6 regular substitutions per set (libero not counted)." },
+        { "title": "Serve", "content": "The serve is performed from the service zone behind the back line. The ball must cross the net into the opponent's court. The server has 8 seconds after the whistle to strike. A serve that touches the net and falls into the opponent's court is GOOD (let serve legal since 2001)." },
+        { "title": "Point on every rally", "content": "Since 1999 (rally point system), a point is scored on every rally, regardless of which team served. The scoring team gets the serve." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Contacts and faults",
+      "num": "02",
+      "rules": [
+        { "title": "Maximum 3 touches", "content": "A team has up to 3 touches to return the ball. The block does not count as a team touch — the team still has 3 touches after a block." },
+        { "title": "Double contact", "content": "A player cannot contact the ball twice in a row, except on the first team contact (reception/dig). Exception for the block. New 2025-2026 FIVB trial: double contact allowed on the set (2nd touch) as long as the ball stays on the same side." },
+        { "title": "Net fault", "content": "Touching the net during the action of playing the ball is a fault. Touching outside the action or outside the antennae is not a fault. Partially crossing under the net is allowed if it does not interfere with the opponent. FIVB 2025 goal: \"promote flowing play\"." },
+        { "title": "Ball on the lines", "content": "A ball that lands on the line is \"in\". A ball that crosses outside the antennae or outside the crossing space is out." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotation and positions",
+      "num": "03",
+      "rules": [
+        { "title": "Mandatory rotation", "content": "On every side-out, the team winning the serve rotates clockwise: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. The player going P2→P1 becomes the new server." },
+        { "title": "Position fault", "content": "At the moment the server strikes, players must respect their rotation order (no diagonal overlap). Fault = point + serve to the opponent. 2025 update: the overlap rule now only applies to the RECEIVING team — the serving team can position freely." },
+        { "title": "3-meter rule", "content": "Back-row players (P1, P5, P6) cannot attack above the net from the front zone. They can jump from behind the 3 m line and land in the front zone — this is legal." },
+        { "title": "Libero", "content": "The libero wears a contrasting jersey and only plays back-row (P1, P5, P6). Unlimited uncounted substitutions. Cannot block or attack above the net. May serve since 2021 in a single rotation per set. May be captain since 2021. Restriction: if the libero hand-sets from the front zone, a teammate cannot attack the ball above the net." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Special situations",
+      "num": "04",
+      "rules": [
+        { "title": "Time-outs", "content": "Each team has 2 time-outs of 30 seconds per set. Automatic technical time-outs at the 8th and 16th points in sets 1-4 are used in some FIVB competitions." },
+        { "title": "Serve — key rules", "content": "8 seconds to strike after the whistle. Only one toss allowed, but the server can let the ball drop once without penalty. Foot fault: at the moment of contact (or jump take-off), the server must not touch the back line or court. Screen on serve: teammates must not raise their hands above their heads during the serve (2025 rule)." },
+        { "title": "Back-row attack", "content": "A back-row player can attack if their take-off is behind the 3 m line (both feet). They can also strike the ball if any part is below the net. Blocking or attacking the serve above the net from the front zone is a fault." },
+        { "title": "Held ball", "content": "Contact with the ball must be brief and clean. \"Ugly contact ≠ fault\": imperfect contact is not automatically a fault if the ball rebounds. More permissive standard for forearm passes than for hand sets." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "FIVB 2025-2028 updates",
+      "num": "05",
+      "rules": [
+        { "title": "Overlap: only on reception", "content": "Since 2025, the overlap rule only applies to the receiving team. The serving team can occupy any position on the court at the moment of the serve." },
+        { "title": "No screen on serve", "content": "Players on the serving team are now forbidden from raising their hands above their heads during the serve until the ball crosses the net. Such a screen is sanctioned directly." },
+        { "title": "Double contact on the set — trial", "content": "FIVB 2025-2026 trial: double contact on the set (2nd touch) is allowed as long as the ball remains on the same side. If the trial succeeds, the rule could become permanent." },
+        { "title": "Libero can serve (since 2021)", "content": "The libero can serve since 2021 in a single rotation per set. Rule varies by federation (some USAV and NFHS tournaments do not allow it — check the competition regulation)." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "siteName": "Volley-Wiki",
+  "siteTagline": "技術 · ルール · 戦術",
+  "nav": {
+    "home": "ホーム",
+    "techniques": "技術",
+    "positions": "ポジション",
+    "scenarios": "シナリオ",
+    "guides": "ガイド",
+    "rules": "ルール",
+    "glossary": "用語集",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "mainNavigation": "メインナビゲーション"
+  },
+  "language": {
+    "label": "言語",
+    "fr": "Français",
+    "en": "English",
+    "switchTo": "{{lang}}に切り替える"
+  },
+  "footer": {
+    "tagline": "VOLLEY·WIKI — 技術 · ルール · 戦術"
+  },
+  "actions": {
+    "back": "戻る",
+    "explore": "見る →",
+    "read": "読む →",
+    "readGuide": "ガイドを読む →",
+    "showAll": "すべて表示",
+    "reset": "リセット",
+    "loading": "読み込み中…"
+  },
+  "labels": {
+    "documentation": "★ ドキュメント",
+    "category": "カテゴリー",
+    "level": "レベル",
+    "duration": "所要時間",
+    "level_beginner": "初級",
+    "level_intermediate": "中級",
+    "level_advanced": "上級",
+    "category_technique": "技術",
+    "category_tactique": "戦術",
+    "goldenRule": "鉄則"
+  },
+  "teamSize": {
+    "4v4": "4 対 4",
+    "5v5": "5 対 5",
+    "6v6": "6 対 6"
+  },
+  "court": {
+    "net": "ネット",
+    "backOfCourt": "コート後方",
+    "ourSide": "自陣側",
+    "opponentSide": "相手側"
+  }
+}

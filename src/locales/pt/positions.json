@@ -1,0 +1,181 @@
+{
+  "hub": {
+    "kicker": "★ DOCUMENTAÇÃO",
+    "title": "POSIÇÕES E FUNÇÕES",
+    "intro": "No voleibol de pavilhão, as posições são numeradas de <strong>P1 a P6</strong> no sentido contrário aos ponteiros do relógio, vistas a partir de trás do próprio campo. A rotação ocorre no sentido dos ponteiros do relógio em cada side-out. O número de jogadores e os sistemas táticos variam consoante o formato — escolha o que corresponde à sua prática.",
+    "formats": {
+      "6v6": {
+        "tagline": "Formato oficial FIVB / FPV",
+        "description": "6 jogadores + líbero, campo de 9×18 m, rede a 2,43 m. Sistemas 5-1, 4-2, 6-2 com rotação no sentido dos ponteiros do relógio."
+      },
+      "5v5": {
+        "tagline": "Formato híbrido pedagógico",
+        "description": "Transição entre 4v4 e 6v6. Sem líbero. Configurações pentágono, 3F/2B, 2F/3B consoante a colocação escolhida."
+      },
+      "4v4": {
+        "tagline": "Recreativo, universitário, transição",
+        "description": "Campo reduzido, 2 à frente + 2 atrás. Formações losango, quadrado e linha 3-1 com distribuidor a infiltrar."
+      }
+    }
+  },
+  "page": {
+    "kickerPrefix": "★ DOCUMENTAÇÃO ·",
+    "titlePrefix": "POSIÇÕES —",
+    "subtitle": "Posições e sistemas táticos para o voleibol {{label}}.",
+    "step1": "1. FORMATO DE JOGO",
+    "step2": "2. ESQUEMA TÁTICO",
+    "courtTitle": "MEIO-CAMPO —",
+    "showAll": "MOSTRAR TUDO",
+    "legendTitle": "LEGENDA",
+    "legendItems": [
+      "<strong>Rede</strong> — faixa cor de laranja",
+      "<strong>3 m</strong> — linha tracejada"
+    ],
+    "legendHint": "Clique num jogador para ver a sua ficha",
+    "liberoLabel": "LÍBERO",
+    "liberoCardDescription": "Substitui os jogadores da linha de trás (P1, P5, P6).",
+    "noLibero": "<strong>Sem líbero</strong> nesta configuração.",
+    "cardsTitle": "★ FICHAS DE POSIÇÃO",
+    "skillsTitle": "COMPETÊNCIAS",
+    "traitsTitle": "CARACTERÍSTICAS",
+    "crossLink": {
+      "kicker": "APROFUNDAR",
+      "html": "Consulte o guia <link>Posicionamento e defesa</link> para ver como esta configuração se coloca consoante a zona de ataque adversária."
+    }
+  },
+  "teamIntros": {
+    "6": {
+      "tagline": "Formato oficial FIVB / FPV: 6 jogadores + líbero, campo de 9×18 m, linha de ataque a 3 m, rede a 2,43 m (M) / 2,24 m (F).",
+      "rules": "Zonas numeradas no sentido contrário aos ponteiros do relógio a partir de trás do próprio campo (Z1 = serviço). Rotação no sentido dos ponteiros do relógio no side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Regra 7.4: no momento do contacto do serviço, as posições são controladas pelos pés (Z2 mais perto da rede do que Z1, etc.). Bloco de 1, 2 ou 3. O líbero substitui os jogadores da linha de trás sem contar como substituição."
+    },
+    "5": {
+      "tagline": "Formato híbrido, não homologado oficialmente pela FIVB/FPV. Usado em escolas, torneios universitários, equipas incompletas e como transição entre 4v4 e 6v6.",
+      "rules": "2+3 (distribuidor a infiltrar recomendado) ou 3+2 (distribuidor fixo à frente). Sem líbero. Regra de sobreposição adaptada: Z4>Z5, Z3>Z6, Z2>Z1 (esquema 3-2) ou relações parciais (2-3). As recomendações defensivas são adaptações lógicas do 6v6, não um regulamento codificado."
+    },
+    "4": {
+      "tagline": "Sem regulamento oficial FIVB. Praticado em torneios universitários nos EUA, torneios recreativos e como transição pedagógica (FPV, Volleyball Canada).",
+      "rules": "Campo de 9×9 m (por vezes reduzido), 3 toques, bloco permitido, rotação no sentido dos ponteiros do relógio. 2 à frente + 2 atrás em cada rotação. Formações comuns: losango (1-2-1 com distribuidor central), linha 3-1 (distribuidor a infiltrar), quadrado 2-2. Alguns organizadores dispensam as faltas de sobreposição (Texas A&M)."
+    }
+  },
+  "commonZones": {
+    "P4": { "name": "Frente esquerda" },
+    "P3": { "name": "Frente centro" },
+    "P2": { "name": "Frente direita" },
+    "P5": { "name": "Trás esquerda" },
+    "P6": { "name": "Trás centro" },
+    "P1": { "name": "Trás direita (serviço)" },
+    "L":  { "name": "Líbero" }
+  },
+  "configurations": {
+    "5-1": {
+      "name": "Sistema 5-1 (padrão)",
+      "shortName": "5-1",
+      "description": "1 único distribuidor a distribuir em todas as 6 rotações (3 na linha de trás com infiltração + 3 à frente) + 2 pontas + 2 centrais + 1 oposto (em diagonal oposta ao distribuidor) + 1 líbero. O sistema mais utilizado na competição de elite.",
+      "positions": {
+        "P4": { "role": "Ponta", "description": "Principal zona de ataque. A ponta recebe a maioria das bolas altas e tem de ser versátil: ataque, bloco, receção. É também o bloqueador secundário do lado esquerdo num ataque adversário pela Z4.", "skills": ["Ataque", "Bloco", "Receção", "Serviço"], "traits": ["Potência e precisão de ataque", "Grande envergadura", "Versatilidade", "Resistência"] },
+        "P3": { "role": "Central / meio-bloco", "description": "Jogador junto à rede na zona central. Bloqueia ataques adversários e remata em tempo curto. Num ataque adversário pela ponta, fecha a diagonal com um bloco a 2.", "skills": ["Bloco", "Ataque rápido", "Cobertura junto à rede"], "traits": ["Estatura alta necessária", "Bloco dominante", "Tempo 1 e 2", "Papel defensivo limitado junto à rede"] },
+        "P2": { "role": "Distribuidor", "description": "O maestro. Recebe o 2º toque e conduz o ataque. No 5-1 joga em todas as rotações: infiltra a partir de P1, P6 ou P5 (atrás), distribui a partir de P4, P3 ou P2 (à frente). Alvo: entre Z2 e Z3, a ~1 m da rede.", "skills": ["Passe de cima", "Leitura do bloco", "Comunicação", "Infiltração"], "traits": ["Precisão técnica máxima", "Visão 360°", "Sangue-frio", "Liderança"] },
+        "P5": { "role": "Receção / defesa", "description": "Zona de receção e defesa à esquerda. Frequentemente ocupada pela 2ª ponta na rotação da linha de trás. O líbero pode substituí-lo.", "skills": ["Manchete", "Receção", "Defesa", "Leitura"], "traits": ["Leitura dos ataques", "Primeira linha defensiva", "Cobertura da retaguarda esquerda", "Frequentemente substituído pelo líbero"] },
+        "P6": { "role": "Defesa central", "description": "Pivô defensivo no fundo do campo. Cobre as bolas longas e apoia os colegas. Muitas vezes é o líbero que joga aqui.", "skills": ["Defesa profunda", "Cobertura", "Apoio", "Manchete"], "traits": ["Leitura de jogo", "Mobilidade máxima", "Comunicação da retaguarda", "Frequentemente substituído pelo líbero"] },
+        "P1": { "role": "Oposto", "description": "O oposto (\"pointu\" em francês, \"point hitter\") está em diagonal oposta ao distribuidor. Não participa na receção — é o finalizador. Passa 3 das 6 rotações na linha de trás (ataca a partir da retaguarda — pipe).", "skills": ["Ataque potente", "Serviço", "Bloco", "Ataque da linha de trás"], "traits": ["Potência máxima", "Ataque da linha de trás em 3 rotações/6", "Dispensado da receção", "Também designado por \"pointu\""] },
+        "L":  { "role": "Especialista defensivo", "description": "Especialista defensivo com camisola de cor contrastante. Substitui os jogadores da linha de trás (P1, P5, P6) sem contar como substituição. Restrições FIVB: não pode bloquear, não pode atacar acima da rede e não pode fazer passe de cima a partir da zona de ataque para um companheiro que depois ataque acima da rede.", "skills": ["Manchete", "Receção", "Defesa", "Leitura"], "traits": ["Agilidade máxima", "Não pode bloquear / atacar acima da rede", "Sem passe de cima da zona de ataque → atacante", "Substituições ilimitadas", "Pode servir (FIVB 2021)"] }
+      }
+    },
+    "4-2": {
+      "name": "Sistema 4-2 (iniciante)",
+      "shortName": "4-2",
+      "description": "2 distribuidores em diagonal oposta (P2 e P5) + 2 centrais + 2 pontas. O distribuidor da FRENTE faz sempre o 2º toque. Sem infiltração: o sistema mais simples de aprender.",
+      "positions": {
+        "P4": { "role": "Ponta", "description": "Asa esquerda. Principal alvo do distribuidor na zona 4.", "skills": ["Ataque", "Bloco", "Receção"], "traits": ["Versatilidade", "Alvo nº 1 do distribuidor", "Receção em W"] },
+        "P3": { "role": "Central", "description": "Central da linha da frente: bloco + ataque rápido quando a receção o permite.", "skills": ["Bloco", "Ataque rápido"], "traits": ["Bloco dominante", "Recetor central no W"] },
+        "P2": { "role": "Distribuidor da frente", "description": "Distribuidor da frente: faz o 2º toque. Sem infiltração, sem receção. Distribui a partir da posição.", "skills": ["Passe de cima", "Distribuição", "Comunicação"], "traits": ["Sempre à frente quando distribui", "Fora da receção", "Sem infiltração"] },
+        "P5": { "role": "Distribuidor de trás (em pausa)", "description": "Segundo distribuidor, em diagonal oposta. Joga apenas na linha de trás, NÃO faz o 2º toque enquanto está atrás. Recebe e defende.", "skills": ["Receção", "Defesa", "Manchete"], "traits": ["Torna-se distribuidor da frente após rotação", "Não distribui enquanto está atrás", "Acompanha na receção"] },
+        "P6": { "role": "Central de trás", "description": "Central que passa pelas posições da linha de trás. Receção central + defesa.", "skills": ["Defesa", "Manchete", "Receção"], "traits": ["Pivô defensivo", "Cobre o centro do fundo"] },
+        "P1": { "role": "Ponta / servidor", "description": "Ponta na rotação da linha de trás, serve a partir de P1 e depois joga em receção/defesa.", "skills": ["Serviço", "Receção", "Defesa"], "traits": ["Servidor principal", "Receção em W"] }
+      }
+    },
+    "6-2": {
+      "name": "Sistema 6-2 (avançado)",
+      "shortName": "6-2",
+      "description": "2 distribuidores polivalentes: distribuem APENAS a partir da linha de trás (com infiltração) e tornam-se atacantes do lado direito quando rodam para a frente. + 2 centrais + 2 pontas + 1 líbero. Vantagem: sempre 3 atacantes na linha da frente. Desvantagem: química distribuidor-atacante diluída e, na variante com dupla substituição, esgota rapidamente as 6 substituições por set (Regra FIVB 15.6).",
+      "positions": {
+        "P4": { "role": "Ponta", "description": "Asa esquerda, atacante principal na zona 4.", "skills": ["Ataque", "Bloco", "Receção"], "traits": ["Versatilidade", "Receção a 3"] },
+        "P3": { "role": "Central", "description": "Central da frente: bloco + tempo 1.", "skills": ["Bloco", "Ataque rápido"], "traits": ["Bloco dominante", "Troca de asa"] },
+        "P2": { "role": "Distribuidor-atacante", "description": "No 6-2, o jogador da linha da frente (distribuidor ou não) ataca. Quando o distribuidor está à frente, torna-se atacante da zona 2. O distribuidor de trás distribui.", "skills": ["Ataque pela zona 2", "Bloco", "Serviço"], "traits": ["Polivalente passe + ataque", "Ataca a zona 2", "Sempre 3 atacantes à frente"] },
+        "P5": { "role": "Ponta (trás)", "description": "Asa em rotação da linha de trás. Receção e defesa.", "skills": ["Receção", "Manchete", "Defesa"], "traits": ["Receção a 3", "Frequentemente substituído pelo líbero"] },
+        "P6": { "role": "Central de trás", "description": "Central em rotação da linha de trás, frequentemente substituído pelo líbero em receção e defesa.", "skills": ["Defesa", "Manchete"], "traits": ["Frequentemente substituído pelo líbero", "Pivô defensivo"] },
+        "P1": { "role": "Distribuidor a infiltrar", "description": "Distribuidor da linha de trás que infiltra assim que o serviço é batido em direção à zona 2-3 para distribuir. Em frente dele, o 2º distribuidor em P2 ataca.", "skills": ["Infiltração", "Passe de cima", "Serviço"], "traits": ["Infiltra a partir de P1 → zona 2/3", "Distribui", "Rotação alterna com o 2º distribuidor"] },
+        "L":  { "role": "Líbero", "description": "Líbero padrão, substitui os centrais na rotação da linha de trás.", "skills": ["Manchete", "Receção", "Defesa"], "traits": ["Substitui P5/P6", "Camisola contrastante"] }
+      }
+    },
+    "pentagon": {
+      "name": "Pentágono (1-2-2)",
+      "shortName": "Pentágono",
+      "description": "1 jogador no centro da rede, 2 asas a meio-campo, 2 atrás. Cobertura equilibrada do campo — bom para o nível iniciante e recreativo. Defesa típica: sistema 1-2-2 (man-up adaptado, 1 bloqueador + 2 jogadores de cobertura + 2 defensores profundos).",
+      "positions": {
+        "P3": { "name": "Centro da rede", "role": "Distribuidor ou central", "description": "No centro da rede. Frequentemente o distribuidor (se fixo); caso contrário, o bloqueador principal.", "skills": ["Passe", "Bloco", "Comunicação"], "traits": ["Centro do jogo", "Bloco central", "Isenção parcial de receção"] },
+        "P4": { "name": "Asa esquerda", "role": "Ponta", "description": "Asa esquerda a meio-campo: recebe e ataca a partir da zona 4.", "skills": ["Ataque", "Receção", "Bloco"], "traits": ["Versatilidade", "Corrida de balanço média", "Cobertura da diagonal curta"] },
+        "P2": { "name": "Asa direita", "role": "Ponta / oposto", "description": "Asa direita. Se o distribuidor jogar no centro, é o atacante da zona 2.", "skills": ["Ataque paralelo", "Bloco", "Serviço"], "traits": ["Ataque diagonal longa", "Bloco a 2 com o central", "Cobertura diagonal longa"] },
+        "P5": { "name": "Trás esquerda", "role": "Receção / defesa", "description": "Trás esquerda: cobre a defesa esquerda, frequentemente o melhor recetor.", "skills": ["Manchete", "Receção", "Defesa"], "traits": ["Pilar defensivo", "~30 m² a cobrir", "Lê a diagonal longa"] },
+        "P1": { "name": "Trás direita", "role": "Defesa / serviço", "description": "Trás direita: cobre a defesa à direita + serve.", "skills": ["Serviço", "Defesa", "Manchete"], "traits": ["Servidor principal", "Cobertura da paralela", "Apoio ao ataque da zona 2"] }
+      }
+    },
+    "3F-2B": {
+      "name": "3 à frente / 2 atrás",
+      "shortName": "3F/2B",
+      "description": "3 atacantes junto à rede (P4, P3, P2 com distribuidor em P2) + 2 atrás (P5, P1). Esquema ofensivo: bloco a 2 ou a 3 possível. Defesa típica: sistema 2-1-2 (2 bloqueadores + 1 bloqueador secundário + 2 defensores profundos). Desvantagem: 30+ m² por defensor da linha de trás.",
+      "positions": {
+        "P4": { "name": "Asa esquerda", "role": "Ponta", "description": "Asa esquerda junto à rede. Principal alvo do distribuidor na zona 4.", "skills": ["Ataque", "Bloco", "Receção"], "traits": ["Versatilidade", "Bloco a 2 com o central", "Alvo preferido do distribuidor"] },
+        "P3": { "name": "Central", "role": "Central", "description": "Central junto à rede. Bloco + ataque rápido quando a receção o permite.", "skills": ["Bloco", "Ataque rápido"], "traits": ["Bloco central", "Tempo 1 preservado", "Switch possível"] },
+        "P2": { "name": "Distribuidor da frente", "role": "Distribuidor", "description": "Distribuidor fixo à frente. Sem infiltração. Distribui a partir da rede; pode atacar em 2 se a bola chegar alta pelo lado direito.", "skills": ["Passe de cima", "Distribuição", "Bloco do lado direito"], "traits": ["Fixo à frente", "Sem infiltração", "Ataque ocasional pela zona 2"] },
+        "P5": { "name": "Trás esquerda", "role": "Receção / defesa", "description": "Trás esquerda: receção pela esquerda + defesa da diagonal longa.", "skills": ["Manchete", "Defesa", "Receção"], "traits": ["Idealmente o melhor recetor", "Diagonal longa", "Cobertura ~30 m²"] },
+        "P1": { "name": "Trás direita", "role": "Serviço / defesa", "description": "Trás direita: serve e depois defende a paralela e a diagonal curta.", "skills": ["Serviço", "Defesa", "Manchete"], "traits": ["Servidor", "Paralela + corredor", "Apoio ao ataque pela zona 2"] }
+      }
+    },
+    "2F-3B": {
+      "name": "2 à frente / 3 atrás",
+      "shortName": "2F/3B",
+      "description": "2 jogadores junto à rede + 3 atrás, incluindo o distribuidor a infiltrar (P1). O esquema mais estável defensivamente, o mais próximo do 5-1 do 6v6. Defesa típica: sistema 1-1-3 (1 bloqueador + 1 bloqueador secundário + 3 defensores profundos). Recomendado para preparar a transição para o 6v6.",
+      "positions": {
+        "P4": { "name": "Asa esquerda", "role": "Ponta", "description": "Asa esquerda junto à rede. Atacante principal na zona 4.", "skills": ["Ataque", "Bloco", "Receção"], "traits": ["Alvo nº 1 do distribuidor", "Bloco a 2", "Versatilidade"] },
+        "P3": { "name": "Central", "role": "Central / oposto", "description": "Central polivalente: bloco central + ataque na zona 3 ou 2 consoante o passe.", "skills": ["Bloco", "Ataque rápido", "Cobertura junto à rede"], "traits": ["Bloco central", "Switch frequente para a zona 2", "Sem atacante P2 puro"] },
+        "P5": { "name": "Trás esquerda", "role": "Receção / defesa", "description": "Trás esquerda: receção pela esquerda + diagonal longa.", "skills": ["Manchete", "Receção", "Defesa"], "traits": ["Pilar defensivo", "Receção a 3 com o P6"] },
+        "P6": { "name": "Trás centro", "role": "Pilar defensivo", "description": "Trás centro: cobre todo o meio do fundo, lê bolas longas.", "skills": ["Defesa profunda", "Manchete", "Cobertura"], "traits": ["Mobilidade máxima", "Recupera pipes e bolas longas", "Receção central"] },
+        "P1": { "name": "Distribuidor a infiltrar", "role": "Distribuidor", "description": "Distribuidor da linha de trás em P1 que infiltra para a zona 2-3 assim que o serviço é batido. Serve e depois distribui.", "skills": ["Infiltração", "Passe de cima", "Serviço"], "traits": ["Infiltra a partir de P1", "Distribui com 2 atacantes à frente", "Cobertura curta após o passe"] }
+      }
+    },
+    "losange": {
+      "name": "Losango (1-2-1)",
+      "shortName": "Losango",
+      "description": "Formação \"losango\": a MAIS USADA no 4v4 de pavilhão. 1 jogador no centro da rede (P3, frequentemente o distribuidor), 2 asas a meio-campo (P4 e P2 perto da linha dos 3 m), 1 atrás. Defesa típica: sistema A (1 bloqueador + 3 defensores). Zona mais vulnerável: diagonal longa (falta de corpos no fundo).",
+      "positions": {
+        "P3": { "name": "Centro da rede", "role": "Distribuidor ou central", "description": "No centro da rede. Frequentemente o DISTRIBUIDOR (variante \"distribuidor central\") que distribui para qualquer lado. Caso contrário, o bloqueador principal.", "skills": ["Passe", "Bloco", "Comunicação"], "traits": ["Centro do jogo do losango", "Bloco padrão a 1", "Distribui sem infiltração"] },
+        "P4": { "name": "Asa esquerda", "role": "Atacante principal", "description": "Asa esquerda, a meio-campo (perto da linha dos 3 m). Alvo preferido do distribuidor.", "skills": ["Ataque", "Receção", "Cobertura"], "traits": ["Corrida de balanço curta", "Receção do lado esquerdo", "Versatilidade (~35 m²)"] },
+        "P2": { "name": "Asa direita", "role": "Atacante secundário", "description": "Asa direita, a meio-campo. Ataca na zona 2 se o distribuidor distribuir à direita.", "skills": ["Ataque paralelo", "Receção", "Serviço"], "traits": ["Ataque diagonal longa", "Receção do lado direito", "Cobertura curta da direita"] },
+        "P1": { "name": "Único atrás", "role": "Defensor principal", "description": "Sem líbero permitido: é o melhor defensor de retaguarda da equipa. Cobre toda a retaguarda sozinho.", "skills": ["Receção", "Defesa profunda", "Leitura"], "traits": ["~40 m² sozinho", "Antecipação é a competência nº 1", "Tem de saber fazer o 2º toque"] }
+      }
+    },
+    "carre": {
+      "name": "Quadrado (2-2)",
+      "shortName": "Quadrado",
+      "description": "Formação \"quadrado\" 2-2: 2 jogadores junto à rede (P4 e P2) + 2 atrás (P5 e P1). Permite bloco a 2 (sistema B) — mas só é útil contra atacantes muito potentes sem subtileza, pois deixa apenas 2 defensores profundos (amorti descoberto). Mais frequentemente jogado em sistema A com um único bloqueador.",
+      "positions": {
+        "P4": { "name": "Asa esquerda (rede)", "role": "Bloqueador / atacante", "description": "Junto à rede do lado esquerdo. Bloco + ataque na zona 4.", "skills": ["Bloco", "Ataque", "Cobertura junto à rede"], "traits": ["Bloco a 2 com a asa direita", "Switch possível com o distribuidor", "Sem tempo 1 tradicional"] },
+        "P2": { "name": "Distribuidor-atacante (rede)", "role": "Distribuidor da frente", "description": "Distribuidor-atacante junto à rede do lado direito. Faz sempre o 2º toque (sem infiltração no quadrado).", "skills": ["Passe", "Bloco", "Ataque pela zona 2"], "traits": ["Sempre à frente", "Sem infiltração", "Bloco a 2 com a asa esquerda"] },
+        "P5": { "name": "Trás esquerda", "role": "Defesa / receção", "description": "Trás esquerda: receção pela esquerda + diagonal longa.", "skills": ["Receção", "Defesa", "Manchete"], "traits": ["Pilar defensivo", "Cobertura ~35 m²", "Apoio ao ataque pela zona 4"] },
+        "P1": { "name": "Trás direita", "role": "Defesa / serviço", "description": "Trás direita: serve e depois defende a paralela e a diagonal longa.", "skills": ["Serviço", "Defesa", "Manchete"], "traits": ["Servidor", "Paralela + diagonal", "Apoio ao ataque pela zona 2"] }
+      }
+    },
+    "3-1": {
+      "name": "Linha 3-1 (distribuidor a infiltrar)",
+      "shortName": "3-1",
+      "description": "Formação \"linha 3-1\": distribuidor único em P1 (atrás) que infiltra para a zona 2 assim que a bola é batida. Liberta 3 atacantes à frente — um equivalente simplificado do 5-1 do 6v6. Exige uma receção muito limpa e um distribuidor rápido. Defesa: sistema A possível (1 bloqueador central + 3 defensores).",
+      "positions": {
+        "P4": { "name": "Asa esquerda", "role": "Ponta", "description": "Asa esquerda junto à rede. Atacante principal na zona 4 + receção.", "skills": ["Ataque", "Receção", "Bloco"], "traits": ["Alvo nº 1", "Receção a 3", "Corrida de balanço pela zona 4"] },
+        "P3": { "name": "Central", "role": "Central", "description": "Central junto à rede. Bloco + ataque pela zona 3 se o passe vier curto à rede.", "skills": ["Bloco", "Ataque rápido"], "traits": ["Bloco central", "Tempo 2 possível", "Sem receção"] },
+        "P2": { "name": "Asa direita", "role": "Ponta", "description": "Asa direita. Ataca na zona 2 quando o distribuidor distribui à direita.", "skills": ["Ataque", "Bloco", "Receção"], "traits": ["Ataque pela zona 2", "Receção a 3", "Bloco a 2 com o central"] },
+        "P1": { "name": "Distribuidor a infiltrar", "role": "Distribuidor", "description": "Distribuidor único em P1. Serve e depois infiltra para a zona 2 para distribuir.", "skills": ["Infiltração", "Passe", "Serviço"], "traits": ["Infiltra a partir de P1", "Sempre 3 atacantes à frente", "Cobertura curta após o passe"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ DOCUMENTAZIONE INTERATTIVA ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "Il riferimento tecnico per la pallavolo — tecniche animate in 3D, regole, posizioni e glossario.",
+    "ctaPrimary": "VEDI LE TECNICHE",
+    "ctaSecondary": "LEGGI LE REGOLE"
+  },
+  "sectionsLabel": "★ SEZIONI ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Tecniche",
+      "desc": "Animazioni 3D interattive dei fondamentali della pallavolo.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Posizioni",
+      "desc": "Ruoli e responsabilità di ciascuna posizione in campo.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guide",
+      "desc": "Guide tecniche e tattiche dettagliate con diagrammi.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Regole",
+      "desc": "Regolamento ufficiale FIVB semplificato e spiegato.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossario",
+      "desc": "Vocabolario tecnico completo della pallavolo.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scenari",
+      "desc": "Sequenze di gioco animate in 3D: attacco, difesa, ricezione.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

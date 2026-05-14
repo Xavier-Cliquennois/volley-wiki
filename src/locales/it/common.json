@@ -1,0 +1,57 @@
+{
+  "siteName": "Volley-Wiki",
+  "siteTagline": "TECNICHE · REGOLE · TATTICA",
+  "nav": {
+    "home": "Home",
+    "techniques": "Tecniche",
+    "positions": "Posizioni",
+    "scenarios": "Scenari",
+    "guides": "Guide",
+    "rules": "Regole",
+    "glossary": "Glossario",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "mainNavigation": "Navigazione principale"
+  },
+  "language": {
+    "label": "Lingua",
+    "fr": "Français",
+    "en": "English",
+    "switchTo": "Cambia in {{lang}}"
+  },
+  "footer": {
+    "tagline": "VOLLEY·WIKI — TECNICHE · REGOLE · TATTICA"
+  },
+  "actions": {
+    "back": "Indietro",
+    "explore": "ESPLORA →",
+    "read": "LEGGI →",
+    "readGuide": "LEGGI LA GUIDA →",
+    "showAll": "MOSTRA TUTTO",
+    "reset": "RESET",
+    "loading": "CARICAMENTO…"
+  },
+  "labels": {
+    "documentation": "★ DOCUMENTAZIONE",
+    "category": "CATEGORIA",
+    "level": "LIVELLO",
+    "duration": "Durata",
+    "level_beginner": "Principiante",
+    "level_intermediate": "Intermedio",
+    "level_advanced": "Avanzato",
+    "category_technique": "Tecnica",
+    "category_tactique": "Tattica",
+    "goldenRule": "REGOLA D'ORO"
+  },
+  "teamSize": {
+    "4v4": "4 vs 4",
+    "5v5": "5 vs 5",
+    "6v6": "6 vs 6"
+  },
+  "court": {
+    "net": "RETE",
+    "backOfCourt": "FONDO CAMPO",
+    "ourSide": "Nostro lato",
+    "opponentSide": "Lato avversario"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTAZIONE",
+    "title": "TECNICHE FONDAMENTALI",
+    "subtitle": "Le abilità chiave della pallavolo — descrizioni, punti chiave, errori comuni e risorse video."
+  },
+  "filters": {
+    "category": "CATEGORIA",
+    "level": "LIVELLO",
+    "countSingle": "{{count}} tecnica",
+    "countPlural": "{{count}} tecniche",
+    "showAll": "MOSTRA TUTTO",
+    "noResults": "NESSUNA TECNICA PER QUESTA COMBINAZIONE"
+  },
+  "sectionTitle": "★ SCHEDE TECNICHE",
+  "card": {
+    "when": "QUANDO",
+    "keyPoints": "★ PUNTI CHIAVE",
+    "errors": "✗ ERRORI COMUNI"
+  },
+  "tags": {
+    "Service": "Servizio",
+    "Réception": "Ricezione",
+    "Passe": "Alzata",
+    "Attaque": "Attacco",
+    "Défense": "Difesa",
+    "Débutant": "Principiante",
+    "Intermédiaire": "Intermedio",
+    "Avancé": "Avanzato"
+  },
+  "items": {
+    "reception": {
+      "name": "Ricezione / Bagher",
+      "description": "Il bagher è il fondamentale difensivo universale. Gli avambracci uniti formano una piattaforma piatta che indirizza la palla verso l'alzatore. La piattaforma è passiva — sono le gambe che lavorano per muoversi verso la palla.",
+      "keyPoints": [
+        "Piattaforma: avambracci uniti, pollici paralleli e rivolti verso il basso",
+        "Punto ideale tra polsi e gomiti (non solo sui polsi)",
+        "\"La palla va dove punta la piattaforma\" — l'angolo controlla la direzione",
+        "FERMI al contatto: smettere di muoversi prima che arrivi la palla",
+        "Mai oscillare le braccia — la piattaforma è passiva"
+      ],
+      "errors": [
+        "Oscillazione delle braccia al contatto (causa n°1 — palla imprevedibile)",
+        "Unire le braccia troppo presto prima di muoversi",
+        "Piattaforma spezzata (un avambraccio più alto dell'altro)"
+      ],
+      "when": "Ricezione del servizio, difesa di fondo campo, palloni bassi"
+    },
+    "set": {
+      "name": "Alzata",
+      "description": "Il secondo tocco che prepara l'attacco. Entrambe le mani formano un triangolo sopra la fronte. L'alzatore è il direttore d'orchestra: la sua precisione e la lettura del muro avversario definiscono l'efficacia offensiva.",
+      "keyPoints": [
+        "Triangolo pollice-indice: \"finestra\" attraverso cui vedere la palla",
+        "Contatto: polpastrelli e prima falange di pollice, indice e medio",
+        "Piede destro leggermente avanti — \"mirino\" puntato sul bersaglio",
+        "Piedi, anche e spalle \"quadrati\" al bersaglio PRIMA del contatto",
+        "Estensione completa di gambe-anche-braccia-polsi, accompagnamento \"Superman\""
+      ],
+      "errors": [
+        "Doppio contatto visibile (mani che non si toccano simultaneamente)",
+        "Spalle perpendicolari alla rete — palla troppo lontana",
+        "Palla accompagnata (trattenuta) — contatto troppo lento"
+      ],
+      "when": "Secondo tocco per preparare l'attacco"
+    },
+    "spike": {
+      "name": "Attacco (Schiacciata)",
+      "description": "L'azione balistica più complessa: catena cinetica in serie piedi → anche → tronco → spalla → gomito → polso. Qualsiasi interruzione di questa catena distrugge il trasferimento di energia.",
+      "keyPoints": [
+        "Rincorsa a 3-4 passi: finire con un doppio appoggio sinistro-destro",
+        "Regola d'oro: gli ultimi due passi sono i più veloci (lento → veloce)",
+        "Contatto leggermente davanti alla spalla — mai dietro la testa",
+        "Frustata di polso: la mano \"artiglia\" la palla → topspin",
+        "Salto VERTICALE, non verso la rete"
+      ],
+      "errors": [
+        "Timing della rincorsa errato (troppo presto = ri-salto senza potenza)",
+        "Nessuna frustata di polso — palla piatta senza topspin",
+        "Atterraggio su un piede solo (rischio LCA)"
+      ],
+      "when": "Terzo tocco per concludere lo scambio"
+    },
+    "block": {
+      "name": "Muro",
+      "description": "Prima linea di difesa contro gli attacchi. Il contatto a muro non conta come tocco di squadra. La chiave: sequenza visiva PALLA → ALZATORE → PALLA → SPALLA DELL'ATTACCANTE.",
+      "keyPoints": [
+        "Posizione: 45-60 cm dalla rete, mani alte (palmi rivolti alla rete)",
+        "Salto DOPO l'attaccante: 0,2-0,3 s per una palla alta",
+        "Penetrare il più possibile OLTRE la rete, non solo verso l'alto",
+        "Dita aperte, polsi rigidi, nessun \"buco\" tra le mani",
+        "\"Sigillare la rete\": spalle, mani, braccia davanti alle orecchie"
+      ],
+      "errors": [
+        "Saltare troppo presto (reagire all'appoggio dell'attaccante)",
+        "Mani troppo morbide — la palla rimbalza nel proprio campo",
+        "Saltare in avanti → fallo di rete"
+      ],
+      "when": "In risposta a un attacco avversario a rete"
+    },
+    "serve": {
+      "name": "Servizio",
+      "description": "L'unica azione senza pressione diretta dell'avversario. Esistono quattro tipi a seconda del livello. Regola d'oro: l'80% degli errori deriva dal lancio — stabilizzare il lancio prima di cercare la potenza.",
+      "keyPoints": [
+        "Float da terra: \"colpisci e ferma\" — fermare il braccio dopo il contatto per zero rotazione",
+        "Jump float: stessa meccanica del float da terra + rincorsa breve",
+        "Jump topspin: piena frustata di polso, riservato a chi ha 1000+ ripetizioni",
+        "Lancio stabile = servizio stabile — regola n°1",
+        "Mirare alle giunzioni (spazi tra i ricevitori) piuttosto che ai giocatori"
+      ],
+      "errors": [
+        "Float: accompagnamento prolungato che aggiunge rotazione (uccide l'effetto float)",
+        "Lancio instabile o troppo alto",
+        "Fallo di piede sulla linea di fondo"
+      ],
+      "when": "Inizio di ogni scambio"
+    },
+    "defense": {
+      "name": "Difesa (Dig)",
+      "description": "La difesa post-muro distingue le squadre intermedie da quelle agonistiche. Tre pilastri: posizione bassa, fermi quando l'avversario colpisce, lettura dell'attaccante.",
+      "keyPoints": [
+        "Posizione bassa: piedi più larghi delle spalle, ginocchia a ~90°",
+        "\"Testa davanti ai piedi, spalle davanti alle ginocchia\"",
+        "FERMI ASSOLUTI nel momento in cui l'attaccante colpisce",
+        "Ombra del muro: se non vedi l'attaccante, sei dietro il muro — riposizionati",
+        "Su una schiacciata potente: non braccia (la forza della schiacciata basta) — assorbire"
+      ],
+      "errors": [
+        "Ancora in movimento al contatto — impossibile controllare",
+        "Stare nell'\"ombra\" del muro (zona inutile)",
+        "Tuffarsi troppo presto quando un passo laterale sarebbe stato sufficiente"
+      ],
+      "when": "Difesa contro schiacciate avversarie, copertura del fondo campo"
+    }
+  }
+}

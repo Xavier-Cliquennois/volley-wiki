@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ DOCUMENTACIÓN INTERACTIVA ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "La referencia técnica del voleibol — técnicas animadas en 3D, reglas, posiciones y glosario.",
+    "ctaPrimary": "VER TÉCNICAS",
+    "ctaSecondary": "LEER LAS REGLAS"
+  },
+  "sectionsLabel": "★ SECCIONES ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Técnicas",
+      "desc": "Animaciones 3D interactivas de los gestos fundamentales del voleibol.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Posiciones",
+      "desc": "Roles y responsabilidades de cada posición en la cancha.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guías",
+      "desc": "Guías técnicas y tácticas detalladas con esquemas.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Reglas",
+      "desc": "Reglamento oficial FIVB simplificado y explicado.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glosario",
+      "desc": "Vocabulario técnico completo del voleibol.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Escenarios",
+      "desc": "Secuencias de juego animadas en 3D: ataque, defensa, recepción.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

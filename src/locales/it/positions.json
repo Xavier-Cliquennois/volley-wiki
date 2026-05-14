@@ -1,0 +1,181 @@
+{
+  "hub": {
+    "kicker": "★ DOCUMENTAZIONE",
+    "title": "POSIZIONI E RUOLI",
+    "intro": "Nella pallavolo indoor, le posizioni sono numerate da <strong>P1 a P6</strong> in senso antiorario visto da dietro il proprio campo. La rotazione avviene in senso orario a ogni cambio palla. Il numero di giocatori e i sistemi tattici variano in base al formato — scegli quello che corrisponde alla tua pratica.",
+    "formats": {
+      "6v6": {
+        "tagline": "Formato ufficiale FIVB / FIPAV",
+        "description": "6 giocatori + libero, campo 9×18 m, rete a 2,43 m. Sistemi 5-1, 4-2, 6-2 con rotazione oraria."
+      },
+      "5v5": {
+        "tagline": "Formato ibrido educativo",
+        "description": "Transizione tra 4v4 e 6v6. Senza libero. Configurazioni a pentagono, 3F/2B, 2F/3B a seconda della disposizione scelta."
+      },
+      "4v4": {
+        "tagline": "Ricreativo, intramurale, transizione",
+        "description": "Campo ridotto, 2 davanti + 2 dietro. Formazioni a rombo, quadrato, 3-1 in linea con alzatore penetrante."
+      }
+    }
+  },
+  "page": {
+    "kickerPrefix": "★ DOCUMENTAZIONE ·",
+    "titlePrefix": "POSIZIONI —",
+    "subtitle": "Posizioni e sistemi tattici per la pallavolo {{label}}.",
+    "step1": "1. FORMATO DI GIOCO",
+    "step2": "2. ASSETTO TATTICO",
+    "courtTitle": "MEZZO CAMPO —",
+    "showAll": "MOSTRA TUTTO",
+    "legendTitle": "LEGENDA",
+    "legendItems": [
+      "<strong>Rete</strong> — banda arancione",
+      "<strong>3 m</strong> — linea tratteggiata"
+    ],
+    "legendHint": "Clicca un giocatore per la sua scheda",
+    "liberoLabel": "LIBERO",
+    "liberoCardDescription": "Sostituisce i giocatori di seconda linea (P1, P5, P6).",
+    "noLibero": "<strong>Nessun libero</strong> in questa configurazione.",
+    "cardsTitle": "★ SCHEDE POSIZIONI",
+    "skillsTitle": "ABILITÀ",
+    "traitsTitle": "CARATTERISTICHE",
+    "crossLink": {
+      "kicker": "APPROFONDISCI",
+      "html": "Consulta la guida <link>Posizionamento e difesa</link> per vedere come questa configurazione si posiziona in base alla zona di attacco avversaria."
+    }
+  },
+  "teamIntros": {
+    "6": {
+      "tagline": "Formato ufficiale FIVB / FIPAV: 6 giocatori + libero, campo 9×18 m, linea d'attacco a 3 m, rete a 2,43 m (M) / 2,24 m (F).",
+      "rules": "Zone numerate in senso antiorario da dietro il proprio campo (Z1 = battitore). Rotazione oraria al cambio palla (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Regola 7.4: al momento del contatto del servizio, le posizioni sono controllate dai piedi (Z2 più vicino alla rete di Z1, ecc.). Muro a 1, 2 o 3. Il libero sostituisce i giocatori di seconda linea senza contare come sostituzione."
+    },
+    "5": {
+      "tagline": "Formato ibrido, non ufficialmente sanzionato da FIVB/FIPAV. Usato a scuola, in tornei intramurali, come riempimento e come transizione tra 4v4 e 6v6.",
+      "rules": "2+3 (alzatore penetrante consigliato) o 3+2 (alzatore fisso davanti). Senza libero. Regola di sovrapposizione adattata: Z4>Z5, Z3>Z6, Z2>Z1 (assetto 3-2) o relazioni parziali (2-3). Le raccomandazioni difensive sono adattamenti logici del 6v6, non un regolamento codificato."
+    },
+    "4": {
+      "tagline": "Nessuna regolamentazione ufficiale FIVB. Si gioca nei tornei universitari intramurali USA, in tornei ricreativi, in transizione educativa (FIPAV, Volleyball Canada).",
+      "rules": "Campo 9×9 m (a volte ridotto), 3 tocchi, muro consentito, rotazione oraria. 2 davanti + 2 dietro a ogni rotazione. Formazioni comuni: rombo (1-2-1 alzatore centrale), 3-1 in linea (alzatore penetrante), 2-2 quadrato. Alcuni organizzatori eliminano i falli di sovrapposizione (Texas A&M)."
+    }
+  },
+  "commonZones": {
+    "P4": { "name": "Avanti sinistra" },
+    "P3": { "name": "Avanti centro" },
+    "P2": { "name": "Avanti destra" },
+    "P5": { "name": "Dietro sinistra" },
+    "P6": { "name": "Dietro centro" },
+    "P1": { "name": "Dietro destra (servizio)" },
+    "L":  { "name": "Libero" }
+  },
+  "configurations": {
+    "5-1": {
+      "name": "Sistema 5-1 (standard)",
+      "shortName": "5-1",
+      "description": "1 unico alzatore che distribuisce in tutte le 6 rotazioni (3 di seconda linea con penetrazione + 3 di prima) + 2 schiacciatori + 2 centrali + 1 opposto (in diagonale opposta all'alzatore) + 1 libero. Il sistema più usato nelle competizioni di alto livello.",
+      "positions": {
+        "P4": { "role": "Schiacciatore", "description": "Zona principale d'attacco. Lo schiacciatore riceve la maggior parte dei palloni alti e deve essere versatile: attacco, muro, ricezione. È anche il muro-difesa di sinistra sull'attacco avversario in Z4.", "skills": ["Attacco", "Muro", "Ricezione", "Servizio"], "traits": ["Potenza e precisione d'attacco", "Apertura alare lunga", "Versatilità", "Resistenza"] },
+        "P3": { "role": "Centrale", "description": "Giocatore di rete nella zona centrale. Mura gli attacchi avversari e colpisce in primo tempo. Su un attacco avversario di banda, chiude la diagonale con un muro a 2.", "skills": ["Muro", "Attacco rapido", "Copertura della rete"], "traits": ["Statura alta richiesta", "Muro dominante", "Primo e secondo tempo", "Ruolo difensivo limitato a rete"] },
+        "P2": { "role": "Alzatore", "description": "Il direttore d'orchestra. Riceve il 2° tocco e dirige l'attacco. Nel 5-1 gioca tutte le rotazioni: penetra da P1, P6 o P5 (dietro), distribuisce da P4, P3 o P2 (davanti). Bersaglio: tra Z2 e Z3, ~1 m dalla rete.", "skills": ["Alzata a mani alte", "Lettura del muro", "Comunicazione", "Penetrazione"], "traits": ["Massima precisione tecnica", "Visione a 360°", "Sangue freddo", "Leadership"] },
+        "P5": { "role": "Ricezione / difesa", "description": "Zona di ricezione e difesa a sinistra. Spesso occupata dal 2° schiacciatore nella rotazione di seconda linea. Il libero può sostituirlo.", "skills": ["Bagher", "Ricezione", "Difesa", "Lettura"], "traits": ["Lettura degli attacchi", "Prima linea di difesa", "Copertura dietro-sinistra", "Spesso sostituito dal libero"] },
+        "P6": { "role": "Difesa centrale", "description": "Pilastro difensivo dietro. Copre le palle lunghe e supporta i compagni. Spesso il libero gioca qui.", "skills": ["Difesa profonda", "Copertura", "Supporto", "Bagher"], "traits": ["Lettura del gioco", "Massima mobilità", "Comunicazione posteriore", "Spesso sostituito dal libero"] },
+        "P1": { "role": "Opposto", "description": "L'opposto (\"pointu\") si trova in diagonale opposta all'alzatore. Non partecipa alla ricezione — è il finalizzatore. Trascorre 3 delle 6 rotazioni dietro (attacca da seconda linea — pipe).", "skills": ["Attacco potente", "Servizio", "Muro", "Attacco da seconda linea"], "traits": ["Massima potenza", "Attacco da seconda linea in 3 rotazioni/6", "Esente dalla ricezione", "Detto anche \"pointu\""] },
+        "L":  { "role": "Specialista difensivo", "description": "Specialista difensivo con maglia di colore diverso. Sostituisce i giocatori di seconda linea (P1, P5, P6) senza contare come sostituzione. Restrizioni FIVB: niente muro, niente attacco sopra la rete, niente alzata a mani alte dalla zona d'attacco verso un compagno che attacca poi sopra la rete.", "skills": ["Bagher", "Ricezione", "Difesa", "Lettura"], "traits": ["Massima agilità", "Non può murare / attaccare sopra la rete", "Niente alzata a mani alte da zona d'attacco → attaccante", "Sostituzioni illimitate", "Può servire (FIVB 2021)"] }
+      }
+    },
+    "4-2": {
+      "name": "Sistema 4-2 (principianti)",
+      "shortName": "4-2",
+      "description": "2 alzatori in diagonale opposta (P2 e P5) + 2 centrali + 2 schiacciatori. L'alzatore DAVANTI prende sempre il 2° tocco. Nessuna penetrazione: il sistema più semplice da imparare.",
+      "positions": {
+        "P4": { "role": "Schiacciatore", "description": "Banda sinistra. Bersaglio principale dell'alzatore in zona 4.", "skills": ["Attacco", "Muro", "Ricezione"], "traits": ["Versatilità", "Bersaglio n°1 dell'alzatore", "Ricezione a W"] },
+        "P3": { "role": "Centrale", "description": "Centrale di prima linea: muro + attacco rapido quando la ricezione lo permette.", "skills": ["Muro", "Attacco rapido"], "traits": ["Muro dominante", "Ricezione W centrale"] },
+        "P2": { "role": "Alzatore davanti", "description": "Alzatore davanti: prende il 2° tocco. Nessuna penetrazione, nessuna ricezione. Distribuisce dalla posizione.", "skills": ["Alzata a mani alte", "Distribuzione", "Comunicazione"], "traits": ["Sempre davanti quando alza", "Fuori dalla ricezione", "Niente penetrazione"] },
+        "P5": { "role": "Alzatore dietro (riposo)", "description": "Secondo alzatore, in diagonale opposta. Gioca solo come seconda linea, NON prende il 2° tocco quando è dietro. Riceve e difende.", "skills": ["Ricezione", "Difesa", "Bagher"], "traits": ["Diventa alzatore davanti dopo la rotazione", "Niente alzata quando è dietro", "Coppia in ricezione"] },
+        "P6": { "role": "Centrale dietro", "description": "Centrale di passaggio nelle posizioni di seconda linea. Ricezione centrale + difesa.", "skills": ["Difesa", "Bagher", "Ricezione"], "traits": ["Pilastro difensivo", "Copre il centro dietro"] },
+        "P1": { "role": "Schiacciatore / battitore", "description": "Schiacciatore nella rotazione di seconda linea, serve da P1 poi gioca ricezione/difesa.", "skills": ["Servizio", "Ricezione", "Difesa"], "traits": ["Battitore principale", "Ricezione a W"] }
+      }
+    },
+    "6-2": {
+      "name": "Sistema 6-2 (avanzato)",
+      "shortName": "6-2",
+      "description": "2 alzatori polivalenti: alzano SOLO dalla seconda linea (con penetrazione), e diventano attaccanti di banda destra quando ruotano davanti. + 2 centrali + 2 schiacciatori + 1 libero. Pro: sempre 3 attaccanti in prima linea. Contro: intesa alzatore-attaccante diluita e, nella variante doppia sostituzione, brucia rapidamente le 6 sostituzioni per set (Regola FIVB 15.6).",
+      "positions": {
+        "P4": { "role": "Schiacciatore", "description": "Banda sinistra, attaccante principale in zona 4.", "skills": ["Attacco", "Muro", "Ricezione"], "traits": ["Versatilità", "Ricezione a 3"] },
+        "P3": { "role": "Centrale", "description": "Centrale davanti: muro + primo tempo.", "skills": ["Muro", "Attacco rapido"], "traits": ["Muro dominante", "Switch di banda"] },
+        "P2": { "role": "Alzatore-attaccante", "description": "Nel 6-2 il giocatore di prima linea (alzatore o no) attacca. Quando l'alzatore è davanti, diventa attaccante in zona 2. L'alzatore dietro distribuisce.", "skills": ["Attacco zona 2", "Muro", "Servizio"], "traits": ["Polivalente alzata + attacco", "Attacca in zona 2", "3 attaccanti davanti sempre"] },
+        "P5": { "role": "Schiacciatore (dietro)", "description": "Banda nella rotazione di seconda linea. Ricezione e difesa.", "skills": ["Ricezione", "Bagher", "Difesa"], "traits": ["Ricezione a 3", "Spesso sostituito dal libero"] },
+        "P6": { "role": "Centrale dietro", "description": "Centrale nella rotazione di seconda linea, spesso sostituito dal libero per ricezione e difesa.", "skills": ["Difesa", "Bagher"], "traits": ["Spesso sostituito dal libero", "Pilastro difensivo"] },
+        "P1": { "role": "Alzatore penetrante", "description": "Alzatore di seconda linea che penetra non appena il servizio è colpito verso la zona 2-3 per distribuire. Di fronte a lui, il 2° alzatore in P2 attacca.", "skills": ["Penetrazione", "Alzata a mani alte", "Servizio"], "traits": ["Penetra da P1 → zona 2/3", "Distribuisce", "La rotazione alterna con il 2° alzatore"] },
+        "L":  { "role": "Libero", "description": "Libero standard, sostituisce i centrali nella rotazione di seconda linea.", "skills": ["Bagher", "Ricezione", "Difesa"], "traits": ["Sostituisce P5/P6", "Maglia di colore diverso"] }
+      }
+    },
+    "pentagon": {
+      "name": "Pentagono (1-2-2)",
+      "shortName": "Pentagono",
+      "description": "1 giocatore al centro della rete, 2 ali a metà campo, 2 dietro. Copertura uniforme del campo — buono per principianti e gioco ricreativo. Difesa tipica: sistema 1-2-2 (man-up adattato, 1 murista + 2 coperture + 2 difensori profondi).",
+      "positions": {
+        "P3": { "name": "Centro rete", "role": "Alzatore o centrale", "description": "Al centro della rete. Spesso l'alzatore (se fisso); altrimenti il murista principale.", "skills": ["Alzata", "Muro", "Comunicazione"], "traits": ["Fulcro del gioco", "Muro centrale", "Esenzione parziale dalla ricezione"] },
+        "P4": { "name": "Ala sinistra", "role": "Schiacciatore", "description": "Ala sinistra a metà campo: riceve e attacca dalla zona 4.", "skills": ["Attacco", "Ricezione", "Muro"], "traits": ["Versatilità", "Rincorsa media", "Copertura diagonale corta"] },
+        "P2": { "name": "Ala destra", "role": "Schiacciatore / opposto", "description": "Ala destra. Se l'alzatore è al centro, è l'attaccante in zona 2.", "skills": ["Attacco lungolinea", "Muro", "Servizio"], "traits": ["Attacco in diagonale lunga", "Muro a 2 con centrale", "Copertura diagonale lunga"] },
+        "P5": { "name": "Dietro sinistra", "role": "Ricezione / difesa", "description": "Dietro sinistra: copre la difesa di sinistra, spesso il miglior ricevitore.", "skills": ["Bagher", "Ricezione", "Difesa"], "traits": ["Pilastro difensivo", "~30 m² da coprire", "Legge la diagonale lunga"] },
+        "P1": { "name": "Dietro destra", "role": "Difesa / servizio", "description": "Dietro destra: copre la difesa di destra + serve.", "skills": ["Servizio", "Difesa", "Bagher"], "traits": ["Battitore principale", "Copertura lungolinea", "Supporto attacco zona 2"] }
+      }
+    },
+    "3F-2B": {
+      "name": "3 davanti / 2 dietro",
+      "shortName": "3F/2B",
+      "description": "3 attaccanti a rete (P4, P3, P2 con alzatore in P2) + 2 dietro (P5, P1). Assetto offensivo: muro a 2 o 3 possibile. Difesa tipica: sistema 2-1-2 (2 muristi + 1 muro-difesa + 2 difensori profondi). Svantaggio: 30+ m² per difensore di seconda linea.",
+      "positions": {
+        "P4": { "name": "Ala sinistra", "role": "Schiacciatore", "description": "Ala sinistra a rete. Bersaglio principale dell'alzatore in zona 4.", "skills": ["Attacco", "Muro", "Ricezione"], "traits": ["Versatilità", "Muro a 2 con centrale", "Bersaglio preferito dell'alzatore"] },
+        "P3": { "name": "Centrale", "role": "Centrale", "description": "Centrale a rete. Muro + attacco rapido quando la ricezione lo permette.", "skills": ["Muro", "Attacco rapido"], "traits": ["Muro centrale", "Primo tempo preservato", "Switch possibile"] },
+        "P2": { "name": "Alzatore davanti", "role": "Alzatore", "description": "Alzatore fisso davanti. Niente penetrazione. Distribuisce dalla rete; può attaccare in 2 se la palla arriva alta sul lato destro.", "skills": ["Alzata a mani alte", "Distribuzione", "Muro lato destro"], "traits": ["Fisso davanti", "Niente penetrazione", "Attacco occasionale zona 2"] },
+        "P5": { "name": "Dietro sinistra", "role": "Ricezione / difesa", "description": "Dietro sinistra: ricezione a sinistra + difesa in diagonale lunga.", "skills": ["Bagher", "Difesa", "Ricezione"], "traits": ["Miglior ricevitore idealmente", "Diagonale lunga", "Copertura ~30 m²"] },
+        "P1": { "name": "Dietro destra", "role": "Servizio / difesa", "description": "Dietro destra: serve poi difende la linea e la diagonale corta.", "skills": ["Servizio", "Difesa", "Bagher"], "traits": ["Battitore", "Linea + corridoio", "Supporto attacco zona 2"] }
+      }
+    },
+    "2F-3B": {
+      "name": "2 davanti / 3 dietro",
+      "shortName": "2F/3B",
+      "description": "2 giocatori a rete + 3 dietro incluso l'alzatore penetrante (P1). L'assetto più stabile difensivamente, il più vicino al 5-1 del 6v6. Difesa tipica: sistema 1-1-3 (1 murista + 1 muro-difesa + 3 difensori profondi). Raccomandato per preparare la transizione al 6v6.",
+      "positions": {
+        "P4": { "name": "Ala sinistra", "role": "Schiacciatore", "description": "Ala sinistra a rete. Attaccante principale in zona 4.", "skills": ["Attacco", "Muro", "Ricezione"], "traits": ["Bersaglio n°1 dell'alzatore", "Muro a 2", "Versatilità"] },
+        "P3": { "name": "Centrale", "role": "Centrale / opposto", "description": "Centrale polivalente: muro centrale + attacco in zona 3 o 2 a seconda dell'alzata.", "skills": ["Muro", "Attacco rapido", "Copertura della rete"], "traits": ["Muro centrale", "Switch frequente in zona 2", "Nessun attaccante puro in P2"] },
+        "P5": { "name": "Dietro sinistra", "role": "Ricezione / difesa", "description": "Dietro sinistra: ricezione a sinistra + diagonale lunga.", "skills": ["Bagher", "Ricezione", "Difesa"], "traits": ["Pilastro difensivo", "Ricezione a 3 con P6"] },
+        "P6": { "name": "Dietro centro", "role": "Pilastro difensivo", "description": "Dietro centro: copre tutta la zona centrale posteriore, legge le palle lunghe.", "skills": ["Difesa profonda", "Bagher", "Copertura"], "traits": ["Massima mobilità", "Recupera pipe e palle lunghe", "Ricezione centrale"] },
+        "P1": { "name": "Alzatore penetrante", "role": "Alzatore", "description": "Alzatore di seconda linea in P1 che penetra in zona 2-3 non appena il servizio è colpito. Serve poi distribuisce.", "skills": ["Penetrazione", "Alzata a mani alte", "Servizio"], "traits": ["Penetra da P1", "Distribuisce con 2 attaccanti davanti", "Copertura corta dopo l'alzata"] }
+      }
+    },
+    "losange": {
+      "name": "Rombo (1-2-1)",
+      "shortName": "Rombo",
+      "description": "Formazione a \"rombo\": la PIÙ USATA nel 4v4 indoor. 1 giocatore al centro della rete (P3, spesso l'alzatore), 2 ali a metà campo (P4 e P2 attorno alla linea dei 3 m), 1 dietro. Difesa tipica: sistema A (1 murista + 3 difensori). Zona più vulnerabile: la diagonale lunga (mancanza di corpi dietro).",
+      "positions": {
+        "P3": { "name": "Centro rete", "role": "Alzatore o centrale", "description": "Al centro della rete. Spesso l'ALZATORE (variante \"alzatore centrale\") che distribuisce a entrambi i lati. Altrimenti il murista principale.", "skills": ["Alzata", "Muro", "Comunicazione"], "traits": ["Fulcro del gioco del rombo", "Muro standard a 1", "Distribuisce senza penetrazione"] },
+        "P4": { "name": "Ala sinistra", "role": "Attaccante principale", "description": "Ala sinistra, a metà campo (attorno alla linea dei 3 m). Bersaglio preferito dell'alzatore.", "skills": ["Attacco", "Ricezione", "Copertura"], "traits": ["Rincorsa corta", "Ricezione lato sinistro", "Versatilità (~35 m²)"] },
+        "P2": { "name": "Ala destra", "role": "Attaccante secondario", "description": "Ala destra, a metà campo. Attacca in zona 2 se l'alzatore distribuisce a destra.", "skills": ["Attacco lungolinea", "Ricezione", "Servizio"], "traits": ["Attacco in diagonale lunga", "Ricezione lato destro", "Copertura destra corta"] },
+        "P1": { "name": "Unico difensore dietro", "role": "Difensore principale", "description": "Nessun libero ammesso: è il miglior difensore di fondo della squadra. Copre da solo tutto il fondo campo.", "skills": ["Ricezione", "Difesa profonda", "Lettura"], "traits": ["~40 m² da solo", "Anticipazione = abilità n°1", "Deve saper alzare il 2° tocco"] }
+      }
+    },
+    "carre": {
+      "name": "Quadrato (2-2)",
+      "shortName": "Quadrato",
+      "description": "Formazione \"quadrato\" 2-2: 2 giocatori a rete (P4 e P2) + 2 dietro (P5 e P1). Consente un muro a 2 (sistema B) — ma utile solo contro attaccanti molto potenti senza finezza, dato che lascia solo 2 difensori profondi (pallonetto scoperto). Più spesso giocato in sistema A con un solo murista.",
+      "positions": {
+        "P4": { "name": "Ala sinistra (rete)", "role": "Murista / attaccante", "description": "A rete sulla sinistra. Muro + attacco in zona 4.", "skills": ["Muro", "Attacco", "Copertura della rete"], "traits": ["Muro a 2 con l'ala destra", "Switch possibile con l'alzatore", "Niente primo tempo tradizionale"] },
+        "P2": { "name": "Alzatore-attaccante (rete)", "role": "Alzatore davanti", "description": "Alzatore-attaccante a rete sulla destra. Prende sempre il 2° tocco (niente penetrazione nel quadrato).", "skills": ["Alzata", "Muro", "Attacco zona 2"], "traits": ["Sempre davanti", "Niente penetrazione", "Muro a 2 con l'ala sinistra"] },
+        "P5": { "name": "Dietro sinistra", "role": "Difesa / ricezione", "description": "Dietro sinistra: ricezione a sinistra + diagonale lunga.", "skills": ["Ricezione", "Difesa", "Bagher"], "traits": ["Pilastro difensivo", "Copertura ~35 m²", "Supporto attacco zona 4"] },
+        "P1": { "name": "Dietro destra", "role": "Difesa / servizio", "description": "Dietro destra: serve poi difende la linea e la diagonale lunga.", "skills": ["Servizio", "Difesa", "Bagher"], "traits": ["Battitore", "Linea + diagonale", "Supporto attacco zona 2"] }
+      }
+    },
+    "3-1": {
+      "name": "3-1 in linea (alzatore penetrante)",
+      "shortName": "3-1",
+      "description": "Formazione \"3-1 in linea\": unico alzatore in P1 (dietro) che penetra in zona 2 non appena la palla è colpita. Libera 3 attaccanti davanti — un equivalente semplificato del 5-1 del 6v6. Richiede una ricezione molto pulita e un alzatore veloce. Difesa: sistema A possibile (1 murista centrale + 3 difensori).",
+      "positions": {
+        "P4": { "name": "Ala sinistra", "role": "Schiacciatore", "description": "Ala sinistra a rete. Attaccante principale in zona 4 + ricezione.", "skills": ["Attacco", "Ricezione", "Muro"], "traits": ["Bersaglio n°1", "Ricezione a 3", "Rincorsa zona 4"] },
+        "P3": { "name": "Centrale", "role": "Centrale", "description": "Centrale a rete. Muro + attacco in zona 3 se l'alzata è tesa.", "skills": ["Muro", "Attacco rapido"], "traits": ["Muro centrale", "Secondo tempo possibile", "Niente ricezione"] },
+        "P2": { "name": "Ala destra", "role": "Schiacciatore", "description": "Ala destra. Attacca in zona 2 quando l'alzatore distribuisce a destra.", "skills": ["Attacco", "Muro", "Ricezione"], "traits": ["Attacco zona 2", "Ricezione a 3", "Muro a 2 con centrale"] },
+        "P1": { "name": "Alzatore penetrante", "role": "Alzatore", "description": "Unico alzatore in P1. Serve poi penetra in zona 2 per distribuire.", "skills": ["Penetrazione", "Alzata", "Servizio"], "traits": ["Penetra da P1", "3 attaccanti davanti sempre", "Copertura corta dopo l'alzata"] }
+      }
+    }
+  }
+}
