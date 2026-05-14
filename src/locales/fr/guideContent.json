@@ -163,5 +163,221 @@
         { "title": "Attaquer placé (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
       ]
     }
+  },
+  "contre": {
+    "goldenRule": {
+      "mantra": "BALLON → PASSEUR → BALLON → ÉPAULE DU FRAPPEUR → SAUT → PÉNÉTRATION",
+      "body": "Avec de la pratique régulière et une attention particulière au timing, vous améliorerez considérablement vos contres. Mieux vaut un contre bien timé avec une détente moyenne qu'un saut très haut mais mal timé."
+    },
+    "fundamentals": {
+      "title": "Les fondamentaux du contre",
+      "html": "Le contre (ou block) est un geste défensif crucial qui peut devenir une arme offensive. La clé réside dans le <strong>timing parfait</strong> et une bonne lecture du jeu."
+    },
+    "timingSteps": {
+      "title": "Le timing : la clé du succès",
+      "items": [
+        {
+          "title": "Observez l'attaquant, pas le ballon",
+          "desc": "Regardez les épaules et le bras de l'attaquant pour anticiper le moment et la direction de la frappe."
+        },
+        {
+          "title": "Sautez APRÈS l'attaquant",
+          "desc": "Attendez que l'attaquant soit dans sa phase d'impulsion. Si vous sautez en même temps ou avant, vous redescendrez trop tôt."
+        },
+        {
+          "title": "Le décalage idéal : 0,2 à 0,3 secondes",
+          "desc": "Comptez mentalement \"UN\" quand l'attaquant saute, puis sautez immédiatement après. Cette fraction de seconde est cruciale."
+        },
+        {
+          "title": "Pénétrez au-dessus du filet",
+          "desc": "Au sommet de votre saut, poussez vos mains et bras vers l'avant et vers le bas — pas juste vers le haut."
+        }
+      ]
+    },
+    "types": {
+      "title": "Les différents types de contres",
+      "objectiveLabel": "Objectif",
+      "items": [
+        {
+          "name": "Le contre offensif",
+          "objective": "Renvoyer le ballon directement dans le camp adverse",
+          "points": [
+            { "label": "Position", "text": "Mains écartées, doigts tendus et écartés" },
+            { "label": "Action", "text": "Pénétrer au maximum au-dessus du filet, bras tendus vers l'avant" },
+            { "label": "Cible", "text": "Gainez vos poignets pour rabattre le ballon vers le sol adverse" },
+            { "label": "Quand", "text": "Quand vous êtes bien placé et que vous avez lu l'attaque" }
+          ]
+        },
+        {
+          "name": "Le contre de couverture",
+          "objective": "Ralentir le ballon pour permettre à votre défense de récupérer",
+          "points": [
+            { "label": "Position", "text": "Mains rapprochées, paumes orientées vers vous" },
+            { "label": "Action", "text": "Absorber l'impact plutôt que de pousser" },
+            { "label": "Résultat", "text": "Le ballon retombe doucement dans votre camp pour être joué" },
+            { "label": "Quand", "text": "Quand vous êtes en retard ou mal placé" }
+          ]
+        },
+        {
+          "name": "Le contre de fixation",
+          "objective": "Empêcher certaines zones d'attaque",
+          "points": [
+            { "label": "Position", "text": "Bloquer une zone spécifique (ligne ou diagonale)" },
+            { "label": "Action", "text": "Orienter vos mains vers la zone à protéger" },
+            { "label": "Tactique", "text": "Forcer l'attaquant à frapper dans une zone où vos défenseurs sont prêts" },
+            { "label": "Quand", "text": "En accord avec votre défense arrière" }
+          ]
+        },
+        {
+          "name": "Le contre à 2 ou 3 (block collectif)",
+          "objective": "Créer un mur impénétrable",
+          "points": [
+            { "label": "Coordination", "text": "Sauter ensemble au même moment" },
+            { "label": "Placement", "text": "Les contreurs extérieurs se placent en fonction du contreur central" },
+            { "label": "Mains", "text": "Joindre vos mains avec celles de vos partenaires (pas d'espace)" },
+            { "label": "Communication", "text": "Un contreur annonce \"ligne\" ou \"diagonale\" pour coordonner" }
+          ]
+        }
+      ]
+    },
+    "timingTips": {
+      "title": "Astuces pour améliorer votre timing",
+      "items": [
+        { "label": "Exercice du \"un-deux\"", "text": "À l'entraînement, dites \"UN\" quand l'attaquant saute, \"DEUX\" quand vous sautez. Cela crée le décalage nécessaire." },
+        { "label": "Regardez les épaules", "text": "L'orientation des épaules de l'attaquant indique la direction de la frappe." },
+        { "label": "Analysez la passe", "text": "Une passe haute = plus de temps. Une passe tendue = réaction rapide." },
+        { "label": "Positionnez-vous tôt", "text": "Mieux vaut être en position d'attente que de courir au dernier moment." },
+        { "label": "Travaillez votre détente", "text": "Plus vous sautez haut, plus vous avez de marge d'erreur sur le timing." }
+      ]
+    },
+    "visualSequence": {
+      "title": "Séquence visuelle élite",
+      "intro": "Les meilleurs contreurs ne regardent pas le ballon — ils suivent une séquence précise :",
+      "chips": ["BALLON", "PASSEUR", "BALLON", "ÉPAULE DU FRAPPEUR"],
+      "items": [
+        { "label": "1. BALLON", "text": "Voir le ballon partir vers le passeur" },
+        { "label": "2. PASSEUR", "text": "Lire les mains du passeur au moment du contact — direction du set" },
+        { "label": "3. BALLON", "text": "Suivre brièvement le ballon pour confirmer la direction" },
+        { "label": "4. ÉPAULE DU FRAPPEUR", "text": "Verrouiller sur l'épaule de l'attaquant — donne la direction de frappe avant le contact" }
+      ]
+    },
+    "timingByAttack": {
+      "title": "Timing précis selon le type d'attaque",
+      "headerType": "Type d'attaque",
+      "headerWhen": "Timing du saut contreur",
+      "rows": [
+        { "type": "Quick / 1er tempo (central)", "timing": "AVEC ou un poil avant le hitter (commit block)" },
+        { "type": "Tendue / 2e tempo ailier", "timing": "~0,1s après le hitter" },
+        { "type": "Haute ball ailier (3e tempo)", "timing": "0,2–0,3s après le hitter" },
+        { "type": "Set serré près du filet", "timing": "AVEC le hitter" },
+        { "type": "Set éloigné du filet", "timing": "~0,5s après ou ne pas sauter" },
+        { "type": "Slide (central)", "timing": "AVEC ou juste après — suivre latéralement" }
+      ]
+    },
+    "blockStyles": {
+      "title": "Read blocking vs Commit blocking",
+      "read": {
+        "label": "Read blocking — recommandé",
+        "body": "Le contreur attend la décision du passeur, lit le ballon et l'attaquant, puis se déplace. Position \"bunch read\" (tous proches du centre, puis explosion vers le pin).",
+        "points": [
+          "Stable et présent sur la majorité des sets",
+          "Préserve les hanches et genoux",
+          "Adapté à tous les niveaux amateur"
+        ]
+      },
+      "commit": {
+        "label": "Commit blocking — avancé/pro",
+        "body": "Le central décide AVANT le release du passeur de sauter avec le quick. Annule l'attaque rapide adverse, mais si le passeur sette ailleurs, le central est complètement hors jeu.",
+        "points": [
+          "Efficace contre les centraux dominants",
+          "Risque élevé si le passeur adapte",
+          "Réservé aux joueurs avec excellente lecture"
+        ]
+      }
+    },
+    "jumpTechnique": {
+      "title": "La technique de saut pour le contre",
+      "columns": [
+        {
+          "title": "Position de départ",
+          "items": [
+            { "text": "Pieds écartés à la largeur des épaules" },
+            { "text": "Poids sur l'avant des pieds" },
+            { "text": "Genoux légèrement fléchis" },
+            { "text": "Bras le long du corps ou légèrement devant" },
+            { "text": "Position à environ 30–50 cm du filet" }
+          ]
+        },
+        {
+          "title": "L'impulsion",
+          "items": [
+            { "label": "Pas chassé", "text": "Si vous devez vous déplacer, utilisez un pas chassé rapide" },
+            { "label": "Fléchissez", "text": "Fléchissez vos jambes rapidement (ne descendez pas trop bas)" },
+            { "label": "Balancier des bras", "text": "Lancez vos bras vers le haut de manière explosive" },
+            { "label": "Extension complète", "text": "Tendez complètement vos jambes pour maximiser la hauteur" }
+          ]
+        },
+        {
+          "title": "En l'air",
+          "items": [
+            { "text": "Gardez vos bras tendus et serrés" },
+            { "text": "Mains écartées, doigts tendus et écartés" },
+            { "text": "Pénétrez au-dessus du filet (pas de touche de filet !)" },
+            { "text": "Gainez votre tronc pour rester stable" }
+          ]
+        }
+      ]
+    },
+    "errors": {
+      "title": "Erreurs fréquentes à éviter",
+      "subtitle": "Erreurs courantes",
+      "items": [
+        { "label": "Sauter trop tôt", "text": "Vous redescendez quand l'attaquant frappe — attendez plus longtemps !" },
+        { "label": "Regarder le ballon", "text": "Vous perdez des informations sur l'attaquant — regardez le joueur !" },
+        { "label": "Mains trop molles", "text": "Le ballon rebondit dans votre camp — tendez et gainez vos doigts !" },
+        { "label": "Sauter vers l'avant", "text": "Vous touchez le filet — sautez verticalement !" },
+        { "label": "Baisser les bras trop tôt", "text": "Gardez vos bras levés jusqu'à ce que vous retombiez." }
+      ]
+    },
+    "exercises": {
+      "title": "Exercices d'entraînement",
+      "items": [
+        {
+          "title": "Timing avec partenaire",
+          "desc": "Un partenaire fait semblant d'attaquer (sans ballon). Vous travaillez uniquement le timing de votre saut. Répétez 20 fois."
+        },
+        {
+          "title": "Contre sur attaque fixe",
+          "desc": "Un attaquant frappe depuis une position fixe. Concentrez-vous sur le timing et la technique. Augmentez progressivement la vitesse."
+        },
+        {
+          "title": "Lecture d'épaules",
+          "desc": "L'attaquant varie ses frappes (ligne/diagonale). Essayez de lire ses épaules pour anticiper la direction."
+        },
+        {
+          "title": "Déplacements + contre",
+          "desc": "Travaillez vos déplacements latéraux rapides suivis d'un contre. Simule les situations de match."
+        }
+      ]
+    },
+    "proTips": {
+      "title": "Conseils de pro",
+      "items": [
+        { "label": "Patience", "text": "Le contre est une des techniques les plus difficiles. Soyez patient avec vous-même." },
+        { "label": "Répétition", "text": "La mémoire musculaire se crée avec des centaines de répétitions." },
+        { "label": "Vidéo", "text": "Filmez-vous pour analyser votre timing et votre technique." },
+        { "label": "Observez les pros", "text": "Regardez comment les joueurs professionnels lisent le jeu et timent leurs sauts." },
+        { "label": "Commencez simple", "text": "Maîtrisez le contre contre des attaques lentes avant de passer aux attaques rapides." }
+      ]
+    },
+    "videos": {
+      "title": "Ressources vidéo",
+      "items": [
+        { "title": "Apprendre le contre (Sikana)", "url": "https://www.youtube.com/watch?v=hJKueZn-tNQ" },
+        { "title": "Le bloc au volleyball (CEPSUM)", "url": "https://www.youtube.com/watch?v=_MchJmDMn0E" },
+        { "title": "Exercice : sauter pour contrer", "url": "https://www.youtube.com/watch?v=GDS8PoWxO6Q" },
+        { "title": "Exercice : contrer une attaque", "url": "https://www.youtube.com/watch?v=S6TcodMWFz4" }
+      ]
+    }
   }
 }
