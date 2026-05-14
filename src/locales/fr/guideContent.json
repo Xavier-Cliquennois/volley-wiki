@@ -882,5 +882,834 @@
         { "title": "Échauffement individuel manchette", "url": "https://www.youtube.com/watch?v=nGiE_y09vTY" }
       ]
     }
+  },
+  "positionnement": {
+    "selectors": {
+      "title": "Configuration de votre équipe",
+      "description": "Choisissez votre format et votre configuration tactique : <strong>tout le contenu du guide</strong> (postes, zones, défense par attaque) s'adaptera.",
+      "formatLabel": "Format de jeu",
+      "configLabel": "Configuration tactique"
+    },
+    "principle": {
+      "label": "Principe de base de la défense",
+      "lead": "Le positionnement défensif dépend de 3 facteurs principaux :",
+      "points": [
+        "Votre poste (avant ou arrière)",
+        "La zone d'attaque adverse (zone 4, 3, 2)",
+        "Le type d'attaque (smash puissant, feinte, pointe)"
+      ]
+    },
+    "postes": {
+      "titlePrefix": "1. Postes et zones",
+      "layoutCaptionPrefix": "Disposition de votre équipe en",
+      "detailCta": "Voir le détail de chaque poste sur /positions →",
+      "ruleLabel": "Règle importante",
+      "ruleByTeamSize": {
+        "6": "Les joueurs arrière (5, 6, 1) ne peuvent PAS bloquer au filet. Ils défendent en fond de terrain.",
+        "5": "Avec 5 joueurs, chaque défenseur couvre ~30 m² (vs 20 m² en 6v6). La lecture devient critique.",
+        "4": "Pas de libéro. Chaque joueur défend ~30-40 m². L'anticipation est la compétence n°1."
+      }
+    },
+    "zonePositioning": {
+      "title": "2. Positionnement selon la zone d'attaque adverse",
+      "tabLabels": {
+        "zone4": "Attaque Zone 4",
+        "zone3": "Attaque Zone 3",
+        "zone2": "Attaque Zone 2"
+      },
+      "captionsByZone": {
+        "zone4": "Défense contre attaque en Zone 4 (aile gauche adverse)",
+        "zone3": "Défense contre attaque en Zone 3 (centre)",
+        "zone2": "Défense contre attaque en Zone 2 (aile droite adverse)"
+      },
+      "legend": {
+        "zone": "Zone de responsabilité",
+        "blk": "BLK",
+        "blkDesc": "= au bloc",
+        "off": "OFF",
+        "offDesc": "= off-blocker",
+        "def": "DÉF",
+        "defDesc": "= défense"
+      },
+      "unavailable": "Diagramme non disponible pour cette configuration."
+    },
+    "layoutLabels": {
+      "5-1": {
+        "zone4": ["Grande diag.", "Ombre bloc", "Ligne", "Off-blocker"],
+        "zone3": ["Diag. G", "Axe", "Diag. D", "Couv.", "Couv."],
+        "zone2": ["Grande diag.", "Ombre bloc", "Ligne", "Off-blocker"]
+      },
+      "pentagon": {
+        "zone4": ["Z1 court", "Grande diag.", "Off-blk"],
+        "zone3": ["Diag G", "Diag D"],
+        "zone2": ["Z5 court", "Grande diag.", "Off-blk"]
+      },
+      "3F-2B": {
+        "zone4": ["Z1 court", "Grande diag.", "Off-blk"],
+        "zone3": ["Diag G", "Diag D"],
+        "zone2": ["Z5 court", "Grande diag.", "Off-blk"]
+      },
+      "2F-3B": {
+        "zone4": ["Ligne D", "Axe", "Diag G", "Off-blk"],
+        "zone3": ["Diag G", "Axe", "Diag D"],
+        "zone2": ["Ligne G", "Axe", "Diag D", "Off-blk"]
+      },
+      "losange": {
+        "zone4": ["Court ligne", "Diag G", "Fond"],
+        "zone3": ["Diag G", "Diag D", "Fond"],
+        "zone2": ["Court ligne", "Diag D", "Fond"]
+      },
+      "carre": {
+        "zone4": ["Petite diag", "Grande diag.", "Off-blk"],
+        "zone3": ["Diag G", "Diag D"],
+        "zone2": ["Petite diag", "Grande diag.", "Off-blk"]
+      }
+    },
+    "layoutNotes": {
+      "5-1": {
+        "zone4": [
+          { "label": "Poste 2 (pointu / OPP)", "text": "Contreur ligne — bloque, monte au filet côté droit." },
+          { "label": "Poste 3 (central)", "text": "Ferme la diagonale en bloc à 2 avec le pointu." },
+          { "label": "Poste 4 (R4 off-blocker)", "text": "Décroche sur la ligne des 3 m côté gauche — couvre le cut shot court (diagonale aiguë) et les feintes." },
+          { "label": "Poste 5 (Libéro)", "text": "Défend la grande diagonale longue, ~7-8 m du filet, dans l'épaule intérieure du central contreur." },
+          { "label": "Poste 6 (arrière centre)", "text": "Balles hautes passant le bloc, touches de bloc longues, axe ~8-8,5 m." },
+          { "label": "Poste 1 (arrière droit)", "text": "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne droite." }
+        ],
+        "zone3": [
+          { "label": "Poste 3 (central)", "text": "Bloc à 1 en lecture (read) ou en commitment selon le scouting adverse." },
+          { "label": "Postes 4 et 2 (ailiers)", "text": "Sur la ligne d'attaque (~2-2,5 m du filet, 0,5 m des lignes) : couvrent déviations de bloc et balles à travers le bloc." },
+          { "label": "Poste 5 (Libéro)", "text": "Face à l'attaquant central, dans son couloir de frappe (~7-8 m du filet)." },
+          { "label": "Poste 6 (arrière centre)", "text": "Épaules face à l'attaquant ; défend la balle puissante traversant le bloc (axe ~8-8,5 m)." },
+          { "label": "Poste 1 (arrière droit)", "text": "Avance d'un mètre (~7,5 m du filet, 1 m de la ligne droite) : angles plus courts sur quick." },
+          { "label": "Règle clé", "text": "« Stopped on contact » : tous arrêtés et équilibrés à l'instant exact de la frappe." }
+        ],
+        "zone2": [
+          { "label": "Poste 4 (R4)", "text": "Contreur ligne — bloque au filet côté gauche." },
+          { "label": "Poste 3 (central)", "text": "Ferme la diagonale en bloc à 2 avec le R4." },
+          { "label": "Poste 2 (pointu / OPP)", "text": "Devient off-blocker côté droit — décroche sur les 3 m, couvre cut shot court et feintes." },
+          { "label": "Poste 5 (Libéro)", "text": "Défend la ligne profonde dans l'ombre du bloc, ~7-7,5 m du filet, 0,5 m de la ligne gauche." },
+          { "label": "Poste 6 (arrière centre)", "text": "Balles hautes par-dessus le bloc, axe ~8-8,5 m du filet." },
+          { "label": "Poste 1 (passeur ou OH/OPP)", "text": "Défend la grande diagonale longue cross-court, ~7-8 m du filet." }
+        ]
+      },
+      "pentagon": {
+        "zone4": [
+          "Attaque Z4 adverse (aile gauche adverse) → balle arrive sur notre droite.",
+          "Système 2-1-2 : bloc à 2 (P2 pointu ligne + P3 diagonale) + 2 défenseurs profonds.",
+          "P4 (aile gauche) en off-blocker à 2-2,5 m du filet, 1 m de la ligne — couvre tip et cut shot.",
+          "P5 (~7-7,5 m, 0,5 m ligne gauche) défend la grande diagonale longue cross-court.",
+          "P1 (~7-7,5 m, 0,5 m ligne droite) défend la ligne profonde, dans l'ombre du bloc.",
+          "Coup principal défendu : diagonale longue cross-court (trajectoire statistiquement la plus fréquente)."
+        ],
+        "zone3": [
+          "Attaque rapide centrale (Z3) — angles courts, peu de temps de réaction.",
+          "Bloc à 1 : P3 (central) en lecture (read), pas de commitment possible.",
+          "P4 et P2 (off-blockers) à 2 m du filet sur la ligne d'attaque — couvrent déviations.",
+          "P5 et P1 avancés d'1 m (~7 m du filet) — angles plus courts qu'en haute balle.",
+          "Faiblesse : pas de défenseur fond central dédié (seulement 2 arrières en 5v5).",
+          "Règle clé : « stopped on contact » — tous arrêtés et équilibrés à l'instant du contact."
+        ],
+        "zone2": [
+          "Attaque Z2 adverse (aile droite adverse) → balle arrive sur notre gauche. Miroir parfait de Z4.",
+          "Bloc à 2 : P4 (R4 ligne) + P3 (central diagonale).",
+          "P2 (pointu / passeur) en off-blocker à 2-2,5 m du filet côté droit.",
+          "P1 (~7-7,5 m, 1 m ligne droite) défend la grande diagonale longue.",
+          "P5 (~7-7,5 m, 0,5 m ligne gauche) défend la ligne profonde dans l'ombre du bloc."
+        ]
+      },
+      "3F-2B": {
+        "zone4": [
+          "Attaque Z4 adverse → balle arrive sur notre côté droit.",
+          "Configuration 3F-2B : 3 avants → bloc à 2 favorable (P3 + P2 passeur-contreur).",
+          "P4 (R4) off-blocker court côté gauche sur la ligne d'attaque (~2-2,5 m du filet).",
+          "P5 défend la grande diagonale longue cross-court (~7 m, 0,5 m ligne gauche).",
+          "P1 défend la ligne profonde droite dans l'ombre du bloc (~7 m, 0,5 m ligne droite).",
+          "Inconvénient : seulement 2 défenseurs en fond → 30+ m² par défenseur (vs 20 m² en 6v6)."
+        ],
+        "zone3": [
+          "Attaque rapide centrale (Z3) — angles courts.",
+          "Avec 3 avants, bloc à 3 possible mais laisse seulement 2 défenseurs au sol — déconseillé.",
+          "Recommandé : bloc à 2 (P3 + aile la plus proche du couloir de frappe).",
+          "P5 et P1 avancés d'1 m (~7 m) car les angles sont plus courts sur quick.",
+          "Faiblesse : balle profonde axiale non couverte (pas de Z6 défenseur en 5v5 3F-2B)."
+        ],
+        "zone2": [
+          "Attaque Z2 adverse → balle arrive sur notre côté gauche. Miroir parfait de Z4.",
+          "Bloc à 2 : P4 (R4 ligne) + P3 (central diagonale).",
+          "Le passeur (P2) en off-blocker à 2-2,5 m du filet côté droit (anti-feinte + transition rapide vers la cible).",
+          "P1 défend la grande diagonale longue (~7-7,5 m).",
+          "P5 défend la ligne profonde gauche dans l'ombre du bloc."
+        ]
+      },
+      "2F-3B": {
+        "zone4": [
+          "Attaque Z4 adverse → balle arrive sur notre droite.",
+          "Configuration 2F-3B (P4+P3 avants, P5+P6+P1 arrières, P1 pénétrant) : bloc à 1.",
+          "P3 (central) contre seul côté droit — pas de P2 disponible pour bloc à 2.",
+          "P4 (R4) off-blocker à 2-2,5 m du filet côté gauche.",
+          "3 défenseurs profonds : P5 grande diagonale, P6 axe central (~7-8 m), P1 ligne droite.",
+          "Le système 1-1-3 (1 contreur + 1 off-blocker + 3 défenseurs) est la défense la plus proche du 6v6 périmétrique."
+        ],
+        "zone3": [
+          "Attaque rapide centrale (Z3) — angles courts.",
+          "Bloc à 1 (P3) en lecture — la rapide est la cible la plus difficile en 2F-3B.",
+          "P4 latéralisé à mi-terrain (~2 m du filet) pour les déviations.",
+          "Avantage : 3 défenseurs profonds (P5, P6, P1) couvrent les 3 grandes zones de fond.",
+          "P6 face à l'attaquant central dans son couloir de frappe (~7,5-8 m, axe)."
+        ],
+        "zone2": [
+          "Attaque Z2 adverse → balle arrive sur notre gauche. Miroir de Z4.",
+          "Bloc à 1 : P4 contre seul côté gauche (pas de P2 en 2F-3B).",
+          "P3 (central) devient off-blocker côté droit à 2-2,5 m du filet.",
+          "P5 défend la ligne profonde gauche, P6 l'axe, P1 la grande diagonale longue."
+        ]
+      },
+      "losange": {
+        "zone4": [
+          "Attaque Z4 adverse → balle arrive sur notre côté droit.",
+          "Formation losange (1-2-1) → système A : 1 contreur (P3) + 3 défenseurs.",
+          "P3 monte en bloc solo côté droit (face à l'attaquant adverse).",
+          "P2 (avant droit) redescend sur les 3 m à 3,5-4 m du filet — couvre tip et feintes derrière le bloc.",
+          "P4 (avant gauche) recule à mi-terrain côté gauche — couverture petite diagonale courte.",
+          "P1 (arrière unique) défend la grande diagonale longue cross-court (~7-7,5 m, 1 m ligne droite).",
+          "Anticipation = compétence n°1 : 1 seul arrière → ~40 m² à couvrir."
+        ],
+        "zone3": [
+          "Attaque rapide centrale (Z3) — config la plus difficile en 4v4 : peu de temps, 1 seul contreur.",
+          "Bloc à 1 (P3 seul) en LECTURE permanente (pas de commitment possible).",
+          "P4 et P2 reculent à mi-terrain (~3,5-4 m du filet, couvrent les deux diagonales courtes).",
+          "L'arrière unique P1 fait office de Z6 défenseur (axe central, 7-8 m du filet).",
+          "Coup principal : balle puissante axiale (vers P1) car le bloc à 1 ne couvre que le centre."
+        ],
+        "zone2": [
+          "Attaque Z2 adverse → balle arrive sur notre côté gauche. Miroir parfait de Z4.",
+          "Système A : 1 contreur (P3) + 3 défenseurs.",
+          "P4 (avant gauche) redescend sur les 3 m à 3,5-4 m — couvre tip et feintes côté gauche.",
+          "P2 (avant droit) recule à mi-terrain côté droit — couvre petite diagonale courte.",
+          "L'arrière unique P1 défend la grande diagonale longue cross-court (~7-7,5 m, 1 m ligne gauche)."
+        ]
+      },
+      "carre": {
+        "zone4": [
+          "Attaque Z4 adverse → balle arrive sur notre côté droit.",
+          "Formation carré (2-2 / box) → système A : 1 contreur (P2) + 3 défenseurs.",
+          "P2 (avant droit) bloc solo face à l'attaquant adverse, fixe la ligne.",
+          "P4 (avant gauche) en off-blocker à 2-2,5 m du filet — couvre tip et cut shot côté gauche.",
+          "P5 défend la grande diagonale longue (~7 m, 0,5 m ligne gauche).",
+          "P1 défend la ligne profonde / petite diagonale courte (~7 m, dans l'ombre du bloc).",
+          "Système B (bloc à 2 P2+P4) possible mais laisse seulement 2 défenseurs — à réserver aux gros frappeurs."
+        ],
+        "zone3": [
+          "Attaque rapide centrale (Z3) — angles courts, peu de temps.",
+          "Bloc à 2 (P4 + P2) ferme le centre — système B avec 2 défenseurs derrière.",
+          "P5 et P1 prennent les diagonales courtes (~7 m, 0,5-1 m des lignes).",
+          "Faiblesse majeure : aucune couverture courte derrière le bloc, le carré n'a pas de joueur à mi-terrain.",
+          "Alternative : bloc à 1 (P3-like rôle, ici P4 ou P2 seul) pour libérer un défenseur tip."
+        ],
+        "zone2": [
+          "Attaque Z2 adverse → balle arrive sur notre côté gauche. Miroir parfait de Z4.",
+          "Système A : 1 contreur (P4) + 3 défenseurs.",
+          "P4 (avant gauche) bloc solo face à l'attaquant adverse, fixe la ligne.",
+          "P2 (passeur-attaquant avant droit) en off-blocker à 2-2,5 m du filet — anti-feinte + transition rapide vers cible.",
+          "P1 défend la grande diagonale longue (~7 m, 0,5 m ligne droite).",
+          "P5 défend la ligne profonde courte (~7 m, dans l'ombre du bloc)."
+        ]
+      }
+    },
+    "generalPrinciples": {
+      "title": "3. Principes généraux de positionnement",
+      "responsibilityLabel": "Zones de responsabilité",
+      "cards": {
+        "front": {
+          "title": "Joueurs avant",
+          "points": [
+            "Priorité : Bloquer au filet",
+            "Si pas au bloc : défendre la ligne opposée",
+            "Distance : au filet ou fond de terrain"
+          ]
+        },
+        "pivotByTeamSize": {
+          "6": {
+            "title": "Pivot défensif (Libéro / P6)",
+            "points": [
+              "Position : centre, adaptable",
+              "Distance : 5–6m du filet",
+              "Rôle : pilier de la défense, couvre le centre"
+            ]
+          },
+          "5": {
+            "title": "Pivot défensif (Libéro / P6)",
+            "points": [
+              "Position : centre, adaptable",
+              "Distance : 5–6m du filet",
+              "Rôle : pilier de la défense, couvre le centre"
+            ]
+          },
+          "4": {
+            "title": "Arrière unique (P1)",
+            "points": [
+              "Position : centre, ~40 m² à couvrir",
+              "Distance : 5–6m du filet",
+              "Rôle : pilier défensif unique, anticipation maximale"
+            ]
+          }
+        },
+        "back": {
+          "title": "Arrières latéraux",
+          "points": [
+            "Rôle variable : avancent ou reculent",
+            "Côté attaqué : avancent (3–4m)",
+            "Côté opposé : reculent (6–7m)"
+          ]
+        }
+      },
+      "universalsCard": {
+        "title": "★ Principes défensifs universels (4v4 / 5v5 / 6v6)",
+        "intro": "Ces principes issus de Hebert, Liskevych et Volleyball Canada s'appliquent quel que soit le nombre de joueurs sur le terrain.",
+        "items": [
+          ["Le contre est la fondation", "Les défenseurs arrière se positionnent en fonction de l'ombre et de l'orientation du bloc — pas de façon indépendante."],
+          ["Arrêté et équilibré au moment du contact", "Tout défenseur qui bouge encore quand l'attaquant frappe voit sa réactivité s'effondrer (« stopped on contact »)."],
+          ["Lecture visuelle séquentielle", "« Ballon → passeur adverse → ballon → attaquant adverse ». En 4v4 et 5v5, le déficit de joueurs impose une lecture encore plus précoce."],
+          ["Communication des signaux", "Même en loisir, le contreur doit signaler « ligne » ou « diagonale » — sans cela, les défenseurs arrière ne savent pas quoi couvrir."],
+          ["Zone avant couverte", "Quelqu'un doit couvrir les 3-5 m derrière le bloc — c'est la zone la plus négligée en formats réduits (4v4 / 5v5)."],
+          ["Transition rapide", "Le passeur ne doit jamais partir à sa cible avant d'avoir confirmé que la balle est défendue (« release call »)."]
+        ]
+      }
+    },
+    "readingAttacker": {
+      "title": "4. Lire l'attaquant : les indices visuels",
+      "intro": "Ton positionnement doit s'ajuster en fonction de ce que tu vois. Voici les indices clés :",
+      "indicators": [
+        {
+          "title": "Attaquant loin du filet",
+          "action": "AVANCE",
+          "accentColor": "var(--orange)",
+          "points": [
+            "Passe à 2–3m du filet",
+            "Il ne peut pas smasher fort",
+            "Risque élevé de feinte ou amortie",
+            "Avance de 1–2 mètres"
+          ]
+        },
+        {
+          "title": "Attaquant près du filet",
+          "action": "RECULE",
+          "accentColor": "var(--plum)",
+          "points": [
+            "Passe à moins de 1m du filet",
+            "Peut smasher à pleine puissance",
+            "Trajectoire descendante rapide",
+            "Recule au maximum"
+          ]
+        },
+        {
+          "title": "L'épaule de l'attaquant",
+          "action": "Regarde son épaule qui frappe",
+          "accentColor": "var(--teal)",
+          "points": [
+            "Épaule haute et en arrière = smash puissant",
+            "Épaule basse = feinte probable",
+            "Rotation d'épaule = direction de la balle",
+            "Ajuste-toi en 0,5s"
+          ]
+        },
+        {
+          "title": "L'élan de l'attaquant",
+          "action": "Observe sa course d'approche",
+          "accentColor": "var(--ink)",
+          "points": [
+            "Course longue et rapide = smash fort",
+            "Petit élan ou arrêt = feinte",
+            "Angle d'approche = zone visée",
+            "Anticipe la puissance"
+          ]
+        }
+      ],
+      "proTipLabel": "Astuce pro",
+      "proTipText": "Dans les 2 premières secondes après le service adverse, concentre ton regard sur le passeur, puis IMMÉDIATEMENT sur l'attaquant qui va frapper."
+    },
+    "advanceRetreat": {
+      "title": "5. Quand s'avancer ou reculer ?",
+      "label": "Arbre de décision rapide",
+      "advance": {
+        "title": "S'avancer (3–4m du filet) quand :",
+        "items": [
+          "Vous êtes du même côté que l'attaquant",
+          "L'attaquant est loin du filet (mauvaise passe)",
+          "Vous anticipez une feinte ou amortie",
+          "Le bloc est solide — moins de balles puissantes passent"
+        ]
+      },
+      "retreat": {
+        "title": "Reculer (6–7m du filet) quand :",
+        "items": [
+          "Vous êtes du côté opposé à l'attaquant",
+          "L'attaquant a une bonne passe près du filet",
+          "L'attaquant est puissant ou grand",
+          "Le bloc est faible (1 seul bloqueur)",
+          "Vous défendez la diagonale (trajectoire la plus longue)"
+        ]
+      }
+    },
+    "mistakes": {
+      "titlePrefix": "6.",
+      "byTeamSize": {
+        "6": {
+          "title": "Les dix erreurs fréquentes de positionnement défensif",
+          "intro": "Typologie issue de Mike Hebert (Thinking Volleyball), John Forman (CoachingVB), USA Volleyball et du manuel FIVB Top Volley.",
+          "mistakes": [
+            ["1. Dérive dans l'ombre du contre", "Les défenseurs se réfugient instinctivement derrière les contreurs au lieu de se positionner autour de l'ombre du bloc — laissant ouvertes les diagonales et les trajectoires « off the block ». Hebert : « creeping into the block shadow »."],
+            ["2. Lecture défaillante", "Le défenseur fixe la balle au lieu de suivre la séquence « ballon → passeur → ballon → attaquant ». Conséquence : il devine au lieu de lire, et n'est pas arrêté ni équilibré au moment du contact (« stopped and balanced at the moment of contact »)."],
+            ["3. Libéro mal placé en profondeur", "Trop près du filet, il ne défend pas les smashs profonds ; trop loin, il ne couvre pas les tips. Règle : aligner son épaule extérieure sur l'épaule intérieure du contreur central, à 6-8 m du filet selon le bloc."],
+            ["4. Passeur défenseur mal préparé", "Position trop basse ou mal orientée empêchant de voir ballon + terrain adverse ; départ prématuré vers la cible créant un trou en Z1 ; absence de « release call » signalant qu'il quitte la défense."],
+            ["5. Fautes de chevauchement", "Les plus fréquentes : Z6 dérive devant Z3, Z5 plus à droite que Z6, et le passeur quitte trop tôt sa position pour pénétrer (faute n°1 en 5-1). À l'instant du contact du serveur, tous les pieds doivent respecter les relations front/back et gauche/droite (Règle 7.4)."],
+            ["6. Transition réception → défense oubliée", "Les joueurs restent figés dans leur formation de réception en W au lieu de basculer en position de base défensive dès que le passeur adverse touche la balle. Hebert : « sluggish recovery after play on the ball »."],
+            ["7. Mauvaise gestion de la zone 6", "Confusion entre « 6-up » (rotation), « 6-back » (périmétrique) et « 6-deep ». Le joueur en Z6 doit décaler latéralement selon le côté d'attaque adverse, pas rester centré. Se pencher en arrière pour digger (« leaning back ») place le poids sur les talons et tue la réactivité."],
+            ["8. Défense ratée sur attaque rapide centrale", "Lecture trop tardive du central adverse ; arrières non avancés (sur quick, Z1 et Z5 doivent gagner un mètre vers le filet car les angles sont plus courts) ; « false stepping » (premier appui reculé) qui fait perdre le temps disponible."],
+            ["9. Couverture des feintes orpheline", "Aucun défenseur explicitement assigné au tip ; « standing up on tips » — le défenseur est en posture basse pour le smash, puis se redresse et tend les mains sur la feinte, laissant le ballon tomber juste devant lui. Le focus doit rester sur le smash en posture basse permettant un sursaut tip."],
+            ["10. Silence collectif", "Absence de calls (« tip ! », « line ! », « out ! », « mine ! ») ; contreurs qui ne communiquent pas leur orientation ligne vs diagonale ; aucun capitaine de rotation pour vérifier les chevauchements avant le service."]
+          ]
+        },
+        "5": {
+          "title": "Les erreurs fréquentes en 5v5",
+          "intro": "Erreurs spécifiques au format 5v5 (adaptations du doc Volleyball Canada, VolleyballXL et de la doctrine 6v6).",
+          "mistakes": [
+            ["1. Reproduire mécaniquement le 6v6", "Couvrir 3 zones profondes avec 3 défenseurs fonctionne (config 2F-3B), mais il manque l'off-blocker qui décroche — la zone 3 m n'est pas couverte si personne n'est explicitement assigné."],
+            ["2. L'avant off-blocker reste collé au filet", "Après la frappe du contre, l'avant off-blocker doit décrocher à 2-2,5 m pour couvrir les tips. S'il reste au filet, la zone derrière le bloc est béante."],
+            ["3. 2 défenseurs debout côte à côte", "En configuration 3F-2B, les 2 défenseurs profonds doivent être espacés (un côté gauche, un côté droit) et non centrés ensemble. Sinon, les lignes latérales sont à découvert."],
+            ["4. Le passeur monte trop tôt (config pénétrante)", "En configuration 2F-3B avec passeur pénétrant depuis P1, il doit attendre que la balle soit défendue avant de courir à sa cible — sinon trou en Z1."],
+            ["5. Confusion avant/arrière", "Avec 5 joueurs, la tentation de laisser les avants défendre leur côté en restant sur la ligne 3 m est forte — mais cela laisse le fond ouvert. Les avants montent au bloc, les arrières défendent profond."],
+            ["6. Lecture défaillante", "Le déficit d'un joueur impose une lecture encore plus précoce qu'en 6v6. Séquence « ballon → passeur → ballon → attaquant » + arrêt équilibré au moment du contact."]
+          ]
+        },
+        "4": {
+          "title": "Les erreurs fréquentes en 4v4",
+          "intro": "Erreurs spécifiques au 4v4 indoor (intramurals universitaires, doctrine FFVb / Volleyball Canada, beach 4s).",
+          "mistakes": [
+            ["1. Le contreur isolé sans couverture tip", "Les 3 défenseurs partent tous en profondeur, laissant la zone 3-5 m vide. Quelqu'un doit toujours être assigné au tip à 3,5-4 m du filet."],
+            ["2. 2 défenseurs en ligne droite", "Côte à côte à la même profondeur → le cut shot tombe entre eux. En 4v4, les défenseurs doivent toujours être étagés (un proche, un loin) ou écartés latéralement."],
+            ["3. Le passeur qui court à la passe avant que la balle soit défendue", "Transition prématurée laissant un trou en défense. Le passeur attend la confirmation que la balle est récupérée avant de partir à sa cible."],
+            ["4. Absence de signal entre contreur et défenseurs", "Le contreur DOIT signaler « ligne » ou « diagonale » avant que l'attaque parte. Sans cela, les 3 défenseurs ne savent pas quoi couvrir — chacun improvise."],
+            ["5. Le défenseur tip trop loin du filet", "Il recule avec les autres arrières et ne peut plus couvrir les feintes courtes. Sa position est 3,5-4 m du filet, axe — pas 7 m."],
+            ["6. Blocage « au hasard » du mauvais joueur", "En 4v4, bloquer avec un joueur mal placé (loin de l'attaquant) laisse l'adversaire face à 3 défenseurs mal alignés. Le contreur doit être celui qui est en face de l'attaquant principal."],
+            ["7. Lecture défaillante", "Avec ~40 m² par défenseur (vs 20 m² en 6v6), l'erreur de lecture est non-rattrapable. Anticipation = compétence n°1 en 4v4."]
+          ]
+        }
+      }
+    },
+    "serviceTransition": {
+      "title": "7. Positionnement au service",
+      "intro": "<strong>Ton placement au service est DIFFÉRENT de ta position défensive. </strong>Dès que le service part, tu dois te repositionner.",
+      "stepsLabel": "Transition service → défense",
+      "steps": [
+        ["Ton équipe sert", "Tu es en position de rotation"],
+        ["Le serveur frappe", "Tu regardes le passeur adverse"],
+        ["Le passeur touche la balle", "Tu te déplaces vers ta zone défensive"],
+        ["L'attaquant saute", "Tu es en position finale, prêt à réagir"]
+      ]
+    },
+    "communication": {
+      "title": "8. Communication défensive",
+      "intro": "Une défense silencieuse est une défense inefficace.",
+      "groups": [
+        {
+          "moment": "Avant l'attaque adverse",
+          "calls": [
+            ["\"Numéro 4 !\"", "Annonce la zone d'où vient l'attaque"],
+            ["\"Deux au bloc !\"", "Indique combien de bloqueurs"],
+            ["\"Ligne libre !\"", "Si le bloc ne couvre pas la ligne"],
+            ["\"J'avance !\" / \"Je recule !\"", "Annonce ton mouvement"]
+          ]
+        },
+        {
+          "moment": "Pendant l'action",
+          "calls": [
+            ["\"Moi !\" / \"J'ai !\"", "Tu prends la balle (le PLUS important)"],
+            ["\"Toi !\" / \"À toi !\"", "Tu laisses la balle à un coéquipier"],
+            ["\"Dehors !\"", "La balle va sortir, ne la touche pas"],
+            ["\"Bloquée !\"", "Si tu bloques, annonce-le"]
+          ]
+        },
+        {
+          "moment": "Après l'action",
+          "calls": [
+            ["\"Couvrez !\"", "Demande la couverture d'attaque"],
+            ["\"Libre !\"", "Balle libre, replacez-vous"],
+            ["\"On reste !\"", "On garde la défense en place"]
+          ]
+        }
+      ],
+      "ruleLabel": "Règle d'or",
+      "ruleText": "En cas de doute entre deux joueurs, c'est TOUJOURS le joueur le plus avancé qui prend la balle."
+    },
+    "defenseSystems": {
+      "titlePrefix": "9.",
+      "warningLabel": "⚠ Avertissement terminologique",
+      "warningLabelNonOfficial": "⚠ Format non officiel FIVB",
+      "forcesLabel": "Forces",
+      "weaknessesLabel": "Faiblesses",
+      "indicationLabel": "Indication",
+      "tableLabel": "Tableau comparatif synthétique",
+      "tableHeaderCriterion": "Critère",
+      "byTeamSize": {
+        "6": {
+          "title": "Les trois grands systèmes défensifs (FIVB / USAV)",
+          "warning": {
+            "label": "⚠ Avertissement terminologique",
+            "text": "L'expression « défense en W » souvent entendue en France est impropre. La « W-formation » désigne historiquement une formation de réception de service à 5 joueurs — pas un système défensif. La doctrine internationale (FIVB, USAV IMPACT, Liskevych, Stone) distingue trois systèmes : man-up (2-1-3), périmétrique (2-0-4) et en rotation (3-2-1)."
+          },
+          "systems": [
+            {
+              "name": "Défense man-up (2-1-3)",
+              "tag": "Anciennement « défense en W » / red defense",
+              "principe": "Un défenseur monte à hauteur des 3 m derrière le contre pour intercepter feintes et amorties. Deux contreurs au filet, l'off-blocker décroche, et trois joueurs profonds couvrent les angles longs.",
+              "forces": [
+                "Couverture exceptionnelle des tips, roll shots et balles « pourries » derrière le bloc",
+                "Transition rapide vers l'attaque si le joueur monté est le passeur",
+                "Simple à enseigner aux jeunes équipes"
+              ],
+              "faiblesses": [
+                "Seulement 3 défenseurs en profondeur — vulnérable aux smashs puissants en diagonale serrée",
+                "Un attaquant qui frappe fort entre les contreurs traverse facilement"
+              ],
+              "indication": "Équipes jeunes, scolaires, adversaires tactiques jouant beaucoup de feintes ou off-speed.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Défense périmétrique (2-0-4)",
+              "tag": "White defense — système dominant en haut niveau masculin",
+              "principe": "Les quatre défenseurs arrière forment un U ouvert vers le filet, presque sur les lignes de touche et de fond — « un pied sur la ligne » (Liskevych). Le milieu du terrain est volontairement abandonné.",
+              "forces": [
+                "Excellente couverture des smashs puissants, lignes et coins profonds",
+                "Mouvement collectif simple",
+                "Système prédominant en volley masculin moderne international"
+              ],
+              "faiblesses": [
+                "Très vulnérable aux tips courts derrière le bloc — zone centrale entre 3 et 5 m libre",
+                "Demande des défenseurs athlétiques capables de plonger vers l'avant"
+              ],
+              "indication": "Sénior, masculin, niveau international, adversaires puissants.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Défense en rotation (3-2-1)",
+              "tag": "Rotational / slide defense",
+              "principe": "Les trois défenseurs arrière glissent vers le côté d'attaque adverse : l'arrière opposé monte derrière le bloc (tip), le milieu glisse vers la ligne attaquée, le défenseur du côté attaqué se met en angle court.",
+              "forces": [
+                "Excellente couverture de la ligne profonde ET du tip simultanément",
+                "Système très adaptable",
+                "Transition setter rapide quand le passeur est en P1"
+              ],
+              "faiblesses": [
+                "Un défenseur en moins en profondeur (un joueur dédié au tip)",
+                "Coin diagonal opposé vulnérable",
+                "Forte capacité de lecture et coordination requise"
+              ],
+              "indication": "Adversaires qui mêlent puissance et lignes/tips ; niveau intermédiaire à élite.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["Man-up 2-1-3", "Périm. 2-0-4", "Rotation 3-2-1"],
+          "tableRows": [
+            ["Joueur monté derrière bloc", "Oui", "Non", "Oui"],
+            ["Défenseurs profonds", "3", "4", "2"],
+            ["Couverture tip", "★★★", "★", "★★"],
+            ["Couverture smash puissant", "★★", "★★★", "★★"],
+            ["Couverture ligne profonde", "★★", "★★", "★★★"],
+            ["Couverture diagonale serrée", "★", "★★★", "★★"],
+            ["Position type du libéro", "Z5 ou Z6", "Z5 (sur ligne)", "Z5 glisse"],
+            ["Complexité", "Faible", "Moyenne", "Élevée"]
+          ],
+          "footer": {
+            "strong": "Le choix n'est pas une question d'orthodoxie : ",
+            "text": "il dépend du profil offensif adverse et des qualités de vos défenseurs. La défense moderne se définit moins par la formation que par la lecture — séquence visuelle « ballon → passeur → ballon → attaquant » et arrêt équilibré à l'instant du contact."
+          }
+        },
+        "5": {
+          "title": "Les trois systèmes défensifs en 5v5",
+          "warning": {
+            "label": "⚠ Format non officiel FIVB",
+            "text": "Le 5v5 indoor n'a pas de règlement FIVB ou FFVb dédié. Ces trois systèmes sont des adaptations logiques du 6v6 documentées par VolleyballXL, The Art of Coaching Volleyball et Volleyball Canada. Il n'existe pas de manuel technique 5v5 officiel — choisissez le système selon la configuration de votre équipe (2-3 ou 3-2)."
+          },
+          "systems": [
+            {
+              "name": "Système 1-1-3",
+              "tag": "1 contreur + 1 couvreur tip + 3 défenseurs profonds",
+              "principe": "Adapté à la configuration 2F-3B (2 avants, 3 arrières). Le contreur saute seul ; le 2ᵉ avant décroche en off-blocker à 2-3 m du filet pour les tips ; 3 défenseurs profonds couvrent ligne, axe et grande diagonale.",
+              "forces": [
+                "3 défenseurs profonds comme en 6v6 périmétrique — bonne couverture des smashs",
+                "Configuration la plus proche du 5-1 6v6 (préparation à la transition vers 6v6)",
+                "Tip couvert par l'off-blocker"
+              ],
+              "faiblesses": [
+                "Bloc à 1 seulement → fragile face aux gros frappeurs",
+                "L'off-blocker à 2-3 m doit être très réactif"
+              ],
+              "indication": "Configuration 2F-3B (passeur pénétrant), adversaires moyennement puissants. Système recommandé pour la pédagogie de transition vers le 6v6.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Système 2-1-2",
+              "tag": "2 contreurs + 1 tip + 2 défenseurs profonds",
+              "principe": "Adapté à la configuration 3F-2B (3 avants, 2 arrières). Bloc à 2 au filet, l'avant centre couvre le tip à 2-3 m du filet, 2 défenseurs profonds prennent grande diagonale et ligne.",
+              "forces": [
+                "Bloc à 2 comme en 6v6 — nettement plus efficace contre les smashs puissants",
+                "3 attaquants au filet pour la contre-attaque"
+              ],
+              "faiblesses": [
+                "Seulement 2 défenseurs profonds → 9 m de fond très difficile à couvrir",
+                "Forte exigence athlétique sur les 2 arrières"
+              ],
+              "indication": "Configuration 3F-2B contre équipes très puissantes. Privilégier en fin de set quand chaque point compte.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Système 1-2-2",
+              "tag": "Man-up adapté (équivalent du 2-1-3 6v6)",
+              "principe": "Contreur solo + 2 couvreurs zone avant (tip + arrière-bloc) + 2 défenseurs profonds. Adapté quand l'adversaire feinte beaucoup ou en équipes débutantes.",
+              "forces": [
+                "Excellente couverture des feintes courtes (2 couvreurs zone avant)",
+                "Tip difficile à exploiter par l'adversaire"
+              ],
+              "faiblesses": [
+                "Seulement 2 défenseurs profonds → smashs puissants difficiles",
+                "Demande coordination entre les 2 couvreurs zone avant"
+              ],
+              "indication": "Adversaires qui feintent beaucoup ; volley féminin, jeunes catégories, équipes techniques.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["1-1-3", "2-1-2", "1-2-2 (man-up)"],
+          "tableRows": [
+            ["Contreurs", "1", "2", "1"],
+            ["Couvreurs zone avant", "1 (off-blocker)", "1 (tip)", "2 (tip + arrière-bloc)"],
+            ["Défenseurs profonds", "3", "2", "2"],
+            ["Couverture tip", "★★", "★★", "★★★"],
+            ["Couverture smash puissant", "★★", "★★★", "★★"],
+            ["Couverture fond", "★★★", "★★", "★★"],
+            ["Configuration adaptée", "2F-3B", "3F-2B", "2F-3B / 3F-2B"],
+            ["Complexité", "Faible", "Moyenne", "Élevée"]
+          ],
+          "footer": {
+            "strong": "Recommandation 5v5 : ",
+            "text": "le système 1-1-3 en configuration 2F-3B avec passeur pénétrant est la défense la plus proche du 6v6 — idéale comme transition pédagogique. Le 2-1-2 ne se justifie que contre des frappeurs vraiment puissants."
+          }
+        },
+        "4": {
+          "title": "Les trois systèmes défensifs en 4v4",
+          "warning": {
+            "label": "⚠ Format non officiel FIVB",
+            "text": "Le 4v4 indoor n'a pas de règlement FIVB officiel. Ces trois systèmes proviennent de la pratique intramurals universitaires (USA), des manuels de transition pédagogique FFVb / Volleyball Canada et de la littérature beach (Brandon Joyner, Better at Beach). Avec 4 joueurs, chaque défenseur couvre ~30-40 m² (vs 20 m² en 6v6) — l'anticipation est la compétence n°1."
+          },
+          "systems": [
+            {
+              "name": "Système A : 1 contreur + 3 défenseurs",
+              "tag": "Le plus répandu en 4v4 indoor",
+              "principe": "Un seul joueur monte au contre face à l'attaquant principal. Les 3 autres se répartissent : défenseur tip (3-4 m du filet, axe), défenseur cross (7-7,5 m, ligne droite, diagonale longue), défenseur ligne (7-7,5 m, dans l'ombre du contre).",
+              "forces": [
+                "Couvre tip, ligne et grande diagonale simultanément",
+                "Le plus équilibré en 4v4",
+                "Signal contreur ligne/diagonale très efficace"
+              ],
+              "faiblesses": [
+                "Bloc à 1 — vulnérable aux gros frappeurs",
+                "Demande un défenseur tip discipliné qui ne recule pas"
+              ],
+              "indication": "Adversaires de niveau équivalent ou modéré. Configuration la plus polyvalente en 4v4 (formation diamant ou ligne 3-1).",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Système B : 2 contreurs + 2 défenseurs",
+              "tag": "Bloc à 2 (rare en 4v4)",
+              "principe": "Les 2 avants montent ensemble face à l'attaquant principal. Les 2 arrières se positionnent : un côté ligne (7 m, 1 m de la ligne), un en axe légèrement décalé vers la diagonale. Le tip n'est pas couvert.",
+              "forces": [
+                "Bloc à 2 nettement plus efficace contre smashs puissants",
+                "Pression maximale sur l'attaquant adverse"
+              ],
+              "faiblesses": [
+                "Seulement 2 défenseurs au sol → impossible de tout couvrir",
+                "Tip derrière le bloc complètement à découvert",
+                "Impose un choix : ligne OU diagonale, pas les deux"
+              ],
+              "indication": "À n'utiliser que contre des attaquants très puissants sans finesse (pas de feinte). Configuration box 2-2 ou ligne 3-1.",
+              "accent": "var(--plum)"
+            },
+            {
+              "name": "Système C : 0 contreur",
+              "tag": "Défense basse (adversaires non-smasheurs)",
+              "principe": "Aucun joueur ne monte au contre. Les 4 joueurs défendent en profondeur : 2 à mi-terrain (3-4 m) pour les feintes, 2 en fond (7-8 m) pour les balles plus profondes. Le passeur fait office de 4ᵉ défenseur.",
+              "forces": [
+                "Couvre toute la profondeur du terrain",
+                "Bien adapté aux échanges lents"
+              ],
+              "faiblesses": [
+                "CONTRE-PRODUCTIF dès qu'un adversaire frappe sérieusement (le smash passe sans obstacle)",
+                "Aucune pression au filet"
+              ],
+              "indication": "Niveaux scolaires, loisir débutant, adversaires qui ne spikent pas. À éviter dès que l'opposition gagne en puissance.",
+              "accent": "var(--teal)"
+            }
+          ],
+          "tableHeaders": ["Système A", "Système B", "Système C"],
+          "tableRows": [
+            ["Contreurs", "1", "2", "0"],
+            ["Défenseurs profonds", "3", "2", "4"],
+            ["Couverture tip", "★★", "★", "★★★"],
+            ["Couverture smash puissant", "★★", "★★★", "★ (∅ bloc)"],
+            ["Couverture ligne profonde", "★★", "★★", "★★"],
+            ["Couverture grande diagonale", "★★★", "★★", "★★"],
+            ["Adversaires recommandés", "Tous niveaux", "Très puissants", "Non-smasheurs"],
+            ["Complexité", "Faible", "Moyenne", "Faible"]
+          ],
+          "footer": {
+            "strong": "Recommandation 4v4 : ",
+            "text": "le système A (1 contreur + 3 défenseurs) est le défaut quasi universel. Le système B se justifie uniquement face à des frappeurs vraiment puissants en fin de set. Le système C ne fonctionne qu'au niveau loisir débutant — dès qu'un adversaire smashe, retour au système A."
+          }
+        }
+      }
+    },
+    "transitions": {
+      "title": "10. Transitions attaque ↔ défense",
+      "intro": "Le volleyball est un jeu de transitions rapides. Tu passes constamment de l'attaque à la défense et vice-versa.",
+      "groups": [
+        {
+          "label": "Transition attaque → défense",
+          "items": [
+            ["Ton coéquipier attaque", "Prépare-toi mentalement à défendre"],
+            ["La balle est renvoyée", "Identifie immédiatement qui va attaquer"],
+            ["Course rapide", "Va vers ta zone défensive (2–3 secondes max)"],
+            ["Position basse", "Fléchis les jambes, prêt à plonger"]
+          ]
+        },
+        {
+          "label": "Transition défense → attaque",
+          "items": [
+            ["Tu défends la balle", "Passe précise vers le passeur"],
+            ["Si tu es AVANT", "Cours au filet pour attaquer ou bloquer"],
+            ["Si tu es ARRIÈRE", "Recule légèrement, prêt à couvrir l'attaque"],
+            ["Couverture d'attaque", "Entoure ton attaquant (en demi-cercle à 2–3m)"]
+          ]
+        }
+      ]
+    },
+    "exercises": {
+      "title": "11. Exercices pour progresser",
+      "durationLabel": "Durée",
+      "materialLabel": "Matériel",
+      "objectiveLabel": "Objectif",
+      "items": [
+        {
+          "title": "Lecture de situation",
+          "level": "Débutant",
+          "duration": "10 min",
+          "materiel": "1 coach ou partenaire avec balles",
+          "objectif": "Apprendre à identifier rapidement la zone d'attaque",
+          "steps": [
+            "Le coach se place de l'autre côté du filet en zone 4, 3 ou 2",
+            "Tu pars du centre du terrain",
+            "Le coach annonce la zone et lance la balle",
+            "Tu dois te placer dans ta zone défensive en 2–3 secondes",
+            "Répète 20 fois en variant les zones"
+          ]
+        },
+        {
+          "title": "Avancer/Reculer selon la passe",
+          "level": "Intermédiaire",
+          "duration": "15 min",
+          "materiel": "1 passeur, 1 attaquant, plusieurs défenseurs",
+          "objectif": "Ajuster ta position selon la qualité de la passe",
+          "steps": [
+            "Le passeur fait des passes de qualité variable à l'attaquant",
+            "Passe proche du filet → Tu recules (smash puissant attendu)",
+            "Passe loin du filet → Tu avances (feinte probable)",
+            "L'attaquant frappe et tu défends",
+            "Le coach corrige ta position après chaque balle"
+          ]
+        },
+        {
+          "title": "Communication défensive",
+          "level": "Tous niveaux",
+          "duration": "10 min",
+          "materiel": "Équipe complète",
+          "objectif": "Développer la communication automatique",
+          "steps": [
+            "Match dans votre format (4v4, 5v5 ou 6v6) mais en CRIANT tous les appels",
+            "Pénalité : -1 point si un joueur ne crie pas \"Moi !\" sur sa balle",
+            "Bonus : +1 point si toute l'équipe communique sur un échange",
+            "Chaque joueur doit annoncer la zone d'attaque adverse"
+          ]
+        },
+        {
+          "title": "Défense contre feintes",
+          "level": "Intermédiaire",
+          "duration": "15 min",
+          "materiel": "1 attaquant, 3 défenseurs arrière",
+          "objectif": "Améliorer la défense des balles courtes",
+          "steps": [
+            "L'attaquant ne fait QUE des feintes et amorties",
+            "Les défenseurs doivent tous avancer (3–4m)",
+            "Objectif : récupérer 8 balles sur 10",
+            "Puis alterner : 5 feintes, 5 smashes pour travailler l'adaptation"
+          ]
+        },
+        {
+          "title": "Transitions rapides",
+          "level": "Avancé",
+          "duration": "20 min",
+          "materiel": "Équipe complète",
+          "objectif": "Maîtriser les changements attaque-défense",
+          "steps": [
+            "Jeu normal mais le coach chronomètre les transitions",
+            "Objectif : être en position défensive en moins de 3 secondes",
+            "Si trop lent, l'équipe fait 5 pompes et recommence",
+            "Augmente progressivement le rythme des échanges"
+          ]
+        },
+        {
+          "title": "Lire l'attaquant",
+          "level": "Avancé",
+          "duration": "15 min",
+          "materiel": "1 attaquant, défenseurs",
+          "objectif": "Anticiper selon le langage corporel",
+          "steps": [
+            "L'attaquant alterne smash, feinte, pointe sans prévenir",
+            "Avant qu'il frappe, le défenseur crie sa prédiction : \"Smash !\" ou \"Feinte !\"",
+            "Point si la prédiction est correcte ET la balle défendue",
+            "Focus sur : épaule, élan, position par rapport au filet"
+          ]
+        }
+      ]
+    },
+    "commandments": {
+      "title": "12. Les 10 commandements du défenseur",
+      "items": [
+        ["Regarde le passeur", "Puis l'attaquant, pas la balle"],
+        ["Même côté = Avance", "Côté opposé = Recule"],
+        ["Mauvaise passe adverse", "→ Avance de 1–2m (feinte probable)"],
+        ["Jamais au milieu", "Choisis : avancé OU reculé"],
+        ["Communique TOUJOURS", "\"Moi !\" sur chaque balle que tu prends"],
+        ["Bouge après le service", "Position de service ≠ Position défensive"],
+        ["Lis l'épaule", "Épaule haute = smash, basse = feinte"],
+        ["Position basse", "Jambes fléchies, bras prêts"],
+        ["Transitions rapides", "3 secondes max pour te replacer"],
+        ["Défends ta zone", "Chaque joueur a sa responsabilité"]
+      ],
+      "sameSide": {
+        "title": "Même côté que l'attaquant",
+        "action": "→ AVANCER (3–4m)",
+        "desc": "Défendre feintes et amorties"
+      },
+      "oppositeSide": {
+        "title": "Côté opposé à l'attaquant",
+        "action": "→ RECULER (6–7m)",
+        "desc": "Défendre diagonales longues"
+      }
+    },
+    "conclusion": {
+      "label": "Conclusion",
+      "body1": "Le positionnement défensif s'apprend avec la pratique et l'expérience. Ne te décourage pas si tu fais des erreurs au début — même les professionnels ajustent constamment leur placement.",
+      "body2": "La clé : applique la règle de base (même côté = avance, opposé = recule), observe l'attaquant, communique avec tes coéquipiers, et n'aie jamais peur de plonger pour une balle.",
+      "mantra": "La défense gagne les matchs."
+    }
   }
 }

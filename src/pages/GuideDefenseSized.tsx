@@ -1,31 +1,11 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import GuidePositionnement from '../guides/GuidePositionnement';
-import GuidePositionnementEn from '../guides/GuidePositionnementEn';
-import GuidePositionnementPl from '../guides/GuidePositionnementPl';
-import GuidePositionnementIt from '../guides/GuidePositionnementIt';
-import GuidePositionnementEs from '../guides/GuidePositionnementEs';
-import GuidePositionnementPt from '../guides/GuidePositionnementPt';
-import GuidePositionnementJa from '../guides/GuidePositionnementJa';
-import GuidePositionnementTr from '../guides/GuidePositionnementTr';
 import { useConfigurations } from './Positions';
 import { Head } from '../seo/Head';
 import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
-import type { Lang } from '../i18n';
-
-type PositionnementProps = { teamSize: 4 | 5 | 6; configId: string };
-const POSITIONNEMENT_BY_LANG: Record<Lang, React.ComponentType<PositionnementProps>> = {
-  fr: GuidePositionnement,
-  en: GuidePositionnementEn,
-  pl: GuidePositionnementPl,
-  it: GuidePositionnementIt,
-  es: GuidePositionnementEs,
-  pt: GuidePositionnementPt,
-  ja: GuidePositionnementJa,
-  tr: GuidePositionnementTr,
-};
 
 const SLUG_TO_SIZE = { '4v4': 4, '5v5': 5, '6v6': 6 } as const;
 
@@ -138,10 +118,7 @@ export default function GuideDefenseSized() {
         <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
       </div>
 
-      {(() => {
-        const Comp = POSITIONNEMENT_BY_LANG[lang] ?? POSITIONNEMENT_BY_LANG.en;
-        return <Comp teamSize={teamSize} configId={configId} />;
-      })()}
+      <GuidePositionnement teamSize={teamSize} configId={configId} />
     </div>
   );
 }
