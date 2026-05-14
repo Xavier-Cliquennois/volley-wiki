@@ -1,0 +1,1993 @@
+{
+  "4v4-attack-losange": {
+    "title": "4v4 · Attacco a rombo",
+    "shortDescription": "Rombo canonico: alzatore in P3 + 2 ali sulla linea dei 3 m + dietro. Ricezione → attacco in zona 4.",
+    "contextLabel": "4v4 · Rombo (1-2-1) · Scolastico / ricreativo",
+    "players": {
+      "P": "Alzatore (P3)",
+      "R4": "Ala sinistra (P4)",
+      "A2": "Ala destra (P2)",
+      "A": "Dietro (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_B": "Muro avversario",
+      "OPP_OFF": "Muro-difesa avversario",
+      "OPP_D1": "Difensore diagonale avversario",
+      "OPP_D2": "Dietro avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione a rombo",
+        "description": "Disposizione canonica: alzatore AL CENTRO della rete (P3) + 2 ali sulla linea dei 3 m + dietro profondo."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione di fondo",
+        "description": "L'unico difensore dietro si fa avanti e fa il bagher. Traiettoria alta verso l'alzatore a rete."
+      },
+      "s3": {
+        "title": "3. Alzata + rincorsa + copertura",
+        "description": "R4 incatena la rincorsa verso la zona 4. Alzatore, A2 e A si stringono in un triangolo per la copertura. Il muro avversario si sposta verso l'attaccante."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale + muro singolo",
+        "description": "Schiacciata potente. Contro un muro singolo l'angolo è ampio: l'attaccante può puntare la diagonale lunga o il lungolinea corto."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla diagonale lunga — arriva un attimo troppo tardi, la palla ha già toccato terra."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno al rombo",
+        "description": "Tutti riprendono la loro posizione nel rombo per lo scambio successivo. L'alzatore torna al centro della rete."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rombo canonico = la formazione più comune nel 4v4.",
+        "Variante \"alzatore centrale\": alzatore in P3, distribuisce a sinistra o a destra.",
+        "Muro avversario singolo standard nel 4v4: angolo d'attacco ampio.",
+        "Copertura limitata: 3 giocatori attorno all'attaccante."
+      ],
+      "commonMistakes": [
+        "Alzatore che riceve anche → impossibile alzare dietro.",
+        "Ali troppo profonde → alzata difficile per l'alzatore centrale.",
+        "Dietro troppo profondo → nessuna copertura dei ritorni corti dal muro."
+      ]
+    }
+  },
+  "4v4-attack-penetrant": {
+    "title": "4v4 · Alzatore penetrante",
+    "shortDescription": "Sistema 3-1 semplificato: unico alzatore in P1 che penetra in zona 2, liberando 3 attaccanti di prima linea.",
+    "contextLabel": "4v4 · Alzatore di seconda linea · 3 attaccanti",
+    "players": {
+      "R4": "Ala sinistra (P4)",
+      "C": "Centrale (P3)",
+      "A2": "Ala destra (P2)",
+      "P": "Alzatore (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_B": "Muro avversario",
+      "OPP_OFF": "Muro-difesa avversario",
+      "OPP_D1": "Difensore diagonale avversario",
+      "OPP_D2": "Dietro avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione 3-1",
+        "description": "Unico alzatore in P1 (seconda linea). 3 attaccanti davanti in P2, P3, P4. Niente libero: il ricevitore incatena la rincorsa."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione + penetrazione",
+        "description": "L'ala sinistra fa il bagher della ricezione. L'alzatore lancia simultaneamente la sua penetrazione da P1 verso la zona 2."
+      },
+      "s3": {
+        "title": "3. Alzata + rincorsa di R4",
+        "description": "Alzata alta verso l'ala sinistra dopo la corsa di ricezione di R4. Il muro avversario si sposta verso di lui."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale + muro singolo",
+        "description": "Schiacciata potente in diagonale lunga. Con solo 3 in copertura, formano un triangolo corto attorno all'attaccante."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla diagonale lunga — arriva 0,1 s troppo tardi all'impatto."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "L'alzatore torna in P1 di seconda linea, R4 torna in zona 4. La penetrazione deve essere anticipata dal servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 3-1 = l'equivalente 4v4 del 5-1. 1 alzatore penetrante dedicato.",
+        "Vantaggio: 3 attaccanti davanti in ogni momento, come nel 6v6.",
+        "Svantaggio: richiede una ricezione molto pulita perché l'alzatore non è a rete.",
+        "Niente libero: il ricevitore incatena anche la sua rincorsa d'attacco."
+      ],
+      "commonMistakes": [
+        "Penetrazione troppo tardiva → un altro giocatore deve fare l'alzata.",
+        "Ricezione troppo corta → alzatore arriva troppo lontano dalla rete.",
+        "Copertura dimenticata — block-out avversario = punto."
+      ]
+    }
+  },
+  "4v4-attack-square": {
+    "title": "4v4 · Attacco a quadrato",
+    "shortDescription": "Formazione a quadrato (2 davanti / 2 dietro): 2 muristi + 2 difensori bilanciati.",
+    "contextLabel": "4v4 · Quadrato · Muro a 2 possibile",
+    "players": {
+      "P": "Alzatore-attaccante (P2)",
+      "R4": "Attaccante (P4)",
+      "A1": "Dietro sinistra (P5)",
+      "A2": "Dietro destra (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario",
+      "OPP_D2": "Dietro avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione a quadrato",
+        "description": "2 giocatori a rete (P2 e P4), 2 giocatori dietro. Copertura bilanciata del campo davanti e dietro."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione alta",
+        "description": "Il dietro sinistro fa un bagher alto verso l'alzatore-attaccante in zona 2."
+      },
+      "s3": {
+        "title": "3. Alzata sull'ala + rincorsa",
+        "description": "L'alzatore distribuisce verso l'attaccante in zona 4. Nessuna opzione centrale (niente centrale specializzato). Il muro a 2 si sposta verso l'attaccante."
+      },
+      "s4": {
+        "title": "4. Schiacciata contro muro a 2",
+        "description": "L'attaccante deve scegliere: lungolinea corto, diagonale lunga o pallonetto nella zona aperta. Muro a 2 (vs muro singolo del rombo) — difesa resa più difficile offensivamente."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla diagonale lunga. Con solo 2 giocatori a terra, la zona è vulnerabile."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutti riprendono il quadrato per lo scambio successivo. Questa formazione si adatta a squadre con 2 muristi forti e 2 difensori forti."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formazione a quadrato: bilancio tra attacco/difesa, 2 zone davanti + 2 zone dietro.",
+        "Permette un muro a 2 (vs muro singolo del rombo) — migliore difesa a rete.",
+        "Ma solo 2 giocatori a terra → vulnerabile alle diagonali lunghe.",
+        "Buono per squadre con 2 muristi forti e 2 difensori forti."
+      ],
+      "commonMistakes": [
+        "Giocatori a rete troppo lontani dal centro → muro avversario facile.",
+        "Dietro fermi profondi → niente copertura corta.",
+        "Confusione su chi alza: l'alzatore-attaccante deve essere sempre davanti."
+      ]
+    }
+  },
+  "5v5-attack-pentagon": {
+    "title": "5v5 · Attacco a pentagono",
+    "shortDescription": "Formato 5v5: 1 unico alzatore + 1 centrale + 2 ali + 1 dietro. Attacco in zona 4.",
+    "contextLabel": "5v5 · Sistema 4-1 · Formato ibrido",
+    "players": {
+      "R4": "Ala sinistra",
+      "C": "Centrale",
+      "P": "Alzatore (P2)",
+      "A1": "Dietro sinistra (P5)",
+      "A2": "Dietro destra (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentagono offensivo",
+        "description": "5 giocatori in pentagono: 3 davanti (R4, C, P) + 2 dietro. Copertura regolare del campo. Niente libero, tutti i giocatori dietro ricevono."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione del dietro",
+        "description": "Il dietro sinistro prende la prima palla. Senza libero, è il dietro più affidabile in ricezione a prenderla."
+      },
+      "s3": {
+        "title": "3. Alzata + rincorsa",
+        "description": "L'alzatore, già a rete, distribuisce facilmente verso la zona 4. Niente penetrazione nel 5v5 — è in P2. R4 inizia la sua rincorsa."
+      },
+      "s4": {
+        "title": "4. Attacco di banda + muro a 2",
+        "description": "L'ala sinistra conclude in diagonale lunga. Anche il muro avversario si dispone a pentagono: 2 muristi sulla banda."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla diagonale. La difesa a terra è più rara con un solo dietro per corsia."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutti riprendono il pentagono. Senza libero, ruotare i giocatori dietro è essenziale per distribuire il carico di ricezione."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5v5 = formato ibrido (allenamento, giocatori mancanti). Niente regole FIPAV ufficiali.",
+        "Pentagono: 1 giocatore per zona chiave, copertura regolare di tutto il campo.",
+        "Sistema 4-1 = equivalente del 5-1 ma con un attaccante in meno.",
+        "Raccomandazione: mantenere il sistema 5-1 del 6v6 togliendo un dietro non alzatore."
+      ],
+      "commonMistakes": [
+        "Niente libero nel 5v5 → tutti i giocatori dietro devono saper ricevere.",
+        "Tentare un muro a 3 → restano solo 2 difensori a terra.",
+        "Dimenticare la copertura dell'attacco → un giocatore in meno in copertura."
+      ]
+    }
+  },
+  "6v6-attack-4-2": {
+    "title": "Attacco · Sistema 4-2",
+    "shortDescription": "Sistema 4-2 per principianti: alzatore fisso davanti in zona 2, 2 attaccanti disponibili.",
+    "contextLabel": "4-2 · 2 alzatori in opposizione · U13/U15",
+    "players": {
+      "R4a": "Schiacciatore (P4)",
+      "C": "Centrale (P3)",
+      "P1": "Alzatore 1 (P2)",
+      "P2": "Alzatore 2 (P5)",
+      "C2": "Centrale 2 (P6)",
+      "R4b": "Schiacciatore (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione 4-2",
+        "description": "2 alzatori in opposizione diagonale (P2 e P5). L'alzatore di prima linea (P1) prende sempre il 2° tocco. Ricezione a W con C2 al centro."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione centrale",
+        "description": "Il centrale dietro prende il primo tocco in una classica ricezione a W. Traiettoria alta verso l'alzatore davanti in P2."
+      },
+      "s3": {
+        "title": "3. Alzata diretta + rincorsa",
+        "description": "L'alzatore davanti deve solo distribuire: niente penetrazione, niente switch. Invia un'alzata alta allo schiacciatore in zona 4. Muro a 2 sulla banda."
+      },
+      "s4": {
+        "title": "4. Attacco di banda + muro a 2",
+        "description": "Lo schiacciatore attacca in zona 4. Nessuna opzione centrale dato che il centrale ha ricevuto. Schiacciata sulla diagonale lunga contro un muro a 2."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa in diagonale per cercare di recuperare la palla."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutti riprendono la loro posizione. Il 4-2 resta il sistema più semplice: nessuno switch richiesto."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4-2: 2 alzatori + 2 centrali + 2 schiacciatori. Sempre 2 attaccanti davanti.",
+        "L'alzatore davanti (in P2 o P3 a seconda della variante) prende sistematicamente il 2° tocco.",
+        "Niente penetrazione, niente switch: il sistema più facile da imparare.",
+        "Ideale per U13/U15 o adulti principianti. Favorisce l'apprendimento delle rotazioni."
+      ],
+      "commonMistakes": [
+        "Alzatore davanti che riceve anche → impossibile prendere il 2° tocco.",
+        "Alzatore dietro che vuole alzare → regola dell'alzatore davanti non rispettata.",
+        "Centrale che non si impegna → muro a 2 facile."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p1": {
+    "title": "Attacco · 5-1 rotazione P1",
+    "shortDescription": "Ricezione a 3 → alzatore penetra da P1 → attacco in zona 4 dello schiacciatore.",
+    "contextLabel": "5-1 · Rotazione P1 · Servizio avversario",
+    "players": {
+      "L": "Libero (P5)",
+      "R4a": "Schiacciatore (P4)",
+      "R4b": "Schiacciatore (P6)",
+      "C": "Centrale (P3)",
+      "Op": "Opposto (P2)",
+      "P": "Alzatore (P1)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_C": "Centrale avversario",
+      "OPP_S": "Alzatore avversario",
+      "OPP_BC": "Libero avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione di ricezione",
+        "description": "La nostra squadra è in formazione a 3 ricevitori: libero (P5), schiacciatore in P6 e schiacciatore in P4 arretrato sulla linea dei 3 m. Centrale e opposto sono fuori a rete. L'alzatore attende in P1 per penetrare non appena il servizio è colpito."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione",
+        "description": "Servizio teso avversario verso lo schiacciatore in P6 che fa il bagher. In parallelo, l'alzatore innesca la penetrazione da P1 verso la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Alzata alta + rincorsa",
+        "description": "La palla sale verso l'alzatore arrivato a rete. Consegna un'alzata tesa in zona 4 dove lo schiacciatore ha già iniziato la sua rincorsa. La copertura si forma attorno a lui."
+      },
+      "s4": {
+        "title": "4. Schiacciata + muro a 2",
+        "description": "Lo schiacciatore decolla e colpisce in diagonale lunga verso la zona 6 avversaria. I due muristi avversari saltano in parallelo per chiudere diagonale e lungolinea."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il libero avversario si tuffa verso la zona 6 per tentare un bagher disperato. L'alzatore avversario si sposta verso la zona 2 per rilanciare se la difesa tocca la palla."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutta la squadra riprende la sua posizione di ricezione per il servizio successivo. Questo posizionamento determina la qualità dell'attacco successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Ricezione a 3: libero + 2 schiacciatori occupano tutta la larghezza del campo.",
+        "L'alzatore penetra da P1 verso la zona 2-3 non appena il servizio è colpito.",
+        "Lo schiacciatore ricevitore scivola sulla linea dei 3 m durante la ricezione per preparare la rincorsa.",
+        "Copertura a 5 giocatori (3 vicini + 2 lontani) in posizione bassa attorno all'attaccante."
+      ],
+      "commonMistakes": [
+        "Alzatore che penetra troppo tardi → alzata in salto forzata da un altro giocatore.",
+        "Schiacciatore attaccante che innesca la rincorsa troppo presto → arriva sotto la palla invece di impegnarsi.",
+        "Copertura dimenticata → muro avversario riuscito = punto perso direttamente."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p2": {
+    "title": "Attacco · 5-1 rotazione P2",
+    "shortDescription": "Alzatore già a rete in P2: 2 attaccanti davanti + opposto attacca in 4 eccezionalmente.",
+    "contextLabel": "5-1 · Rotazione P2 · Alzatore davanti",
+    "players": {
+      "R4a": "Schiacciatore (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Schiacciatore (P1)",
+      "C": "Centrale (P3)",
+      "Pt": "Opposto (P4)",
+      "P": "Alzatore (P2)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Servizio avversario",
+        "description": "Servizio verso la zona 5-6. Il libero chiama e si prepara al bagher. L'alzatore attende già a rete in P2."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione del libero",
+        "description": "Servizio teso in zona 6. Il libero entra e fa il bagher con precisione verso il bersaglio dell'alzatore (zona 2)."
+      },
+      "s3": {
+        "title": "3. Alzata all'opposto + rincorsa",
+        "description": "L'alzatore, già in P2, distribuisce eccezionalmente verso la zona 4 dove l'opposto inizia la sua rincorsa. Il muro avversario si raggruppa al centro."
+      },
+      "s4": {
+        "title": "4. Schiacciata + muro a 2",
+        "description": "L'opposto decolla a sinistra e colpisce in diagonale lunga. Una configurazione rara ma inevitabile in P2 — l'alzatore resta sul posto."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla diagonale lunga per tentare un bagher di recupero disperato."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutti riprendono la posizione di ricezione. La rotazione P2 resta la più limitata offensivamente: solo 2 attaccanti davanti."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotazione P2 = la più limitata offensivamente (solo 2 attaccanti davanti).",
+        "Alzatore già sul posto: zero penetrazione, distribuzione facile.",
+        "L'opposto attacca eccezionalmente a sinistra (zona 4) per liberare l'alzatore.",
+        "Privilegiare le bande e gli attacchi da seconda linea degli schiacciatori come opzioni."
+      ],
+      "commonMistakes": [
+        "Alzatore che tenta un'alzata in salto in 2 quando è già lì → 2° tocco difficile.",
+        "Opposto che esita tra 2 e 4 → muro avversario sul posto.",
+        "Centrali che non si impegnano → muro a 2 facile per l'avversario."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p3": {
+    "title": "Attacco · 5-1 rotazione P3 (pipe)",
+    "shortDescription": "Alzatore in P3 si sposta verso 2-3 → pipe dello schiacciatore di seconda linea in zona 6.",
+    "contextLabel": "5-1 · Rotazione P3 · Attacco da seconda linea",
+    "players": {
+      "L": "Libero (P5)",
+      "Pt": "Opposto (P6)",
+      "R4b": "Schiacciatore (P1)",
+      "R4a": "Schiacciatore (P4)",
+      "P": "Alzatore (P3)",
+      "C": "Centrale (P2)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione di ricezione",
+        "description": "Servizio atteso sul lato destro. Lo schiacciatore in P1 prende la ricezione. L'alzatore in P3 è pronto a spostarsi verso 2-3 non appena il servizio è colpito."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione",
+        "description": "Servizio teso in zona 1. Lo schiacciatore in P1 fa il bagher verso il bersaglio. L'alzatore inizia lo spostamento verso 2-3."
+      },
+      "s3": {
+        "title": "3. Alzata pipe + rincorsa",
+        "description": "L'alzatore invia un'alzata tesa in zona 6: traiettoria veloce a 2 m dalla rete. L'opposto lancia la sua rincorsa dietro la linea dei 3 m per il pipe."
+      },
+      "s4": {
+        "title": "4. Pipe + muro a 2",
+        "description": "Colpo potente al centro dalla seconda linea. Il muro a 2 di banda non può schermare al centro — un'opzione chiave del 5-1 moderno."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore centrale avversario si tuffa al centro per cercare di prendere il pipe — la palla arriva veloce, poco tempo per reagire."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutta la squadra riprende la posizione di ricezione. Il centrale deve restare pronto a fare lo switch al centro della rete per la sequenza successiva."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Il pipe è la 4ª opzione offensiva in aggiunta ai 3 attacchi a rete.",
+        "Il centrale fa switch al centro della rete mentre l'alzatore scivola verso 2-3.",
+        "Traiettoria del pipe: tesa, 2 m dalla rete, decollo dietro la linea dei 3 m.",
+        "Molto efficace contro un muro che si concentra sulle bande."
+      ],
+      "commonMistakes": [
+        "Pipe troppo alto → il muro avversario ha tempo di recuperare al centro.",
+        "Schiacciatore di seconda linea che decolla nella zona d'attacco → fallo di attacco da seconda linea.",
+        "Centrale che fa switch troppo tardi → zona 3 murata."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p4": {
+    "title": "Attacco · 5-1 rotazione P4",
+    "shortDescription": "Alzatore di prima linea in P4 fa switch a destra; OH* attacca in 4, centrale in 3, opposto da seconda linea in 1.",
+    "contextLabel": "5-1 · Rotazione P4 · Alzatore di prima linea",
+    "players": {
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "Pt": "Opposto (P1)",
+      "P": "Alzatore (P4)",
+      "C": "Centrale (P3)",
+      "R4a": "Schiacciatore (P2)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione P4 + sfalsamento",
+        "description": "Alzatore in zona 4, OH* in zona 2 — disposizione incrociata. Alzatore e centrale si spostano a sinistra per liberare la zona di ricezione al libero."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione del libero",
+        "description": "Il servizio prende di mira la zona 6. Il libero entra e fa il bagher verso il bersaglio classico (tra P2 e P3)."
+      },
+      "s3": {
+        "title": "3. Switch alzatore↔OH* + alzata alta",
+        "description": "Incrocio essenziale: l'alzatore lascia P4 verso 2-3, l'OH* lascia P2 verso 4 per attaccare. Alzata tesa sull'ala sinistra."
+      },
+      "s4": {
+        "title": "4. Attacco di banda + muro a 2",
+        "description": "Schiacciata in diagonale lunga. Con un alzatore di prima linea (piccolo a muro), l'attacco deve concludere rapidamente. Muro a 2 spostato sull'ala."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa sulla traiettoria lunga per tentare un bagher disperato."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutti riprendono la loro posizione iniziale. Lo sfalsamento a sinistra di alzatore/centrale viene mantenuto per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotazione P4 = alzatore di prima linea. Switch alzatore↔OH* obbligatorio.",
+        "2 attaccanti davanti: OH* in 4, centrale in 3. Pipe o opposto da seconda linea come opzioni.",
+        "L'alzatore e il centrale si spostano a sinistra al servizio per liberare la zona 6.",
+        "L'opposto (in P1) non riceve e resta pronto per un attacco da seconda linea."
+      ],
+      "commonMistakes": [
+        "Switch dimenticato → l'OH* resta a destra, attaccante in cattiva posizione.",
+        "Alzatore e centrale troppo a destra al servizio → conflitto di ricezione in zona 6.",
+        "Muro avversario non impegnato dal centrale → muro a 2 facile sull'ala sinistra."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p5": {
+    "title": "Attacco · 5-1 rotazione P5",
+    "shortDescription": "Penetrazione lunga da P5. Switch C/OH. Alzata all'opposto in zona 2.",
+    "contextLabel": "5-1 · Rotazione P5 · Penetrazione lunga",
+    "players": {
+      "P": "Alzatore (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Schiacciatore (P1)",
+      "C": "Centrale (P4)",
+      "R4a": "Schiacciatore (P3)",
+      "Pt": "Opposto (P2)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione di ricezione",
+        "description": "Alzatore dietro-sinistra in P5, il più lontano possibile dalla rete. C in P4 e OH in P3 faranno switch non appena il servizio è colpito."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione + switch C↔OH",
+        "description": "Il servizio prende di mira la zona 1 dove lo schiacciatore riceve. Simultaneamente, il centrale scivola al centro e lo schiacciatore attaccante prende la zona 4."
+      },
+      "s3": {
+        "title": "3. Penetrazione lunga + alzata in zona 2",
+        "description": "L'alzatore attraversa tutto il campo da P5 — la penetrazione più lunga. Distribuisce corto all'opposto in zona 2. Il muro avversario si sposta a destra per chiudere."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale + muro a 2",
+        "description": "L'opposto decolla in zona 2 e colpisce in diagonale lunga. Una combinazione classica in questa rotazione. Il muro a 2 è sul posto a destra."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale avversario si tuffa in zona 5 per cercare di prendere la palla lunga."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutta la squadra riprende la posizione di ricezione. Il centrale torna in P4, l'OH in P3, l'alzatore in P5."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P5 = la penetrazione più lunga. Richiede una ricezione perfetta.",
+        "Il centrale e l'OH fanno switch non appena il servizio è colpito per piazzare C in zona 3.",
+        "L'opposto in zona 2 è il bersaglio più accessibile per l'alzatore.",
+        "Pipe possibile come opzione se l'alzata è tesa e veloce."
+      ],
+      "commonMistakes": [
+        "Ricezione troppo tesa durante una penetrazione in corso → alzatore sotto la palla.",
+        "Switch C↔OH tardivo → centrale in zona 4 = inutile a muro.",
+        "Ricezione corta → alzatore arriva troppo lontano dalla rete."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p6": {
+    "title": "Attacco · 5-1 rotazione P6 (primo tempo)",
+    "shortDescription": "Penetrazione media da P6 → attacco centrale rapido del centrale.",
+    "contextLabel": "5-1 · Rotazione P6 · Combinazione rapida",
+    "players": {
+      "L": "Libero (P5)",
+      "P": "Alzatore (P6)",
+      "R4b": "Schiacciatore (P1)",
+      "R4a": "Schiacciatore (P4)",
+      "Pt": "Opposto (P3)",
+      "C": "Centrale (P2)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore centrale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione di ricezione",
+        "description": "Servizio atteso sul lato sinistro. Il libero prende la sua corsia. L'opposto in P3 farà switch in P2, il centrale in P2 si sposterà al centro della rete."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione + switch Opp↔C",
+        "description": "Servizio teso in zona 5. Il libero riceve. L'opposto scivola in zona 2 e il centrale prende il centro della rete per preparare il primo tempo."
+      },
+      "s3": {
+        "title": "3. Penetrazione media",
+        "description": "L'alzatore attraversa da P6 alla zona 2-3 (percorso medio, più corto di P5). Il centrale inizia a caricarsi per il primo tempo."
+      },
+      "s4": {
+        "title": "4. Pre-salto + alzata tesa veloce",
+        "description": "Il centrale decolla GIÀ prima dell'alzata — è il primo tempo. L'alzatore invia una palla veloce a 1 m, proprio davanti a lui. Il centrale è già in aria."
+      },
+      "s5": {
+        "title": "5. Colpo centrale + muro in ritardo",
+        "description": "Colpo centrale veloce che sorprende il muro avversario prima che sia sul posto. I muristi avversari saltano appena dopo — troppo tardi."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Il centrale torna al centro, tutti riprendono la formazione di ricezione. Il primo tempo è la combinazione caratteristica di questa rotazione."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P6 = penetrazione media. Ideale per combinazioni rapide.",
+        "Primo tempo: centrale già in aria quando l'alzatore tocca la palla.",
+        "Il centrale impegna il muro centrale avversario: libera le bande per gli schiacciatori.",
+        "Switch Opp↔C sistematico per riportare il centrale al centro."
+      ],
+      "commonMistakes": [
+        "Centrale che decolla troppo tardi → la palla passa sopra la sua mano.",
+        "Alzata troppo alta per il primo tempo → muro avversario sul posto.",
+        "Opposto che non fa switch → centrale bloccato in zona 2."
+      ]
+    }
+  },
+  "6v6-attack-6-2": {
+    "title": "Attacco · Sistema 6-2",
+    "shortDescription": "Sistema 6-2: alzatore di seconda linea penetra, 3 attaccanti davanti in ogni momento.",
+    "contextLabel": "6-2 · Alzatore penetrante · Intermedio",
+    "players": {
+      "R4a": "Schiacciatore (P4)",
+      "C": "Centrale (P3)",
+      "PA": "Alzatore-attaccante (P2)",
+      "P": "Alzatore (P1)",
+      "C2": "Centrale (P6)",
+      "R4b": "Schiacciatore (P5)",
+      "OPP_SRV": "Battitore avversario",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario",
+      "OPP_D1": "Difensore diagonale avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione 6-2",
+        "description": "2 alzatori polivalenti: quello davanti attacca (alzatore-attaccante), quello dietro distribuisce (e penetra). 3 attaccanti davanti in ogni momento."
+      },
+      "s2": {
+        "title": "2. Servizio + ricezione del centrale dietro",
+        "description": "Ricezione centrale classica di C2. L'alzatore innesca la sua penetrazione da P1 verso la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Alzata in zona 2 + rincorsa",
+        "description": "Distribuzione verso l'alzatore-attaccante in zona 2. Massima varietà: 3 minacce offensive davanti. Muro a 2 spostato a destra."
+      },
+      "s4": {
+        "title": "4. Attacco in diagonale + muro a 2",
+        "description": "L'alzatore-attaccante colpisce in diagonale lunga. Il 6-2 garantisce sempre 3 minacce offensive — il muro avversario non può anticipare."
+      },
+      "s5": {
+        "title": "5. Difesa avversaria",
+        "description": "Il difensore diagonale si tuffa sulla traiettoria lunga sul lato sinistro avversario — un tentativo di recupero disperato."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla formazione",
+        "description": "Tutta la squadra riprende la sua posizione. L'alzatore-attaccante resta davanti, l'alzatore torna in P1."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "6-2: 2 alzatori polivalenti in opposizione diagonale.",
+        "Sempre 3 attaccanti davanti (l'alzatore davanti attacca, l'alzatore dietro distribuisce).",
+        "Penetrazione sistematica, come nel 5-1, ma con 2 distributori alternati.",
+        "Eccellente per sviluppare la polivalenza prima di passare a un 5-1."
+      ],
+      "commonMistakes": [
+        "Differenza di stile tra i 2 alzatori → distribuzione incoerente.",
+        "Alzatore davanti che non si presenta all'attacco → solo 2 opzioni.",
+        "Penetrazione troppo tardiva → un altro giocatore deve fare l'alzata."
+      ]
+    }
+  },
+  "4v4-defense-block-1": {
+    "title": "4v4 · Difesa sistema A (1 murista + 3 difensori)",
+    "shortDescription": "Sistema A nel 4v4 (formazione a rombo): 1 murista solitario + pallonetto + diagonale + lungolinea. La configurazione più comune.",
+    "contextLabel": "4v4 · Sistema A · 1 murista + 3 difensori",
+    "players": {
+      "C": "Centrale (P3)",
+      "R4": "Ala sinistra (P4)",
+      "A2": "Ala destra (P2)",
+      "A": "Dietro (P1)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rombo di base + lettura",
+        "description": "Con 4 giocatori ogni difensore è cruciale. Il nostro centrale si prepara a murare da solo. Lettura obbligatoria dell'alzata avversaria."
+      },
+      "s2": {
+        "title": "2. Alzata alta in Z2 avversaria",
+        "description": "Distribuzione sulla loro ala destra. L'attacco arriva sul nostro angolo davanti-SINISTRO. Il centrale deve spostarsi sul lato sinistro."
+      },
+      "s3": {
+        "title": "3. Muro centrale solitario + segnale linea/diagonale",
+        "description": "Il centrale scivola a sinistra e mura da solo. Segnale obbligatorio (lungolinea o diagonale) per orientare i 3 difensori. Senza segnale, non sanno cosa coprire."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale lunga + muro",
+        "description": "L'attaccante colpisce in diagonale lunga. Il muro solitario chiude la linea, segnale annunciato in precedenza."
+      },
+      "s5": {
+        "title": "5. Recupero dell'unico difensore dietro",
+        "description": "Il dietro P1 difende sul suo asse — la sua lettura deve essere perfetta, nessun altro dietro a compensare. Bagher alto verso il bersaglio."
+      },
+      "s6": {
+        "title": "6. RESET — formazione a rombo",
+        "description": "Ritorno alla formazione a rombo. La copertura si adatterà alla prossima zona d'attacco dalla lettura successiva."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema A (1 murista + 3 difensori): la configurazione più comune nel 4v4 indoor.",
+        "Segnale lungolinea/diagonale del murista obbligatorio — senza, i 3 difensori non sanno cosa coprire.",
+        "Distanze chiave: murista 0,3 m dalla rete; difensori profondi 7-7,5 m; pallonetto/dietro-muro 3,5-4 m.",
+        "Ogni difensore copre ~30-40 m² (vs 20 m² nel 6v6) → anticipazione = abilità n°1.",
+        "Muro a 2 (sistema B) riservato a grandi attaccanti: lascia solo 2 difensori profondi."
+      ],
+      "commonMistakes": [
+        "Murista isolato senza copertura pallonetto: i 3 difensori vanno tutti profondi, lasciando vuota la zona 3-5 m.",
+        "2 difensori in linea retta: fianco a fianco alla stessa profondità → il cut shot atterra tra loro.",
+        "Niente segnale tra murista e difensori (lungolinea vs diagonale).",
+        "Difensore pallonetto troppo lontano dalla rete: arretra con gli altri e non può più coprire i pallonetti corti.",
+        "Alzatore che corre verso il suo bersaglio prima che la palla sia difesa → buco difensivo."
+      ]
+    }
+  },
+  "4v4-defense-vs-z2": {
+    "title": "4v4 · Difesa Z2",
+    "shortDescription": "Specchio del sistema A: 1 murista + 3 difensori contro attacco avversario in Z2 (loro destra → arriva sulla nostra sinistra).",
+    "contextLabel": "4v4 · Sistema A · 1 murista + 3 difensori",
+    "players": {
+      "C": "Centrale (P3)",
+      "R4": "Ala sinistra (P4)",
+      "A2": "Ala destra (P2)",
+      "A": "Dietro (P1)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura dell'attacco avversario in Z2",
+        "description": "Attacco avversario dalla loro zona 2 (loro destra) → arriva sul nostro angolo davanti-SINISTRO. Il centrale dovrà spostarsi sul lato sinistro per murare."
+      },
+      "s2": {
+        "title": "2. Alzata alta in Z2 avversaria",
+        "description": "Distribuzione sulla loro ala destra. La difesa innesca il suo adeguamento specchio."
+      },
+      "s3": {
+        "title": "3. Muro centrale solitario sul lato sinistro",
+        "description": "Il centrale scivola sul lato sinistro e mura da solo. Segnale lungolinea/diagonale obbligatorio. R4 (ala sinistra) resta come muro-difesa a 2,5 m, A2 (ala destra) difende la diagonale lunga."
+      },
+      "s4": {
+        "title": "4. Schiacciata diagonale + muro solitario",
+        "description": "L'attaccante colpisce in diagonale lunga. Il muro solitario copre la linea segnalata."
+      },
+      "s5": {
+        "title": "5. Recupero dell'unico difensore dietro",
+        "description": "Il dietro P1 (leggermente spostato lato palla) difende con un bagher. La sua lettura compensa l'assenza degli altri dietro."
+      },
+      "s6": {
+        "title": "6. RESET — formazione a rombo",
+        "description": "Ritorno alla formazione a rombo. Il centrale torna al centro, pronto a spostarsi di nuovo se l'avversario cambia lato."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Specchio perfetto della Z4 nel 4v4: sistema A (1 murista + 3 difensori).",
+        "P3 murista solitario sul lato sinistro, segnale lungolinea/diagonale obbligatorio.",
+        "P4 (ala sinistra) come muro-difesa a 3,5-4 m dalla rete — copertura corta e pallonetti.",
+        "P2 (ala destra) difende la diagonale corta (~7 m, lungolinea diretto).",
+        "L'unico dietro P1 difende la diagonale lunga."
+      ],
+      "commonMistakes": [
+        "Ala sinistra P4 che mura con il centrale → muro-difesa mancante sul lato sinistro.",
+        "Unico dietro troppo avanti → palla in diagonale profonda non coperta.",
+        "Murista senza segnale → i 3 difensori non sanno cosa coprire.",
+        "P2 troppo lontano dalla rete → non copre la diagonale corta."
+      ]
+    }
+  },
+  "4v4-defense-vs-z3": {
+    "title": "4v4 · Difesa Z3 (primo tempo centrale)",
+    "shortDescription": "Attacco centrale veloce avversario nel 4v4: muro a 1 in lettura + 3 difensori. La configurazione più difficile da difendere.",
+    "contextLabel": "4v4 · Muro a 1 (read) · Debolezza strutturale",
+    "players": {
+      "C": "Centrale (P3)",
+      "R4": "Ala sinistra (P4)",
+      "A2": "Ala destra (P2)",
+      "A": "Dietro (P1)",
+      "OPP_A": "Centrale avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura del primo tempo avversario",
+        "description": "Nel 4v4 il primo tempo centrale è l'attacco più pericoloso perché è disponibile solo 1 murista. L'unico dietro scansiona già l'asse profondo."
+      },
+      "s2": {
+        "title": "2. Alzata centrale veloce",
+        "description": "L'alzatore fa un'alzata tesa al centrale che ha già iniziato la rincorsa. Le nostre ali arretrano a metà campo per coprire le diagonali."
+      },
+      "s3": {
+        "title": "3. Muro a 1 (read) + schiacciata veloce",
+        "description": "Il centrale da solo salta in READ — nessun commit possibile con un centrale difensivo. Il centrale avversario colpisce dritto sull'asse."
+      },
+      "s4": {
+        "title": "4. Pivot difensivo: l'unico dietro",
+        "description": "Il dietro P1 difende la palla potente diretta sull'asse — gioca il ruolo di Z6 del 6v6. La sua lettura deve essere PERFETTA."
+      },
+      "s5": {
+        "title": "5. RESET — formazione a rombo",
+        "description": "Ritorno alla base 4v4. Il centrale torna a rete, il dietro riprende la sua posizione assiale."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "La documentazione 4v4 lo conferma: il primo tempo centrale è UNA VERA DEBOLEZZA del 4v4 (solo 1 murista).",
+        "Muro a 1 in READ: nessun commit possibile con un centrale difensivo.",
+        "Le 2 ali coprono le 2 diagonali corte a metà campo (~3,5-4 m dalla rete).",
+        "L'unico dietro è il pivot difensivo — gioca il ruolo di Z6 del 6v6 sull'asse centrale.",
+        "Anticipazione = abilità n°1: con ~40 m² da coprire, un errore di lettura è irrecuperabile."
+      ],
+      "commonMistakes": [
+        "Muro a 2 su un primo tempo → solo 2 difensori a terra, diagonali aperte.",
+        "Dietro che avanza troppo presto → palla profonda atterra dietro di lui.",
+        "Ali che restano a rete senza murare → buchi sulla linea dei 3 m dietro il muro.",
+        "Lettura del centrale avversario troppo tardiva → assorbiamo l'attacco senza muoverci."
+      ]
+    }
+  },
+  "5v5-defense-vs-z2": {
+    "title": "5v5 · Difesa Z2",
+    "shortDescription": "Specchio perfetto della Z4. Sistema 2-1-2 contro attacco avversario in Z2 (loro destra → arriva sulla nostra sinistra).",
+    "contextLabel": "5v5 · 2-1-2 · Muro a 2 + muro-difesa",
+    "players": {
+      "C": "Centrale (P3)",
+      "Op": "Opposto (P2)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "P": "Alzatore (P1)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura dell'attacco avversario in Z2",
+        "description": "Attacco avversario dalla loro zona 2 (loro destra) → arriva sul nostro angolo davanti-SINISTRO. Specchio perfetto della Z4."
+      },
+      "s2": {
+        "title": "2. Alzata alta in Z2 avversaria",
+        "description": "Distribuzione sulla loro ala destra. L'attacco arriva sul nostro angolo davanti-SINISTRO."
+      },
+      "s3": {
+        "title": "3. Muro a 2 specchio (schiacciatore + centrale)",
+        "description": "Schiacciatore murista lungolinea + centrale in diagonale sul lato sinistro. Opposto (P2) arretra come muro-difesa a destra. Libero difende il lungolinea nell'ombra del muro, alzatore difende la diagonale lunga."
+      },
+      "s4": {
+        "title": "4. Schiacciata + muro a 2",
+        "description": "L'ala destra avversaria colpisce in diagonale lunga. Schiacciatore + centrale saltano."
+      },
+      "s5": {
+        "title": "5. Difesa dell'alzatore — transizione complessa",
+        "description": "L'alzatore si trova sulla traiettoria diagonale lunga. Bagher difensivo — essendo lui il difensore primario, l'opposto deve prendere il 2° tocco."
+      },
+      "s6": {
+        "title": "6. RESET",
+        "description": "Ritorno alla base 5v5. Comunicazione obbligatoria tra alzatore e opposto per la sequenza successiva."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Specchio perfetto della Z4 nel 5v5: sistema 2-1-2 (muro a 2 + muro-difesa + 2 difensori).",
+        "Muro a 2: schiacciatore (P4) murista lungolinea + centrale (P3) chiude la diagonale.",
+        "L'opposto (P2) diventa muro-difesa sul lato destro, arretra sulla linea dei 3 m.",
+        "L'alzatore di seconda linea (P1) difende la diagonale lunga.",
+        "Se l'alzatore difende → 2° tocco dell'opposto (back-up setter) obbligatorio."
+      ],
+      "commonMistakes": [
+        "Opposto che mura da Z2 → muro-difesa mancante sul lato destro.",
+        "Alzatore che difende E vuole rilanciare → confusione sul 2° tocco.",
+        "Libero mal posizionato in Z2 (qui difende il LUNGOLINEA, non la diagonale lunga).",
+        "Niente comunicazione tra alzatore e opposto."
+      ]
+    }
+  },
+  "5v5-defense-vs-z3": {
+    "title": "5v5 · Difesa Z3 (primo tempo)",
+    "shortDescription": "Muro a 1 (centrale) sull'attacco centrale veloce avversario nel 5v5 — copertura assiale parziale.",
+    "contextLabel": "5v5 · Muro a 1 (read) · Lettura del primo tempo",
+    "players": {
+      "C": "Centrale (P3)",
+      "Op": "Opposto (P2)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "P": "Alzatore (P1)",
+      "OPP_A": "Centrale avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura del primo tempo avversario",
+        "description": "Distribuzione tesa imminente verso il centrale. 0,3-0,5 s tra alzata e colpo — il nostro centrale scansiona la sua controparte, già in movimento."
+      },
+      "s2": {
+        "title": "2. Alzata tesa + ali come muro-difesa",
+        "description": "L'alzatore avversario fa un'alzata tesa al centrale. Le nostre ali arretrano a 1,5 m dalla rete sulla linea d'attacco per coprire le deflessioni laterali."
+      },
+      "s3": {
+        "title": "3. Muro a 1 (read) + schiacciata veloce",
+        "description": "Il nostro centrale da solo salta in lettura. Il centrale avversario colpisce in diagonale corta — gli angoli sono corti rispetto a un'alzata alta."
+      },
+      "s4": {
+        "title": "4. Difesa del libero",
+        "description": "Il libero (avanzato a 5 m perché gli angoli sono corti) difende con un bagher nella sua corsia sinistra. Traiettoria alta verso il bersaglio — l'alzatore tornerà a rete."
+      },
+      "s5": {
+        "title": "5. RESET",
+        "description": "Ritorno alla base 5v5 dopo la sequenza. Il centrale e le ali si riallineano."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Muro a 1 (centrale P3) in lettura — niente commit possibile su un primo tempo.",
+        "Ali (P4 + P2) a 2 m dalla rete sulla linea d'attacco: coprono le deflessioni del muro.",
+        "Con solo 2 difensori profondi (P5 + P1), la copertura ASSIALE profonda è parziale.",
+        "Z1 e Z5 AVANZANO di 1 m (~7 m dalla rete) perché gli angoli sono più corti su un primo tempo.",
+        "\"Fermi al contatto\": tutti fermi nel momento esatto del colpo."
+      ],
+      "commonMistakes": [
+        "Muro a 2 su un primo tempo → troppo tardi, e lascia solo 1 difensore a terra.",
+        "Difensori fermi dietro (8 m+) → palla veloce atterra prima che si muovano.",
+        "\"False stepping\" (primo passo all'indietro) → tempo perso sul primo tempo.",
+        "Muro-difesa che restano a rete → non coprono le deflessioni."
+      ]
+    }
+  },
+  "5v5-defense-vs-z4": {
+    "title": "5v5 · Difesa Z4",
+    "shortDescription": "Sistema 2-1-2 contro attacco avversario in Z4 (loro sinistra → arriva sulla nostra destra): muro a 2 + muro-difesa + 2 difensori.",
+    "contextLabel": "5v5 · 2-1-2 · Muro a 2 + muro-difesa",
+    "players": {
+      "C": "Centrale (P3)",
+      "Op": "Opposto (P2)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "P": "Alzatore (P1)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura dell'attacco avversario in Z4",
+        "description": "Attacco avversario dalla loro zona 4 (loro sinistra) → arriva sul nostro angolo davanti-DESTRO. Lettura sequenziale \"palla → alzatore → palla → attaccante\"."
+      },
+      "s2": {
+        "title": "2. Alzata alta in Z4 avversaria",
+        "description": "Distribuzione standard del loro alzatore sull'ala sinistra. La nostra prima linea identifica la zona d'attacco."
+      },
+      "s3": {
+        "title": "3. Muro a 2 + schiacciatore muro-difesa",
+        "description": "Opposto (P2) + centrale (P3) salgono a murare sul lato destro. Lo schiacciatore arretra a 1,5 m dalla rete come muro-difesa. Libero in diagonale lunga, alzatore sul lungolinea — ciascuno copre ~30 m²."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale lunga + muro",
+        "description": "L'attaccante colpisce in diagonale lunga (statisticamente la traiettoria più frequente). Opposto + centrale saltano."
+      },
+      "s5": {
+        "title": "5. Difesa del libero",
+        "description": "Il libero è sulla traiettoria principale. Bagher alto verso il bersaglio — transizione al contrattacco."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla base 2-1-2",
+        "description": "Switch alla formazione base. L'alzatore torna nella sua zona 1, la difesa si riorganizza per la sequenza successiva."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 2-1-2: 2 muristi + 1 muro-difesa (copertura pallonetto) + 2 difensori profondi.",
+        "Raccomandazione: mantenere il 5-1 del 6v6 togliendo un dietro non alzatore (configurazione 3F-2B).",
+        "Muro-difesa 2-2,5 m dalla rete, 1 m dalla linea — copre la zona di 3 m dietro il muro.",
+        "Lettura critica: ~30 m² per difensore (vs 20 m² nel 6v6), sicurezza posizionale iniziale ridotta.",
+        "\"Fermi al contatto\": fermi e bilanciati nel momento esatto del colpo."
+      ],
+      "commonMistakes": [
+        "Muro a 3 → solo 1 difensore a terra = punto garantito.",
+        "Muro-difesa che resta a rete → zona di 3 m dietro il muro scoperta.",
+        "Niente gerarchia di priorità tra i 2 difensori profondi → 2 giocatori sulla stessa palla.",
+        "Riprodurre meccanicamente il 6v6 senza adattare le zone (il libero deve coprire più ampio qui)."
+      ]
+    }
+  },
+  "6v6-attack-coverage": {
+    "title": "Copertura · Attacco 5-1",
+    "shortDescription": "Copertura a 5 giocatori su un attacco in zona 4: 2 archi (3 vicini + 2 lontani) per recuperare un eventuale block-out.",
+    "contextLabel": "5-1 · Copertura a 5 · Disposizione 3-2",
+    "players": {
+      "R4a": "Schiacciatore attaccante (P4)",
+      "C": "Centrale (P3)",
+      "P": "Alzatore (penetrato)",
+      "Op": "Opposto (P2)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_BL": "Murista sinistro avversario",
+      "OPP_BR": "Murista destro avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Preparazione dell'attacco in Z4",
+        "description": "Il nostro schiacciatore è in rincorsa, sta per decollare. Anche prima del colpo, la copertura si organizza: è l'anticipazione che salva un block-out, non la reazione."
+      },
+      "s2": {
+        "title": "2. Primo arco (3 giocatori vicini)",
+        "description": "Alzatore + centrale + libero formano un semicerchio a 1-1,5 m dall'attaccante, posizione MOLTO bassa, braccia tese in avanti, pronti a un bagher corto."
+      },
+      "s3": {
+        "title": "3. Schiacciata + muro a 2 avversario",
+        "description": "Il nostro schiacciatore decolla e colpisce in diagonale. I due muristi avversari saltano in parallelo per chiudere la traiettoria — la copertura è già ferma, in attesa."
+      },
+      "s4": {
+        "title": "4. Block-out: la palla torna indietro",
+        "description": "Il muro avversario tocca la palla che rimbalza nel nostro campo a 1,5 m dall'attaccante. Senza copertura, è un punto perso — qui, l'alzatore è esattamente nel punto di caduta."
+      },
+      "s5": {
+        "title": "5. Recupero dell'alzatore (1° supporto)",
+        "description": "L'alzatore (1° supporto vicino) recupera la palla con un bagher a 1 m dall'attaccante. È la SUA responsabilità dopo un'alzata in zona 4 — regola non negoziabile."
+      },
+      "s6": {
+        "title": "6. Nuovo attacco possibile",
+        "description": "Il recupero permette di riavere una palla a rete. Senza copertura a 5 = punto perso direttamente sul block-out."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Copertura a 5 = standard di livello elite. Disposizione 3-2 (3 vicini + 2 lontani).",
+        "L'alzatore è SEMPRE il 1° supporto vicino, a 1-1,5 m dall'attaccante.",
+        "Posizione MOLTO bassa per i 3 vicini, braccia tese in avanti.",
+        "Senza copertura, un muro avversario riuscito = punto perso direttamente.",
+        "L'anticipazione prevale sulla reazione: la copertura si organizza PRIMA del colpo."
+      ],
+      "commonMistakes": [
+        "Niente copertura → muro avversario = punto.",
+        "Alzatore che resta a rete dopo l'alzata → 1° supporto mancante.",
+        "Giocatori in copertura in piedi o troppo lontani → palle corte non recuperate.",
+        "Solo 2 o 3 giocatori in copertura invece di 5 → block-out lunghi persi."
+      ]
+    }
+  },
+  "6v6-defense-6-front": {
+    "title": "Difesa · man-up (2-1-3)",
+    "shortDescription": "Sistema man-up (2-1-3, ex \"difesa a W\"): un difensore avanzato dietro il muro per pallonetti corti.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-pallonetto",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6 avanzato)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base man-up",
+        "description": "L'avversario è noto per i pallonetti — scelta tattica del man-up. Lo schiacciatore (in P6) è già avanzato a 2,5 m, pronto a salire dietro il muro."
+      },
+      "s2": {
+        "title": "2. Alzata alta avversaria in Z4",
+        "description": "Distribuzione standard sulla Z4 avversaria. La difesa riconosce la configurazione e si dispone."
+      },
+      "s3": {
+        "title": "3. Giocatore avanzato dietro il muro",
+        "description": "Differenza chiave del man-up: R4b sale a 2,5 m dalla rete, nell'ombra del muro. Libero e alzatore arretrano a 6 m per compensare. Muro a 2 standard (opposto + centrale)."
+      },
+      "s4": {
+        "title": "4. Pallonetto in salto avversario",
+        "description": "L'attaccante sceglie il pallonetto invece della schiacciata. La palla cade appena dietro il muro — esattamente dove si trova il giocatore avanzato."
+      },
+      "s5": {
+        "title": "5. Recupero corto del giocatore avanzato",
+        "description": "Il giocatore avanzato è esattamente dove cade la palla. Bagher preciso verso l'opposto per rilanciare un 2° tocco in salto."
+      },
+      "s6": {
+        "title": "6. RESET — base man-up",
+        "description": "Ritorno alla posizione base 2-1-3. R4b riposizionato a 2,5 m, libero e alzatore profondi."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Man-up = 2-1-3 (Keller / USAV) — ex \"difesa rossa\".",
+        "⚠ NON confondere con \"W-formation\" che è una formazione di RICEZIONE, non un sistema difensivo.",
+        "Copertura eccezionale di pallonetti, roll shot e palle \"junk\" dietro il muro.",
+        "Ma: solo 3 difensori profondi → vulnerabile a schiacciate potenti in diagonali strette.",
+        "Indicazione: squadre giovanili, scolastiche, avversari tattici che giocano molti pallonetti o colpi piazzati."
+      ],
+      "commonMistakes": [
+        "Mantenere il sistema perimetrale contro una squadra che pallonetta → palle corte perse.",
+        "Giocatore avanzato troppo avanti (a rete) → bloccato nel suo slancio a muro.",
+        "Libero che non arretra → buco dietro su una schiacciata potente.",
+        "Confondere \"difesa W\" e \"man-up\" nel vocabolario di squadra — fonte di malintesi."
+      ]
+    }
+  },
+  "6v6-defense-perimeter": {
+    "title": "Difesa · perimetrale (2-0-4)",
+    "shortDescription": "Difesa bianca: 4 difensori sulle linee, U aperta verso la rete. Dominante nella pallavolo maschile elite.",
+    "contextLabel": "5-1 · Perimetrale 2-0-4 (difesa bianca)",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione perimetrale (2-0-4)",
+        "description": "I 4 difensori formano una U aperta verso la rete, quasi sulle linee — \"un piede sulla linea\" (Liskevych). Il centro del campo è deliberatamente abbandonato."
+      },
+      "s2": {
+        "title": "2. Alzata alta avversaria in Z4",
+        "description": "Alzata sulla loro ala sinistra. La nostra prima linea identifica la zona, i giocatori del perimetro restano rigorosamente sulle linee."
+      },
+      "s3": {
+        "title": "3. Muro a 2 + 4 difensori sul perimetro",
+        "description": "Muro a 2 standard (opposto lungolinea + centrale in diagonale). Nessun difensore avanzato dietro il muro (da qui lo 0 al centro). Libero sulla linea sinistra, P6 sulla linea di fondo, P1 sulla linea destra."
+      },
+      "s4": {
+        "title": "4. Schiacciata potente lungolinea + muro",
+        "description": "L'attaccante colpisce la linea sul nostro angolo dietro-sinistra. La traiettoria passa vicino al muro — un block-out lungo è probabile."
+      },
+      "s5": {
+        "title": "5. Recupero sulla linea",
+        "description": "Il libero recupera sulla linea — copertura perimetrale perfetta. Identifica facilmente le palle \"out\". Bagher alto in zona 2-3."
+      },
+      "s6": {
+        "title": "6. RESET — perimetro",
+        "description": "Ritorno alla formazione perimetrale pura: tutti i dietro sulle linee, centro abbandonato per convenzione tattica."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Perimetrale = 2-0-4 (\"difesa bianca\"): 4 difensori sul perimetro, nessuno avanzato.",
+        "Sistema dominante nella pallavolo maschile moderna e internazionale dove domina la potenza.",
+        "Logica: popolare statisticamente le zone dove cadono le schiacciate potenti (linee e angoli profondi).",
+        "Eccellente identificazione delle palle \"out\" e difesa dei block-out.",
+        "⚠ Il centro del campo (zona centrale tra 3 e 5 m) è deliberatamente lasciato aperto."
+      ],
+      "commonMistakes": [
+        "Difensori che collassano verso il centro → perdono la logica del sistema e non coprono più le linee.",
+        "Sistema scelto contro una squadra che pallonetta → centro campo scoperto, pallonetti persi.",
+        "Libero inesperto → lettura errata delle palle \"out\" sui lati.",
+        "Mancanza di atletismo per tuffarsi in avanti sui pallonetti → debolezza sfruttata."
+      ]
+    }
+  },
+  "6v6-defense-read": {
+    "title": "Difesa · in lettura",
+    "shortDescription": "Difesa reattiva elite: posizioni adattive in base ad alzata, rincorsa e segnali del braccio armato avversario.",
+    "contextLabel": "5-1 · Difesa in lettura · Internazionale",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posizione base neutra",
+        "description": "Tutti i difensori in posizione di lettura, ginocchia flesse, piedi paralleli. Sequenza visiva obbligatoria: \"palla → alzatore → palla → attaccante\"."
+      },
+      "s2": {
+        "title": "2. Lettura dell'alzata (verso Z2 avversaria)",
+        "description": "Non appena la palla esce dalle mani dell'alzatore avversario → adeguamento verso la zona d'attacco. Qui Z2 avversaria (loro destra = nostra sinistra)."
+      },
+      "s3": {
+        "title": "3. Lettura dell'attaccante + adeguamento",
+        "description": "Leggere in parallelo la rincorsa, l'orientamento del braccio armato e le spalle. Tutti si riposizionano in base ai segnali: spalla alta = schiacciata, rotazione = direzione probabile."
+      },
+      "s4": {
+        "title": "4. Lettura della schiacciata + muro a 2",
+        "description": "L'attaccante apre in diagonale lunga. La difesa è già sul posto grazie ai segnali visivi. Schiacciatore + centrale a muro. \"Fermi al contatto\" obbligatorio."
+      },
+      "s5": {
+        "title": "5. Recupero in lettura del libero",
+        "description": "Anticipazione perfetta: il libero è già nella diagonale lunga, esattamente sulla traiettoria. Bagher alto verso il bersaglio."
+      },
+      "s6": {
+        "title": "6. RESET — base neutra",
+        "description": "Ritorno alla posizione neutra, pronti a leggere la fase successiva. La lettura riparte ad ogni tocco avversario."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Difesa in lettura = nessun posizionamento fisso, tutto è adattivo. La difesa moderna è definita meno dalla formazione che dalla lettura.",
+        "Sequenza visiva \"palla → alzatore → palla → attaccante\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fasi: base neutra → lettura alzata → lettura attaccante → adeguamento → \"fermi al contatto\" → inseguimento.",
+        "Sistema preferito a livello elite internazionale (FIVB seniores).",
+        "Più efficace contro attaccanti versatili."
+      ],
+      "commonMistakes": [
+        "Muoversi PRIMA dell'alzata → cattiva lettura, giocatore con il piede sbagliato.",
+        "Lettura incompleta: leggere solo l'alzata, non il braccio armato.",
+        "Ancora in movimento nel momento del contatto dell'attaccante (non \"fermi al contatto\") → reattività dimezzata.",
+        "Mancanza di coordinazione → 2 difensori sulla stessa palla, buco altrove."
+      ]
+    }
+  },
+  "6v6-defense-rotation": {
+    "title": "Difesa · rotazione (3-2-1)",
+    "shortDescription": "Difesa a rotazione / slide: i dietro scivolano verso il lato d'attacco, il dietro opposto sale dietro il muro.",
+    "contextLabel": "5-1 · Rotazione 3-2-1 · Slide defense",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Attaccante avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base + lettura dell'alzata in Z4",
+        "description": "Configurazione base prima della rotazione. L'alzatore avversario penetra e prepara un'alzata sulla loro ala sinistra."
+      },
+      "s2": {
+        "title": "2. Alzata alta in Z4 avversaria",
+        "description": "Distribuzione standard. La nostra squadra innesca la rotazione: P1 salirà dietro il muro, P6 scivolerà verso la linea destra, libero mantiene la diagonale."
+      },
+      "s3": {
+        "title": "3. Rotazione 3-2-1 ingaggiata",
+        "description": "L'alzatore (P1) SALE a 3 m dietro il muro per coprire il pallonetto. P6 scivola verso la linea destra a 8 m. Libero resta in diagonale lunga. R4 muro-difesa classico a sinistra."
+      },
+      "s4": {
+        "title": "4. Schiacciata in diagonale + muro",
+        "description": "L'attaccante colpisce in diagonale lunga. Muro a 2 (opposto + centrale) — la traiettoria principale è coperta dal libero."
+      },
+      "s5": {
+        "title": "5. Difesa del libero sulla diagonale",
+        "description": "Il libero è esattamente nel punto di caduta del colpo primario. Bagher alto in zona 2-3 — transizione fluida al contrattacco."
+      },
+      "s6": {
+        "title": "6. RESET — base prima della rotazione successiva",
+        "description": "Ritorno alla base. La rotazione è stata efficace: il pallonetto corto sarebbe stato preso dall'alzatore avanzato, la diagonale lunga dal libero."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotazione 3-2-1 (slide defense): 3 difensori di seconda linea scivolano verso il lato d'attacco.",
+        "Il dietro opposto (spesso l'alzatore se in P1) SALE dietro il muro per coprire il pallonetto.",
+        "Centrale dietro scivola verso la linea sul lato attaccato (~8,5 m, 1-1,5 m dalla linea).",
+        "Eccellente copertura della linea profonda E del pallonetto simultaneamente.",
+        "Transizione rapida dell'alzatore se l'alzatore è il giocatore avanzato.",
+        "Variante \"counter-rotate\": rotazione nella direzione opposta."
+      ],
+      "commonMistakes": [
+        "Rotazione incompleta → buchi di copertura.",
+        "Angolo diagonale opposto vulnerabile (un difensore in meno profondo).",
+        "Confusione tra rotate (verso la palla) e counter-rotate (opposta) — richiede una forte comunicazione.",
+        "Giocatore avanzato fermo → non legge pallonetto vs schiacciata."
+      ]
+    }
+  },
+  "6v6-defense-vs-pipe": {
+    "title": "Difesa · pipe avversario (BIC)",
+    "shortDescription": "Difesa contro un pipe avversario (attacco in Z6 da seconda linea): muro a 1 o 2, P6 sale per \"stringere il campo\".",
+    "contextLabel": "5-1 · Pipe / BIC · P6 avanzato, perimetro ristretto",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Pipe avversario",
+      "OPP_S": "Alzatore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lettura del pipe",
+        "description": "Il loro alzatore sta per inviare un'alzata tesa al centro dietro. Il nostro centrale scansiona sia il possibile centrale avversario SIA la corsia del pipe. P6 deve essere pronto a salire."
+      },
+      "s2": {
+        "title": "2. Alzata tesa centrale + rincorsa del pipe",
+        "description": "L'alzatore avversario consegna un'alzata tesa verso l'asse Z6. L'attaccante del pipe entra in rincorsa da dietro la linea dei 3 m, lunga rincorsa. P6 inizia a scivolare avanti."
+      },
+      "s3": {
+        "title": "3. Muro centrale + ali strette",
+        "description": "Il nostro centrale da solo salta sul pipe. Le ali (schiacciatore + opposto) arretrano a ~1,5 m dalla rete per coprire le deflessioni laterali. Z1 e Z5 sacrificano le linee per difendere l'asse."
+      },
+      "s4": {
+        "title": "4. Colpo del pipe + muro centrale",
+        "description": "L'attaccante colpisce in profondità sull'asse. Il nostro centrale sale a rete per un muro a 1 — il pipe veloce non lascia il tempo di formare due muristi."
+      },
+      "s5": {
+        "title": "5. Recupero assiale di P6",
+        "description": "La palla attraversa verso l'asse profondo — P6 (avanzato a 6,5 m) è esattamente nel punto di impatto. Bagher dritto sull'asse verso la zona 2-3 dell'alzatore."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla base ristretta",
+        "description": "Switch alla posizione base pronta per il pipe: P6 avanzato, Z1/Z5 sull'asse centrale. La configurazione resta valida se il gioco continua a ruotare."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe = attacco da seconda linea da Z6 (centro dietro) di OH2 o OPP — prende di mira l'asse centrale profondo.",
+        "Muro a 1 (centrale) il più frequente — muro a 2 difficile su un tempo veloce.",
+        "P6 difensivo SALE a ~6-7 m dalla rete, asse esatto (\"stringere il campo\").",
+        "Z1 e Z5 si chiudono verso il centro (~7 m, 1,5 m dalle linee) — sacrificano un po' le linee.",
+        "BIC (pipe veloce) = uno degli attacchi più difficili da difendere perché il centrale non può onorare primo tempo + pipe + due ali."
+      ],
+      "commonMistakes": [
+        "Muro a 2 su un pipe → lascia una banda completamente aperta se l'avversario cambia attacco.",
+        "P6 fermo dietro (8 m+) → pipe veloce atterra prima che si muova.",
+        "Z1/Z5 troppo larghi sulle linee → asse centrale scoperto.",
+        "Niente comunicazione tra centrale e ali su chi prende il pipe vs il primo tempo."
+      ]
+    }
+  },
+  "6v6-defense-vs-z2": {
+    "title": "Difesa · attacco avversario Z2",
+    "shortDescription": "Specchio perfetto della Z4. Muro a 2 (schiacciatore lungolinea + centrale in diagonale) contro attacco avversario in Z2 → arriva sulla nostra sinistra.",
+    "contextLabel": "5-1 · Alzatore P1 di seconda linea · Muro a 2 · Perimetrale",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Attaccante Z2 avversario",
+      "OPP_S": "Alzatore avversario",
+      "OPP_R": "Ricevitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Ricezione avversaria + penetrazione",
+        "description": "Il loro dietro ha fatto il bagher. L'alzatore avversario penetra dal loro P1 verso il bersaglio. La nostra difesa legge in READY."
+      },
+      "s2": {
+        "title": "2. Alzata alta avversaria in Z2",
+        "description": "L'alzatore avversario distribuisce sulla loro ala destra. L'attacco arriva sul nostro angolo davanti-SINISTRO. Configurazione specchio perfetta della Z4."
+      },
+      "s3": {
+        "title": "3. Muro a 2 specchio + slittamento difensivo",
+        "description": "Schiacciatore (P4) murista lungolinea + centrale (P3) chiude la diagonale. Opposto (P2) muro-difesa a destra sulla linea dei 3 m. Libero difende la linea sinistra profonda. P1 prende la diagonale lunga."
+      },
+      "s4": {
+        "title": "4. Schiacciata avversaria + muro a 2",
+        "description": "L'ala destra avversaria colpisce in diagonale lunga. Schiacciatore e centrale saltano. Fermi al contatto obbligatorio."
+      },
+      "s5": {
+        "title": "5. Difesa dell'alzatore sulla diagonale",
+        "description": "L'alzatore (P1) è sulla traiettoria primaria della diagonale lunga. Bagher difensivo — domanda immediata: chi prende il 2° tocco?"
+      },
+      "s6": {
+        "title": "6. Rilancio dell'opposto + contrattacco",
+        "description": "L'opposto lascia la sua posizione di muro-difesa per fare il 2° tocco. Distribuzione verso lo schiacciatore in zona 4 che prepara il colpo."
+      },
+      "s7": {
+        "title": "7. RESET — ritorno alla base difensiva",
+        "description": "Tutti passano alla posizione base non appena la palla torna nel lato avversario."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Specchio perfetto della Z4: schiacciatore (P4 = OH) murista lungolinea + centrale (P3) chiude la diagonale.",
+        "L'opposto (P2 = OPP) diventa muro-difesa sul lato destro, arretra sulla linea dei 3 m.",
+        "L'alzatore in P1 (seconda linea) difende la diagonale lunga.",
+        "Gestione critica: se l'alzatore è in P2 (prima linea), LUI mura il lungolinea — transizione tesa.",
+        "Se l'alzatore difende in P1 → 2° tocco dell'opposto (back-up setter) obbligatorio."
+      ],
+      "commonMistakes": [
+        "Opposto che mura dalla zona 2 → muro-difesa mancante sul lato destro.",
+        "Centrale che non si allinea con lo schiacciatore → muro aperto.",
+        "Libero mal posizionato in Z2 — qui difende la LINEA profonda, non la diagonale lunga.",
+        "Alzatore che difende E vuole rilanciare → confusione sul 2° tocco."
+      ]
+    }
+  },
+  "6v6-defense-vs-z3": {
+    "title": "Difesa · attacco avversario Z3 (primo tempo)",
+    "shortDescription": "Muro a 1 in lettura (centrale) contro attacco centrale veloce avversario — dietro avanzati di un metro.",
+    "contextLabel": "5-1 · Muro a 1 (read) · Fermi al contatto",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Centrale avversario",
+      "OPP_S": "Alzatore avversario",
+      "OPP_R4": "Schiacciatore avversario",
+      "OPP_R": "Ricevitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Ricezione avversaria + penetrazione fulminea",
+        "description": "Il loro dietro ha appena fatto il bagher. L'alzatore scatta a rete per un primo tempo. Primo tempo = 0,3-0,5 s tra alzata e colpo. Il nostro centrale scansiona il movimento del centrale avversario, già in moto."
+      },
+      "s2": {
+        "title": "2. Alzata tesa + centrale in aria",
+        "description": "L'alzatore avversario invia un'alzata molto bassa e tesa al centrale che è già decollato. Le nostre ali arretrano sulla linea dei 3 m per liberare le deflessioni del muro."
+      },
+      "s3": {
+        "title": "3. Muro a 1 + schiacciata veloce",
+        "description": "Il nostro centrale da solo salta in lettura. Il centrale avversario colpisce in diagonale corta. Il colpo più pericoloso: palla che si tuffa sotto il muro."
+      },
+      "s4": {
+        "title": "4. Difesa dell'alzatore sul lungolinea",
+        "description": "Z1 (alzatore) e Z5 (libero) sono avanzati a ~7 m perché gli angoli sono corti su un primo tempo. L'alzatore (Z1) recupera nella sua corsia."
+      },
+      "s5": {
+        "title": "5. 2° tocco dell'opposto (back-up setter)",
+        "description": "Poiché il nostro alzatore ha difeso, l'opposto in P2 prende il 2° tocco per rilanciare. Il nostro schiacciatore prepara un contrattacco in zona 4."
+      },
+      "s6": {
+        "title": "6. RESET — ritorno alla base",
+        "description": "Switch alla posizione base non appena l'alzatore avversario tocca la palla. La difesa si riorganizza per la sequenza successiva."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Muro a 1 sul primo tempo centrale: solo il centrale salta (read più frequente, commit se lo scouting è solido).",
+        "Z1 e Z5 AVANZANO di un metro (~7,5 m) perché gli angoli sono più corti su un primo tempo.",
+        "Le ali restano sulla linea dei 3 m (~2-2,5 m dalla rete) per le deflessioni del muro.",
+        "\"Fermi al contatto\": tutti fermi e bilanciati nel momento esatto del colpo."
+      ],
+      "commonMistakes": [
+        "Tutti i giocatori di prima linea che saltano → lascia le ali aperte per l'alzata successiva.",
+        "Muro troppo tardivo → la palla passa sopra le mani.",
+        "\"False stepping\" (primo passo all'indietro) → si spreca il poco tempo disponibile.",
+        "Z1/Z5 fermi dietro (8 m+) → palla veloce atterra corta prima che si siano mossi."
+      ]
+    }
+  },
+  "6v6-defense-vs-z4": {
+    "title": "Difesa · attacco avversario Z4",
+    "shortDescription": "Muro a 2 sull'attacco avversario in zona 4 (loro ala sinistra → arriva sulla nostra destra) in difesa perimetrale.",
+    "contextLabel": "5-1 · Alzatore P1 di seconda linea · Muro a 2 · Perimetrale",
+    "players": {
+      "P": "Alzatore (P1)",
+      "Op": "Opposto (P2)",
+      "C": "Centrale (P3)",
+      "R4": "Schiacciatore (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Schiacciatore (P6)",
+      "OPP_A": "Attaccante Z4 avversario",
+      "OPP_S": "Alzatore avversario",
+      "OPP_R": "Ricevitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Ricezione avversaria + penetrazione",
+        "description": "Il loro dietro ha appena fatto il bagher. L'alzatore avversario penetra verso il suo bersaglio tra Z2 e Z3. La nostra difesa legge in READY, sequenza visiva \"palla → alzatore → palla → attaccante\"."
+      },
+      "s2": {
+        "title": "2. Alzata alta avversaria in Z4",
+        "description": "L'alzatore avversario distribuisce un'alzata tesa sulla loro ala sinistra. L'attacco arriverà sul nostro angolo davanti-destra. La prima linea identifica già la zona d'attacco."
+      },
+      "s3": {
+        "title": "3. Muro a 2 + slittamento perimetrale",
+        "description": "Opposto (P2) lungolinea + centrale (P3) chiude la diagonale. R4 muro-difesa sulla linea dei 3 m sul lato sinistro. Libero in diagonale lunga ~7,5 m, P6 sull'asse a 8 m, P1 linea profonda nell'ombra del muro."
+      },
+      "s4": {
+        "title": "4. Schiacciata avversaria + muro a 2",
+        "description": "L'attaccante avversario colpisce in diagonale lunga. Opposto e centrale saltano in parallelo. Nel momento del contatto, tutti i difensori sono fermi e bilanciati (\"fermi al contatto\")."
+      },
+      "s5": {
+        "title": "5. Difesa del libero sulla diagonale lunga",
+        "description": "Il libero è esattamente sulla traiettoria primaria (diagonale lunga). Bagher alto in zona 2-3 per preparare il contrattacco."
+      },
+      "s6": {
+        "title": "6. Contrattacco dello schiacciatore",
+        "description": "Il nostro alzatore consegna un'alzata alta allo schiacciatore arretrato sulla linea dei 3 m. Colpo in diagonale lunga sul lato avversario per chiudere lo scambio."
+      },
+      "s7": {
+        "title": "7. RESET — ritorno alla base difensiva",
+        "description": "Tutti passano alla posizione base non appena la palla torna nel lato avversario — nessuna transizione bloccata in formazione di ricezione."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Muro a 2: opposto (P2) lungolinea + centrale (P3) diagonale. È la configurazione standard FIVB sulla Z4 avversaria.",
+        "Muro-difesa = schiacciatore (P4) sulla linea dei 3 m sul lato sinistro — copre cut shot e pallonetto corto.",
+        "Sistema perimetrale: libero (P5) in diagonale lunga ~7,5 m, P6 sull'asse ~8 m, P1 linea profonda nell'ombra del muro.",
+        "Libero allineato con la spalla interna del murista centrale — è la sua zona prioritaria.",
+        "Colpo principale difeso: diagonale lunga (lo schiacciatore avversario è il più sollecitato)."
+      ],
+      "commonMistakes": [
+        "Muro non intenzionalmente aperto (P3 non allineato con P2) → palla passa tra i muristi.",
+        "Muro-difesa che resta a rete → ombra del muro scoperta (errore n°1 secondo Hebert).",
+        "Libero mal posizionato (troppo vicino alla rete) → schiacciate profonde atterrano.",
+        "Alzatore che mura poi non arriva a rete → 2° tocco di un giocatore non specializzato.",
+        "Difensori ancora in movimento nel momento del contatto dell'attaccante (non \"fermi al contatto\")."
+      ]
+    }
+  },
+  "4v4-reception-losange": {
+    "title": "4v4 · Ricezione a rombo",
+    "shortDescription": "Formazione a rombo canonica: alzatore in P3 (centro rete) + 2 ali sulla linea dei 3 m + dietro profondo.",
+    "contextLabel": "4v4 · Rombo (1-2-1) · Alzatore centrale",
+    "players": {
+      "P": "Alzatore (P3)",
+      "R4": "Ala sinistra (P4)",
+      "A2": "Ala destra (P2)",
+      "A": "Dietro (P1)",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione a rombo",
+        "description": "Disposizione canonica 1-2-1: alzatore AL CENTRO della rete (P3), 2 ali sulla linea dei 3 m (S + D), dietro profondo. Nessun libero ammesso nel 4v4 scolastico. Tutti READY."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher del dietro",
+        "description": "Servizio teso sulla zona centrale. L'unico dietro chiama \"Mia!\" e si sposta leggermente verso la palla."
+      },
+      "s3": {
+        "title": "3. Alzata all'ala sinistra",
+        "description": "Bagher alto verso l'alzatore al centro della rete (niente penetrazione nel rombo). Distribuisce in zona 4. L'ala sinistra incatena la sua rincorsa corta."
+      },
+      "s4": {
+        "title": "4. Palla disponibile + copertura corta",
+        "description": "L'alzata arriva in zona 4. L'ala destra si stringe verso il centro per coprire, il dietro si fa leggermente avanti. Con un muro avversario singolo, l'angolo d'attacco resta ampio."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno al rombo",
+        "description": "Tutti riprendono la loro posizione nel rombo per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rombo canonico (1-2-1) = la formazione 4v4 più usata.",
+        "Variante \"alzatore centrale\": alzatore in P3 a rete, distribuisce a sinistra O a destra.",
+        "Nessun libero ammesso nel 4v4 scolastico — tutti devono saper ricevere.",
+        "Ogni giocatore copre ~30-40 m² (vs ~20 m² nel 6v6)."
+      ],
+      "commonMistakes": [
+        "Confusione su palle centrali tra 2 zone → chiamata obbligatoria.",
+        "Unico dietro troppo arretrato → palle corte dietro la rete non coperte.",
+        "Alzatore che riceve anche → impossibile prendere il 2° tocco dietro."
+      ]
+    }
+  },
+  "4v4-reception-u": {
+    "title": "4v4 · Ricezione a U",
+    "shortDescription": "Formazione a U: alzatore fuori + 3 ricevitori (sinistra, centro dietro, destra).",
+    "contextLabel": "4v4 · U · 4v4 agonistico",
+    "players": {
+      "P": "Alzatore (nascosto)",
+      "R4": "Ala sinistra",
+      "A": "Centro dietro",
+      "A2": "Ala destra",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione a U",
+        "description": "L'alzatore è nascosto in P2 a rete. 3 ricevitori a U: ala sinistra, centro dietro, ala destra. Ogni giocatore copre circa 1/3 della larghezza."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher dell'ala sinistra",
+        "description": "Servizio teso nella corsia sinistra. L'ala sinistra chiama e prende la palla nella sua corsia. Traiettoria alta per dare tempo all'alzatore."
+      },
+      "s3": {
+        "title": "3. Distribuzione all'ala sinistra",
+        "description": "La palla arriva all'alzatore fisso in zona 2 (niente penetrazione nel 4v4). Distribuzione rapida all'ala sinistra che incatena subito la rincorsa."
+      },
+      "s4": {
+        "title": "4. Palla disponibile in zona 4",
+        "description": "L'alzata arriva in zona 4 per l'ala sinistra. Sistema più offensivo del rombo: l'alzatore non ha ricevuto, l'attacco è veloce e leggibile."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno alla U",
+        "description": "I 3 ricevitori tornano alla U e l'alzatore torna al suo nascondiglio in P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Ricezione a U = la configurazione 4v4 agonistica più efficace.",
+        "3 ricevitori specializzati + alzatore fuori = 1 giocatore disponibile per l'attacco senza aver ricevuto.",
+        "Bersaglio: zona 2 (alzatore fisso) → distribuzione rapida.",
+        "Tecnicamente più impegnativa del rombo ma più offensiva."
+      ],
+      "commonMistakes": [
+        "Ala che non copre tutta la corsia → palla tra ala e dietro persa.",
+        "Centro dietro troppo avanti → palle lunghe passano sopra la testa.",
+        "Alzatore che si sporge verso la ricezione → confusione."
+      ]
+    }
+  },
+  "5-1-reception-3-receivers": {
+    "title": "Ricezione · a 3 (5-1)",
+    "shortDescription": "Ricezione a 3 (libero + 2 schiacciatori) con alzatore fuori e opposto nascosto — formazione standard moderna.",
+    "contextLabel": "5-1 · Ricezione a 3 · Servizio avversario",
+    "players": {
+      "R4a": "Schiacciatore sinistro",
+      "L": "Libero",
+      "R4b": "Schiacciatore destro",
+      "C": "Centrale",
+      "Op": "Opposto (nascosto)",
+      "P": "Alzatore (nascosto)",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posizione di ricezione",
+        "description": "Tre ricevitori in arco: schiacciatore sinistro, libero centrale, schiacciatore destro. Ognuno copre ~1/3 della larghezza. L'alzatore e l'opposto si nascondono a rete, pronti a intervenire non appena il battitore colpisce."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher",
+        "description": "Servizio teso allo schiacciatore sinistro che chiama \"Mia!\" e fa il bagher. In parallelo, l'alzatore innesca la sua penetrazione dal nascondiglio in P1 verso la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Alzata alta in zona 4",
+        "description": "La palla sale verso il bersaglio (tra P2 e P3) dove l'alzatore arriva giusto in tempo. Distribuisce un'alzata tesa in zona 4. Lo schiacciatore ricevitore ha già innescato l'arretramento sulla linea dei 3 m."
+      },
+      "s4": {
+        "title": "4. Palla disponibile per l'attaccante",
+        "description": "La palla arriva in zona 4 all'altezza del colpo. Lo schiacciatore compie gli ultimi passi prima del salto. La qualità dell'alzata convalida la qualità della ricezione iniziale."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno alla formazione",
+        "description": "Tutta la squadra riprende la sua posizione di ricezione per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Ricezione a 3 = standard moderno del 5-1. Massima specializzazione.",
+        "Bersaglio: zona 2-3, un braccio dalla rete, altezza ~3 m.",
+        "L'alzatore resta nascosto a rete finché il battitore non colpisce, poi penetra.",
+        "Lo schiacciatore ricevitore incatena IMMEDIATAMENTE la sua rincorsa d'attacco."
+      ],
+      "commonMistakes": [
+        "Ricezione troppo tesa o troppo corta → alzatore arriva in ritardo.",
+        "Conflitto tra 2 ricevitori → chiamata vocale obbligatoria.",
+        "Schiacciatore fermo dopo la ricezione → perde un'opzione offensiva in zona 4."
+      ]
+    }
+  },
+  "5v5-reception-4-receivers": {
+    "title": "5v5 · Ricezione a 4",
+    "shortDescription": "Formato 5v5: alzatore fuori + 4 ricevitori a U o in linea.",
+    "contextLabel": "5v5 · 4 ricevitori · Formato ibrido",
+    "players": {
+      "P": "Alzatore (fuori)",
+      "R4a": "Davanti sinistra",
+      "C": "Davanti destra / centrale",
+      "A1": "Dietro sinistra",
+      "A2": "Dietro destra",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione 5v5",
+        "description": "L'alzatore (in P2) è fuori a rete. I 4 ricevitori formano una U: 2 sulla linea dei 3 m, 2 profondi. Il miglior ricevitore prende la zona più esposta."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher del dietro",
+        "description": "Servizio teso nella corsia dietro-sinistra. Il dietro sinistro chiama e fa il bagher nella sua corsia."
+      },
+      "s3": {
+        "title": "3. Alzata in zona 4",
+        "description": "La palla arriva all'alzatore fisso in zona 2 (niente penetrazione nel 5v5). Distribuzione rapida all'ala sinistra. Il davanti-sinistra inizia la rincorsa."
+      },
+      "s4": {
+        "title": "4. Palla disponibile — copertura a 3",
+        "description": "L'alzata arriva in zona 4. Il davanti-sinistra fa i passi. La copertura nel 5v5 è fatta con solo 3 giocatori (non 5 come nel 6v6) — il centrale e l'alzatore restano vicini."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno alla U",
+        "description": "I 4 ricevitori trovano il loro posto nella U, alzatore fisso in P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Nel 5v5 senza libero, il miglior ricevitore prende la zona più esposta.",
+        "Formazione a U: 2 ricevitori sulla linea dei 3 m + 2 profondi.",
+        "Variante in linea possibile (4 allineati a metà campo) se i livelli sono simili.",
+        "Niente penetrazione → alzatore fisso (sistema 4-1 semplificato)."
+      ],
+      "commonMistakes": [
+        "U troppo stretta → diagonali lunghe scoperte.",
+        "Ricevitore debole → isolarlo nella zona più piccola.",
+        "Alzatore che penetra comunque → confusione con il 6v6 standard."
+      ]
+    }
+  },
+  "5v5-reception-pentagon": {
+    "title": "5v5 · Ricezione a pentagono",
+    "shortDescription": "Ricezione a pentagono (5 giocatori senza alzatore fuori) — versione principianti o ricreativa.",
+    "contextLabel": "5v5 · Pentagono · Nessun alzatore dedicato",
+    "players": {
+      "A1": "Davanti sinistra",
+      "C": "Centro",
+      "A2": "Davanti destra",
+      "A3": "Dietro sinistra",
+      "A4": "Dietro destra",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentagono a 5 giocatori",
+        "description": "Tutti i giocatori ricevono. Nessun alzatore dedicato — chi tocca per primo lascia il 2° tocco al giocatore più vicino alla rete. Configurazione ricreativa / principianti."
+      },
+      "s2": {
+        "title": "2. Servizio + chiama il centro",
+        "description": "Servizio nella zona media centrale. Il giocatore centro chiama e fa il bagher — è la sua area nel pentagono."
+      },
+      "s3": {
+        "title": "3. Alzata di opportunità",
+        "description": "La palla sale verso il centro della rete. Il davanti-destra, il più vicino alla palla, si fa avanti e prende il 2° tocco con un'alzata alta in base alla qualità della ricezione."
+      },
+      "s4": {
+        "title": "4. Palla disponibile — sistema semplice",
+        "description": "L'alzata va al davanti-sinistra. Distribuzione leggibile, ideale per principianti. Qualsiasi giocatore può prendere il 2° tocco a seconda dell'angolo della palla."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno al pentagono",
+        "description": "I 5 giocatori trovano il loro posto nel pentagono per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pentagono senza alzatore dedicato = configurazione ricreativa o principianti.",
+        "5 giocatori a pentagono: 2 davanti, 1 centro, 2 dietro.",
+        "Qualsiasi giocatore può prendere il 2° tocco a seconda di dove arriva la palla.",
+        "Vantaggio: grande adattabilità. Svantaggio: minore consistenza offensiva."
+      ],
+      "commonMistakes": [
+        "Nessuna gerarchia sul 2° tocco → 2 giocatori esitano.",
+        "Centro fermo → palle ai due lati mancate.",
+        "Alzate sistematicamente alte senza distribuzione chiara."
+      ]
+    }
+  },
+  "6v6-reception-2-receivers": {
+    "title": "Ricezione · a 2 (elite)",
+    "shortDescription": "Ricezione a 2 ultra-specializzata (libero + schiacciatore): tutti gli altri pronti ad attaccare.",
+    "contextLabel": "5-1 · Ricezione a 2 · Elite / free ball",
+    "players": {
+      "L": "Libero",
+      "R4a": "Schiacciatore ricevitore",
+      "R4b": "Schiacciatore attaccante",
+      "C": "Centrale",
+      "Op": "Opposto (nascosto)",
+      "P": "Alzatore (nascosto)",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configurazione a 2 ricevitori",
+        "description": "Solo 2 ricevitori: libero sul lato sinistro, schiacciatore ricevitore sul lato destro. Gli altri 4 giocatori sono già in posizione d'attacco, pronti a scattare non appena il servizio è colpito."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher del libero",
+        "description": "Servizio a sinistra. Il libero chiama e fa il bagher. Con solo 2 zone, l'esigenza tecnica è estrema: serve un libero eccezionale. L'alzatore innesca la sua penetrazione."
+      },
+      "s3": {
+        "title": "3. Alzata + rincorse simultanee",
+        "description": "La palla sale verso il bersaglio. L'alzatore distribuisce in zona 4. Lo schiacciatore attaccante, libero da ogni ricezione, lancia una rincorsa veloce a piena velocità — arriva a piena potenza."
+      },
+      "s4": {
+        "title": "4. Palla disponibile — varietà massima",
+        "description": "La palla arriva in zona 4 per lo schiacciatore attaccante. In quel momento l'alzatore ha simultaneamente disponibili un centrale sul primo tempo e un opposto su un attacco da seconda linea — combinazioni a 3 attaccanti possibili."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno alla formazione a 2 ricevitori",
+        "description": "Il libero e lo schiacciatore ricevitore tornano alle loro zone, gli attaccanti si riposizionano pronti ad attaccare."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Ricezione a 2 = configurazione elite (pallavolo professionistica).",
+        "Usata su servizi facili o rotazioni \"alzatore di prima linea\".",
+        "Massima varietà offensiva: tutti gli attaccanti disponibili immediatamente.",
+        "Esigenza tecnica estrema: 2 ricevitori solidi richiesti."
+      ],
+      "commonMistakes": [
+        "Adottare questo sistema contro un servizio potente → ricezioni catastrofiche.",
+        "Schiacciatore attaccante che non avvia la rincorsa in parallelo → opzione persa.",
+        "Niente chiamata → esitazione tra i 2 ricevitori."
+      ]
+    }
+  },
+  "6v6-reception-4-2": {
+    "title": "Ricezione · 4-2 (4 ricevitori)",
+    "shortDescription": "Sistema 4-2: alzatore fisso in P2 + 4 ricevitori (i 2 schiacciatori + centrale + dietro).",
+    "contextLabel": "4-2 · 4 ricevitori · Alzatore fisso davanti",
+    "players": {
+      "P": "Alzatore (P2 fisso)",
+      "C2": "Centrale davanti",
+      "R4a": "Schiacciatore sinistro",
+      "C": "Centrale dietro",
+      "R4b": "Schiacciatore destro",
+      "P2": "Alzatore dietro",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Disposizione 4-2",
+        "description": "Sistema 4-2: 2 alzatori in opposizione. L'alzatore davanti (P2) e il centrale davanti escono a rete. 4 ricevitori a trapezio: 2 schiacciatori in diagonale, centrale dietro e alzatore dietro profondi."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher dello schiacciatore sinistro",
+        "description": "Servizio teso nella corsia sinistra. Lo schiacciatore sinistro chiama e fa il bagher. L'alzatore è già fisso in P2 a rete, niente penetrazione."
+      },
+      "s3": {
+        "title": "3. Alzata all'ala sinistra",
+        "description": "La palla arriva all'alzatore fisso in P2 (bersaglio facile, nessun movimento). Distribuisce all'ala sinistra. Lo schiacciatore sinistro incatena subito la rincorsa."
+      },
+      "s4": {
+        "title": "4. Palla disponibile in zona 4",
+        "description": "L'alzata è sul posto. Nel 4-2, esistono solo 2 opzioni offensive davanti (il centrale e l'ala) → distribuzione leggibile ma limitata."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno al trapezio",
+        "description": "Tutta la squadra riprende la sua posizione nel sistema 4-2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Ricezione a 4 = sistema 4-2. 2 giocatori di prima linea fuori (alzatore + centrale davanti).",
+        "Zone più grandi che in una W ma meno impegnative di una ricezione a 3.",
+        "Bersaglio facile: l'alzatore non si muove.",
+        "Svantaggio: solo 2 attaccanti davanti."
+      ],
+      "commonMistakes": [
+        "Centrale davanti che riceve anche → niente commit a rete.",
+        "Trapezio troppo aperto → palle centrali non coperte.",
+        "Confusione sul 2° tocco tra i 2 alzatori."
+      ]
+    }
+  },
+  "6v6-reception-rotation-p4": {
+    "title": "Ricezione · 5-1 rotazione P4",
+    "shortDescription": "Caso speciale P4: l'alzatore e il centrale si spostano a sinistra per liberare lo schiacciatore in zona 6.",
+    "contextLabel": "5-1 · A 3 ricevitori · Rotazione P4 (alzatore di prima linea)",
+    "players": {
+      "P": "Alzatore (P4)",
+      "C": "Centrale (P3)",
+      "R4b": "Schiacciatore* (P2)",
+      "L": "Libero (P5)",
+      "R4a": "Schiacciatore (P6)",
+      "Op": "Opposto (P1)",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Spostamento a sinistra",
+        "description": "PRIMA del colpo: l'alzatore (P4) e il centrale (P3) si posizionano IL PIÙ A SINISTRA POSSIBILE consentito dalle regole di allineamento. Questo spostamento libera la zona 6 per lo schiacciatore ricevitore."
+      },
+      "s2": {
+        "title": "2. Servizio + bagher dello schiacciatore in P6",
+        "description": "Servizio nella zona centrale 6. Lo schiacciatore in P6 chiama e fa il bagher nella zona liberata dallo spostamento dell'alzatore. Tre ricevitori: libero, schiacciatore e opposto (sul bordo)."
+      },
+      "s3": {
+        "title": "3. Penetrazione + switch dello schiacciatore*",
+        "description": "L'alzatore scatta da P4 alla zona 2-3. Simultaneamente, lo schiacciatore* in P2 incrocia verso P4 per attaccare. Il centrale si riposiziona in zona 3."
+      },
+      "s4": {
+        "title": "4. Palla disponibile per lo schiacciatore* in zona 4",
+        "description": "L'alzata arriva per lo schiacciatore* che ha completato l'incrocio. Con solo 2 attaccanti davanti (schiacciatore* + centrale), l'opzione principale è l'ala sinistra."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno allo spostamento",
+        "description": "Tutti i giocatori riprendono lo spostamento a sinistra per il servizio successivo in rotazione P4."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "In P4, l'alzatore e il centrale DEVONO spostarsi a sinistra al servizio.",
+        "Questo spostamento apre la zona 6 alla ricezione dello schiacciatore in P6.",
+        "Switch alzatore↔schiacciatore* obbligatorio durante l'alzata.",
+        "L'opposto (in P1) non riceve e resta pronto per un attacco da seconda linea."
+      ],
+      "commonMistakes": [
+        "Spostamento dimenticato → conflitto di ricezione in zona 6.",
+        "Switch troppo tardivo → lo schiacciatore* attacca in P2 (lato sbagliato).",
+        "Opposto che riceve → perde l'opzione di attacco da seconda linea."
+      ]
+    }
+  },
+  "6v6-reception-semi-circle": {
+    "title": "Ricezione · semicerchio",
+    "shortDescription": "Ricezione ad arco aperto verso il battitore, equidistante. Fase U15-U18.",
+    "contextLabel": "5-1 · Semicerchio · U15-U18",
+    "players": {
+      "P": "Alzatore (nascosto)",
+      "R4a": "Schiacciatore sinistro",
+      "C": "Centrale",
+      "L": "Libero",
+      "R4b": "Schiacciatore destro",
+      "Op": "Opposto",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Arco semicircolare",
+        "description": "I 5 ricevitori formano un arco equidistante dal battitore. Tutti orientati verso l'alzatore nascosto in P1. Il centrale resta in ricezione (vs fuori nella formazione a 3 ricevitori)."
+      },
+      "s2": {
+        "title": "2. Servizio + lettura comune",
+        "description": "Servizio teso nella zona centrale. Tutti i giocatori leggono nella stessa direzione. Il centrale chiama la sua palla — è la sua zona nell'arco."
+      },
+      "s3": {
+        "title": "3. Penetrazione + alzata alta",
+        "description": "L'alzatore lascia il suo nascondiglio quando la palla sale. Arriva al bersaglio in zona 2-3 e distribuisce all'ala sinistra dove lo schiacciatore sinistro ha già iniziato la rincorsa."
+      },
+      "s4": {
+        "title": "4. Palla disponibile in zona 4",
+        "description": "L'alzata arriva in zona 4. Lo schiacciatore sinistro è in posizione per colpire. Distribuzione classica, leggibile — tipica della fase di apprendimento U15-U18."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno all'arco",
+        "description": "Tutti tornano all'arco semicircolare per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Arco semicircolare = fase intermedia tra W e ricezione a 3.",
+        "I 5 giocatori equidistanti dal battitore → copertura omogenea.",
+        "Adatto alle squadre giovanili (U15-U18) che apprendono la specializzazione.",
+        "Mantiene un centrale in ricezione (vs a 3 ricevitori dove è fuori)."
+      ],
+      "commonMistakes": [
+        "Arco troppo aperto sui lati → buchi al centro.",
+        "Giocatori troppo lontani dal battitore → reazione tardiva ai servizi veloci.",
+        "Conflitto con l'alzatore che vuole anche ricevere."
+      ]
+    }
+  },
+  "6v6-reception-w": {
+    "title": "Ricezione · W (5 ricevitori)",
+    "shortDescription": "Formazione W: 5 giocatori tranne l'alzatore. Adatta a principianti e al sistema 4-2.",
+    "contextLabel": "4-2 · W · Principianti / U13",
+    "players": {
+      "P": "Alzatore (fuori)",
+      "R4a": "Davanti sinistra",
+      "R4b": "Davanti destra",
+      "C": "Giocatore di centro",
+      "A1": "Dietro sinistra",
+      "A2": "Dietro destra",
+      "OPP_SRV": "Battitore avversario"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formazione W",
+        "description": "Disposizione a W: 2 giocatori davanti a metà campo, 1 giocatore al centro, 2 dietro profondi. L'alzatore è già fuori a rete in P2 (sistema 4-2). Ogni giocatore difende una zona piccola e ben definita."
+      },
+      "s2": {
+        "title": "2. Servizio + chiama il giocatore di centro",
+        "description": "Servizio teso nella zona centrale. Il giocatore di centro chiama \"Mia!\" perché la palla cade nella tasca centrale della W, equidistante dai giocatori davanti."
+      },
+      "s3": {
+        "title": "3. Alzata alta in zona 4",
+        "description": "Bagher mirato verso la zona 2 dove l'alzatore attende già a rete (niente penetrazione nel 4-2). Distribuisce un'alzata tesa in zona 4. Il davanti-sinistra innesca la rincorsa."
+      },
+      "s4": {
+        "title": "4. Palla disponibile per l'attaccante",
+        "description": "La palla arriva in zona 4. Il davanti-sinistra fa gli ultimi passi. Nel 4-2, le opzioni offensive sono limitate (2 attaccanti davanti), ma la semplicità del sistema compensa."
+      },
+      "s5": {
+        "title": "5. RESET — ritorno alla formazione W",
+        "description": "Tutti tornano alla loro zona nella W per il servizio successivo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formazione W = 5 ricevitori, l'alzatore esce.",
+        "Piccole zone individuali → meno dubbi, pochi conflitti.",
+        "Ideale in U13/U15 e nel sistema 4-2 (principianti).",
+        "Svantaggio: gli attaccanti specializzati sono vincolati in ricezione."
+      ],
+      "commonMistakes": [
+        "Conflitto centrale tra giocatore di centro e giocatori davanti → chiamata obbligatoria.",
+        "Giocatori troppo fermi nella loro zona → palla tra 2 zone persa.",
+        "Alzatore che resta in ricezione → impossibile prendere il 2° tocco."
+      ]
+    }
+  }
+}

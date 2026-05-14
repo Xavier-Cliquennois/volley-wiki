@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOKUMENTACJA",
+    "title": "PODSTAWOWE TECHNIKI",
+    "subtitle": "Kluczowe elementy techniczne siatkówki — opisy, najważniejsze punkty, częste błędy i materiały wideo."
+  },
+  "filters": {
+    "category": "KATEGORIA",
+    "level": "POZIOM",
+    "countSingle": "{{count}} technika",
+    "countPlural": "{{count}} technik",
+    "showAll": "POKAŻ WSZYSTKO",
+    "noResults": "BRAK TECHNIKI DLA TEJ KOMBINACJI"
+  },
+  "sectionTitle": "★ KARTY TECHNIK",
+  "card": {
+    "when": "KIEDY",
+    "keyPoints": "★ KLUCZOWE PUNKTY",
+    "errors": "✗ CZĘSTE BŁĘDY"
+  },
+  "tags": {
+    "Service": "Zagrywka",
+    "Réception": "Odbiór",
+    "Passe": "Wystawa",
+    "Attaque": "Atak",
+    "Défense": "Obrona",
+    "Débutant": "Początkujący",
+    "Intermédiaire": "Średniozaawansowany",
+    "Avancé": "Zaawansowany"
+  },
+  "items": {
+    "reception": {
+      "name": "Odbiór (sposób dolny)",
+      "description": "Odbiór sposobem dolnym to uniwersalny element defensywny. Złączone przedramiona tworzą płaską platformę kierującą piłkę do rozgrywającego. Platforma jest pasywna — to nogi wykonują pracę, dochodząc do piłki.",
+      "keyPoints": [
+        "Platforma: przedramiona złączone, kciuki równoległe i skierowane w dół",
+        "Punkt kontaktu między nadgarstkami a łokciami (nie same nadgarstki)",
+        "\"Piłka idzie tam, gdzie wskazuje platforma\" — kąt kontroluje kierunek",
+        "ZASTYGNIJ w momencie kontaktu: przestań się ruszać przed dotarciem piłki",
+        "Nigdy nie wymachuj ramionami — platforma jest pasywna"
+      ],
+      "errors": [
+        "Wymachiwanie ramionami w momencie kontaktu (błąd nr 1 — nieprzewidywalna piłka)",
+        "Zbyt wczesne łączenie ramion przed dojściem do piłki",
+        "Złamana platforma (jedno przedramię wyżej od drugiego)"
+      ],
+      "when": "Odbiór zagrywki, obrona w głębi boiska, niskie piłki"
+    },
+    "set": {
+      "name": "Wystawa",
+      "description": "Drugie odbicie przygotowujące atak. Obie ręce tworzą trójkąt nad czołem. Rozgrywający jest dyrygentem: jego precyzja i czytanie bloku przeciwnika decydują o skuteczności ataku.",
+      "keyPoints": [
+        "Trójkąt kciuk-palec wskazujący: \"okno\", przez które widać piłkę",
+        "Kontakt: opuszki i pierwsze paliczki kciuka, palca wskazującego i środkowego",
+        "Prawa stopa lekko z przodu — \"celownik\" wskazujący cel",
+        "Stopy, biodra, barki \"ustawione\" w kierunku celu PRZED kontaktem",
+        "Pełny wyprost nóg-bioder-ramion-nadgarstków, finisz w pozycji \"Supermana\""
+      ],
+      "errors": [
+        "Widoczne podwójne odbicie (ręce nie dotykają jednocześnie)",
+        "Barki prostopadle do siatki — piłka odlatuje za daleko",
+        "Niesienie piłki — zbyt powolny kontakt"
+      ],
+      "when": "Drugie odbicie przygotowujące atak"
+    },
+    "spike": {
+      "name": "Atak (smecz)",
+      "description": "Najbardziej złożony ruch balistyczny: szeregowy łańcuch kinetyczny stopy → biodra → tułów → bark → łokieć → nadgarstek. Każde przerwanie łańcucha niszczy transfer energii.",
+      "keyPoints": [
+        "Doskok w 3-4 krokach: zakończ podwójnym wykrokiem lewa-prawa",
+        "Złota zasada: ostatnie dwa kroki są najszybsze (wolno → szybko)",
+        "Kontakt lekko z przodu barku — nigdy za głową",
+        "Praca nadgarstka: ręka \"przykrywa\" piłkę → topspin",
+        "Wyskok PIONOWY, nie w stronę siatki"
+      ],
+      "errors": [
+        "Złe wyczucie czasu doskoku (za wcześnie = ponowny wyskok bez mocy)",
+        "Brak pracy nadgarstka — płaska piłka bez topspinu",
+        "Lądowanie na jednej nodze (ryzyko kontuzji ACL)"
+      ],
+      "when": "Trzecie odbicie kończące wymianę"
+    },
+    "block": {
+      "name": "Blok",
+      "description": "Pierwsza linia obrony przed atakiem. Kontakt z blokiem nie liczy się jako odbicie zespołu. Klucz: sekwencja wzrokowa PIŁKA → ROZGRYWAJĄCY → PIŁKA → BARK ATAKUJĄCEGO.",
+      "keyPoints": [
+        "Ustawienie: 45-60 cm od siatki, ręce wysoko (dłonie skierowane w stronę siatki)",
+        "Wyskok PO atakującym: 0,2-0,3 s dla wysokiej piłki",
+        "Penetruj jak najdalej ZA siatkę, nie tylko w górę",
+        "Palce rozstawione, sztywne nadgarstki, bez \"dziury\" między dłońmi",
+        "\"Uszczelnianie siatki\": barki, dłonie, ramiona przed uszami"
+      ],
+      "errors": [
+        "Zbyt wczesny wyskok (reaguj na wykrok atakującego)",
+        "Zbyt miękkie dłonie — piłka odbija się we własne boisko",
+        "Wyskok do przodu → dotknięcie siatki"
+      ],
+      "when": "W odpowiedzi na atak przeciwnika przy siatce"
+    },
+    "serve": {
+      "name": "Zagrywka",
+      "description": "Jedyna akcja bez bezpośredniej presji przeciwnika. W zależności od poziomu wyróżnia się cztery typy. Złota zasada: 80% błędów wynika z podrzutu — ustabilizuj podrzut przed gonieniem za mocą.",
+      "keyPoints": [
+        "Float z miejsca: \"uderz i zastygnij\" — zatrzymaj rękę po kontakcie dla zerowej rotacji",
+        "Jump float: ta sama mechanika co float z miejsca + krótki doskok",
+        "Jump topspin: pełna praca nadgarstka, zarezerwowany dla 1000+ powtórzeń",
+        "Stabilny podrzut = stabilna zagrywka — zasada nr 1",
+        "Celuj w \"szczeliny\" między odbierającymi, a nie w samych zawodników"
+      ],
+      "errors": [
+        "Float: zbyt długie wyprowadzenie nadające rotację (niszczy efekt float)",
+        "Niestabilny lub zbyt wysoki podrzut",
+        "Przekroczenie linii końcowej"
+      ],
+      "when": "Początek każdej wymiany"
+    },
+    "defense": {
+      "name": "Obrona (dig)",
+      "description": "Obrona za blokiem odróżnia drużyny średniozaawansowane od wyczynowych. Trzy filary: niska pozycja, zastygnięcie w momencie uderzenia przeciwnika, czytanie atakującego.",
+      "keyPoints": [
+        "Niska pozycja: stopy szerzej niż barki, kolana pod kątem ~90°",
+        "\"Głowa przed stopami, barki przed kolanami\"",
+        "Absolutne ZASTYGNIĘCIE w momencie uderzenia atakującego",
+        "Cień bloku: jeśli nie widzisz atakującego, jesteś za blokiem — przemieść się",
+        "Przy mocnym smeczu: nie machaj ramionami (siła smeczu wystarczy) — amortyzuj"
+      ],
+      "errors": [
+        "Ruch w momencie kontaktu — niemożliwe do kontrolowania",
+        "Stanie w \"cieniu\" bloku (strefa bezużyteczna)",
+        "Zbyt wczesne rzucanie się, gdy wystarczyłby krok w bok"
+      ],
+      "when": "Obrona przed smeczami przeciwnika, asekuracja głębi boiska"
+    }
+  }
+}

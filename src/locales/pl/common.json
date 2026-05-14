@@ -1,0 +1,57 @@
+{
+  "siteName": "Volley-Wiki",
+  "siteTagline": "TECHNIKI · PRZEPISY · TAKTYKA",
+  "nav": {
+    "home": "Strona główna",
+    "techniques": "Techniki",
+    "positions": "Pozycje",
+    "scenarios": "Scenariusze",
+    "guides": "Poradniki",
+    "rules": "Przepisy",
+    "glossary": "Słownik",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "mainNavigation": "Nawigacja główna"
+  },
+  "language": {
+    "label": "Język",
+    "fr": "Français",
+    "en": "English",
+    "switchTo": "Przełącz na {{lang}}"
+  },
+  "footer": {
+    "tagline": "VOLLEY·WIKI — TECHNIKI · PRZEPISY · TAKTYKA"
+  },
+  "actions": {
+    "back": "Wstecz",
+    "explore": "ODKRYJ →",
+    "read": "CZYTAJ →",
+    "readGuide": "PRZECZYTAJ PORADNIK →",
+    "showAll": "POKAŻ WSZYSTKO",
+    "reset": "RESETUJ",
+    "loading": "ŁADOWANIE…"
+  },
+  "labels": {
+    "documentation": "★ DOKUMENTACJA",
+    "category": "KATEGORIA",
+    "level": "POZIOM",
+    "duration": "Czas trwania",
+    "level_beginner": "Początkujący",
+    "level_intermediate": "Średniozaawansowany",
+    "level_advanced": "Zaawansowany",
+    "category_technique": "Technika",
+    "category_tactique": "Taktyka",
+    "goldenRule": "ZŁOTA ZASADA"
+  },
+  "teamSize": {
+    "4v4": "4 na 4",
+    "5v5": "5 na 5",
+    "6v6": "6 na 6"
+  },
+  "court": {
+    "net": "SIATKA",
+    "backOfCourt": "TYŁ BOISKA",
+    "ourSide": "Nasza strona",
+    "opponentSide": "Strona przeciwnika"
+  }
+}

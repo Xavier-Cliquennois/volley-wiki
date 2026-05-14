@@ -1,0 +1,1993 @@
+{
+  "4v4-attack-losange": {
+    "title": "4 na 4 · Atak w rombie",
+    "shortDescription": "Klasyczny romb: rozgrywający na P3 + 2 skrzydłowych na linii 3 m + zawodnik z tyłu. Odbiór → atak ze strefy 4.",
+    "contextLabel": "4 na 4 · Romb (1-2-1) · Szkolny / rekreacyjny",
+    "players": {
+      "P": "Rozgrywający (P3)",
+      "R4": "Lewe skrzydło (P4)",
+      "A2": "Prawe skrzydło (P2)",
+      "A": "Zawodnik z tyłu (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_B": "Blok przeciwnika",
+      "OPP_OFF": "Off-blocker przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika",
+      "OPP_D2": "Zawodnik z tyłu przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja rombu",
+        "description": "Klasyczny układ: rozgrywający W ŚRODKU siatki (P3) + 2 skrzydłowych na linii 3 m + zawodnik z tyłu w głębi."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór z tyłu boiska",
+        "description": "Jedyny zawodnik z tyłu wychodzi do przodu i odbija sposobem dolnym. Wysoka trajektoria w stronę rozgrywającego przy siatce."
+      },
+      "s3": {
+        "title": "3. Wystawa + doskok + asekuracja",
+        "description": "R4 wykonuje doskok w stronę strefy 4. Rozgrywający, A2 i A zamykają trójkąt asekuracyjny. Blok przeciwnika przesuwa się w stronę atakującego."
+      },
+      "s4": {
+        "title": "4. Smecz krzyżowy + blok pojedynczy",
+        "description": "Mocny smecz. Przeciwko blokowi pojedynczemu kąt jest szeroki: atakujący może celować w długą krzyżową lub krótko po linii."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się na długą krzyżową — przybywa o ułamek sekundy za późno, piłka już dotknęła podłogi."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do rombu",
+        "description": "Wszyscy wracają na swoje pozycje w rombie do kolejnej wymiany. Rozgrywający wraca do środka siatki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Klasyczny romb = najczęstsza formacja w 4 na 4.",
+        "Wariant \"rozgrywający w środku\": rozgrywający na P3, rozprowadza w lewo lub w prawo.",
+        "Standardowy pojedynczy blok przeciwnika w 4 na 4: szeroki kąt ataku.",
+        "Ograniczona asekuracja: 3 zawodników wokół atakującego."
+      ],
+      "commonMistakes": [
+        "Rozgrywający, który również odbiera → niemożliwe wystawienie za sobą.",
+        "Skrzydłowi zbyt głęboko → trudna wystawa dla rozgrywającego w środku.",
+        "Zawodnik z tyłu zbyt głęboko → brak asekuracji krótkich odbić od bloku."
+      ]
+    }
+  },
+  "4v4-attack-penetrant": {
+    "title": "4 na 4 · Rozgrywający wbiegający",
+    "shortDescription": "Uproszczony system 3-1: jedyny rozgrywający na P1 wbiega do strefy 2, uwalniając 3 atakujących z przodu.",
+    "contextLabel": "4 na 4 · Rozgrywający z tyłu · 3 atakujących",
+    "players": {
+      "R4": "Lewe skrzydło (P4)",
+      "C": "Środkowy (P3)",
+      "A2": "Prawe skrzydło (P2)",
+      "P": "Rozgrywający (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_B": "Blok przeciwnika",
+      "OPP_OFF": "Off-blocker przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika",
+      "OPP_D2": "Zawodnik z tyłu przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja 3-1",
+        "description": "Jedyny rozgrywający na P1 (linia obrony). 3 atakujących z przodu na P2, P3, P4. Brak libero: przyjmujący kończy swój doskok."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór + wbieganie",
+        "description": "Lewe skrzydło odbiera. Rozgrywający jednocześnie rozpoczyna wbieganie z P1 w stronę strefy 2."
+      },
+      "s3": {
+        "title": "3. Wystawa + doskok R4",
+        "description": "Wysoka wystawa na lewe skrzydło po jego biegu odbiorczym. Blok przeciwnika przesuwa się w jego stronę."
+      },
+      "s4": {
+        "title": "4. Smecz krzyżowy + blok pojedynczy",
+        "description": "Mocny smecz długą krzyżową. Mając tylko 3 asekurujących, tworzą krótki trójkąt wokół atakującego."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się na długą krzyżową — przybywa 0,1 s za późno w momencie uderzenia."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Rozgrywający wraca na P1 w linii obrony, R4 wraca do strefy 4. Wbieganie musi być antycypowane od następnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "System 3-1 = odpowiednik systemu 5-1 w 4 na 4. 1 dedykowany rozgrywający wbiegający.",
+        "Zaleta: 3 atakujących z przodu w każdej chwili, jak w 6 na 6.",
+        "Wada: wymaga bardzo czystego odbioru, ponieważ rozgrywający nie jest przy siatce.",
+        "Brak libero: przyjmujący wykonuje również doskok do ataku."
+      ],
+      "commonMistakes": [
+        "Wbieganie zbyt późne → inny zawodnik musi wystawić.",
+        "Odbiór zbyt krótki → rozgrywający przybywa zbyt daleko od siatki.",
+        "Asekuracja zapomniana — block-out przeciwnika = punkt."
+      ]
+    }
+  },
+  "4v4-attack-square": {
+    "title": "4 na 4 · Atak w kwadracie",
+    "shortDescription": "Formacja kwadrat (2 z przodu / 2 z tyłu): 2 blokujących + 2 zrównoważonych obrońców.",
+    "contextLabel": "4 na 4 · Kwadrat · Możliwy blok podwójny",
+    "players": {
+      "P": "Rozgrywający-atakujący (P2)",
+      "R4": "Atakujący (P4)",
+      "A1": "Lewy z tyłu (P5)",
+      "A2": "Prawy z tyłu (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika",
+      "OPP_D2": "Zawodnik z tyłu przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja kwadratu",
+        "description": "2 zawodników przy siatce (P2 i P4), 2 zawodników z tyłu. Zrównoważone pokrycie boiska z przodu i z tyłu."
+      },
+      "s2": {
+        "title": "2. Zagrywka + wysoki odbiór",
+        "description": "Lewy z tyłu odbija wysoki odbiór do rozgrywającego-atakującego w strefie 2."
+      },
+      "s3": {
+        "title": "3. Wystawa na skrzydło + doskok",
+        "description": "Rozgrywający rozprowadza do atakującego w strefie 4. Brak opcji środkowego (brak wyspecjalizowanego środkowego). Blok podwójny przesuwa się w stronę atakującego."
+      },
+      "s4": {
+        "title": "4. Smecz przeciwko blokowi podwójnemu",
+        "description": "Atakujący musi wybrać: krótko po linii, długa krzyżowa lub kiwka w wolną strefę. Blok podwójny (vs blok pojedynczy w rombie) — obrona utrudniona ofensywnie."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się na długą krzyżową. Mając tylko 2 zawodników na podłodze, strefa jest narażona."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Wszyscy wracają do kwadratu do kolejnej wymiany. Ta formacja pasuje drużynom z 2 silnymi blokującymi i 2 silnymi obrońcami."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formacja kwadratu: równowaga między atakiem/obroną, 2 strefy z przodu + 2 strefy z tyłu.",
+        "Umożliwia blok podwójny (vs blok pojedynczy w rombie) — lepsza obrona przy siatce.",
+        "Ale tylko 2 zawodników na podłodze → narażona na długie krzyżowe.",
+        "Dobre dla drużyn z 2 silnymi blokującymi i 2 silnymi obrońcami."
+      ],
+      "commonMistakes": [
+        "Zawodnicy przy siatce zbyt daleko od środka → łatwy blok przeciwnika.",
+        "Zawodnicy z tyłu zamrożeni w głębi → brak krótkiej asekuracji.",
+        "Zamieszanie co do tego, kto wystawia: rozgrywający-atakujący musi zawsze być z przodu."
+      ]
+    }
+  },
+  "5v5-attack-pentagon": {
+    "title": "5 na 5 · Atak w pentagonie",
+    "shortDescription": "Format 5 na 5: 1 jedyny rozgrywający + 1 środkowy + 2 skrzydłowych + 1 zawodnik z tyłu. Atak ze strefy 4.",
+    "contextLabel": "5 na 5 · System 4-1 · Format hybrydowy",
+    "players": {
+      "R4": "Lewe skrzydło",
+      "C": "Środkowy",
+      "P": "Rozgrywający (P2)",
+      "A1": "Lewy z tyłu (P5)",
+      "A2": "Prawy z tyłu (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentagon ofensywny",
+        "description": "5 zawodników w pentagonie: 3 z przodu (R4, C, P) + 2 z tyłu. Regularne pokrycie boiska. Brak libero, wszyscy zawodnicy z tyłu odbierają."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór z tyłu",
+        "description": "Lewy z tyłu przyjmuje pierwszą piłkę. Bez libero najbardziej niezawodny w odbiorze zawodnik z tyłu ją przyjmuje."
+      },
+      "s3": {
+        "title": "3. Wystawa + doskok",
+        "description": "Rozgrywający, już przy siatce, łatwo rozprowadza do strefy 4. Brak wbiegania w 5 na 5 — jest na P2. R4 rozpoczyna swój doskok."
+      },
+      "s4": {
+        "title": "4. Atak ze skrzydła + blok podwójny",
+        "description": "Lewe skrzydło kończy długą krzyżową. Blok przeciwnika również tworzy pentagon: 2 blokujących na skrzydle."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się na krzyżową. Obrona na podłodze jest rzadsza przy pojedynczym zawodniku z tyłu na strefę."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Wszyscy wracają do pentagonu. Bez libero rotacja zawodników z tyłu jest niezbędna do rozłożenia obciążenia odbioru."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5 na 5 = format hybrydowy (treningi, brakujący zawodnicy). Brak oficjalnych przepisów FFVB.",
+        "Pentagon: 1 zawodnik na kluczową strefę, regularne pokrycie całego boiska.",
+        "System 4-1 = odpowiednik systemu 5-1, ale z jednym atakującym mniej.",
+        "Zalecenie: zachować system 5-1 z 6 na 6, usuwając jednego nierozgrywającego z tyłu."
+      ],
+      "commonMistakes": [
+        "Brak libero w 5 na 5 → wszyscy z tyłu muszą umieć odbierać.",
+        "Próby bloku potrójnego → pozostaje tylko 2 obrońców na podłodze.",
+        "Zapomnienie o asekuracji ataku → jeden zawodnik mniej w asekuracji."
+      ]
+    }
+  },
+  "6v6-attack-4-2": {
+    "title": "Atak · system 4-2",
+    "shortDescription": "Początkujący system 4-2: stały rozgrywający z przodu w strefie 2, 2 atakujących do dyspozycji.",
+    "contextLabel": "4-2 · 2 rozgrywających po przekątnej · U13/U15",
+    "players": {
+      "R4a": "Przyjmujący (P4)",
+      "C": "Środkowy (P3)",
+      "P1": "Rozgrywający 1 (P2)",
+      "P2": "Rozgrywający 2 (P5)",
+      "C2": "Środkowy 2 (P6)",
+      "R4b": "Przyjmujący (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja 4-2",
+        "description": "2 rozgrywających po przekątnej (P2 i P5). Rozgrywający z przodu (P1) zawsze wykonuje 2. odbicie. Odbiór W ze środkowym C2 w środku."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór centralny",
+        "description": "Środkowy z tyłu przyjmuje pierwsze odbicie w klasycznym odbiorze W. Wysoka trajektoria do rozgrywającego z przodu na P2."
+      },
+      "s3": {
+        "title": "3. Bezpośrednia wystawa + doskok",
+        "description": "Rozgrywający z przodu musi tylko rozprowadzić: brak wbiegania, brak zamiany. Wysyła wysoką wystawę do przyjmującego w strefie 4. Blok podwójny na skrzydle."
+      },
+      "s4": {
+        "title": "4. Atak ze skrzydła + blok podwójny",
+        "description": "Przyjmujący atakuje w strefie 4. Brak opcji środkowego, ponieważ środkowy odbierał. Smecz na długą krzyżową przeciwko blokowi podwójnemu."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się w krzyżową, próbując odzyskać piłkę."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Wszyscy wracają na swoje pozycje. System 4-2 pozostaje najprostszym: brak wymaganej zamiany."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4-2: 2 rozgrywających + 2 środkowych + 2 przyjmujących. Zawsze 2 atakujących z przodu.",
+        "Rozgrywający z przodu (na P2 lub P3 w zależności od wariantu) systematycznie wykonuje 2. odbicie.",
+        "Brak wbiegania, brak zamiany: najłatwiejszy system do nauki.",
+        "Idealny dla U13/U15 lub początkujących dorosłych. Promuje naukę rotacji."
+      ],
+      "commonMistakes": [
+        "Rozgrywający z przodu, który również odbiera → niemożliwe wykonanie 2. odbicia.",
+        "Rozgrywający z tyłu chcący wystawić → niezachowana zasada rozgrywającego z przodu.",
+        "Środkowy, który nie wykonuje commit → łatwy blok podwójny."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p1": {
+    "title": "Atak · rotacja 5-1 P1",
+    "shortDescription": "Odbiór w 3 przyjmujących → rozgrywający wbiega z P1 → atak ze strefy 4 przez przyjmującego.",
+    "contextLabel": "5-1 · Rotacja P1 · Zagrywka przeciwnika",
+    "players": {
+      "L": "Libero (P5)",
+      "R4a": "Przyjmujący (P4)",
+      "R4b": "Przyjmujący (P6)",
+      "C": "Środkowy (P3)",
+      "Op": "Atakujący (P2)",
+      "P": "Rozgrywający (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_C": "Środkowy przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika",
+      "OPP_BC": "Libero przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja odbioru",
+        "description": "Nasza drużyna jest w formacji 3 przyjmujących: libero (P5), przyjmujący na P6 i przyjmujący na P4 cofnięci do linii 3 m. Środkowy i atakujący są poza odbiorem przy siatce. Rozgrywający czeka na P1, aby wbiec, gdy tylko zagrywka zostanie uderzona."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór",
+        "description": "Wysoka zagrywka przeciwnika na przyjmującego na P6, który odbija. Równolegle rozgrywający rozpoczyna wbieganie z P1 w stronę strefy 2-3."
+      },
+      "s3": {
+        "title": "3. Wysoka wystawa + doskok",
+        "description": "Piłka wznosi się do rozgrywającego, który dotarł do siatki. Wystawia wysoką piłkę do strefy 4, gdzie przyjmujący już rozpoczął swój doskok. Wokół niego tworzy się asekuracja."
+      },
+      "s4": {
+        "title": "4. Smecz + blok podwójny",
+        "description": "Przyjmujący wyskakuje i uderza długą krzyżową w stronę strefy 6 przeciwnika. Dwaj blokujący przeciwnika skaczą równolegle, aby zamknąć krzyżową i linię."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Libero przeciwnika rzuca się w stronę strefy 6, próbując rozpaczliwego odbicia. Rozgrywający przeciwnika przesuwa się w stronę strefy 2, aby przekazać piłkę, jeśli obrona ją dotknie."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Cała drużyna wraca na pozycję odbioru do kolejnej zagrywki. Ustawienie to decyduje o jakości kolejnego ataku."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Odbiór w 3 przyjmujących: libero + 2 przyjmujących pokrywa całą szerokość boiska.",
+        "Rozgrywający wbiega z P1 w stronę strefy 2-3, gdy tylko zagrywka zostanie uderzona.",
+        "Atakujący przyjmujący przesuwa się po linii 3 m podczas odbioru, aby przygotować swój doskok.",
+        "Asekuracja w 5 osób (3 blisko + 2 daleko) w niskiej pozycji wokół atakującego."
+      ],
+      "commonMistakes": [
+        "Rozgrywający wbiegający zbyt późno → wystawa w wyskoku wymuszona przez innego zawodnika.",
+        "Atakujący przyjmujący rozpoczynający doskok zbyt wcześnie → przybywa pod piłką zamiast się zaangażować.",
+        "Asekuracja zapomniana → udany blok przeciwnika = punkt stracony bezpośrednio."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p2": {
+    "title": "Atak · rotacja 5-1 P2",
+    "shortDescription": "Rozgrywający już przy siatce na P2: 2 atakujących z przodu + atakujący wyjątkowo atakuje w strefie 4.",
+    "contextLabel": "5-1 · Rotacja P2 · Rozgrywający z przodu",
+    "players": {
+      "R4a": "Przyjmujący (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Przyjmujący (P1)",
+      "C": "Środkowy (P3)",
+      "Pt": "Atakujący (P4)",
+      "P": "Rozgrywający (P2)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Zagrywka przeciwnika",
+        "description": "Zagrywka w stronę strefy 5-6. Libero zgłasza się i przygotowuje do odbicia. Rozgrywający już czeka przy siatce na P2."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór libero",
+        "description": "Wysoka zagrywka w stronę strefy 6. Libero wkracza i odbija precyzyjnie do celu rozgrywającego (strefa 2)."
+      },
+      "s3": {
+        "title": "3. Wystawa do atakującego + doskok",
+        "description": "Rozgrywający, już na P2, wyjątkowo rozprowadza do strefy 4, gdzie atakujący rozpoczyna swój doskok. Blok przeciwnika regroup w środku."
+      },
+      "s4": {
+        "title": "4. Smecz + blok podwójny",
+        "description": "Atakujący wyskakuje po lewej i uderza długą krzyżową. Rzadka konfiguracja, ale nieunikniona na P2 — rozgrywający pozostaje na miejscu."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej przeciwnika rzuca się na długą krzyżową, próbując rozpaczliwego odbicia."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Wszyscy wracają na pozycję odbioru. Rotacja P2 pozostaje najbardziej ograniczona ofensywnie: tylko 2 atakujących z przodu."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotacja P2 = najbardziej ograniczona ofensywnie (tylko 2 atakujących z przodu).",
+        "Rozgrywający już na miejscu: brak wbiegania, łatwe rozprowadzanie.",
+        "Atakujący wyjątkowo atakuje po lewej (strefa 4), aby uwolnić rozgrywającego.",
+        "Priorytetowo traktuj skrzydła i ataki z głębi przyjmujących jako opcje."
+      ],
+      "commonMistakes": [
+        "Rozgrywający próbujący wystawić w wyskoku w strefie 2, gdy już tam jest → trudne 2. odbicie.",
+        "Atakujący wahający się między 2 a 4 → blok przeciwnika na miejscu.",
+        "Środkowi nie wykonujący commit → łatwy blok podwójny dla przeciwnika."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p3": {
+    "title": "Atak · rotacja 5-1 P3 (pipe)",
+    "shortDescription": "Rozgrywający na P3 przesuwa się w stronę 2-3 → pipe przez przyjmującego z głębi w strefie 6.",
+    "contextLabel": "5-1 · Rotacja P3 · Atak z głębi",
+    "players": {
+      "L": "Libero (P5)",
+      "Pt": "Atakujący (P6)",
+      "R4b": "Przyjmujący (P1)",
+      "R4a": "Przyjmujący (P4)",
+      "P": "Rozgrywający (P3)",
+      "C": "Środkowy (P2)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca przekątnej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja odbioru",
+        "description": "Zagrywka oczekiwana po prawej stronie. Przyjmujący na P1 odbiera. Rozgrywający na P3 jest gotowy przesunąć się w stronę 2-3, gdy tylko zagrywka zostanie uderzona."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór",
+        "description": "Wysoka zagrywka w stronę strefy 1. Przyjmujący na P1 odbija do celu. Rozgrywający rozpoczyna swój ruch w stronę 2-3."
+      },
+      "s3": {
+        "title": "3. Wystawa pipe + doskok",
+        "description": "Rozgrywający wysyła płaską wystawę do strefy 6: szybka trajektoria 2 m od siatki. Atakujący rozpoczyna doskok zza linii 3 m do pipe'a."
+      },
+      "s4": {
+        "title": "4. Pipe + blok podwójny",
+        "description": "Mocne uderzenie w środku z linii obrony. Blok podwójny ze skrzydeł nie może zasłonić środka — kluczowa opcja nowoczesnego systemu 5-1."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Centralny obrońca przeciwnika rzuca się w sam środek, próbując złapać pipe — piłka przybywa szybko, mało czasu na reakcję."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Cała drużyna wraca na pozycję odbioru. Środkowy musi pozostać gotowy do zamiany do środka siatki dla kolejnej sekwencji."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe jest 4. opcją ofensywną oprócz 3 ataków przy siatce.",
+        "Środkowy przesuwa się do środka siatki, podczas gdy rozgrywający idzie do 2-3.",
+        "Trajektoria pipe'a: płaska, 2 m od siatki, wybicie zza linii 3 m.",
+        "Bardzo skuteczne przeciwko blokowi koncentrującemu się na skrzydłach."
+      ],
+      "commonMistakes": [
+        "Pipe zbyt wysoki → blok przeciwnika ma czas wrócić do środka.",
+        "Przyjmujący z głębi wybijający się w strefie ataku → błąd ataku z głębi.",
+        "Środkowy zamieniający się zbyt późno → strefa 3 zablokowana."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p4": {
+    "title": "Atak · rotacja 5-1 P4",
+    "shortDescription": "Rozgrywający z przodu na P4 przesuwa się w prawo; przyjmujący* atakuje w strefie 4, środkowy w 3, atakujący z głębi w 1.",
+    "contextLabel": "5-1 · Rotacja P4 · Rozgrywający z przodu",
+    "players": {
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "Pt": "Atakujący (P1)",
+      "P": "Rozgrywający (P4)",
+      "C": "Środkowy (P3)",
+      "R4a": "Przyjmujący (P2)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca przekątnej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja P4 + przesunięcie",
+        "description": "Rozgrywający w strefie 4, przyjmujący* w strefie 2 — skrzyżowane ustawienie. Rozgrywający i środkowy przesuwają się w lewo, aby uwolnić strefę odbioru dla libero."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór libero",
+        "description": "Zagrywka celuje w strefę 6. Libero wkracza i odbija do klasycznego celu (między P2 a P3)."
+      },
+      "s3": {
+        "title": "3. Zamiana rozgrywający↔przyjmujący* + wysoka wystawa",
+        "description": "Niezbędna krzyżówka: rozgrywający opuszcza P4 w stronę 2-3, przyjmujący* opuszcza P2 w stronę 4, aby atakować. Wysoka wystawa do lewego skrzydła."
+      },
+      "s4": {
+        "title": "4. Atak ze skrzydła + blok podwójny",
+        "description": "Smecz długą krzyżową. Z rozgrywającym z przodu (mały przy bloku) atak musi szybko się zakończyć. Blok podwójny przesunięty w stronę skrzydła."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca przekątnej przeciwnika rzuca się na długą trajektorię, próbując rozpaczliwego odbicia."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Wszyscy wracają na początkowe pozycje. Przesunięcie rozgrywający/środkowy w lewo jest zachowane do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotacja P4 = rozgrywający z przodu. Zamiana rozgrywający↔przyjmujący* obowiązkowa.",
+        "2 atakujących z przodu: przyjmujący* w 4, środkowy w 3. Pipe lub atakujący z głębi jako opcje.",
+        "Rozgrywający i środkowy przesuwają się w lewo przy zagrywce, aby uwolnić strefę 6.",
+        "Atakujący (na P1) nie odbiera i pozostaje gotowy do ataku z głębi."
+      ],
+      "commonMistakes": [
+        "Zamiana zapomniana → przyjmujący* zostaje po prawej, atakujący w słabej pozycji.",
+        "Rozgrywający i środkowy zbyt daleko po prawej przy zagrywce → konflikt odbioru w strefie 6.",
+        "Blok przeciwnika nieskommitowany przez środkowego → łatwy blok podwójny na lewym skrzydle."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p5": {
+    "title": "Atak · rotacja 5-1 P5",
+    "shortDescription": "Długie wbieganie z P5. Zamiana C/przyjmujący. Wystawa do atakującego w strefie 2.",
+    "contextLabel": "5-1 · Rotacja P5 · Długie wbieganie",
+    "players": {
+      "P": "Rozgrywający (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Przyjmujący (P1)",
+      "C": "Środkowy (P4)",
+      "R4a": "Przyjmujący (P3)",
+      "Pt": "Atakujący (P2)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca przekątnej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja odbioru",
+        "description": "Rozgrywający w tylno-lewym P5, jak najdalej od siatki. C na P4 i przyjmujący na P3 zamienią się, gdy tylko zagrywka zostanie uderzona."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór + zamiana C↔przyjmujący",
+        "description": "Zagrywka celuje w strefę 1, gdzie odbiera przyjmujący. Jednocześnie środkowy przesuwa się do środka, a atakujący przyjmujący zajmuje strefę 4."
+      },
+      "s3": {
+        "title": "3. Długie wbieganie + wystawa w strefie 2",
+        "description": "Rozgrywający przebiega całe boisko z P5 — najdłuższe wbieganie. Krótko rozprowadza do atakującego w strefie 2. Blok przeciwnika przesuwa się w prawo, aby zamknąć."
+      },
+      "s4": {
+        "title": "4. Smecz krzyżowy + blok podwójny",
+        "description": "Atakujący wyskakuje w strefie 2 i uderza długą krzyżową. Klasyczna kombinacja na tej rotacji. Blok podwójny na miejscu po prawej."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca przekątnej przeciwnika rzuca się w strefę 5, próbując złapać długą piłkę."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Cała drużyna wraca na pozycję odbioru. Środkowy wraca na P4, przyjmujący na P3, rozgrywający na P5."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P5 = najdłuższe wbieganie. Wymaga doskonałego odbioru.",
+        "Środkowy i przyjmujący zamieniają się, gdy tylko zagrywka zostanie uderzona, aby umieścić C w strefie 3.",
+        "Atakujący w strefie 2 jest najbardziej dostępnym celem dla rozgrywającego.",
+        "Pipe możliwy jako opcja, jeśli wystawa jest płaska i szybka."
+      ],
+      "commonMistakes": [
+        "Zbyt płaska wystawa podczas trwającego wbiegania → rozgrywający pod piłką.",
+        "Późna zamiana C↔przyjmujący → środkowy w strefie 4 = bezużyteczny przy bloku.",
+        "Krótki odbiór → rozgrywający przybywa zbyt daleko od siatki."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p6": {
+    "title": "Atak · rotacja 5-1 P6 (atak szybki)",
+    "shortDescription": "Średnie wbieganie z P6 → szybki atak centralny przez środkowego.",
+    "contextLabel": "5-1 · Rotacja P6 · Szybka kombinacja",
+    "players": {
+      "L": "Libero (P5)",
+      "P": "Rozgrywający (P6)",
+      "R4b": "Przyjmujący (P1)",
+      "R4a": "Przyjmujący (P4)",
+      "Pt": "Atakujący (P3)",
+      "C": "Środkowy (P2)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Centralny obrońca przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja odbioru",
+        "description": "Zagrywka oczekiwana po lewej stronie. Libero przyjmuje swój kanał. Atakujący na P3 zamieni się na P2, środkowy na P2 przesunie się do środka siatki."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór + zamiana atakujący↔C",
+        "description": "Wysoka zagrywka w stronę strefy 5. Libero odbiera. Atakujący przesuwa się do strefy 2, a środkowy zajmuje środek siatki, aby przygotować atak szybki."
+      },
+      "s3": {
+        "title": "3. Średnie wbieganie",
+        "description": "Rozgrywający przebiega z P6 do strefy 2-3 (średnia ścieżka, krótsza niż z P5). Środkowy zaczyna ładowanie do tempa 1."
+      },
+      "s4": {
+        "title": "4. Wstępny wyskok + szybka płaska wystawa",
+        "description": "Środkowy wybija się JUŻ przed wystawą — to jest tempo 1. Rozgrywający wysyła szybką piłkę na 1 m, tuż przed nim. Środkowy jest już w powietrzu."
+      },
+      "s5": {
+        "title": "5. Centralne uderzenie + blok za późno",
+        "description": "Szybkie centralne uderzenie zaskakuje blok przeciwnika, zanim się ustawi. Blokujący przeciwnika skaczą tuż po — za późno."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Środkowy wraca do środka, wszyscy wracają do formacji odbioru. Szybki centralny atak to znakowa kombinacja tej rotacji."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P6 = średnie wbieganie. Idealne dla szybkich kombinacji.",
+        "Tempo 1: środkowy już w powietrzu, gdy rozgrywający dotyka piłki.",
+        "Środkowy angażuje centralny blok przeciwnika: uwalnia skrzydła dla przyjmujących.",
+        "Systematyczna zamiana atakujący↔C, aby umieścić środkowego z powrotem w środku."
+      ],
+      "commonMistakes": [
+        "Środkowy wybijający się zbyt późno → piłka przelatuje nad jego ręką.",
+        "Wystawa zbyt wysoka do tempa 1 → blok przeciwnika na miejscu.",
+        "Atakujący, który się nie zamienia → środkowy uwięziony w strefie 2."
+      ]
+    }
+  },
+  "6v6-attack-6-2": {
+    "title": "Atak · system 6-2",
+    "shortDescription": "System 6-2: rozgrywający z linii obrony wbiega, 3 atakujących z przodu w każdej chwili.",
+    "contextLabel": "6-2 · Rozgrywający wbiegający · Średniozaawansowany",
+    "players": {
+      "R4a": "Przyjmujący (P4)",
+      "C": "Środkowy (P3)",
+      "PA": "Rozgrywający-atakujący (P2)",
+      "P": "Rozgrywający (P1)",
+      "C2": "Środkowy (P6)",
+      "R4b": "Przyjmujący (P5)",
+      "OPP_SRV": "Zagrywający przeciwnika",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika",
+      "OPP_D1": "Obrońca krzyżowej przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja 6-2",
+        "description": "2 wszechstronnych rozgrywających: ten z przodu atakuje (rozgrywający-atakujący), ten z tyłu rozprowadza (i wbiega). 3 atakujących z przodu w każdej chwili."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór środkowego z tyłu",
+        "description": "Klasyczny centralny odbiór przez C2. Rozgrywający rozpoczyna wbieganie z P1 w stronę strefy 2-3."
+      },
+      "s3": {
+        "title": "3. Wystawa w strefie 2 + doskok",
+        "description": "Rozprowadzanie do rozgrywającego-atakującego w strefie 2. Maksymalna różnorodność: 3 zagrożenia ofensywne z przodu. Blok podwójny przesunięty w prawo."
+      },
+      "s4": {
+        "title": "4. Atak krzyżowy + blok podwójny",
+        "description": "Rozgrywający-atakujący uderza długą krzyżową. System 6-2 zawsze gwarantuje 3 zagrożenia ofensywne — blok przeciwnika nie może antycypować."
+      },
+      "s5": {
+        "title": "5. Obrona przeciwnika",
+        "description": "Obrońca krzyżowej rzuca się na długą trajektorię po lewej stronie przeciwnika — desperacka próba obrony."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do formacji",
+        "description": "Cała drużyna wraca na swoje pozycje. Rozgrywający-atakujący zostaje z przodu, rozgrywający wraca na P1."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "6-2: 2 wszechstronnych rozgrywających po przekątnej.",
+        "Zawsze 3 atakujących z przodu (rozgrywający z przodu atakuje, rozgrywający z tyłu rozprowadza).",
+        "Systematyczne wbieganie, jak w 5-1, ale z 2 naprzemiennymi rozprowadzającymi.",
+        "Doskonałe do rozwijania wszechstronności przed przejściem do 5-1."
+      ],
+      "commonMistakes": [
+        "Różnice w stylu między 2 rozgrywającymi → niespójne rozprowadzanie.",
+        "Rozgrywający z przodu, który nie pojawia się do ataku → tylko 2 opcje.",
+        "Wbieganie zbyt późne → inny zawodnik musi wystawić."
+      ]
+    }
+  },
+  "4v4-defense-block-1": {
+    "title": "4 na 4 · Obrona w systemie A (1 blokujący + 3 obrońców)",
+    "shortDescription": "System A w 4 na 4 (formacja rombu): 1 samodzielny blokujący + kiwka + krzyżowa + linia. Najpopularniejsza konfiguracja.",
+    "contextLabel": "4 na 4 · System A · 1 blokujący + 3 obrońców",
+    "players": {
+      "C": "Środkowy (P3)",
+      "R4": "Lewe skrzydło (P4)",
+      "A2": "Prawe skrzydło (P2)",
+      "A": "Zawodnik z tyłu (P1)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Baza rombu + czytanie",
+        "description": "Z 4 zawodnikami każdy obrońca jest kluczowy. Nasz środkowy przygotowuje się do bloku pojedynczego. Obowiązkowe czytanie wystawy przeciwnika."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa do strefy Z2 przeciwnika",
+        "description": "Rozprowadzanie do ich prawego skrzydła. Atak przybywa na naszym frontowo-LEWYM rogu. Środkowy musi przesunąć się w lewą stronę."
+      },
+      "s3": {
+        "title": "3. Pojedynczy centralny blok + sygnał linia/krzyżowa",
+        "description": "Środkowy przesuwa się w lewo i blokuje sam. Obowiązkowy sygnał (linia lub krzyżowa) dla zorientowania 3 obrońców. Bez sygnału nie wiedzą, co osłaniać."
+      },
+      "s4": {
+        "title": "4. Smecz długą krzyżową + blok",
+        "description": "Atakujący uderza długą krzyżową. Pojedynczy blok zamyka linię, sygnał ogłoszony wcześniej."
+      },
+      "s5": {
+        "title": "5. Odzyskanie przez jedynego zawodnika z tyłu",
+        "description": "Zawodnik z tyłu na P1 broni na swojej osi — jego czytanie musi być doskonałe, brak innych zawodników z tyłu, aby skompensować. Wysokie odbicie do celu."
+      },
+      "s6": {
+        "title": "6. RESET — formacja rombu",
+        "description": "Powrót do formacji rombu. Asekuracja dostosuje się do kolejnej strefy ataku od następnego czytania."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "System A (1 blokujący + 3 obrońców): najpopularniejsza konfiguracja w halowym 4 na 4.",
+        "Sygnał blokującego linia/krzyżowa obowiązkowy — bez niego 3 obrońców nie wie, co osłaniać.",
+        "Kluczowe odległości: blokujący 0,3 m od siatki; obrońcy w głębi 7-7,5 m; kiwka/za blokiem 3,5-4 m.",
+        "Każdy obrońca pokrywa ~30-40 m² (vs 20 m² w 6 na 6) → antycypacja = umiejętność nr 1.",
+        "Blok podwójny (system B) zarezerwowany dla silnych atakujących: pozostawia tylko 2 obrońców w głębi."
+      ],
+      "commonMistakes": [
+        "Odizolowany blokujący bez asekuracji kiwki: 3 obrońców idzie w głąb, strefa 3-5 m pusta.",
+        "2 obrońców w jednej linii: bok w bok na tej samej głębokości → cut shot ląduje między nimi.",
+        "Brak sygnału między blokującym a obrońcami (linia vs krzyżowa).",
+        "Obrońca kiwki zbyt daleko od siatki: cofa się z innymi i już nie pokrywa krótkich kiwek.",
+        "Rozgrywający biegnący do swojego celu, zanim piłka jest obroniona → dziura defensywna."
+      ]
+    }
+  },
+  "4v4-defense-vs-z2": {
+    "title": "4 na 4 · Obrona przed Z2",
+    "shortDescription": "Lustrzane odbicie systemu A: 1 blokujący + 3 obrońców przeciwko atakowi przeciwnika ze strefy Z2 (ich prawa → przybywa na naszą lewą).",
+    "contextLabel": "4 na 4 · System A · 1 blokujący + 3 obrońców",
+    "players": {
+      "C": "Środkowy (P3)",
+      "R4": "Lewe skrzydło (P4)",
+      "A2": "Prawe skrzydło (P2)",
+      "A": "Zawodnik z tyłu (P1)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie ataku przeciwnika ze strefy Z2",
+        "description": "Atak przeciwnika z ich strefy 2 (ich prawa) → przybywa na nasz frontowo-LEWY róg. Środkowy będzie musiał przesunąć się w lewo, aby blokować."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa do strefy Z2 przeciwnika",
+        "description": "Rozprowadzanie do ich prawego skrzydła. Obrona uruchamia swoje lustrzane dopasowanie."
+      },
+      "s3": {
+        "title": "3. Pojedynczy centralny blok po lewej stronie",
+        "description": "Środkowy przesuwa się w lewą stronę i blokuje sam. Sygnał linia/krzyżowa obowiązkowy. R4 (lewe skrzydło) zostaje off-blockerem na 2,5 m, A2 (prawe skrzydło) broni długiej krzyżowej."
+      },
+      "s4": {
+        "title": "4. Smecz po przekątnej + pojedynczy blok",
+        "description": "Atakujący uderza długą krzyżową. Pojedynczy blok pokrywa zasygnalizowaną linię."
+      },
+      "s5": {
+        "title": "5. Odzyskanie przez jedynego zawodnika z tyłu",
+        "description": "Zawodnik z tyłu P1 (lekko przesunięty na stronę piłki) broni odbiciem sposobem dolnym. Jego czytanie kompensuje brak innych zawodników z tyłu."
+      },
+      "s6": {
+        "title": "6. RESET — formacja rombu",
+        "description": "Powrót do formacji rombu. Środkowy wraca do środka, gotowy ponownie się przesunąć, jeśli przeciwnik zmieni stronę."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Idealne lustrzane odbicie Z4 w 4 na 4: system A (1 blokujący + 3 obrońców).",
+        "Pojedynczy blokujący P3 po lewej stronie, sygnał linia/krzyżowa obowiązkowy.",
+        "P4 (lewe skrzydło) jako off-blocker 3,5-4 m od siatki — krótka asekuracja i kiwki.",
+        "P2 (prawe skrzydło) broni krótkiej krzyżowej (~7 m, w prostej linii).",
+        "Jedyny zawodnik z tyłu P1 broni długiej krzyżowej."
+      ],
+      "commonMistakes": [
+        "Lewe skrzydło P4 blokujące ze środkowym → brak off-blockera po lewej stronie.",
+        "Jedyny zawodnik z tyłu zbyt daleko z przodu → głęboka piłka krzyżowa niezabezpieczona.",
+        "Blokujący bez sygnału → 3 obrońców nie wie, co osłaniać.",
+        "P2 zbyt daleko od siatki → nie pokrywa krótkiej krzyżowej."
+      ]
+    }
+  },
+  "4v4-defense-vs-z3": {
+    "title": "4 na 4 · Obrona przed Z3 (atak szybki w środku)",
+    "shortDescription": "Szybki centralny atak przeciwnika w 4 na 4: czytanie bloku pojedynczego + 3 obrońców. Najtrudniejsza do obrony konfiguracja.",
+    "contextLabel": "4 na 4 · Blok pojedynczy (read) · Strukturalna słabość",
+    "players": {
+      "C": "Środkowy (P3)",
+      "R4": "Lewe skrzydło (P4)",
+      "A2": "Prawe skrzydło (P2)",
+      "A": "Zawodnik z tyłu (P1)",
+      "OPP_A": "Środkowy przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie ataku szybkiego przeciwnika",
+        "description": "W 4 na 4 szybki centralny atak (tempo 1) to najbardziej niebezpieczny atak, ponieważ dostępny jest tylko 1 blokujący. Jedyny zawodnik z tyłu już skanuje głęboką oś."
+      },
+      "s2": {
+        "title": "2. Szybka centralna wystawa",
+        "description": "Rozgrywający wysyła płaską wystawę do środkowego, który już rozpoczął doskok. Nasze skrzydła cofają się do połowy boiska, aby pokryć krzyżowe."
+      },
+      "s3": {
+        "title": "3. Blok pojedynczy (read) + szybki smecz",
+        "description": "Środkowy sam wyskakuje na READ — brak commitu możliwego z defensywnym środkowym. Środkowy przeciwnika uderza prosto w osi."
+      },
+      "s4": {
+        "title": "4. Defensywny pivot: jedyny zawodnik z tyłu",
+        "description": "Zawodnik z tyłu P1 broni mocnej piłki prosto w osi — gra rolę Z6 z 6 na 6. Jego czytanie musi być DOSKONAŁE."
+      },
+      "s5": {
+        "title": "5. RESET — formacja rombu",
+        "description": "Powrót do bazy 4 na 4. Środkowy cofa się przy siatce, zawodnik z tyłu wraca na pozycję osiową."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Dokumentacja 4 na 4 to potwierdza: szybki centralny atak to PRAWDZIWA SŁABOŚĆ 4 na 4 (tylko 1 blokujący).",
+        "Blok pojedynczy w READ: brak commitu możliwego z defensywnym środkowym.",
+        "2 skrzydła pokrywają 2 krótkie krzyżowe w połowie boiska (~3,5-4 m od siatki).",
+        "Jedyny zawodnik z tyłu to defensywny pivot — gra rolę Z6 z 6 na 6 na osi centralnej.",
+        "Antycypacja = umiejętność nr 1: z ~40 m² do pokrycia, błąd czytania jest nie do odzyskania."
+      ],
+      "commonMistakes": [
+        "Blok podwójny na ataku szybkim → tylko 2 obrońców na podłodze, krzyżowe całkowicie otwarte.",
+        "Zawodnik z tyłu wychodzący zbyt wcześnie do przodu → głęboka piłka ląduje za nim.",
+        "Skrzydła pozostające przy siatce bez blokowania → dziury na linii 3 m za blokiem.",
+        "Czytanie środkowego przeciwnika zbyt późno → absorbujemy atak bez ruchu."
+      ]
+    }
+  },
+  "5v5-defense-vs-z2": {
+    "title": "5 na 5 · Obrona przed Z2",
+    "shortDescription": "Idealne lustrzane odbicie Z4. System 2-1-2 przeciwko atakowi przeciwnika ze strefy Z2 (ich prawa → przybywa na naszą lewą).",
+    "contextLabel": "5 na 5 · 2-1-2 · Blok podwójny + off-blocker",
+    "players": {
+      "C": "Środkowy (P3)",
+      "Op": "Atakujący (P2)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "P": "Rozgrywający (P1)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie ataku przeciwnika ze strefy Z2",
+        "description": "Atak przeciwnika z ich strefy 2 (ich prawa) → przybywa na nasz frontowo-LEWY róg. Idealne lustrzane odbicie Z4."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa do strefy Z2 przeciwnika",
+        "description": "Rozprowadzanie do ich prawego skrzydła. Atak przybywa na nasz frontowo-LEWY róg."
+      },
+      "s3": {
+        "title": "3. Lustrzany blok podwójny (przyjmujący + środkowy)",
+        "description": "Przyjmujący blokujący linię + środkowy krzyżowa po lewej stronie. Atakujący (P2) wycofuje się jako off-blocker po prawej. Libero broni linii w cieniu bloku, rozgrywający broni długiej krzyżowej."
+      },
+      "s4": {
+        "title": "4. Smecz + blok podwójny",
+        "description": "Prawe skrzydło przeciwnika uderza długą krzyżową. Przyjmujący + środkowy skaczą."
+      },
+      "s5": {
+        "title": "5. Obrona rozgrywającego — złożone przejście",
+        "description": "Rozgrywający jest na trajektorii długiej krzyżowej. Defensywne odbicie — ponieważ jest głównym obrońcą, atakujący musi wykonać 2. odbicie."
+      },
+      "s6": {
+        "title": "6. RESET",
+        "description": "Powrót do bazy 5 na 5. Obowiązkowa komunikacja między rozgrywającym a atakującym do kolejnej sekwencji."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Idealne lustrzane odbicie Z4 w 5 na 5: system 2-1-2 (blok podwójny + off-blocker + 2 obrońców).",
+        "Blok podwójny: przyjmujący (P4) blokujący linię + środkowy (P3) zamyka krzyżową.",
+        "Atakujący (P2) staje się off-blockerem po prawej stronie, cofa się na linię 3 m.",
+        "Rozgrywający z linii obrony (P1) broni długiej krzyżowej.",
+        "Jeśli rozgrywający broni → 2. odbicie przez atakującego (zapasowy rozgrywający) jest obowiązkowe."
+      ],
+      "commonMistakes": [
+        "Atakujący blokujący ze strefy 2 → brak off-blockera po prawej stronie.",
+        "Rozgrywający, który broni I chce przekazać → zamieszanie przy 2. odbiciu.",
+        "Libero źle ustawione na Z2 (broni tutaj LINII, nie długiej krzyżowej).",
+        "Brak komunikacji między rozgrywającym a atakującym."
+      ]
+    }
+  },
+  "5v5-defense-vs-z3": {
+    "title": "5 na 5 · Obrona przed Z3 (atak szybki / tempo 1)",
+    "shortDescription": "Blok pojedynczy (środkowy) na szybki centralny atak przeciwnika w 5 na 5 — częściowe pokrycie osiowe.",
+    "contextLabel": "5 na 5 · Blok pojedynczy (read) · Czytanie ataku szybkiego",
+    "players": {
+      "C": "Środkowy (P3)",
+      "Op": "Atakujący (P2)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "P": "Rozgrywający (P1)",
+      "OPP_A": "Środkowy przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie ataku szybkiego przeciwnika",
+        "description": "Płaska wystawa do środkowego nieuchronna. 0,3-0,5 s między wystawą a uderzeniem — nasz środkowy skanuje swojego odpowiednika, już w ruchu."
+      },
+      "s2": {
+        "title": "2. Płaska wystawa + skrzydła jako off-blockerzy",
+        "description": "Rozgrywający przeciwnika wystawia płasko do środkowego. Nasze skrzydła cofają się na 1,5 m od siatki na linii ataku, aby pokryć boczne odbicia."
+      },
+      "s3": {
+        "title": "3. Blok pojedynczy (read) + szybki smecz",
+        "description": "Nasz środkowy sam wyskakuje na czytaniu. Środkowy przeciwnika uderza krótko krzyżową — kąty są krótkie w porównaniu z wysoką wystawą."
+      },
+      "s4": {
+        "title": "4. Obrona libero",
+        "description": "Libero (wysunięte do 5 m, ponieważ kąty są krótkie) broni odbiciem sposobem dolnym w swoim lewym kanale. Wysoka trajektoria do celu — rozgrywający wróci do siatki."
+      },
+      "s5": {
+        "title": "5. RESET",
+        "description": "Powrót do bazy 5 na 5 po sekwencji. Środkowy i skrzydła ponownie się ustawiają."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Blok pojedynczy (środkowy P3) na czytaniu — brak commitu możliwego na ataku szybkim.",
+        "Skrzydła (P4 + P2) 2 m od siatki na linii ataku: pokrywają odbicia od bloku.",
+        "Przy tylko 2 obrońcach w głębi (P5 + P1) głębokie pokrycie OSIOWE jest częściowe.",
+        "Z1 i Z5 WYSUWAJĄ się o 1 m (~7 m od siatki), ponieważ kąty są krótsze przy ataku szybkim.",
+        "\"Zatrzymanie w kontakcie\": wszyscy zatrzymani w dokładnym momencie uderzenia."
+      ],
+      "commonMistakes": [
+        "Blok podwójny na ataku szybkim → za późno i pozostawia tylko 1 obrońcę na podłodze.",
+        "Obrońcy zamrożeni z tyłu (8 m+) → szybka piłka ląduje przed ich ruchem.",
+        "\"False stepping\" (pierwszy krok do tyłu) → stracony czas na tempie 1.",
+        "Off-blockerzy pozostający przy siatce → nie pokrywają odbić."
+      ]
+    }
+  },
+  "5v5-defense-vs-z4": {
+    "title": "5 na 5 · Obrona przed Z4",
+    "shortDescription": "System 2-1-2 przeciwko atakowi przeciwnika ze strefy Z4 (ich lewa → przybywa na naszą prawą): blok podwójny + off-blocker + 2 obrońców.",
+    "contextLabel": "5 na 5 · 2-1-2 · Blok podwójny + off-blocker",
+    "players": {
+      "C": "Środkowy (P3)",
+      "Op": "Atakujący (P2)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "P": "Rozgrywający (P1)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie ataku przeciwnika ze strefy Z4",
+        "description": "Atak przeciwnika z ich strefy 4 (ich lewa) → przybywa na nasz frontowo-PRAWY róg. Sekwencyjne czytanie \"piłka → rozgrywający → piłka → atakujący\"."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa do strefy Z4 przeciwnika",
+        "description": "Standardowe rozprowadzanie od ich rozgrywającego do lewego skrzydła. Nasza linia frontowa identyfikuje strefę ataku."
+      },
+      "s3": {
+        "title": "3. Blok podwójny + przyjmujący off-blocker",
+        "description": "Atakujący (P2) + środkowy (P3) idą blokować po prawej stronie. Przyjmujący cofa się na 1,5 m od siatki jako off-blocker. Libero w długiej krzyżowej, rozgrywający po linii prostej — każdy pokrywa ~30 m²."
+      },
+      "s4": {
+        "title": "4. Smecz długą krzyżową + blok",
+        "description": "Atakujący uderza długą krzyżową (statystycznie najczęstsza trajektoria). Atakujący + środkowy skaczą."
+      },
+      "s5": {
+        "title": "5. Obrona libero",
+        "description": "Libero jest na głównej trajektorii. Wysokie odbicie do celu — przejście do kontrataku."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do bazy 2-1-2",
+        "description": "Przejście do bazowej formacji. Rozgrywający wraca do swojej strefy 1, obrona reorganizuje się do kolejnej sekwencji."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "System 2-1-2: 2 blokujących + 1 off-blocker (osłona kiwki) + 2 obrońców w głębi.",
+        "Zalecenie: zachować system 5-1 z 6 na 6, usuwając jednego nierozgrywającego z tyłu (konfiguracja 3F-2B).",
+        "Off-blocker 2-2,5 m od siatki, 1 m od linii — pokrywa strefę 3 m za blokiem.",
+        "Krytyczne czytanie: ~30 m² na obrońcę (vs 20 m² w 6 na 6), zmniejszone początkowe bezpieczeństwo pozycyjne.",
+        "\"Zatrzymanie w kontakcie\": zatrzymanie i równowaga w dokładnym momencie uderzenia."
+      ],
+      "commonMistakes": [
+        "Blok potrójny → tylko 1 obrońca na podłodze = gwarantowany punkt.",
+        "Off-blocker pozostający przy siatce → strefa 3 m za blokiem niezabezpieczona.",
+        "Brak hierarchii priorytetów między 2 obrońcami w głębi → 2 zawodników na tej samej piłce.",
+        "Mechaniczne odtwarzanie 6 na 6 bez dostosowania stref (libero musi tutaj pokrywać szerszy obszar)."
+      ]
+    }
+  },
+  "6v6-attack-coverage": {
+    "title": "Asekuracja · atak 5-1",
+    "shortDescription": "Asekuracja 5-osobowa na ataku ze strefy 4: 2 łuki (3 blisko + 2 daleko), aby obronić potencjalny block-out.",
+    "contextLabel": "5-1 · Asekuracja 5 zawodników · Układ 3-2",
+    "players": {
+      "R4a": "Atakujący przyjmujący (P4)",
+      "C": "Środkowy (P3)",
+      "P": "Rozgrywający (wbiegnięty)",
+      "Op": "Atakujący (P2)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_BL": "Lewy blokujący przeciwnika",
+      "OPP_BR": "Prawy blokujący przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Przygotowanie ataku Z4",
+        "description": "Nasz przyjmujący jest w doskoku, gotowy do wybicia. Jeszcze przed uderzeniem asekuracja organizuje się: to antycypacja ratuje block-out, nie reakcja."
+      },
+      "s2": {
+        "title": "2. Pierwszy łuk (3 bliscy zawodnicy)",
+        "description": "Rozgrywający + środkowy + libero tworzą półokrąg 1-1,5 m od atakującego, BARDZO niska pozycja, ramiona wyciągnięte do przodu, gotowi do krótkiego odbicia."
+      },
+      "s3": {
+        "title": "3. Smecz + blok podwójny przeciwnika",
+        "description": "Nasz przyjmujący wyskakuje i uderza krzyżową. Dwaj blokujący przeciwnika skaczą równolegle, aby zamknąć trajektorię — asekuracja jest już zamrożona, czeka."
+      },
+      "s4": {
+        "title": "4. Block-out: piłka wraca",
+        "description": "Blok przeciwnika dotyka piłki, która rykoszetuje na nasze boisko 1,5 m od atakującego. Bez asekuracji to stracony punkt — tutaj rozgrywający jest dokładnie w miejscu lądowania."
+      },
+      "s5": {
+        "title": "5. Odzyskanie przez rozgrywającego (1. wsparcie)",
+        "description": "Rozgrywający (1. bliskie wsparcie) odbija piłkę sposobem dolnym 1 m od atakującego. To JEGO odpowiedzialność po wystawie do strefy 4 — zasada niepodlegająca negocjacji."
+      },
+      "s6": {
+        "title": "6. Możliwy nowy atak",
+        "description": "Ratunek pozwala na nową piłkę z powrotem przy siatce. Bez asekuracji 5-osobowej = punkt stracony bezpośrednio przy block-out."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Asekuracja 5-osobowa = standard na poziomie elity. Układ 3-2 (3 blisko + 2 daleko).",
+        "Rozgrywający jest ZAWSZE 1. bliskim wsparciem, 1-1,5 m od atakującego.",
+        "BARDZO niska pozycja dla 3 bliskich zawodników, ramiona wyciągnięte do przodu.",
+        "Bez asekuracji udany blok przeciwnika = punkt stracony bezpośrednio.",
+        "Antycypacja przeważa nad reakcją: asekuracja organizuje się PRZED uderzeniem."
+      ],
+      "commonMistakes": [
+        "Brak asekuracji → blok przeciwnika = punkt.",
+        "Rozgrywający pozostający przy siatce po wystawie → brak 1. wsparcia.",
+        "Asekurujący stojący lub zbyt daleko → krótkie piłki nie odzyskane.",
+        "Tylko 2 lub 3 asekurujących zamiast 5 → długie block-outy stracone."
+      ]
+    }
+  },
+  "6v6-defense-6-front": {
+    "title": "Obrona · man-up (2-1-3)",
+    "shortDescription": "System man-up (2-1-3, dawniej \"obrona W\"): obrońca wysunięty za blok do krótkich kiwek.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Anty-kiwka",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6 wysunięty)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Baza man-up",
+        "description": "Przeciwnik znany z kiwek — taktyczny wybór man-up. Przyjmujący (na P6) jest już wysunięty do 2,5 m, gotowy przesunąć się za blok."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa przeciwnika do Z4",
+        "description": "Standardowe rozprowadzanie do Z4 przeciwnika. Obrona rozpoznaje konfigurację i ustawia się."
+      },
+      "s3": {
+        "title": "3. Zawodnik wysunięty za blok",
+        "description": "Kluczowa różnica man-up: R4b wysuwa się do 2,5 m od siatki, w cieniu bloku. Libero i rozgrywający cofają się do 6 m, aby skompensować. Standardowy blok podwójny (atakujący + środkowy)."
+      },
+      "s4": {
+        "title": "4. Kiwka w wyskoku przeciwnika",
+        "description": "Atakujący wybiera kiwkę zamiast smeczu. Piłka ląduje tuż za blokiem — dokładnie tam, gdzie jest zawodnik wysunięty."
+      },
+      "s5": {
+        "title": "5. Krótkie odzyskanie przez wysuniętego zawodnika",
+        "description": "Wysunięty zawodnik jest dokładnie tam, gdzie spada piłka. Precyzyjne odbicie do atakującego, aby przekazać 2. odbicie w wyskoku."
+      },
+      "s6": {
+        "title": "6. RESET — baza man-up",
+        "description": "Powrót do pozycji bazowej 2-1-3. R4b ponownie ustawiony na 2,5 m, libero i rozgrywający w głębi."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Man-up = 2-1-3 (Keller / USAV) — dawniej \"czerwona obrona\".",
+        "⚠ NIE mylić z \"formacją W\", która jest formacją ODBIORU, a nie systemem defensywnym.",
+        "Wyjątkowe pokrycie kiwek, roll shotów i piłek \"junk\" za blokiem.",
+        "Ale: tylko 3 obrońców w głębi → narażony na mocne smecze w ciasnych krzyżowych.",
+        "Wskazanie: drużyny młodzieżowe, szkolne, taktyczni przeciwnicy, którzy grają wiele kiwek lub off-speed shotów."
+      ],
+      "commonMistakes": [
+        "Trzymanie systemu obwodowego przeciwko drużynie, która kiwka → krótkie piłki stracone.",
+        "Wysunięty zawodnik zbyt daleko do przodu (przy siatce) → zablokowany w impecie do blokowania.",
+        "Libero, które się nie cofa → dziura z tyłu na mocnym smeczu.",
+        "Mylenie \"obrony W\" i \"man-up\" w słownictwie drużyny — źródło nieporozumień."
+      ]
+    }
+  },
+  "6v6-defense-perimeter": {
+    "title": "Obrona · obwodowa (2-0-4)",
+    "shortDescription": "Biała obrona: 4 obrońców na liniach, U otwarte w stronę siatki. Dominująca w elitarnej siatkówce męskiej.",
+    "contextLabel": "5-1 · Obwodowa 2-0-4 (biała obrona)",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja obwodowa (2-0-4)",
+        "description": "4 obrońców tworzy U otwarte w stronę siatki, prawie na liniach — \"jedna stopa na linii\" (Liskevych). Środek boiska jest celowo opuszczony."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa przeciwnika do Z4",
+        "description": "Wystawa do ich lewego skrzydła. Nasza linia frontowa identyfikuje strefę, obrońcy na obwodzie pozostają ściśle na liniach."
+      },
+      "s3": {
+        "title": "3. Blok podwójny + 4 obrońców na obwodzie",
+        "description": "Standardowy blok podwójny (atakujący linia + środkowy krzyżowa). Brak wysuniętego obrońcy za blokiem (stąd 0 w środku). Libero na lewej linii, P6 na linii końcowej, P1 na prawej linii."
+      },
+      "s4": {
+        "title": "4. Mocny smecz po linii + blok",
+        "description": "Atakujący uderza po linii na nasz tylno-lewy róg. Trajektoria przechodzi blisko bloku — długi block-out jest prawdopodobny."
+      },
+      "s5": {
+        "title": "5. Odzyskanie na linii",
+        "description": "Libero odzyskuje na linii — idealne pokrycie obwodowe. Łatwo identyfikuje piłki \"out\". Wysokie odbicie do strefy 2-3."
+      },
+      "s6": {
+        "title": "6. RESET — obwodowa",
+        "description": "Powrót do czystej formacji obwodowej: wszyscy z tyłu na liniach, środek centralny opuszczony przez taktyczną konwencję."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Obwodowa = 2-0-4 (\"biała obrona\"): 4 obrońców na obwodzie, żaden wysunięty.",
+        "System dominujący w nowoczesnej i międzynarodowej siatkówce męskiej, gdzie dominuje moc.",
+        "Logika: statystycznie zapełniać strefy, w których lądują mocne smecze (linie i głębokie rogi).",
+        "Doskonała identyfikacja piłek \"out\" i obrona block-outów.",
+        "⚠ Środek boiska (strefa centralna między 3 a 5 m) jest celowo pozostawiony otwarty."
+      ],
+      "commonMistakes": [
+        "Obrońcy zapadający się w stronę środka → tracą logikę systemu i już nie pokrywają linii.",
+        "System wybrany przeciwko drużynie, która kiwka → środek boiska niezabezpieczony, kiwki stracone.",
+        "Niedoświadczone libero → błędne odczytanie piłek \"out\" po bokach.",
+        "Brak atletyzmu, by rzucić się do przodu na kiwki → słabość wykorzystywana."
+      ]
+    }
+  },
+  "6v6-defense-read": {
+    "title": "Obrona · read",
+    "shortDescription": "Elitarna reaktywna obrona: adaptacyjne pozycje na podstawie wystawy, doskoku i wskazówek uzbrojonego ramienia przeciwnika.",
+    "contextLabel": "5-1 · Read defense · Międzynarodowa",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Neutralna pozycja bazowa",
+        "description": "Wszyscy obrońcy w pozycji read, kolana ugięte, stopy równoległe. Obowiązkowa sekwencja wzrokowa: \"piłka → rozgrywający → piłka → atakujący\"."
+      },
+      "s2": {
+        "title": "2. Czytanie wystawy (w stronę Z2 przeciwnika)",
+        "description": "Gdy tylko piłka opuszcza ręce rozgrywającego przeciwnika → dostosuj się do strefy ataku. Tutaj Z2 przeciwnika (ich prawa = nasza lewa)."
+      },
+      "s3": {
+        "title": "3. Czytanie atakującego + dostosowanie",
+        "description": "Równolegle czytaj doskok, orientację uzbrojonego ramienia i barków. Wszyscy ponownie się ustawiają na podstawie wskazówek: wysoki bark = smecz, rotacja = prawdopodobny kierunek."
+      },
+      "s4": {
+        "title": "4. Czytanie smeczu + blok podwójny",
+        "description": "Atakujący otwiera długą krzyżową. Obrona jest już na miejscu dzięki wskazówkom wzrokowym. Przyjmujący + środkowy blokują. \"Zatrzymanie w kontakcie\" obowiązkowe."
+      },
+      "s5": {
+        "title": "5. Czytanie odzyskania przez libero",
+        "description": "Idealna antycypacja: libero jest już na długiej krzyżowej, dokładnie na trajektorii. Wysokie odbicie do celu."
+      },
+      "s6": {
+        "title": "6. RESET — neutralna baza",
+        "description": "Powrót do neutralnej pozycji, gotowy do czytania następnej fazy. Czytanie zaczyna się od nowa przy każdym dotknięciu przez przeciwnika."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Read defense = brak stałego ustawienia, wszystko jest adaptacyjne. Nowoczesna obrona jest definiowana mniej przez formację, a bardziej przez czytanie.",
+        "Sekwencja wzrokowa \"piłka → rozgrywający → piłka → atakujący\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fazy: neutralna baza → czytanie wystawy → czytanie atakującego → dostosowanie → \"zatrzymanie w kontakcie\" → ściganie.",
+        "Preferowany system na międzynarodowym poziomie elitarnym (seniorzy FIVB).",
+        "Najbardziej skuteczny przeciwko wszechstronnym atakującym."
+      ],
+      "commonMistakes": [
+        "Ruch PRZED wystawą → złe czytanie, zawodnik na złej nodze.",
+        "Niekompletne czytanie: czytanie tylko wystawy, nie uzbrojonego ramienia.",
+        "Ruch w momencie kontaktu atakującego (nie \"zatrzymanie w kontakcie\") → reaktywność zmniejszona o połowę.",
+        "Brak koordynacji → 2 obrońców na tej samej piłce, dziura gdzie indziej."
+      ]
+    }
+  },
+  "6v6-defense-rotation": {
+    "title": "Obrona · rotacja (3-2-1)",
+    "shortDescription": "Obrona rotacyjna / slide defense: zawodnicy z tyłu przesuwają się w stronę strony ataku, przeciwny zawodnik z tyłu wysuwa się za blok.",
+    "contextLabel": "5-1 · Rotacja 3-2-1 · Slide defense",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Atakujący przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Baza + czytanie wystawy do Z4",
+        "description": "Konfiguracja bazowa przed rotacją. Rozgrywający przeciwnika wbiega i przygotowuje wystawę do swojego lewego skrzydła."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa do Z4 przeciwnika",
+        "description": "Standardowe rozprowadzanie. Nasza drużyna uruchamia rotację: P1 wysuwa się za blok, P6 przesuwa się w stronę prawej linii, libero pozostaje na krzyżowej."
+      },
+      "s3": {
+        "title": "3. Zaangażowana rotacja 3-2-1",
+        "description": "Rozgrywający (P1) WYSUWA się na 3 m za blok, aby pokryć kiwkę. P6 przesuwa się w stronę prawej linii na 8 m. Libero pozostaje w długiej krzyżowej. R4 klasyczny off-blocker po lewej."
+      },
+      "s4": {
+        "title": "4. Smecz krzyżowy + blok",
+        "description": "Atakujący uderza długą krzyżową. Blok podwójny (atakujący + środkowy) — główna trajektoria jest pokrywana przez libero."
+      },
+      "s5": {
+        "title": "5. Obrona libero na krzyżowej",
+        "description": "Libero jest dokładnie w miejscu lądowania głównego uderzenia. Wysokie odbicie do strefy 2-3 — płynne przejście do kontrataku."
+      },
+      "s6": {
+        "title": "6. RESET — baza przed kolejną rotacją",
+        "description": "Powrót do bazy. Rotacja była skuteczna: krótka kiwka byłaby zebrana przez wysuniętego rozgrywającego, długa krzyżowa przez libero."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotacja 3-2-1 (slide defense): 3 obrońców z tyłu przesuwa się w stronę strony ataku.",
+        "Przeciwny zawodnik z tyłu (często rozgrywający, jeśli na P1) WYSUWA się za blok, aby pokryć kiwkę.",
+        "Środkowy z tyłu przesuwa się w stronę linii po atakowanej stronie (~8,5 m, 1-1,5 m od linii).",
+        "Doskonałe pokrycie głębokiej linii ORAZ kiwki jednocześnie.",
+        "Szybkie przejście rozgrywającego, jeśli rozgrywający jest wysuniętym zawodnikiem.",
+        "Wariant \"counter-rotate\": rotacja w przeciwnym kierunku."
+      ],
+      "commonMistakes": [
+        "Niekompletna rotacja → dziury w pokryciu.",
+        "Przeciwny przekątniowy róg narażony (jeden obrońca mniej w głębi).",
+        "Mylenie rotate (w stronę piłki) i counter-rotate (przeciwnie) — wymaga silnej komunikacji.",
+        "Wysunięty zawodnik zamrożony → nie czyta kiwek vs smeczy."
+      ]
+    }
+  },
+  "6v6-defense-vs-pipe": {
+    "title": "Obrona · pipe przeciwnika (BIC)",
+    "shortDescription": "Obrona przeciwko pipe'owi przeciwnika (atak z głębi Z6): blok pojedynczy lub podwójny, P6 wysuwa się, aby \"ścisnąć boisko\".",
+    "contextLabel": "5-1 · Pipe / BIC · P6 wysunięty, zacieśniony obwód",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Pipe przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Czytanie pipe'a",
+        "description": "Ich rozgrywający zaraz wyśle płaską wystawę do środka tyłu. Nasz środkowy skanuje zarówno możliwego środkowego przeciwnika, JAK I pas pipe'a. P6 musi być gotowy do wysunięcia."
+      },
+      "s2": {
+        "title": "2. Płaska centralna wystawa + doskok pipe'a",
+        "description": "Rozgrywający przeciwnika dostarcza płaską wystawę w stronę osi Z6. Atakujący pipe'a wchodzi w doskok zza linii 3 m, długi rozbieg. P6 zaczyna przesuwać się do przodu."
+      },
+      "s3": {
+        "title": "3. Centralny blok + zacieśnione skrzydła",
+        "description": "Nasz środkowy sam wyskakuje na pipe'a. Skrzydła (przyjmujący + atakujący) cofają się na ~1,5 m od siatki, aby pokryć boczne odbicia. Z1 i Z5 poświęcają linie, aby bronić osi."
+      },
+      "s4": {
+        "title": "4. Uderzenie pipe'a + centralny blok",
+        "description": "Atakujący uderza głęboko w osi. Nasz środkowy idzie do siatki na blok pojedynczy — szybki pipe nie pozwala na czas, by ustawić dwóch blokujących."
+      },
+      "s5": {
+        "title": "5. Osiowe odzyskanie przez P6",
+        "description": "Piłka przechodzi do głębokiej osi — P6 (wysunięty na 6,5 m) jest dokładnie w miejscu uderzenia. Odbicie prosto w osi do strefy 2-3 rozgrywającego."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do zacieśnionej bazy",
+        "description": "Przejście do bazowej pozycji gotowej na pipe: P6 wysunięty, Z1/Z5 na osi centralnej. Konfiguracja pozostaje ważna, jeśli gra dalej rotuje."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe = atak z głębi z Z6 (środek tyłu) przez OH2 lub OPP — celuje w głęboką oś centralną.",
+        "Blok pojedynczy (środkowy) najczęstszy — blok podwójny trudny na szybkim tempie.",
+        "Defensywny P6 WYSUWA się na ~6-7 m od siatki, dokładnie w osi (\"ścisnąć boisko\").",
+        "Z1 i Z5 zamykają się w stronę środka (~7 m, 1,5 m od linii) — trochę poświęcają linie.",
+        "BIC (szybki pipe) = jeden z najtrudniejszych ataków do obrony, ponieważ środkowy nie może zaangażować ataku szybkiego + pipe'a + dwóch skrzydeł."
+      ],
+      "commonMistakes": [
+        "Blok podwójny na pipe'a → pozostawia skrzydło całkowicie otwarte, jeśli przeciwnik zmieni atak.",
+        "P6 zamrożony z tyłu (8 m+) → szybki pipe ląduje przed jego ruchem.",
+        "Z1/Z5 rozstawione za szeroko na liniach → oś centralna niezabezpieczona.",
+        "Brak komunikacji między środkowym a skrzydłami, kto bierze pipe'a vs atak szybki."
+      ]
+    }
+  },
+  "6v6-defense-vs-z2": {
+    "title": "Obrona · atak przeciwnika ze strefy Z2",
+    "shortDescription": "Idealne lustrzane odbicie Z4. Blok podwójny (przyjmujący linia + środkowy krzyżowa) przeciwko atakowi przeciwnika ze strefy Z2 → przybywa na naszą lewą.",
+    "contextLabel": "5-1 · Rozgrywający z tyłu P1 · Blok podwójny · Obwodowa",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Atakujący Z2 przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika",
+      "OPP_R": "Przyjmujący przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Odbiór przeciwnika + wbieganie",
+        "description": "Ich zawodnik z tyłu odbił. Rozgrywający przeciwnika wbiega ze swojej P1 do celu. Nasza obrona czyta w READY."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa przeciwnika do Z2",
+        "description": "Rozgrywający przeciwnika rozprowadza do swojego prawego skrzydła. Atak przybywa na nasz frontowo-LEWY róg. Idealna lustrzana konfiguracja Z4."
+      },
+      "s3": {
+        "title": "3. Lustrzany blok podwójny + przesunięcie obronne",
+        "description": "Przyjmujący (P4) blokujący linia + środkowy (P3) zamyka krzyżową. Atakujący (P2) off-blocker po prawej na linii 3 m. Libero broni głębokiej lewej linii. P1 bierze długą krzyżową."
+      },
+      "s4": {
+        "title": "4. Smecz przeciwnika + blok podwójny",
+        "description": "Prawe skrzydło przeciwnika uderza długą krzyżową. Przyjmujący i środkowy skaczą. Zatrzymanie w kontakcie obowiązkowe."
+      },
+      "s5": {
+        "title": "5. Obrona rozgrywającego na krzyżowej",
+        "description": "Rozgrywający (P1) jest na głównej trajektorii długiej krzyżowej. Defensywne odbicie — natychmiastowe pytanie: kto bierze 2. odbicie?"
+      },
+      "s6": {
+        "title": "6. Przekazanie atakującego + kontratak",
+        "description": "Atakujący opuszcza swoje miejsce off-blockera, aby wykonać 2. odbicie. Rozprowadzanie do przyjmującego w strefie 4, który przygotowuje uderzenie."
+      },
+      "s7": {
+        "title": "7. RESET — powrót do bazy obronnej",
+        "description": "Wszyscy przechodzą do pozycji bazowej, gdy tylko piłka wraca na stronę przeciwnika."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Idealne lustrzane odbicie Z4: przyjmujący (P4 = OH) blokujący linia + środkowy (P3) zamyka krzyżową.",
+        "Atakujący (P2 = OPP) staje się off-blockerem po prawej stronie, cofa się na linię 3 m.",
+        "Rozgrywający na P1 (linia obrony) broni długiej krzyżowej.",
+        "Krytyczne zarządzanie: jeśli rozgrywający jest na P2 (z przodu), TO ON blokuje linię — napięte przejście.",
+        "Jeśli rozgrywający broni na P1 → 2. odbicie przez atakującego (zapasowy rozgrywający) jest obowiązkowe."
+      ],
+      "commonMistakes": [
+        "Atakujący blokujący ze strefy 2 → brak off-blockera po prawej stronie.",
+        "Środkowy nieustawiony z przyjmującym → otwarty blok.",
+        "Libero źle ustawione na Z2 — broni tutaj głębokiej LINII, a nie długiej krzyżowej.",
+        "Rozgrywający broniący I chcący przekazać → zamieszanie przy 2. odbiciu."
+      ]
+    }
+  },
+  "6v6-defense-vs-z3": {
+    "title": "Obrona · atak przeciwnika ze strefy Z3 (atak szybki / tempo 1)",
+    "shortDescription": "Blok pojedynczy w read (środkowy) przeciwko szybkiemu centralnemu atakowi przeciwnika — zawodnicy z tyłu wysunięci o jeden metr.",
+    "contextLabel": "5-1 · Blok pojedynczy (read) · Zatrzymanie w kontakcie",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Środkowy przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika",
+      "OPP_R4": "Przyjmujący przeciwnika",
+      "OPP_R": "Przyjmujący przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Odbiór przeciwnika + błyskawiczne wbieganie",
+        "description": "Ich zawodnik z tyłu właśnie odbił. Rozgrywający sprintem do siatki na atak szybki. Tempo 1 = 0,3-0,5 s między wystawą a uderzeniem. Nasz środkowy skanuje ruch środkowego przeciwnika, już w ruchu."
+      },
+      "s2": {
+        "title": "2. Płaska wystawa + środkowy w powietrzu",
+        "description": "Rozgrywający przeciwnika wysyła bardzo niską płaską wystawę do środkowego, który już się wybił. Nasze skrzydła cofają się na linię 3 m, aby uwolnić odbicia od bloku."
+      },
+      "s3": {
+        "title": "3. Blok pojedynczy + szybki smecz",
+        "description": "Nasz środkowy sam wyskakuje na czytaniu. Środkowy przeciwnika uderza krótko krzyżową. Najbardziej niebezpieczne uderzenie: piłka nurkująca pod blokiem."
+      },
+      "s4": {
+        "title": "4. Obrona rozgrywającego na linii prostej",
+        "description": "Z1 (rozgrywający) i Z5 (libero) są wysunięci do ~7 m, ponieważ kąty są krótkie przy ataku szybkim. Rozgrywający (Z1) odzyskuje w swoim kanale."
+      },
+      "s5": {
+        "title": "5. 2. odbicie przez atakującego (zapasowy rozgrywający)",
+        "description": "Ponieważ nasz rozgrywający bronił, atakujący na P2 wykonuje 2. odbicie do przekazania. Nasz przyjmujący przygotowuje kontratak w strefie 4."
+      },
+      "s6": {
+        "title": "6. RESET — powrót do bazy",
+        "description": "Przejście do pozycji bazowej, gdy tylko rozgrywający przeciwnika dotyka piłki. Obrona reorganizuje się do kolejnej sekwencji."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Blok pojedynczy na centralnym ataku szybkim: tylko środkowy skacze (read najczęstszy, commit, jeśli scouting jest silny).",
+        "Z1 i Z5 WYSUWAJĄ się o jeden metr (~7,5 m), ponieważ kąty są krótsze przy ataku szybkim.",
+        "Skrzydła pozostają na linii 3 m (~2-2,5 m od siatki) na odbicia od bloku.",
+        "\"Zatrzymanie w kontakcie\": wszyscy zatrzymani i zrównoważeni w dokładnym momencie uderzenia."
+      ],
+      "commonMistakes": [
+        "Wszyscy z linii ataku skaczący → pozostawia skrzydła otwarte dla kolejnej wystawy.",
+        "Blok zbyt późny → piłka przelatuje nad rękami.",
+        "\"False stepping\" (pierwszy krok do tyłu) → marnowanie i tak małej dostępnej ilości czasu.",
+        "Z1/Z5 zamrożeni z tyłu (8 m+) → szybka piłka ląduje krótko przed ich ruchem."
+      ]
+    }
+  },
+  "6v6-defense-vs-z4": {
+    "title": "Obrona · atak przeciwnika ze strefy Z4",
+    "shortDescription": "Blok podwójny na atak przeciwnika ze strefy 4 (ich lewe skrzydło → przybywa na naszą prawą) w obronie obwodowej.",
+    "contextLabel": "5-1 · Rozgrywający z tyłu P1 · Blok podwójny · Obwodowa",
+    "players": {
+      "P": "Rozgrywający (P1)",
+      "Op": "Atakujący (P2)",
+      "C": "Środkowy (P3)",
+      "R4": "Przyjmujący (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Przyjmujący (P6)",
+      "OPP_A": "Atakujący Z4 przeciwnika",
+      "OPP_S": "Rozgrywający przeciwnika",
+      "OPP_R": "Przyjmujący przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Odbiór przeciwnika + wbieganie",
+        "description": "Ich zawodnik z tyłu właśnie odbił. Rozgrywający przeciwnika wbiega w stronę swojego celu między Z2 a Z3. Nasza obrona czyta w READY, sekwencja wzrokowa \"piłka → rozgrywający → piłka → atakujący\"."
+      },
+      "s2": {
+        "title": "2. Wysoka wystawa przeciwnika do Z4",
+        "description": "Rozgrywający przeciwnika dostarcza wysoką wystawę do swojego lewego skrzydła. Atak przybędzie na nasz frontowo-prawy róg. Linia frontowa już identyfikuje strefę ataku."
+      },
+      "s3": {
+        "title": "3. Blok podwójny + przesunięcie obwodowe",
+        "description": "Atakujący (P2) linia + środkowy (P3) zamyka krzyżową. R4 off-blocker na linii 3 m po lewej stronie. Libero w długiej krzyżowej ~7,5 m, P6 w osi na 8 m, P1 głęboka linia w cieniu bloku."
+      },
+      "s4": {
+        "title": "4. Smecz przeciwnika + blok podwójny",
+        "description": "Atakujący przeciwnika uderza długą krzyżową. Atakujący i środkowy skaczą równolegle. W momencie kontaktu wszyscy obrońcy są zatrzymani i zrównoważeni (\"zatrzymanie w kontakcie\")."
+      },
+      "s5": {
+        "title": "5. Obrona libero na długiej krzyżowej",
+        "description": "Libero jest dokładnie na głównej trajektorii (długa krzyżowa). Wysokie odbicie do strefy 2-3, aby przygotować kontratak."
+      },
+      "s6": {
+        "title": "6. Kontratak przez przyjmującego",
+        "description": "Nasz rozgrywający dostarcza wysoką wystawę do przyjmującego, który cofnął się na linię 3 m. Smecz długą krzyżową po stronie przeciwnika, aby zakończyć wymianę."
+      },
+      "s7": {
+        "title": "7. RESET — powrót do bazy obronnej",
+        "description": "Wszyscy przechodzą do pozycji bazowej, gdy tylko piłka wraca na stronę przeciwnika — brak przejścia zamrożonego w formacji odbioru."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Blok podwójny: atakujący (P2) linia + środkowy (P3) krzyżowa. To standardowa konfiguracja FIVB przeciwko Z4 przeciwnika.",
+        "Off-blocker = przyjmujący (P4) na linii 3 m po lewej stronie — pokrywa cut shot i krótką kiwkę.",
+        "System obwodowy: libero (P5) w długiej krzyżowej ~7,5 m, P6 w osi ~8 m, P1 głęboka linia w cieniu bloku.",
+        "Libero wyrównane z wewnętrznym barkiem centralnego blokującego — to jego strefa priorytetowa.",
+        "Główne uderzenie do obrony: długa krzyżowa (przyjmujący przeciwnika jest najbardziej zaangażowany)."
+      ],
+      "commonMistakes": [
+        "Niezamierzony otwarty blok (P3 nieustawiony z P2) → piłka przechodzi między blokującymi.",
+        "Off-blocker pozostający przy siatce → cień bloku niezabezpieczony (błąd nr 1 według Heberta).",
+        "Źle ustawione libero (zbyt blisko siatki) → głębokie smecze lądują.",
+        "Rozgrywający blokujący, a następnie nie docierający do siatki → 2. odbicie przez niewyspecjalizowanego zawodnika.",
+        "Obrońcy nadal w ruchu w momencie kontaktu atakującego (nie \"zatrzymanie w kontakcie\")."
+      ]
+    }
+  },
+  "4v4-reception-losange": {
+    "title": "4 na 4 · Odbiór w rombie",
+    "shortDescription": "Klasyczna formacja rombu: rozgrywający na P3 (środek siatki) + 2 skrzydłowych na linii 3 m + zawodnik z tyłu w głębi.",
+    "contextLabel": "4 na 4 · Romb (1-2-1) · Rozgrywający w środku",
+    "players": {
+      "P": "Rozgrywający (P3)",
+      "R4": "Lewe skrzydło (P4)",
+      "A2": "Prawe skrzydło (P2)",
+      "A": "Zawodnik z tyłu (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja rombu",
+        "description": "Klasyczny układ 1-2-1: rozgrywający W ŚRODKU siatki (P3), 2 skrzydłowych na linii 3 m (L + P), zawodnik z tyłu w głębi. Brak libero w szkolnym 4 na 4. Wszyscy READY."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie z tyłu",
+        "description": "Wysoka zagrywka w strefę centralną. Jedyny zawodnik z tyłu woła \"Moja!\" i krok lekko w stronę piłki."
+      },
+      "s3": {
+        "title": "3. Wystawa do lewego skrzydła",
+        "description": "Wysokie odbicie do rozgrywającego w środku siatki (brak wbiegania w rombie). Rozprowadza do strefy 4. Lewe skrzydło wykonuje swój krótki doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna + krótka asekuracja",
+        "description": "Wystawa przybywa w strefę 4. Prawe skrzydło zacieśnia się w stronę środka, aby asekurować, zawodnik z tyłu lekko się wysuwa. Przy pojedynczym bloku przeciwnika kąt uderzenia pozostaje szeroki."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do rombu",
+        "description": "Wszyscy wracają na swoje pozycje w rombie do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Klasyczny romb (1-2-1) = najczęściej używana formacja w 4 na 4.",
+        "Wariant \"rozgrywający w środku\": rozgrywający na P3 przy siatce, rozprowadza w lewo LUB w prawo.",
+        "Brak libero w szkolnym 4 na 4 — wszyscy muszą umieć odbierać.",
+        "Każdy zawodnik pokrywa ~30-40 m² (vs ~20 m² w 6 na 6)."
+      ],
+      "commonMistakes": [
+        "Konflikt na centralnych piłkach między 2 strefami → wołanie obowiązkowe.",
+        "Jedyny zawodnik z tyłu zbyt daleko z tyłu → krótkie piłki za siatką niezabezpieczone.",
+        "Rozgrywający, który również odbiera → niemożliwe wykonanie 2. odbicia za sobą."
+      ]
+    }
+  },
+  "4v4-reception-u": {
+    "title": "4 na 4 · Odbiór w formacji U",
+    "shortDescription": "Formacja U: rozgrywający poza odbiorem + 3 przyjmujących (lewy, centralny tył, prawy).",
+    "contextLabel": "4 na 4 · U · Wyczynowy 4 na 4",
+    "players": {
+      "P": "Rozgrywający (ukryty)",
+      "R4": "Lewe skrzydło",
+      "A": "Środek z tyłu",
+      "A2": "Prawe skrzydło",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja U",
+        "description": "Rozgrywający jest ukryty na P2 przy siatce. 3 przyjmujących w formacji U: lewe skrzydło, środek z tyłu, prawe skrzydło. Każdy zawodnik pokrywa około 1/3 szerokości."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie lewego skrzydła",
+        "description": "Wysoka zagrywka w lewy kanał. Lewe skrzydło woła i przyjmuje piłkę w swoim kanale. Wysoka trajektoria, aby dać rozgrywającemu czas."
+      },
+      "s3": {
+        "title": "3. Rozprowadzanie do lewego skrzydła",
+        "description": "Piłka przybywa do stałego rozgrywającego w strefie 2 (brak wbiegania w 4 na 4). Szybkie rozprowadzanie do lewego skrzydła, które natychmiast wykonuje swój doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna w strefie 4",
+        "description": "Wystawa przybywa w strefę 4 do lewego skrzydła. System bardziej ofensywny niż romb: rozgrywający nie odbierał, atak jest szybki i czytelny."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do U",
+        "description": "3 przyjmujących wraca do U, a rozgrywający wraca do swojego ukrycia na P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Odbiór w formacji U = najskuteczniejsza wyczynowa konfiguracja 4 na 4.",
+        "3 wyspecjalizowanych przyjmujących + rozgrywający poza = 1 zawodnik dostępny do ataku bez odbioru.",
+        "Cel: strefa 2 (stały rozgrywający) → szybkie rozprowadzanie.",
+        "Bardziej wymagający technicznie niż romb, ale bardziej ofensywny."
+      ],
+      "commonMistakes": [
+        "Skrzydło nie pokrywające całego kanału → piłka między skrzydłem a tyłem stracona.",
+        "Środek z tyłu zbyt daleko z przodu → długie piłki przelatują nad głową.",
+        "Rozgrywający przechylający się w stronę odbioru → zamieszanie."
+      ]
+    }
+  },
+  "5-1-reception-3-receivers": {
+    "title": "Odbiór · 3 przyjmujących (5-1)",
+    "shortDescription": "Odbiór w 3 przyjmujących (libero + 2 przyjmujących) z rozgrywającym poza odbiorem i ukrytym atakującym — nowoczesna standardowa formacja.",
+    "contextLabel": "5-1 · Odbiór w 3 przyjmujących · Zagrywka przeciwnika",
+    "players": {
+      "R4a": "Lewy przyjmujący",
+      "L": "Libero",
+      "R4b": "Prawy przyjmujący",
+      "C": "Środkowy",
+      "Op": "Atakujący (ukryty)",
+      "P": "Rozgrywający (ukryty)",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pozycja odbioru",
+        "description": "Trzech przyjmujących w łuku: lewy przyjmujący, centralne libero, prawy przyjmujący. Każdy pokrywa ~1/3 szerokości. Rozgrywający i atakujący ukrywają się przy siatce, gotowi wkroczyć, gdy tylko zagrywający uderzy."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbiór",
+        "description": "Wysoka zagrywka do lewego przyjmującego, który woła \"Moja!\" i odbija. Równolegle rozgrywający uruchamia wbieganie ze swojego ukrycia na P1 w stronę strefy 2-3."
+      },
+      "s3": {
+        "title": "3. Wysoka wystawa do strefy 4",
+        "description": "Piłka wznosi się do celu (między P2 a P3), gdzie rozgrywający przybywa w samą porę. Rozprowadza wysoką wystawę do strefy 4. Odbierający przyjmujący już rozpoczął cofanie się do linii 3 m."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna dla atakującego",
+        "description": "Piłka przybywa w strefę 4 na wysokości uderzenia. Przyjmujący wykonuje ostatnie kroki przed wyskokiem. Jakość wystawy potwierdza jakość początkowego odbioru."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do formacji",
+        "description": "Cała drużyna wraca na pozycję odbioru do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Odbiór w 3 przyjmujących = nowoczesny standard 5-1. Maksymalna specjalizacja.",
+        "Cel: strefa 2-3, jedno ramię od siatki, wysokość ~3 m.",
+        "Rozgrywający pozostaje ukryty przy siatce, dopóki zagrywający nie uderzy, następnie wbiega.",
+        "Odbierający przyjmujący NATYCHMIAST wykonuje swój doskok do ataku."
+      ],
+      "commonMistakes": [
+        "Odbiór zbyt płaski lub zbyt krótki → rozgrywający przybywa za późno.",
+        "Konflikt między 2 przyjmującymi → wołanie głosowe obowiązkowe.",
+        "Przyjmujący zamrożony po odbiorze → traci opcję ofensywną w strefie 4."
+      ]
+    }
+  },
+  "5v5-reception-4-receivers": {
+    "title": "5 na 5 · Odbiór w 4 przyjmujących",
+    "shortDescription": "Format 5 na 5: rozgrywający poza odbiorem + 4 przyjmujących w U lub w linii.",
+    "contextLabel": "5 na 5 · 4 przyjmujących · Format hybrydowy",
+    "players": {
+      "P": "Rozgrywający (poza)",
+      "R4a": "Z przodu po lewej",
+      "C": "Z przodu po prawej / środkowy",
+      "A1": "Lewy z tyłu",
+      "A2": "Prawy z tyłu",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja 5 na 5",
+        "description": "Rozgrywający (na P2) jest poza odbiorem przy siatce. 4 przyjmujących tworzy U: 2 na linii 3 m, 2 w głębi. Najlepszy odbierający bierze najbardziej narażoną strefę."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie z tyłu",
+        "description": "Wysoka zagrywka w lewy tylny kanał. Lewy z tyłu woła i odbija w swoim kanale."
+      },
+      "s3": {
+        "title": "3. Wystawa do strefy 4",
+        "description": "Piłka przybywa do stałego rozgrywającego w strefie 2 (brak wbiegania w 5 na 5). Szybkie rozprowadzanie do lewego skrzydła. Z przodu po lewej rozpoczyna swój doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna — asekuracja 3-osobowa",
+        "description": "Wystawa przybywa w strefę 4. Z przodu po lewej wykonuje swoje kroki. Asekuracja w 5 na 5 wykonywana jest tylko z 3 zawodnikami (a nie 5 jak w 6 na 6) — środkowy i rozgrywający pozostają blisko."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do U",
+        "description": "4 przyjmujących znajduje swoje miejsce w U, rozgrywający stały na P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "W 5 na 5 bez libero, najlepszy odbierający bierze najbardziej narażoną strefę.",
+        "Formacja U: 2 przyjmujących na linii 3 m + 2 w głębi.",
+        "Wariant w linii możliwy (4 ustawieni w połowie boiska), jeśli poziomy są podobne.",
+        "Brak wbiegania → stały rozgrywający (uproszczony system 4-1)."
+      ],
+      "commonMistakes": [
+        "Kształt U zbyt wąski → długie krzyżowe niezabezpieczone.",
+        "Słaby odbierający → izoluj go w najmniejszej strefie.",
+        "Rozgrywający, który wciąż wbiega → zamieszanie ze standardowym 6 na 6."
+      ]
+    }
+  },
+  "5v5-reception-pentagon": {
+    "title": "5 na 5 · Odbiór w pentagonie",
+    "shortDescription": "Odbiór w pentagonie (5 zawodników bez rozgrywającego poza) — wersja dla początkujących lub rekreacyjna.",
+    "contextLabel": "5 na 5 · Pentagon · Brak dedykowanego rozgrywającego",
+    "players": {
+      "A1": "Z przodu po lewej",
+      "C": "Środek",
+      "A2": "Z przodu po prawej",
+      "A3": "Lewy z tyłu",
+      "A4": "Prawy z tyłu",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentagon 5-osobowy",
+        "description": "Wszyscy zawodnicy odbierają. Brak dedykowanego rozgrywającego — kto dotyka pierwszy, pozostawia 2. odbicie zawodnikowi najbliższemu siatki. Konfiguracja rekreacyjna / dla początkujących."
+      },
+      "s2": {
+        "title": "2. Zagrywka + środek woła",
+        "description": "Zagrywka w strefę centralną średniego dystansu. Zawodnik w środku woła i odbija — to jego obszar w pentagonie."
+      },
+      "s3": {
+        "title": "3. Wystawa okazjonalna",
+        "description": "Piłka wznosi się w stronę środka siatki. Z przodu po prawej, najbliższy piłki, wychodzi do przodu i wykonuje 2. odbicie wysoką wystawą w zależności od jakości odbioru."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna — prosty system",
+        "description": "Wystawa idzie do z przodu po lewej. Czytelne rozprowadzanie, idealne dla początkujących. Każdy zawodnik może wykonać 2. odbicie w zależności od kąta piłki."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do pentagonu",
+        "description": "5 zawodników znajduje swoje miejsce w pentagonie do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pentagon bez dedykowanego rozgrywającego = konfiguracja rekreacyjna lub dla początkujących.",
+        "5 zawodników w pentagonie: 2 z przodu, 1 w środku, 2 z tyłu.",
+        "Każdy zawodnik może wykonać 2. odbicie w zależności od miejsca, do którego przybywa piłka.",
+        "Zaleta: świetna adaptacyjność. Wada: mniejsza spójność ofensywna."
+      ],
+      "commonMistakes": [
+        "Brak hierarchii przy 2. odbiciu → 2 zawodników waha się.",
+        "Środkowy zamrożony → piłki po obu stronach przeoczone.",
+        "Systematyczne wysokie wystawy bez wyraźnego rozprowadzania."
+      ]
+    }
+  },
+  "6v6-reception-2-receivers": {
+    "title": "Odbiór · 2 przyjmujących (elita)",
+    "shortDescription": "Ultra-wyspecjalizowany odbiór w 2 przyjmujących (libero + przyjmujący): wszyscy pozostali gotowi do ataku.",
+    "contextLabel": "5-1 · Odbiór w 2 przyjmujących · Elita / wolne piłki",
+    "players": {
+      "L": "Libero",
+      "R4a": "Odbierający przyjmujący",
+      "R4b": "Atakujący przyjmujący",
+      "C": "Środkowy",
+      "Op": "Atakujący (ukryty)",
+      "P": "Rozgrywający (ukryty)",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Konfiguracja w 2 przyjmujących",
+        "description": "Tylko 2 przyjmujących: libero po lewej stronie, odbierający przyjmujący po prawej stronie. 4 innych zawodników są już w postawie atakującej, gotowych do uruchomienia, gdy tylko zagrywka zostanie uderzona."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie libero",
+        "description": "Zagrywka po lewej. Libero woła i odbija. Z tylko 2 strefami wymagania techniczne są ekstremalne: wymagane jest wyjątkowe libero. Rozgrywający rozpoczyna wbieganie."
+      },
+      "s3": {
+        "title": "3. Wystawa + jednoczesne doskoki",
+        "description": "Piłka wznosi się do celu. Rozgrywający rozprowadza do strefy 4. Atakujący przyjmujący, zwolniony z odbioru, rozpoczyna szybki doskok z pełną prędkością — przybywa z pełną mocą."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna — maksymalna różnorodność",
+        "description": "Piłka przybywa w strefę 4 do atakującego przyjmującego. W tym momencie rozgrywający ma jednocześnie środkowego na ataku szybkim i atakującego z głębi do dyspozycji — możliwe kombinacje 3 atakujących."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do formacji 2 przyjmujących",
+        "description": "Libero i odbierający przyjmujący wracają do swoich stref, atakujący ponownie się ustawiają gotowi do ataku."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Odbiór w 2 przyjmujących = konfiguracja elitarna (siatkówka zawodowa).",
+        "Używany przy łatwych zagrywkach lub rotacjach \"rozgrywający z przodu\".",
+        "Maksymalna różnorodność ofensywna: wszyscy atakujący dostępni natychmiast.",
+        "Ekstremalne wymagania techniczne: 2 solidnych przyjmujących wymaganych."
+      ],
+      "commonMistakes": [
+        "Stosowanie tego systemu przeciwko mocnej zagrywce → katastrofalne odbiory.",
+        "Atakujący przyjmujący nie rozpoczynający doskoku równolegle → opcja stracona.",
+        "Brak wołania → wahanie między 2 przyjmującymi."
+      ]
+    }
+  },
+  "6v6-reception-4-2": {
+    "title": "Odbiór · 4-2 (4 przyjmujących)",
+    "shortDescription": "System 4-2: stały rozgrywający na P2 + 4 przyjmujących (2 przyjmujących + środkowy + zawodnik z tyłu).",
+    "contextLabel": "4-2 · 4 przyjmujących · Stały rozgrywający z przodu",
+    "players": {
+      "P": "Rozgrywający (P2 stały)",
+      "C2": "Środkowy z przodu",
+      "R4a": "Lewy przyjmujący",
+      "C": "Środkowy z tyłu",
+      "R4b": "Prawy przyjmujący",
+      "P2": "Rozgrywający z tyłu",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Układ 4-2",
+        "description": "System 4-2: 2 rozgrywających po przekątnej. Rozgrywający z przodu (P2) i środkowy z przodu wychodzą poza odbiór przy siatce. 4 przyjmujących w trapezie: 2 przyjmujących po przekątnej, środkowy z tyłu i rozgrywający z tyłu w głębi."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie lewego przyjmującego",
+        "description": "Wysoka zagrywka w lewy kanał. Lewy przyjmujący woła i odbija. Rozgrywający jest już stały na P2 przy siatce, brak wbiegania."
+      },
+      "s3": {
+        "title": "3. Wystawa do lewego skrzydła",
+        "description": "Piłka przybywa do stałego rozgrywającego na P2 (łatwy cel, brak ruchu). Rozprowadza do lewego skrzydła. Lewy przyjmujący natychmiast wykonuje swój doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna w strefie 4",
+        "description": "Wystawa na miejscu. W 4-2 istnieją tylko 2 opcje ofensywne z przodu (środkowy i skrzydło) → czytelne, ale ograniczone rozprowadzanie."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do trapezu",
+        "description": "Cała drużyna wraca na swoje pozycje w systemie 4-2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Odbiór w 4 przyjmujących = system 4-2. 2 zawodników z przodu poza odbiorem (rozgrywający + środkowy z przodu).",
+        "Większe strefy niż w W, ale mniej wymagające niż odbiór w 3 przyjmujących.",
+        "Łatwy cel: rozgrywający nie porusza się.",
+        "Wada: tylko 2 atakujących z przodu."
+      ],
+      "commonMistakes": [
+        "Środkowy z przodu, który również odbiera → brak commitu przy siatce.",
+        "Trapez zbyt otwarty → centralne piłki niezabezpieczone.",
+        "Zamieszanie przy 2. odbiciu między 2 rozgrywającymi."
+      ]
+    }
+  },
+  "6v6-reception-rotation-p4": {
+    "title": "Odbiór · rotacja 5-1 P4",
+    "shortDescription": "Przypadek szczególny P4: rozgrywający i środkowy przesuwają się w lewo, aby uwolnić przyjmującego w strefie 6.",
+    "contextLabel": "5-1 · 3 przyjmujących · Rotacja P4 (rozgrywający z przodu)",
+    "players": {
+      "P": "Rozgrywający (P4)",
+      "C": "Środkowy (P3)",
+      "R4b": "Przyjmujący* (P2)",
+      "L": "Libero (P5)",
+      "R4a": "Przyjmujący (P6)",
+      "Op": "Atakujący (P1)",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Przesunięcie w lewo",
+        "description": "PRZED uderzeniem: rozgrywający (P4) i środkowy (P3) ustawiają się JAK NAJDALEJ W LEWO, na ile pozwalają zasady ustawienia. To przesunięcie uwalnia strefę 6 dla odbierającego przyjmującego."
+      },
+      "s2": {
+        "title": "2. Zagrywka + odbicie przyjmującego na P6",
+        "description": "Zagrywka w strefę centralną 6. Przyjmujący na P6 woła i odbija w strefie uwolnionej przez przesunięcie rozgrywającego. Trzech przyjmujących: libero, przyjmujący i atakujący (na krawędzi)."
+      },
+      "s3": {
+        "title": "3. Wbieganie + zamiana przyjmującego*",
+        "description": "Rozgrywający biegnie z P4 do strefy 2-3. Jednocześnie przyjmujący* na P2 krzyżuje się do P4, aby atakować. Środkowy ponownie ustawia się w strefie 3."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna dla przyjmującego* w strefie 4",
+        "description": "Wystawa przybywa do przyjmującego*, który zakończył swoją krzyżówkę. Z tylko 2 atakującymi z przodu (przyjmujący* + środkowy) główną opcją jest lewe skrzydło."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do przesunięcia",
+        "description": "Wszyscy zawodnicy wracają do przesunięcia w lewo do kolejnej zagrywki w rotacji P4."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Na P4 rozgrywający i środkowy MUSZĄ przesunąć się w lewo przy zagrywce.",
+        "To przesunięcie otwiera strefę 6 dla odbioru przyjmującego na P6.",
+        "Zamiana rozgrywający↔przyjmujący* obowiązkowa podczas wystawy.",
+        "Atakujący (na P1) nie odbiera i pozostaje gotowy do ataku z głębi."
+      ],
+      "commonMistakes": [
+        "Przesunięcie zapomniane → konflikt odbioru w strefie 6.",
+        "Zamiana zbyt późna → przyjmujący* atakuje na P2 (zła strona).",
+        "Atakujący, który odbiera → traci opcję ataku z głębi."
+      ]
+    }
+  },
+  "6v6-reception-semi-circle": {
+    "title": "Odbiór · półkole",
+    "shortDescription": "Odbiór w łuku otwartym w stronę zagrywającego, równomiernie. Etap U15-U18.",
+    "contextLabel": "5-1 · Półkole · U15-U18",
+    "players": {
+      "P": "Rozgrywający (ukryty)",
+      "R4a": "Lewy przyjmujący",
+      "C": "Środkowy",
+      "L": "Libero",
+      "R4b": "Prawy przyjmujący",
+      "Op": "Atakujący",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Półkolisty łuk",
+        "description": "5 przyjmujących tworzy łuk równomiernie oddalony od zagrywającego. Wszyscy zwróceni w stronę rozgrywającego ukrytego na P1. Środkowy zostaje w odbiorze (vs poza w formacji 3 przyjmujących)."
+      },
+      "s2": {
+        "title": "2. Zagrywka + wspólne czytanie",
+        "description": "Wysoka zagrywka w strefę centralną. Wszyscy zawodnicy czytają w tym samym kierunku. Środkowy woła swoją piłkę — to jego strefa w łuku."
+      },
+      "s3": {
+        "title": "3. Wbieganie + wysoka wystawa",
+        "description": "Rozgrywający opuszcza swoje ukrycie, gdy piłka się wznosi. Przybywa do celu w strefie 2-3 i rozprowadza do lewego skrzydła, gdzie lewy przyjmujący już rozpoczął swój doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna w strefie 4",
+        "description": "Wystawa przybywa w strefę 4. Lewy przyjmujący jest w pozycji do uderzenia. Klasyczne, czytelne rozprowadzanie — typowe dla etapu nauki U15-U18."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do łuku",
+        "description": "Wszyscy wracają do półkolistego łuku do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Półkolisty łuk = etap pośredni między W a odbiorem w 3 przyjmujących.",
+        "5 zawodników równomiernie oddalonych od zagrywającego → jednolite pokrycie.",
+        "Dostosowany do drużyn młodzieżowych (U15-U18) uczących się specjalizacji.",
+        "Utrzymuje środkowego w odbiorze (vs 3 przyjmujących, gdzie jest poza)."
+      ],
+      "commonMistakes": [
+        "Łuk zbyt otwarty po bokach → dziury w środku.",
+        "Zawodnicy zbyt daleko od zagrywającego → spóźniona reakcja na szybkie zagrywki.",
+        "Konflikt z rozgrywającym, który również chce odbierać."
+      ]
+    }
+  },
+  "6v6-reception-w": {
+    "title": "Odbiór · W (5 przyjmujących)",
+    "shortDescription": "Formacja W: 5 zawodników oprócz rozgrywającego. Dostosowana do początkujących i systemu 4-2.",
+    "contextLabel": "4-2 · W · Początkujący / U13",
+    "players": {
+      "P": "Rozgrywający (poza)",
+      "R4a": "Z przodu po lewej",
+      "R4b": "Z przodu po prawej",
+      "C": "Środkowy zawodnik",
+      "A1": "Lewy z tyłu",
+      "A2": "Prawy z tyłu",
+      "OPP_SRV": "Zagrywający przeciwnika"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formacja W",
+        "description": "Układ W: 2 zawodników z przodu w połowie boiska, 1 zawodnik środkowy w środku, 2 z tyłu w głębi. Rozgrywający jest już poza odbiorem przy siatce na P2 (system 4-2). Każdy zawodnik broni małej, dobrze zdefiniowanej strefy."
+      },
+      "s2": {
+        "title": "2. Zagrywka + zawodnik środkowy woła",
+        "description": "Wysoka zagrywka w strefę centralną. Zawodnik środkowy woła \"Moja!\", bo piłka spada w centralnej kieszeni W, równomiernie oddalonej od zawodników z przodu."
+      },
+      "s3": {
+        "title": "3. Wysoka wystawa do strefy 4",
+        "description": "Odbicie nakierowane na strefę 2, gdzie rozgrywający już czeka przy siatce (brak wbiegania w 4-2). Rozprowadza wysoką wystawą do strefy 4. Z przodu po lewej rozpoczyna doskok."
+      },
+      "s4": {
+        "title": "4. Piłka dostępna dla atakującego",
+        "description": "Piłka przybywa w strefę 4. Z przodu po lewej wykonuje ostatnie kroki. W 4-2 opcje ofensywne są ograniczone (2 atakujących z przodu), ale prostota systemu to rekompensuje."
+      },
+      "s5": {
+        "title": "5. RESET — powrót do formacji W",
+        "description": "Wszyscy wracają do swojej strefy w W do kolejnej zagrywki."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formacja W = 5 przyjmujących, rozgrywający wychodzi poza odbiór.",
+        "Małe indywidualne strefy → mniej wątpliwości, niewiele konfliktów.",
+        "Idealne w U13/U15 i w systemie 4-2 (początkujący).",
+        "Wada: wyspecjalizowani atakujący są ograniczeni w odbiorze."
+      ],
+      "commonMistakes": [
+        "Centralny konflikt między zawodnikiem środkowym a zawodnikami z przodu → wołanie obowiązkowe.",
+        "Zawodnicy zbyt zamrożeni w swojej strefie → piłka między 2 strefami stracona.",
+        "Rozgrywający pozostający w odbiorze → niemożliwe wykonanie 2. odbicia."
+      ]
+    }
+  }
+}

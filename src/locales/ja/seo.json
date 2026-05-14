@@ -1,0 +1,79 @@
+{
+  "siteLocale": "ja_JP",
+  "ogLocale": "ja_JP",
+  "htmlLang": "ja",
+  "structuredLang": "ja-JP",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — 6対6・5対5・4対4のインドアバレーボールガイド",
+    "description": "インドアバレーボールのウィキ: ポジション、技術、3Dシナリオ、ルール、用語集。6対6・5対5・4対4の形式に対応。"
+  },
+  "techniques": {
+    "title": "バレーボールの技術 — サーブ、トス、アタック、ディフェンス | Volley-Wiki",
+    "description": "バレーボールの基礎技術を学びましょう: サーブ、レセプション、アタック、ブロック、ディフェンス。インタラクティブな3Dアニメーションとレベル別のアドバイス。"
+  },
+  "positionsHub": {
+    "title": "バレーボールのポジション — 6対6・5対5・4対4 | Volley-Wiki",
+    "description": "形式ごとのインドアバレーボールのポジションと役割を解説: 6対6、5対5、4対4。詳細な戦術システム。"
+  },
+  "positions": {
+    "title": "バレーボールのポジション {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{label}}バレーボールのポジションと役割: {{configName}}システム。{{descriptionExcerpt}}",
+    "articleHeadline": "バレーボールのポジション {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "3Dバレーボールシナリオ — 攻撃、守備、レセプション | Volley-Wiki",
+    "description": "攻撃、守備、レセプションの具体的な場面を3Dで視覚化。6対6・5対5・4対4の形式に対応。"
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — {{teamSize}} シナリオ | Volley-Wiki",
+    "description": "{{shortDescription}} この{{phase}}のシナリオを3Dとステップ解説で確認しましょう。"
+  },
+  "rules": {
+    "title": "バレーボールのルール — FIVB公式規則をわかりやすく | Volley-Wiki",
+    "description": "FIVB公式バレーボール規則をシンプルに解説: 形式、コート、ローテーション、反則、接触。プレーと観戦に必要な基本。"
+  },
+  "glossary": {
+    "title": "バレーボール用語集 — 全用語解説 | Volley-Wiki",
+    "description": "バレーボール用語を網羅した辞典: エース、アンダーパス、ブロック、パイプ、リベロ、サイドアウトなど。明快で正確な定義。"
+  },
+  "guides": {
+    "title": "バレーボールの技術・戦術ガイド | Volley-Wiki",
+    "description": "サーブ、レセプション、アタック、ブロック、守備ポジショニングの総合ガイド。図解、動画、レベル別のアドバイス。"
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6対6・5対5・4対4 | Volley-Wiki",
+    "description": "{{description}} 6対6、5対5、4対4の形式に対応したガイド。"
+  },
+  "defenseSized": {
+    "title": "守備ポジショニング {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{label}}バレーボールの守備ポジショニング完全ガイド（{{configName}}システム）: ゾーン別の責任、相手の攻撃ゾーン別のディフェンス。",
+    "articleHeadline": "守備ポジショニング {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "ページが見つかりません | Volley-Wiki",
+    "description": "このページは存在しません。ホームに戻ってバレーボールウィキを見ましょう。"
+  },
+  "guideNotFound": {
+    "title": "ガイドが見つかりません | Volley-Wiki",
+    "description": "このガイドは存在しません。ガイド一覧に戻ってください。"
+  },
+  "breadcrumbs": {
+    "home": "ホーム",
+    "techniques": "技術",
+    "positions": "ポジション",
+    "scenarios": "シナリオ",
+    "guides": "ガイド",
+    "rules": "ルール",
+    "glossary": "用語集",
+    "defense": "守備ポジショニング"
+  },
+  "phase": {
+    "attack": "攻撃",
+    "defense": "守備",
+    "reception": "レセプション"
+  }
+}

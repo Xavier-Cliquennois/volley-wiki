@@ -1,0 +1,57 @@
+{
+  "siteName": "Volley-Wiki",
+  "siteTagline": "TEKNİKLER · KURALLAR · TAKTİKLER",
+  "nav": {
+    "home": "Ana Sayfa",
+    "techniques": "Teknikler",
+    "positions": "Pozisyonlar",
+    "scenarios": "Senaryolar",
+    "guides": "Rehberler",
+    "rules": "Kurallar",
+    "glossary": "Sözlük",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "mainNavigation": "Ana navigasyon"
+  },
+  "language": {
+    "label": "Dil",
+    "fr": "Français",
+    "en": "English",
+    "switchTo": "{{lang}} diline geç"
+  },
+  "footer": {
+    "tagline": "VOLLEY·WIKI — TEKNİKLER · KURALLAR · TAKTİKLER"
+  },
+  "actions": {
+    "back": "Geri",
+    "explore": "KEŞFET →",
+    "read": "OKU →",
+    "readGuide": "REHBERİ OKU →",
+    "showAll": "TÜMÜNÜ GÖSTER",
+    "reset": "SIFIRLA",
+    "loading": "YÜKLENİYOR…"
+  },
+  "labels": {
+    "documentation": "★ DOKÜMANTASYON",
+    "category": "KATEGORİ",
+    "level": "SEVİYE",
+    "duration": "Süre",
+    "level_beginner": "Başlangıç",
+    "level_intermediate": "Orta",
+    "level_advanced": "İleri",
+    "category_technique": "Teknik",
+    "category_tactique": "Taktik",
+    "goldenRule": "ALTIN KURAL"
+  },
+  "teamSize": {
+    "4v4": "4'e 4",
+    "5v5": "5'e 5",
+    "6v6": "6'ya 6"
+  },
+  "court": {
+    "net": "FİLE",
+    "backOfCourt": "SAHA ARKASI",
+    "ourSide": "Bizim taraf",
+    "opponentSide": "Rakip taraf"
+  }
+}

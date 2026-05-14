@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOKÜMANTASYON",
+    "title": "TEMEL TEKNİKLER",
+    "subtitle": "Temel voleybol becerileri — tanımlar, anahtar noktalar, yaygın hatalar ve video kaynakları."
+  },
+  "filters": {
+    "category": "KATEGORİ",
+    "level": "SEVİYE",
+    "countSingle": "{{count}} teknik",
+    "countPlural": "{{count}} teknik",
+    "showAll": "TÜMÜNÜ GÖSTER",
+    "noResults": "BU KOMBİNASYON İÇİN TEKNİK YOK"
+  },
+  "sectionTitle": "★ TEKNİK KARTLARI",
+  "card": {
+    "when": "NE ZAMAN",
+    "keyPoints": "★ ANAHTAR NOKTALAR",
+    "errors": "✗ YAYGIN HATALAR"
+  },
+  "tags": {
+    "Service": "Servis",
+    "Réception": "Karşılama",
+    "Passe": "Pas",
+    "Attaque": "Saldırı",
+    "Défense": "Savunma",
+    "Débutant": "Başlangıç",
+    "Intermédiaire": "Orta",
+    "Avancé": "İleri"
+  },
+  "items": {
+    "reception": {
+      "name": "Karşılama / Manşet",
+      "description": "Manşet pası evrensel savunma becerisidir. Birleştirilen kollar düz bir platform oluşturarak topu pasöre yönlendirir. Platform pasiftir — topa hareket etmek için bacaklar çalışır.",
+      "keyPoints": [
+        "Platform: kollar birleşik, baş parmaklar paralel ve aşağı bakar",
+        "Bilekler ile dirsekler arasındaki tatlı nokta (yalnızca bilekler değil)",
+        "\"Top platformun gösterdiği yere gider\" — açı yönü kontrol eder",
+        "Temasta DON: top gelmeden önce hareketi durdur",
+        "Kolları asla sallama — platform pasiftir"
+      ],
+      "errors": [
+        "Temas anında kolları sallamak (1 numaralı neden — top tahmin edilemez olur)",
+        "Hareket etmeden önce kolları çok erken birleştirmek",
+        "Kırık platform (bir kol diğerinden daha yüksek)"
+      ],
+      "when": "Servis karşılama, derin saha savunması, alçak toplar"
+    },
+    "set": {
+      "name": "Pas",
+      "description": "Saldırıyı hazırlayan ikinci dokunuş. İki el, alnın üzerinde bir üçgen oluşturur. Pasör orkestra şefidir: hassasiyeti ve rakip blok okuması saldırı verimini belirler.",
+      "keyPoints": [
+        "Baş parmak-işaret parmağı üçgeni: topu görmek için \"pencere\"",
+        "Temas: baş parmak, işaret ve orta parmağın pulpa ve ilk falanksı",
+        "Sağ ayak hafifçe önde — \"nişangah\" hedefe doğru",
+        "Ayaklar, kalçalar, omuzlar temas ÖNCESİ hedefe \"karelenmiş\"",
+        "Bacak-kalça-kol-bilek tam ekstansiyonu, \"Süpermen\" takip hareketi"
+      ],
+      "errors": [
+        "Görünür çift temas (eller aynı anda dokunmuyor)",
+        "Omuzlar fileye dik — top çok uzakta",
+        "Kaldırma (top taşınmış) — temas çok yavaş"
+      ],
+      "when": "Saldırıyı hazırlamak için ikinci dokunuş"
+    },
+    "spike": {
+      "name": "Saldırı (Smaç)",
+      "description": "En karmaşık balistik aksiyon: seri kinetik zincir ayaklar → kalçalar → gövde → omuz → dirsek → bilek. Bu zincirdeki herhangi bir kırılma enerji aktarımını bozar.",
+      "keyPoints": [
+        "3-4 adım yaklaşma: sol-sağ çift basışla bitir",
+        "Altın kural: son iki adım en hızlısıdır (yavaş → hızlı)",
+        "Temas omuzun hafif önünde — asla başın arkasında değil",
+        "Bilek şakırtısı: el topun üzerine \"pençeler\" → topspin",
+        "DİKEY sıçra, fileye doğru değil"
+      ],
+      "errors": [
+        "Yanlış yaklaşma zamanlaması (çok erken = güçsüz tekrar sıçrama)",
+        "Bilek şakırtısı yok — topspinsiz düz top",
+        "Tek ayak üzerine iniş (ÖÇB riski)"
+      ],
+      "when": "Ralliyi bitirmek için üçüncü dokunuş"
+    },
+    "block": {
+      "name": "Blok",
+      "description": "Saldırılara karşı ilk savunma hattı. Blok teması takım dokunuşu olarak sayılmaz. Anahtar: görsel sıra TOP → PASÖR → TOP → SMAÇÖRÜN OMUZU.",
+      "keyPoints": [
+        "Pozisyon: fileden 45-60 cm, eller yukarıda (avuçlar fileye dönük)",
+        "Smaçörden SONRA sıçra: yüksek top için 0,2-0,3 sn",
+        "File üzerine sadece yukarı değil, mümkün olduğunca İLERİYE uzan",
+        "Parmaklar açık, sert bilekler, eller arasında \"delik\" yok",
+        "\"Fileyi mühürlemek\": omuzlar, eller, kollar kulakların önünde"
+      ],
+      "errors": [
+        "Çok erken sıçramak (smaçörün basışına tepki ver)",
+        "Eller çok yumuşak — top kendi sahana geri sıçrar",
+        "İleriye sıçramak → file teması"
+      ],
+      "when": "Filede rakip saldırıya karşılık olarak"
+    },
+    "serve": {
+      "name": "Servis",
+      "description": "Doğrudan rakip baskısı olmayan tek aksiyon. Seviyeye göre dört tür vardır. Altın kural: hataların %80'i atıştan gelir — güç kovalamadan önce atışı stabilize et.",
+      "keyPoints": [
+        "Ayakta float: \"yumrukla ve don\" — sıfır dönüş için temas sonrası kolu durdur",
+        "Jump float: ayakta float ile aynı mekanik + kısa yaklaşma",
+        "Jump topspin: tam bilek şakırtısı, 1000+ tekrar için ayrılmış",
+        "Stabil atış = stabil servis — 1 numaralı kural",
+        "Oyuncular yerine dikişlere (karşılayanlar arasındaki boşluklara) nişan al"
+      ],
+      "errors": [
+        "Float: dönüş ekleyen uzatılmış takip hareketi (float etkisini öldürür)",
+        "Stabil olmayan veya çok yüksek atış",
+        "Dip çizgide ayak hatası"
+      ],
+      "when": "Her rallinin başı"
+    },
+    "defense": {
+      "name": "Savunma (Plonjon)",
+      "description": "Blok sonrası savunma, orta seviye takımları rekabetçilerden ayırır. Üç temel: alçak pozisyon, rakip vururken donmak, smaçörü okumak.",
+      "keyPoints": [
+        "Alçak pozisyon: ayaklar omuzlardan geniş, dizler ~90°",
+        "\"Baş ayakların önünde, omuzlar dizlerin önünde\"",
+        "Smaçör vurduğu anda mutlak DONMA",
+        "Blok gölgesi: smaçörü göremiyorsan, bloğun arkasındasın — yeniden konumlan",
+        "Sert smaçta: kolu sallamayın (smacın gücü yeterli) — emin"
+      ],
+      "errors": [
+        "Temas anında hâlâ hareket etmek — kontrol imkânsız",
+        "Bloğun \"gölgesinde\" durmak (faydasız bölge)",
+        "Yan adım yeterli olacakken çok erken plonjon yapmak"
+      ],
+      "when": "Rakip smaçlarına karşı savunma, arka saha koruması"
+    }
+  }
+}

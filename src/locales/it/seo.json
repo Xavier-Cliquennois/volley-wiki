@@ -1,0 +1,79 @@
+{
+  "siteLocale": "it_IT",
+  "ogLocale": "it_IT",
+  "htmlLang": "it",
+  "structuredLang": "it-IT",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — Guida alla pallavolo indoor per 6v6, 5v5 e 4v4",
+    "description": "Wiki di pallavolo indoor: posizioni, tecniche, scenari 3D, regole e glossario. Adattato ai formati 6v6, 5v5 e 4v4."
+  },
+  "techniques": {
+    "title": "Tecniche di pallavolo — Servizio, ricezione, attacco, difesa | Volley-Wiki",
+    "description": "Impara le tecniche fondamentali della pallavolo: servizio, ricezione, attacco, muro, difesa. Animazioni 3D interattive e consigli per livello."
+  },
+  "positionsHub": {
+    "title": "Posizioni della pallavolo — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "Scopri le posizioni e i ruoli della pallavolo indoor per ogni formato di gioco: 6 vs 6, 5 vs 5 e 4 vs 4. Sistemi tattici dettagliati."
+  },
+  "positions": {
+    "title": "Posizioni pallavolo {{size}} — {{config}} | Volley-Wiki",
+    "description": "Posizioni e ruoli della pallavolo {{label}}: sistema {{configName}}. {{descriptionExcerpt}}",
+    "articleHeadline": "Posizioni pallavolo {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "Scenari 3D di pallavolo — Attacco, difesa, ricezione | Volley-Wiki",
+    "description": "Visualizza scenari concreti di attacco, difesa e ricezione in 3D. Adattati ai formati 6v6, 5v5 e 4v4."
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — Scenario {{teamSize}} | Volley-Wiki",
+    "description": "{{shortDescription}} Guarda questo scenario di {{phase}} in 3D con narrazione passo dopo passo."
+  },
+  "rules": {
+    "title": "Regole della pallavolo — Regolamento FIVB semplificato | Volley-Wiki",
+    "description": "Il regolamento ufficiale FIVB della pallavolo spiegato in modo semplice: formato, campo, rotazioni, falli, contatti. L'essenziale per capire e giocare."
+  },
+  "glossary": {
+    "title": "Glossario della pallavolo — Tutti i termini spiegati | Volley-Wiki",
+    "description": "Dizionario completo del vocabolario della pallavolo: ace, bagher, muro, pipe, libero, cambio palla e altro. Definizioni chiare e precise."
+  },
+  "guides": {
+    "title": "Guide tecniche e tattiche di pallavolo | Volley-Wiki",
+    "description": "Guide complete su servizio, ricezione, attacco, muro e posizionamento difensivo. Diagrammi, video e consigli per livello."
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "{{description}} Guida adattata ai formati 6 vs 6, 5 vs 5 e 4 vs 4."
+  },
+  "defenseSized": {
+    "title": "Posizionamento difensivo {{size}} — {{config}} | Volley-Wiki",
+    "description": "Guida completa al posizionamento difensivo per la pallavolo {{label}} nel sistema {{configName}}: responsabilità di zona, difesa per zona d'attacco avversaria.",
+    "articleHeadline": "Posizionamento difensivo {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "Pagina non trovata | Volley-Wiki",
+    "description": "Questa pagina non esiste. Torna alla homepage per esplorare il wiki della pallavolo."
+  },
+  "guideNotFound": {
+    "title": "Guida non trovata | Volley-Wiki",
+    "description": "Questa guida non esiste. Torna alla lista delle guide."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "techniques": "Tecniche",
+    "positions": "Posizioni",
+    "scenarios": "Scenari",
+    "guides": "Guide",
+    "rules": "Regole",
+    "glossary": "Glossario",
+    "defense": "Posizionamento difensivo"
+  },
+  "phase": {
+    "attack": "attacco",
+    "defense": "difesa",
+    "reception": "ricezione"
+  }
+}

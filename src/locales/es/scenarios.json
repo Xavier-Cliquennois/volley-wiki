@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TÁCTICA",
+    "title": "ESCENARIOS DE JUEGO",
+    "subtitle": "Visualiza situaciones concretas en 3D con narración paso a paso."
+  },
+  "construction": {
+    "label": "PÁGINA EN CONSTRUCCIÓN",
+    "body": "Algunas animaciones 3D pueden contener errores o estar incompletas. Gracias por tu paciencia — los escenarios se están finalizando."
+  },
+  "wizard": {
+    "step1": "1 · ¿CUÁNTOS JUGADORES POR EQUIPO?",
+    "step2": "2 · ¿QUÉ FASE DE JUEGO?",
+    "step3": "3 · ¿QUÉ CONTEXTO ESPECÍFICO?",
+    "noMatch": "Aún no hay ningún escenario disponible para esta combinación.",
+    "reset": "REINICIAR",
+    "launch": "INICIAR ESCENARIO →"
+  },
+  "compactBar": {
+    "format": "FORMATO",
+    "phase": "FASE",
+    "scenario": "ESCENARIO",
+    "reset": "REINICIAR",
+    "resetTitle": "Reiniciar todo"
+  },
+  "placeholder": {
+    "title": "ELIGE UN ESCENARIO",
+    "selectFormatAndPhase": "Selecciona un formato y una fase arriba.",
+    "noScenarios": "No hay ningún escenario disponible para esta combinación.",
+    "clickInList": "Haz clic en un escenario de la lista de arriba."
+  },
+  "phase": {
+    "attack": "Ataque",
+    "defense": "Defensa",
+    "reception": "Recepción"
+  },
+  "player": {
+    "controls": {
+      "play": "Reproducir",
+      "pause": "Pausa",
+      "replay": "Repetir",
+      "previousStep": "Paso anterior",
+      "nextStep": "Paso siguiente",
+      "camera": "Cámara",
+      "speed": "Velocidad",
+      "auto": "Auto",
+      "stepMode": "Paso",
+      "playbackModeLabel": "Modo de reproducción"
+    },
+    "toggles": {
+      "trail": "Estela",
+      "trailTitle": "Mostrar una estela tras el balón para visualizar su trayectoria",
+      "zones": "Zonas",
+      "zonesTitle": "Mostrar las 6 zonas FIVB en la cancha"
+    },
+    "timeline": {
+      "title": "Línea de tiempo",
+      "clickHint": "haz clic para saltar"
+    },
+    "cameras": {
+      "DEFAULT": "Amplia",
+      "TOP_DOWN": "Cenital",
+      "BEHIND_SERVE": "Sacador",
+      "ATTACKER_VIEW": "Atacante"
+    },
+    "summary": {
+      "keyPoints": "PUNTOS CLAVE",
+      "commonMistakes": "ERRORES COMUNES",
+      "context": "Contexto"
+    },
+    "step": {
+      "label": "Paso {{current}} / {{total}}",
+      "defaultTitle": "Paso {{index}}"
+    },
+    "loading": "CARGANDO…"
+  }
+}

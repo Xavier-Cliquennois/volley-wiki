@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TAKTYKA",
+    "title": "SCENARIUSZE GRY",
+    "subtitle": "Wizualizuj konkretne sytuacje w 3D z narracją krok po kroku."
+  },
+  "construction": {
+    "label": "STRONA W BUDOWIE",
+    "body": "Niektóre animacje 3D mogą wciąż zawierać błędy lub być niekompletne. Dziękujemy za cierpliwość — scenariusze są finalizowane."
+  },
+  "wizard": {
+    "step1": "1 · ILU ZAWODNIKÓW W DRUŻYNIE?",
+    "step2": "2 · KTÓRA FAZA GRY?",
+    "step3": "3 · JAKI KONKRETNY KONTEKST?",
+    "noMatch": "Nie ma jeszcze scenariusza dla tej kombinacji.",
+    "reset": "RESETUJ",
+    "launch": "URUCHOM SCENARIUSZ →"
+  },
+  "compactBar": {
+    "format": "FORMAT",
+    "phase": "FAZA",
+    "scenario": "SCENARIUSZ",
+    "reset": "RESETUJ",
+    "resetTitle": "Zresetuj wszystko"
+  },
+  "placeholder": {
+    "title": "WYBIERZ SCENARIUSZ",
+    "selectFormatAndPhase": "Wybierz format i fazę powyżej.",
+    "noScenarios": "Brak scenariusza dla tej kombinacji.",
+    "clickInList": "Kliknij scenariusz na liście powyżej."
+  },
+  "phase": {
+    "attack": "Atak",
+    "defense": "Obrona",
+    "reception": "Odbiór"
+  },
+  "player": {
+    "controls": {
+      "play": "Odtwórz",
+      "pause": "Pauza",
+      "replay": "Odtwórz ponownie",
+      "previousStep": "Poprzedni krok",
+      "nextStep": "Następny krok",
+      "camera": "Kamera",
+      "speed": "Prędkość",
+      "auto": "Auto",
+      "stepMode": "Krok",
+      "playbackModeLabel": "Tryb odtwarzania"
+    },
+    "toggles": {
+      "trail": "Ślad",
+      "trailTitle": "Pokaż ślad za piłką, by wizualizować jej trajektorię",
+      "zones": "Strefy",
+      "zonesTitle": "Pokaż 6 stref FIVB na boisku"
+    },
+    "timeline": {
+      "title": "Oś czasu",
+      "clickHint": "kliknij, aby przejść"
+    },
+    "cameras": {
+      "DEFAULT": "Szeroka",
+      "TOP_DOWN": "Z góry",
+      "BEHIND_SERVE": "Zagrywający",
+      "ATTACKER_VIEW": "Atakujący"
+    },
+    "summary": {
+      "keyPoints": "KLUCZOWE PUNKTY",
+      "commonMistakes": "CZĘSTE BŁĘDY",
+      "context": "Kontekst"
+    },
+    "step": {
+      "label": "Krok {{current}} / {{total}}",
+      "defaultTitle": "Krok {{index}}"
+    },
+    "loading": "ŁADOWANIE…"
+  }
+}

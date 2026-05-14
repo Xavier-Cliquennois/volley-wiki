@@ -1,0 +1,79 @@
+{
+  "siteLocale": "pl_PL",
+  "ogLocale": "pl_PL",
+  "htmlLang": "pl",
+  "structuredLang": "pl-PL",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — Poradnik siatkówki halowej 6 na 6, 5 na 5 i 4 na 4",
+    "description": "Wiki siatkówki halowej: pozycje, techniki, scenariusze 3D, przepisy i słownik. Dostosowane do formatów 6 na 6, 5 na 5 i 4 na 4."
+  },
+  "techniques": {
+    "title": "Techniki siatkówki — Zagrywka, odbiór, atak, obrona | Volley-Wiki",
+    "description": "Naucz się podstawowych technik siatkówki: zagrywki, odbioru, ataku, bloku, obrony. Interaktywne animacje 3D i wskazówki według poziomu."
+  },
+  "positionsHub": {
+    "title": "Pozycje w siatkówce — 6 na 6, 5 na 5, 4 na 4 | Volley-Wiki",
+    "description": "Poznaj pozycje i role w siatkówce halowej dla każdego formatu gry: 6 na 6, 5 na 5 i 4 na 4. Szczegółowe systemy taktyczne."
+  },
+  "positions": {
+    "title": "Pozycje siatkówki {{size}} — {{config}} | Volley-Wiki",
+    "description": "Pozycje i role siatkówki {{label}}: system {{configName}}. {{descriptionExcerpt}}",
+    "articleHeadline": "Pozycje siatkówki {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "Scenariusze siatkówki 3D — Atak, obrona, odbiór | Volley-Wiki",
+    "description": "Wizualizuj konkretne scenariusze ataku, obrony i odbioru w 3D. Dostosowane do formatów 6 na 6, 5 na 5 i 4 na 4."
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — Scenariusz {{teamSize}} | Volley-Wiki",
+    "description": "{{shortDescription}} Obejrzyj ten scenariusz w fazie {{phase}} w 3D z narracją krok po kroku."
+  },
+  "rules": {
+    "title": "Przepisy siatkówki — Uproszczone przepisy FIVB | Volley-Wiki",
+    "description": "Oficjalne przepisy siatkówki FIVB wyjaśnione prosto: format, boisko, rotacje, błędy, odbicia. Niezbędniki, by zrozumieć i grać."
+  },
+  "glossary": {
+    "title": "Słownik siatkówki — Wszystkie terminy wyjaśnione | Volley-Wiki",
+    "description": "Kompletny słownik słownictwa siatkówki: ace, odbiór sposobem dolnym, blok, pipe, libero, side-out i więcej. Jasne i precyzyjne definicje."
+  },
+  "guides": {
+    "title": "Poradniki techniczne i taktyczne siatkówki | Volley-Wiki",
+    "description": "Kompletne poradniki o zagrywce, odbiorze, ataku, bloku i ustawieniu obronnym. Diagramy, filmy i wskazówki według poziomu."
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6 na 6, 5 na 5, 4 na 4 | Volley-Wiki",
+    "description": "{{description}} Poradnik dostosowany do formatów 6 na 6, 5 na 5 i 4 na 4."
+  },
+  "defenseSized": {
+    "title": "Ustawienie obronne {{size}} — {{config}} | Volley-Wiki",
+    "description": "Kompletny poradnik ustawienia obronnego dla siatkówki {{label}} w systemie {{configName}}: odpowiedzialności w strefach, obrona według strefy ataku przeciwnika.",
+    "articleHeadline": "Ustawienie obronne {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "Strona nie znaleziona | Volley-Wiki",
+    "description": "Ta strona nie istnieje. Wróć na stronę główną, aby zwiedzać wiki siatkówki."
+  },
+  "guideNotFound": {
+    "title": "Poradnik nie znaleziony | Volley-Wiki",
+    "description": "Ten poradnik nie istnieje. Wróć do listy poradników."
+  },
+  "breadcrumbs": {
+    "home": "Strona główna",
+    "techniques": "Techniki",
+    "positions": "Pozycje",
+    "scenarios": "Scenariusze",
+    "guides": "Poradniki",
+    "rules": "Przepisy",
+    "glossary": "Słownik",
+    "defense": "Ustawienie obronne"
+  },
+  "phase": {
+    "attack": "ataku",
+    "defense": "obrony",
+    "reception": "odbioru"
+  }
+}

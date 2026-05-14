@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTAZIONE",
+    "title": "REGOLE DELLA PALLAVOLO",
+    "subtitle": "Regolamento FIVB semplificato — le regole essenziali per capire e giocare."
+  },
+  "warning": "Questa pagina è un riepilogo didattico. Per le competizioni ufficiali, consulta il <strong>regolamento ufficiale FIVB</strong>.",
+  "quickFaultsTitle": "FALLI COMUNI",
+  "quickFaults": [
+    "Toccare la rete durante l'azione",
+    "Più di 3 tocchi di squadra",
+    "Doppio contatto dello stesso giocatore",
+    "Palla trattenuta / accompagnata",
+    "Attacco da seconda linea sopra la rete dalla zona d'attacco",
+    "Fallo di piede sul servizio (pestare la linea)",
+    "Servire prima del fischio",
+    "Fallo di posizione alla rotazione"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "Le basi",
+      "num": "01",
+      "rules": [
+        { "title": "Formato della partita", "content": "Una partita si gioca al meglio di 5 set. Ogni set si gioca ai 25 punti con almeno 2 punti di scarto. Se è necessario un 5° set, si gioca ai 15 punti." },
+        { "title": "Squadre", "content": "6 giocatori per lato in campo. Una squadra può avere fino a 6 riserve e un libero. Massimo 6 sostituzioni regolari per set (libero non conteggiato)." },
+        { "title": "Servizio", "content": "Il servizio si esegue dalla zona di servizio dietro la linea di fondo. La palla deve attraversare la rete nel campo avversario. Il battitore ha 8 secondi dal fischio per colpire. Un servizio che tocca la rete e cade nel campo avversario è BUONO (let serve consentito dal 2001)." },
+        { "title": "Punto a ogni scambio", "content": "Dal 1999 (rally point system), si segna un punto a ogni scambio, indipendentemente da chi ha servito. La squadra che segna ottiene il servizio." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Contatti e falli",
+      "num": "02",
+      "rules": [
+        { "title": "Massimo 3 tocchi", "content": "Una squadra ha al massimo 3 tocchi per rinviare la palla. Il muro non conta come tocco di squadra — la squadra ha ancora 3 tocchi dopo un muro." },
+        { "title": "Doppio contatto", "content": "Un giocatore non può contattare la palla due volte di seguito, tranne nel primo contatto di squadra (ricezione/difesa). Eccezione per il muro. Nuova prova FIVB 2025-2026: doppio contatto consentito sull'alzata (2° tocco) purché la palla resti dallo stesso lato." },
+        { "title": "Fallo di rete", "content": "Toccare la rete durante l'azione di gioco è fallo. Toccare fuori dall'azione o fuori dalle antenne non è fallo. Il passaggio parziale sotto la rete è consentito se non interferisce con l'avversario. Obiettivo FIVB 2025: \"promuovere il gioco fluido\"." },
+        { "title": "Palla sulle linee", "content": "Una palla che cade sulla linea è \"dentro\". Una palla che passa fuori dalle antenne o fuori dallo spazio di passaggio è fuori." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotazione e posizioni",
+      "num": "03",
+      "rules": [
+        { "title": "Rotazione obbligatoria", "content": "A ogni cambio palla, la squadra che vince il servizio ruota in senso orario: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. Il giocatore che va da P2→P1 diventa il nuovo battitore." },
+        { "title": "Fallo di posizione", "content": "Nel momento in cui il battitore colpisce, i giocatori devono rispettare il loro ordine di rotazione (niente sovrapposizioni in diagonale). Fallo = punto + servizio all'avversario. Aggiornamento 2025: la regola di sovrapposizione ora si applica solo alla squadra IN RICEZIONE — la squadra al servizio può posizionarsi liberamente." },
+        { "title": "Regola dei 3 metri", "content": "I giocatori di seconda linea (P1, P5, P6) non possono attaccare sopra la rete dalla zona d'attacco. Possono saltare da dietro la linea dei 3 m e atterrare nella zona d'attacco — è regolare." },
+        { "title": "Libero", "content": "Il libero indossa una maglia di colore diverso e gioca solo in seconda linea (P1, P5, P6). Sostituzioni illimitate non conteggiate. Non può murare né attaccare sopra la rete. Può servire dal 2021 in una sola rotazione per set. Può essere capitano dal 2021. Restrizione: se il libero alza a mani alte dalla zona d'attacco, un compagno non può attaccare la palla sopra la rete." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Situazioni speciali",
+      "num": "04",
+      "rules": [
+        { "title": "Time-out", "content": "Ogni squadra ha 2 time-out di 30 secondi per set. I time-out tecnici automatici all'8° e al 16° punto nei set 1-4 sono utilizzati in alcune competizioni FIVB." },
+        { "title": "Servizio — regole chiave", "content": "8 secondi per colpire dopo il fischio. È consentito un solo lancio, ma il battitore può lasciar cadere la palla una volta senza penalità. Fallo di piede: nel momento del contatto (o del decollo del salto), il battitore non deve toccare la linea di fondo o il campo. Schermo sul servizio: i compagni non devono alzare le mani sopra la testa durante il servizio (regola 2025)." },
+        { "title": "Attacco da seconda linea", "content": "Un giocatore di seconda linea può attaccare se il suo decollo è dietro la linea dei 3 m (entrambi i piedi). Può anche colpire la palla se qualsiasi parte è sotto la rete. Murare o attaccare il servizio sopra la rete dalla zona d'attacco è fallo." },
+        { "title": "Palla trattenuta", "content": "Il contatto con la palla deve essere breve e pulito. \"Brutto contatto ≠ fallo\": un contatto imperfetto non è automaticamente fallo se la palla rimbalza. Standard più permissivo per il bagher che per l'alzata a mani alte." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "Aggiornamenti FIVB 2025-2028",
+      "num": "05",
+      "rules": [
+        { "title": "Sovrapposizione: solo in ricezione", "content": "Dal 2025, la regola di sovrapposizione si applica solo alla squadra in ricezione. La squadra al servizio può occupare qualsiasi posizione in campo nel momento del servizio." },
+        { "title": "Niente schermo sul servizio", "content": "I giocatori della squadra al servizio ora hanno il divieto di alzare le mani sopra la testa durante il servizio fino a quando la palla non attraversa la rete. Tale schermo è sanzionato direttamente." },
+        { "title": "Doppio contatto sull'alzata — prova", "content": "Prova FIVB 2025-2026: il doppio contatto sull'alzata (2° tocco) è consentito purché la palla resti dallo stesso lato. Se la prova ha successo, la regola potrebbe diventare permanente." },
+        { "title": "Il libero può servire (dal 2021)", "content": "Il libero può servire dal 2021 in una sola rotazione per set. La regola varia per federazione (alcuni tornei USAV e NFHS non la consentono — consultare il regolamento della competizione)." }
+      ]
+    }
+  ]
+}

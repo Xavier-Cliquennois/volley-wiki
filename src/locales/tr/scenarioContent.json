@@ -1,0 +1,1993 @@
+{
+  "4v4-attack-losange": {
+    "title": "4'e 4 · Elmas saldırı",
+    "shortDescription": "Kanonik elmas: P3'te pasör + 3 m çizgisinde 2 kanat + arka. Karşılama → 4. bölge saldırısı.",
+    "contextLabel": "4'e 4 · Elmas (1-2-1) · Okul / rekreasyon",
+    "players": {
+      "P": "Pasör (P3)",
+      "R4": "Sol kanat (P4)",
+      "A2": "Sağ kanat (P2)",
+      "A": "Arka (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_B": "Rakip blok",
+      "OPP_OFF": "Rakip off-blocker",
+      "OPP_D1": "Rakip çapraz savunmacı",
+      "OPP_D2": "Rakip arka"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Elmas dizilişi",
+        "description": "Kanonik diziliş: file MERKEZİNDE pasör (P3) + 3 m çizgisinde 2 kanat + derinde arka."
+      },
+      "s2": {
+        "title": "2. Servis + arka saha karşılama",
+        "description": "Tek arka öne hareket eder ve manşet yapar. Filedeki pasöre yüksek yörünge."
+      },
+      "s3": {
+        "title": "3. Pas + yaklaşma + örtme",
+        "description": "R4, 4. bölgeye yaklaşmasını zincirler. Pasör, A2 ve A örtme için üçgen oluşturur. Rakip blok vurucuya doğru kayar."
+      },
+      "s4": {
+        "title": "4. Çapraz smaç + tek blok",
+        "description": "Güçlü smaç. Tek bloka karşı açı geniştir: vurucu uzun çapraz veya kısa paralel nişan alabilir."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı uzun çaprazda plonjon yapar — hafifçe geç kalır, top zaten yere düşmüştür."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — elmasa geri dön",
+        "description": "Herkes sıradaki ralli için elmastaki pozisyonunu yeniden alır. Pasör file merkezine geri döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Kanonik elmas = en yaygın 4'e 4 dizilişi.",
+        "\"Merkez pasör\" varyantı: pasör P3'te, sola veya sağa dağıtır.",
+        "4'e 4'te standart tek rakip blok: geniş saldırı açısı.",
+        "Sınırlı örtme: vurucu çevresinde 3 oyuncu."
+      ],
+      "commonMistakes": [
+        "Karşılama da yapan pasör → arkadan pas vermek imkânsız.",
+        "Çok derinde kanatlar → merkez pasör için zor pas.",
+        "Çok derinde arka → kısa blok dönüşlerinin örtülmemesi."
+      ]
+    }
+  },
+  "4v4-attack-penetrant": {
+    "title": "4'e 4 · Penetre eden pasör",
+    "shortDescription": "Sadeleştirilmiş 3-1 sistemi: P1'deki tek pasör 2. bölgeye penetre eder, 3 ön sıra vurucusunu serbest bırakır.",
+    "contextLabel": "4'e 4 · Arka saha pasörü · 3 vurucu",
+    "players": {
+      "R4": "Sol kanat (P4)",
+      "C": "Orta (P3)",
+      "A2": "Sağ kanat (P2)",
+      "P": "Pasör (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_B": "Rakip blok",
+      "OPP_OFF": "Rakip off-blocker",
+      "OPP_D1": "Rakip çapraz savunmacı",
+      "OPP_D2": "Rakip arka"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 3-1 konfigürasyonu",
+        "description": "P1'de (arka saha) tek pasör. Önde P2, P3, P4'te 3 vurucu. Libero yok: karşılayan kendi yaklaşmasını zincirler."
+      },
+      "s2": {
+        "title": "2. Servis + karşılama + penetrasyon",
+        "description": "Sol kanat karşılamayı manşetler. Pasör eş zamanlı olarak P1'den 2. bölgeye penetrasyonunu başlatır."
+      },
+      "s3": {
+        "title": "3. Pas + R4 yaklaşma",
+        "description": "R4'ün karşılama koşusundan sonra sol kanada yüksek pas. Rakip blok ona doğru kayar."
+      },
+      "s4": {
+        "title": "4. Çapraz smaç + tek blok",
+        "description": "Güçlü uzun çapraz smaç. Yalnızca 3 örtmenle vurucu çevresinde kısa bir üçgen oluştururlar."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı uzun çaprazda plonjon yapar — vuruşta 0,1 saniye geç kalır."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Pasör arka saha P1'e döner, R4 4. bölgeye döner. Penetrasyon bir sonraki servisten itibaren tahmin edilmelidir."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "3-1 sistemi = 5-1'in 4'e 4 eşdeğeri. 1 özel penetre eden pasör.",
+        "Avantaj: 6'ya 6 gibi her zaman önde 3 vurucu.",
+        "Dezavantaj: pasör filede olmadığı için çok temiz karşılama gerektirir.",
+        "Libero yok: karşılayan aynı zamanda saldırı yaklaşmasını zincirler."
+      ],
+      "commonMistakes": [
+        "Çok geç penetrasyon → başka bir oyuncunun pas vermesi gerekir.",
+        "Çok kısa karşılama → pasör fileden çok uzakta varır.",
+        "Örtme unutuldu — rakip block-out = sayı."
+      ]
+    }
+  },
+  "4v4-attack-square": {
+    "title": "4'e 4 · Kare saldırı",
+    "shortDescription": "Kare dizilişi (2 ön / 2 arka): 2 blokçu + 2 dengeli savunmacı.",
+    "contextLabel": "4'e 4 · Kare · Çift blok mümkün",
+    "players": {
+      "P": "Pasör-vurucu (P2)",
+      "R4": "Vurucu (P4)",
+      "A1": "Sol arka (P5)",
+      "A2": "Sağ arka (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı",
+      "OPP_D2": "Rakip arka"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Kare konfigürasyonu",
+        "description": "Filede 2 oyuncu (P2 ve P4), arkada 2 oyuncu. Sahanın ön ve arkasının dengeli kapsanması."
+      },
+      "s2": {
+        "title": "2. Servis + yüksek karşılama",
+        "description": "Sol arka 2. bölgedeki pasör-vurucuya yüksek bir pas manşetler."
+      },
+      "s3": {
+        "title": "3. Kanada pas + yaklaşma",
+        "description": "Pasör 4. bölgedeki vurucuya dağıtır. Orta seçenek yok (özelleşmiş orta yok). Çift blok vurucuya doğru kayar."
+      },
+      "s4": {
+        "title": "4. Çift bloka karşı smaç",
+        "description": "Vurucu seçmek zorunda: kısa paralel, uzun çapraz veya açık koridora plase. Çift blok (elmastaki tek bloğa karşı) — hücum açısından savunma daha zor."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı uzun çaprazda plonjon yapar. Yerde yalnızca 2 oyuncu olduğundan bölge savunmasızdır."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Sıradaki ralli için herkes kareye geri döner. Bu diziliş 2 güçlü blokçu ve 2 güçlü savunmacısı olan takımlara uygundur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Kare dizilişi: saldırı/savunma dengesi, 2 ön bölge + 2 arka bölge.",
+        "Çift bloka olanak verir (elmastaki tek bloğa karşı) — filede daha iyi savunma.",
+        "Ancak yerde yalnızca 2 oyuncu → uzun çaprazlara karşı savunmasız.",
+        "2 güçlü blokçu ve 2 güçlü savunmacısı olan takımlar için iyi."
+      ],
+      "commonMistakes": [
+        "File oyuncuları merkezden çok uzakta → kolay rakip blok.",
+        "Arkalar derinde donmuş → kısa örtme yok.",
+        "Kimin pas vereceği karışıklığı: pasör-vurucu her zaman önde olmalı."
+      ]
+    }
+  },
+  "5v5-attack-pentagon": {
+    "title": "5'e 5 · Beşgen saldırı",
+    "shortDescription": "5'e 5 formatı: 1 tek pasör + 1 orta + 2 kanat + 1 arka. 4. bölge saldırısı.",
+    "contextLabel": "5'e 5 · 4-1 sistemi · Hibrit format",
+    "players": {
+      "R4": "Sol kanat",
+      "C": "Orta",
+      "P": "Pasör (P2)",
+      "A1": "Sol arka (P5)",
+      "A2": "Sağ arka (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Hücum beşgeni",
+        "description": "Beşgende 5 oyuncu: önde 3 (R4, C, P) + arkada 2. Düzenli saha kapsamı. Libero yok, tüm arkalar karşılar."
+      },
+      "s2": {
+        "title": "2. Servis + arka karşılama",
+        "description": "Sol arka ilk topu alır. Libero olmadan karşılamada en güvenilir arka alır."
+      },
+      "s3": {
+        "title": "3. Pas + yaklaşma",
+        "description": "Zaten filede olan pasör 4. bölgeye kolayca dağıtır. 5'e 5'te penetrasyon yok — P2'dedir. R4 yaklaşmasına başlar."
+      },
+      "s4": {
+        "title": "4. Kanat saldırı + çift blok",
+        "description": "Sol kanat uzun çaprazda bitirir. Rakip blok da beşgen oluşturur: kanatta 2 blokçu."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı çaprazda plonjon yapar. Kanal başına tek arka olduğunda yer savunması daha nadirdir."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Herkes beşgene geri döner. Libero olmadan, karşılama yükünü dağıtmak için arkaları döndürmek esastır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5'e 5 = hibrit format (antrenman, eksik oyuncular). Resmi FFVB kuralları yok.",
+        "Beşgen: her anahtar bölgede 1 oyuncu, tüm sahanın düzenli kapsanması.",
+        "4-1 sistemi = 5-1'in eşdeğeri ama bir vurucu eksik.",
+        "Öneri: pasör olmayan bir arkayı çıkararak 6'ya 6 5-1 sistemini koru."
+      ],
+      "commonMistakes": [
+        "5'e 5'te libero yok → tüm arkalar karşılayabilmeli.",
+        "Üçlü blok denemek → yerde yalnızca 2 savunmacı kalır.",
+        "Saldırı örtmesini unutmak → örtmede bir oyuncu eksik."
+      ]
+    }
+  },
+  "6v6-attack-4-2": {
+    "title": "Saldırı · 4-2 sistemi",
+    "shortDescription": "Başlangıç 4-2 sistemi: 2. bölgede sabit ön pasör, 2 vurucu mevcut.",
+    "contextLabel": "4-2 · Çapraz 2 pasör · U13/U15",
+    "players": {
+      "R4a": "Smaçör (P4)",
+      "C": "Orta (P3)",
+      "P1": "Pasör 1 (P2)",
+      "P2": "Pasör 2 (P5)",
+      "C2": "Orta 2 (P6)",
+      "R4b": "Smaçör (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 4-2 konfigürasyonu",
+        "description": "Çapraz konumda 2 pasör (P2 ve P5). Ön sıra pasörü (P1) her zaman 2. dokunuşu yapar. Merkezde C2 ile W karşılama."
+      },
+      "s2": {
+        "title": "2. Servis + merkez karşılama",
+        "description": "Arka orta klasik W karşılamada ilk dokunuşu alır. P2'deki ön pasöre yüksek yörünge."
+      },
+      "s3": {
+        "title": "3. Doğrudan pas + yaklaşma",
+        "description": "Ön pasörün yalnızca dağıtım yapması gerekir: penetrasyon yok, switch yok. 4. bölgedeki smaçöre yüksek bir pas gönderir. Kanatta çift blok."
+      },
+      "s4": {
+        "title": "4. Kanat saldırı + çift blok",
+        "description": "Smaçör 4. bölgede saldırır. Orta karşıladığı için orta seçenek yok. Çift bloka karşı uzun çaprazda smaç."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı topu kurtarmaya çalışmak için çaprazda plonjon yapar."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Herkes pozisyonunu yeniden alır. 4-2 en basit sistem olarak kalır: switch gerekmez."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4-2: 2 pasör + 2 orta + 2 smaçör. Her zaman önde 2 vurucu.",
+        "Ön pasör (varyanta göre P2 veya P3'te) sistematik olarak 2. dokunuşu yapar.",
+        "Penetrasyon yok, switch yok: öğrenmesi en kolay sistem.",
+        "U13/U15 veya yetişkin başlangıç için ideal. Rotasyonların öğrenilmesini teşvik eder."
+      ],
+      "commonMistakes": [
+        "Karşılama da yapan ön pasör → 2. dokunuşu yapmak imkânsız.",
+        "Pas vermek isteyen arka pasör → ön pasör kuralına uyulmuyor.",
+        "İlerlemeyen orta → kolay çift blok."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p1": {
+    "title": "Saldırı · 5-1 P1 rotasyonu",
+    "shortDescription": "3 karşılayıcılı karşılama → pasör P1'den penetre eder → smaçörden 4. bölge saldırısı.",
+    "contextLabel": "5-1 · P1 rotasyonu · Rakip servis",
+    "players": {
+      "L": "Libero (P5)",
+      "R4a": "Smaçör (P4)",
+      "R4b": "Smaçör (P6)",
+      "C": "Orta (P3)",
+      "Op": "Pasör çaprazı (P2)",
+      "P": "Pasör (P1)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_C": "Rakip orta",
+      "OPP_S": "Rakip pasör",
+      "OPP_BC": "Rakip libero"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Karşılama dizilişi",
+        "description": "Takımımız 3 karşılayıcılı dizilişte: libero (P5), P6'da smaçör ve 3 m çizgisine çekilmiş P4'te smaçör. Orta ve pasör çaprazı filede dışarıda. Pasör servis vurulur vurulmaz penetre etmek için P1'de bekler."
+      },
+      "s2": {
+        "title": "2. Servis + karşılama",
+        "description": "P6'daki smaçöre rakip yüksek servisi, manşetler. Paralel olarak pasör P1'den 2-3. bölgeye penetrasyonunu tetikler."
+      },
+      "s3": {
+        "title": "3. Yüksek pas + yaklaşma",
+        "description": "Top fileye varan pasöre yükselir. Smaçörün zaten yaklaşmasını başlattığı 4. bölgeye yüksek bir pas verir. Etrafında örtme oluşur."
+      },
+      "s4": {
+        "title": "4. Smaç + çift blok",
+        "description": "Smaçör havalanır ve rakibin 6. bölgesine doğru uzun çaprazda vurur. İki rakip blokçu çapraz ve paraleli kapatmak için paralel sıçrar."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip libero ümitsiz bir manşet denemek için 6. bölgeye plonjon yapar. Rakip pasör savunma topa dokunursa aktarmak için 2. bölgeye doğru hareket eder."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Tüm takım sıradaki servis için karşılama pozisyonunu yeniden alır. Bu yerleşim, bir sonraki saldırının kalitesini belirler."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "3 karşılayıcılı karşılama: libero + 2 smaçör sahanın tüm genişliğini alır.",
+        "Pasör servis vurulur vurulmaz P1'den 2-3. bölgeye penetre eder.",
+        "Smaçör vurucu, yaklaşmasını hazırlamak için karşılama sırasında 3 m çizgisine kayar.",
+        "Vurucunun çevresinde 5 oyuncu örtmesi (3 yakın + 2 uzak), alçak pozisyonda."
+      ],
+      "commonMistakes": [
+        "Çok geç penetre eden pasör → başka bir oyuncunun zorla atlama pası yapması.",
+        "Yaklaşmasını çok erken başlatan smaçör → ilerlemek yerine topun altına varır.",
+        "Örtme unutuldu → başarılı rakip blok = doğrudan kaybedilen sayı."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p2": {
+    "title": "Saldırı · 5-1 P2 rotasyonu",
+    "shortDescription": "Pasör P2'de zaten filede: önde 2 vurucu + pasör çaprazı istisnai olarak 4'te saldırır.",
+    "contextLabel": "5-1 · P2 rotasyonu · Ön sıra pasörü",
+    "players": {
+      "R4a": "Smaçör (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Smaçör (P1)",
+      "C": "Orta (P3)",
+      "Pt": "Pasör çaprazı (P4)",
+      "P": "Pasör (P2)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip servis",
+        "description": "5-6. bölgeye servis. Libero çağırır ve manşetlemeye hazırlanır. Pasör P2'de zaten filede bekler."
+      },
+      "s2": {
+        "title": "2. Servis + libero karşılama",
+        "description": "6. bölgeye yüksek servis. Libero gelir ve pasör hedefine (2. bölge) hassas manşet yapar."
+      },
+      "s3": {
+        "title": "3. Pasör çaprazına pas + yaklaşma",
+        "description": "P2'de zaten olan pasör, istisnai olarak pasör çaprazının yaklaşmaya başladığı 4. bölgeye dağıtır. Rakip blok merkeze toparlanır."
+      },
+      "s4": {
+        "title": "4. Smaç + çift blok",
+        "description": "Pasör çaprazı solda havalanır ve uzun çaprazda vurur. Nadir bir konfigürasyon ama P2'de kaçınılmaz — pasör yerinde kalır."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı ümitsiz bir manşet kurtarması denemek için uzun çaprazda plonjon yapar."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Herkes karşılama pozisyonunu yeniden alır. P2 rotasyonu hücum açısından en sınırlı olarak kalır: önde yalnızca 2 vurucu."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P2 rotasyonu = hücum açısından en sınırlı (önde yalnızca 2 vurucu).",
+        "Pasör zaten yerinde: sıfır penetrasyon, kolay dağıtım.",
+        "Pasör çaprazı pasörü serbest bırakmak için istisnai olarak solda (4. bölge) saldırır.",
+        "Kanatları ve smaçör arka saha saldırılarını seçenek olarak önceliklendir."
+      ],
+      "commonMistakes": [
+        "Zaten oradayken 2'de zıplayarak pas vermeye çalışan pasör → zor 2. dokunuş.",
+        "2 ile 4 arasında tereddüt eden pasör çaprazı → rakip blok yerine konuşlanmış.",
+        "İlerlemiyor ortalar → rakip için kolay çift blok."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p3": {
+    "title": "Saldırı · 5-1 P3 rotasyonu (pipe)",
+    "shortDescription": "P3'teki pasör 2-3'e doğru switch yapar → 6. bölgede arka saha smaçöründen pipe.",
+    "contextLabel": "5-1 · P3 rotasyonu · Arka saha saldırısı",
+    "players": {
+      "L": "Libero (P5)",
+      "Pt": "Pasör çaprazı (P6)",
+      "R4b": "Smaçör (P1)",
+      "R4a": "Smaçör (P4)",
+      "P": "Pasör (P3)",
+      "C": "Orta (P2)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Karşılama dizilişi",
+        "description": "Sağ tarafta servis bekleniyor. P1'deki smaçör karşılamayı alır. P3'teki pasör servis vurulur vurulmaz 2-3'e switch yapmaya hazırdır."
+      },
+      "s2": {
+        "title": "2. Servis + karşılama",
+        "description": "1. bölgeye yüksek servis. P1'deki smaçör hedefe manşetler. Pasör 2-3'e switch yapmaya başlar."
+      },
+      "s3": {
+        "title": "3. Pipe pas + yaklaşma",
+        "description": "Pasör 6. bölgeye düz pas gönderir: fileden 2 m, hızlı yörünge. Pasör çaprazı pipe için 3 m çizgisinin arkasında yaklaşmasını başlatır."
+      },
+      "s4": {
+        "title": "4. Pipe + çift blok",
+        "description": "Arka sahadan merkezde güçlü vuruş. Kanat çift bloku merkezde perdeleyemez — modern 5-1'in temel bir seçeneği."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip merkez savunmacı pipe'ı yakalamak için ortada plonjon yapar — top hızla varır, tepki vermek için az zaman vardır."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Tüm takım karşılama pozisyonunu yeniden alır. Orta, sonraki diziyi için file merkezine switch yapmaya hazır kalmalı."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe, filedeki 3 saldırıya ek olarak 4. hücum seçeneğidir.",
+        "Orta, pasör 2-3'e kayarken file merkezine switch yapar.",
+        "Pipe yörüngesi: düz, fileden 2 m, 3 m çizgisinin arkasında basış.",
+        "Kanatlara odaklanan bloga karşı çok etkili."
+      ],
+      "commonMistakes": [
+        "Çok yüksek pipe → rakip bloğun merkeze toparlanma zamanı olur.",
+        "Ön bölgede sıçrayan arka saha smaçörü → arka saha saldırı hatası.",
+        "Çok geç switch yapan orta → 3. bölge bloklanmış."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p4": {
+    "title": "Saldırı · 5-1 P4 rotasyonu",
+    "shortDescription": "P4'te ön sıra pasörü sağa switch yapar; Smaçör* 4'te saldırır, orta 3'te, pasör çaprazı 1'de arka sahada.",
+    "contextLabel": "5-1 · P4 rotasyonu · Ön sıra pasörü",
+    "players": {
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "Pt": "Pasör çaprazı (P1)",
+      "P": "Pasör (P4)",
+      "C": "Orta (P3)",
+      "R4a": "Smaçör (P2)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. P4 konfigürasyonu + kaydırma",
+        "description": "4. bölgede pasör, 2. bölgede Smaçör* — çapraz yerleşim. Pasör ve orta karşılama bölgesini libero için serbest bırakmak için sola kayar."
+      },
+      "s2": {
+        "title": "2. Servis + libero karşılama",
+        "description": "Servis 6. bölgeyi hedefler. Libero gelir ve klasik hedefe (P2 ve P3 arası) manşetler."
+      },
+      "s3": {
+        "title": "3. Pasör↔Smaçör* switch + yüksek pas",
+        "description": "Temel çapraz: pasör P4'ten 2-3'e gider, Smaçör* saldırmak için P2'den 4'e gider. Sol kanada yüksek pas."
+      },
+      "s4": {
+        "title": "4. Kanat saldırı + çift blok",
+        "description": "Uzun çapraz smaç. Ön sıra pasörü ile (blokta küçük), saldırının hızlı bitmesi gerekir. Çift blok kanada kaydırılır."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı ümitsiz bir manşet denemek için uzun yörüngede plonjon yapar."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Herkes başlangıç pozisyonunu yeniden alır. Pasör/orta sol kaydırması sonraki servis için korunur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P4 rotasyonu = ön sıra pasörü. Pasör↔Smaçör* switch zorunlu.",
+        "Önde 2 vurucu: Smaçör* 4'te, orta 3'te. Seçenek olarak pipe veya arka saha pasör çaprazı.",
+        "Pasör ve orta serviste 6. bölgeyi serbest bırakmak için sola kayar.",
+        "Pasör çaprazı (P1'de) karşılamaz ve arka saha saldırısına hazır kalır."
+      ],
+      "commonMistakes": [
+        "Switch unutuldu → Smaçör* sağda kalır, vurucu kötü pozisyonda.",
+        "Serviste pasör ve orta çok sağda → 6. bölgede karşılama çatışması.",
+        "Orta tarafından üstlenilmeyen rakip blok → sol kanatta kolay çift blok."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p5": {
+    "title": "Saldırı · 5-1 P5 rotasyonu",
+    "shortDescription": "P5'ten uzun penetrasyon. C/Smaçör switch. 2. bölgede pasör çaprazına pas.",
+    "contextLabel": "5-1 · P5 rotasyonu · Uzun penetrasyon",
+    "players": {
+      "P": "Pasör (P5)",
+      "L": "Libero (P6)",
+      "R4b": "Smaçör (P1)",
+      "C": "Orta (P4)",
+      "R4a": "Smaçör (P3)",
+      "Pt": "Pasör çaprazı (P2)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Karşılama dizilişi",
+        "description": "Pasör arka-solda P5'te, fileden mümkün olduğunca uzakta. P4'teki C ve P3'teki smaçör servis vurulur vurulmaz switch yapacak."
+      },
+      "s2": {
+        "title": "2. Servis + karşılama + C↔Smaçör switch",
+        "description": "Servis, smaçörün karşıladığı 1. bölgeyi hedefler. Eş zamanlı olarak orta merkeze kayar ve saldıran smaçör 4. bölgeyi alır."
+      },
+      "s3": {
+        "title": "3. Uzun penetrasyon + 2. bölgede pas",
+        "description": "Pasör P5'ten tüm sahayı geçer — en uzun penetrasyon. 2. bölgedeki pasör çaprazına kısa dağıtır. Rakip blok kapatmak için sağa kayar."
+      },
+      "s4": {
+        "title": "4. Çapraz smaç + çift blok",
+        "description": "Pasör çaprazı 2. bölgede havalanır ve uzun çaprazda vurur. Bu rotasyonda klasik bir kombinasyon. Çift blok sağda yerinde."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Rakip çapraz savunmacı uzun topu yakalamak için 5. bölgeye plonjon yapar."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Tüm takım karşılama pozisyonunu yeniden alır. Orta P4'e, smaçör P3'e, pasör P5'e döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P5 = en uzun penetrasyon. Mükemmel karşılama gerektirir.",
+        "Orta ve smaçör, C'yi 3. bölgeye yerleştirmek için servis vurulur vurulmaz switch yapar.",
+        "2. bölgedeki pasör çaprazı, pasör için en erişilebilir hedeftir.",
+        "Pas düz ve hızlıysa seçenek olarak pipe mümkündür."
+      ],
+      "commonMistakes": [
+        "Sürekli penetrasyon sırasında çok düz pas → pasör topun altında.",
+        "Geç C↔Smaçör switch → orta 4. bölgede = blokta faydasız.",
+        "Kısa karşılama → pasör fileden çok uzakta varır."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p6": {
+    "title": "Saldırı · 5-1 P6 rotasyonu (hızlı)",
+    "shortDescription": "P6'dan orta penetrasyon → ortadan hızlı merkez saldırı.",
+    "contextLabel": "5-1 · P6 rotasyonu · Hızlı kombinasyon",
+    "players": {
+      "L": "Libero (P5)",
+      "P": "Pasör (P6)",
+      "R4b": "Smaçör (P1)",
+      "R4a": "Smaçör (P4)",
+      "Pt": "Pasör çaprazı (P3)",
+      "C": "Orta (P2)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip merkez savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Karşılama dizilişi",
+        "description": "Sol tarafta servis bekleniyor. Libero kendi kanalını alır. P3'teki pasör çaprazı P2'ye switch yapacak, P2'deki orta file merkezine kayacak."
+      },
+      "s2": {
+        "title": "2. Servis + karşılama + Pt↔C switch",
+        "description": "5. bölgeye yüksek servis. Libero karşılar. Pasör çaprazı 2. bölgeye kayar ve orta, hızlıyı hazırlamak için file merkezini alır."
+      },
+      "s3": {
+        "title": "3. Orta penetrasyon",
+        "description": "Pasör P6'dan 2-3. bölgeye geçer (orta yol, P5'ten daha kısa). Orta tempo 1 için yüklenmeye başlar."
+      },
+      "s4": {
+        "title": "4. Ön sıçrama + hızlı düz pas",
+        "description": "Orta pas ÖNCESİNDEN havalanır — bu tempo 1. Pasör 1 m'de, hemen önünde hızlı bir top gönderir. Orta zaten havadadır."
+      },
+      "s5": {
+        "title": "5. Merkez vuruş + geç blok",
+        "description": "Rakip bloğu yerine geçmeden önce şaşırtan hızlı merkez vuruş. Rakip blokçular hemen sonra sıçrar — çok geç."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Orta merkeze döner, herkes karşılama dizilişini yeniden alır. Hızlı merkez bu rotasyonun imza kombinasyonudur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P6 = orta penetrasyon. Hızlı kombinasyonlar için ideal.",
+        "Tempo 1: pasör topa dokunduğunda orta zaten havada.",
+        "Orta, rakip merkez bloğunu meşgul eder: smaçörler için kanatları serbest bırakır.",
+        "Ortayı merkeze yerleştirmek için sistematik Pt↔C switch."
+      ],
+      "commonMistakes": [
+        "Çok geç havalanan orta → top elinin üzerinden geçer.",
+        "Tempo 1 için çok yüksek pas → rakip blok yerinde.",
+        "Switch yapmayan pasör çaprazı → orta 2. bölgede sıkışmış."
+      ]
+    }
+  },
+  "6v6-attack-6-2": {
+    "title": "Saldırı · 6-2 sistemi",
+    "shortDescription": "6-2 sistemi: arka saha pasörü penetre eder, her zaman önde 3 vurucu.",
+    "contextLabel": "6-2 · Penetre eden pasör · Orta",
+    "players": {
+      "R4a": "Smaçör (P4)",
+      "C": "Orta (P3)",
+      "PA": "Pasör-vurucu (P2)",
+      "P": "Pasör (P1)",
+      "C2": "Orta (P6)",
+      "R4b": "Smaçör (P5)",
+      "OPP_SRV": "Rakip servis atan",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu",
+      "OPP_D1": "Rakip çapraz savunmacı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 6-2 konfigürasyonu",
+        "description": "2 çok yönlü pasör: ön olan saldırır (pasör-vurucu), arka olan dağıtım yapar (ve penetre eder). Her zaman önde 3 vurucu."
+      },
+      "s2": {
+        "title": "2. Servis + arka orta karşılama",
+        "description": "C2 tarafından klasik merkez karşılama. Pasör P1'den 2-3. bölgeye penetrasyonunu tetikler."
+      },
+      "s3": {
+        "title": "3. 2. bölgede pas + yaklaşma",
+        "description": "2. bölgedeki pasör-vurucuya dağıtım. Maksimum çeşitlilik: önde 3 hücum tehdidi. Çift blok sağa kaydırılır."
+      },
+      "s4": {
+        "title": "4. Çapraz saldırı + çift blok",
+        "description": "Pasör-vurucu uzun çaprazda vurur. 6-2 her zaman 3 hücum tehdidi garanti eder — rakip blok tahmin edemez."
+      },
+      "s5": {
+        "title": "5. Rakip plonjon",
+        "description": "Çapraz savunmacı rakibin sol tarafında uzun yörüngede plonjon yapar — ümitsiz kurtarma denemesi."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — dizilişe geri dön",
+        "description": "Tüm takım pozisyonunu yeniden alır. Pasör-vurucu önde kalır, pasör P1'e döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "6-2: çapraz konumda 2 çok yönlü pasör.",
+        "Her zaman önde 3 vurucu (ön pasör saldırır, arka pasör dağıtır).",
+        "5-1'deki gibi sistematik penetrasyon, ancak 2 alternatif dağıtıcı ile.",
+        "5-1'e geçmeden önce çok yönlülüğü geliştirmek için mükemmel."
+      ],
+      "commonMistakes": [
+        "2 pasör arasındaki stil farkı → tutarsız dağıtım.",
+        "Saldırıya çıkmayan ön pasör → yalnızca 2 seçenek.",
+        "Çok geç penetrasyon → başka bir oyuncunun pas vermesi gerekir."
+      ]
+    }
+  },
+  "4v4-defense-block-1": {
+    "title": "4'e 4 · A sistemi savunma (1 blokçu + 3 savunmacı)",
+    "shortDescription": "4'e 4'te A sistemi (elmas dizilişi): 1 solo blokçu + plase + çapraz + paralel. En yaygın konfigürasyon.",
+    "contextLabel": "4'e 4 · A sistemi · 1 blokçu + 3 savunmacı",
+    "players": {
+      "C": "Orta (P3)",
+      "R4": "Sol kanat (P4)",
+      "A2": "Sağ kanat (P2)",
+      "A": "Arka (P1)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Elmas temel + okuma",
+        "description": "4 oyuncu ile her savunmacı kritik. Ortamız solo blok yapmaya hazırlanır. Rakip pası zorunlu okuma."
+      },
+      "s2": {
+        "title": "2. Rakip Z2'ye yüksek pas",
+        "description": "Sağ kanatlarına dağıtım. Saldırı ön-SOL köşemize varır. Orta sol tarafa kaymak zorunda."
+      },
+      "s3": {
+        "title": "3. Solo merkez blok + paralel/çapraz sinyali",
+        "description": "Orta sola kayar ve yalnız bloklar. 3 savunmacıyı yönlendirmek için zorunlu sinyal (paralel veya çapraz). Sinyalsiz ne kapatacaklarını bilemezler."
+      },
+      "s4": {
+        "title": "4. Uzun çapraz smaç + blok",
+        "description": "Vurucu uzun çaprazda vurur. Solo blok, önceden duyurulan paralelle kapatır."
+      },
+      "s5": {
+        "title": "5. Tek arka kurtarma",
+        "description": "P1 arka kendi ekseninde savunur — okuması mükemmel olmalı, telafi edecek başka arka yok. Hedefe yüksek manşet."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — elmas dizilişi",
+        "description": "Elmas dizilişine geri dön. Örtme bir sonraki okumadan itibaren sonraki saldırı bölgesine uyum sağlar."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "A sistemi (1 blokçu + 3 savunmacı): salon 4'e 4'te en yaygın konfigürasyon.",
+        "Paralel/çapraz blokçu sinyali zorunlu — onsuz 3 savunmacı ne kapatacağını bilemez.",
+        "Anahtar mesafeler: blokçu fileden 0,3 m; derin savunmacılar 7-7,5 m; plase/blok arkası 3,5-4 m.",
+        "Her savunmacı ~30-40 m² kapsar (6'ya 6'da 20 m²'ye karşı) → tahmin = 1 numaralı beceri.",
+        "Çift blok (B sistemi) büyük vuruculara ayrılır: yalnızca 2 derin savunmacı bırakır."
+      ],
+      "commonMistakes": [
+        "İzole blokçu plase örtmesi olmadan: 3 savunmacının hepsi derine gider, 3-5 m bölgesi boş kalır.",
+        "Düz hatta 2 savunmacı: aynı derinlikte yan yana → cut shot aralarına düşer.",
+        "Blokçu ve savunmacılar arasında sinyal yok (paralel vs çapraz).",
+        "Filedan çok uzakta plase savunmacısı: diğerleriyle geri çekilir ve artık kısa plaseleri kapatamaz.",
+        "Top savunulmadan önce hedefine koşan pasör → savunma deliği."
+      ]
+    }
+  },
+  "4v4-defense-vs-z2": {
+    "title": "4'e 4 · Z2 savunma",
+    "shortDescription": "A sisteminin aynası: rakip Z2 saldırısına (sağları → solumuza varır) karşı 1 blokçu + 3 savunmacı.",
+    "contextLabel": "4'e 4 · A sistemi · 1 blokçu + 3 savunmacı",
+    "players": {
+      "C": "Orta (P3)",
+      "R4": "Sol kanat (P4)",
+      "A2": "Sağ kanat (P2)",
+      "A": "Arka (P1)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip Z2 saldırısını oku",
+        "description": "2. bölgelerinden rakip saldırı (sağları) → ön-SOL köşemize varır. Orta bloklamak için sol tarafa kaymak zorunda kalacak."
+      },
+      "s2": {
+        "title": "2. Rakip Z2'ye yüksek pas",
+        "description": "Sağ kanatlarına dağıtım. Savunma ayna ayarlamasını tetikler."
+      },
+      "s3": {
+        "title": "3. Sol tarafta solo merkez blok",
+        "description": "Orta sol tarafa kayar ve yalnız bloklar. Paralel/çapraz sinyali zorunlu. R4 (sol kanat) 2,5 m'de off-blocker kalır, A2 (sağ kanat) uzun çaprazı savunur."
+      },
+      "s4": {
+        "title": "4. Çapraz smaç + solo blok",
+        "description": "Vurucu uzun çaprazda vurur. Solo blok sinyallenen paraleli kapatır."
+      },
+      "s5": {
+        "title": "5. Tek arka kurtarma",
+        "description": "P1 arka (top tarafına hafifçe kaydırılmış) manşetle savunur. Okuması diğer arkaların yokluğunu telafi eder."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — elmas dizilişi",
+        "description": "Elmas dizilişine geri dön. Orta merkeze döner, rakip taraf değiştirirse tekrar kaymaya hazır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4'e 4'te Z4'ün mükemmel aynası: A sistemi (1 blokçu + 3 savunmacı).",
+        "Sol tarafta P3 solo blokçu, paralel/çapraz sinyali zorunlu.",
+        "P4 (sol kanat) fileden 3,5-4 m off-blocker — kısa örtme ve plaseler.",
+        "P2 (sağ kanat) kısa çaprazı savunur (~7 m, düz hat).",
+        "Tek P1 arka uzun çaprazı savunur."
+      ],
+      "commonMistakes": [
+        "Orta ile blok yapan sol kanat P4 → sol tarafta off-blocker eksik.",
+        "Çok önde tek arka → derin çapraz top örtülmemiş.",
+        "Sinyalsiz blokçu → 3 savunmacı ne kapatacağını bilemez.",
+        "Filedan çok uzakta P2 → kısa çaprazı kapatmaz."
+      ]
+    }
+  },
+  "4v4-defense-vs-z3": {
+    "title": "4'e 4 · Z3 savunma (merkez hızlı)",
+    "shortDescription": "4'e 4'te rakip hızlı merkez saldırı: 1 kişilik blok okuma + 3 savunmacı. Savunması en zor konfigürasyon.",
+    "contextLabel": "4'e 4 · 1 kişilik blok (okuma) · Yapısal zayıflık",
+    "players": {
+      "C": "Orta (P3)",
+      "R4": "Sol kanat (P4)",
+      "A2": "Sağ kanat (P2)",
+      "A": "Arka (P1)",
+      "OPP_A": "Rakip orta",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip hızlıyı oku",
+        "description": "4'e 4'te merkez hızlı (tempo 1) en tehlikeli saldırıdır çünkü yalnızca 1 blokçu mevcuttur. Tek arka derin ekseni zaten tarar."
+      },
+      "s2": {
+        "title": "2. Hızlı merkez pas",
+        "description": "Pasör yaklaşmasını zaten başlatmış olan ortaya düz pas verir. Kanatlarımız çaprazları kapatmak için orta sahaya düşer."
+      },
+      "s3": {
+        "title": "3. 1 kişilik blok (okuma) + hızlı smaç",
+        "description": "Orta yalnız OKUMAYLA sıçrar — savunma ortasıyla commit mümkün değil. Rakip orta doğrudan eksende vurur."
+      },
+      "s4": {
+        "title": "4. Savunma ekseni: tek arka",
+        "description": "P1 arka eksende güçlü topu savunur — 6'ya 6'nın Z6 rolünü oynar. Okuması MÜKEMMEL olmalı."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — elmas dizilişi",
+        "description": "4'e 4 tabanına geri dön. Orta filede geri düşer, arka eksenel pozisyonunu yeniden alır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4'e 4 belgeleri bunu doğruluyor: merkez hızlı, 4'e 4'ün GERÇEK BİR ZAYIFLIĞIDIR (yalnızca 1 blokçu).",
+        "OKUMA üzerine 1 kişilik blok: savunma ortasıyla commit mümkün değil.",
+        "2 kanat orta sahada 2 kısa çaprazı kapsar (fileden ~3,5-4 m).",
+        "Tek arka savunma ekseni — merkez eksende 6'ya 6'nın Z6 rolünü oynar.",
+        "Tahmin = 1 numaralı beceri: kapsanacak ~40 m² ile okuma hatası geri alınamaz."
+      ],
+      "commonMistakes": [
+        "Hızlıya çift blok → yalnızca 2 zemin savunmacısı, çaprazlar boş.",
+        "Çok erken öne hareket eden arka → derin top arkasına düşer.",
+        "Bloklamadan filede kalan kanatlar → bloğun arkasında 3 m çizgisinde delikler.",
+        "Çok geç rakip orta okuma → saldırıyı hareketsiz emeriz."
+      ]
+    }
+  },
+  "5v5-defense-vs-z2": {
+    "title": "5'e 5 · Z2 savunma",
+    "shortDescription": "Z4'ün mükemmel aynası. Rakip Z2 saldırısına (sağları → solumuza varır) karşı 2-1-2 sistemi.",
+    "contextLabel": "5'e 5 · 2-1-2 · Çift blok + off-blocker",
+    "players": {
+      "C": "Orta (P3)",
+      "Op": "Pasör çaprazı (P2)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "P": "Pasör (P1)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip Z2 saldırısını oku",
+        "description": "2. bölgelerinden rakip saldırı (sağları) → ön-SOL köşemize varır. Z4'ün mükemmel aynası."
+      },
+      "s2": {
+        "title": "2. Rakip Z2'ye yüksek pas",
+        "description": "Sağ kanatlarına dağıtım. Saldırı ön-SOL köşemize varır."
+      },
+      "s3": {
+        "title": "3. Ayna çift blok (Smaçör + orta)",
+        "description": "Smaçör blokçu paralel + orta çapraz sol tarafta. Pasör çaprazı (P2) sağda off-blocker olarak geri düşer. Libero blok gölgesinde paraleli savunur, pasör uzun çaprazı savunur."
+      },
+      "s4": {
+        "title": "4. Smaç + çift blok",
+        "description": "Rakip sağ kanat uzun çaprazda vurur. Smaçör + orta sıçrar."
+      },
+      "s5": {
+        "title": "5. Pasör savunması — karmaşık geçiş",
+        "description": "Pasör uzun çapraz yörüngesindedir. Savunma manşeti — birincil savunmacı olduğu için pasör çaprazının 2. dokunuşu alması gerekir."
+      },
+      "s6": {
+        "title": "6. SIFIRLA",
+        "description": "5'e 5 tabanına geri dön. Sonraki dizi için pasör ve pasör çaprazı arasında zorunlu iletişim."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5'e 5'te Z4'ün mükemmel aynası: 2-1-2 sistemi (çift blok + off-blocker + 2 savunmacı).",
+        "Çift blok: Smaçör (P4) blokçu paralel + orta (P3) çaprazı kapatır.",
+        "Pasör çaprazı (P2) sağ tarafta off-blocker olur, 3 m çizgisinde geri düşer.",
+        "Arka saha pasörü (P1) uzun çaprazı savunur.",
+        "Pasör savunma yaparsa → pasör çaprazı (yedek pasör) tarafından 2. dokunuş zorunlu."
+      ],
+      "commonMistakes": [
+        "Z2'den blok yapan pasör çaprazı → sağ tarafta off-blocker eksik.",
+        "Savunan VE aktarmak isteyen pasör → 2. dokunuşta karışıklık.",
+        "Z2'de yanlış konumlanmış libero (burada uzun çaprazı değil PARALELi savunur).",
+        "Pasör ve pasör çaprazı arasında iletişim yok."
+      ]
+    }
+  },
+  "5v5-defense-vs-z3": {
+    "title": "5'e 5 · Z3 savunma (hızlı / tempo 1)",
+    "shortDescription": "5'e 5'te rakip hızlı merkez saldırıya karşı 1 kişilik blok (orta) — kısmi eksenel kapsama.",
+    "contextLabel": "5'e 5 · 1 kişilik blok (okuma) · Hızlı okuma",
+    "players": {
+      "C": "Orta (P3)",
+      "Op": "Pasör çaprazı (P2)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "P": "Pasör (P1)",
+      "OPP_A": "Rakip orta",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip hızlıyı oku",
+        "description": "Ortaya yakın düz dağıtım. Pas ile vuruş arasında 0,3-0,5 sn — ortamız zaten hareket halindeki karşıtını tarar."
+      },
+      "s2": {
+        "title": "2. Düz pas + off-blocker olarak kanatlar",
+        "description": "Rakip pasör orta için düz pas verir. Kanatlarımız yan blok sapmalarını kapatmak için hücum çizgisinde fileden 1,5 m'ye düşer."
+      },
+      "s3": {
+        "title": "3. 1 kişilik blok (okuma) + hızlı smaç",
+        "description": "Ortamız okumayla yalnız sıçrar. Rakip orta kısa çaprazda vurur — yüksek pasa kıyasla açılar kısadır."
+      },
+      "s4": {
+        "title": "4. Libero savunma",
+        "description": "Libero (açılar kısa olduğundan 5 m'ye çekilmiş) kendi sol kanalında manşetle savunur. Hedefe yüksek yörünge — pasör fileye dönecek."
+      },
+      "s5": {
+        "title": "5. SIFIRLA",
+        "description": "Diziden sonra 5'e 5 tabanına geri dön. Orta ve kanatlar yeniden hizalanır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Okumayla 1 kişilik blok (P3 orta) — hızlıda commit mümkün değil.",
+        "Kanatlar (P4 + P2) hücum çizgisinde fileden 2 m: blok sapmalarını kapatır.",
+        "Yalnızca 2 derin savunmacı ile (P5 + P1), EKSENEL derin kapsama kısmidir.",
+        "Z1 ve Z5 1 m ÖNE GİDER (fileden ~7 m), çünkü hızlıda açılar daha kısadır.",
+        "\"Temasta durmuş\": vuruş anında herkes tam olarak durmuş."
+      ],
+      "commonMistakes": [
+        "Hızlıya çift blok → çok geç ve yalnızca 1 zemin savunmacısı bırakır.",
+        "Arkada donmuş savunmacılar (8 m+) → hızlı top onlar hareket etmeden düşer.",
+        "\"Yanlış adım\" (önce geri adım) → tempo 1'de zaman kaybı.",
+        "Filede kalan off-blocker'lar → sapmaları kapatmaz."
+      ]
+    }
+  },
+  "5v5-defense-vs-z4": {
+    "title": "5'e 5 · Z4 savunma",
+    "shortDescription": "Rakip Z4 saldırısına (solları → sağımıza varır) karşı 2-1-2 sistemi: çift blok + off-blocker + 2 savunmacı.",
+    "contextLabel": "5'e 5 · 2-1-2 · Çift blok + off-blocker",
+    "players": {
+      "C": "Orta (P3)",
+      "Op": "Pasör çaprazı (P2)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "P": "Pasör (P1)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip Z4 saldırısını oku",
+        "description": "4. bölgelerinden rakip saldırı (solları) → ön-SAĞ köşemize varır. Sıralı okuma \"top → pasör → top → vurucu\"."
+      },
+      "s2": {
+        "title": "2. Rakip Z4'e yüksek pas",
+        "description": "Pasörlerinden sol kanada standart dağıtım. Ön hattımız saldırı bölgesini belirler."
+      },
+      "s3": {
+        "title": "3. Çift blok + Smaçör off-blocker",
+        "description": "Pasör çaprazı (P2) + orta (P3) sağda blok yapmak için yukarı çıkar. Smaçör off-blocker olarak fileden 1,5 m'ye düşer. Libero uzun çaprazda, pasör düz paralelde — her biri ~30 m² kapsar."
+      },
+      "s4": {
+        "title": "4. Uzun çapraz smaç + blok",
+        "description": "Vurucu uzun çaprazda vurur (istatistiksel olarak en sık yörünge). Pasör çaprazı + orta sıçrar."
+      },
+      "s5": {
+        "title": "5. Libero savunma",
+        "description": "Libero ana yörüngededir. Hedefe yüksek manşet — karşı saldırıya geçiş."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — 2-1-2 tabanına geri dön",
+        "description": "Temel dizilişe geç. Pasör bölge 1'ine döner, savunma sonraki dizi için yeniden organize olur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "2-1-2 sistemi: 2 blokçu + 1 off-blocker (plase örtmesi) + 2 derin savunmacı.",
+        "Öneri: pasör olmayan bir arkayı çıkararak 6'ya 6 5-1'i koru (3F-2A konfigürasyonu).",
+        "Filedan 2-2,5 m, paralel çizgiden 1 m off-blocker — bloğun arkasındaki 3 m bölgesini kapsar.",
+        "Kritik okuma: savunmacı başına ~30 m² (6'ya 6'da 20 m²'ye karşı), azaltılmış başlangıç pozisyon güvenliği.",
+        "\"Temasta durmuş\": vuruş anında durmuş ve dengeli."
+      ],
+      "commonMistakes": [
+        "Üçlü blok → yalnızca 1 zemin savunmacısı = garanti edilmiş sayı.",
+        "Filede kalan off-blocker → bloğun arkasındaki 3 m bölgesi örtülmemiş.",
+        "2 derin savunmacı arasında öncelik hiyerarşisi yok → aynı topta 2 oyuncu.",
+        "Bölgeleri uyarlamadan mekanik olarak 6'ya 6'yı tekrarlamak (libero burada daha geniş kapsamalı)."
+      ]
+    }
+  },
+  "6v6-attack-coverage": {
+    "title": "Örtme · 5-1 saldırı",
+    "shortDescription": "4. bölge saldırısında 5 oyuncu örtmesi: olası bir block-out'u kurtarmak için 2 yay (3 yakın + 2 uzak).",
+    "contextLabel": "5-1 · 5 oyuncu örtmesi · 3-2 dizilişi",
+    "players": {
+      "R4a": "Smaçör vurucu (P4)",
+      "C": "Orta (P3)",
+      "P": "Pasör (penetre etmiş)",
+      "Op": "Pasör çaprazı (P2)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_BL": "Rakip sol blokçu",
+      "OPP_BR": "Rakip sağ blokçu"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Z4 saldırısını hazırlama",
+        "description": "Smaçörümüz yaklaşmasında, havalanmak üzere. Vuruştan önce bile örtme organize olur: bir block-out'u kurtarmak için tepki değil tahmindir."
+      },
+      "s2": {
+        "title": "2. İlk yay (3 yakın oyuncu)",
+        "description": "Pasör + orta + libero vurucudan 1-1,5 m uzakta yarım daire oluşturur, ÇOK alçak pozisyonda, kollar öne uzatılmış, kısa manşet yapmaya hazır."
+      },
+      "s3": {
+        "title": "3. Smaç + rakip çift blok",
+        "description": "Smaçörümüz havalanır ve çaprazda vurur. İki rakip blokçu yörüngeyi kapatmak için paralel sıçrar — örtme zaten donmuş, bekliyor."
+      },
+      "s4": {
+        "title": "4. Block-out: top geri geliyor",
+        "description": "Rakip blok topa dokunur, top vurucudan 1,5 m uzakta sahamıza geri seker. Örtmesiz, bu kaybedilen bir sayıdır — burada pasör tam iniş noktasındadır."
+      },
+      "s5": {
+        "title": "5. Pasör tarafından kurtarma (1. destek)",
+        "description": "Pasör (1. yakın destek) topu vurucudan 1 m uzakta manşetle savunur. 4. bölgeye pastan sonra ONUN sorumluluğudur — pazarlık edilemez kural."
+      },
+      "s6": {
+        "title": "6. Yeni saldırı mümkün",
+        "description": "Kurtarma fileye yeni bir topa olanak verir. 5 oyuncu örtmesiz = block-out'tan doğrudan kaybedilen sayı."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5 oyuncu örtmesi = elit seviye standardı. 3-2 dizilişi (3 yakın + 2 uzak).",
+        "Pasör HER ZAMAN 1. yakın destektir, vurucudan 1-1,5 m uzakta.",
+        "3 yakın oyuncu için ÇOK alçak pozisyon, kollar öne uzatılmış.",
+        "Örtmesiz, başarılı rakip blok = doğrudan kaybedilen sayı.",
+        "Tahmin tepkiden ağır basar: örtme vuruştan ÖNCE organize olur."
+      ],
+      "commonMistakes": [
+        "Örtme yok → rakip blok = sayı.",
+        "Pasından sonra filede kalan pasör → 1. destek eksik.",
+        "Ayakta veya çok uzakta örtmenler → kısa toplar kurtarılmaz.",
+        "5 yerine yalnızca 2 veya 3 örtmen → uzun block-out'lar kaybedilir."
+      ]
+    }
+  },
+  "6v6-defense-6-front": {
+    "title": "Savunma · man-up (2-1-3)",
+    "shortDescription": "Man-up sistemi (2-1-3, eskiden \"W savunma\"): kısa plaseler için bloğun arkasına çekilmiş bir savunmacı.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Plase karşıtı",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6 öne çekilmiş)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Man-up tabanı",
+        "description": "Rakip plase yapmasıyla bilinir — man-up'ın taktik seçimi. Smaçör (P6'da) bloğun arkasına ilerlemeye hazır, zaten 2,5 m'ye çekilmiş."
+      },
+      "s2": {
+        "title": "2. Rakip Z4'e yüksek pas",
+        "description": "Rakip Z4'e standart dağıtım. Savunma konfigürasyonu tanır ve kurar."
+      },
+      "s3": {
+        "title": "3. Bloğun arkasında öne çekilmiş oyuncu",
+        "description": "Man-up'ın temel farkı: R4b filedan 2,5 m'ye, blok gölgesine ilerler. Libero ve pasör telafi etmek için 6 m'ye düşer. Standart çift blok (pasör çaprazı + orta)."
+      },
+      "s4": {
+        "title": "4. Rakip jump tip",
+        "description": "Vurucu smaçlamak yerine plase yapmayı seçer. Top bloğun hemen arkasına düşer — tam öne çekilmiş oyuncunun olduğu yere."
+      },
+      "s5": {
+        "title": "5. Öne çekilmiş oyuncu tarafından kısa kurtarma",
+        "description": "Öne çekilmiş oyuncu tam topun düştüğü yerdedir. Atlamalı 2. dokunuşu aktarmak için pasör çaprazına hassas manşet."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — man-up tabanı",
+        "description": "2-1-3 taban pozisyonuna geri dön. R4b 2,5 m'de yeniden konumlanmış, libero ve pasör derinde."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Man-up = 2-1-3 (Keller / USAV) — eskiden \"kırmızı savunma\".",
+        "⚠ Bir KARŞILAMA dizilişi olan \"W-formasyonu\" ile karıştırmayın, savunma sistemi değil.",
+        "Plaselerin, roll shot'ların ve bloğun arkasındaki \"çöp\" topların olağanüstü kapsamı.",
+        "Ancak: yalnızca 3 derin savunmacı → dar çaprazlarda güçlü smaçlara karşı savunmasız.",
+        "Belirti: gençlik takımları, okul, çok plase veya off-speed vuruş yapan taktik rakipler."
+      ],
+      "commonMistakes": [
+        "Plase yapan takıma karşı çevre sistemini korumak → kısa toplar kaybedilir.",
+        "Çok önde öne çekilmiş oyuncu (filede) → blok hızında engellenmiş.",
+        "Düşmeyen libero → güçlü smaçta arkada delik.",
+        "Takım kelime dağarcığında \"W savunma\" ile \"man-up\"ı karıştırmak — yanlış anlama kaynağı."
+      ]
+    }
+  },
+  "6v6-defense-perimeter": {
+    "title": "Savunma · çevre (2-0-4)",
+    "shortDescription": "Beyaz savunma: çizgilerde 4 savunmacı, fileye açık U. Elit erkek voleybolunda baskın.",
+    "contextLabel": "5-1 · Çevre 2-0-4 (beyaz savunma)",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Çevre konfigürasyonu (2-0-4)",
+        "description": "4 savunmacı fileye açık U oluşturur, neredeyse çizgilerde — \"bir ayak çizgide\" (Liskevych). Sahanın ortası kasıtlı olarak terk edilmiştir."
+      },
+      "s2": {
+        "title": "2. Rakip Z4'e yüksek pas",
+        "description": "Sol kanatlarına pas. Ön hattımız bölgeyi belirler, çevre oyuncuları katı bir şekilde çizgilerde kalır."
+      },
+      "s3": {
+        "title": "3. Çift blok + çevrede 4 savunmacı",
+        "description": "Standart çift blok (pasör çaprazı paralel + orta çapraz). Bloğun arkasına çekilmiş savunmacı yok (bu yüzden ortada 0). Sol çizgide libero, dip çizgide P6, sağ çizgide P1."
+      },
+      "s4": {
+        "title": "4. Güçlü paralel smaç + blok",
+        "description": "Vurucu arka-sol köşemize paralel vurur. Yörünge bloğa yakın geçer — uzun bir block-out olasıdır."
+      },
+      "s5": {
+        "title": "5. Çizgide kurtarma",
+        "description": "Libero çizgide kurtarır — mükemmel çevre kapsaması. \"Dışarı\" toplarını kolayca tanımlar. 2-3. bölgeye yüksek manşet."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — çevre",
+        "description": "Saf çevre dizilişine geri dön: tüm arkalar çizgilerde, taktik kuralla merkez orta terk edilmiş."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Çevre = 2-0-4 (\"beyaz savunma\"): çevrede 4 savunmacı, hiçbiri öne çekilmemiş.",
+        "Gücün baskın olduğu modern ve uluslararası erkek voleybolunda baskın sistem.",
+        "Mantık: güçlü smaçların düştüğü bölgeleri istatistiksel olarak doldurmak (çizgiler ve derin köşeler).",
+        "\"Dışarı\" toplarının ve block-out'ların savunmasının mükemmel tanımlanması.",
+        "⚠ Sahanın ortası (3 ile 5 m arasındaki merkez bölge) kasıtlı olarak açık bırakılır."
+      ],
+      "commonMistakes": [
+        "Merkeze çöken savunmacılar → sistemin mantığını kaybeder ve artık çizgileri kapsamaz.",
+        "Plase yapan takıma karşı seçilen sistem → sahanın ortası örtülmemiş, plaseler kaybedilir.",
+        "Tecrübesiz libero → yanlardaki \"dışarı\" toplarının yanlış okunması.",
+        "Plaselerde öne dalış yapmak için atletizm eksikliği → sömürülen zayıflık."
+      ]
+    }
+  },
+  "6v6-defense-read": {
+    "title": "Savunma · okuma",
+    "shortDescription": "Elit reaktif savunma: pas, yaklaşma ve rakip silahlı kol ipuçlarına dayalı uyarlanabilir pozisyonlar.",
+    "contextLabel": "5-1 · Okuma savunma · Uluslararası",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Nötr taban pozisyonu",
+        "description": "Tüm savunmacılar okuma pozisyonunda, dizler bükülmüş, ayaklar paralel. Zorunlu görsel sıra: \"top → pasör → top → vurucu\"."
+      },
+      "s2": {
+        "title": "2. Pası oku (rakip Z2'ye)",
+        "description": "Top rakip pasörün elinden çıkar çıkmaz → saldırı bölgesine doğru ayarla. Burada rakip Z2 (sağları = solumuz)."
+      },
+      "s3": {
+        "title": "3. Vurucuyu oku + ayarla",
+        "description": "Paralel olarak yaklaşmayı, silahlı kol yönelimini ve omuzları oku. Herkes ipuçlarına göre yeniden konumlanır: yüksek omuz = smaç, rotasyon = olası yön."
+      },
+      "s4": {
+        "title": "4. Smacı oku + çift blok",
+        "description": "Vurucu uzun çaprazda açılır. Görsel ipuçları sayesinde savunma zaten yerinde. Smaçör + orta bloklar. \"Temasta durmuş\" zorunlu."
+      },
+      "s5": {
+        "title": "5. Libero tarafından okuma kurtarma",
+        "description": "Mükemmel tahmin: libero zaten uzun çaprazda, tam yörünge üzerinde. Hedefe yüksek manşet."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — nötr taban",
+        "description": "Sonraki fazı okumaya hazır nötr pozisyona geri dön. Okuma her rakip dokunuşunda yeniden başlar."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Okuma savunması = sabit konumlandırma yok, her şey uyarlanabilir. Modern savunma diziliştan çok okumayla tanımlanır.",
+        "Görsel sıra \"top → pasör → top → vurucu\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fazlar: nötr taban → pas okuma → vurucu okuma → ayarlama → \"temasta durmuş\" → takip.",
+        "Uluslararası elit seviyede tercih edilen sistem (FIVB büyükler).",
+        "Çok yönlü vuruculara karşı en etkili."
+      ],
+      "commonMistakes": [
+        "Pas ÖNCESİNDEN hareket etmek → kötü okuma, yanlış ayakta oyuncu.",
+        "Eksik okuma: yalnızca pası, silahlı kolu okumamak.",
+        "Vurucu temas anında hâlâ hareket etmek (\"temasta durmuş\" değil) → reaktivite yarıya iner.",
+        "Koordinasyon eksikliği → aynı topta 2 savunmacı, başka yerde delik."
+      ]
+    }
+  },
+  "6v6-defense-rotation": {
+    "title": "Savunma · rotasyon (3-2-1)",
+    "shortDescription": "Rotasyon / slide savunma: arkalar saldırı tarafına kayar, karşı arka bloğun arkasına ilerler.",
+    "contextLabel": "5-1 · Rotasyon 3-2-1 · Slide savunma",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip vurucu",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Taban + Z4 pas okuma",
+        "description": "Rotasyondan önce taban konfigürasyonu. Rakip pasör penetre eder ve sol kanatlarına pas hazırlar."
+      },
+      "s2": {
+        "title": "2. Rakip Z4'e yüksek pas",
+        "description": "Standart dağıtım. Takımımız rotasyonu tetikler: P1 bloğun arkasına ilerleyecek, P6 sağ çizgiye kayacak, libero çaprazı tutar."
+      },
+      "s3": {
+        "title": "3. 3-2-1 rotasyon devrede",
+        "description": "Pasör (P1) plaseyi kapatmak için bloğun arkasında 3 m'ye İLERLER. P6 8 m'de sağ çizgiye kayar. Libero uzun çaprazda kalır. Solda klasik off-blocker R4."
+      },
+      "s4": {
+        "title": "4. Çapraz smaç + blok",
+        "description": "Vurucu uzun çaprazda vurur. Çift blok (pasör çaprazı + orta) — ana yörünge libero tarafından kapsanmıştır."
+      },
+      "s5": {
+        "title": "5. Libero savunma çaprazda",
+        "description": "Libero birincil vuruşun iniş noktasında tam olarak yerleşik. 2-3. bölgeye yüksek manşet — karşı saldırıya pürüzsüz geçiş."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — sonraki rotasyondan önce taban",
+        "description": "Tabana geri dön. Rotasyon etkiliydi: kısa plase öne çıkmış pasör tarafından, uzun çapraz libero tarafından alınırdı."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "3-2-1 rotasyon (slide defense): 3 arka savunmacı saldırı tarafına kayar.",
+        "Karşı arka (P1'de ise genellikle pasör) plaseyi kapatmak için bloğun arkasına İLERLER.",
+        "Arka orta saldırılan tarafta çizgiye kayar (~8,5 m, çizgiden 1-1,5 m).",
+        "Derin paralel VE plasenin eş zamanlı mükemmel kapsanması.",
+        "Pasör öne çıkan oyuncuysa hızlı pasör geçişi.",
+        "\"Counter-rotate\" varyantı: ters yönde rotasyon."
+      ],
+      "commonMistakes": [
+        "Eksik rotasyon → kapsama delikleri.",
+        "Çapraz karşı köşe savunmasız (derinde bir savunmacı eksik).",
+        "Rotate (topa doğru) ile counter-rotate (ters) arasında karışıklık — güçlü iletişim gerektirir.",
+        "Donmuş öne çıkmış oyuncu → plaselere vs smaçlara okumaz."
+      ]
+    }
+  },
+  "6v6-defense-vs-pipe": {
+    "title": "Savunma · rakip pipe (BIC)",
+    "shortDescription": "Rakip pipe'a (arka saha Z6 saldırı) karşı savunma: 1 veya 2 kişilik blok, P6 \"sahayı sıkıştırmak\" için ilerler.",
+    "contextLabel": "5-1 · Pipe / BIC · P6 öne, sıkıştırılmış çevre",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip pipe",
+      "OPP_S": "Rakip pasör"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pipe'ı okuma",
+        "description": "Pasörleri merkez arkasına düz pas göndermek üzere. Ortamız hem olası rakip ortayı HEM DE pipe koridorunu tarar. P6 ilerlemeye hazır olmalı."
+      },
+      "s2": {
+        "title": "2. Düz merkez pas + pipe yaklaşma",
+        "description": "Rakip pasör Z6 eksenine düz pas verir. Pipe vurucusu 3 m çizgisinin arkasında yaklaşmasına girer, uzun koşu. P6 öne kaymaya başlar."
+      },
+      "s3": {
+        "title": "3. Merkez blok + sıkıştırılmış kanatlar",
+        "description": "Ortamız pipe'a yalnız sıçrar. Kanatlar (Smaçör + pasör çaprazı) yan sapmaları kapatmak için filedan ~1,5 m'ye düşer. Z1 ve Z5 ekseni savunmak için çizgileri feda eder."
+      },
+      "s4": {
+        "title": "4. Pipe vuruş + merkez blok",
+        "description": "Vurucu eksende derinde vurur. Ortamız 1 kişilik blok için fileye gider — hızlı pipe iki blokçu koymaya zaman vermez."
+      },
+      "s5": {
+        "title": "5. P6 tarafından eksenel kurtarma",
+        "description": "Top derin eksene geçer — P6 (6,5 m'ye çekilmiş) tam darbe noktasındadır. Pasörün 2-3. bölgesine eksende manşet."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — sıkıştırılmış tabana geri dön",
+        "description": "Pipe'a hazır taban pozisyonuna geç: P6 öne, Z1/Z5 merkez eksende. Oyun dönmeye devam ederse konfigürasyon geçerli kalır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe = OH2 veya OPP tarafından Z6'dan (arka orta) arka saha saldırısı — derin merkez ekseni hedefler.",
+        "1 kişilik blok (orta) en sık — hızlı tempoda çift blok zor.",
+        "Savunma P6'sı filedan ~6-7 m'ye, tam eksene İLERLER (\"sahayı sıkıştır\").",
+        "Z1 ve Z5 merkeze kapanır (~7 m, çizgilerden 1,5 m) — çizgileri biraz feda eder.",
+        "BIC (hızlı pipe) = savunması en zor saldırılardan biri, çünkü orta hızlı + pipe + iki kanadı onurlandıramaz."
+      ],
+      "commonMistakes": [
+        "Pipe'a çift blok → rakip saldırı değiştirirse bir kanadı tamamen açar.",
+        "Arkada donmuş P6 (8 m+) → hızlı pipe o hareket etmeden düşer.",
+        "Çizgilerde çok geniş yayılmış Z1/Z5 → merkez ekseni örtülmemiş.",
+        "Orta ile kanatlar arasında pipe vs hızlıyı kimin alacağı konusunda iletişim yok."
+      ]
+    }
+  },
+  "6v6-defense-vs-z2": {
+    "title": "Savunma · rakip Z2 saldırısı",
+    "shortDescription": "Z4'ün mükemmel aynası. Rakip Z2 saldırısına karşı çift blok (Smaçör paralel + orta çapraz) → solumuza varır.",
+    "contextLabel": "5-1 · P1 arka saha pasörü · Çift blok · Çevre",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip Z2 vurucusu",
+      "OPP_S": "Rakip pasör",
+      "OPP_R": "Rakip karşılayıcı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip karşılama + penetrasyon",
+        "description": "Arkaları manşet yaptı. Rakip pasör P1'den hedefe penetre eder. Savunmamız HAZIR'da okur."
+      },
+      "s2": {
+        "title": "2. Rakip Z2'ye yüksek pas",
+        "description": "Rakip pasör sağ kanatlarına dağıtır. Saldırı ön-SOL köşemize varır. Z4'ün mükemmel ayna konfigürasyonu."
+      },
+      "s3": {
+        "title": "3. Ayna çift blok + savunma kayması",
+        "description": "Smaçör (P4) blokçu paralel + orta (P3) çaprazı kapatır. Pasör çaprazı (P2) sağda 3 m çizgisinde off-blocker. Libero derin sol paraleli savunur. P1 uzun çaprazı alır."
+      },
+      "s4": {
+        "title": "4. Rakip smaç + çift blok",
+        "description": "Rakip sağ kanat uzun çaprazda vurur. Smaçör ve orta sıçrar. Temasta durmuş zorunlu."
+      },
+      "s5": {
+        "title": "5. Pasör savunma çaprazda",
+        "description": "Pasör (P1) uzun çaprazın birincil yörüngesindedir. Savunma manşeti — anında soru: 2. dokunuşu kim alır?"
+      },
+      "s6": {
+        "title": "6. Pasör çaprazı aktarımı + karşı saldırı",
+        "description": "Pasör çaprazı 2. dokunuşu yapmak için off-blocker yerini terk eder. Vuruşu hazırlayan 4. bölgedeki smaçöre dağıtım."
+      },
+      "s7": {
+        "title": "7. SIFIRLA — savunma tabanına geri dön",
+        "description": "Top rakip tarafa döner dönmez herkes taban pozisyonuna geçer."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Z4'ün mükemmel aynası: Smaçör (P4 = OH) blokçu paralel + orta (P3) çaprazı kapatır.",
+        "Pasör çaprazı (P2 = OPP) sağ tarafta off-blocker olur, 3 m çizgisinde geri düşer.",
+        "P1'deki pasör (arka saha) uzun çaprazı savunur.",
+        "Kritik yönetim: pasör P2'de (ön sıra) ise paraleli O bloklar — gergin geçiş.",
+        "Pasör P1'de savunma yaparsa → pasör çaprazı (yedek pasör) tarafından 2. dokunuş zorunlu."
+      ],
+      "commonMistakes": [
+        "2. bölgeden blok yapan pasör çaprazı → sağ tarafta off-blocker eksik.",
+        "Smaçörle hizalanmayan orta → açık blok.",
+        "Z2'de yanlış konumlanmış libero — burada uzun çaprazı değil derin PARALELi savunur.",
+        "Savunan VE aktarmak isteyen pasör → 2. dokunuşta karışıklık."
+      ]
+    }
+  },
+  "6v6-defense-vs-z3": {
+    "title": "Savunma · rakip Z3 saldırı (hızlı / tempo 1)",
+    "shortDescription": "Rakip hızlı merkez saldırıya karşı okumalı 1 kişilik blok (orta) — arkalar bir metre öne çekilmiş.",
+    "contextLabel": "5-1 · 1 kişilik blok (okuma) · Temasta durmuş",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip orta",
+      "OPP_S": "Rakip pasör",
+      "OPP_R4": "Rakip smaçör",
+      "OPP_R": "Rakip karşılayıcı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip karşılama + şimşek penetrasyon",
+        "description": "Arkaları yeni manşet yaptı. Pasör hızlı için fileye koşar. Tempo 1 = pas ile vuruş arasında 0,3-0,5 sn. Ortamız zaten hareket halindeki rakip ortanın hareketini tarar."
+      },
+      "s2": {
+        "title": "2. Düz pas + havada orta",
+        "description": "Rakip pasör zaten havalanmış ortaya çok alçak düz pas verir. Kanatlarımız blok sapmalarını serbest bırakmak için 3 m çizgisine düşer."
+      },
+      "s3": {
+        "title": "3. 1 kişilik blok + hızlı smaç",
+        "description": "Ortamız okumayla yalnız sıçrar. Rakip orta kısa çaprazda vurur. En tehlikeli vuruş: top bloğun altına dalar."
+      },
+      "s4": {
+        "title": "4. Pasör savunma düz paralelde",
+        "description": "Z1 (pasör) ve Z5 (libero) hızlıda açılar kısa olduğundan ~7 m'ye çekilmiş. Pasör (Z1) kendi kanalında kurtarır."
+      },
+      "s5": {
+        "title": "5. Pasör çaprazı tarafından 2. dokunuş (yedek pasör)",
+        "description": "Pasörümüz savunma yaptığı için P2'deki pasör çaprazı aktarmak için 2. dokunuşu alır. Smaçörümüz 4. bölgede karşı saldırıyı hazırlar."
+      },
+      "s6": {
+        "title": "6. SIFIRLA — tabana geri dön",
+        "description": "Rakip pasör topa dokunur dokunmaz taban pozisyonuna geç. Savunma sonraki dizi için yeniden organize olur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Merkez hızlıda 1 kişilik blok: yalnızca orta sıçrar (okuma en sık, scouting güçlüyse commit).",
+        "Z1 ve Z5 hızlıda açılar daha kısa olduğundan bir metre İLERİ GİDER (~7,5 m).",
+        "Kanatlar blok sapmaları için 3 m çizgisinde kalır (filedan ~2-2,5 m).",
+        "\"Temasta durmuş\": vuruş anında herkes durmuş ve dengeli."
+      ],
+      "commonMistakes": [
+        "Tüm ön sıra oyuncuları sıçrar → kanatları sonraki pas için açık bırakır.",
+        "Çok geç blok → top ellerin üzerinden geçer.",
+        "\"Yanlış adım\" (önce geri adım) → mevcut az zamanı israf etmek.",
+        "Arkada donmuş Z1/Z5 (8 m+) → hızlı top onlar hareket etmeden kısa düşer."
+      ]
+    }
+  },
+  "6v6-defense-vs-z4": {
+    "title": "Savunma · rakip Z4 saldırı",
+    "shortDescription": "Çevre savunmasında rakip 4. bölge saldırısına (sol kanatları → sağımıza varır) karşı çift blok.",
+    "contextLabel": "5-1 · P1 arka saha pasörü · Çift blok · Çevre",
+    "players": {
+      "P": "Pasör (P1)",
+      "Op": "Pasör çaprazı (P2)",
+      "C": "Orta (P3)",
+      "R4": "Smaçör (P4)",
+      "L": "Libero (P5)",
+      "R4b": "Smaçör (P6)",
+      "OPP_A": "Rakip Z4 vurucusu",
+      "OPP_S": "Rakip pasör",
+      "OPP_R": "Rakip karşılayıcı"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Rakip karşılama + penetrasyon",
+        "description": "Arkaları yeni manşet yaptı. Rakip pasör Z2 ile Z3 arasındaki hedefine penetre eder. Savunmamız HAZIR'da okur, görsel sıra \"top → pasör → top → vurucu\"."
+      },
+      "s2": {
+        "title": "2. Rakip Z4'e yüksek pas",
+        "description": "Rakip pasör sol kanatlarına yüksek pas dağıtır. Saldırı ön-sağ köşemize varacak. Ön hat saldırı bölgesini zaten belirler."
+      },
+      "s3": {
+        "title": "3. Çift blok + çevre kayması",
+        "description": "Pasör çaprazı (P2) paralel + orta (P3) çaprazı kapatır. R4 sol tarafta 3 m çizgisinde off-blocker. Libero uzun çaprazda ~7,5 m, P6 eksende 8 m, P1 blok gölgesinde derin paralelde."
+      },
+      "s4": {
+        "title": "4. Rakip smaç + çift blok",
+        "description": "Rakip vurucu uzun çaprazda vurur. Pasör çaprazı ve orta paralel sıçrar. Temas anında tüm savunmacılar durmuş ve dengelidir (\"temasta durmuş\")."
+      },
+      "s5": {
+        "title": "5. Libero savunma uzun çaprazda",
+        "description": "Libero tam birincil yörüngede (uzun çapraz). Karşı saldırıyı hazırlamak için 2-3. bölgeye yüksek manşet."
+      },
+      "s6": {
+        "title": "6. Smaçör tarafından karşı saldırı",
+        "description": "Pasörümüz 3 m çizgisine düşmüş smaçöre yüksek pas verir. Ralliyi kapatmak için rakip tarafta uzun çapraz vuruş."
+      },
+      "s7": {
+        "title": "7. SIFIRLA — savunma tabanına geri dön",
+        "description": "Top rakip tarafa döner dönmez herkes taban pozisyonuna geçer — karşılama dizilişinde donmuş geçiş yok."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Çift blok: pasör çaprazı (P2) paralel + orta (P3) çapraz. Bu, rakip Z4'te FIVB standart konfigürasyonudur.",
+        "Off-blocker = sol tarafta 3 m çizgisinde smaçör (P4) — cut shot ve kısa plaseyi kapsar.",
+        "Çevre sistemi: libero (P5) uzun çaprazda ~7,5 m, P6 eksende ~8 m, P1 blok gölgesinde derin paralelde.",
+        "Libero merkez blokçunun iç omzu ile hizalanmış — bu onun öncelik bölgesidir.",
+        "Ana savunulan vuruş: uzun çapraz (rakip smaçör en sık talep edilendir)."
+      ],
+      "commonMistakes": [
+        "Kasıtsız açık blok (P3 P2 ile hizalanmamış) → top blokçular arasından geçer.",
+        "Filede kalan off-blocker → blok gölgesi örtülmemiş (Hebert'e göre 1 numaralı hata).",
+        "Yanlış konumlanmış libero (filedan çok yakın) → derin smaçlar düşer.",
+        "Blok yapıp sonra fileye varamayan pasör → uzman olmayan bir oyuncudan 2. dokunuş.",
+        "Vurucu temas anında hâlâ hareket eden savunmacılar (\"temasta durmuş\" değil)."
+      ]
+    }
+  },
+  "4v4-reception-losange": {
+    "title": "4'e 4 · Elmas karşılama",
+    "shortDescription": "Kanonik elmas dizilişi: P3'te pasör (file merkezi) + 3 m çizgisinde 2 kanat + derinde arka.",
+    "contextLabel": "4'e 4 · Elmas (1-2-1) · Merkez pasör",
+    "players": {
+      "P": "Pasör (P3)",
+      "R4": "Sol kanat (P4)",
+      "A2": "Sağ kanat (P2)",
+      "A": "Arka (P1)",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Elmas dizilişi",
+        "description": "Kanonik 1-2-1 dizilişi: file MERKEZİNDE pasör (P3), 3 m çizgisinde 2 kanat (Sol + Sağ), derinde arka. Okul 4'e 4'de liberoya izin verilmez. Herkes HAZIR."
+      },
+      "s2": {
+        "title": "2. Servis + arka manşet",
+        "description": "Merkez bölgeye yüksek servis. Tek arka \"Benim!\" diye çağırır ve topa doğru hafifçe adım atar."
+      },
+      "s3": {
+        "title": "3. Sol kanada pas",
+        "description": "File merkezindeki pasöre yüksek manşet (elmasta penetrasyon yok). 4. bölgeye dağıtır. Sol kanat kısa yaklaşmasını zincirler."
+      },
+      "s4": {
+        "title": "4. Top mevcut + kısa örtme",
+        "description": "Pas 4. bölgeye gelir. Sağ kanat örtmek için merkeze sıkışır, arka hafifçe ilerler. Tek rakip blokla vuruş açısı geniş kalır."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — elmasa geri dön",
+        "description": "Sıradaki servis için herkes elmastaki pozisyonunu yeniden alır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Kanonik elmas (1-2-1) = en çok kullanılan 4'e 4 dizilişi.",
+        "\"Merkez pasör\" varyantı: filede P3'te pasör, sola VEYA sağa dağıtır.",
+        "Okul 4'e 4'de liberoya izin verilmez — herkes karşılayabilmelidir.",
+        "Her oyuncu ~30-40 m² kapsar (6'ya 6'da ~20 m²'ye karşı)."
+      ],
+      "commonMistakes": [
+        "2 bölge arasındaki merkez toplarda karışıklık → çağrı zorunlu.",
+        "Çok geride tek arka → filenin arkasındaki kısa toplar örtülmemiş.",
+        "Karşılayan pasör → arkadan 2. dokunuşu yapmak imkânsız."
+      ]
+    }
+  },
+  "4v4-reception-u": {
+    "title": "4'e 4 · U dizilişi karşılama",
+    "shortDescription": "U dizilişi: pasör dışarıda + 3 karşılayıcı (sol, arka, sağ).",
+    "contextLabel": "4'e 4 · U · Rekabetçi 4'e 4",
+    "players": {
+      "P": "Pasör (gizli)",
+      "R4": "Sol kanat",
+      "A": "Arka orta",
+      "A2": "Sağ kanat",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. U konfigürasyonu",
+        "description": "Pasör P2'de filede gizli. U'da 3 karşılayıcı: sol kanat, arka orta, sağ kanat. Her oyuncu genişliğin yaklaşık 1/3'ünü kapsar."
+      },
+      "s2": {
+        "title": "2. Servis + sol kanat manşet",
+        "description": "Sol kanala yüksek servis. Sol kanat çağırır ve kendi kanalında topu alır. Pasöre zaman vermek için yüksek yörünge."
+      },
+      "s3": {
+        "title": "3. Sol kanada dağıtım",
+        "description": "Top 2. bölgedeki sabit pasöre varır (4'e 4'te penetrasyon yok). Yaklaşmasını anında zincirleyen sol kanada hızlı dağıtım."
+      },
+      "s4": {
+        "title": "4. Top mevcut 4. bölgede",
+        "description": "Pas sol kanat için 4. bölgeye gelir. Elmastan daha hücum eğilimli sistem: pasör karşılamamış, saldırı hızlı ve okunabilir."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — U'ya geri dön",
+        "description": "3 karşılayıcı U'ya döner ve pasör P2'deki gizleme noktasına geri döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "U karşılama = en etkili rekabetçi 4'e 4 konfigürasyonu.",
+        "3 uzman karşılayıcı + pasör dışarıda = karşılamamış 1 oyuncu saldırı için mevcut.",
+        "Hedef: 2. bölge (sabit pasör) → hızlı dağıtım.",
+        "Elmastan teknik olarak daha zorlu ama daha hücum eğilimli."
+      ],
+      "commonMistakes": [
+        "Tüm kanalı kapsamayan kanat → kanat ile arka arasındaki top kaybedilir.",
+        "Çok önde arka orta → uzun toplar baş üzerinden geçer.",
+        "Karşılamaya eğilen pasör → karışıklık."
+      ]
+    }
+  },
+  "5-1-reception-3-receivers": {
+    "title": "Karşılama · 3 karşılayıcılı (5-1)",
+    "shortDescription": "Pasör dışarıda ve pasör çaprazı gizli olan 3 karşılayıcılı karşılama (libero + 2 smaçör) — modern standart diziliş.",
+    "contextLabel": "5-1 · 3 karşılayıcılı karşılama · Rakip servis",
+    "players": {
+      "R4a": "Sol smaçör",
+      "L": "Libero",
+      "R4b": "Sağ smaçör",
+      "C": "Orta",
+      "Op": "Pasör çaprazı (gizli)",
+      "P": "Pasör (gizli)",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Karşılama pozisyonu",
+        "description": "Bir yayda üç karşılayıcı: sol smaçör, merkez libero, sağ smaçör. Her biri genişliğin ~1/3'ünü kapsar. Pasör ve pasör çaprazı filede gizlenir, servis atan vurur vurmaz ilerlemeye hazır."
+      },
+      "s2": {
+        "title": "2. Servis + manşet",
+        "description": "Sol smaçöre yüksek servis, \"Benim!\" diye çağırır ve manşetler. Paralel olarak pasör P1'deki gizleme noktasından 2-3. bölgeye penetrasyonunu tetikler."
+      },
+      "s3": {
+        "title": "3. 4. bölgeye yüksek pas",
+        "description": "Top, pasörün tam zamanında vardığı hedefe (P2 ve P3 arası) yükselir. 4. bölgeye yüksek bir pas dağıtır. Karşılayan smaçör 3 m çizgisine düşmesini zaten tetiklemiştir."
+      },
+      "s4": {
+        "title": "4. Vurucuya top mevcut",
+        "description": "Top 4. bölgeye vuruş yüksekliğinde varır. Smaçör sıçramasından önce son adımlarını atar. Pasın kalitesi başlangıç karşılamasının kalitesini onaylar."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — dizilişe geri dön",
+        "description": "Tüm takım sıradaki servis için karşılama pozisyonunu yeniden alır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "3 karşılayıcılı karşılama = modern 5-1 standardı. Maksimum uzmanlaşma.",
+        "Hedef: 2-3. bölge, fileden bir kol, ~3 m yükseklik.",
+        "Pasör, servis atan vurana kadar filede gizli kalır, sonra penetre eder.",
+        "Karşılayan smaçör DERHAL saldırı yaklaşmasını zincirler."
+      ],
+      "commonMistakes": [
+        "Çok düz veya çok kısa karşılama → pasör geç varır.",
+        "2 karşılayıcı arasında çatışma → sesli çağrı zorunlu.",
+        "Karşılamadan sonra donmuş smaçör → 4. bölgede bir hücum seçeneğini kaybeder."
+      ]
+    }
+  },
+  "5v5-reception-4-receivers": {
+    "title": "5'e 5 · 4 karşılayıcılı karşılama",
+    "shortDescription": "5'e 5 formatı: pasör dışarıda + U veya hatta 4 karşılayıcı.",
+    "contextLabel": "5'e 5 · 4 karşılayıcı · Hibrit format",
+    "players": {
+      "P": "Pasör (dışarıda)",
+      "R4a": "Ön sol",
+      "C": "Ön sağ / orta",
+      "A1": "Sol arka",
+      "A2": "Sağ arka",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 5'e 5 konfigürasyonu",
+        "description": "Pasör (P2'de) filede dışarıda. 4 karşılayıcı U oluşturur: 3 m çizgisinde 2, derinde 2. En iyi karşılayıcı en açık bölgeyi alır."
+      },
+      "s2": {
+        "title": "2. Servis + arka manşet",
+        "description": "Arka-sol kanala yüksek servis. Sol arka çağırır ve kendi kanalında manşetler."
+      },
+      "s3": {
+        "title": "3. 4. bölgeye pas",
+        "description": "Top 2. bölgedeki sabit pasöre varır (5'e 5'te penetrasyon yok). Sol kanada hızlı dağıtım. Ön sol yaklaşmasına başlar."
+      },
+      "s4": {
+        "title": "4. Top mevcut — 3 oyuncu örtmesi",
+        "description": "Pas 4. bölgeye gelir. Ön sol adımlarını atar. 5'e 5'te örtme yalnızca 3 oyuncuyla yapılır (6'ya 6'daki 5 yerine) — orta ve pasör yakın kalır."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — U'ya geri dön",
+        "description": "4 karşılayıcı U'daki yerini bulur, pasör P2'de sabit."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Liberosuz 5'e 5'te en iyi karşılayıcı en açık bölgeyi alır.",
+        "U dizilişi: 3 m çizgisinde 2 karşılayıcı + derinde 2.",
+        "Seviyeler benzerse hat varyantı mümkündür (orta sahada 4 sıralı).",
+        "Penetrasyon yok → sabit pasör (sadeleştirilmiş 4-1 sistemi)."
+      ],
+      "commonMistakes": [
+        "Çok dar U → uzun çaprazlar örtülmemiş.",
+        "Zayıf karşılayıcı → onları en küçük bölgede izole et.",
+        "Hâlâ penetre eden pasör → standart 6'ya 6 ile karışıklık."
+      ]
+    }
+  },
+  "5v5-reception-pentagon": {
+    "title": "5'e 5 · Beşgen karşılama",
+    "shortDescription": "Beşgen karşılama (pasör dışarıda olmadan 5 oyuncu) — başlangıç veya rekreasyon versiyonu.",
+    "contextLabel": "5'e 5 · Beşgen · Özel pasör yok",
+    "players": {
+      "A1": "Ön sol",
+      "C": "Merkez",
+      "A2": "Ön sağ",
+      "A3": "Sol arka",
+      "A4": "Sağ arka",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 5 oyuncu beşgeni",
+        "description": "Tüm oyuncular karşılar. Özel pasör yok — ilk dokunan, 2. dokunuşu fileye en yakın oyuncuya bırakır. Rekreasyon / başlangıç konfigürasyonu."
+      },
+      "s2": {
+        "title": "2. Servis + merkez çağırır",
+        "description": "Merkez orta bölgeye servis. Merkez oyuncu çağırır ve manşetler — bu, beşgendeki onun alanı."
+      },
+      "s3": {
+        "title": "3. Fırsat pası",
+        "description": "Top file merkezine doğru yükselir. Topa en yakın olan ön sağ, ileri adım atar ve karşılamanın kalitesine bağlı olarak yüksek bir pasla 2. dokunuşu alır."
+      },
+      "s4": {
+        "title": "4. Top mevcut — basit sistem",
+        "description": "Pas ön sola gider. Okunabilir dağıtım, başlangıç için ideal. Herhangi bir oyuncu, topun açısına bağlı olarak 2. dokunuşu yapabilir."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — beşgene geri dön",
+        "description": "5 oyuncu sıradaki servis için beşgendeki yerini bulur."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Özel pasörsüz beşgen = rekreasyon veya başlangıç konfigürasyonu.",
+        "Beşgende 5 oyuncu: önde 2, merkezde 1, arkada 2.",
+        "Topun nereye geldiğine bağlı olarak herhangi bir oyuncu 2. dokunuşu yapabilir.",
+        "Avantaj: büyük uyum yeteneği. Dezavantaj: daha az hücum tutarlılığı."
+      ],
+      "commonMistakes": [
+        "2. dokunuşta hiyerarşi yok → 2 oyuncu tereddüt eder.",
+        "Donmuş merkez → her iki taraftaki toplar kaçırılır.",
+        "Net dağıtımsız sistematik yüksek paslar."
+      ]
+    }
+  },
+  "6v6-reception-2-receivers": {
+    "title": "Karşılama · 2 karşılayıcılı (elit)",
+    "shortDescription": "Ultra uzmanlaşmış 2 karşılayıcılı karşılama (libero + smaçör): diğer herkes saldırmaya hazır.",
+    "contextLabel": "5-1 · 2 karşılayıcılı karşılama · Elit / serbest toplar",
+    "players": {
+      "L": "Libero",
+      "R4a": "Karşılayan smaçör",
+      "R4b": "Saldıran smaçör",
+      "C": "Orta",
+      "Op": "Pasör çaprazı (gizli)",
+      "P": "Pasör (gizli)",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 2 karşılayıcılı konfigürasyon",
+        "description": "Yalnızca 2 karşılayıcı: sol tarafta libero, sağ tarafta karşılayan smaçör. Diğer 4 oyuncu zaten saldırı duruşunda, servis vurulur vurulmaz tetiklenmeye hazır."
+      },
+      "s2": {
+        "title": "2. Servis + libero manşet",
+        "description": "Sola servis. Libero çağırır ve manşetler. Yalnızca 2 bölge olduğunda teknik talep aşırıdır: olağanüstü bir libero gereklidir. Pasör penetrasyonunu tetikler."
+      },
+      "s3": {
+        "title": "3. Pas + eş zamanlı yaklaşmalar",
+        "description": "Top hedefe yükselir. Pasör 4. bölgeye dağıtır. Karşılamadan serbest olan saldıran smaçör tam hızda hızlı bir yaklaşma başlatır — tam güçle varır."
+      },
+      "s4": {
+        "title": "4. Top mevcut — maksimum çeşitlilik",
+        "description": "Top saldıran smaçör için 4. bölgeye varır. O anda pasör eş zamanlı olarak hızlıda bir orta ve arka saha saldırısında bir pasör çaprazı mevcuttur — 3 vuruculu kombinasyonlar mümkün."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — 2 karşılayıcılı dizilişe geri dön",
+        "description": "Libero ve karşılayan smaçör bölgelerine döner, vurucular saldırmaya hazır yeniden konumlanır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "2 karşılayıcılı karşılama = elit konfigürasyon (profesyonel voleybol).",
+        "Kolay servislerde veya \"ön sıra pasörü\" rotasyonlarında kullanılır.",
+        "Maksimum hücum çeşitliliği: tüm vurucular anında mevcut.",
+        "Aşırı teknik talep: 2 sağlam karşılayıcı gerekli."
+      ],
+      "commonMistakes": [
+        "Güçlü bir servise karşı bu sistemi benimsemek → felaket karşılamalar.",
+        "Paralel olarak yaklaşmasını başlatmayan saldıran smaçör → kaybedilen seçenek.",
+        "Çağrı yok → 2 karşılayıcı arasında tereddüt."
+      ]
+    }
+  },
+  "6v6-reception-4-2": {
+    "title": "Karşılama · 4-2 (4 karşılayıcı)",
+    "shortDescription": "4-2 sistemi: P2'de sabit pasör + 4 karşılayıcı (2 smaçör + orta + arka).",
+    "contextLabel": "4-2 · 4 karşılayıcı · Sabit ön pasör",
+    "players": {
+      "P": "Pasör (P2 sabit)",
+      "C2": "Ön orta",
+      "R4a": "Sol smaçör",
+      "C": "Arka orta",
+      "R4b": "Sağ smaçör",
+      "P2": "Arka pasör",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. 4-2 dizilişi",
+        "description": "4-2 sistemi: çapraz 2 pasör. Ön pasör (P2) ve ön orta filede dışarı çıkar. Yamuk olarak 4 karşılayıcı: çaprazda 2 smaçör, derinde arka orta ve arka pasör."
+      },
+      "s2": {
+        "title": "2. Servis + sol smaçör manşet",
+        "description": "Sol kanala yüksek servis. Sol smaçör çağırır ve manşetler. Pasör zaten P2'de filede sabit, penetrasyon yok."
+      },
+      "s3": {
+        "title": "3. Sol kanada pas",
+        "description": "Top P2'de sabit pasöre varır (kolay hedef, hareket yok). Sol kanada dağıtır. Sol smaçör anında yaklaşmasını zincirler."
+      },
+      "s4": {
+        "title": "4. Top 4. bölgede mevcut",
+        "description": "Pas yerinde. 4-2'de önde yalnızca 2 hücum seçeneği vardır (orta ve kanat) → okunabilir ama sınırlı dağıtım."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — yamuğa geri dön",
+        "description": "Tüm takım 4-2 sistemindeki pozisyonunu yeniden alır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4 karşılayıcılı karşılama = 4-2 sistemi. 2 ön sıra oyuncusu dışarıda (pasör + ön orta).",
+        "W'dan daha büyük bölgeler ama 3 karşılayıcılı karşılamadan daha az zorlu.",
+        "Kolay hedef: pasör hareket etmez.",
+        "Dezavantaj: önde yalnızca 2 vurucu."
+      ],
+      "commonMistakes": [
+        "Karşılama da yapan ön orta → filede commit yok.",
+        "Çok açık yamuk → merkez toplar örtülmemiş.",
+        "2 pasör arasında 2. dokunuş karışıklığı."
+      ]
+    }
+  },
+  "6v6-reception-rotation-p4": {
+    "title": "Karşılama · 5-1 P4 rotasyonu",
+    "shortDescription": "P4 özel durumu: pasör ve orta 6. bölgede smaçörü serbest bırakmak için sola kayar.",
+    "contextLabel": "5-1 · 3 karşılayıcılı · P4 rotasyonu (ön sıra pasörü)",
+    "players": {
+      "P": "Pasör (P4)",
+      "C": "Orta (P3)",
+      "R4b": "Smaçör* (P2)",
+      "L": "Libero (P5)",
+      "R4a": "Smaçör (P6)",
+      "Op": "Pasör çaprazı (P1)",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Sola kayma",
+        "description": "Vuruştan ÖNCE: pasör (P4) ve orta (P3) hizalama kurallarının izin verdiği KADAR SOLA yerleşir. Bu kayma karşılayan smaçör için 6. bölgeyi serbest bırakır."
+      },
+      "s2": {
+        "title": "2. Servis + P6'daki smaçör tarafından manşet",
+        "description": "Merkez 6. bölgeye servis. P6'daki smaçör çağırır ve pasörün kaymasıyla serbest bırakılan bölgede manşetler. Üç karşılayıcı: libero, smaçör ve pasör çaprazı (kenarda)."
+      },
+      "s3": {
+        "title": "3. Penetrasyon + Smaçör* switch",
+        "description": "Pasör P4'ten 2-3. bölgeye hızla hareket eder. Eş zamanlı olarak P2'deki Smaçör* saldırmak için P4'e geçer. Orta 3. bölgede yeniden konumlanır."
+      },
+      "s4": {
+        "title": "4. 4. bölgede Smaçör* için top mevcut",
+        "description": "Pas, geçişini tamamlayan Smaçör* için varır. Önde yalnızca 2 vurucu ile (Smaçör* + orta), ana seçenek sol kanattır."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — kaymaya geri dön",
+        "description": "P4 rotasyonunda sıradaki servis için tüm oyuncular sol kaymayı yeniden alır."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P4'te pasör ve orta serviste sola kaymak ZORUNDADIR.",
+        "Bu kayma, P6'daki smaçör karşılaması için 6. bölgeyi açar.",
+        "Pas sırasında Pasör↔Smaçör* switch zorunlu.",
+        "Pasör çaprazı (P1'de) karşılamaz ve arka saha saldırısına hazır kalır."
+      ],
+      "commonMistakes": [
+        "Kayma unutuldu → 6. bölgede karşılama çatışması.",
+        "Çok geç switch → Smaçör* P2'de saldırır (yanlış taraf).",
+        "Karşılayan pasör çaprazı → arka saha saldırı seçeneğini kaybeder."
+      ]
+    }
+  },
+  "6v6-reception-semi-circle": {
+    "title": "Karşılama · yarım daire",
+    "shortDescription": "Servis atana açık yaklaşık eşit uzaklıkta yay şeklinde karşılama. U15-U18 aşaması.",
+    "contextLabel": "5-1 · Yarım daire · U15-U18",
+    "players": {
+      "P": "Pasör (gizli)",
+      "R4a": "Sol smaçör",
+      "C": "Orta",
+      "L": "Libero",
+      "R4b": "Sağ smaçör",
+      "Op": "Pasör çaprazı",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Yarım daire yay",
+        "description": "5 karşılayıcı, servis atandan eşit uzaklıkta bir yay oluşturur. Hepsi P1'de gizlenmiş pasöre yönelik. Orta karşılamada kalır (3 karşılayıcılı dizilişten farklı olarak dışarıda değil)."
+      },
+      "s2": {
+        "title": "2. Servis + ortak okuma",
+        "description": "Merkez bölgeye yüksek servis. Tüm oyuncular aynı yönde okur. Orta kendi topunu çağırır — yaydaki onun bölgesidir."
+      },
+      "s3": {
+        "title": "3. Penetrasyon + yüksek pas",
+        "description": "Top yükselirken pasör gizleme noktasını terk eder. 2-3. bölgedeki hedefe varır ve sol smaçörün yaklaşmasını zaten başlatmış olduğu sol kanada dağıtır."
+      },
+      "s4": {
+        "title": "4. Top 4. bölgede mevcut",
+        "description": "Pas 4. bölgeye gelir. Sol smaçör vurmaya hazır pozisyonda. Klasik, okunabilir dağıtım — U15-U18 öğrenme aşamasının tipik özelliği."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — yaya geri dön",
+        "description": "Herkes sıradaki servis için yarım daire yayına geri döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Yarım daire yay = W ile 3 karşılayıcılı karşılama arasında ara aşama.",
+        "5 oyuncu servis atandan eşit uzaklıkta → homojen kapsama.",
+        "Uzmanlaşmayı öğrenen gençlik takımları (U15-U18) için uygun.",
+        "Karşılamada bir orta tutar (orta dışarıda olduğu 3 karşılayıcılıya karşı)."
+      ],
+      "commonMistakes": [
+        "Yanlara çok açık yay → merkezde delikler.",
+        "Servis atandan çok uzakta oyuncular → hızlı servislere geç tepki.",
+        "Karşılamak da isteyen pasörle çatışma."
+      ]
+    }
+  },
+  "6v6-reception-w": {
+    "title": "Karşılama · W (5 karşılayıcı)",
+    "shortDescription": "W dizilişi: pasör hariç 5 oyuncu. Başlangıç seviyesi ve 4-2 sistemine uygun.",
+    "contextLabel": "4-2 · W · Başlangıç / U13",
+    "players": {
+      "P": "Pasör (dışarıda)",
+      "R4a": "Ön sol",
+      "R4b": "Ön sağ",
+      "C": "Orta oyuncu",
+      "A1": "Sol arka",
+      "A2": "Sağ arka",
+      "OPP_SRV": "Rakip servis atan"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. W dizilişi",
+        "description": "W dizilişi: orta sahada 2 ön oyuncu, merkezde 1 orta oyuncu, derinde 2 arka. Pasör zaten P2'de filede dışarıda (4-2 sistemi). Her oyuncu küçük, iyi tanımlanmış bir bölgeyi savunur."
+      },
+      "s2": {
+        "title": "2. Servis + orta oyuncu çağırır",
+        "description": "Merkez bölgeye yüksek servis. Orta oyuncu \"Benim!\" diye çağırır çünkü top, W'nin merkez cebine, ön oyunculara eşit uzaklıkta düşer."
+      },
+      "s3": {
+        "title": "3. 4. bölgeye yüksek pas",
+        "description": "Pasörün zaten filede beklediği 2. bölgeyi hedefleyen manşet (4-2'de penetrasyon yok). 4. bölgeye yüksek bir pas dağıtır. Ön sol yaklaşmasını tetikler."
+      },
+      "s4": {
+        "title": "4. Vurucuya top mevcut",
+        "description": "Top 4. bölgeye varır. Ön sol son adımlarını atar. 4-2'de hücum seçenekleri sınırlıdır (önde 2 vurucu), ancak sistemin basitliği bunu telafi eder."
+      },
+      "s5": {
+        "title": "5. SIFIRLA — W dizilişine geri dön",
+        "description": "Herkes sıradaki servis için W'daki bölgesine geri döner."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "W dizilişi = 5 karşılayıcı, pasör dışarı çıkar.",
+        "Küçük bireysel bölgeler → daha az şüphe, az çatışma.",
+        "U13/U15 ve 4-2 sisteminde (başlangıç) ideal.",
+        "Dezavantaj: uzman vurucular karşılamada kısıtlanmıştır."
+      ],
+      "commonMistakes": [
+        "Orta oyuncu ile ön oyuncular arasında merkez çatışma → çağrı zorunlu.",
+        "Bölgelerinde çok donmuş oyuncular → 2 bölge arasındaki top kaybedilir.",
+        "Karşılamada kalan pasör → 2. dokunuşu yapmak imkânsız."
+      ]
+    }
+  }
+}

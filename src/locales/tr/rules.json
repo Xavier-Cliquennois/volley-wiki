@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOKÜMANTASYON",
+    "title": "VOLEYBOL KURALLARI",
+    "subtitle": "Sadeleştirilmiş FIVB kuralları — anlamak ve oynamak için temel kurallar."
+  },
+  "warning": "Bu sayfa eğitim amaçlı bir özettir. Resmi yarışmalar için <strong>resmi FIVB kurallarına</strong> başvurun.",
+  "quickFaultsTitle": "YAYGIN HATALAR",
+  "quickFaults": [
+    "Oyun sırasında fileye dokunmak",
+    "3'ten fazla takım dokunuşu",
+    "Aynı oyuncudan çift temas",
+    "Tutulan / taşınan top",
+    "Ön bölgeden file üstünde arka saha saldırısı",
+    "Serviste ayak hatası (çizgiye basmak)",
+    "Düdükten önce servis atmak",
+    "Rotasyonda pozisyon hatası"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "Temel bilgiler",
+      "num": "01",
+      "rules": [
+        { "title": "Maç formatı", "content": "Bir maç 5 setlik en iyi sistemiyle oynanır. Her set en az 2 sayı farkıyla 25 sayıya kadar oynanır. 5. set gerekirse 15 sayıya kadar oynanır." },
+        { "title": "Takımlar", "content": "Sahada her tarafta 6 oyuncu. Bir takım en fazla 6 yedek ve bir liberoya sahip olabilir. Set başına maksimum 6 normal oyuncu değişikliği (libero sayılmaz)." },
+        { "title": "Servis", "content": "Servis, dip çizginin arkasındaki servis bölgesinden atılır. Top fileyi geçerek rakip sahaya gitmelidir. Servis atan, düdükten sonra topa vurmak için 8 saniyeye sahiptir. Fileye değip rakip sahaya düşen servis İYİDİR (let servis 2001'den beri yasaldır)." },
+        { "title": "Her rallide sayı", "content": "1999'dan beri (rally point sistemi), hangi takım servis atmış olursa olsun her rallide sayı alınır. Sayıyı alan takım servisi kazanır." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Temaslar ve hatalar",
+      "num": "02",
+      "rules": [
+        { "title": "Maksimum 3 dokunuş", "content": "Bir takım topu geri göndermek için en fazla 3 dokunuşa sahiptir. Blok takım dokunuşu olarak sayılmaz — bloktan sonra takımın hâlâ 3 dokunuşu vardır." },
+        { "title": "Çift temas", "content": "Bir oyuncu üst üste iki kez topa temas edemez, ilk takım teması (karşılama/plonjon) hariç. Blok için istisna. Yeni 2025-2026 FIVB denemesi: pasta (2. dokunuş) top aynı tarafta kaldığı sürece çift temasa izin verilir." },
+        { "title": "File hatası", "content": "Top oynama aksiyonu sırasında fileye dokunmak hatadır. Aksiyon dışında veya antenlerin dışında dokunma hata değildir. Rakibe engel olmadığı sürece filenin altından kısmen geçmeye izin verilir. FIVB 2025 hedefi: \"akıcı oyunu teşvik etmek\"." },
+        { "title": "Çizgilerdeki top", "content": "Çizgiye düşen top \"içeri\"dir. Antenlerin dışından veya geçiş alanı dışından geçen top dışarıdır." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotasyon ve pozisyonlar",
+      "num": "03",
+      "rules": [
+        { "title": "Zorunlu rotasyon", "content": "Her servis kazanımında, servisi kazanan takım saat yönünde döner: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. P2→P1'e geçen oyuncu yeni servis atan olur." },
+        { "title": "Pozisyon hatası", "content": "Servis atan topa vurduğu anda oyuncular rotasyon sıralarına uymalıdır (çapraz üst üste binme yok). Hata = sayı + rakibe servis. 2025 güncellemesi: üst üste binme kuralı artık sadece KARŞILAYAN takım için geçerlidir — servis atan takım serbestçe konumlanabilir." },
+        { "title": "3 metre kuralı", "content": "Arka saha oyuncuları (P1, P5, P6) ön bölgeden file üstünde saldıramaz. 3 m çizgisinin arkasından sıçrayıp ön bölgeye inebilirler — bu yasaldır." },
+        { "title": "Libero", "content": "Libero kontrast formalı giyer ve sadece arka sahada (P1, P5, P6) oynar. Sayılmayan sınırsız oyuncu değişikliği. Blok yapamaz veya file üstünde saldıramaz. 2021'den beri set başına tek rotasyonda servis atabilir. 2021'den beri kaptan olabilir. Kısıtlama: libero ön bölgeden parmak pası yaparsa, takım arkadaşı topa file üstünde saldıramaz." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Özel durumlar",
+      "num": "04",
+      "rules": [
+        { "title": "Molalar", "content": "Her takımın set başına 30 saniyelik 2 molası vardır. 1-4 setlerinde 8. ve 16. sayılarda otomatik teknik molalar bazı FIVB yarışmalarında kullanılır." },
+        { "title": "Servis — temel kurallar", "content": "Düdükten sonra vurmak için 8 saniye. Yalnızca bir atışa izin verilir, ancak servis atan topu bir kez cezasız bırakabilir. Ayak hatası: temas anında (veya sıçrama anında) servis atan dip çizgiye veya sahaya basmamalıdır. Serviste perde: takım arkadaşları servis sırasında ellerini başlarının üstüne kaldırmamalıdır (2025 kuralı)." },
+        { "title": "Arka saha saldırısı", "content": "Bir arka saha oyuncusu, sıçraması 3 m çizgisinin arkasındaysa (iki ayak da) saldırabilir. Topun herhangi bir kısmı filenin altındaysa da topa vurabilirler. Ön bölgeden file üstünde servise blok yapmak veya saldırmak hatadır." },
+        { "title": "Tutulan top", "content": "Topla temas kısa ve temiz olmalıdır. \"Çirkin temas ≠ hata\": top sekiyorsa kusurlu temas otomatik hata değildir. Manşet için parmak pasından daha hoşgörülü standart." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "FIVB 2025-2028 güncellemeleri",
+      "num": "05",
+      "rules": [
+        { "title": "Üst üste binme: sadece karşılamada", "content": "2025'ten beri üst üste binme kuralı yalnızca karşılayan takım için geçerlidir. Servis atan takım servis anında sahada herhangi bir pozisyonu işgal edebilir." },
+        { "title": "Serviste perde yok", "content": "Servis atan takımdaki oyuncuların artık top fileyi geçene kadar servis sırasında ellerini başlarının üstüne kaldırmaları yasaktır. Böyle bir perde doğrudan cezalandırılır." },
+        { "title": "Pasta çift temas — deneme", "content": "FIVB 2025-2026 denemesi: top aynı tarafta kaldığı sürece pasta (2. dokunuş) çift temasa izin verilir. Deneme başarılı olursa kural kalıcı olabilir." },
+        { "title": "Libero servis atabilir (2021'den beri)", "content": "Libero 2021'den beri set başına tek rotasyonda servis atabilir. Kural federasyona göre değişir (bazı USAV ve NFHS turnuvaları izin vermez — yarışma kurallarını kontrol edin)." }
+      ]
+    }
+  ]
+}

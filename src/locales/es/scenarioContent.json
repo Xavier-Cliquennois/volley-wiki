@@ -1,0 +1,1993 @@
+{
+  "4v4-attack-losange": {
+    "title": "4v4 · Ataque en rombo",
+    "shortDescription": "Rombo canónico: colocador en P3 + 2 alas en la línea de 3 m + zaguero. Recepción → ataque en zona 4.",
+    "contextLabel": "4v4 · Rombo (1-2-1) · Escolar / recreativo",
+    "players": {
+      "P": "Colocador (P3)",
+      "R4": "Ala izquierda (P4)",
+      "A2": "Ala derecha (P2)",
+      "A": "Zaguero (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_B": "Bloqueo rival",
+      "OPP_OFF": "Off-blocker rival",
+      "OPP_D1": "Defensor diagonal rival",
+      "OPP_D2": "Zaguero rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación en rombo",
+        "description": "Disposición canónica: colocador EN EL CENTRO de la red (P3) + 2 alas en la línea de 3 m + zaguero al fondo."
+      },
+      "s2": {
+        "title": "2. Saque + recepción de zaga",
+        "description": "El zaguero único avanza y juega antebrazos. Trayectoria alta hacia el colocador en la red."
+      },
+      "s3": {
+        "title": "3. Colocación + aproximación + cobertura",
+        "description": "R4 encadena su aproximación hacia la zona 4. El colocador, A2 y A se cierran en triángulo para la cobertura. El bloqueo rival se desplaza hacia el atacante."
+      },
+      "s4": {
+        "title": "4. Remate en diagonal + bloqueo único",
+        "description": "Remate potente. Contra un bloqueo único el ángulo es amplio: el atacante puede apuntar a la diagonal larga o a la paralela corta."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la diagonal larga — llega una pizca tarde, el balón ya ha tocado el suelo."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta al rombo",
+        "description": "Todos retoman su posición en el rombo para la siguiente jugada. El colocador vuelve al centro de la red."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rombo canónico = la formación más habitual en 4v4.",
+        "Variante \"colocador central\": colocador en P3, distribuye a izquierda o a derecha.",
+        "Bloqueo rival único estándar en 4v4: ángulo de ataque amplio.",
+        "Cobertura limitada: 3 jugadores alrededor del atacante."
+      ],
+      "commonMistakes": [
+        "Colocador que también recibe → imposible colocar detrás.",
+        "Alas demasiado al fondo → colocación difícil para el colocador central.",
+        "Zaguero demasiado al fondo → sin cobertura de los rebotes cortos del bloqueo."
+      ]
+    }
+  },
+  "4v4-attack-penetrant": {
+    "title": "4v4 · Colocador penetrante",
+    "shortDescription": "Sistema 3-1 simplificado: colocador único en P1 penetra a la zona 2 y libera 3 atacantes delante.",
+    "contextLabel": "4v4 · Colocador zaguero · 3 atacantes",
+    "players": {
+      "R4": "Ala izquierda (P4)",
+      "C": "Central (P3)",
+      "A2": "Ala derecha (P2)",
+      "P": "Colocador (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_B": "Bloqueo rival",
+      "OPP_OFF": "Off-blocker rival",
+      "OPP_D1": "Defensor diagonal rival",
+      "OPP_D2": "Zaguero rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración 3-1",
+        "description": "Colocador único en P1 (zaga). 3 atacantes delante en P2, P3, P4. Sin líbero: el receptor encadena su aproximación."
+      },
+      "s2": {
+        "title": "2. Saque + recepción + penetración",
+        "description": "El ala izquierda juega la recepción. El colocador lanza simultáneamente su penetración desde P1 hacia la zona 2."
+      },
+      "s3": {
+        "title": "3. Colocación + aproximación de R4",
+        "description": "Colocación alta hacia el ala izquierda tras la carrera de recepción de R4. El bloqueo rival se desplaza hacia él."
+      },
+      "s4": {
+        "title": "4. Remate en diagonal + bloqueo único",
+        "description": "Remate potente en diagonal larga. Con solo 3 jugadores en cobertura, forman un triángulo corto alrededor del atacante."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la diagonal larga — llega 0,1 s tarde al impacto."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "El colocador vuelve a P1 zaguero, R4 vuelve a la zona 4. La penetración debe anticiparse desde el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 3-1 = el equivalente en 4v4 del 5-1. 1 colocador penetrante dedicado.",
+        "Ventaja: 3 atacantes delante en todo momento, como en 6v6.",
+        "Inconveniente: requiere una recepción muy limpia ya que el colocador no está en la red.",
+        "Sin líbero: el receptor encadena también su aproximación de ataque."
+      ],
+      "commonMistakes": [
+        "Penetración demasiado tarde → otro jugador debe hacer la colocación.",
+        "Recepción demasiado corta → el colocador llega demasiado lejos de la red.",
+        "Cobertura olvidada — block-out rival = punto."
+      ]
+    }
+  },
+  "4v4-attack-square": {
+    "title": "4v4 · Ataque en cuadrado",
+    "shortDescription": "Formación en cuadrado (2 delante / 2 zaga): 2 bloqueadores + 2 defensores equilibrados.",
+    "contextLabel": "4v4 · Cuadrado · Bloqueo de 2 posible",
+    "players": {
+      "P": "Colocador-atacante (P2)",
+      "R4": "Atacante (P4)",
+      "A1": "Zaguero izquierdo (P5)",
+      "A2": "Zaguero derecho (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival",
+      "OPP_D2": "Zaguero rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración en cuadrado",
+        "description": "2 jugadores en la red (P2 y P4), 2 jugadores en zaga. Cobertura equilibrada de la cancha delante y atrás."
+      },
+      "s2": {
+        "title": "2. Saque + recepción alta",
+        "description": "El zaguero izquierdo juega antebrazos altos hacia el colocador-atacante en zona 2."
+      },
+      "s3": {
+        "title": "3. Colocación al ala + aproximación",
+        "description": "El colocador distribuye al atacante en zona 4. Sin opción de central (sin central especializado). El bloqueo doble se desplaza hacia el atacante."
+      },
+      "s4": {
+        "title": "4. Remate contra bloqueo doble",
+        "description": "El atacante debe elegir: paralela corta, diagonal larga o finta al hueco abierto. Bloqueo doble (frente al bloqueo único del rombo) — defensa más complicada ofensivamente."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la diagonal larga. Con solo 2 jugadores en el suelo, la zona es vulnerable."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todos retoman el cuadrado para la siguiente jugada. Esta formación se adapta a equipos con 2 bloqueadores fuertes y 2 defensores fuertes."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formación cuadrado: equilibrio ataque/defensa, 2 zonas delante + 2 zonas atrás.",
+        "Permite un bloqueo doble (vs bloqueo único del rombo) — mejor defensa en la red.",
+        "Pero solo 2 jugadores en el suelo → vulnerable a las diagonales largas.",
+        "Bueno para equipos con 2 bloqueadores fuertes y 2 defensores fuertes."
+      ],
+      "commonMistakes": [
+        "Jugadores de red demasiado alejados del centro → bloqueo rival fácil.",
+        "Zagueros estáticos al fondo → sin cobertura corta.",
+        "Confusión sobre quién coloca: el colocador-atacante debe estar siempre delante."
+      ]
+    }
+  },
+  "5v5-attack-pentagon": {
+    "title": "5v5 · Ataque en pentágono",
+    "shortDescription": "Formato 5v5: 1 colocador único + 1 central + 2 alas + 1 zaguero. Ataque en zona 4.",
+    "contextLabel": "5v5 · Sistema 4-1 · Formato híbrido",
+    "players": {
+      "R4": "Ala izquierda",
+      "C": "Central",
+      "P": "Colocador (P2)",
+      "A1": "Zaguero izquierdo (P5)",
+      "A2": "Zaguero derecho (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentágono ofensivo",
+        "description": "5 jugadores en pentágono: 3 delante (R4, C, P) + 2 en zaga. Cobertura regular de la cancha. Sin líbero, todos los zagueros reciben."
+      },
+      "s2": {
+        "title": "2. Saque + recepción del zaguero",
+        "description": "El zaguero izquierdo toma el primer balón. Sin líbero, lo toma el zaguero más fiable en recepción."
+      },
+      "s3": {
+        "title": "3. Colocación + aproximación",
+        "description": "El colocador, ya en la red, distribuye fácilmente a la zona 4. Sin penetración en 5v5 — está en P2. R4 inicia su aproximación."
+      },
+      "s4": {
+        "title": "4. Ataque por la banda + bloqueo doble",
+        "description": "El ala izquierda finaliza en diagonal larga. El bloqueo rival también se organiza en pentágono: 2 bloqueadores en la banda."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la diagonal. La defensa al suelo es más rara con un único zaguero por canal."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todos retoman el pentágono. Sin líbero, rotar a los zagueros es esencial para repartir la carga de recepción."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5v5 = formato híbrido (entrenamiento, faltan jugadores). Sin reglas oficiales FFVB.",
+        "Pentágono: 1 jugador por zona clave, cobertura regular de toda la cancha.",
+        "Sistema 4-1 = equivalente al 5-1 pero con un atacante menos.",
+        "Recomendación: mantener el sistema 5-1 de 6v6 quitando un zaguero no colocador."
+      ],
+      "commonMistakes": [
+        "Sin líbero en 5v5 → todos los zagueros deben saber recibir.",
+        "Intentar un triple bloqueo → solo quedan 2 defensores al suelo.",
+        "Olvidar la cobertura del ataque → un jugador menos en cobertura."
+      ]
+    }
+  },
+  "6v6-attack-4-2": {
+    "title": "Ataque · Sistema 4-2",
+    "shortDescription": "Sistema 4-2 de principiante: colocador delantero fijo en zona 2, 2 atacantes disponibles.",
+    "contextLabel": "4-2 · 2 colocadores en oposición · U13/U15",
+    "players": {
+      "R4a": "Punta (P4)",
+      "C": "Central (P3)",
+      "P1": "Colocador 1 (P2)",
+      "P2": "Colocador 2 (P5)",
+      "C2": "Central 2 (P6)",
+      "R4b": "Punta (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración 4-2",
+        "description": "2 colocadores en oposición diagonal (P2 y P5). El colocador delantero (P1) realiza siempre el 2º toque. Recepción en W con C2 en el centro."
+      },
+      "s2": {
+        "title": "2. Saque + recepción central",
+        "description": "El central zaguero toma el primer toque en una recepción en W clásica. Trayectoria alta hacia el colocador delantero en P2."
+      },
+      "s3": {
+        "title": "3. Colocación directa + aproximación",
+        "description": "El colocador delantero solo tiene que distribuir: sin penetración, sin switch. Envía un balón alto al punta en zona 4. Bloqueo doble en la banda."
+      },
+      "s4": {
+        "title": "4. Ataque por la banda + bloqueo doble",
+        "description": "La punta ataca en zona 4. Sin opción de central ya que el central recibió. Remate a la diagonal larga contra un bloqueo doble."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza en diagonal para intentar recuperar el balón."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todos retoman su posición. El 4-2 sigue siendo el sistema más sencillo: no requiere switch."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4-2: 2 colocadores + 2 centrales + 2 puntas. Siempre 2 atacantes delante.",
+        "El colocador delantero (en P2 o P3 según la variante) realiza sistemáticamente el 2º toque.",
+        "Sin penetración, sin switch: el sistema más fácil de aprender.",
+        "Ideal para U13/U15 o adultos principiantes. Favorece el aprendizaje de las rotaciones."
+      ],
+      "commonMistakes": [
+        "Colocador delantero que también recibe → imposible realizar el 2º toque.",
+        "Colocador zaguero queriendo colocar → no se respeta la regla del colocador delantero.",
+        "Central que no se compromete → bloqueo doble fácil."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p1": {
+    "title": "Ataque · Rotación P1 del 5-1",
+    "shortDescription": "Recepción a 3 → colocador penetra desde P1 → ataque en zona 4 por la punta.",
+    "contextLabel": "5-1 · Rotación P1 · Saque rival",
+    "players": {
+      "L": "Líbero (P5)",
+      "R4a": "Punta (P4)",
+      "R4b": "Punta (P6)",
+      "C": "Central (P3)",
+      "Op": "Opuesto (P2)",
+      "P": "Colocador (P1)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_C": "Central rival",
+      "OPP_S": "Colocador rival",
+      "OPP_BC": "Líbero rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación de recepción",
+        "description": "Nuestro equipo en formación de recepción a 3: líbero (P5), punta en P6 y punta en P4 retrasada sobre la línea de 3 m. Central y opuesto fuera, en la red. El colocador espera en P1 para penetrar en cuanto se golpee el saque."
+      },
+      "s2": {
+        "title": "2. Saque + recepción",
+        "description": "Saque rival alto hacia la punta en P6 que juega antebrazos. En paralelo, el colocador inicia su penetración desde P1 hacia la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Colocación alta + aproximación",
+        "description": "El balón sube hacia el colocador que ha llegado a la red. Entrega una colocación alta a la zona 4 donde la punta ya ha iniciado su aproximación. La cobertura se forma a su alrededor."
+      },
+      "s4": {
+        "title": "4. Remate + bloqueo doble",
+        "description": "La punta despega y golpea en diagonal larga hacia la zona 6 rival. Los dos bloqueadores rivales saltan en paralelo para cerrar diagonal y paralela."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El líbero rival se lanza hacia la zona 6 para intentar unos antebrazos desesperados. El colocador rival se desplaza hacia la zona 2 para enlazar si la defensa toca el balón."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todo el equipo retoma su posición de recepción para el siguiente saque. Esta colocación determina la calidad del próximo ataque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Recepción a 3: líbero + 2 puntas ocupan todo el ancho de la cancha.",
+        "El colocador penetra desde P1 hacia la zona 2-3 en cuanto se golpea el saque.",
+        "La punta atacante se desplaza sobre la línea de 3 m durante la recepción para preparar su aproximación.",
+        "Cobertura de 5 jugadores (3 cerca + 2 lejos) en posición baja alrededor del atacante."
+      ],
+      "commonMistakes": [
+        "Colocador que penetra demasiado tarde → colocación forzada en suspensión por otro jugador.",
+        "Punta atacante que inicia su aproximación demasiado pronto → llega bajo el balón en lugar de comprometerse.",
+        "Cobertura olvidada → bloqueo rival exitoso = punto perdido directamente."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p2": {
+    "title": "Ataque · Rotación P2 del 5-1",
+    "shortDescription": "Colocador ya en la red en P2: 2 atacantes delante + el opuesto ataca excepcionalmente en 4.",
+    "contextLabel": "5-1 · Rotación P2 · Colocador delantero",
+    "players": {
+      "R4a": "Punta (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Punta (P1)",
+      "C": "Central (P3)",
+      "Pt": "Opuesto (P4)",
+      "P": "Colocador (P2)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Saque rival",
+        "description": "Saque hacia la zona 5-6. El líbero canta y se prepara para los antebrazos. El colocador ya espera en la red en P2."
+      },
+      "s2": {
+        "title": "2. Saque + recepción del líbero",
+        "description": "Saque alto a la zona 6. El líbero se desplaza y juega antebrazos con precisión hacia el objetivo del colocador (zona 2)."
+      },
+      "s3": {
+        "title": "3. Colocación al opuesto + aproximación",
+        "description": "El colocador, ya en P2, distribuye excepcionalmente a la zona 4 donde el opuesto inicia su aproximación. El bloqueo rival se reagrupa en el centro."
+      },
+      "s4": {
+        "title": "4. Remate + bloqueo doble",
+        "description": "El opuesto despega por la izquierda y golpea en diagonal larga. Configuración rara pero inevitable en P2 — el colocador se queda en su sitio."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la diagonal larga para intentar unos antebrazos defensivos desesperados."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todos retoman su posición de recepción. La rotación P2 sigue siendo la más limitada ofensivamente: solo 2 atacantes delante."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotación P2 = la más limitada ofensivamente (solo 2 atacantes delante).",
+        "Colocador ya colocado: cero penetración, distribución fácil.",
+        "El opuesto ataca excepcionalmente por la izquierda (zona 4) para liberar al colocador.",
+        "Priorizar las bandas y los ataques de zaga de la punta como opciones."
+      ],
+      "commonMistakes": [
+        "Colocador queriendo colocar en suspensión en 2 cuando ya está ahí → 2º toque difícil.",
+        "Opuesto que duda entre 2 y 4 → bloqueo rival ya colocado.",
+        "Centrales que no se comprometen → bloqueo doble fácil para el rival."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p3": {
+    "title": "Ataque · Rotación P3 del 5-1 (pipe)",
+    "shortDescription": "Colocador en P3 switch hacia 2-3 → pipe de la punta zaguera en zona 6.",
+    "contextLabel": "5-1 · Rotación P3 · Ataque de zaga",
+    "players": {
+      "L": "Líbero (P5)",
+      "Pt": "Opuesto (P6)",
+      "R4b": "Punta (P1)",
+      "R4a": "Punta (P4)",
+      "P": "Colocador (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación de recepción",
+        "description": "Saque previsto por el lado derecho. La punta en P1 asume la recepción. El colocador en P3 está listo para switchar hacia 2-3 en cuanto se golpee el saque."
+      },
+      "s2": {
+        "title": "2. Saque + recepción",
+        "description": "Saque alto a la zona 1. La punta en P1 juega antebrazos al objetivo. El colocador inicia su switch hacia 2-3."
+      },
+      "s3": {
+        "title": "3. Colocación pipe + aproximación",
+        "description": "El colocador envía una colocación plana a la zona 6: trayectoria rápida a 2 m de la red. El opuesto lanza su aproximación detrás de la línea de 3 m para el pipe."
+      },
+      "s4": {
+        "title": "4. Pipe + bloqueo doble",
+        "description": "Golpe potente por el centro desde la zaga. El bloqueo doble por las bandas no puede cerrar el centro — opción clave del 5-1 moderno."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor central rival se lanza al núcleo para intentar atrapar el pipe — el balón llega rápido, poco tiempo para reaccionar."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todo el equipo retoma su posición de recepción. El central debe permanecer listo para switchar al centro de la red en la siguiente secuencia."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "El pipe es la 4ª opción ofensiva además de los 3 ataques en la red.",
+        "El central switcha al centro de la red mientras el colocador se desplaza a 2-3.",
+        "Trayectoria del pipe: plana, a 2 m de la red, despegue detrás de la línea de 3 m.",
+        "Muy eficaz contra un bloqueo concentrado en las bandas."
+      ],
+      "commonMistakes": [
+        "Pipe demasiado alto → el bloqueo rival tiene tiempo de volver al centro.",
+        "Punta zaguera despegando en la zona delantera → falta de ataque de zaga.",
+        "Central que switcha demasiado tarde → zona 3 bloqueada."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p4": {
+    "title": "Ataque · Rotación P4 del 5-1",
+    "shortDescription": "Colocador delantero en P4 switch a la derecha; la punta* ataca en 4, el central en 3, el opuesto desde zaga en 1.",
+    "contextLabel": "5-1 · Rotación P4 · Colocador delantero",
+    "players": {
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "Pt": "Opuesto (P1)",
+      "P": "Colocador (P4)",
+      "C": "Central (P3)",
+      "R4a": "Punta (P2)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración P4 + descalado",
+        "description": "Colocador en zona 4, punta* en zona 2 — colocación cruzada. Colocador y central descalados a la izquierda para liberar la zona de recepción al líbero."
+      },
+      "s2": {
+        "title": "2. Saque + recepción del líbero",
+        "description": "El saque apunta a la zona 6. El líbero se desplaza y juega antebrazos al objetivo clásico (entre P2 y P3)."
+      },
+      "s3": {
+        "title": "3. Switch colocador↔punta* + colocación alta",
+        "description": "Cruce esencial: el colocador sale de P4 hacia 2-3, la punta* sale de P2 hacia 4 para atacar. Colocación alta al ala izquierda."
+      },
+      "s4": {
+        "title": "4. Ataque por la banda + bloqueo doble",
+        "description": "Remate en diagonal larga. Con un colocador delantero (bajo en el bloqueo), el ataque debe finalizar rápido. Bloqueo doble desplazado hacia la banda."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la trayectoria larga para intentar unos antebrazos desesperados."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todos retoman su posición inicial. El descalado colocador/central izquierdo se mantiene para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotación P4 = colocador delantero. Switch colocador↔punta* obligatorio.",
+        "2 atacantes delante: punta* en 4, central en 3. Pipe u opuesto desde zaga como opciones.",
+        "El colocador y el central se descalan a la izquierda al sacar para liberar la zona 6.",
+        "El opuesto (en P1) no recibe y se queda listo para un ataque de zaga."
+      ],
+      "commonMistakes": [
+        "Switch olvidado → la punta* se queda a la derecha, atacante en mala posición.",
+        "Colocador y central demasiado a la derecha al sacar → conflicto de recepción en zona 6.",
+        "Bloqueo rival no comprometido por el central → bloqueo doble fácil al ala izquierda."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p5": {
+    "title": "Ataque · Rotación P5 del 5-1",
+    "shortDescription": "Penetración larga desde P5. Switch C/punta. Colocación al opuesto en zona 2.",
+    "contextLabel": "5-1 · Rotación P5 · Penetración larga",
+    "players": {
+      "P": "Colocador (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Punta (P1)",
+      "C": "Central (P4)",
+      "R4a": "Punta (P3)",
+      "Pt": "Opuesto (P2)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación de recepción",
+        "description": "Colocador en zaga-izquierda P5, lo más lejos posible de la red. C en P4 y punta en P3 switcharán en cuanto se golpee el saque."
+      },
+      "s2": {
+        "title": "2. Saque + recepción + switch C↔punta",
+        "description": "El saque apunta a la zona 1 donde la punta recibe. Simultáneamente, el central se desliza al centro y la punta atacante ocupa la zona 4."
+      },
+      "s3": {
+        "title": "3. Penetración larga + colocación a zona 2",
+        "description": "El colocador atraviesa toda la cancha desde P5 — la penetración más larga. Distribuye corto al opuesto en zona 2. El bloqueo rival se desplaza a la derecha para cerrar."
+      },
+      "s4": {
+        "title": "4. Remate diagonal + bloqueo doble",
+        "description": "El opuesto despega en zona 2 y golpea en diagonal larga. Combinación clásica en esta rotación. El bloqueo doble está colocado a la derecha."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal rival se lanza a la zona 5 para intentar atrapar el balón largo."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todo el equipo retoma su posición de recepción. El central vuelve a P4, la punta a P3, el colocador a P5."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P5 = la penetración más larga. Requiere una recepción perfecta.",
+        "El central y la punta switchan en cuanto se golpea el saque para colocar a C en zona 3.",
+        "El opuesto en zona 2 es el objetivo más accesible para el colocador.",
+        "Pipe posible como opción si la colocación es plana y rápida."
+      ],
+      "commonMistakes": [
+        "Colocación demasiado plana durante una penetración en curso → colocador bajo el balón.",
+        "Switch C↔punta tardío → central en zona 4 = inútil en el bloqueo.",
+        "Recepción corta → el colocador llega demasiado lejos de la red."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p6": {
+    "title": "Ataque · Rotación P6 del 5-1 (quick)",
+    "shortDescription": "Penetración media desde P6 → ataque rápido por el centro del central.",
+    "contextLabel": "5-1 · Rotación P6 · Combinación rápida",
+    "players": {
+      "L": "Líbero (P5)",
+      "P": "Colocador (P6)",
+      "R4b": "Punta (P1)",
+      "R4a": "Punta (P4)",
+      "Pt": "Opuesto (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor central rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación de recepción",
+        "description": "Saque previsto por la izquierda. El líbero ocupa su canal. El opuesto en P3 switchará a P2, el central en P2 se desplazará al centro de la red."
+      },
+      "s2": {
+        "title": "2. Saque + recepción + switch Op↔C",
+        "description": "Saque alto a la zona 5. El líbero recibe. El opuesto se desplaza a la zona 2 y el central ocupa el centro de la red para preparar el quick."
+      },
+      "s3": {
+        "title": "3. Penetración media",
+        "description": "El colocador atraviesa desde P6 a la zona 2-3 (recorrido medio, más corto que P5). El central comienza a cargar el tempo 1."
+      },
+      "s4": {
+        "title": "4. Pre-salto + colocación rápida plana",
+        "description": "El central despega YA antes de la colocación — eso es el tempo 1. El colocador envía un balón rápido a 1 m, justo delante de él. El central ya está en el aire."
+      },
+      "s5": {
+        "title": "5. Golpe central + bloqueo demasiado tarde",
+        "description": "Golpe central rápido que sorprende al bloqueo rival antes de que esté colocado. Los bloqueadores rivales saltan justo después — demasiado tarde."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "El central vuelve al centro, todos retoman la formación de recepción. El central rápido es la combinación insignia de esta rotación."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P6 = penetración media. Ideal para combinaciones rápidas.",
+        "Tempo 1: central ya en el aire cuando el colocador toca el balón.",
+        "El central compromete al bloqueo central rival: libera las bandas para las puntas.",
+        "Switch Op↔C sistemático para volver a colocar al central en el centro."
+      ],
+      "commonMistakes": [
+        "Central que despega demasiado tarde → el balón pasa por encima de su mano.",
+        "Colocación demasiado alta para un tempo 1 → bloqueo rival colocado.",
+        "Opuesto que no switcha → central atascado en zona 2."
+      ]
+    }
+  },
+  "6v6-attack-6-2": {
+    "title": "Ataque · Sistema 6-2",
+    "shortDescription": "Sistema 6-2: colocador zaguero penetra, 3 atacantes delante en todo momento.",
+    "contextLabel": "6-2 · Colocador penetrante · Intermedio",
+    "players": {
+      "R4a": "Punta (P4)",
+      "C": "Central (P3)",
+      "PA": "Colocador-atacante (P2)",
+      "P": "Colocador (P1)",
+      "C2": "Central (P6)",
+      "R4b": "Punta (P5)",
+      "OPP_SRV": "Sacador rival",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival",
+      "OPP_D1": "Defensor diagonal rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración 6-2",
+        "description": "2 colocadores polivalentes: el delantero ataca (colocador-atacante), el zaguero distribuye (y penetra). 3 atacantes delante en todo momento."
+      },
+      "s2": {
+        "title": "2. Saque + recepción del central zaguero",
+        "description": "Recepción central clásica por C2. El colocador lanza su penetración desde P1 hacia la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Colocación en zona 2 + aproximación",
+        "description": "Distribución al colocador-atacante en zona 2. Máxima variedad: 3 amenazas ofensivas delante. Bloqueo doble desplazado a la derecha."
+      },
+      "s4": {
+        "title": "4. Ataque en diagonal + bloqueo doble",
+        "description": "El colocador-atacante golpea en diagonal larga. El 6-2 garantiza siempre 3 amenazas ofensivas — el bloqueo rival no puede anticipar."
+      },
+      "s5": {
+        "title": "5. Defensa rival",
+        "description": "El defensor diagonal se lanza a la trayectoria larga en el lado izquierdo del rival — intento desesperado de salvamento."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la formación",
+        "description": "Todo el equipo retoma su posición. El colocador-atacante se queda delante, el colocador vuelve a P1."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "6-2: 2 colocadores polivalentes en oposición diagonal.",
+        "Siempre 3 atacantes delante (el colocador delantero ataca, el zaguero distribuye).",
+        "Penetración sistemática, como en el 5-1, pero con 2 distribuidores alternados.",
+        "Excelente para desarrollar la polivalencia antes de pasar al 5-1."
+      ],
+      "commonMistakes": [
+        "Diferencia de estilo entre los 2 colocadores → distribución inconsistente.",
+        "Colocador delantero que no se ofrece para el ataque → solo 2 opciones.",
+        "Penetración demasiado tarde → otro jugador debe hacer la colocación."
+      ]
+    }
+  },
+  "4v4-defense-block-1": {
+    "title": "4v4 · Defensa sistema A (1 bloqueador + 3 defensores)",
+    "shortDescription": "Sistema A en 4v4 (formación rombo): 1 bloqueador solo + finta + diagonal + paralela. La configuración más habitual.",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Ala izquierda (P4)",
+      "A2": "Ala derecha (P2)",
+      "A": "Zaguero (P1)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base rombo + lectura",
+        "description": "Con 4 jugadores cada defensor es crucial. Nuestro central se prepara para bloquear solo. Lectura obligatoria de la colocación rival."
+      },
+      "s2": {
+        "title": "2. Colocación alta a Z2 rival",
+        "description": "Distribución a su ala derecha. El ataque llega a nuestra esquina delantera IZQUIERDA. El central debe deslizarse al lado izquierdo."
+      },
+      "s3": {
+        "title": "3. Bloqueo central solo + señal paralela/diagonal",
+        "description": "El central se desliza a la izquierda y bloquea solo. Señal obligatoria (paralela o diagonal) para orientar a los 3 defensores. Sin señal, no saben qué cubrir."
+      },
+      "s4": {
+        "title": "4. Remate en diagonal larga + bloqueo",
+        "description": "El atacante golpea en diagonal larga. El bloqueo solo cierra la paralela, señal anunciada de antemano."
+      },
+      "s5": {
+        "title": "5. Recuperación por el zaguero único",
+        "description": "El zaguero en P1 defiende en su eje — su lectura debe ser perfecta, sin otro zaguero que compense. Antebrazos altos al objetivo."
+      },
+      "s6": {
+        "title": "6. RESET — formación rombo",
+        "description": "Vuelta a la formación en rombo. La cobertura se adaptará a la siguiente zona de ataque desde la próxima lectura."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema A (1 bloqueador + 3 defensores): la configuración más habitual en 4v4 indoor.",
+        "Señal paralela/diagonal del bloqueador obligatoria — sin ella, los 3 defensores no saben qué cubrir.",
+        "Distancias clave: bloqueador a 0,3 m de la red; defensores al fondo a 7-7,5 m; finta/tras-bloqueo a 3,5-4 m.",
+        "Cada defensor cubre ~30-40 m² (vs 20 m² en 6v6) → anticipación = habilidad nº1.",
+        "Bloqueo doble (sistema B) reservado a grandes atacantes: deja solo 2 defensores al fondo."
+      ],
+      "commonMistakes": [
+        "Bloqueador aislado sin cobertura de la finta: los 3 defensores van al fondo, dejando la zona de 3-5 m vacía.",
+        "2 defensores en línea recta: lado a lado a la misma profundidad → el cut shot cae entre ellos.",
+        "Sin señal entre bloqueador y defensores (paralela vs diagonal).",
+        "Defensor de finta demasiado lejos de la red: se retrasa con los demás y ya no puede cubrir las fintas cortas.",
+        "Colocador corriendo a su objetivo antes de que el balón se haya defendido → hueco defensivo."
+      ]
+    }
+  },
+  "4v4-defense-vs-z2": {
+    "title": "4v4 · Defensa de Z2",
+    "shortDescription": "Espejo del sistema A: 1 bloqueador + 3 defensores contra ataque rival en Z2 (su derecha → llega a nuestra izquierda).",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Ala izquierda (P4)",
+      "A2": "Ala derecha (P2)",
+      "A": "Zaguero (P1)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del ataque rival en Z2",
+        "description": "Ataque rival desde su zona 2 (su derecha) → llega a nuestra esquina delantera IZQUIERDA. El central tendrá que deslizarse al lado izquierdo para bloquear."
+      },
+      "s2": {
+        "title": "2. Colocación alta a Z2 rival",
+        "description": "Distribución a su ala derecha. La defensa activa su ajuste espejo."
+      },
+      "s3": {
+        "title": "3. Bloqueo central solo en el lado izquierdo",
+        "description": "El central se desliza al lado izquierdo y bloquea solo. Señal paralela/diagonal obligatoria. R4 (ala izquierda) se queda como off-blocker a 2,5 m, A2 (ala derecha) defiende la diagonal larga."
+      },
+      "s4": {
+        "title": "4. Remate diagonal + bloqueo solo",
+        "description": "El atacante golpea en diagonal larga. El bloqueo solo cubre la paralela señalizada."
+      },
+      "s5": {
+        "title": "5. Recuperación por el zaguero único",
+        "description": "El zaguero en P1 (ligeramente desplazado al lado del balón) defiende con antebrazos. Su lectura compensa la ausencia de otros zagueros."
+      },
+      "s6": {
+        "title": "6. RESET — formación rombo",
+        "description": "Vuelta a la formación rombo. El central vuelve al centro, listo para deslizarse de nuevo si el rival cambia de lado."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espejo perfecto de Z4 en 4v4: sistema A (1 bloqueador + 3 defensores).",
+        "Bloqueador P3 solo en el lado izquierdo, señal paralela/diagonal obligatoria.",
+        "P4 (ala izquierda) como off-blocker a 3,5-4 m de la red — cobertura corta y fintas.",
+        "P2 (ala derecha) defiende la diagonal corta (~7 m, línea recta).",
+        "El zaguero único en P1 defiende la diagonal larga."
+      ],
+      "commonMistakes": [
+        "Ala izquierda P4 bloqueando con el central → off-blocker ausente en el lado izquierdo.",
+        "Zaguero único demasiado adelantado → balón profundo en diagonal no cubierto.",
+        "Bloqueador sin señal → los 3 defensores no saben qué cubrir.",
+        "P2 demasiado lejos de la red → no cubre la diagonal corta."
+      ]
+    }
+  },
+  "4v4-defense-vs-z3": {
+    "title": "4v4 · Defensa de Z3 (quick central)",
+    "shortDescription": "Ataque central rápido rival en 4v4: bloqueo de 1 en lectura + 3 defensores. La configuración más difícil de defender.",
+    "contextLabel": "4v4 · Bloqueo de 1 (lectura) · Debilidad estructural",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Ala izquierda (P4)",
+      "A2": "Ala derecha (P2)",
+      "A": "Zaguero (P1)",
+      "OPP_A": "Central rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del quick rival",
+        "description": "En 4v4 el quick central (tempo 1) es el ataque más peligroso ya que solo se dispone de 1 bloqueador. El zaguero único ya escanea el eje profundo."
+      },
+      "s2": {
+        "title": "2. Colocación rápida central",
+        "description": "El colocador hace una colocación plana al central que ya ha iniciado su aproximación. Nuestras alas bajan a media cancha para cubrir las diagonales."
+      },
+      "s3": {
+        "title": "3. Bloqueo de 1 (lectura) + remate rápido",
+        "description": "El central salta solo en LECTURA — sin commit posible con un central defensivo. El central rival golpea recto por el eje."
+      },
+      "s4": {
+        "title": "4. Pivote defensivo: el zaguero único",
+        "description": "El zaguero en P1 defiende el balón potente recto en el eje — desempeña el papel de Z6 del 6v6. Su lectura debe ser PERFECTA."
+      },
+      "s5": {
+        "title": "5. RESET — formación rombo",
+        "description": "Vuelta a la base 4v4. El central vuelve a la red, el zaguero retoma su posición axial."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "La documentación del 4v4 lo confirma: el quick central es UNA AUTÉNTICA DEBILIDAD del 4v4 (solo 1 bloqueador).",
+        "Bloqueo de 1 en LECTURA: sin commit posible con un central defensivo.",
+        "Las 2 alas cubren las 2 diagonales cortas a media cancha (~3,5-4 m de la red).",
+        "El zaguero único es el pivote defensivo — desempeña el papel del Z6 del 6v6 en el eje central.",
+        "Anticipación = habilidad nº1: con ~40 m² que cubrir, un error de lectura es irrecuperable."
+      ],
+      "commonMistakes": [
+        "Bloqueo doble en un quick → solo 2 defensores al suelo, diagonales muy abiertas.",
+        "Zaguero que adelanta demasiado pronto → balón profundo cae detrás de él.",
+        "Alas que se quedan en la red sin bloquear → huecos en la línea de 3 m detrás del bloqueo.",
+        "Lectura del central rival demasiado tarde → encajamos el ataque sin movernos."
+      ]
+    }
+  },
+  "5v5-defense-vs-z2": {
+    "title": "5v5 · Defensa de Z2",
+    "shortDescription": "Espejo perfecto de Z4. Sistema 2-1-2 contra ataque rival en Z2 (su derecha → llega a nuestra izquierda).",
+    "contextLabel": "5v5 · 2-1-2 · Bloqueo doble + off-blocker",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Opuesto (P2)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Colocador (P1)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del ataque rival en Z2",
+        "description": "Ataque rival desde su zona 2 (su derecha) → llega a nuestra esquina delantera IZQUIERDA. Espejo perfecto de Z4."
+      },
+      "s2": {
+        "title": "2. Colocación alta a Z2 rival",
+        "description": "Distribución a su ala derecha. El ataque llega a nuestra esquina delantera IZQUIERDA."
+      },
+      "s3": {
+        "title": "3. Bloqueo doble espejo (punta + central)",
+        "description": "Punta bloquea paralela + central diagonal en el lado izquierdo. El opuesto (P2) baja como off-blocker a la derecha. El líbero defiende la paralela en la sombra del bloqueo, el colocador defiende la diagonal larga."
+      },
+      "s4": {
+        "title": "4. Remate + bloqueo doble",
+        "description": "El ala derecha rival golpea en diagonal larga. Punta + central saltan."
+      },
+      "s5": {
+        "title": "5. Defensa del colocador — transición compleja",
+        "description": "El colocador está en la trayectoria de la diagonal larga. Antebrazos defensivos — como es el defensor principal, el opuesto debe encargarse del 2º toque."
+      },
+      "s6": {
+        "title": "6. RESET",
+        "description": "Vuelta a la base 5v5. Comunicación obligatoria entre colocador y opuesto para la siguiente secuencia."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espejo perfecto de Z4 en 5v5: sistema 2-1-2 (bloqueo doble + off-blocker + 2 defensores).",
+        "Bloqueo doble: punta (P4) bloquea paralela + central (P3) cierra la diagonal.",
+        "El opuesto (P2) pasa a off-blocker en el lado derecho, baja a la línea de 3 m.",
+        "El colocador zaguero (P1) defiende la diagonal larga.",
+        "Si el colocador defiende → 2º toque del opuesto (back-up setter) obligatorio."
+      ],
+      "commonMistakes": [
+        "Opuesto bloqueando desde Z2 → off-blocker ausente en el lado derecho.",
+        "Colocador que defiende Y quiere enlazar → confusión en el 2º toque.",
+        "Líbero mal colocado en Z2 (aquí defiende la PARALELA, no la diagonal larga).",
+        "Sin comunicación entre colocador y opuesto."
+      ]
+    }
+  },
+  "5v5-defense-vs-z3": {
+    "title": "5v5 · Defensa de Z3 (quick / tempo 1)",
+    "shortDescription": "Bloqueo de 1 (central) ante ataque rápido central rival en 5v5 — cobertura axial parcial.",
+    "contextLabel": "5v5 · Bloqueo de 1 (lectura) · Lectura del quick",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Opuesto (P2)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Colocador (P1)",
+      "OPP_A": "Central rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del quick rival",
+        "description": "Distribución plana inminente hacia el central. 0,3-0,5 s entre colocación y golpe — nuestro central escanea a su homólogo, ya en marcha."
+      },
+      "s2": {
+        "title": "2. Colocación plana + alas como off-blockers",
+        "description": "El colocador rival hace una colocación plana al central. Nuestras alas bajan a 1,5 m de la red sobre la línea de ataque para cubrir las desviaciones laterales."
+      },
+      "s3": {
+        "title": "3. Bloqueo de 1 (lectura) + remate rápido",
+        "description": "Nuestro central salta solo en lectura. El central rival golpea diagonal corta — los ángulos son cortos comparados con una colocación alta."
+      },
+      "s4": {
+        "title": "4. Defensa del líbero",
+        "description": "El líbero (adelantado a 5 m ya que los ángulos son cortos) defiende con antebrazos en su canal izquierdo. Trayectoria alta al objetivo — el colocador volverá a la red."
+      },
+      "s5": {
+        "title": "5. RESET",
+        "description": "Vuelta a la base 5v5 tras la secuencia. El central y las alas se realinean."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloqueo de 1 (central P3) en lectura — sin commit posible en un quick.",
+        "Alas (P4 + P2) a 2 m de la red en la línea de ataque: cubren las desviaciones del bloqueo.",
+        "Con solo 2 defensores al fondo (P5 + P1), la cobertura AXIAL profunda es parcial.",
+        "Z1 y Z5 AVANZAN 1 m (~7 m de la red) porque los ángulos son más cortos en un quick.",
+        "\"Parado en el contacto\": todos parados en el instante exacto del golpe."
+      ],
+      "commonMistakes": [
+        "Bloqueo doble en un quick → demasiado tarde, y deja solo 1 defensor al suelo.",
+        "Defensores estáticos al fondo (8 m+) → el balón rápido cae antes de que se muevan.",
+        "\"False stepping\" (primer paso hacia atrás) → tiempo perdido en tempo 1.",
+        "Off-blockers que se quedan en la red → no cubren las desviaciones."
+      ]
+    }
+  },
+  "5v5-defense-vs-z4": {
+    "title": "5v5 · Defensa de Z4",
+    "shortDescription": "Sistema 2-1-2 contra ataque rival en Z4 (su izquierda → llega a nuestra derecha): bloqueo doble + off-blocker + 2 defensores.",
+    "contextLabel": "5v5 · 2-1-2 · Bloqueo doble + off-blocker",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Opuesto (P2)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Colocador (P1)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del ataque rival en Z4",
+        "description": "Ataque rival desde su zona 4 (su izquierda) → llega a nuestra esquina delantera DERECHA. Lectura secuencial \"balón → colocador → balón → atacante\"."
+      },
+      "s2": {
+        "title": "2. Colocación alta a Z4 rival",
+        "description": "Distribución estándar de su colocador al ala izquierda. Nuestra primera línea identifica la zona de ataque."
+      },
+      "s3": {
+        "title": "3. Bloqueo doble + punta off-blocker",
+        "description": "Opuesto (P2) + central (P3) suben a bloquear por la derecha. La punta baja a 1,5 m de la red como off-blocker. Líbero en diagonal larga, colocador en paralela — cada uno cubre ~30 m²."
+      },
+      "s4": {
+        "title": "4. Remate en diagonal larga + bloqueo",
+        "description": "El atacante golpea en diagonal larga (estadísticamente la trayectoria más frecuente). Opuesto + central saltan."
+      },
+      "s5": {
+        "title": "5. Defensa del líbero",
+        "description": "El líbero está en la trayectoria principal. Antebrazos altos al objetivo — transición al contraataque."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la base 2-1-2",
+        "description": "Switch a la formación base. El colocador vuelve a su zona 1, la defensa se reorganiza para la siguiente secuencia."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 2-1-2: 2 bloqueadores + 1 off-blocker (cobertura de finta) + 2 defensores al fondo.",
+        "Recomendación: conservar el 5-1 de 6v6 quitando un zaguero no colocador (configuración 3D-2Z).",
+        "Off-blocker a 2-2,5 m de la red, a 1 m de la línea — cubre la zona de 3 m tras el bloqueo.",
+        "Lectura crítica: ~30 m² por defensor (vs 20 m² en 6v6), seguridad de colocación inicial reducida.",
+        "\"Parado en el contacto\": detenido y equilibrado en el instante exacto del golpe."
+      ],
+      "commonMistakes": [
+        "Bloqueo triple → solo 1 defensor al suelo = punto garantizado.",
+        "Off-blocker que se queda en la red → zona de 3 m tras el bloqueo descubierta.",
+        "Sin jerarquía de prioridad entre los 2 defensores al fondo → 2 jugadores al mismo balón.",
+        "Reproducir mecánicamente el 6v6 sin adaptar zonas (el líbero debe cubrir más amplio aquí)."
+      ]
+    }
+  },
+  "6v6-attack-coverage": {
+    "title": "Cobertura · Ataque del 5-1",
+    "shortDescription": "Cobertura a 5 jugadores en un ataque de zona 4: 2 arcos (3 cerca + 2 lejos) para defender un posible block-out.",
+    "contextLabel": "5-1 · Cobertura a 5 · Disposición 3-2",
+    "players": {
+      "R4a": "Punta atacante (P4)",
+      "C": "Central (P3)",
+      "P": "Colocador (penetrado)",
+      "Op": "Opuesto (P2)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_BL": "Bloqueador izquierdo rival",
+      "OPP_BR": "Bloqueador derecho rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Preparación del ataque a Z4",
+        "description": "Nuestra punta está en aproximación, a punto de despegar. Incluso antes del golpe, la cobertura se organiza: es la anticipación lo que salva un block-out, no la reacción."
+      },
+      "s2": {
+        "title": "2. Primer arco (3 jugadores cerca)",
+        "description": "Colocador + central + líbero forman un semicírculo a 1-1,5 m del atacante, posición MUY baja, brazos extendidos hacia adelante, listos para hacer antebrazos cortos."
+      },
+      "s3": {
+        "title": "3. Remate + bloqueo doble rival",
+        "description": "Nuestra punta despega y golpea en diagonal. Los dos bloqueadores rivales saltan en paralelo para cerrar la trayectoria — la cobertura ya está congelada, esperando."
+      },
+      "s4": {
+        "title": "4. Block-out: el balón vuelve",
+        "description": "El bloqueo rival toca el balón que rebota en nuestro campo a 1,5 m del atacante. Sin cobertura, eso es un punto perdido — aquí, el colocador está exactamente en el punto de caída."
+      },
+      "s5": {
+        "title": "5. Recuperación por el colocador (1er apoyo)",
+        "description": "El colocador (1er apoyo cercano) defiende el balón con antebrazos a 1 m del atacante. Es SU responsabilidad tras una colocación a zona 4 — regla innegociable."
+      },
+      "s6": {
+        "title": "6. Nuevo ataque posible",
+        "description": "El salvamento permite volver a un balón en la red. Sin cobertura a 5 = punto perdido directamente en el block-out."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Cobertura a 5 jugadores = estándar de nivel élite. Disposición 3-2 (3 cerca + 2 lejos).",
+        "El colocador es SIEMPRE el 1er apoyo cercano, a 1-1,5 m del atacante.",
+        "Posición MUY baja para los 3 jugadores cercanos, brazos extendidos hacia adelante.",
+        "Sin cobertura, un bloqueo rival exitoso = punto perdido directamente.",
+        "La anticipación prima sobre la reacción: la cobertura se organiza ANTES del golpe."
+      ],
+      "commonMistakes": [
+        "Sin cobertura → bloqueo rival = punto.",
+        "Colocador que se queda en la red tras su colocación → 1er apoyo ausente.",
+        "Cubridores de pie o demasiado lejos → balones cortos no recuperados.",
+        "Solo 2 o 3 cubridores en lugar de 5 → block-outs largos perdidos."
+      ]
+    }
+  },
+  "6v6-defense-6-front": {
+    "title": "Defensa · man-up (2-1-3)",
+    "shortDescription": "Sistema man-up (2-1-3, antes \"defensa W\"): un defensor adelantado tras el bloqueo para las fintas cortas.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-finta",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6 adelantada)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base man-up",
+        "description": "El rival es conocido por fintar — elección táctica del man-up. La punta (en P6) ya está adelantada a 2,5 m, lista para subir tras el bloqueo."
+      },
+      "s2": {
+        "title": "2. Colocación alta rival a Z4",
+        "description": "Distribución estándar a la Z4 rival. La defensa reconoce la configuración y se coloca."
+      },
+      "s3": {
+        "title": "3. Jugador adelantado tras el bloqueo",
+        "description": "Diferencia clave del man-up: R4b sube a 2,5 m de la red, en la sombra del bloqueo. El líbero y el colocador retroceden a 6 m para compensar. Bloqueo doble estándar (opuesto + central)."
+      },
+      "s4": {
+        "title": "4. Finta saltada rival",
+        "description": "El atacante elige fintar en lugar de rematar. El balón cae justo detrás del bloqueo — exactamente donde está el jugador adelantado."
+      },
+      "s5": {
+        "title": "5. Recuperación corta por el jugador adelantado",
+        "description": "El jugador adelantado está exactamente donde cae el balón. Antebrazos precisos al opuesto para enlazar un 2º toque en suspensión."
+      },
+      "s6": {
+        "title": "6. RESET — base man-up",
+        "description": "Vuelta a la posición base 2-1-3. R4b recolocado a 2,5 m, líbero y colocador al fondo."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Man-up = 2-1-3 (Keller / USAV) — antes \"defensa roja\".",
+        "⚠ NO confundir con la \"formación W\" que es una formación de RECEPCIÓN, no un sistema defensivo.",
+        "Cobertura excepcional de fintas, roll shots y balones \"junk\" tras el bloqueo.",
+        "Pero: solo 3 defensores al fondo → vulnerable a remates potentes en diagonales cortas.",
+        "Indicación: equipos jóvenes, escolares, rivales tácticos que juegan muchas fintas u off-speeds."
+      ],
+      "commonMistakes": [
+        "Mantener el sistema perimetral contra un equipo que finta → balones cortos perdidos.",
+        "Jugador adelantado demasiado al frente (en la red) → bloqueado en su impulso de bloqueo.",
+        "Líbero que no retrocede → hueco en el fondo ante un remate potente.",
+        "Confundir \"defensa W\" y \"man-up\" en el vocabulario del equipo — fuente de malentendidos."
+      ]
+    }
+  },
+  "6v6-defense-perimeter": {
+    "title": "Defensa · perimetral (2-0-4)",
+    "shortDescription": "Defensa blanca: 4 defensores en las líneas, U abierta hacia la red. Dominante en el voleibol masculino de élite.",
+    "contextLabel": "5-1 · Perimetral 2-0-4 (defensa blanca)",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración perimetral (2-0-4)",
+        "description": "Los 4 defensores forman una U abierta hacia la red, casi sobre las líneas — \"un pie en la línea\" (Liskevych). El medio de la cancha se abandona deliberadamente."
+      },
+      "s2": {
+        "title": "2. Colocación alta rival a Z4",
+        "description": "Colocación a su ala izquierda. Nuestra primera línea identifica la zona, los jugadores perimetrales permanecen estrictamente en las líneas."
+      },
+      "s3": {
+        "title": "3. Bloqueo doble + 4 defensores en el perímetro",
+        "description": "Bloqueo doble estándar (opuesto en paralela + central en diagonal). Sin defensor adelantado tras el bloqueo (de ahí el 0 en el centro). Líbero en la paralela izquierda, P6 en la línea de fondo, P1 en la paralela derecha."
+      },
+      "s4": {
+        "title": "4. Remate potente en paralela + bloqueo",
+        "description": "El atacante golpea la paralela hacia nuestra esquina trasera izquierda. La trayectoria pasa cerca del bloqueo — un block-out largo es probable."
+      },
+      "s5": {
+        "title": "5. Recuperación en la línea",
+        "description": "El líbero recupera en la línea — cobertura perimetral perfecta. Identifica fácilmente los balones \"fuera\". Antebrazos altos a la zona 2-3."
+      },
+      "s6": {
+        "title": "6. RESET — perimetral",
+        "description": "Vuelta a la formación perimetral pura: todos los zagueros en las líneas, centro abandonado por convención táctica."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Perimetral = 2-0-4 (\"defensa blanca\"): 4 defensores en el perímetro, ninguno adelantado.",
+        "Sistema dominante en el voleibol masculino moderno e internacional donde la potencia domina.",
+        "Lógica: poblar estadísticamente las zonas donde caen los remates potentes (líneas y esquinas profundas).",
+        "Excelente identificación de balones \"fuera\" y defensa de block-outs.",
+        "⚠ El medio de la cancha (zona central entre 3 y 5 m) se deja deliberadamente abierto."
+      ],
+      "commonMistakes": [
+        "Defensores que se cierran hacia el centro → pierden la lógica del sistema y ya no cubren las líneas.",
+        "Sistema elegido contra un equipo que finta → centro de la cancha descubierto, fintas perdidas.",
+        "Líbero inexperto → mala lectura de los balones \"fuera\" por los lados.",
+        "Falta de atletismo para lanzarse hacia adelante en las fintas → debilidad explotada."
+      ]
+    }
+  },
+  "6v6-defense-read": {
+    "title": "Defensa · lectura",
+    "shortDescription": "Defensa reactiva de élite: posiciones adaptativas según la colocación, la aproximación y los indicios del brazo armado rival.",
+    "contextLabel": "5-1 · Defensa en lectura · Internacional",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posición de base neutra",
+        "description": "Todos los defensores en posición de lectura, rodillas flexionadas, pies paralelos. Secuencia visual obligatoria: \"balón → colocador → balón → atacante\"."
+      },
+      "s2": {
+        "title": "2. Lectura de la colocación (hacia Z2 rival)",
+        "description": "En cuanto el balón sale de las manos del colocador rival → ajuste hacia la zona de ataque. Aquí Z2 rival (su derecha = nuestra izquierda)."
+      },
+      "s3": {
+        "title": "3. Lectura del atacante + ajuste",
+        "description": "Lectura en paralelo de la aproximación, la orientación del brazo armado y los hombros. Todos se recolocan según los indicios: hombro alto = remate, rotación = dirección probable."
+      },
+      "s4": {
+        "title": "4. Lectura del remate + bloqueo doble",
+        "description": "El atacante abre en diagonal larga. La defensa ya está colocada gracias a los indicios visuales. Punta + central bloquean. \"Parado en el contacto\" obligatorio."
+      },
+      "s5": {
+        "title": "5. Recuperación en lectura por el líbero",
+        "description": "Anticipación perfecta: el líbero ya está en la diagonal larga, exactamente en la trayectoria. Antebrazos altos al objetivo."
+      },
+      "s6": {
+        "title": "6. RESET — base neutra",
+        "description": "Vuelta a la posición neutra, listos para leer la siguiente fase. La lectura se reanuda en cada toque rival."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Defensa en lectura = sin colocación fija, todo es adaptativo. La defensa moderna se define menos por la formación que por la lectura.",
+        "Secuencia visual \"balón → colocador → balón → atacante\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fases: base neutra → lectura de la colocación → lectura del atacante → ajuste → \"parado en el contacto\" → persecución.",
+        "Sistema preferido en la élite internacional (sénior FIVB).",
+        "El más eficaz contra atacantes polivalentes."
+      ],
+      "commonMistakes": [
+        "Moverse ANTES de la colocación → mala lectura, jugador al contrapié.",
+        "Lectura incompleta: leer solo la colocación, no el brazo armado.",
+        "Seguir moviéndose en el momento del contacto del atacante (no \"parado en el contacto\") → reactividad reducida a la mitad.",
+        "Falta de coordinación → 2 defensores al mismo balón, hueco en otro lugar."
+      ]
+    }
+  },
+  "6v6-defense-rotation": {
+    "title": "Defensa · rotación (3-2-1)",
+    "shortDescription": "Defensa con rotación / slide: los zagueros se desplazan al lado del ataque, el zaguero opuesto sube tras el bloqueo.",
+    "contextLabel": "5-1 · Rotación 3-2-1 · Defensa slide",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Atacante rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base + lectura de la colocación a Z4",
+        "description": "Configuración base antes de rotar. El colocador rival penetra y prepara una colocación a su ala izquierda."
+      },
+      "s2": {
+        "title": "2. Colocación alta a Z4 rival",
+        "description": "Distribución estándar. Nuestro equipo activa la rotación: P1 subirá tras el bloqueo, P6 se deslizará hacia la línea derecha, líbero conserva la diagonal."
+      },
+      "s3": {
+        "title": "3. Rotación 3-2-1 iniciada",
+        "description": "El colocador (P1) SUBE a 3 m tras el bloqueo para cubrir la finta. P6 se desliza hacia la línea derecha a 8 m. Líbero se queda en la diagonal larga. R4 off-blocker clásico a la izquierda."
+      },
+      "s4": {
+        "title": "4. Remate en diagonal + bloqueo",
+        "description": "El atacante golpea en diagonal larga. Bloqueo doble (opuesto + central) — la trayectoria principal está cubierta por el líbero."
+      },
+      "s5": {
+        "title": "5. Defensa del líbero en la diagonal",
+        "description": "El líbero está exactamente en el punto de caída del golpe principal. Antebrazos altos a la zona 2-3 — transición fluida al contraataque."
+      },
+      "s6": {
+        "title": "6. RESET — base antes de la próxima rotación",
+        "description": "Vuelta a la base. La rotación fue eficaz: la finta corta la habría recogido el colocador adelantado, la diagonal larga el líbero."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotación 3-2-1 (slide defense): 3 defensores zagueros se desplazan al lado del ataque.",
+        "El zaguero opuesto (a menudo el colocador si está en P1) SUBE tras el bloqueo para cubrir la finta.",
+        "Central zaguero se desliza hacia la línea del lado atacado (~8,5 m, 1-1,5 m de la línea).",
+        "Excelente cobertura de la paralela profunda Y de la finta simultáneamente.",
+        "Transición rápida del colocador si es el jugador adelantado.",
+        "Variante \"counter-rotate\": rotación en el sentido contrario."
+      ],
+      "commonMistakes": [
+        "Rotación incompleta → huecos de cobertura.",
+        "Esquina diagonal opuesta vulnerable (un defensor menos al fondo).",
+        "Confusión entre rotate (hacia el balón) y counter-rotate (contrario) — requiere comunicación fuerte.",
+        "Jugador adelantado estático → no lee finta vs remate."
+      ]
+    }
+  },
+  "6v6-defense-vs-pipe": {
+    "title": "Defensa · pipe rival (BIC)",
+    "shortDescription": "Defensa ante un pipe rival (ataque zaguero en Z6): bloqueo de 1 o 2, P6 sube para \"cerrar la cancha\".",
+    "contextLabel": "5-1 · Pipe / BIC · P6 adelantado, perímetro cerrado",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Pipe rival",
+      "OPP_S": "Colocador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Lectura del pipe",
+        "description": "Su colocador está a punto de hacer una colocación plana al centro zaguero. Nuestro central escanea tanto al posible central rival COMO el pasillo del pipe. P6 debe estar listo para subir."
+      },
+      "s2": {
+        "title": "2. Colocación plana central + aproximación del pipe",
+        "description": "El colocador rival entrega una colocación plana hacia el eje de Z6. El atacante del pipe entra en aproximación desde detrás de la línea de 3 m, carrera larga. P6 empieza a deslizarse hacia adelante."
+      },
+      "s3": {
+        "title": "3. Bloqueo central + alas cerradas",
+        "description": "Nuestro central salta solo al pipe. Alas (punta + opuesto) bajan a ~1,5 m de la red para cubrir las desviaciones laterales. Z1 y Z5 sacrifican las líneas para defender el eje."
+      },
+      "s4": {
+        "title": "4. Golpe del pipe + bloqueo central",
+        "description": "El atacante golpea profundo en el eje. Nuestro central sube a la red para un bloqueo de 1 — el pipe rápido no da tiempo a colocar dos bloqueadores."
+      },
+      "s5": {
+        "title": "5. Recuperación axial por P6",
+        "description": "El balón cruza al eje profundo — P6 (adelantado a 6,5 m) está exactamente en el punto de impacto. Antebrazos recto en el eje hacia la zona 2-3 del colocador."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la base cerrada",
+        "description": "Switch a la posición base lista para el pipe: P6 adelantado, Z1/Z5 en el eje central. La configuración sigue válida si el juego continúa con rotación."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe = ataque zaguero desde Z6 (centro zaguero) de la punta 2 o del OP — apunta al eje central profundo.",
+        "Bloqueo de 1 (central) lo más habitual — bloqueo doble difícil en un tempo rápido.",
+        "P6 defensivo SUBE a ~6-7 m de la red, eje exacto (\"cerrar la cancha\").",
+        "Z1 y Z5 se cierran hacia el centro (~7 m, 1,5 m de las líneas) — sacrifican algo las líneas.",
+        "BIC (pipe rápido) = uno de los ataques más difíciles de defender ya que el central no puede honrar quick + pipe + dos bandas."
+      ],
+      "commonMistakes": [
+        "Bloqueo doble en un pipe → deja una banda completamente abierta si el rival cambia de ataque.",
+        "P6 estático al fondo (8 m+) → el pipe rápido cae antes de que se mueva.",
+        "Z1/Z5 demasiado abiertos en las líneas → eje central descubierto.",
+        "Sin comunicación entre central y alas sobre quién toma el pipe vs el quick."
+      ]
+    }
+  },
+  "6v6-defense-vs-z2": {
+    "title": "Defensa · ataque rival en Z2",
+    "shortDescription": "Espejo perfecto de Z4. Bloqueo doble (punta paralela + central diagonal) ante ataque rival en Z2 → llega a nuestra izquierda.",
+    "contextLabel": "5-1 · Colocador zaguero P1 · Bloqueo doble · Perimetral",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Atacante rival Z2",
+      "OPP_S": "Colocador rival",
+      "OPP_R": "Receptor rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Recepción rival + penetración",
+        "description": "Su zaguero ha jugado antebrazos. El colocador rival penetra desde su P1 hasta el objetivo. Nuestra defensa lee en READY."
+      },
+      "s2": {
+        "title": "2. Colocación alta rival a Z2",
+        "description": "El colocador rival distribuye a su ala derecha. El ataque llega a nuestra esquina delantera IZQUIERDA. Configuración espejo perfecta de Z4."
+      },
+      "s3": {
+        "title": "3. Bloqueo doble espejo + desplazamiento defensivo",
+        "description": "Punta (P4) bloquea paralela + central (P3) cierra la diagonal. Opuesto (P2) off-blocker a la derecha en la línea de 3 m. Líbero defiende la paralela izquierda profunda. P1 asume la diagonal larga."
+      },
+      "s4": {
+        "title": "4. Remate rival + bloqueo doble",
+        "description": "El ala derecha rival golpea en diagonal larga. Punta y central saltan. Parado en el contacto obligatorio."
+      },
+      "s5": {
+        "title": "5. Defensa del colocador en la diagonal",
+        "description": "El colocador (P1) está en la trayectoria principal de la diagonal larga. Antebrazos defensivos — pregunta inmediata: ¿quién hace el 2º toque?"
+      },
+      "s6": {
+        "title": "6. Enlace del opuesto + contraataque",
+        "description": "El opuesto deja su puesto de off-blocker para realizar el 2º toque. Distribución a la punta en zona 4 que prepara el golpe."
+      },
+      "s7": {
+        "title": "7. RESET — vuelta a la base defensiva",
+        "description": "Todos pasan a la posición base en cuanto el balón vuelve al lado rival."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espejo perfecto de Z4: punta (P4 = punta) bloquea paralela + central (P3) cierra la diagonal.",
+        "El opuesto (P2 = OPP) pasa a off-blocker en el lado derecho, baja a la línea de 3 m.",
+        "El colocador en P1 (zaguero) defiende la diagonal larga.",
+        "Gestión crítica: si el colocador está en P2 (delantero), ÉL bloquea la paralela — transición tensa.",
+        "Si el colocador defiende en P1 → 2º toque del opuesto (back-up setter) obligatorio."
+      ],
+      "commonMistakes": [
+        "Opuesto bloqueando desde zona 2 → off-blocker ausente en el lado derecho.",
+        "Central que no se alinea con la punta → bloqueo abierto.",
+        "Líbero mal colocado en Z2 — defiende la PARALELA profunda aquí, no la diagonal larga.",
+        "Colocador que defiende Y quiere enlazar → confusión en el 2º toque."
+      ]
+    }
+  },
+  "6v6-defense-vs-z3": {
+    "title": "Defensa · ataque rival en Z3 (quick / tempo 1)",
+    "shortDescription": "Bloqueo de 1 en lectura (central) ante ataque rápido central rival — zagueros adelantados un metro.",
+    "contextLabel": "5-1 · Bloqueo de 1 (lectura) · Parado en el contacto",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Central rival",
+      "OPP_S": "Colocador rival",
+      "OPP_R4": "Punta rival",
+      "OPP_R": "Receptor rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Recepción rival + penetración relámpago",
+        "description": "Su zaguero acaba de jugar antebrazos. El colocador esprinta a la red para un quick. Tempo 1 = 0,3-0,5 s entre colocación y golpe. Nuestro central escanea el desplazamiento del central rival, ya en marcha."
+      },
+      "s2": {
+        "title": "2. Colocación plana + central en el aire",
+        "description": "El colocador rival envía una colocación plana muy baja al central que ya ha despegado. Nuestras alas bajan a la línea de 3 m para liberar las desviaciones del bloqueo."
+      },
+      "s3": {
+        "title": "3. Bloqueo de 1 + remate rápido",
+        "description": "Nuestro central salta solo en lectura. El central rival golpea diagonal corta. El golpe más peligroso: balón que se hunde bajo el bloqueo."
+      },
+      "s4": {
+        "title": "4. Defensa del colocador en la paralela",
+        "description": "Z1 (colocador) y Z5 (líbero) están adelantados a ~7 m ya que los ángulos son cortos en un quick. El colocador (Z1) recupera en su canal."
+      },
+      "s5": {
+        "title": "5. 2º toque del opuesto (back-up setter)",
+        "description": "Como nuestro colocador ha defendido, el opuesto en P2 hace el 2º toque para enlazar. Nuestra punta prepara un contraataque en zona 4."
+      },
+      "s6": {
+        "title": "6. RESET — vuelta a la base",
+        "description": "Switch a la posición base en cuanto el colocador rival toca el balón. La defensa se reorganiza para la siguiente secuencia."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloqueo de 1 en el quick central: solo salta el central (lectura lo más habitual, commit si el scouting es fuerte).",
+        "Z1 y Z5 AVANZAN un metro (~7,5 m) ya que los ángulos son más cortos en un quick.",
+        "Las alas se quedan en la línea de 3 m (~2-2,5 m de la red) para las desviaciones del bloqueo.",
+        "\"Parado en el contacto\": todos parados y equilibrados en el instante exacto del golpe."
+      ],
+      "commonMistakes": [
+        "Todos los delanteros saltando → deja las alas abiertas para la siguiente colocación.",
+        "Bloqueo demasiado tarde → el balón pasa por encima de las manos.",
+        "\"False stepping\" (primer paso hacia atrás) → se desperdicia el poco tiempo disponible.",
+        "Z1/Z5 estáticos al fondo (8 m+) → el balón rápido cae corto antes de que se hayan movido."
+      ]
+    }
+  },
+  "6v6-defense-vs-z4": {
+    "title": "Defensa · ataque rival en Z4",
+    "shortDescription": "Bloqueo doble ante ataque rival en zona 4 (su ala izquierda → llega a nuestra derecha) en defensa perimetral.",
+    "contextLabel": "5-1 · Colocador zaguero P1 · Bloqueo doble · Perimetral",
+    "players": {
+      "P": "Colocador (P1)",
+      "Op": "Opuesto (P2)",
+      "C": "Central (P3)",
+      "R4": "Punta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Punta (P6)",
+      "OPP_A": "Atacante rival Z4",
+      "OPP_S": "Colocador rival",
+      "OPP_R": "Receptor rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Recepción rival + penetración",
+        "description": "Su zaguero acaba de jugar antebrazos. El colocador rival penetra hacia su objetivo entre Z2 y Z3. Nuestra defensa lee en READY, secuencia visual \"balón → colocador → balón → atacante\"."
+      },
+      "s2": {
+        "title": "2. Colocación alta rival a Z4",
+        "description": "El colocador rival distribuye una colocación alta a su ala izquierda. El ataque llegará a nuestra esquina delantera derecha. La primera línea ya identifica la zona de ataque."
+      },
+      "s3": {
+        "title": "3. Bloqueo doble + desplazamiento perimetral",
+        "description": "Opuesto (P2) bloquea paralela + central (P3) cierra la diagonal. R4 off-blocker en la línea de 3 m por el lado izquierdo. Líbero en diagonal larga a ~7,5 m, P6 en eje a 8 m, P1 paralela profunda en la sombra del bloqueo."
+      },
+      "s4": {
+        "title": "4. Remate rival + bloqueo doble",
+        "description": "El atacante rival golpea en diagonal larga. Opuesto y central saltan en paralelo. En el momento del contacto, todos los defensores están parados y equilibrados (\"parado en el contacto\")."
+      },
+      "s5": {
+        "title": "5. Defensa del líbero en la diagonal larga",
+        "description": "El líbero está exactamente en la trayectoria principal (diagonal larga). Antebrazos altos a la zona 2-3 para preparar el contraataque."
+      },
+      "s6": {
+        "title": "6. Contraataque por la punta",
+        "description": "Nuestro colocador entrega una colocación alta a la punta que ha bajado a la línea de 3 m. Remate en diagonal larga al lado rival para cerrar la jugada."
+      },
+      "s7": {
+        "title": "7. RESET — vuelta a la base defensiva",
+        "description": "Todos pasan a la posición base en cuanto el balón vuelve al lado rival — sin transición congelada en formación de recepción."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloqueo doble: opuesto (P2) bloquea paralela + central (P3) diagonal. Es la configuración estándar FIVB contra Z4 rival.",
+        "Off-blocker = punta (P4) en la línea de 3 m por el lado izquierdo — cubre el cut shot y la finta corta.",
+        "Sistema perimetral: líbero (P5) en diagonal larga ~7,5 m, P6 en eje ~8 m, P1 paralela profunda en la sombra del bloqueo.",
+        "Líbero alineado con el hombro interior del bloqueador central — esa es su zona prioritaria.",
+        "Golpe principal defendido: diagonal larga (la punta rival es la más solicitada)."
+      ],
+      "commonMistakes": [
+        "Bloqueo abierto involuntariamente (P3 no alineado con P2) → balón pasa entre los bloqueadores.",
+        "Off-blocker que se queda en la red → sombra del bloqueo descubierta (error nº1 según Hebert).",
+        "Líbero mal colocado (demasiado cerca de la red) → remates profundos caen.",
+        "Colocador que bloquea y luego no llega a la red → 2º toque por un jugador no especializado.",
+        "Defensores que siguen moviéndose en el momento del contacto del atacante (no \"parado en el contacto\")."
+      ]
+    }
+  },
+  "4v4-reception-losange": {
+    "title": "4v4 · Recepción en rombo",
+    "shortDescription": "Formación rombo canónica: colocador en P3 (centro de la red) + 2 alas en la línea de 3 m + zaguero al fondo.",
+    "contextLabel": "4v4 · Rombo (1-2-1) · Colocador central",
+    "players": {
+      "P": "Colocador (P3)",
+      "R4": "Ala izquierda (P4)",
+      "A2": "Ala derecha (P2)",
+      "A": "Zaguero (P1)",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación en rombo",
+        "description": "Disposición canónica 1-2-1: colocador EN EL CENTRO de la red (P3), 2 alas en la línea de 3 m (I + D), zaguero al fondo. Sin líbero permitido en 4v4 escolar. Todos READY."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos del zaguero",
+        "description": "Saque alto a la zona central. El zaguero único canta \"¡Mía!\" y se desplaza ligeramente hacia el balón."
+      },
+      "s3": {
+        "title": "3. Colocación al ala izquierda",
+        "description": "Antebrazos altos al colocador en el centro de la red (sin penetración en el rombo). Distribuye a la zona 4. El ala izquierda encadena su aproximación corta."
+      },
+      "s4": {
+        "title": "4. Balón disponible + cobertura corta",
+        "description": "La colocación llega a la zona 4. El ala derecha se cierra hacia el centro para cubrir, el zaguero avanza ligeramente. Con un solo bloqueador rival, el ángulo de ataque sigue siendo amplio."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta al rombo",
+        "description": "Todos retoman su posición en el rombo para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rombo canónico (1-2-1) = la formación más usada en 4v4.",
+        "Variante \"colocador central\": colocador en P3 en la red, distribuye a izquierda O derecha.",
+        "Sin líbero permitido en 4v4 escolar — todos deben saber recibir.",
+        "Cada jugador cubre ~30-40 m² (vs ~20 m² en 6v6)."
+      ],
+      "commonMistakes": [
+        "Confusión sobre los balones centrales entre 2 zonas → canto obligatorio.",
+        "Zaguero único demasiado atrás → balones cortos detrás de la red no cubiertos.",
+        "Colocador que también recibe → imposible hacer el 2º toque detrás."
+      ]
+    }
+  },
+  "4v4-reception-u": {
+    "title": "4v4 · Recepción en U",
+    "shortDescription": "Formación en U: colocador fuera + 3 receptores (izquierda, fondo, derecha).",
+    "contextLabel": "4v4 · U · 4v4 competitivo",
+    "players": {
+      "P": "Colocador (oculto)",
+      "R4": "Ala izquierda",
+      "A": "Zaguero centro",
+      "A2": "Ala derecha",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración en U",
+        "description": "El colocador está oculto en P2 en la red. 3 receptores en U: ala izquierda, zaguero centro, ala derecha. Cada jugador cubre alrededor de 1/3 del ancho."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos del ala izquierda",
+        "description": "Saque alto al canal izquierdo. El ala izquierda canta y toma el balón en su canal. Trayectoria alta para dar tiempo al colocador."
+      },
+      "s3": {
+        "title": "3. Distribución al ala izquierda",
+        "description": "El balón llega al colocador fijo en zona 2 (sin penetración en 4v4). Distribución rápida al ala izquierda que encadena inmediatamente su aproximación."
+      },
+      "s4": {
+        "title": "4. Balón disponible en zona 4",
+        "description": "La colocación llega a la zona 4 para el ala izquierda. Sistema más ofensivo que el rombo: el colocador no ha recibido, el ataque es rápido y legible."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta a la U",
+        "description": "Los 3 receptores vuelven a la U y el colocador vuelve a su escondite en P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Recepción en U = la configuración 4v4 competitivo más eficaz.",
+        "3 receptores especializados + colocador fuera = 1 jugador disponible para el ataque sin haber recibido.",
+        "Objetivo: zona 2 (colocador fijo) → distribución rápida.",
+        "Técnicamente más exigente que el rombo pero más ofensivo."
+      ],
+      "commonMistakes": [
+        "Ala que no cubre todo el canal → balón entre ala y zaguero perdido.",
+        "Zaguero centro demasiado adelantado → balones largos pasan por encima.",
+        "Colocador inclinándose hacia la recepción → confusión."
+      ]
+    }
+  },
+  "5-1-reception-3-receivers": {
+    "title": "Recepción · a 3 (5-1)",
+    "shortDescription": "Recepción a 3 (líbero + 2 puntas) con colocador fuera y opuesto oculto — formación estándar moderna.",
+    "contextLabel": "5-1 · Recepción a 3 · Saque rival",
+    "players": {
+      "R4a": "Punta izquierda",
+      "L": "Líbero",
+      "R4b": "Punta derecha",
+      "C": "Central",
+      "Op": "Opuesto (oculto)",
+      "P": "Colocador (oculto)",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posición de recepción",
+        "description": "Tres receptores en arco: punta izquierda, líbero central, punta derecha. Cada uno cubre ~1/3 del ancho. El colocador y el opuesto se ocultan en la red, listos para salir en cuanto el sacador golpee."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos",
+        "description": "Saque alto a la punta izquierda que canta \"¡Mía!\" y juega antebrazos. En paralelo, el colocador lanza su penetración desde su escondite en P1 hacia la zona 2-3."
+      },
+      "s3": {
+        "title": "3. Colocación alta a zona 4",
+        "description": "El balón sube al objetivo (entre P2 y P3) donde el colocador llega justo a tiempo. Distribuye una colocación alta a la zona 4. La punta receptora ya ha iniciado su bajada a la línea de 3 m."
+      },
+      "s4": {
+        "title": "4. Balón disponible para el atacante",
+        "description": "El balón llega a la zona 4 a altura de golpeo. La punta da sus últimos pasos antes del salto. La calidad de la colocación valida la calidad de la recepción inicial."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta a la formación",
+        "description": "Todo el equipo retoma su posición de recepción para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Recepción a 3 = estándar moderno del 5-1. Máxima especialización.",
+        "Objetivo: zona 2-3, a un brazo de la red, altura ~3 m.",
+        "El colocador se queda oculto en la red hasta que el sacador golpea, luego penetra.",
+        "La punta receptora encadena INMEDIATAMENTE su aproximación de ataque."
+      ],
+      "commonMistakes": [
+        "Recepción demasiado plana o corta → el colocador llega tarde.",
+        "Conflicto entre 2 receptores → canto vocal obligatorio.",
+        "Punta estática tras la recepción → pierde una opción ofensiva en zona 4."
+      ]
+    }
+  },
+  "5v5-reception-4-receivers": {
+    "title": "5v5 · Recepción a 4",
+    "shortDescription": "Formato 5v5: colocador fuera + 4 receptores en U o en línea.",
+    "contextLabel": "5v5 · 4 receptores · Formato híbrido",
+    "players": {
+      "P": "Colocador (fuera)",
+      "R4a": "Delantero izquierdo",
+      "C": "Delantero derecho / central",
+      "A1": "Zaguero izquierdo",
+      "A2": "Zaguero derecho",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración 5v5",
+        "description": "El colocador (en P2) está fuera en la red. Los 4 receptores forman una U: 2 en la línea de 3 m, 2 al fondo. El mejor receptor toma la zona más expuesta."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos del zaguero",
+        "description": "Saque alto al canal zaguero izquierdo. El zaguero izquierdo canta y juega antebrazos en su canal."
+      },
+      "s3": {
+        "title": "3. Colocación a zona 4",
+        "description": "El balón llega al colocador fijo en zona 2 (sin penetración en 5v5). Distribución rápida al ala izquierda. El delantero izquierdo inicia su aproximación."
+      },
+      "s4": {
+        "title": "4. Balón disponible — cobertura a 3 jugadores",
+        "description": "La colocación llega a la zona 4. El delantero izquierdo da sus pasos. La cobertura en 5v5 se hace con solo 3 jugadores (no 5 como en 6v6) — el central y el colocador se mantienen cerca."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta a la U",
+        "description": "Los 4 receptores encuentran su sitio en la U, colocador fijo en P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "En 5v5 sin líbero, el mejor receptor ocupa la zona más expuesta.",
+        "Formación U: 2 receptores en la línea de 3 m + 2 al fondo.",
+        "Variante en línea posible (4 alineados a media cancha) si los niveles son similares.",
+        "Sin penetración → colocador fijo (sistema 4-1 simplificado)."
+      ],
+      "commonMistakes": [
+        "U demasiado cerrada → diagonales largas no cubiertas.",
+        "Receptor débil → aislarlo en la zona más pequeña.",
+        "Colocador que aún penetra → confusión con el 6v6 estándar."
+      ]
+    }
+  },
+  "5v5-reception-pentagon": {
+    "title": "5v5 · Recepción en pentágono",
+    "shortDescription": "Recepción en pentágono (5 jugadores sin colocador fuera) — versión principiante o recreativa.",
+    "contextLabel": "5v5 · Pentágono · Sin colocador dedicado",
+    "players": {
+      "A1": "Delantero izquierdo",
+      "C": "Centro",
+      "A2": "Delantero derecho",
+      "A3": "Zaguero izquierdo",
+      "A4": "Zaguero derecho",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentágono a 5 jugadores",
+        "description": "Todos los jugadores reciben. Sin colocador dedicado — quien toca primero deja el 2º toque al jugador más cercano a la red. Configuración recreativa / principiante."
+      },
+      "s2": {
+        "title": "2. Saque + el centro canta",
+        "description": "Saque a la zona media central. El jugador central canta y juega antebrazos — es su zona en el pentágono."
+      },
+      "s3": {
+        "title": "3. Colocación de oportunidad",
+        "description": "El balón sube hacia el centro de la red. El delantero derecho, el más cercano al balón, avanza y toma el 2º toque con una colocación alta según la calidad de la recepción."
+      },
+      "s4": {
+        "title": "4. Balón disponible — sistema sencillo",
+        "description": "La colocación va al delantero izquierdo. Distribución legible, ideal para principiantes. Cualquier jugador puede hacer el 2º toque según el ángulo del balón."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta al pentágono",
+        "description": "Los 5 jugadores encuentran su sitio en el pentágono para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pentágono sin colocador dedicado = configuración recreativa o principiante.",
+        "5 jugadores en pentágono: 2 delante, 1 centro, 2 al fondo.",
+        "Cualquier jugador puede hacer el 2º toque según dónde llegue el balón.",
+        "Ventaja: gran adaptabilidad. Inconveniente: menos consistencia ofensiva."
+      ],
+      "commonMistakes": [
+        "Sin jerarquía en el 2º toque → 2 jugadores dudan.",
+        "Centro estático → balones a cada lado fallados.",
+        "Colocaciones altas sistemáticas sin distribución clara."
+      ]
+    }
+  },
+  "6v6-reception-2-receivers": {
+    "title": "Recepción · a 2 (élite)",
+    "shortDescription": "Recepción a 2 ultra-especializada (líbero + punta): todos los demás listos para atacar.",
+    "contextLabel": "5-1 · Recepción a 2 · Élite / free balls",
+    "players": {
+      "L": "Líbero",
+      "R4a": "Punta receptora",
+      "R4b": "Punta atacante",
+      "C": "Central",
+      "Op": "Opuesto (oculto)",
+      "P": "Colocador (oculto)",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuración a 2 receptores",
+        "description": "Solo 2 receptores: líbero al lado izquierdo, punta receptora al lado derecho. Los otros 4 jugadores ya están en postura de ataque, listos para activarse en cuanto se golpee el saque."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos del líbero",
+        "description": "Saque a la izquierda. El líbero canta y juega antebrazos. Con solo 2 zonas, la exigencia técnica es extrema: se requiere un líbero excepcional. El colocador lanza su penetración."
+      },
+      "s3": {
+        "title": "3. Colocación + aproximaciones simultáneas",
+        "description": "El balón sube al objetivo. El colocador distribuye a la zona 4. La punta atacante, liberada de toda recepción, lanza una aproximación rápida a toda velocidad — llega a plena potencia."
+      },
+      "s4": {
+        "title": "4. Balón disponible — máxima variedad",
+        "description": "El balón llega a la zona 4 para la punta atacante. En ese momento el colocador tiene simultáneamente un central en quick y un opuesto en ataque de zaga disponibles — combinaciones de 3 atacantes posibles."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta a la formación a 2",
+        "description": "El líbero y la punta receptora vuelven a sus zonas, los atacantes se recolocan listos para atacar."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Recepción a 2 = configuración de élite (voleibol profesional).",
+        "Se utiliza en saques fáciles o rotaciones de \"colocador delantero\".",
+        "Máxima variedad ofensiva: todos los atacantes disponibles de inmediato.",
+        "Exigencia técnica extrema: 2 receptores sólidos requeridos."
+      ],
+      "commonMistakes": [
+        "Adoptar este sistema contra un saque potente → recepciones catastróficas.",
+        "Punta atacante que no inicia su aproximación en paralelo → opción perdida.",
+        "Sin canto → titubeos entre los 2 receptores."
+      ]
+    }
+  },
+  "6v6-reception-4-2": {
+    "title": "Recepción · 4-2 (4 receptores)",
+    "shortDescription": "Sistema 4-2: colocador fijo en P2 + 4 receptores (las 2 puntas + central + zaguero).",
+    "contextLabel": "4-2 · 4 receptores · Colocador delantero fijo",
+    "players": {
+      "P": "Colocador (P2 fijo)",
+      "C2": "Central delantero",
+      "R4a": "Punta izquierda",
+      "C": "Central zaguero",
+      "R4b": "Punta derecha",
+      "P2": "Colocador zaguero",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Disposición 4-2",
+        "description": "Sistema 4-2: 2 colocadores en oposición. El colocador delantero (P2) y el central delantero salen en la red. 4 receptores en trapecio: 2 puntas en diagonal, central zaguero y colocador zaguero al fondo."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos de la punta izquierda",
+        "description": "Saque alto al canal izquierdo. La punta izquierda canta y juega antebrazos. El colocador ya está fijo en P2 en la red, sin penetración."
+      },
+      "s3": {
+        "title": "3. Colocación al ala izquierda",
+        "description": "El balón llega al colocador fijo en P2 (objetivo fácil, sin desplazamiento). Distribuye al ala izquierda. La punta izquierda encadena de inmediato su aproximación."
+      },
+      "s4": {
+        "title": "4. Balón disponible en zona 4",
+        "description": "La colocación está colocada. En 4-2, solo 2 opciones ofensivas existen delante (el central y el ala) → distribución legible pero limitada."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta al trapecio",
+        "description": "Todo el equipo retoma su posición en el sistema 4-2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Recepción a 4 = sistema 4-2. 2 jugadores delanteros fuera (colocador + central delantero).",
+        "Zonas más grandes que en W pero menos exigentes que una recepción a 3.",
+        "Objetivo fácil: el colocador no se desplaza.",
+        "Inconveniente: solo 2 atacantes delante."
+      ],
+      "commonMistakes": [
+        "Central delantero que también recibe → sin compromiso en la red.",
+        "Trapecio demasiado abierto → balones centrales no cubiertos.",
+        "Confusión en el 2º toque entre los 2 colocadores."
+      ]
+    }
+  },
+  "6v6-reception-rotation-p4": {
+    "title": "Recepción · Rotación P4 del 5-1",
+    "shortDescription": "Caso especial P4: el colocador y el central se descalan a la izquierda para liberar a la punta en zona 6.",
+    "contextLabel": "5-1 · A 3 · Rotación P4 (colocador delantero)",
+    "players": {
+      "P": "Colocador (P4)",
+      "C": "Central (P3)",
+      "R4b": "Punta* (P2)",
+      "L": "Líbero (P5)",
+      "R4a": "Punta (P6)",
+      "Op": "Opuesto (P1)",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Descalado a la izquierda",
+        "description": "ANTES del golpe: el colocador (P4) y el central (P3) se colocan LO MÁS a la izquierda que las reglas de alineación permiten. Este descalado libera la zona 6 para la punta receptora."
+      },
+      "s2": {
+        "title": "2. Saque + antebrazos de la punta en P6",
+        "description": "Saque a la zona central 6. La punta en P6 canta y juega antebrazos en la zona liberada por el descalado del colocador. Tres receptores: líbero, punta y opuesto (en el borde)."
+      },
+      "s3": {
+        "title": "3. Penetración + switch de la punta*",
+        "description": "El colocador se precipita desde P4 a la zona 2-3. Simultáneamente, la punta* en P2 cruza a P4 para atacar. El central se recoloca en zona 3."
+      },
+      "s4": {
+        "title": "4. Balón disponible para la punta* en zona 4",
+        "description": "La colocación llega a la punta* que ha completado su cruce. Con solo 2 atacantes delante (punta* + central), la opción principal es el ala izquierda."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta al descalado",
+        "description": "Todos los jugadores retoman el descalado a la izquierda para el siguiente saque en rotación P4."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "En P4, el colocador y el central DEBEN descalarse a la izquierda al sacar.",
+        "Este descalado abre la zona 6 a la recepción de la punta en P6.",
+        "Switch colocador↔punta* obligatorio durante la colocación.",
+        "El opuesto (en P1) no recibe y se queda listo para un ataque de zaga."
+      ],
+      "commonMistakes": [
+        "Descalado olvidado → conflicto de recepción en zona 6.",
+        "Switch demasiado tarde → la punta* ataca en P2 (lado equivocado).",
+        "Opuesto que recibe → pierde la opción de ataque de zaga."
+      ]
+    }
+  },
+  "6v6-reception-semi-circle": {
+    "title": "Recepción · semicírculo",
+    "shortDescription": "Recepción en arco abierto hacia el sacador, equidistantes. Etapa U15-U18.",
+    "contextLabel": "5-1 · Semicírculo · U15-U18",
+    "players": {
+      "P": "Colocador (oculto)",
+      "R4a": "Punta izquierda",
+      "C": "Central",
+      "L": "Líbero",
+      "R4b": "Punta derecha",
+      "Op": "Opuesto",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Arco semicircular",
+        "description": "Los 5 receptores forman un arco equidistante del sacador. Todos orientados hacia el colocador oculto en P1. El central permanece en recepción (vs fuera en la formación a 3)."
+      },
+      "s2": {
+        "title": "2. Saque + lectura común",
+        "description": "Saque alto a la zona central. Todos los jugadores leen en la misma dirección. El central canta su balón — es su zona en el arco."
+      },
+      "s3": {
+        "title": "3. Penetración + colocación alta",
+        "description": "El colocador deja su escondite mientras el balón sube. Llega al objetivo en zona 2-3 y distribuye al ala izquierda donde la punta izquierda ya ha iniciado su aproximación."
+      },
+      "s4": {
+        "title": "4. Balón disponible en zona 4",
+        "description": "La colocación llega a la zona 4. La punta izquierda está en posición de golpeo. Distribución clásica y legible — típica de la etapa de aprendizaje U15-U18."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta al arco",
+        "description": "Todos vuelven al arco semicircular para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Arco semicircular = etapa intermedia entre W y recepción a 3.",
+        "Los 5 jugadores equidistantes del sacador → cobertura homogénea.",
+        "Adaptado a equipos jóvenes (U15-U18) en aprendizaje de la especialización.",
+        "Mantiene un central en recepción (vs a 3 donde está fuera)."
+      ],
+      "commonMistakes": [
+        "Arco demasiado abierto en los lados → huecos en el centro.",
+        "Jugadores demasiado lejos del sacador → reacción tardía en saques rápidos.",
+        "Conflicto con el colocador que también quiere recibir."
+      ]
+    }
+  },
+  "6v6-reception-w": {
+    "title": "Recepción · W (5 receptores)",
+    "shortDescription": "Formación W: 5 jugadores excepto el colocador. Adaptada a principiantes y al sistema 4-2.",
+    "contextLabel": "4-2 · W · Principiantes / U13",
+    "players": {
+      "P": "Colocador (fuera)",
+      "R4a": "Delantero izquierdo",
+      "R4b": "Delantero derecho",
+      "C": "Jugador central",
+      "A1": "Zaguero izquierdo",
+      "A2": "Zaguero derecho",
+      "OPP_SRV": "Sacador rival"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formación en W",
+        "description": "Disposición en W: 2 delanteros a media cancha, 1 jugador central, 2 zagueros al fondo. El colocador ya está fuera en la red en P2 (sistema 4-2). Cada jugador defiende una zona pequeña y bien definida."
+      },
+      "s2": {
+        "title": "2. Saque + el jugador central canta",
+        "description": "Saque alto a la zona central. El jugador central canta \"¡Mía!\" porque el balón cae en el bolsillo central de la W, equidistante de los delanteros."
+      },
+      "s3": {
+        "title": "3. Colocación alta a zona 4",
+        "description": "Antebrazos apuntados a la zona 2 donde el colocador ya espera en la red (sin penetración en 4-2). Distribuye una colocación alta a la zona 4. El delantero izquierdo activa su aproximación."
+      },
+      "s4": {
+        "title": "4. Balón disponible para el atacante",
+        "description": "El balón llega a la zona 4. El delantero izquierdo da sus últimos pasos. En 4-2 las opciones ofensivas son limitadas (2 atacantes delante), pero la simplicidad del sistema lo compensa."
+      },
+      "s5": {
+        "title": "5. RESET — vuelta a la formación W",
+        "description": "Todos vuelven a su zona en la W para el siguiente saque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formación W = 5 receptores, el colocador queda fuera.",
+        "Zonas individuales pequeñas → menos dudas, pocos conflictos.",
+        "Ideal en U13/U15 y en el sistema 4-2 (principiantes).",
+        "Inconveniente: los atacantes especializados están condicionados por la recepción."
+      ],
+      "commonMistakes": [
+        "Conflicto central entre el jugador central y los delanteros → canto obligatorio.",
+        "Jugadores demasiado estáticos en su zona → balón entre 2 zonas perdido.",
+        "Colocador que se queda en recepción → imposible hacer el 2º toque."
+      ]
+    }
+  }
+}

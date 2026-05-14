@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTAÇÃO",
+    "title": "TÉCNICAS FUNDAMENTAIS",
+    "subtitle": "Fundamentos essenciais do voleibol — descrições, pontos-chave, erros comuns e recursos em vídeo."
+  },
+  "filters": {
+    "category": "CATEGORIA",
+    "level": "NÍVEL",
+    "countSingle": "{{count}} técnica",
+    "countPlural": "{{count}} técnicas",
+    "showAll": "MOSTRAR TUDO",
+    "noResults": "NENHUMA TÉCNICA PARA ESTA COMBINAÇÃO"
+  },
+  "sectionTitle": "★ FICHAS DE TÉCNICA",
+  "card": {
+    "when": "QUANDO",
+    "keyPoints": "★ PONTOS-CHAVE",
+    "errors": "✗ ERROS COMUNS"
+  },
+  "tags": {
+    "Service": "Serviço",
+    "Réception": "Receção",
+    "Passe": "Passe",
+    "Attaque": "Ataque",
+    "Défense": "Defesa",
+    "Débutant": "Iniciante",
+    "Intermédiaire": "Intermédio",
+    "Avancé": "Avançado"
+  },
+  "items": {
+    "reception": {
+      "name": "Receção / Manchete",
+      "description": "A manchete é o fundamento defensivo universal. Os antebraços unidos formam uma plataforma plana que direciona a bola para o distribuidor. A plataforma é passiva — são as pernas que fazem o trabalho de ir até à bola.",
+      "keyPoints": [
+        "Plataforma: antebraços unidos, polegares paralelos e apontados para baixo",
+        "Ponto ideal entre os pulsos e os cotovelos (não apenas nos pulsos)",
+        "\"A bola vai para onde a plataforma aponta\" — o ângulo controla a direção",
+        "PARAR no contacto: deixar de se mover antes da bola chegar",
+        "Nunca balançar os braços — a plataforma é passiva"
+      ],
+      "errors": [
+        "Balançar os braços no contacto (causa nº 1 — bola imprevisível)",
+        "Unir os braços demasiado cedo antes de se deslocar",
+        "Plataforma partida (um antebraço mais alto do que o outro)"
+      ],
+      "when": "Receção do serviço, defesa no fundo do campo, bolas baixas"
+    },
+    "set": {
+      "name": "Passe",
+      "description": "O segundo toque que prepara o ataque. As duas mãos formam um triângulo acima da testa. O distribuidor é o maestro: a sua precisão e leitura do bloco adversário definem a eficácia ofensiva.",
+      "keyPoints": [
+        "Triângulo polegar-indicador: \"janela\" para ver a bola através dele",
+        "Contacto: polpa e primeira falange do polegar, indicador e médio",
+        "Pé direito ligeiramente à frente — \"mira\" apontada para o alvo",
+        "Pés, ancas, ombros \"alinhados\" com o alvo ANTES do contacto",
+        "Extensão completa de pernas-ancas-braços-pulsos, finalização tipo \"Super-Homem\""
+      ],
+      "errors": [
+        "Duplo contacto visível (mãos não tocam em simultâneo)",
+        "Ombros perpendiculares à rede — bola demasiado longe",
+        "Condução (bola transportada) — contacto demasiado lento"
+      ],
+      "when": "Segundo toque para preparar o ataque"
+    },
+    "spike": {
+      "name": "Ataque (Remate)",
+      "description": "A ação balística mais complexa: cadeia cinética em série pés → ancas → tronco → ombro → cotovelo → pulso. Qualquer quebra desta cadeia destrói a transferência de energia.",
+      "keyPoints": [
+        "Corrida de balanço de 3-4 passos: termina com apoio duplo esquerda-direita",
+        "Regra de ouro: os dois últimos passos são os mais rápidos (lento → rápido)",
+        "Contacto ligeiramente à frente do ombro — nunca atrás da cabeça",
+        "Chicotada do pulso: a mão \"agarra\" por cima da bola → topspin",
+        "Salto VERTICAL, não em direção à rede"
+      ],
+      "errors": [
+        "Timing incorreto da corrida (demasiado cedo = ressaltar sem potência)",
+        "Sem chicotada do pulso — bola plana sem topspin",
+        "Aterragem com um só pé (risco para o LCA)"
+      ],
+      "when": "Terceiro toque para finalizar a jogada"
+    },
+    "block": {
+      "name": "Bloco",
+      "description": "Primeira linha de defesa contra os ataques. O contacto no bloco não conta como toque da equipa. A chave: sequência visual BOLA → DISTRIBUIDOR → BOLA → OMBRO DO ATACANTE.",
+      "keyPoints": [
+        "Posição: a 45-60 cm da rede, mãos em cima (palmas viradas para a rede)",
+        "Saltar DEPOIS do atacante: 0,2-0,3 s para uma bola alta",
+        "Penetrar o mais possível POR CIMA da rede, e não apenas para cima",
+        "Dedos abertos, pulsos rígidos, sem \"buraco\" entre as mãos",
+        "\"Selar a rede\": ombros, mãos e braços à frente das orelhas"
+      ],
+      "errors": [
+        "Saltar demasiado cedo (reagir ao apoio do atacante)",
+        "Mãos demasiado moles — bola ressalta para o próprio campo",
+        "Saltar para a frente → toque na rede"
+      ],
+      "when": "Em resposta a um ataque adversário junto à rede"
+    },
+    "serve": {
+      "name": "Serviço",
+      "description": "A única ação sem pressão direta do adversário. Existem quatro tipos consoante o nível. Regra de ouro: 80% dos erros vêm do lançamento — estabilizar o lançamento antes de procurar potência.",
+      "keyPoints": [
+        "Float em pé: \"bater e parar\" — parar o braço após o contacto para zero rotação",
+        "Jump float: a mesma mecânica do float em pé + corrida curta",
+        "Jump topspin: chicotada completa do pulso, reservado a 1000+ repetições",
+        "Lançamento estável = serviço estável — regra nº 1",
+        "Apontar para as costuras (intervalos entre recetores) em vez de jogadores"
+      ],
+      "errors": [
+        "Float: finalização prolongada que adiciona rotação (mata o efeito float)",
+        "Lançamento instável ou demasiado alto",
+        "Pisar a linha de fundo"
+      ],
+      "when": "Início de cada jogada"
+    },
+    "defense": {
+      "name": "Defesa (Defesa baixa)",
+      "description": "A defesa pós-bloco distingue as equipas intermédias das equipas competitivas. Três pilares: posição baixa, paragem no momento em que o adversário ataca, leitura do atacante.",
+      "keyPoints": [
+        "Posição baixa: pés mais largos do que os ombros, joelhos a ~90°",
+        "\"Cabeça à frente dos pés, ombros à frente dos joelhos\"",
+        "PARAGEM absoluta no momento em que o atacante bate",
+        "Sombra do bloco: se não vê o atacante, está atrás do bloco — reposicionar-se",
+        "Num remate forte: não bater (a força do remate basta) — absorver"
+      ],
+      "errors": [
+        "Continuar em movimento no contacto — impossível controlar",
+        "Ficar parado na \"sombra\" do bloco (zona inútil)",
+        "Mergulhar demasiado cedo quando um passo lateral chegaria"
+      ],
+      "when": "Defesa contra remates adversários, cobertura do fundo do campo"
+    }
+  }
+}

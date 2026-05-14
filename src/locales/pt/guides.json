@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTAÇÃO",
+    "title": "GUIAS",
+    "subtitle": "Guias técnicos e táticos detalhados para evoluir no voleibol."
+  },
+  "ticketPrefix": "Nº",
+  "list": {
+    "service": {
+      "title": "Guia do serviço",
+      "subtitle": "Por baixo, float, jump float e jump topspin",
+      "category": "Técnica",
+      "description": "Os 4 tipos de serviço com biomecânica, passos, erros comuns, exercícios e zonas táticas.",
+      "readingTime": "~15 min",
+      "level": "Iniciante"
+    },
+    "reception": {
+      "title": "Guia da receção",
+      "subtitle": "Manchete, plataforma, sistemas e leitura do serviço",
+      "category": "Técnica",
+      "description": "Técnica da plataforma, paragem no contacto, deslocamentos, sistemas W/U e leitura do servidor.",
+      "readingTime": "~15 min",
+      "level": "Iniciante"
+    },
+    "attaque": {
+      "title": "Guia do ataque",
+      "subtitle": "Corrida de balanço, timing, batidas e posições",
+      "category": "Técnica",
+      "description": "As 5 fases do remate, corrida de balanço de 3-4 passos, timing consoante o passe, batidas especiais e erros.",
+      "readingTime": "~15 min",
+      "level": "Intermédio"
+    },
+    "contre": {
+      "title": "Guia do bloco",
+      "subtitle": "Timing, tipos de bloco e leitura de jogo",
+      "category": "Técnica",
+      "description": "Timing, tipos de bloco, sequência visual de elite, read vs commit blocking e exercícios.",
+      "readingTime": "~10 min",
+      "level": "Intermédio"
+    },
+    "positionnement-defense": {
+      "title": "Posicionamento defensivo",
+      "subtitle": "Coloque-se em função da posição e da situação",
+      "category": "Tática",
+      "description": "Responsabilidades por zona, posicionamento por zona de ataque adversária, sistemas e comunicação.",
+      "readingTime": "~20 min",
+      "level": "Intermédio"
+    }
+  },
+  "detail": {
+    "backLink": "← GUIAS",
+    "sectionTitle": "★ CONTEÚDO DO GUIA ★",
+    "notFound": "Guia não encontrado."
+  },
+  "defenseHub": {
+    "backLink": "← GUIAS",
+    "description": "O posicionamento defensivo muda com o número de jogadores em campo. Escolha o seu formato para aceder ao guia completo: responsabilidades por zona, sistemas (A/B, man-up, 1-2-2…) e adaptação por zona de ataque adversária.",
+    "cardDescription": "Defesa adaptada ao formato {{size}}, zonas, sistemas e colocações detalhadas."
+  },
+  "defenseSized": {
+    "backLink": "← TODOS OS FORMATOS"
+  }
+}

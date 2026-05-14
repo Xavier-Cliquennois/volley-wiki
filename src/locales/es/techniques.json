@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTACIÓN",
+    "title": "TÉCNICAS FUNDAMENTALES",
+    "subtitle": "Los gestos clave del voleibol — descripciones, puntos clave, errores comunes y recursos en vídeo."
+  },
+  "filters": {
+    "category": "CATEGORÍA",
+    "level": "NIVEL",
+    "countSingle": "{{count}} técnica",
+    "countPlural": "{{count}} técnicas",
+    "showAll": "MOSTRAR TODO",
+    "noResults": "NO HAY TÉCNICA PARA ESTA COMBINACIÓN"
+  },
+  "sectionTitle": "★ FICHAS TÉCNICAS",
+  "card": {
+    "when": "CUÁNDO",
+    "keyPoints": "★ PUNTOS CLAVE",
+    "errors": "✗ ERRORES COMUNES"
+  },
+  "tags": {
+    "Service": "Saque",
+    "Réception": "Recepción",
+    "Passe": "Colocación",
+    "Attaque": "Ataque",
+    "Défense": "Defensa",
+    "Débutant": "Principiante",
+    "Intermédiaire": "Intermedio",
+    "Avancé": "Avanzado"
+  },
+  "items": {
+    "reception": {
+      "name": "Recepción / Antebrazos",
+      "description": "El golpe de antebrazos es el gesto defensivo universal. Los antebrazos unidos forman una plataforma plana que dirige el balón hacia el colocador. La plataforma es pasiva — son las piernas las que se desplazan al balón.",
+      "keyPoints": [
+        "Plataforma: antebrazos unidos, pulgares paralelos y hacia abajo",
+        "Zona óptima entre las muñecas y los codos (no solo las muñecas)",
+        "\"El balón va donde apunta la plataforma\" — el ángulo controla la dirección",
+        "FREEZE en el contacto: detente antes de que llegue el balón",
+        "Nunca balancees los brazos — la plataforma es pasiva"
+      ],
+      "errors": [
+        "Balancear los brazos en el contacto (causa nº1 — balón impredecible)",
+        "Unir los brazos demasiado pronto antes del desplazamiento",
+        "Plataforma rota (un antebrazo más alto que el otro)"
+      ],
+      "when": "Recepción del saque, defensa de fondo, balones bajos"
+    },
+    "set": {
+      "name": "Colocación",
+      "description": "El segundo toque que prepara el ataque. Ambas manos forman un triángulo sobre la frente. El colocador es el director: su precisión y su lectura del bloqueo rival definen la eficacia ofensiva.",
+      "keyPoints": [
+        "Triángulo pulgar-índice: \"ventana\" para ver el balón a través",
+        "Contacto: pulpa y primera falange del pulgar, índice y dedo medio",
+        "Pie derecho ligeramente adelantado — \"mira\" apuntando al objetivo",
+        "Pies, caderas y hombros \"alineados\" con el objetivo ANTES del contacto",
+        "Extensión completa de piernas-caderas-brazos-muñecas, acompañamiento \"Superman\""
+      ],
+      "errors": [
+        "Doble contacto visible (las manos no tocan a la vez)",
+        "Hombros perpendiculares a la red — balón demasiado lejos",
+        "Acompañamiento (balón retenido) — contacto demasiado lento"
+      ],
+      "when": "Segundo toque para preparar el ataque"
+    },
+    "spike": {
+      "name": "Ataque (Remate)",
+      "description": "La acción balística más compleja: cadena cinética en serie pies → caderas → tronco → hombro → codo → muñeca. Cualquier rotura de esta cadena destruye la transferencia de energía.",
+      "keyPoints": [
+        "Carrera de aproximación de 3-4 pasos: termina con doble apoyo izquierda-derecha",
+        "Regla de oro: los dos últimos pasos son los más rápidos (lento → rápido)",
+        "Contacto ligeramente delante del hombro — nunca detrás de la cabeza",
+        "Latigazo de muñeca: la mano \"acaricia\" el balón → topspin",
+        "Salto VERTICAL, no hacia la red"
+      ],
+      "errors": [
+        "Mal cronometraje de la aproximación (demasiado pronto = re-saltar sin potencia)",
+        "Sin latigazo de muñeca — balón plano sin topspin",
+        "Aterrizaje sobre un solo pie (riesgo de ligamento cruzado)"
+      ],
+      "when": "Tercer toque para finalizar la jugada"
+    },
+    "block": {
+      "name": "Bloqueo",
+      "description": "Primera línea de defensa contra los ataques. El contacto del bloqueo no cuenta como toque de equipo. La clave: secuencia visual BALÓN → COLOCADOR → BALÓN → HOMBRO DEL ATACANTE.",
+      "keyPoints": [
+        "Posición: a 45-60 cm de la red, manos altas (palmas hacia la red)",
+        "Saltar DESPUÉS del atacante: 0,2-0,3 s para un balón alto",
+        "Penetrar lo más POR ENCIMA de la red posible, no solo hacia arriba",
+        "Dedos abiertos, muñecas rígidas, sin \"agujero\" entre las manos",
+        "\"Sellar la red\": hombros, manos y brazos delante de las orejas"
+      ],
+      "errors": [
+        "Saltar demasiado pronto (reacciona al apoyo del atacante)",
+        "Manos demasiado blandas — el balón rebota a tu propio campo",
+        "Saltar hacia adelante → toque de red"
+      ],
+      "when": "En respuesta a un ataque rival en la red"
+    },
+    "serve": {
+      "name": "Saque",
+      "description": "La única acción sin presión directa del rival. Existen cuatro tipos según el nivel. Regla de oro: el 80% de los errores vienen del lanzamiento — estabiliza el lanzamiento antes de buscar potencia.",
+      "keyPoints": [
+        "Saque flotante de pie: \"golpear y congelar\" — detén el brazo tras el contacto para no dar efecto",
+        "Jump float: misma mecánica que el flotante de pie + carrera corta",
+        "Jump topspin: latigazo completo de muñeca, reservado a 1000+ repeticiones",
+        "Lanzamiento estable = saque estable — regla nº1",
+        "Apuntar a las costuras (huecos entre receptores) en lugar de a los jugadores"
+      ],
+      "errors": [
+        "Flotante: acompañamiento prolongado que añade efecto (anula el flotante)",
+        "Lanzamiento inestable o demasiado alto",
+        "Pisar la línea de fondo"
+      ],
+      "when": "Inicio de cada jugada"
+    },
+    "defense": {
+      "name": "Defensa (Dig)",
+      "description": "La defensa tras bloqueo distingue a los equipos intermedios de los competitivos. Tres pilares: posición baja, freeze cuando el rival golpea, lectura del atacante.",
+      "keyPoints": [
+        "Posición baja: pies más anchos que los hombros, rodillas a ~90°",
+        "\"Cabeza delante de los pies, hombros delante de las rodillas\"",
+        "FREEZE absoluto en el instante en que el atacante golpea",
+        "Sombra del bloqueo: si no ves al atacante, estás detrás del bloqueo — recolócate",
+        "Ante un remate fuerte: no armes (la fuerza del remate basta) — absorbe"
+      ],
+      "errors": [
+        "Seguir moviéndose en el contacto — imposible controlar",
+        "Estar en la \"sombra\" del bloqueo (zona inútil)",
+        "Tirarse demasiado pronto cuando un paso lateral habría bastado"
+      ],
+      "when": "Defensa ante remates rivales, cobertura del fondo"
+    }
+  }
+}

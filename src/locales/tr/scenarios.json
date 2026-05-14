@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TAKTİKLER",
+    "title": "OYUN SENARYOLARI",
+    "subtitle": "Adım adım anlatımla somut durumları 3D olarak görselleştirin."
+  },
+  "construction": {
+    "label": "SAYFA YAPIM AŞAMASINDA",
+    "body": "Bazı 3D animasyonlar hâlâ hatalar içerebilir veya eksik olabilir. Sabrınız için teşekkürler — senaryolar tamamlanıyor."
+  },
+  "wizard": {
+    "step1": "1 · TAKIM BAŞINA KAÇ OYUNCU?",
+    "step2": "2 · HANGİ OYUN FAZI?",
+    "step3": "3 · HANGİ ÖZEL BAĞLAM?",
+    "noMatch": "Bu kombinasyon için henüz senaryo yok.",
+    "reset": "SIFIRLA",
+    "launch": "SENARYOYU BAŞLAT →"
+  },
+  "compactBar": {
+    "format": "FORMAT",
+    "phase": "FAZ",
+    "scenario": "SENARYO",
+    "reset": "SIFIRLA",
+    "resetTitle": "Her şeyi sıfırla"
+  },
+  "placeholder": {
+    "title": "BİR SENARYO SEÇ",
+    "selectFormatAndPhase": "Yukarıdan bir format ve faz seçin.",
+    "noScenarios": "Bu kombinasyon için senaryo yok.",
+    "clickInList": "Yukarıdaki listeden bir senaryoya tıklayın."
+  },
+  "phase": {
+    "attack": "Saldırı",
+    "defense": "Savunma",
+    "reception": "Karşılama"
+  },
+  "player": {
+    "controls": {
+      "play": "Oynat",
+      "pause": "Duraklat",
+      "replay": "Yeniden oynat",
+      "previousStep": "Önceki adım",
+      "nextStep": "Sonraki adım",
+      "camera": "Kamera",
+      "speed": "Hız",
+      "auto": "Otomatik",
+      "stepMode": "Adım",
+      "playbackModeLabel": "Oynatma modu"
+    },
+    "toggles": {
+      "trail": "İz",
+      "trailTitle": "Yörüngeyi görselleştirmek için topun arkasında bir iz göster",
+      "zones": "Bölgeler",
+      "zonesTitle": "Sahada 6 FIVB bölgesini göster"
+    },
+    "timeline": {
+      "title": "Zaman çizelgesi",
+      "clickHint": "atlamak için tıkla"
+    },
+    "cameras": {
+      "DEFAULT": "Geniş",
+      "TOP_DOWN": "Üst",
+      "BEHIND_SERVE": "Servis atan",
+      "ATTACKER_VIEW": "Vurucu"
+    },
+    "summary": {
+      "keyPoints": "ANAHTAR NOKTALAR",
+      "commonMistakes": "YAYGIN HATALAR",
+      "context": "Bağlam"
+    },
+    "step": {
+      "label": "Adım {{current}} / {{total}}",
+      "defaultTitle": "Adım {{index}}"
+    },
+    "loading": "YÜKLENİYOR…"
+  }
+}

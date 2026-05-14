@@ -1,0 +1,79 @@
+{
+  "siteLocale": "pt_PT",
+  "ogLocale": "pt_PT",
+  "htmlLang": "pt",
+  "structuredLang": "pt-PT",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — Guia de voleibol de pavilhão para 6v6, 5v5 e 4v4",
+    "description": "Wiki de voleibol de pavilhão: posições, técnicas, cenários 3D, regras e glossário. Adaptado aos formatos 6v6, 5v5 e 4v4."
+  },
+  "techniques": {
+    "title": "Técnicas de voleibol — Serviço, passe, ataque, defesa | Volley-Wiki",
+    "description": "Aprenda as técnicas fundamentais do voleibol: serviço, receção, ataque, bloco, defesa. Animações 3D interativas e conselhos por nível."
+  },
+  "positionsHub": {
+    "title": "Posições de voleibol — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "Descubra as posições e funções do voleibol de pavilhão para cada formato de jogo: 6 vs 6, 5 vs 5 e 4 vs 4. Sistemas táticos detalhados."
+  },
+  "positions": {
+    "title": "Posições de voleibol {{size}} — {{config}} | Volley-Wiki",
+    "description": "Posições e funções do voleibol {{label}}: sistema {{configName}}. {{descriptionExcerpt}}",
+    "articleHeadline": "Posições de voleibol {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "Cenários 3D de voleibol — Ataque, defesa, receção | Volley-Wiki",
+    "description": "Visualize cenários concretos de ataque, defesa e receção em 3D. Adaptado aos formatos 6v6, 5v5 e 4v4."
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — Cenário {{teamSize}} | Volley-Wiki",
+    "description": "{{shortDescription}} Veja este cenário de {{phase}} em 3D com narração passo a passo."
+  },
+  "rules": {
+    "title": "Regras do voleibol — Regulamento FIVB simplificado | Volley-Wiki",
+    "description": "O regulamento oficial FIVB de voleibol explicado de forma simples: formato, campo, rotações, faltas, contactos. O essencial para compreender e jogar."
+  },
+  "glossary": {
+    "title": "Glossário de voleibol — Todos os termos explicados | Volley-Wiki",
+    "description": "Dicionário completo do vocabulário de voleibol: ace, manchete, bloco, pipe, líbero, side-out e muito mais. Definições claras e precisas."
+  },
+  "guides": {
+    "title": "Guias técnicos e táticos de voleibol | Volley-Wiki",
+    "description": "Guias completos sobre serviço, receção, ataque, bloco e posicionamento defensivo. Esquemas, vídeos e conselhos por nível."
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "{{description}} Guia adaptado aos formatos 6 vs 6, 5 vs 5 e 4 vs 4."
+  },
+  "defenseSized": {
+    "title": "Posicionamento defensivo {{size}} — {{config}} | Volley-Wiki",
+    "description": "Guia completo de posicionamento defensivo para o voleibol {{label}} no sistema {{configName}}: responsabilidades por zona, defesa por zona de ataque adversária.",
+    "articleHeadline": "Posicionamento defensivo {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "Página não encontrada | Volley-Wiki",
+    "description": "Esta página não existe. Volte à página inicial para explorar a wiki de voleibol."
+  },
+  "guideNotFound": {
+    "title": "Guia não encontrado | Volley-Wiki",
+    "description": "Este guia não existe. Volte à lista de guias."
+  },
+  "breadcrumbs": {
+    "home": "Início",
+    "techniques": "Técnicas",
+    "positions": "Posições",
+    "scenarios": "Cenários",
+    "guides": "Guias",
+    "rules": "Regras",
+    "glossary": "Glossário",
+    "defense": "Posicionamento defensivo"
+  },
+  "phase": {
+    "attack": "ataque",
+    "defense": "defesa",
+    "reception": "receção"
+  }
+}

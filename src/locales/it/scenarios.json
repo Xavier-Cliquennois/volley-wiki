@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TATTICA",
+    "title": "SCENARI DI GIOCO",
+    "subtitle": "Visualizza situazioni concrete in 3D con narrazione passo dopo passo."
+  },
+  "construction": {
+    "label": "PAGINA IN COSTRUZIONE",
+    "body": "Alcune animazioni 3D possono ancora contenere errori o essere incomplete. Grazie per la pazienza — gli scenari sono in fase di completamento."
+  },
+  "wizard": {
+    "step1": "1 · QUANTI GIOCATORI PER SQUADRA?",
+    "step2": "2 · QUALE FASE DI GIOCO?",
+    "step3": "3 · QUALE CONTESTO SPECIFICO?",
+    "noMatch": "Nessuno scenario disponibile per questa combinazione al momento.",
+    "reset": "RESET",
+    "launch": "AVVIA SCENARIO →"
+  },
+  "compactBar": {
+    "format": "FORMATO",
+    "phase": "FASE",
+    "scenario": "SCENARIO",
+    "reset": "RESET",
+    "resetTitle": "Resetta tutto"
+  },
+  "placeholder": {
+    "title": "SCEGLI UNO SCENARIO",
+    "selectFormatAndPhase": "Seleziona un formato e una fase sopra.",
+    "noScenarios": "Nessuno scenario disponibile per questa combinazione.",
+    "clickInList": "Clicca uno scenario nella lista sopra."
+  },
+  "phase": {
+    "attack": "Attacco",
+    "defense": "Difesa",
+    "reception": "Ricezione"
+  },
+  "player": {
+    "controls": {
+      "play": "Play",
+      "pause": "Pausa",
+      "replay": "Replay",
+      "previousStep": "Passo precedente",
+      "nextStep": "Passo successivo",
+      "camera": "Camera",
+      "speed": "Velocità",
+      "auto": "Auto",
+      "stepMode": "Passo",
+      "playbackModeLabel": "Modalità di riproduzione"
+    },
+    "toggles": {
+      "trail": "Scia",
+      "trailTitle": "Mostra una scia dietro la palla per visualizzarne la traiettoria",
+      "zones": "Zone",
+      "zonesTitle": "Mostra le 6 zone FIVB sul campo"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "clickHint": "clicca per saltare"
+    },
+    "cameras": {
+      "DEFAULT": "Larga",
+      "TOP_DOWN": "Dall'alto",
+      "BEHIND_SERVE": "Battitore",
+      "ATTACKER_VIEW": "Attaccante"
+    },
+    "summary": {
+      "keyPoints": "PUNTI CHIAVE",
+      "commonMistakes": "ERRORI COMUNI",
+      "context": "Contesto"
+    },
+    "step": {
+      "label": "Passo {{current}} / {{total}}",
+      "defaultTitle": "Passo {{index}}"
+    },
+    "loading": "CARICAMENTO…"
+  }
+}

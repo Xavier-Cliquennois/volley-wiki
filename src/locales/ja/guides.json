@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ ドキュメント",
+    "title": "ガイド",
+    "subtitle": "バレーボール上達のための詳細な技術・戦術ガイド。"
+  },
+  "ticketPrefix": "N°",
+  "list": {
+    "service": {
+      "title": "サーブガイド",
+      "subtitle": "アンダーハンド、フローター、ジャンプフローター、ジャンプサーブ",
+      "category": "技術",
+      "description": "4種類のサーブをバイオメカニクス、動作手順、よくあるミス、ドリル、戦術ゾーンの観点から解説します。",
+      "readingTime": "約15分",
+      "level": "初級"
+    },
+    "reception": {
+      "title": "レセプションガイド",
+      "subtitle": "アンダーパス、面、システム、サーブを読む",
+      "category": "技術",
+      "description": "面の技術、ミート時のフリーズ、移動、W/Uシステム、サーバーを読む方法を解説します。",
+      "readingTime": "約15分",
+      "level": "初級"
+    },
+    "attaque": {
+      "title": "アタックガイド",
+      "subtitle": "助走、タイミング、ショット、ポジション",
+      "category": "技術",
+      "description": "スパイクの5段階、3〜4歩助走、トスに応じたタイミング、特殊ショット、ミスについて解説します。",
+      "readingTime": "約15分",
+      "level": "中級"
+    },
+    "contre": {
+      "title": "ブロックガイド",
+      "subtitle": "タイミング、ブロックの種類、ゲームを読む",
+      "category": "技術",
+      "description": "タイミング、ブロックの種類、トップ選手の視線の流れ、リード vs コミットブロック、ドリルを紹介。",
+      "readingTime": "約10分",
+      "level": "中級"
+    },
+    "positionnement-defense": {
+      "title": "守備ポジショニング",
+      "subtitle": "ポジションと状況に応じた配置",
+      "category": "戦術",
+      "description": "ゾーン別の責任、相手の攻撃ゾーンに応じた配置、システム、コミュニケーションを解説します。",
+      "readingTime": "約20分",
+      "level": "中級"
+    }
+  },
+  "detail": {
+    "backLink": "← ガイド一覧",
+    "sectionTitle": "★ ガイドの内容 ★",
+    "notFound": "ガイドが見つかりません。"
+  },
+  "defenseHub": {
+    "backLink": "← ガイド一覧",
+    "description": "守備ポジショニングはコート上の人数によって変化します。形式を選んで、ゾーン別の責任、システム（A/B、マンナップ、1-2-2など）、相手の攻撃ゾーンに応じた配置を確認しましょう。",
+    "cardDescription": "{{size}}形式に対応した守備、ゾーン、システム、詳細な配置を解説します。"
+  },
+  "defenseSized": {
+    "backLink": "← すべての形式"
+  }
+}

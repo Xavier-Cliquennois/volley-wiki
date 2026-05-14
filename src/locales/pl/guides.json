@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ DOKUMENTACJA",
+    "title": "PORADNIKI",
+    "subtitle": "Szczegółowe poradniki techniczne i taktyczne do doskonalenia w siatkówce."
+  },
+  "ticketPrefix": "Nr ",
+  "list": {
+    "service": {
+      "title": "Poradnik zagrywki",
+      "subtitle": "Dolna, float, jump float i jump topspin",
+      "category": "Technika",
+      "description": "4 typy zagrywek z biomechaniką, etapami, częstymi błędami, ćwiczeniami i strefami taktycznymi.",
+      "readingTime": "~15 min",
+      "level": "Początkujący"
+    },
+    "reception": {
+      "title": "Poradnik odbioru",
+      "subtitle": "Odbiór sposobem dolnym, platforma, systemy i czytanie zagrywki",
+      "category": "Technika",
+      "description": "Technika platformy, zastygnięcie w kontakcie, poruszanie się, systemy W/U i czytanie zagrywającego.",
+      "readingTime": "~15 min",
+      "level": "Początkujący"
+    },
+    "attaque": {
+      "title": "Poradnik ataku",
+      "subtitle": "Doskok, wyczucie czasu, uderzenia i pozycje",
+      "category": "Technika",
+      "description": "5 faz smeczu, doskok w 3-4 krokach, wyczucie czasu w zależności od wystawy, specjalne uderzenia i błędy.",
+      "readingTime": "~15 min",
+      "level": "Średniozaawansowany"
+    },
+    "contre": {
+      "title": "Poradnik bloku",
+      "subtitle": "Wyczucie czasu, rodzaje bloków i czytanie gry",
+      "category": "Technika",
+      "description": "Wyczucie czasu, rodzaje bloków, elitarna sekwencja wzrokowa, read vs commit blocking i ćwiczenia.",
+      "readingTime": "~10 min",
+      "level": "Średniozaawansowany"
+    },
+    "positionnement-defense": {
+      "title": "Ustawienie obronne",
+      "subtitle": "Ustaw się w zależności od pozycji i sytuacji",
+      "category": "Taktyka",
+      "description": "Odpowiedzialności w strefach, ustawienie według strefy ataku przeciwnika, systemy i komunikacja.",
+      "readingTime": "~20 min",
+      "level": "Średniozaawansowany"
+    }
+  },
+  "detail": {
+    "backLink": "← PORADNIKI",
+    "sectionTitle": "★ TREŚĆ PORADNIKA ★",
+    "notFound": "Poradnik nie został znaleziony."
+  },
+  "defenseHub": {
+    "backLink": "← PORADNIKI",
+    "description": "Ustawienie obronne zmienia się w zależności od liczby zawodników na boisku. Wybierz swój format, aby uzyskać dostęp do pełnego poradnika: odpowiedzialności w strefach, systemy (A/B, man-up, 1-2-2…) i adaptacja według strefy ataku przeciwnika.",
+    "cardDescription": "Obrona dostosowana do formatu {{size}}, strefy, systemy i szczegółowe ustawienia."
+  },
+  "defenseSized": {
+    "backLink": "← WSZYSTKIE FORMATY"
+  }
+}

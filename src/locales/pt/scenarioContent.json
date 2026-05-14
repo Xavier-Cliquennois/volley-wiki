@@ -1,0 +1,1993 @@
+{
+  "4v4-attack-losange": {
+    "title": "4v4 · Ataque em losango",
+    "shortDescription": "Losango canónico: distribuidor em P3 + 2 asas na linha dos 3 m + atrás. Receção → ataque pela zona 4.",
+    "contextLabel": "4v4 · Losango (1-2-1) · Escolar / recreativo",
+    "players": {
+      "P": "Distribuidor (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_B": "Bloco adversário",
+      "OPP_OFF": "Bloqueador secundário adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação em losango",
+        "description": "Esquema canónico: distribuidor NO CENTRO da rede (P3) + 2 asas na linha dos 3 m + atrás profundo."
+      },
+      "s2": {
+        "title": "2. Serviço + receção no fundo do campo",
+        "description": "O único atrás avança e faz a manchete. Trajetória alta em direção ao distribuidor junto à rede."
+      },
+      "s3": {
+        "title": "3. Passe + corrida de balanço + cobertura",
+        "description": "R4 encadeia a sua corrida de balanço para a zona 4. Distribuidor, A2 e A fecham num triângulo para cobertura. O bloco adversário desliza em direção ao atacante."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal + bloco a 1",
+        "description": "Remate potente. Contra um bloco a 1, o ângulo é amplo: o atacante pode apontar à diagonal longa ou à paralela curta."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa — chega um pouco tarde, a bola já tocou o chão."
+      },
+      "s6": {
+        "title": "6. RESET — regresso ao losango",
+        "description": "Todos retomam a sua posição no losango para a próxima jogada. O distribuidor volta para o centro da rede."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Losango canónico = a formação mais comum no 4v4.",
+        "Variante \"distribuidor central\": distribuidor em P3, distribui para a esquerda ou para a direita.",
+        "Bloco a 1 adversário padrão no 4v4: ângulo de ataque amplo.",
+        "Cobertura limitada: 3 jogadores à volta do atacante."
+      ],
+      "commonMistakes": [
+        "Distribuidor que também recebe → impossível fazer o passe a seguir.",
+        "Asas demasiado recuadas → passe difícil para o distribuidor central.",
+        "Atrás demasiado profundo → sem cobertura dos rechaços curtos do bloco."
+      ]
+    }
+  },
+  "4v4-attack-penetrant": {
+    "title": "4v4 · Distribuidor a infiltrar",
+    "shortDescription": "Sistema 3-1 simplificado: distribuidor único em P1 infiltra para a zona 2, libertando 3 atacantes à frente.",
+    "contextLabel": "4v4 · Distribuidor de trás · 3 atacantes",
+    "players": {
+      "R4": "Asa esquerda (P4)",
+      "C": "Central (P3)",
+      "A2": "Asa direita (P2)",
+      "P": "Distribuidor (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_B": "Bloco adversário",
+      "OPP_OFF": "Bloqueador secundário adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração 3-1",
+        "description": "Distribuidor único em P1 (linha de trás). 3 atacantes à frente em P2, P3, P4. Sem líbero: o recetor encadeia a sua corrida de balanço."
+      },
+      "s2": {
+        "title": "2. Serviço + receção + infiltração",
+        "description": "A asa esquerda faz a manchete na receção. O distribuidor inicia simultaneamente a sua infiltração a partir de P1 para a zona 2."
+      },
+      "s3": {
+        "title": "3. Passe + corrida de R4",
+        "description": "Passe alto para a asa esquerda após a corrida de receção de R4. O bloco adversário desliza para ele."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal + bloco a 1",
+        "description": "Remate potente em diagonal longa. Com apenas 3 jogadores em cobertura, formam um triângulo curto à volta do atacante."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa — chega 0,1 s tarde no impacto."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "O distribuidor regressa ao P1 da linha de trás, R4 regressa à zona 4. A infiltração tem de ser antecipada já no próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 3-1 = o equivalente em 4v4 do 5-1. 1 distribuidor dedicado a infiltrar.",
+        "Vantagem: 3 atacantes à frente em todos os momentos, como no 6v6.",
+        "Desvantagem: exige uma receção muito limpa pois o distribuidor não está junto à rede.",
+        "Sem líbero: o recetor encadeia também a sua corrida de balanço de ataque."
+      ],
+      "commonMistakes": [
+        "Infiltração demasiado tarde → outro jogador tem de fazer o passe.",
+        "Receção demasiado curta → distribuidor chega longe da rede.",
+        "Cobertura esquecida — block-out adversário = ponto."
+      ]
+    }
+  },
+  "4v4-attack-square": {
+    "title": "4v4 · Ataque em quadrado",
+    "shortDescription": "Formação em quadrado (2 à frente / 2 atrás): 2 bloqueadores + 2 defensores equilibrados.",
+    "contextLabel": "4v4 · Quadrado · Bloco a 2 possível",
+    "players": {
+      "P": "Distribuidor-atacante (P2)",
+      "R4": "Atacante (P4)",
+      "A1": "Trás esquerda (P5)",
+      "A2": "Trás direita (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração em quadrado",
+        "description": "2 jogadores junto à rede (P2 e P4), 2 jogadores atrás. Cobertura equilibrada do campo à frente e atrás."
+      },
+      "s2": {
+        "title": "2. Serviço + receção alta",
+        "description": "O atrás esquerdo faz uma manchete elevada para o distribuidor-atacante na zona 2."
+      },
+      "s3": {
+        "title": "3. Passe para a asa + corrida",
+        "description": "O distribuidor distribui para o atacante na zona 4. Sem opção pelo central (não há central especializado). O bloco a 2 desliza para o atacante."
+      },
+      "s4": {
+        "title": "4. Remate contra um bloco a 2",
+        "description": "O atacante tem de escolher: paralela curta, diagonal longa ou amorti no espaço livre. Bloco a 2 (em vez de bloco a 1 do losango) — defesa mais difícil ofensivamente."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa. Com apenas 2 jogadores no chão, a zona fica vulnerável."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam o quadrado para a próxima jogada. Esta formação é adequada a equipas com 2 bons bloqueadores e 2 bons defensores."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formação em quadrado: equilíbrio entre ataque/defesa, 2 zonas à frente + 2 zonas atrás.",
+        "Permite um bloco a 2 (vs bloco a 1 do losango) — melhor defesa junto à rede.",
+        "Mas apenas 2 jogadores no chão → vulnerável às diagonais longas.",
+        "Boa para equipas com 2 bons bloqueadores e 2 bons defensores."
+      ],
+      "commonMistakes": [
+        "Jogadores da rede demasiado afastados do centro → bloco adversário fácil.",
+        "Defensores parados no fundo → sem cobertura curta.",
+        "Confusão sobre quem distribui: o distribuidor-atacante tem de estar sempre à frente."
+      ]
+    }
+  },
+  "5v5-attack-pentagon": {
+    "title": "5v5 · Ataque em pentágono",
+    "shortDescription": "Formato 5v5: 1 distribuidor único + 1 central + 2 asas + 1 atrás. Ataque pela zona 4.",
+    "contextLabel": "5v5 · Sistema 4-1 · Formato híbrido",
+    "players": {
+      "R4": "Asa esquerda",
+      "C": "Central",
+      "P": "Distribuidor (P2)",
+      "A1": "Trás esquerda (P5)",
+      "A2": "Trás direita (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentágono ofensivo",
+        "description": "5 jogadores em pentágono: 3 à frente (R4, C, P) + 2 atrás. Cobertura regular do campo. Sem líbero, todos os jogadores de trás recebem."
+      },
+      "s2": {
+        "title": "2. Serviço + receção pelo atrás",
+        "description": "O atrás esquerdo faz a primeira bola. Sem líbero, recebe o atrás mais fiável."
+      },
+      "s3": {
+        "title": "3. Passe + corrida",
+        "description": "O distribuidor, já junto à rede, distribui facilmente para a zona 4. Sem infiltração no 5v5 — está em P2. R4 inicia a sua corrida."
+      },
+      "s4": {
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "A asa esquerda finaliza em diagonal longa. O bloco adversário também em pentágono: 2 bloqueadores na asa."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal. A defesa de solo é mais rara com um único atrás por corredor."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam o pentágono. Sem líbero, rodar os jogadores de trás é essencial para repartir a carga da receção."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "5v5 = formato híbrido (treino, equipas incompletas). Sem regras oficiais FPV.",
+        "Pentágono: 1 jogador por zona-chave, cobertura regular de todo o campo.",
+        "Sistema 4-1 = equivalente ao 5-1 mas com um atacante a menos.",
+        "Recomendação: manter o sistema 5-1 do 6v6, retirando um atrás não distribuidor."
+      ],
+      "commonMistakes": [
+        "Sem líbero no 5v5 → todos os jogadores de trás têm de saber receber.",
+        "Tentar bloco a 3 → restam apenas 2 defensores no chão.",
+        "Esquecer a cobertura do ataque → um jogador a menos em cobertura."
+      ]
+    }
+  },
+  "6v6-attack-4-2": {
+    "title": "Ataque · Sistema 4-2",
+    "shortDescription": "Sistema 4-2 de iniciante: distribuidor fixo à frente na zona 2, 2 atacantes disponíveis.",
+    "contextLabel": "4-2 · 2 distribuidores em diagonal oposta · Sub-13/Sub-15",
+    "players": {
+      "R4a": "Ponta (P4)",
+      "C": "Central (P3)",
+      "P1": "Distribuidor 1 (P2)",
+      "P2": "Distribuidor 2 (P5)",
+      "C2": "Central 2 (P6)",
+      "R4b": "Ponta (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração 4-2",
+        "description": "2 distribuidores em diagonal oposta (P2 e P5). O distribuidor da frente (P1) faz sempre o 2º toque. Receção em W com C2 no centro."
+      },
+      "s2": {
+        "title": "2. Serviço + receção central",
+        "description": "O central de trás faz o primeiro toque numa receção clássica em W. Trajetória alta para o distribuidor da frente em P2."
+      },
+      "s3": {
+        "title": "3. Passe direto + corrida",
+        "description": "O distribuidor da frente só tem de distribuir: sem infiltração, sem switch. Envia um passe alto para a ponta na zona 4. Bloco a 2 na asa."
+      },
+      "s4": {
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "A ponta ataca pela zona 4. Sem opção pelo central, pois o central recebeu. Remate em diagonal longa contra um bloco a 2."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha em diagonal para tentar recuperar a bola."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição. O 4-2 continua a ser o sistema mais simples: nenhum switch necessário."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "4-2: 2 distribuidores + 2 centrais + 2 pontas. Sempre 2 atacantes à frente.",
+        "O distribuidor da frente (em P2 ou P3 conforme a variante) faz sistematicamente o 2º toque.",
+        "Sem infiltração, sem switch: o sistema mais fácil de aprender.",
+        "Ideal para Sub-13/Sub-15 ou adultos iniciantes. Favorece a aprendizagem das rotações."
+      ],
+      "commonMistakes": [
+        "Distribuidor da frente que também recebe → impossível fazer o 2º toque.",
+        "Distribuidor de trás a querer distribuir → regra do distribuidor da frente não respeitada.",
+        "Central que não se compromete → bloco a 2 fácil."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p1": {
+    "title": "Ataque · Rotação P1 do 5-1",
+    "shortDescription": "Receção a 3 → distribuidor infiltra a partir de P1 → ataque pela zona 4 pela ponta.",
+    "contextLabel": "5-1 · Rotação P1 · Serviço adversário",
+    "players": {
+      "L": "Líbero (P5)",
+      "R4a": "Ponta (P4)",
+      "R4b": "Ponta (P6)",
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "P": "Distribuidor (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_C": "Central adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_BC": "Líbero adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação de receção",
+        "description": "A nossa equipa está numa formação de receção a 3: líbero (P5), ponta em P6 e ponta em P4 recuadas sobre a linha dos 3 m. Central e oposto estão fora da receção junto à rede. O distribuidor espera em P1 para infiltrar assim que o serviço for batido."
+      },
+      "s2": {
+        "title": "2. Serviço + receção",
+        "description": "Serviço alto adversário para a ponta em P6 que faz a manchete. Em paralelo, o distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
+      },
+      "s3": {
+        "title": "3. Passe alto + corrida",
+        "description": "A bola sobe para o distribuidor que chegou à rede. Ele entrega um passe alto para a zona 4 onde a ponta já iniciou a sua corrida de balanço. A cobertura forma-se à volta dele."
+      },
+      "s4": {
+        "title": "4. Remate + bloco a 2",
+        "description": "A ponta levanta voo e bate em diagonal longa em direção à zona 6 adversária. Os dois bloqueadores adversários saltam em paralelo para fechar a diagonal e a paralela."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O líbero adversário mergulha em direção à zona 6 para tentar uma manchete desesperada. O distribuidor adversário desloca-se para a zona 2 para fazer o passe se a defesa tocar na bola."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção para o próximo serviço. Esta colocação determina a qualidade do próximo ataque."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Receção a 3: líbero + 2 pontas ocupam toda a largura do campo.",
+        "O distribuidor infiltra a partir de P1 para a zona 2-3 assim que o serviço é batido.",
+        "A ponta atacante desliza para a linha dos 3 m durante a receção para preparar a sua corrida.",
+        "Cobertura a 5 jogadores (3 perto + 2 longe) em posição baixa à volta do atacante."
+      ],
+      "commonMistakes": [
+        "Distribuidor que infiltra demasiado tarde → passe em salto forçado por outro jogador.",
+        "Ponta atacante que dispara a corrida cedo demais → chega debaixo da bola em vez de se comprometer.",
+        "Cobertura esquecida → bloco adversário bem-sucedido = ponto perdido diretamente."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p2": {
+    "title": "Ataque · Rotação P2 do 5-1",
+    "shortDescription": "Distribuidor já junto à rede em P2: 2 atacantes à frente + oposto ataca na 4 excecionalmente.",
+    "contextLabel": "5-1 · Rotação P2 · Distribuidor da frente",
+    "players": {
+      "R4a": "Ponta (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Ponta (P1)",
+      "C": "Central (P3)",
+      "Pt": "Oposto (P4)",
+      "P": "Distribuidor (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Serviço adversário",
+        "description": "Serviço para a zona 5-6. O líbero chama e prepara a manchete. O distribuidor já espera junto à rede em P2."
+      },
+      "s2": {
+        "title": "2. Serviço + receção do líbero",
+        "description": "Serviço alto para a zona 6. O líbero avança e faz uma manchete precisa para o alvo do distribuidor (zona 2)."
+      },
+      "s3": {
+        "title": "3. Passe para o oposto + corrida",
+        "description": "O distribuidor, já em P2, distribui excecionalmente para a zona 4 onde o oposto inicia a sua corrida. O bloco adversário reagrupa-se no centro."
+      },
+      "s4": {
+        "title": "4. Remate + bloco a 2",
+        "description": "O oposto levanta voo à esquerda e bate em diagonal longa. Uma configuração rara mas inevitável em P2 — o distribuidor fica no sítio."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa para tentar uma manchete desesperada de recuperação."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição de receção. A rotação P2 continua a ser a mais limitada ofensivamente: apenas 2 atacantes à frente."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotação P2 = a mais limitada ofensivamente (apenas 2 atacantes à frente).",
+        "Distribuidor já em posição: zero infiltração, distribuição fácil.",
+        "O oposto ataca excecionalmente à esquerda (zona 4) para libertar o distribuidor.",
+        "Privilegiar as asas e os ataques da linha de trás da ponta como opções."
+      ],
+      "commonMistakes": [
+        "Distribuidor a tentar passe em salto em 2 quando já lá está → 2º toque difícil.",
+        "Oposto que hesita entre 2 e 4 → bloco adversário em posição.",
+        "Centrais que não se comprometem → bloco a 2 fácil para o adversário."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p3": {
+    "title": "Ataque · Rotação P3 do 5-1 (pipe)",
+    "shortDescription": "Distribuidor em P3 desloca-se para 2-3 → pipe pela ponta da linha de trás na zona 6.",
+    "contextLabel": "5-1 · Rotação P3 · Ataque da linha de trás",
+    "players": {
+      "L": "Líbero (P5)",
+      "Pt": "Oposto (P6)",
+      "R4b": "Ponta (P1)",
+      "R4a": "Ponta (P4)",
+      "P": "Distribuidor (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação de receção",
+        "description": "Serviço previsto pelo lado direito. A ponta em P1 faz a receção. O distribuidor em P3 está pronto a deslocar-se para 2-3 assim que o serviço for batido."
+      },
+      "s2": {
+        "title": "2. Serviço + receção",
+        "description": "Serviço alto para a zona 1. A ponta em P1 faz manchete para o alvo. O distribuidor inicia o seu deslocamento para 2-3."
+      },
+      "s3": {
+        "title": "3. Passe de pipe + corrida",
+        "description": "O distribuidor envia um passe esticado para a zona 6: trajetória rápida a 2 m da rede. O oposto inicia a corrida atrás da linha dos 3 m para o pipe."
+      },
+      "s4": {
+        "title": "4. Pipe + bloco a 2",
+        "description": "Batida potente no centro a partir da retaguarda. O bloco a 2 das asas não consegue cobrir o centro — uma opção-chave do 5-1 moderno."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor central adversário mergulha no eixo para tentar apanhar o pipe — a bola chega rápido, pouco tempo para reagir."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção. O central tem de continuar pronto para se deslocar para o centro da rede na próxima sequência."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "O pipe é a 4ª opção ofensiva para além dos 3 ataques junto à rede.",
+        "O central desloca-se para o centro da rede enquanto o distribuidor desliza para 2-3.",
+        "Trajetória do pipe: esticada, a 2 m da rede, chamada atrás da linha dos 3 m.",
+        "Muito eficaz contra um bloco que se concentra nas asas."
+      ],
+      "commonMistakes": [
+        "Pipe demasiado alto → bloco adversário tem tempo de recuar para o centro.",
+        "Ponta de trás a chamar na zona de ataque → falta de ataque da linha de trás.",
+        "Central desloca-se tarde demais → zona 3 bloqueada."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p4": {
+    "title": "Ataque · Rotação P4 do 5-1",
+    "shortDescription": "Distribuidor da frente em P4 desloca-se para a direita; a ponta* ataca em 4, central em 3, oposto da linha de trás em 1.",
+    "contextLabel": "5-1 · Rotação P4 · Distribuidor da frente",
+    "players": {
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "Pt": "Oposto (P1)",
+      "P": "Distribuidor (P4)",
+      "C": "Central (P3)",
+      "R4a": "Ponta (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração P4 + offset",
+        "description": "Distribuidor na zona 4, ponta* na zona 2 — colocação cruzada. Distribuidor e central deslocam-se para a esquerda para libertar a zona de receção para o líbero."
+      },
+      "s2": {
+        "title": "2. Serviço + receção do líbero",
+        "description": "O serviço aponta à zona 6. O líbero avança e faz manchete para o alvo clássico (entre P2 e P3)."
+      },
+      "s3": {
+        "title": "3. Switch distribuidor↔ponta* + passe alto",
+        "description": "Cruzamento essencial: o distribuidor deixa P4 em direção a 2-3, a ponta* deixa P2 em direção a 4 para atacar. Passe alto para a asa esquerda."
+      },
+      "s4": {
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "Remate em diagonal longa. Com um distribuidor à frente (pequeno no bloco), o ataque tem de terminar rapidamente. Bloco a 2 deslocado para a asa."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na trajetória longa para tentar uma manchete desesperada."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição inicial. O offset distribuidor/central à esquerda mantém-se para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotação P4 = distribuidor à frente. Switch distribuidor↔ponta* obrigatório.",
+        "2 atacantes à frente: ponta* em 4, central em 3. Pipe ou oposto da linha de trás como opções.",
+        "Distribuidor e central deslocam-se para a esquerda no serviço para libertar a zona 6.",
+        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
+      ],
+      "commonMistakes": [
+        "Switch esquecido → a ponta* fica à direita, atacante mal colocado.",
+        "Distribuidor e central demasiado à direita no serviço → conflito de receção na zona 6.",
+        "Bloco adversário não comprometido pelo central → bloco a 2 fácil pela asa esquerda."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p5": {
+    "title": "Ataque · Rotação P5 do 5-1",
+    "shortDescription": "Infiltração longa a partir de P5. Switch C/ponta. Passe ao oposto na zona 2.",
+    "contextLabel": "5-1 · Rotação P5 · Infiltração longa",
+    "players": {
+      "P": "Distribuidor (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Ponta (P1)",
+      "C": "Central (P4)",
+      "R4a": "Ponta (P3)",
+      "Pt": "Oposto (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação de receção",
+        "description": "Distribuidor atrás à esquerda em P5, o mais afastado possível da rede. C em P4 e ponta em P3 vão fazer switch assim que o serviço for batido."
+      },
+      "s2": {
+        "title": "2. Serviço + receção + switch C↔ponta",
+        "description": "O serviço aponta à zona 1 onde a ponta recebe. Simultaneamente, o central desliza para o centro e a ponta atacante ocupa a zona 4."
+      },
+      "s3": {
+        "title": "3. Infiltração longa + passe para a zona 2",
+        "description": "O distribuidor atravessa todo o campo a partir de P5 — a infiltração mais longa. Distribui curto para o oposto na zona 2. O bloco adversário desliza para a direita para fechar."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal + bloco a 2",
+        "description": "O oposto levanta voo na zona 2 e bate em diagonal longa. Uma combinação clássica nesta rotação. O bloco a 2 está em posição à direita."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha para a zona 5 para tentar apanhar a bola longa."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção. O central regressa a P4, a ponta a P3, o distribuidor a P5."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P5 = a infiltração mais longa. Exige receção perfeita.",
+        "O central e a ponta fazem switch assim que o serviço é batido para colocar C na zona 3.",
+        "O oposto na zona 2 é o alvo mais acessível para o distribuidor.",
+        "Pipe possível como opção se o passe for esticado e rápido."
+      ],
+      "commonMistakes": [
+        "Passe demasiado esticado durante uma infiltração em curso → distribuidor debaixo da bola.",
+        "Switch C↔ponta tardio → central na zona 4 = inútil no bloco.",
+        "Receção curta → distribuidor chega longe da rede."
+      ]
+    }
+  },
+  "6v6-attack-5-1-p6": {
+    "title": "Ataque · Rotação P6 do 5-1 (bola rápida)",
+    "shortDescription": "Infiltração média a partir de P6 → ataque central rápido pelo central.",
+    "contextLabel": "5-1 · Rotação P6 · Combinação rápida",
+    "players": {
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P6)",
+      "R4b": "Ponta (P1)",
+      "R4a": "Ponta (P4)",
+      "Pt": "Oposto (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor central adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação de receção",
+        "description": "Serviço previsto pelo lado esquerdo. O líbero ocupa o seu corredor. O oposto em P3 vai fazer switch para P2, o central em P2 desliza para o centro da rede."
+      },
+      "s2": {
+        "title": "2. Serviço + receção + switch Op↔C",
+        "description": "Serviço alto para a zona 5. O líbero recebe. O oposto desliza para a zona 2 e o central ocupa o centro da rede para preparar a bola rápida."
+      },
+      "s3": {
+        "title": "3. Infiltração média",
+        "description": "O distribuidor atravessa de P6 para a zona 2-3 (trajeto médio, mais curto do que P5). O central começa a tomar balanço para o tempo 1."
+      },
+      "s4": {
+        "title": "4. Pré-salto + passe esticado rápido",
+        "description": "O central levanta voo JÁ antes do passe — isto é o tempo 1. O distribuidor envia uma bola rápida a 1 m, mesmo à frente dele. O central já está no ar."
+      },
+      "s5": {
+        "title": "5. Batida no centro + bloco tarde demais",
+        "description": "Batida rápida no centro que surpreende o bloco adversário antes de estar em posição. Os bloqueadores adversários saltam logo a seguir — tarde demais."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "O central regressa ao centro, todos retomam a formação de receção. A bola rápida central é a combinação típica desta rotação."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "P6 = infiltração média. Ideal para combinações rápidas.",
+        "Tempo 1: central já no ar quando o distribuidor toca na bola.",
+        "O central compromete o bloco central adversário: liberta as asas para as pontas.",
+        "Switch sistemático Op↔C para recolocar o central no centro."
+      ],
+      "commonMistakes": [
+        "Central a chamar tarde demais → bola passa por cima da mão.",
+        "Passe demasiado alto para tempo 1 → bloco adversário em posição.",
+        "Oposto que não faz switch → central preso na zona 2."
+      ]
+    }
+  },
+  "6v6-attack-6-2": {
+    "title": "Ataque · Sistema 6-2",
+    "shortDescription": "Sistema 6-2: distribuidor da linha de trás infiltra, 3 atacantes à frente em todos os momentos.",
+    "contextLabel": "6-2 · Distribuidor a infiltrar · Intermédio",
+    "players": {
+      "R4a": "Ponta (P4)",
+      "C": "Central (P3)",
+      "PA": "Distribuidor-atacante (P2)",
+      "P": "Distribuidor (P1)",
+      "C2": "Central (P6)",
+      "R4b": "Ponta (P5)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração 6-2",
+        "description": "2 distribuidores polivalentes: o da frente ataca (distribuidor-atacante), o de trás distribui (e infiltra). 3 atacantes à frente em todos os momentos."
+      },
+      "s2": {
+        "title": "2. Serviço + receção pelo central de trás",
+        "description": "Receção central clássica por C2. O distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
+      },
+      "s3": {
+        "title": "3. Passe na zona 2 + corrida",
+        "description": "Distribuição para o distribuidor-atacante na zona 2. Variedade máxima: 3 ameaças ofensivas à frente. Bloco a 2 deslocado para a direita."
+      },
+      "s4": {
+        "title": "4. Ataque em diagonal + bloco a 2",
+        "description": "O distribuidor-atacante bate em diagonal longa. O 6-2 garante sempre 3 ameaças ofensivas — o bloco adversário não consegue antecipar."
+      },
+      "s5": {
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal mergulha na trajetória longa do lado esquerdo do adversário — uma tentativa desesperada de recuperação."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição. O distribuidor-atacante fica à frente, o distribuidor regressa a P1."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "6-2: 2 distribuidores polivalentes em diagonal oposta.",
+        "Sempre 3 atacantes à frente (o distribuidor da frente ataca, o de trás distribui).",
+        "Infiltração sistemática, como no 5-1, mas com 2 distribuidores alternados.",
+        "Excelente para desenvolver a polivalência antes de passar a um 5-1."
+      ],
+      "commonMistakes": [
+        "Diferença de estilo entre os 2 distribuidores → distribuição inconsistente.",
+        "Distribuidor da frente que não se mostra para o ataque → apenas 2 opções.",
+        "Infiltração tardia → outro jogador tem de fazer o passe."
+      ]
+    }
+  },
+  "4v4-defense-block-1": {
+    "title": "4v4 · Defesa sistema A (1 bloqueador + 3 defensores)",
+    "shortDescription": "Sistema A no 4v4 (formação em losango): 1 bloqueador solo + amorti + diagonal + paralela. A configuração mais comum.",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base em losango + leitura",
+        "description": "Com 4 jogadores, cada defensor é crucial. O nosso central prepara-se para bloquear sozinho. Leitura obrigatória do passe adversário."
+      },
+      "s2": {
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. O ataque chega ao nosso canto frente-ESQUERDA. O central tem de deslizar para o lado esquerdo."
+      },
+      "s3": {
+        "title": "3. Bloco central solo + sinal paralela/diagonal",
+        "description": "O central desliza para a esquerda e bloqueia sozinho. Sinal obrigatório (paralela ou diagonal) para orientar os 3 defensores. Sem sinal, não sabem o que cobrir."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal longa + bloco",
+        "description": "O atacante bate em diagonal longa. O bloco solo fecha a paralela, sinal anunciado previamente."
+      },
+      "s5": {
+        "title": "5. Recuperação pelo único atrás",
+        "description": "O atrás em P1 defende no seu eixo — a sua leitura tem de ser perfeita, não há outro atrás para compensar. Manchete alta para o alvo."
+      },
+      "s6": {
+        "title": "6. RESET — formação em losango",
+        "description": "Regresso à formação em losango. A cobertura adapta-se à próxima zona de ataque a partir da leitura seguinte."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema A (1 bloqueador + 3 defensores): a configuração mais comum no 4v4 de pavilhão.",
+        "Sinal paralela/diagonal do bloqueador obrigatório — sem ele, os 3 defensores não sabem o que cobrir.",
+        "Distâncias-chave: bloqueador a 0,3 m da rede; defensores profundos a 7-7,5 m; amorti/atrás do bloco a 3,5-4 m.",
+        "Cada defensor cobre ~30-40 m² (vs 20 m² em 6v6) → antecipação = competência nº 1.",
+        "Bloco a 2 (sistema B) reservado a grandes atacantes: deixa apenas 2 defensores profundos."
+      ],
+      "commonMistakes": [
+        "Bloqueador isolado sem cobertura do amorti: os 3 defensores recuam todos, deixando a zona dos 3-5 m vazia.",
+        "2 defensores em linha reta: lado a lado à mesma profundidade → o cut shot cai entre eles.",
+        "Sem sinal entre bloqueador e defensores (paralela vs diagonal).",
+        "Defensor do amorti demasiado afastado da rede: recua com os outros e já não consegue cobrir amortis curtos.",
+        "Distribuidor que corre para o seu alvo antes de a bola estar defendida → buraco defensivo."
+      ]
+    }
+  },
+  "4v4-defense-vs-z2": {
+    "title": "4v4 · Defesa de Z2",
+    "shortDescription": "Espelho do sistema A: 1 bloqueador + 3 defensores contra ataque adversário pela Z2 (direita deles → chega à nossa esquerda).",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura do ataque pela Z2 adversária",
+        "description": "Ataque adversário pela zona 2 deles (direita deles) → chega ao nosso canto frente-ESQUERDA. O central terá de deslizar para o lado esquerdo para bloquear."
+      },
+      "s2": {
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. A defesa inicia o seu ajuste em espelho."
+      },
+      "s3": {
+        "title": "3. Bloco central solo do lado esquerdo",
+        "description": "O central desliza para o lado esquerdo e bloqueia sozinho. Sinal paralela/diagonal obrigatório. R4 (asa esquerda) fica como bloqueador secundário a 2,5 m, A2 (asa direita) defende a diagonal longa."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal + bloco solo",
+        "description": "O atacante bate em diagonal longa. O bloco solo cobre a paralela sinalizada."
+      },
+      "s5": {
+        "title": "5. Recuperação pelo único atrás",
+        "description": "O atrás em P1 (ligeiramente deslocado para o lado da bola) defende com manchete. A sua leitura compensa a ausência dos outros atrás."
+      },
+      "s6": {
+        "title": "6. RESET — formação em losango",
+        "description": "Regresso à formação em losango. O central regressa ao centro, pronto a deslizar novamente se o adversário mudar de lado."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espelho perfeito da Z4 no 4v4: sistema A (1 bloqueador + 3 defensores).",
+        "P3 bloqueador solo no lado esquerdo, sinal paralela/diagonal obrigatório.",
+        "P4 (asa esquerda) como bloqueador secundário a 3,5-4 m da rede — cobertura curta e amortis.",
+        "P2 (asa direita) defende a diagonal curta (~7 m, em linha reta).",
+        "O único atrás P1 defende a diagonal longa."
+      ],
+      "commonMistakes": [
+        "Asa esquerda P4 a bloquear com o central → bloqueador secundário em falta do lado esquerdo.",
+        "Único atrás demasiado avançado → bola de diagonal profunda não coberta.",
+        "Bloqueador sem sinal → os 3 defensores não sabem o que cobrir.",
+        "P2 demasiado afastado da rede → não cobre a diagonal curta."
+      ]
+    }
+  },
+  "4v4-defense-vs-z3": {
+    "title": "4v4 · Defesa de Z3 (bola rápida central)",
+    "shortDescription": "Ataque rápido central adversário no 4v4: leitura bloco a 1 + 3 defensores. A configuração mais difícil de defender.",
+    "contextLabel": "4v4 · Bloco a 1 (read) · Fraqueza estrutural",
+    "players": {
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura da bola rápida adversária",
+        "description": "No 4v4 a bola rápida central (tempo 1) é o ataque mais perigoso, pois apenas 1 bloqueador está disponível. O único atrás já varre o eixo profundo."
+      },
+      "s2": {
+        "title": "2. Passe central rápido",
+        "description": "O distribuidor faz passe esticado ao central que já iniciou a sua corrida. As nossas asas baixam para meio-campo para cobrir as diagonais."
+      },
+      "s3": {
+        "title": "3. Bloco a 1 (read) + remate rápido",
+        "description": "O central salta sozinho em READ — sem commit possível com um central defensivo. O central adversário bate em frente no eixo."
+      },
+      "s4": {
+        "title": "4. Pivô defensivo: o único atrás",
+        "description": "O atrás em P1 defende a bola potente em pleno eixo — desempenha o papel da Z6 do 6v6. A sua leitura tem de ser PERFEITA."
+      },
+      "s5": {
+        "title": "5. RESET — formação em losango",
+        "description": "Regresso à base do 4v4. O central volta para junto da rede, o atrás retoma a sua posição axial."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "A documentação do 4v4 confirma-o: a bola rápida central é UMA FRAQUEZA REAL do 4v4 (apenas 1 bloqueador).",
+        "Bloco a 1 em READ: sem commit possível com um central defensivo.",
+        "As 2 asas cobrem as 2 diagonais curtas a meio-campo (~3,5-4 m da rede).",
+        "O único atrás é o pivô defensivo — desempenha o papel da Z6 do 6v6 no eixo central.",
+        "Antecipação = competência nº 1: com ~40 m² para cobrir, um erro de leitura é irrecuperável."
+      ],
+      "commonMistakes": [
+        "Bloco a 2 numa bola rápida → apenas 2 defensores no chão, diagonais escancaradas.",
+        "Atrás a avançar demasiado cedo → bola profunda cai atrás dele.",
+        "Asas paradas junto à rede sem bloquear → buracos na linha dos 3 m atrás do bloco.",
+        "Leitura do central adversário tardia → absorvemos o ataque sem nos movermos."
+      ]
+    }
+  },
+  "5v5-defense-vs-z2": {
+    "title": "5v5 · Defesa de Z2",
+    "shortDescription": "Espelho perfeito da Z4. Sistema 2-1-2 contra ataque adversário pela Z2 (direita deles → chega à nossa esquerda).",
+    "contextLabel": "5v5 · 2-1-2 · Bloco a 2 + bloqueador secundário",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura do ataque pela Z2 adversária",
+        "description": "Ataque adversário pela zona 2 deles (direita deles) → chega ao nosso canto frente-ESQUERDA. Espelho perfeito da Z4."
+      },
+      "s2": {
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. O ataque chega ao nosso canto frente-ESQUERDA."
+      },
+      "s3": {
+        "title": "3. Bloco a 2 em espelho (ponta + central)",
+        "description": "Ponta bloqueia paralela + central bloqueia diagonal pelo lado esquerdo. Oposto (P2) recua como bloqueador secundário à direita. Líbero defende a paralela na sombra do bloco, distribuidor defende a diagonal longa."
+      },
+      "s4": {
+        "title": "4. Remate + bloco a 2",
+        "description": "A asa direita adversária bate em diagonal longa. Ponta + central saltam."
+      },
+      "s5": {
+        "title": "5. Defesa do distribuidor — transição complexa",
+        "description": "O distribuidor está na trajetória da diagonal longa. Manchete defensiva — como é o defensor principal, o oposto tem de fazer o 2º toque."
+      },
+      "s6": {
+        "title": "6. RESET",
+        "description": "Regresso à base do 5v5. Comunicação obrigatória entre distribuidor e oposto para a próxima sequência."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espelho perfeito da Z4 no 5v5: sistema 2-1-2 (bloco a 2 + bloqueador secundário + 2 defensores).",
+        "Bloco a 2: ponta (P4) bloqueia paralela + central (P3) fecha a diagonal.",
+        "O oposto (P2) torna-se bloqueador secundário do lado direito, recua para a linha dos 3 m.",
+        "O distribuidor da linha de trás (P1) defende a diagonal longa.",
+        "Se o distribuidor defender → 2º toque pelo oposto (distribuidor de reserva) é obrigatório."
+      ],
+      "commonMistakes": [
+        "Oposto a bloquear a partir da Z2 → bloqueador secundário em falta do lado direito.",
+        "Distribuidor que defende E quer distribuir → confusão no 2º toque.",
+        "Líbero mal colocado em Z2 (defende a PARALELA aqui, não a diagonal longa).",
+        "Sem comunicação entre distribuidor e oposto."
+      ]
+    }
+  },
+  "5v5-defense-vs-z3": {
+    "title": "5v5 · Defesa de Z3 (bola rápida / tempo 1)",
+    "shortDescription": "Bloco a 1 (central) contra ataque rápido central adversário no 5v5 — cobertura axial parcial.",
+    "contextLabel": "5v5 · Bloco a 1 (read) · Leitura rápida",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura da bola rápida adversária",
+        "description": "Distribuição esticada iminente para o central. 0,3-0,5 s entre passe e batida — o nosso central observa o seu homólogo, já em movimento."
+      },
+      "s2": {
+        "title": "2. Passe esticado + asas como bloqueadores secundários",
+        "description": "O distribuidor adversário faz passe esticado para o central. As nossas asas baixam para 1,5 m da rede sobre a linha de ataque para cobrir rechaços laterais."
+      },
+      "s3": {
+        "title": "3. Bloco a 1 (read) + remate rápido",
+        "description": "O nosso central salta sozinho em leitura. O central adversário bate em diagonal curta — os ângulos são curtos em comparação a um passe alto."
+      },
+      "s4": {
+        "title": "4. Defesa do líbero",
+        "description": "O líbero (avançado para 5 m, pois os ângulos são curtos) defende com manchete no seu corredor esquerdo. Trajetória alta para o alvo — o distribuidor regressa à rede."
+      },
+      "s5": {
+        "title": "5. RESET",
+        "description": "Regresso à base do 5v5 após a sequência. Central e asas realinham-se."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloco a 1 (P3 central) em leitura — sem commit possível numa bola rápida.",
+        "Asas (P4 + P2) a 2 m da rede sobre a linha de ataque: cobrem rechaços do bloco.",
+        "Com apenas 2 defensores profundos (P5 + P1), a cobertura AXIAL profunda é parcial.",
+        "Z1 e Z5 AVANÇAM 1 m (~7 m da rede) porque os ângulos são mais curtos numa bola rápida.",
+        "\"Parados no contacto\": todos parados no momento exato da batida."
+      ],
+      "commonMistakes": [
+        "Bloco a 2 numa bola rápida → tarde demais e deixa apenas 1 defensor no chão.",
+        "Defensores parados no fundo (8 m+) → bola rápida cai antes de se moverem.",
+        "\"False stepping\" (primeiro passo atrás) → tempo perdido num tempo 1.",
+        "Bloqueadores secundários parados junto à rede → não cobrem rechaços."
+      ]
+    }
+  },
+  "5v5-defense-vs-z4": {
+    "title": "5v5 · Defesa de Z4",
+    "shortDescription": "Sistema 2-1-2 contra ataque adversário pela Z4 (esquerda deles → chega à nossa direita): bloco a 2 + bloqueador secundário + 2 defensores.",
+    "contextLabel": "5v5 · 2-1-2 · Bloco a 2 + bloqueador secundário",
+    "players": {
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura do ataque pela Z4 adversária",
+        "description": "Ataque adversário pela zona 4 deles (esquerda deles) → chega ao nosso canto frente-DIREITA. Leitura sequencial \"bola → distribuidor → bola → atacante\"."
+      },
+      "s2": {
+        "title": "2. Passe alto para a Z4 adversária",
+        "description": "Distribuição padrão do distribuidor deles para a asa esquerda. A nossa linha da frente identifica a zona de ataque."
+      },
+      "s3": {
+        "title": "3. Bloco a 2 + ponta bloqueador secundário",
+        "description": "Oposto (P2) + central (P3) sobem para bloquear do lado direito. Ponta recua para 1,5 m da rede como bloqueador secundário. Líbero na diagonal longa, distribuidor na paralela — cada um cobre ~30 m²."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal longa + bloco",
+        "description": "O atacante bate em diagonal longa (estatisticamente a trajetória mais frequente). Oposto + central saltam."
+      },
+      "s5": {
+        "title": "5. Defesa do líbero",
+        "description": "O líbero está sobre a trajetória principal. Manchete alta para o alvo — transição para contra-ataque."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à base 2-1-2",
+        "description": "Passagem à formação de base. O distribuidor regressa à zona 1, a defesa reorganiza-se para a próxima sequência."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Sistema 2-1-2: 2 bloqueadores + 1 bloqueador secundário (cobertura do amorti) + 2 defensores profundos.",
+        "Recomendação: manter o 5-1 do 6v6 retirando um atrás não distribuidor (configuração 3F-2B).",
+        "Bloqueador secundário a 2-2,5 m da rede, a 1 m da linha — cobre a zona dos 3 m atrás do bloco.",
+        "Leitura crítica: ~30 m² por defensor (vs 20 m² em 6v6), segurança posicional inicial reduzida.",
+        "\"Parados no contacto\": parados e equilibrados no momento exato da batida."
+      ],
+      "commonMistakes": [
+        "Bloco a 3 → apenas 1 defensor no chão = ponto garantido.",
+        "Bloqueador secundário parado junto à rede → zona dos 3 m atrás do bloco descoberta.",
+        "Sem hierarquia de prioridade entre os 2 defensores profundos → 2 jogadores na mesma bola.",
+        "Reproduzir mecanicamente o 6v6 sem adaptar zonas (o líbero tem de cobrir uma área maior aqui)."
+      ]
+    }
+  },
+  "6v6-attack-coverage": {
+    "title": "Cobertura · Ataque 5-1",
+    "shortDescription": "Cobertura a 5 jogadores num ataque pela zona 4: 2 arcos (3 perto + 2 longe) para defender um possível block-out.",
+    "contextLabel": "5-1 · Cobertura a 5 · Esquema 3-2",
+    "players": {
+      "R4a": "Ponta atacante (P4)",
+      "C": "Central (P3)",
+      "P": "Distribuidor (infiltrado)",
+      "Op": "Oposto (P2)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Preparação do ataque pela Z4",
+        "description": "A nossa ponta está em corrida de balanço, prestes a levantar voo. Mesmo antes da batida, a cobertura organiza-se: é a antecipação que salva um block-out, não a reação."
+      },
+      "s2": {
+        "title": "2. Primeiro arco (3 jogadores próximos)",
+        "description": "Distribuidor + central + líbero formam um semicírculo a 1-1,5 m do atacante, posição MUITO baixa, braços estendidos à frente, prontos a fazer manchete curta."
+      },
+      "s3": {
+        "title": "3. Remate + bloco a 2 adversário",
+        "description": "A nossa ponta levanta voo e bate em diagonal. Os dois bloqueadores adversários saltam em paralelo para fechar a trajetória — a cobertura já está parada, à espera."
+      },
+      "s4": {
+        "title": "4. Block-out: a bola volta",
+        "description": "O bloco adversário toca na bola que ressalta no nosso campo a 1,5 m do atacante. Sem cobertura, é um ponto perdido — aqui, o distribuidor está exatamente no ponto de queda."
+      },
+      "s5": {
+        "title": "5. Recuperação pelo distribuidor (1ª cobertura)",
+        "description": "O distribuidor (1ª cobertura próxima) defende a bola com manchete a 1 m do atacante. É SUA responsabilidade após um passe para a zona 4 — regra inegociável."
+      },
+      "s6": {
+        "title": "6. Novo ataque possível",
+        "description": "A recuperação permite uma nova bola de volta junto à rede. Sem cobertura a 5 = ponto perdido diretamente no block-out."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Cobertura a 5 = padrão de elite. Esquema 3-2 (3 perto + 2 longe).",
+        "O distribuidor é SEMPRE a 1ª cobertura próxima, a 1-1,5 m do atacante.",
+        "Posição MUITO baixa para os 3 jogadores próximos, braços estendidos à frente.",
+        "Sem cobertura, um bloco adversário bem-sucedido = ponto perdido diretamente.",
+        "Antecipação supera reação: a cobertura organiza-se ANTES da batida."
+      ],
+      "commonMistakes": [
+        "Sem cobertura → bloco adversário = ponto.",
+        "Distribuidor parado junto à rede após o passe → 1ª cobertura em falta.",
+        "Cobridores em pé ou demasiado afastados → bolas curtas não recuperadas.",
+        "Apenas 2 ou 3 cobridores em vez de 5 → block-outs longos perdidos."
+      ]
+    }
+  },
+  "6v6-defense-6-front": {
+    "title": "Defesa · man-up (2-1-3)",
+    "shortDescription": "Sistema man-up (2-1-3, antiga \"defesa em W\"): um defensor avançado atrás do bloco para amortis curtos.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-amorti",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6 avançada)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base do man-up",
+        "description": "O adversário é conhecido por amortir — escolha tática do man-up. A ponta (em P6) já está avançada para 2,5 m, pronta a avançar atrás do bloco."
+      },
+      "s2": {
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "Distribuição padrão para a Z4 adversária. A defesa reconhece a configuração e coloca-se."
+      },
+      "s3": {
+        "title": "3. Jogador avançado atrás do bloco",
+        "description": "Diferença-chave do man-up: R4b avança para 2,5 m da rede, na sombra do bloco. Líbero e distribuidor recuam para 6 m para compensar. Bloco a 2 padrão (oposto + central)."
+      },
+      "s4": {
+        "title": "4. Amorti em salto adversário",
+        "description": "O atacante opta por amortir em vez de rematar. A bola cai mesmo atrás do bloco — exatamente onde está o jogador avançado."
+      },
+      "s5": {
+        "title": "5. Recuperação curta pelo jogador avançado",
+        "description": "O jogador avançado está exatamente onde a bola cai. Manchete precisa para o oposto fazer um 2º toque em salto."
+      },
+      "s6": {
+        "title": "6. RESET — base do man-up",
+        "description": "Regresso à posição de base 2-1-3. R4b recolocado a 2,5 m, líbero e distribuidor profundos."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Man-up = 2-1-3 (Keller / USAV) — antiga \"defesa vermelha\".",
+        "⚠ NÃO confundir com \"formação em W\" que é uma formação de RECEÇÃO, não um sistema defensivo.",
+        "Cobertura excecional de amortis, roll shots e bolas \"junk\" atrás do bloco.",
+        "Mas: apenas 3 defensores profundos → vulnerável a remates potentes em diagonais curtas.",
+        "Indicação: equipas jovens, escolares, adversários táticos que jogam muitos amortis ou off-speed."
+      ],
+      "commonMistakes": [
+        "Manter o sistema de perímetro contra uma equipa que amortiece → bolas curtas perdidas.",
+        "Jogador avançado demasiado à frente (junto à rede) → bloqueado no impulso de bloco.",
+        "Líbero que não recua → buraco no fundo num remate potente.",
+        "Confundir \"defesa em W\" e \"man-up\" no vocabulário da equipa — fonte de mal-entendidos."
+      ]
+    }
+  },
+  "6v6-defense-perimeter": {
+    "title": "Defesa · perímetro (2-0-4)",
+    "shortDescription": "Defesa branca: 4 defensores nas linhas, U aberto para a rede. Dominante no voleibol masculino de elite.",
+    "contextLabel": "5-1 · Perímetro 2-0-4 (defesa branca)",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração em perímetro (2-0-4)",
+        "description": "Os 4 defensores formam um U aberto para a rede, quase nas linhas — \"um pé na linha\" (Liskevych). O meio do campo é deliberadamente abandonado."
+      },
+      "s2": {
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "Passe para a asa esquerda deles. A nossa linha da frente identifica a zona, os jogadores em perímetro permanecem estritamente nas linhas."
+      },
+      "s3": {
+        "title": "3. Bloco a 2 + 4 defensores em perímetro",
+        "description": "Bloco a 2 padrão (oposto na paralela + central na diagonal). Nenhum defensor avançado atrás do bloco (daí o 0 no centro). Líbero na linha esquerda, P6 na linha de fundo, P1 na linha direita."
+      },
+      "s4": {
+        "title": "4. Remate potente em paralela + bloco",
+        "description": "O atacante bate em paralela para o nosso canto trás-esquerda. A trajetória passa perto do bloco — um block-out longo é provável."
+      },
+      "s5": {
+        "title": "5. Recuperação na linha",
+        "description": "O líbero recupera na linha — cobertura de perímetro perfeita. Identifica facilmente as bolas \"fora\". Manchete alta para a zona 2-3."
+      },
+      "s6": {
+        "title": "6. RESET — perímetro",
+        "description": "Regresso à formação de perímetro pura: todos os atrás nas linhas, centro abandonado por convenção tática."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Perímetro = 2-0-4 (\"defesa branca\"): 4 defensores no perímetro, ninguém avançado.",
+        "Sistema dominante no voleibol masculino moderno e internacional onde a potência domina.",
+        "Lógica: ocupar estatisticamente as zonas onde caem os remates potentes (linhas e cantos profundos).",
+        "Excelente identificação das bolas \"fora\" e defesa dos block-outs.",
+        "⚠ O meio do campo (zona central entre os 3 e os 5 m) fica deliberadamente aberto."
+      ],
+      "commonMistakes": [
+        "Defensores a colapsar para o centro → perdem a lógica do sistema e já não cobrem as linhas.",
+        "Sistema escolhido contra uma equipa que amortiece → centro do campo descoberto, amortis perdidos.",
+        "Líbero inexperiente → má leitura das bolas \"fora\" nas laterais.",
+        "Falta de atletismo para mergulhar à frente sobre amortis → fraqueza explorada."
+      ]
+    }
+  },
+  "6v6-defense-read": {
+    "title": "Defesa · read",
+    "shortDescription": "Defesa reativa de elite: posições adaptativas em função do passe, da corrida e dos indícios do braço armado adversário.",
+    "contextLabel": "5-1 · Defesa read · Internacional",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posição neutra de base",
+        "description": "Todos os defensores em posição de leitura, joelhos fletidos, pés paralelos. Sequência visual obrigatória: \"bola → distribuidor → bola → atacante\"."
+      },
+      "s2": {
+        "title": "2. Leitura do passe (para a Z2 adversária)",
+        "description": "Assim que a bola sai das mãos do distribuidor adversário → ajuste para a zona de ataque. Aqui Z2 adversária (direita deles = nossa esquerda)."
+      },
+      "s3": {
+        "title": "3. Leitura do atacante + ajuste",
+        "description": "Ler em paralelo a corrida, a orientação do braço armado e os ombros. Todos se reposicionam consoante os indícios: ombro alto = remate, rotação = direção provável."
+      },
+      "s4": {
+        "title": "4. Leitura do remate + bloco a 2",
+        "description": "O atacante abre em diagonal longa. A defesa já está em posição graças aos indícios visuais. Ponta + central bloqueiam. \"Parados no contacto\" obrigatório."
+      },
+      "s5": {
+        "title": "5. Recuperação em leitura pelo líbero",
+        "description": "Antecipação perfeita: o líbero já está na diagonal longa, exatamente sobre a trajetória. Manchete alta para o alvo."
+      },
+      "s6": {
+        "title": "6. RESET — base neutra",
+        "description": "Regresso à posição neutra, pronto a ler a fase seguinte. A leitura recomeça em cada toque adversário."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Defesa read = sem posicionamento fixo, tudo é adaptativo. A defesa moderna define-se menos pela formação do que pela leitura.",
+        "Sequência visual \"bola → distribuidor → bola → atacante\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fases: base neutra → leitura do passe → leitura do atacante → ajuste → \"parados no contacto\" → perseguição.",
+        "Sistema privilegiado ao nível da elite internacional (FIVB sénior).",
+        "Mais eficaz contra atacantes versáteis."
+      ],
+      "commonMistakes": [
+        "Mover-se ANTES do passe → má leitura, jogador no pé errado.",
+        "Leitura incompleta: ler apenas o passe, não o braço armado.",
+        "Continuar em movimento no momento do contacto do atacante (não \"parados no contacto\") → reatividade cortada a meio.",
+        "Falta de coordenação → 2 defensores na mesma bola, buraco noutro local."
+      ]
+    }
+  },
+  "6v6-defense-rotation": {
+    "title": "Defesa · rotação (3-2-1)",
+    "shortDescription": "Defesa em rotação / slide: os atrás deslizam para o lado do ataque, o atrás oposto avança atrás do bloco.",
+    "contextLabel": "5-1 · Rotação 3-2-1 · Slide defense",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Base + leitura do passe para Z4",
+        "description": "Configuração de base antes da rotação. O distribuidor adversário infiltra e prepara um passe para a asa esquerda deles."
+      },
+      "s2": {
+        "title": "2. Passe alto para a Z4 adversária",
+        "description": "Distribuição padrão. A nossa equipa inicia a rotação: P1 vai avançar atrás do bloco, P6 vai deslizar para a linha direita, líbero mantém a diagonal."
+      },
+      "s3": {
+        "title": "3. Rotação 3-2-1 acionada",
+        "description": "O distribuidor (P1) AVANÇA para 3 m atrás do bloco para cobrir o amorti. P6 desliza para a linha direita a 8 m. Líbero mantém-se na diagonal longa. R4 bloqueador secundário clássico à esquerda."
+      },
+      "s4": {
+        "title": "4. Remate em diagonal + bloco",
+        "description": "O atacante bate em diagonal longa. Bloco a 2 (oposto + central) — a trajetória principal é coberta pelo líbero."
+      },
+      "s5": {
+        "title": "5. Defesa do líbero na diagonal",
+        "description": "O líbero está exatamente no ponto de queda da batida principal. Manchete alta para a zona 2-3 — transição limpa para contra-ataque."
+      },
+      "s6": {
+        "title": "6. RESET — base antes da próxima rotação",
+        "description": "Regresso à base. A rotação foi eficaz: o amorti curto teria sido apanhado pelo distribuidor avançado, a diagonal longa pelo líbero."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Rotação 3-2-1 (slide defense): 3 defensores de trás deslizam para o lado do ataque.",
+        "O atrás oposto (frequentemente o distribuidor, se em P1) AVANÇA atrás do bloco para cobrir o amorti.",
+        "Central de trás desliza para a linha do lado atacado (~8,5 m, 1-1,5 m da linha).",
+        "Excelente cobertura da paralela profunda E do amorti em simultâneo.",
+        "Transição rápida do distribuidor se ele for o jogador avançado.",
+        "Variante \"counter-rotate\": rotação no sentido oposto."
+      ],
+      "commonMistakes": [
+        "Rotação incompleta → buracos de cobertura.",
+        "Canto oposto-diagonal vulnerável (um defensor a menos no fundo).",
+        "Confusão entre rotate (para a bola) e counter-rotate (oposto) — requer comunicação forte.",
+        "Jogador avançado parado → não lê amortis vs remates."
+      ]
+    }
+  },
+  "6v6-defense-vs-pipe": {
+    "title": "Defesa · pipe adversário (BIC)",
+    "shortDescription": "Defesa contra um pipe adversário (ataque da linha de trás Z6): bloco a 1 ou a 2, P6 avança para \"apertar o campo\".",
+    "contextLabel": "5-1 · Pipe / BIC · P6 avançado, perímetro apertado",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Pipe adversário",
+      "OPP_S": "Distribuidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Leitura do pipe",
+        "description": "O distribuidor deles está prestes a enviar um passe esticado para o central da retaguarda. O nosso central observa simultaneamente o possível central adversário E o corredor do pipe. P6 tem de estar pronto a avançar."
+      },
+      "s2": {
+        "title": "2. Passe central esticado + corrida do pipe",
+        "description": "O distribuidor adversário entrega um passe esticado para o eixo da Z6. O atacante do pipe entra na sua corrida a partir de trás da linha dos 3 m, balanço longo. P6 começa a deslizar para a frente."
+      },
+      "s3": {
+        "title": "3. Bloco central + asas apertadas",
+        "description": "O nosso central salta sozinho ao pipe. As asas (ponta + oposto) baixam para ~1,5 m da rede para cobrir rechaços laterais. Z1 e Z5 sacrificam as linhas para defender o eixo."
+      },
+      "s4": {
+        "title": "4. Batida do pipe + bloco central",
+        "description": "O atacante bate profundo no eixo. O nosso central sobe à rede para um bloco a 1 — o pipe rápido não dá tempo para colocar dois bloqueadores."
+      },
+      "s5": {
+        "title": "5. Recuperação axial por P6",
+        "description": "A bola passa para o eixo profundo — P6 (avançado para 6,5 m) está exatamente no ponto de impacto. Manchete em pleno eixo para a zona 2-3 do distribuidor."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à base apertada",
+        "description": "Passagem à posição de base anti-pipe: P6 avançado, Z1/Z5 no eixo central. A configuração mantém-se válida se o jogo continuar a rodar."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pipe = ataque da linha de trás a partir da Z6 (central da retaguarda) por OH2 ou OPP — aponta ao eixo central profundo.",
+        "Bloco a 1 (central) mais frequente — bloco a 2 difícil num tempo rápido.",
+        "P6 defensivo AVANÇA para ~6-7 m da rede, em pleno eixo (\"apertar o campo\").",
+        "Z1 e Z5 fecham para o centro (~7 m, 1,5 m das linhas) — sacrificam as linhas um pouco.",
+        "BIC (pipe rápido) = um dos ataques mais difíceis de defender pois o central não consegue cobrir bola rápida + pipe + duas asas."
+      ],
+      "commonMistakes": [
+        "Bloco a 2 num pipe → deixa uma asa completamente aberta se o adversário mudar de ataque.",
+        "P6 parado no fundo (8 m+) → pipe rápido cai antes de ele se mover.",
+        "Z1/Z5 demasiado abertos nas linhas → eixo central descoberto.",
+        "Sem comunicação entre central e asas sobre quem fica com o pipe vs a bola rápida."
+      ]
+    }
+  },
+  "6v6-defense-vs-z2": {
+    "title": "Defesa · ataque adversário pela Z2",
+    "shortDescription": "Espelho perfeito da Z4. Bloco a 2 (ponta na paralela + central na diagonal) contra ataque adversário pela Z2 → chega à nossa esquerda.",
+    "contextLabel": "5-1 · Distribuidor da linha de trás P1 · Bloco a 2 · Perímetro",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante Z2 adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R": "Recetor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Receção + infiltração adversárias",
+        "description": "O atrás deles fez manchete. O distribuidor adversário infiltra a partir do P1 deles para o alvo. A nossa defesa lê em READY."
+      },
+      "s2": {
+        "title": "2. Passe alto adversário para a Z2",
+        "description": "O distribuidor adversário distribui para a asa direita deles. O ataque chega ao nosso canto frente-ESQUERDA. Configuração em espelho perfeito da Z4."
+      },
+      "s3": {
+        "title": "3. Bloco a 2 em espelho + ajuste defensivo",
+        "description": "Ponta (P4) bloqueia paralela + central (P3) fecha diagonal. Oposto (P2) bloqueador secundário à direita na linha dos 3 m. Líbero defende a paralela esquerda profunda. P1 ocupa a diagonal longa."
+      },
+      "s4": {
+        "title": "4. Remate adversário + bloco a 2",
+        "description": "A asa direita adversária bate em diagonal longa. Ponta e central saltam. Parados no contacto obrigatório."
+      },
+      "s5": {
+        "title": "5. Defesa do distribuidor na diagonal",
+        "description": "O distribuidor (P1) está na trajetória principal da diagonal longa. Manchete defensiva — questão imediata: quem faz o 2º toque?"
+      },
+      "s6": {
+        "title": "6. Distribuidor de reserva + contra-ataque",
+        "description": "O oposto deixa a posição de bloqueador secundário para fazer o 2º toque. Distribuição para a ponta na zona 4 que prepara a batida."
+      },
+      "s7": {
+        "title": "7. RESET — regresso à base defensiva",
+        "description": "Todos passam à posição de base assim que a bola regressa ao lado adversário."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Espelho perfeito da Z4: ponta (P4 = OH) bloqueia paralela + central (P3) fecha diagonal.",
+        "O oposto (P2 = OPP) torna-se bloqueador secundário do lado direito, recua para a linha dos 3 m.",
+        "O distribuidor em P1 (linha de trás) defende a diagonal longa.",
+        "Gestão crítica: se o distribuidor estiver em P2 (linha da frente), É ELE que bloqueia a paralela — transição tensa.",
+        "Se o distribuidor defender em P1 → 2º toque pelo oposto (distribuidor de reserva) é obrigatório."
+      ],
+      "commonMistakes": [
+        "Oposto a bloquear a partir da zona 2 → bloqueador secundário em falta do lado direito.",
+        "Central que não se alinha com a ponta → bloco aberto.",
+        "Líbero mal colocado em Z2 — defende a PARALELA profunda aqui, não a diagonal longa.",
+        "Distribuidor que defende E quer distribuir → confusão no 2º toque."
+      ]
+    }
+  },
+  "6v6-defense-vs-z3": {
+    "title": "Defesa · ataque adversário pela Z3 (bola rápida / tempo 1)",
+    "shortDescription": "Bloco a 1 em leitura (central) contra ataque rápido central adversário — atrás avançados em um metro.",
+    "contextLabel": "5-1 · Bloco a 1 (read) · Parados no contacto",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R4": "Ponta adversária",
+      "OPP_R": "Recetor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Receção adversária + infiltração relâmpago",
+        "description": "O atrás deles acabou de fazer manchete. O distribuidor corre para a rede para uma bola rápida. Tempo 1 = 0,3-0,5 s entre passe e batida. O nosso central observa o movimento do central adversário, já em deslocamento."
+      },
+      "s2": {
+        "title": "2. Passe esticado + central no ar",
+        "description": "O distribuidor adversário envia um passe muito baixo e esticado ao central que já levantou voo. As nossas asas baixam para a linha dos 3 m para libertar rechaços do bloco."
+      },
+      "s3": {
+        "title": "3. Bloco a 1 + remate rápido",
+        "description": "O nosso central salta sozinho em leitura. O central adversário bate em diagonal curta. A batida mais perigosa: bola que mergulha debaixo do bloco."
+      },
+      "s4": {
+        "title": "4. Defesa do distribuidor na paralela",
+        "description": "Z1 (distribuidor) e Z5 (líbero) avançaram para ~7 m porque os ângulos são curtos numa bola rápida. O distribuidor (Z1) recupera no seu corredor."
+      },
+      "s5": {
+        "title": "5. 2º toque pelo oposto (distribuidor de reserva)",
+        "description": "Como o nosso distribuidor defendeu, o oposto em P2 faz o 2º toque para distribuir. A nossa ponta prepara um contra-ataque na zona 4."
+      },
+      "s6": {
+        "title": "6. RESET — regresso à base",
+        "description": "Passagem à posição de base assim que o distribuidor adversário toca na bola. A defesa reorganiza-se para a próxima sequência."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloco a 1 na bola rápida central: só o central salta (read mais frequente, commit se o scouting for forte).",
+        "Z1 e Z5 AVANÇAM um metro (~7,5 m) porque os ângulos são mais curtos numa bola rápida.",
+        "Asas mantêm-se sobre a linha dos 3 m (~2-2,5 m da rede) para rechaços do bloco.",
+        "\"Parados no contacto\": todos parados e equilibrados no momento exato da batida."
+      ],
+      "commonMistakes": [
+        "Todos os jogadores da frente a saltar → deixa as asas abertas para o passe seguinte.",
+        "Bloco tarde demais → bola passa por cima das mãos.",
+        "\"False stepping\" (primeiro passo atrás) → desperdiçar o pouco tempo disponível.",
+        "Z1/Z5 parados no fundo (8 m+) → bola rápida cai curta antes de eles se moverem."
+      ]
+    }
+  },
+  "6v6-defense-vs-z4": {
+    "title": "Defesa · ataque adversário pela Z4",
+    "shortDescription": "Bloco a 2 num ataque adversário pela zona 4 (asa esquerda deles → chega à nossa direita) em defesa de perímetro.",
+    "contextLabel": "5-1 · Distribuidor da linha de trás P1 · Bloco a 2 · Perímetro",
+    "players": {
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante Z4 adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R": "Recetor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Receção + infiltração adversárias",
+        "description": "O atrás deles acabou de fazer manchete. O distribuidor adversário infiltra em direção ao seu alvo entre a Z2 e a Z3. A nossa defesa lê em READY, sequência visual \"bola → distribuidor → bola → atacante\"."
+      },
+      "s2": {
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "O distribuidor adversário distribui um passe alto para a asa esquerda deles. O ataque vai chegar ao nosso canto frente-direita. A linha da frente já identifica a zona de ataque."
+      },
+      "s3": {
+        "title": "3. Bloco a 2 + ajuste em perímetro",
+        "description": "Oposto (P2) na paralela + central (P3) fecha a diagonal. R4 bloqueador secundário sobre a linha dos 3 m do lado esquerdo. Líbero na diagonal longa ~7,5 m, P6 no eixo a 8 m, P1 na paralela profunda na sombra do bloco."
+      },
+      "s4": {
+        "title": "4. Remate adversário + bloco a 2",
+        "description": "O atacante adversário bate em diagonal longa. Oposto e central saltam em paralelo. No momento do contacto, todos os defensores estão parados e equilibrados (\"parados no contacto\")."
+      },
+      "s5": {
+        "title": "5. Defesa do líbero na diagonal longa",
+        "description": "O líbero está exatamente sobre a trajetória principal (diagonal longa). Manchete alta para a zona 2-3 para preparar o contra-ataque."
+      },
+      "s6": {
+        "title": "6. Contra-ataque pela ponta",
+        "description": "O nosso distribuidor entrega um passe alto à ponta que recuou para a linha dos 3 m. Batida em diagonal longa para o lado adversário para fechar a jogada."
+      },
+      "s7": {
+        "title": "7. RESET — regresso à base defensiva",
+        "description": "Todos passam à posição de base assim que a bola regressa ao lado adversário — sem transição parada em formação de receção."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Bloco a 2: oposto (P2) na paralela + central (P3) na diagonal. É a configuração padrão FIVB em Z4 adversária.",
+        "Bloqueador secundário = ponta (P4) na linha dos 3 m do lado esquerdo — cobre cut shot e amorti curto.",
+        "Sistema de perímetro: líbero (P5) na diagonal longa ~7,5 m, P6 no eixo ~8 m, P1 na paralela profunda na sombra do bloco.",
+        "Líbero alinhado com o ombro interior do bloqueador central — é a sua zona prioritária.",
+        "Batida principal defendida: diagonal longa (a ponta adversária é a mais solicitada)."
+      ],
+      "commonMistakes": [
+        "Bloco aberto involuntariamente (P3 não alinhado com P2) → bola passa entre os bloqueadores.",
+        "Bloqueador secundário parado junto à rede → sombra do bloco descoberta (erro nº 1 segundo Hebert).",
+        "Líbero mal colocado (demasiado perto da rede) → remates profundos caem.",
+        "Distribuidor que bloqueia e depois não chega à rede → 2º toque por um jogador não especializado.",
+        "Defensores ainda em movimento no momento do contacto do atacante (não \"parados no contacto\")."
+      ]
+    }
+  },
+  "4v4-reception-losange": {
+    "title": "4v4 · Receção em losango",
+    "shortDescription": "Formação em losango canónico: distribuidor em P3 (centro da rede) + 2 asas na linha dos 3 m + atrás profundo.",
+    "contextLabel": "4v4 · Losango (1-2-1) · Distribuidor central",
+    "players": {
+      "P": "Distribuidor (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação em losango",
+        "description": "Esquema canónico 1-2-1: distribuidor NO CENTRO da rede (P3), 2 asas na linha dos 3 m (E + D), atrás profundo. Sem líbero permitido no 4v4 escolar. Todos READY."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete pelo atrás",
+        "description": "Serviço alto para a zona central. O único atrás chama \"Minha!\" e avança ligeiramente para a bola."
+      },
+      "s3": {
+        "title": "3. Passe para a asa esquerda",
+        "description": "Manchete alta para o distribuidor no centro da rede (sem infiltração no losango). Distribui para a zona 4. A asa esquerda encadeia a sua corrida curta."
+      },
+      "s4": {
+        "title": "4. Bola disponível + cobertura curta",
+        "description": "O passe chega à zona 4. A asa direita fecha para o centro para cobrir, o atrás avança ligeiramente. Com bloco a 1 adversário, o ângulo de batida mantém-se amplo."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao losango",
+        "description": "Todos retomam a sua posição no losango para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Losango canónico (1-2-1) = a formação 4v4 mais usada.",
+        "Variante \"distribuidor central\": distribuidor em P3 junto à rede, distribui para a esquerda OU para a direita.",
+        "Sem líbero permitido no 4v4 escolar — todos têm de saber receber.",
+        "Cada jogador cobre ~30-40 m² (vs ~20 m² em 6v6)."
+      ],
+      "commonMistakes": [
+        "Confusão em bolas centrais entre 2 zonas → chamada obrigatória.",
+        "Único atrás demasiado recuado → bolas curtas atrás da rede não cobertas.",
+        "Distribuidor que também recebe → impossível fazer o 2º toque a seguir."
+      ]
+    }
+  },
+  "4v4-reception-u": {
+    "title": "4v4 · Receção em U",
+    "shortDescription": "Formação em U: distribuidor fora + 3 recetores (esquerda, atrás, direita).",
+    "contextLabel": "4v4 · U · 4v4 competitivo",
+    "players": {
+      "P": "Distribuidor (escondido)",
+      "R4": "Asa esquerda",
+      "A": "Atrás centro",
+      "A2": "Asa direita",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração em U",
+        "description": "O distribuidor está escondido em P2 junto à rede. 3 recetores em U: asa esquerda, atrás central, asa direita. Cada jogador cobre cerca de 1/3 da largura."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete pela asa esquerda",
+        "description": "Serviço alto para o corredor esquerdo. A asa esquerda chama e fica com a bola no seu corredor. Trajetória alta para dar tempo ao distribuidor."
+      },
+      "s3": {
+        "title": "3. Distribuição para a asa esquerda",
+        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 4v4). Distribuição rápida para a asa esquerda que encadeia imediatamente a sua corrida."
+      },
+      "s4": {
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe chega à zona 4 para a asa esquerda. Sistema mais ofensivo do que o losango: o distribuidor não recebeu, o ataque é rápido e legível."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao U",
+        "description": "Os 3 recetores regressam ao U e o distribuidor volta ao seu esconderijo em P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Receção em U = a configuração 4v4 competitiva mais eficaz.",
+        "3 recetores especializados + distribuidor fora = 1 jogador disponível para o ataque sem ter recebido.",
+        "Alvo: zona 2 (distribuidor fixo) → distribuição rápida.",
+        "Tecnicamente mais exigente do que o losango mas mais ofensiva."
+      ],
+      "commonMistakes": [
+        "Asa que não cobre todo o corredor → bola entre asa e atrás perdida.",
+        "Atrás central demasiado avançado → bolas longas passam por cima.",
+        "Distribuidor inclinado para a receção → confusão."
+      ]
+    }
+  },
+  "5-1-reception-3-receivers": {
+    "title": "Receção · a 3 (5-1)",
+    "shortDescription": "Receção a 3 (líbero + 2 pontas) com distribuidor fora e oposto escondido — formação padrão moderna.",
+    "contextLabel": "5-1 · Receção a 3 · Serviço adversário",
+    "players": {
+      "R4a": "Ponta esquerda",
+      "L": "Líbero",
+      "R4b": "Ponta direita",
+      "C": "Central",
+      "Op": "Oposto (escondido)",
+      "P": "Distribuidor (escondido)",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Posição de receção",
+        "description": "Três recetores em arco: ponta esquerda, líbero central, ponta direita. Cada um cobre ~1/3 da largura. Distribuidor e oposto escondem-se junto à rede, prontos a avançar assim que o servidor bater."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete",
+        "description": "Serviço alto para a ponta esquerda que chama \"Minha!\" e faz manchete. Em paralelo, o distribuidor inicia a sua infiltração a partir do esconderijo em P1 em direção à zona 2-3."
+      },
+      "s3": {
+        "title": "3. Passe alto para a zona 4",
+        "description": "A bola sobe para o alvo (entre P2 e P3) onde o distribuidor chega mesmo a tempo. Entrega um passe alto para a zona 4. A ponta recetora já iniciou o seu recuo para a linha dos 3 m."
+      },
+      "s4": {
+        "title": "4. Bola disponível para o atacante",
+        "description": "A bola chega à zona 4 à altura de batida. A ponta dá os últimos passos antes do salto. A qualidade do passe valida a qualidade da receção inicial."
+      },
+      "s5": {
+        "title": "5. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Receção a 3 = padrão moderno do 5-1. Especialização máxima.",
+        "Alvo: zona 2-3, um braço da rede, altura ~3 m.",
+        "O distribuidor fica escondido junto à rede até o servidor bater, depois infiltra.",
+        "A ponta recetora encadeia IMEDIATAMENTE a sua corrida de balanço."
+      ],
+      "commonMistakes": [
+        "Receção demasiado esticada ou demasiado curta → distribuidor chega tarde.",
+        "Conflito entre 2 recetores → chamada vocal obrigatória.",
+        "Ponta parada após a receção → perde uma opção ofensiva na zona 4."
+      ]
+    }
+  },
+  "5v5-reception-4-receivers": {
+    "title": "5v5 · Receção a 4",
+    "shortDescription": "Formato 5v5: distribuidor fora + 4 recetores em U ou em linha.",
+    "contextLabel": "5v5 · 4 recetores · Formato híbrido",
+    "players": {
+      "P": "Distribuidor (fora)",
+      "R4a": "Frente esquerda",
+      "C": "Frente direita / central",
+      "A1": "Trás esquerda",
+      "A2": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração 5v5",
+        "description": "O distribuidor (em P2) está fora junto à rede. Os 4 recetores formam um U: 2 sobre a linha dos 3 m, 2 profundos. O melhor recetor fica na zona mais exposta."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete pelo atrás",
+        "description": "Serviço alto para o corredor trás-esquerda. O atrás esquerdo chama e faz manchete no seu corredor."
+      },
+      "s3": {
+        "title": "3. Passe para a zona 4",
+        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 5v5). Distribuição rápida para a asa esquerda. A frente esquerda inicia a sua corrida."
+      },
+      "s4": {
+        "title": "4. Bola disponível — cobertura a 3",
+        "description": "O passe chega à zona 4. A frente esquerda dá os seus passos. A cobertura em 5v5 é feita apenas com 3 jogadores (não com 5 como em 6v6) — o central e o distribuidor ficam perto."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao U",
+        "description": "Os 4 recetores encontram o seu lugar no U, distribuidor fixo em P2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Em 5v5 sem líbero, o melhor recetor fica na zona mais exposta.",
+        "Formação em U: 2 recetores sobre a linha dos 3 m + 2 profundos.",
+        "Variante em linha possível (4 alinhados a meio-campo) se os níveis forem semelhantes.",
+        "Sem infiltração → distribuidor fixo (sistema 4-1 simplificado)."
+      ],
+      "commonMistakes": [
+        "Forma de U demasiado fechada → diagonais longas descobertas.",
+        "Recetor fraco → isolá-lo na zona mais pequena.",
+        "Distribuidor que ainda infiltra → confusão com o 6v6 padrão."
+      ]
+    }
+  },
+  "5v5-reception-pentagon": {
+    "title": "5v5 · Receção em pentágono",
+    "shortDescription": "Receção em pentágono (5 jogadores sem distribuidor fora) — versão iniciante ou recreativa.",
+    "contextLabel": "5v5 · Pentágono · Sem distribuidor dedicado",
+    "players": {
+      "A1": "Frente esquerda",
+      "C": "Centro",
+      "A2": "Frente direita",
+      "A3": "Trás esquerda",
+      "A4": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Pentágono a 5",
+        "description": "Todos os jogadores recebem. Sem distribuidor dedicado — quem toca primeiro deixa o 2º toque ao jogador mais perto da rede. Configuração recreativa / iniciante."
+      },
+      "s2": {
+        "title": "2. Serviço + central chama",
+        "description": "Serviço para a zona média central. O jogador central chama e faz manchete — é a sua área no pentágono."
+      },
+      "s3": {
+        "title": "3. Passe de oportunidade",
+        "description": "A bola sobe para o centro da rede. A frente direita, mais perto da bola, avança e faz o 2º toque com um passe alto consoante a qualidade da receção."
+      },
+      "s4": {
+        "title": "4. Bola disponível — sistema simples",
+        "description": "O passe vai para a frente esquerda. Distribuição legível, ideal para iniciantes. Qualquer jogador pode fazer o 2º toque consoante o ângulo da bola."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao pentágono",
+        "description": "Os 5 jogadores encontram o seu lugar no pentágono para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Pentágono sem distribuidor dedicado = configuração recreativa ou de iniciante.",
+        "5 jogadores em pentágono: 2 à frente, 1 ao centro, 2 atrás.",
+        "Qualquer jogador pode fazer o 2º toque consoante onde chega a bola.",
+        "Vantagem: grande adaptabilidade. Desvantagem: menor consistência ofensiva."
+      ],
+      "commonMistakes": [
+        "Sem hierarquia no 2º toque → 2 jogadores hesitam.",
+        "Central parado → bolas em cada lado falhadas.",
+        "Passes sistematicamente altos sem distribuição clara."
+      ]
+    }
+  },
+  "6v6-reception-2-receivers": {
+    "title": "Receção · a 2 (elite)",
+    "shortDescription": "Receção a 2 ultra-especializada (líbero + ponta): todos os outros prontos a atacar.",
+    "contextLabel": "5-1 · Receção a 2 · Elite / free balls",
+    "players": {
+      "L": "Líbero",
+      "R4a": "Ponta recetora",
+      "R4b": "Ponta atacante",
+      "C": "Central",
+      "Op": "Oposto (escondido)",
+      "P": "Distribuidor (escondido)",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Configuração a 2 recetores",
+        "description": "Apenas 2 recetores: líbero do lado esquerdo, ponta recetora do lado direito. Os outros 4 jogadores já estão em postura de ataque, prontos a arrancar assim que o serviço for batido."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete do líbero",
+        "description": "Serviço pela esquerda. O líbero chama e faz manchete. Com apenas 2 zonas, a exigência técnica é extrema: é necessário um líbero excecional. O distribuidor inicia a sua infiltração."
+      },
+      "s3": {
+        "title": "3. Passe + corridas simultâneas",
+        "description": "A bola sobe para o alvo. O distribuidor distribui para a zona 4. A ponta atacante, livre de qualquer receção, inicia uma corrida rápida a toda a velocidade — chega em pleno poder."
+      },
+      "s4": {
+        "title": "4. Bola disponível — variedade máxima",
+        "description": "A bola chega à zona 4 para a ponta atacante. Nesse momento o distribuidor tem simultaneamente um central em bola rápida e um oposto em ataque da linha de trás disponíveis — combinações a 3 atacantes possíveis."
+      },
+      "s5": {
+        "title": "5. RESET — regresso à formação a 2",
+        "description": "O líbero e a ponta recetora regressam às suas zonas, os atacantes reposicionam-se prontos a atacar."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Receção a 2 = configuração de elite (voleibol profissional).",
+        "Usada em serviços fáceis ou rotações \"distribuidor da frente\".",
+        "Variedade ofensiva máxima: todos os atacantes disponíveis imediatamente.",
+        "Exigência técnica extrema: 2 recetores sólidos obrigatórios."
+      ],
+      "commonMistakes": [
+        "Adotar este sistema contra um serviço potente → receções catastróficas.",
+        "Ponta atacante que não inicia a corrida em paralelo → opção perdida.",
+        "Sem chamada → hesitação entre os 2 recetores."
+      ]
+    }
+  },
+  "6v6-reception-4-2": {
+    "title": "Receção · 4-2 (4 recetores)",
+    "shortDescription": "Sistema 4-2: distribuidor fixo em P2 + 4 recetores (as 2 pontas + central + atrás).",
+    "contextLabel": "4-2 · 4 recetores · Distribuidor da frente fixo",
+    "players": {
+      "P": "Distribuidor (P2 fixo)",
+      "C2": "Central da frente",
+      "R4a": "Ponta esquerda",
+      "C": "Central de trás",
+      "R4b": "Ponta direita",
+      "P2": "Distribuidor de trás",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Esquema 4-2",
+        "description": "Sistema 4-2: 2 distribuidores em oposição. O distribuidor da frente (P2) e o central da frente saem para a rede. 4 recetores em trapézio: 2 pontas na diagonal, central de trás e distribuidor de trás profundos."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete pela ponta esquerda",
+        "description": "Serviço alto para o corredor esquerdo. A ponta esquerda chama e faz manchete. O distribuidor já está fixo em P2 junto à rede, sem infiltração."
+      },
+      "s3": {
+        "title": "3. Passe para a asa esquerda",
+        "description": "A bola chega ao distribuidor fixo em P2 (alvo fácil, sem deslocamento). Distribui para a asa esquerda. A ponta esquerda encadeia imediatamente a sua corrida."
+      },
+      "s4": {
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe está em posição. No 4-2 existem apenas 2 opções ofensivas à frente (o central e a asa) → distribuição legível mas limitada."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao trapézio",
+        "description": "Toda a equipa retoma a sua posição no sistema 4-2."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Receção a 4 = sistema 4-2. 2 jogadores da linha da frente fora (distribuidor + central da frente).",
+        "Zonas maiores do que num W mas menos exigentes do que uma receção a 3.",
+        "Alvo fácil: o distribuidor não se desloca.",
+        "Desvantagem: apenas 2 atacantes à frente."
+      ],
+      "commonMistakes": [
+        "Central da frente que também recebe → sem commit junto à rede.",
+        "Trapézio demasiado aberto → bolas centrais não cobertas.",
+        "Confusão no 2º toque entre os 2 distribuidores."
+      ]
+    }
+  },
+  "6v6-reception-rotation-p4": {
+    "title": "Receção · Rotação P4 do 5-1",
+    "shortDescription": "Caso especial P4: distribuidor e central deslocam-se para a esquerda para libertar a ponta na zona 6.",
+    "contextLabel": "5-1 · Receção a 3 · Rotação P4 (distribuidor da frente)",
+    "players": {
+      "P": "Distribuidor (P4)",
+      "C": "Central (P3)",
+      "R4b": "Ponta* (P2)",
+      "L": "Líbero (P5)",
+      "R4a": "Ponta (P6)",
+      "Op": "Oposto (P1)",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Deslocamento para a esquerda",
+        "description": "ANTES da batida: o distribuidor (P4) e o central (P3) colocam-se O MAIS À ESQUERDA possível conforme as regras de alinhamento permitem. Este deslocamento liberta a zona 6 para a ponta recetora."
+      },
+      "s2": {
+        "title": "2. Serviço + manchete pela ponta em P6",
+        "description": "Serviço para a zona central 6. A ponta em P6 chama e faz manchete na zona libertada pelo deslocamento do distribuidor. Três recetores: líbero, ponta e oposto (na borda)."
+      },
+      "s3": {
+        "title": "3. Infiltração + switch da ponta*",
+        "description": "O distribuidor desloca-se de P4 para a zona 2-3. Simultaneamente, a ponta* em P2 cruza para P4 para atacar. O central reposiciona-se na zona 3."
+      },
+      "s4": {
+        "title": "4. Bola disponível para a ponta* na zona 4",
+        "description": "O passe chega à ponta* que terminou o seu cruzamento. Com apenas 2 atacantes à frente (ponta* + central), a opção principal é a asa esquerda."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao deslocamento",
+        "description": "Todos os jogadores retomam o deslocamento para a esquerda para o próximo serviço em rotação P4."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Em P4, o distribuidor e o central DEVEM deslocar-se para a esquerda no serviço.",
+        "Este deslocamento abre a zona 6 para a receção da ponta em P6.",
+        "Switch distribuidor↔ponta* obrigatório durante o passe.",
+        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
+      ],
+      "commonMistakes": [
+        "Deslocamento esquecido → conflito de receção na zona 6.",
+        "Switch demasiado tardio → a ponta* ataca em P2 (lado errado).",
+        "Oposto que recebe → perde a opção de ataque da linha de trás."
+      ]
+    }
+  },
+  "6v6-reception-semi-circle": {
+    "title": "Receção · semicírculo",
+    "shortDescription": "Receção em arco aberto para o servidor, equidistante. Etapa Sub-15/Sub-18.",
+    "contextLabel": "5-1 · Semicírculo · Sub-15/Sub-18",
+    "players": {
+      "P": "Distribuidor (escondido)",
+      "R4a": "Ponta esquerda",
+      "C": "Central",
+      "L": "Líbero",
+      "R4b": "Ponta direita",
+      "Op": "Oposto",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Arco semicircular",
+        "description": "Os 5 recetores formam um arco equidistante do servidor. Todos orientados para o distribuidor escondido em P1. O central fica em receção (vs fora na formação a 3)."
+      },
+      "s2": {
+        "title": "2. Serviço + leitura comum",
+        "description": "Serviço alto para a zona central. Todos os jogadores leem na mesma direção. O central chama a sua bola — é a sua zona no arco."
+      },
+      "s3": {
+        "title": "3. Infiltração + passe alto",
+        "description": "O distribuidor sai do esconderijo enquanto a bola sobe. Chega ao alvo na zona 2-3 e distribui para a asa esquerda onde a ponta esquerda já iniciou a sua corrida."
+      },
+      "s4": {
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe chega à zona 4. A ponta esquerda está em posição de bater. Distribuição clássica e legível — típica da etapa de aprendizagem Sub-15/Sub-18."
+      },
+      "s5": {
+        "title": "5. RESET — regresso ao arco",
+        "description": "Todos regressam ao arco semicircular para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Arco semicircular = etapa intermédia entre o W e a receção a 3.",
+        "Os 5 jogadores equidistantes do servidor → cobertura homogénea.",
+        "Adaptada a equipas jovens (Sub-15/Sub-18) em aprendizagem da especialização.",
+        "Mantém um central em receção (vs receção a 3 onde está fora)."
+      ],
+      "commonMistakes": [
+        "Arco demasiado aberto para as laterais → buracos no centro.",
+        "Jogadores demasiado afastados do servidor → reação tardia a serviços rápidos.",
+        "Conflito com o distribuidor que também quer receber."
+      ]
+    }
+  },
+  "6v6-reception-w": {
+    "title": "Receção · W (5 recetores)",
+    "shortDescription": "Formação em W: 5 jogadores exceto o distribuidor. Adequada a iniciantes e ao sistema 4-2.",
+    "contextLabel": "4-2 · W · Iniciantes / Sub-13",
+    "players": {
+      "P": "Distribuidor (fora)",
+      "R4a": "Frente esquerda",
+      "R4b": "Frente direita",
+      "C": "Jogador central",
+      "A1": "Trás esquerda",
+      "A2": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
+    },
+    "steps": {
+      "s1": {
+        "title": "1. Formação em W",
+        "description": "Esquema em W: 2 jogadores da frente a meio-campo, 1 jogador central no meio, 2 atrás profundos. O distribuidor já está fora junto à rede em P2 (sistema 4-2). Cada jogador defende uma zona pequena e bem definida."
+      },
+      "s2": {
+        "title": "2. Serviço + jogador central chama",
+        "description": "Serviço alto para a zona central. O jogador central chama \"Minha!\" porque a bola cai no bolso central do W, equidistante dos jogadores da frente."
+      },
+      "s3": {
+        "title": "3. Passe alto para a zona 4",
+        "description": "Manchete dirigida à zona 2 onde o distribuidor já espera junto à rede (sem infiltração no 4-2). Distribui um passe alto para a zona 4. A frente esquerda inicia a sua corrida."
+      },
+      "s4": {
+        "title": "4. Bola disponível para o atacante",
+        "description": "A bola chega à zona 4. A frente esquerda dá os últimos passos. No 4-2, as opções ofensivas são limitadas (2 atacantes à frente), mas a simplicidade do sistema compensa."
+      },
+      "s5": {
+        "title": "5. RESET — regresso à formação em W",
+        "description": "Todos regressam à sua zona no W para o próximo serviço."
+      }
+    },
+    "summary": {
+      "keyPoints": [
+        "Formação em W = 5 recetores, o distribuidor sai para fora.",
+        "Zonas individuais pequenas → menos dúvidas, poucos conflitos.",
+        "Ideal em Sub-13/Sub-15 e no sistema 4-2 (iniciantes).",
+        "Desvantagem: os atacantes especializados ficam limitados na receção."
+      ],
+      "commonMistakes": [
+        "Conflito central entre jogador central e jogadores da frente → chamada obrigatória.",
+        "Jogadores demasiado parados na sua zona → bola entre 2 zonas perdida.",
+        "Distribuidor parado em receção → impossível fazer o 2º toque."
+      ]
+    }
+  }
+}

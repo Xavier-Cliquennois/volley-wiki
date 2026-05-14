@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { type Lang, SUPPORTED_LANGS } from '../i18n';
+import { SUPPORTED_LANGS, LANG_LABELS, LANG_SHORT } from '../i18n';
 import { useCurrentLang, swapLangInPath } from '../i18n/paths';
 
 const STRIPE_STYLE: React.CSSProperties = {
@@ -23,46 +23,121 @@ const NAV_IDLE: React.CSSProperties = {
   color: 'var(--ink)',
 };
 
-const LANG_SHORT: Record<Lang, string> = { fr: 'FR', en: 'EN' };
-
-function LangSwitcher({ inline = false }: { inline?: boolean }) {
+function LangSwitcher({ label }: { label: string }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const lang = useCurrentLang();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Close on outside click / Escape.
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('mousedown', onDown);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('mousedown', onDown);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
   return (
-    <div
-      role="group"
-      aria-label="Language"
-      style={{
-        display: 'inline-flex',
-        gap: 0,
-        border: '2.5px solid var(--ink)',
-        background: 'var(--cream)',
-        boxShadow: inline ? 'none' : '2px 2px 0 var(--ink)',
-      }}
-    >
-      {SUPPORTED_LANGS.map((l, i) => {
-        const active = l === lang;
-        return (
-          <Link
-            key={l}
-            to={`${swapLangInPath(location.pathname, l)}${location.search}${location.hash}`}
-            replace
-            aria-current={active ? 'true' : undefined}
-            style={{
-              padding: '4px 10px',
-              fontFamily: '"Bungee", sans-serif',
-              fontSize: 11,
-              letterSpacing: '0.08em',
-              textDecoration: 'none',
-              color: active ? 'var(--cream)' : 'var(--ink)',
-              background: active ? 'var(--ink)' : 'transparent',
-              borderRight: i === 0 ? '2.5px solid var(--ink)' : 'none',
-            }}
-          >
-            {LANG_SHORT[l]}
-          </Link>
-        );
-      })}
+    <div ref={ref} style={{ position: 'relative' }}>
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label={label}
+        onClick={() => setOpen(o => !o)}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+          padding: '4px 10px',
+          height: 28,
+          border: '2.5px solid var(--ink)',
+          background: open ? 'var(--orange)' : 'var(--cream)',
+          fontFamily: '"Bungee", sans-serif',
+          fontSize: 11,
+          letterSpacing: '0.08em',
+          color: 'var(--ink)',
+          cursor: 'pointer',
+          boxShadow: open ? 'none' : '2px 2px 0 var(--ink)',
+          transform: open ? 'translate(2px, 2px)' : 'none',
+          transition: 'transform 0.08s, box-shadow 0.08s',
+        }}
+      >
+        <span aria-hidden="true" style={{ fontSize: 12 }}>🌐</span>
+        <span>{LANG_SHORT[lang]}</span>
+        <span aria-hidden="true" style={{ fontSize: 9 }}>▾</span>
+      </button>
+      {open && (
+        <ul
+          role="listbox"
+          aria-label={label}
+          style={{
+            position: 'absolute',
+            top: 'calc(100% + 6px)',
+            right: 0,
+            margin: 0,
+            padding: 4,
+            listStyle: 'none',
+            border: '2.5px solid var(--ink)',
+            background: 'var(--cream)',
+            boxShadow: '3px 3px 0 var(--ink)',
+            minWidth: 160,
+            zIndex: 50,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+          }}
+        >
+          {SUPPORTED_LANGS.map(l => {
+            const active = l === lang;
+            const href = `${swapLangInPath(location.pathname, l)}${location.search}${location.hash}`;
+            return (
+              <li key={l}>
+                <Link
+                  to={href}
+                  replace
+                  role="option"
+                  aria-selected={active}
+                  onClick={(e) => {
+                    // Same-tab swap, close immediately for snappier UX.
+                    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+                    e.preventDefault();
+                    navigate(href, { replace: true });
+                    setOpen(false);
+                  }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: 10,
+                    padding: '7px 10px',
+                    textDecoration: 'none',
+                    fontFamily: '"DM Sans", sans-serif',
+                    fontSize: 13,
+                    color: active ? 'var(--cream)' : 'var(--ink)',
+                    background: active ? 'var(--ink)' : 'transparent',
+                  }}
+                >
+                  <span>{LANG_LABELS[l]}</span>
+                  <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>
+                    {LANG_SHORT[l]}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }
@@ -155,12 +230,12 @@ export default function Layout() {
               );
             })}
             <div style={{ marginLeft: 8 }}>
-              <LangSwitcher />
+              <LangSwitcher label={t("language.label")} />
             </div>
           </nav>
 
           <div className="lg:hidden" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <LangSwitcher />
+            <LangSwitcher label={t("language.label")} />
             <button
               type="button"
               aria-label={menuOpen ? t('nav.closeMenu') : t('nav.openMenu')}

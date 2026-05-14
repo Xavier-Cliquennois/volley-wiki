@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ DOKÜMANTASYON",
+    "title": "REHBERLER",
+    "subtitle": "Voleybolda gelişmek için ayrıntılı teknik ve taktik rehberler."
+  },
+  "ticketPrefix": "N°",
+  "list": {
+    "service": {
+      "title": "Servis rehberi",
+      "subtitle": "Alttan, float, jump float ve jump topspin",
+      "category": "Teknik",
+      "description": "Biyomekanik, adımlar, yaygın hatalar, antrenmanlar ve taktik bölgelerle 4 servis türü.",
+      "readingTime": "~15 dk",
+      "level": "Başlangıç"
+    },
+    "reception": {
+      "title": "Karşılama rehberi",
+      "subtitle": "Manşet, platform, sistemler ve servisi okuma",
+      "category": "Teknik",
+      "description": "Platform tekniği, temasta donma, hareket, W/U sistemleri ve servis atanı okuma.",
+      "readingTime": "~15 dk",
+      "level": "Başlangıç"
+    },
+    "attaque": {
+      "title": "Saldırı rehberi",
+      "subtitle": "Yaklaşma, zamanlama, vuruşlar ve pozisyonlar",
+      "category": "Teknik",
+      "description": "Smacın 5 fazı, 3-4 adım yaklaşma, pasa göre zamanlama, özel vuruşlar ve hatalar.",
+      "readingTime": "~15 dk",
+      "level": "Orta"
+    },
+    "contre": {
+      "title": "Blok rehberi",
+      "subtitle": "Zamanlama, blok türleri ve oyun okuma",
+      "category": "Teknik",
+      "description": "Zamanlama, blok türleri, elit görsel sıra, read vs commit blocking ve antrenmanlar.",
+      "readingTime": "~10 dk",
+      "level": "Orta"
+    },
+    "positionnement-defense": {
+      "title": "Savunma konumlanması",
+      "subtitle": "Pozisyona ve duruma göre kendini konumlandır",
+      "category": "Taktik",
+      "description": "Bölge sorumlulukları, rakip saldırı bölgesine göre konumlanma, sistemler ve iletişim.",
+      "readingTime": "~20 dk",
+      "level": "Orta"
+    }
+  },
+  "detail": {
+    "backLink": "← REHBERLER",
+    "sectionTitle": "★ REHBER İÇERİĞİ ★",
+    "notFound": "Rehber bulunamadı."
+  },
+  "defenseHub": {
+    "backLink": "← REHBERLER",
+    "description": "Savunma konumlanması, sahadaki oyuncu sayısıyla değişir. Eksiksiz rehbere erişmek için formatınızı seçin: bölge sorumlulukları, sistemler (A/B, man-up, 1-2-2…) ve rakip saldırı bölgesine göre uyarlama.",
+    "cardDescription": "{{size}} formatına uyarlanmış savunma, bölgeler, sistemler ve ayrıntılı yerleştirmeler."
+  },
+  "defenseSized": {
+    "backLink": "← TÜM FORMATLAR"
+  }
+}

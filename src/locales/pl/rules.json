@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOKUMENTACJA",
+    "title": "PRZEPISY SIATKÓWKI",
+    "subtitle": "Uproszczone przepisy FIVB — niezbędne zasady, by zrozumieć i grać."
+  },
+  "warning": "Ta strona jest edukacyjnym streszczeniem. W zawodach oficjalnych należy stosować <strong>oficjalne przepisy FIVB</strong>.",
+  "quickFaultsTitle": "CZĘSTE BŁĘDY",
+  "quickFaults": [
+    "Dotknięcie siatki podczas gry",
+    "Więcej niż 3 odbicia drużyny",
+    "Podwójne odbicie tego samego zawodnika",
+    "Niesienie / przeniesienie piłki",
+    "Atak z głębi ponad siatką ze strefy ataku",
+    "Błąd stopy przy zagrywce (przekroczenie linii)",
+    "Zagrywka przed gwizdkiem",
+    "Błąd ustawienia przy rotacji"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "Podstawy",
+      "num": "01",
+      "rules": [
+        { "title": "Format meczu", "content": "Mecz rozgrywany jest do trzech wygranych setów (best of 5). Każdy set gra się do 25 punktów z minimum 2-punktową przewagą. Jeśli potrzebny jest 5. set, gra się go do 15 punktów." },
+        { "title": "Drużyny", "content": "6 zawodników z każdej strony na boisku. Drużyna może mieć do 6 zmienników i jednego libero. Maksymalnie 6 zwykłych zmian na set (libero nie liczy się)." },
+        { "title": "Zagrywka", "content": "Zagrywka jest wykonywana ze strefy zagrywki za linią końcową. Piłka musi przekroczyć siatkę i wpaść na boisko przeciwnika. Zagrywający ma 8 sekund po gwizdku, by uderzyć. Zagrywka, która dotyka siatki i wpada na boisko przeciwnika, jest DOBRA (let serve dozwolony od 2001)." },
+        { "title": "Punkt w każdej wymianie", "content": "Od 1999 roku (system rally point) punkt zdobywa się w każdej wymianie, niezależnie od tego, która drużyna zagrywała. Drużyna zdobywająca punkt przejmuje zagrywkę." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Odbicia i błędy",
+      "num": "02",
+      "rules": [
+        { "title": "Maksymalnie 3 odbicia", "content": "Drużyna ma do 3 odbić, by odesłać piłkę. Blok nie liczy się jako odbicie drużyny — drużyna nadal ma 3 odbicia po bloku." },
+        { "title": "Podwójne odbicie", "content": "Zawodnik nie może dotknąć piłki dwa razy z rzędu, z wyjątkiem pierwszego kontaktu drużyny (odbiór/obrona). Wyjątek dla bloku. Nowy eksperyment FIVB 2025-2026: podwójne odbicie dozwolone przy wystawie (2. odbiciu), pod warunkiem że piłka pozostanie po tej samej stronie." },
+        { "title": "Błąd siatki", "content": "Dotknięcie siatki podczas akcji gry piłką jest błędem. Dotknięcie poza akcją lub poza antenkami nie jest błędem. Częściowe przejście pod siatką jest dozwolone, jeśli nie przeszkadza przeciwnikowi. Cel FIVB 2025: \"promować płynną grę\"." },
+        { "title": "Piłka na liniach", "content": "Piłka, która spada na linię, jest \"w polu\". Piłka, która przekracza poza antenkami lub poza przestrzenią przejścia, jest aut." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotacja i pozycje",
+      "num": "03",
+      "rules": [
+        { "title": "Obowiązkowa rotacja", "content": "Przy każdej zmianie zagrywki drużyna wygrywająca zagrywkę rotuje zgodnie z ruchem wskazówek zegara: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. Zawodnik przechodzący z P2→P1 staje się nowym zagrywającym." },
+        { "title": "Błąd ustawienia", "content": "W momencie uderzenia przez zagrywającego zawodnicy muszą przestrzegać kolejności rotacji (brak overlap po przekątnej). Błąd = punkt + zagrywka dla przeciwnika. Zmiana 2025: zasada overlap dotyczy teraz tylko drużyny PRZYJMUJĄCEJ — drużyna zagrywająca może ustawić się dowolnie." },
+        { "title": "Zasada 3 metrów", "content": "Zawodnicy linii obrony (P1, P5, P6) nie mogą atakować ponad siatką ze strefy ataku. Mogą wyskoczyć zza linii 3 m i wylądować w strefie ataku — to jest legalne." },
+        { "title": "Libero", "content": "Libero nosi kontrastującą koszulkę i gra tylko w linii obrony (P1, P5, P6). Nieograniczona liczba nielicznych zmian. Nie może blokować ani atakować ponad siatką. Może zagrywać od 2021 roku w jednej rotacji na set. Może być kapitanem od 2021 roku. Ograniczenie: jeśli libero wystawia sposobem górnym ze strefy ataku, partner nie może atakować piłki ponad siatką." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Sytuacje szczególne",
+      "num": "04",
+      "rules": [
+        { "title": "Przerwy na żądanie", "content": "Każda drużyna ma 2 przerwy po 30 sekund na set. Automatyczne techniczne przerwy przy 8. i 16. punkcie w setach 1-4 są stosowane w niektórych zawodach FIVB." },
+        { "title": "Zagrywka — kluczowe zasady", "content": "8 sekund na uderzenie po gwizdku. Dozwolony tylko jeden podrzut, ale zagrywający może raz pozwolić piłce spaść bez kary. Błąd stopy: w momencie kontaktu (lub wybicia) zagrywający nie może dotykać linii końcowej ani boiska. Zasłanianie zagrywki: partnerzy nie mogą podnosić rąk nad głową podczas zagrywki (przepis 2025)." },
+        { "title": "Atak z głębi", "content": "Zawodnik linii obrony może atakować, jeśli wybicie nastąpiło zza linii 3 m (obie stopy). Może też uderzyć piłkę, jeśli jakakolwiek jej część jest poniżej siatki. Blokowanie lub atakowanie zagrywki ponad siatką ze strefy ataku jest błędem." },
+        { "title": "Trzymana piłka", "content": "Kontakt z piłką musi być krótki i czysty. \"Brzydki kontakt ≠ błąd\": niedoskonały kontakt nie jest automatycznie błędem, jeśli piłka odbija się. Standard bardziej liberalny dla odbioru sposobem dolnym niż dla wystawy sposobem górnym." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "Aktualizacje FIVB 2025-2028",
+      "num": "05",
+      "rules": [
+        { "title": "Overlap: tylko przy odbiorze", "content": "Od 2025 roku zasada overlap dotyczy tylko drużyny przyjmującej. Drużyna zagrywająca może zajmować dowolną pozycję na boisku w momencie zagrywki." },
+        { "title": "Zakaz zasłaniania zagrywki", "content": "Zawodnicy drużyny zagrywającej mają teraz zakaz podnoszenia rąk nad głowę podczas zagrywki, aż piłka przekroczy siatkę. Taka zasłona jest karana bezpośrednio." },
+        { "title": "Podwójne odbicie przy wystawie — eksperyment", "content": "Eksperyment FIVB 2025-2026: podwójne odbicie przy wystawie (2. odbiciu) jest dozwolone, pod warunkiem że piłka pozostanie po tej samej stronie. Jeśli eksperyment się powiedzie, przepis może stać się stały." },
+        { "title": "Libero może zagrywać (od 2021)", "content": "Libero może zagrywać od 2021 roku w jednej rotacji na set. Przepis różni się w zależności od federacji (niektóre turnieje USAV i NFHS go nie dopuszczają — sprawdź regulamin zawodów)." }
+      ]
+    }
+  ]
+}

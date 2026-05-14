@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ 戦術",
+    "title": "ゲームシナリオ",
+    "subtitle": "具体的な試合場面を3Dで視覚化し、ステップごとに解説します。"
+  },
+  "construction": {
+    "label": "ページ作成中",
+    "body": "一部の3Dアニメーションには誤りや未完成な箇所が残っている可能性があります。シナリオは順次完成させていきます — ご了承ください。"
+  },
+  "wizard": {
+    "step1": "1 · チームの人数は？",
+    "step2": "2 · どの局面か？",
+    "step3": "3 · どんな具体的状況か？",
+    "noMatch": "この組み合わせに該当するシナリオはまだありません。",
+    "reset": "リセット",
+    "launch": "シナリオを開始 →"
+  },
+  "compactBar": {
+    "format": "形式",
+    "phase": "局面",
+    "scenario": "シナリオ",
+    "reset": "リセット",
+    "resetTitle": "すべてをリセット"
+  },
+  "placeholder": {
+    "title": "シナリオを選択",
+    "selectFormatAndPhase": "上で形式と局面を選択してください。",
+    "noScenarios": "この組み合わせに該当するシナリオはありません。",
+    "clickInList": "上のリストからシナリオをクリックしてください。"
+  },
+  "phase": {
+    "attack": "攻撃",
+    "defense": "守備",
+    "reception": "レセプション"
+  },
+  "player": {
+    "controls": {
+      "play": "再生",
+      "pause": "一時停止",
+      "replay": "リプレイ",
+      "previousStep": "前のステップ",
+      "nextStep": "次のステップ",
+      "camera": "カメラ",
+      "speed": "速度",
+      "auto": "自動",
+      "stepMode": "ステップ",
+      "playbackModeLabel": "再生モード"
+    },
+    "toggles": {
+      "trail": "軌跡",
+      "trailTitle": "ボールの軌道を確認するための軌跡を表示",
+      "zones": "ゾーン",
+      "zonesTitle": "コート上にFIVBの6つのゾーンを表示"
+    },
+    "timeline": {
+      "title": "タイムライン",
+      "clickHint": "クリックで移動"
+    },
+    "cameras": {
+      "DEFAULT": "全景",
+      "TOP_DOWN": "上から",
+      "BEHIND_SERVE": "サーバー視点",
+      "ATTACKER_VIEW": "アタッカー視点"
+    },
+    "summary": {
+      "keyPoints": "ポイント",
+      "commonMistakes": "よくあるミス",
+      "context": "状況"
+    },
+    "step": {
+      "label": "ステップ {{current}} / {{total}}",
+      "defaultTitle": "ステップ {{index}}"
+    },
+    "loading": "読み込み中…"
+  }
+}

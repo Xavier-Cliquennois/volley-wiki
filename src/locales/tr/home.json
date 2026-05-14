@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ İNTERAKTİF DOKÜMANTASYON ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "Voleybolun teknik referansı — 3D animasyonlu teknikler, kurallar, pozisyonlar ve sözlük.",
+    "ctaPrimary": "TEKNİKLERİ GÖR",
+    "ctaSecondary": "KURALLARI OKU"
+  },
+  "sectionsLabel": "★ BÖLÜMLER ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Teknikler",
+      "desc": "Temel voleybol becerilerinin interaktif 3D animasyonları.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Pozisyonlar",
+      "desc": "Sahadaki her pozisyonun rolleri ve sorumlulukları.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Rehberler",
+      "desc": "Diyagramlarla ayrıntılı teknik ve taktik rehberler.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Kurallar",
+      "desc": "Resmi FIVB kuralları sadeleştirilmiş ve açıklamalı.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Sözlük",
+      "desc": "Eksiksiz voleybol teknik terimler sözlüğü.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Senaryolar",
+      "desc": "3D animasyonlu oyun dizileri: saldırı, savunma, karşılama.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

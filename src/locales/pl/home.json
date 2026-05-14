@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ INTERAKTYWNA DOKUMENTACJA ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "Techniczna baza wiedzy o siatkówce — animacje 3D, przepisy, pozycje i słownik.",
+    "ctaPrimary": "ZOBACZ TECHNIKI",
+    "ctaSecondary": "PRZECZYTAJ PRZEPISY"
+  },
+  "sectionsLabel": "★ SEKCJE ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniki",
+      "desc": "Interaktywne animacje 3D fundamentalnych elementów siatkówki.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Pozycje",
+      "desc": "Role i obowiązki każdej pozycji na boisku.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Poradniki",
+      "desc": "Szczegółowe poradniki techniczne i taktyczne z diagramami.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Przepisy",
+      "desc": "Oficjalne przepisy FIVB w uproszczonej i objaśnionej formie.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Słownik",
+      "desc": "Kompletne słownictwo techniczne siatkówki.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scenariusze",
+      "desc": "Animowane sekwencje gry 3D: atak, obrona, odbiór.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "siteLocale": "tr_TR",
+  "ogLocale": "tr_TR",
+  "htmlLang": "tr",
+  "structuredLang": "tr-TR",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — 6'ya 6, 5'e 5 ve 4'e 4 için salon voleybolu rehberi",
+    "description": "Salon voleybol wikisi: pozisyonlar, teknikler, 3D senaryolar, kurallar ve sözlük. 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmıştır."
+  },
+  "techniques": {
+    "title": "Voleybol teknikleri — Servis, pas, saldırı, savunma | Volley-Wiki",
+    "description": "Voleybolun temel tekniklerini öğrenin: servis, karşılama, saldırı, blok, savunma. İnteraktif 3D animasyonlar ve seviyeye göre ipuçları."
+  },
+  "positionsHub": {
+    "title": "Voleybol pozisyonları — 6'ya 6, 5'e 5, 4'e 4 | Volley-Wiki",
+    "description": "Her oyun formatı için salon voleybolu pozisyonlarını ve rollerini keşfedin: 6'ya 6, 5'e 5 ve 4'e 4. Ayrıntılı taktik sistemler."
+  },
+  "positions": {
+    "title": "Voleybol pozisyonları {{size}} — {{config}} | Volley-Wiki",
+    "description": "Voleybol {{label}} pozisyonları ve rolleri: {{configName}} sistemi. {{descriptionExcerpt}}",
+    "articleHeadline": "Voleybol pozisyonları {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "3D voleybol senaryoları — Saldırı, savunma, karşılama | Volley-Wiki",
+    "description": "Somut saldırı, savunma ve karşılama senaryolarını 3D olarak görselleştirin. 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmıştır."
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — {{teamSize}} senaryosu | Volley-Wiki",
+    "description": "{{shortDescription}} Bu {{phase}} senaryosunu adım adım anlatımla 3D olarak izleyin."
+  },
+  "rules": {
+    "title": "Voleybol kuralları — Sadeleştirilmiş FIVB kuralları | Volley-Wiki",
+    "description": "Resmi FIVB voleybol kuralları sade bir şekilde açıklandı: format, saha, rotasyonlar, hatalar, temaslar. Anlamak ve oynamak için temel bilgiler."
+  },
+  "glossary": {
+    "title": "Voleybol sözlüğü — Tüm terimler açıklamalı | Volley-Wiki",
+    "description": "Voleybol terimlerinin eksiksiz sözlüğü: ace, manşet, blok, pipe, libero, servis kazanımı ve daha fazlası. Açık ve net tanımlar."
+  },
+  "guides": {
+    "title": "Voleybol teknik ve taktik rehberleri | Volley-Wiki",
+    "description": "Servis, karşılama, saldırı, blok ve savunma konumlanması hakkında eksiksiz rehberler. Diyagramlar, videolar ve seviyeye göre ipuçları."
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6'ya 6, 5'e 5, 4'e 4 | Volley-Wiki",
+    "description": "{{description}} 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmış rehber."
+  },
+  "defenseSized": {
+    "title": "Savunma konumlanması {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{configName}} sisteminde {{label}} voleybolu için eksiksiz savunma konumlanması rehberi: bölge sorumlulukları, rakip saldırı bölgesine göre savunma.",
+    "articleHeadline": "Savunma konumlanması {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı | Volley-Wiki",
+    "description": "Bu sayfa mevcut değil. Voleybol wikisini keşfetmek için ana sayfaya dönün."
+  },
+  "guideNotFound": {
+    "title": "Rehber bulunamadı | Volley-Wiki",
+    "description": "Bu rehber mevcut değil. Rehberler listesine geri dönün."
+  },
+  "breadcrumbs": {
+    "home": "Ana Sayfa",
+    "techniques": "Teknikler",
+    "positions": "Pozisyonlar",
+    "scenarios": "Senaryolar",
+    "guides": "Rehberler",
+    "rules": "Kurallar",
+    "glossary": "Sözlük",
+    "defense": "Savunma konumlanması"
+  },
+  "phase": {
+    "attack": "saldırı",
+    "defense": "savunma",
+    "reception": "karşılama"
+  }
+}

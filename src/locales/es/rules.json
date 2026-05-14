@@ -1,0 +1,76 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTACIÓN",
+    "title": "REGLAS DEL VOLEIBOL",
+    "subtitle": "Reglamento FIVB simplificado — las reglas esenciales para entender y jugar."
+  },
+  "warning": "Esta página es un resumen pedagógico. Para competiciones oficiales, consulta el <strong>reglamento oficial FIVB</strong>.",
+  "quickFaultsTitle": "FALTAS HABITUALES",
+  "quickFaults": [
+    "Tocar la red durante el juego",
+    "Más de 3 toques por equipo",
+    "Doble contacto del mismo jugador",
+    "Balón retenido / acompañado",
+    "Ataque de zaguero por encima de la red desde la zona delantera",
+    "Pisar la línea al sacar",
+    "Sacar antes del silbato",
+    "Falta de posición en la rotación"
+  ],
+  "sections": [
+    {
+      "id": "basics",
+      "title": "Lo esencial",
+      "num": "01",
+      "rules": [
+        { "title": "Formato del partido", "content": "Un partido se juega al mejor de 5 sets. Cada set se juega a 25 puntos con al menos 2 puntos de ventaja. Si se necesita un 5º set, se juega a 15 puntos." },
+        { "title": "Equipos", "content": "6 jugadores por lado en cancha. Un equipo puede tener hasta 6 suplentes y un líbero. Máximo 6 sustituciones reglamentarias por set (el líbero no se cuenta)." },
+        { "title": "Saque", "content": "El saque se realiza desde la zona de saque detrás de la línea de fondo. El balón debe cruzar la red hacia el campo rival. El sacador dispone de 8 segundos tras el silbato para golpear. Un saque que toca la red y cae en el campo rival es BUENO (let serve legal desde 2001)." },
+        { "title": "Punto en cada jugada", "content": "Desde 1999 (rally point system), se anota un punto en cada jugada, sin importar qué equipo sacó. El equipo que anota recupera el saque." }
+      ]
+    },
+    {
+      "id": "touches",
+      "title": "Contactos y faltas",
+      "num": "02",
+      "rules": [
+        { "title": "Máximo 3 toques", "content": "Un equipo dispone de hasta 3 toques para devolver el balón. El bloqueo no cuenta como toque de equipo — el equipo conserva 3 toques tras un bloqueo." },
+        { "title": "Doble contacto", "content": "Un jugador no puede contactar el balón dos veces seguidas, excepto en el primer toque del equipo (recepción/defensa). Excepción para el bloqueo. Nueva prueba FIVB 2025-2026: doble contacto permitido en la colocación (2º toque) siempre que el balón se quede en el mismo lado." },
+        { "title": "Falta de red", "content": "Tocar la red durante la acción de jugar el balón es falta. Tocar fuera de la acción o fuera de las antenas no es falta. Cruzar parcialmente bajo la red está permitido si no interfiere con el rival. Objetivo FIVB 2025: \"promover un juego fluido\"." },
+        { "title": "Balón sobre las líneas", "content": "Un balón que cae sobre la línea está \"dentro\". Un balón que cruza fuera de las antenas o fuera del espacio de paso está fuera." }
+      ]
+    },
+    {
+      "id": "positions",
+      "title": "Rotación y posiciones",
+      "num": "03",
+      "rules": [
+        { "title": "Rotación obligatoria", "content": "En cada side-out, el equipo que gana el saque rota en el sentido de las agujas del reloj: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. El jugador que pasa de P2→P1 se convierte en el nuevo sacador." },
+        { "title": "Falta de posición", "content": "En el momento en que el sacador golpea, los jugadores deben respetar su orden de rotación (sin overlap diagonal). Falta = punto + saque para el rival. Actualización 2025: la regla de overlap solo se aplica ya al equipo RECEPTOR — el equipo sacador puede colocarse libremente." },
+        { "title": "Regla de los 3 metros", "content": "Los zagueros (P1, P5, P6) no pueden atacar por encima de la red desde la zona delantera. Pueden saltar detrás de la línea de 3 m y caer en la zona delantera — esto es legal." },
+        { "title": "Líbero", "content": "El líbero lleva una camiseta de color contrastado y solo juega en zaga (P1, P5, P6). Sustituciones ilimitadas no contabilizadas. No puede bloquear ni atacar por encima de la red. Puede sacar desde 2021 en una sola rotación por set. Puede ser capitán desde 2021. Restricción: si el líbero coloca de dedos desde la zona delantera, un compañero no puede atacar el balón por encima de la red." }
+      ]
+    },
+    {
+      "id": "special",
+      "title": "Situaciones especiales",
+      "num": "04",
+      "rules": [
+        { "title": "Tiempos muertos", "content": "Cada equipo dispone de 2 tiempos muertos de 30 segundos por set. Los tiempos técnicos automáticos en los puntos 8 y 16 de los sets 1-4 se aplican en algunas competiciones FIVB." },
+        { "title": "Saque — reglas clave", "content": "8 segundos para golpear tras el silbato. Solo se permite un lanzamiento, pero el sacador puede dejar caer el balón una vez sin penalización. Pisar la línea: en el momento del contacto (o del despegue), el sacador no debe tocar la línea de fondo ni la cancha. Pantalla en el saque: los compañeros no deben levantar las manos por encima de la cabeza durante el saque (regla 2025)." },
+        { "title": "Ataque de zaguero", "content": "Un zaguero puede atacar si su despegue se produce detrás de la línea de 3 m (ambos pies). También puede golpear el balón si una parte está por debajo de la red. Bloquear o atacar el saque por encima de la red desde la zona delantera es falta." },
+        { "title": "Balón retenido", "content": "El contacto con el balón debe ser breve y limpio. \"Contacto feo ≠ falta\": un contacto imperfecto no es automáticamente falta si el balón rebota. Estándar más permisivo para el toque de antebrazos que para la colocación de dedos." }
+      ]
+    },
+    {
+      "id": "nouveautes2025",
+      "title": "Novedades FIVB 2025-2028",
+      "num": "05",
+      "rules": [
+        { "title": "Overlap: solo en recepción", "content": "Desde 2025, la regla de overlap solo se aplica al equipo receptor. El equipo sacador puede ocupar cualquier posición en la cancha en el momento del saque." },
+        { "title": "Prohibida la pantalla en el saque", "content": "Los jugadores del equipo sacador tienen ahora prohibido levantar las manos por encima de la cabeza durante el saque hasta que el balón cruce la red. Esta pantalla se sanciona directamente." },
+        { "title": "Doble contacto en la colocación — prueba", "content": "Prueba FIVB 2025-2026: el doble contacto en la colocación (2º toque) está permitido siempre que el balón permanezca en el mismo lado. Si la prueba tiene éxito, la regla podría volverse permanente." },
+        { "title": "El líbero puede sacar (desde 2021)", "content": "El líbero puede sacar desde 2021 en una sola rotación por set. La regla varía según la federación (algunos torneos USAV y NFHS no la admiten — comprueba el reglamento de la competición)." }
+      ]
+    }
+  ]
+}

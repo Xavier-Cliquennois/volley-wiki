@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TÁTICA",
+    "title": "CENÁRIOS DE JOGO",
+    "subtitle": "Visualize situações concretas em 3D com narração passo a passo."
+  },
+  "construction": {
+    "label": "PÁGINA EM CONSTRUÇÃO",
+    "body": "Algumas animações 3D podem ainda conter erros ou estar incompletas. Obrigado pela sua paciência — os cenários estão a ser finalizados."
+  },
+  "wizard": {
+    "step1": "1 · QUANTOS JOGADORES POR EQUIPA?",
+    "step2": "2 · QUE FASE DE JOGO?",
+    "step3": "3 · QUE CONTEXTO ESPECÍFICO?",
+    "noMatch": "Ainda não há cenário disponível para esta combinação.",
+    "reset": "REPOR",
+    "launch": "INICIAR CENÁRIO →"
+  },
+  "compactBar": {
+    "format": "FORMATO",
+    "phase": "FASE",
+    "scenario": "CENÁRIO",
+    "reset": "REPOR",
+    "resetTitle": "Repor tudo"
+  },
+  "placeholder": {
+    "title": "ESCOLHA UM CENÁRIO",
+    "selectFormatAndPhase": "Selecione um formato e uma fase acima.",
+    "noScenarios": "Não há cenário disponível para esta combinação.",
+    "clickInList": "Clique num cenário na lista acima."
+  },
+  "phase": {
+    "attack": "Ataque",
+    "defense": "Defesa",
+    "reception": "Receção"
+  },
+  "player": {
+    "controls": {
+      "play": "Reproduzir",
+      "pause": "Pausa",
+      "replay": "Repetir",
+      "previousStep": "Passo anterior",
+      "nextStep": "Passo seguinte",
+      "camera": "Câmara",
+      "speed": "Velocidade",
+      "auto": "Auto",
+      "stepMode": "Passo",
+      "playbackModeLabel": "Modo de reprodução"
+    },
+    "toggles": {
+      "trail": "Rasto",
+      "trailTitle": "Mostrar um rasto atrás da bola para visualizar a sua trajetória",
+      "zones": "Zonas",
+      "zonesTitle": "Mostrar as 6 zonas FIVB no campo"
+    },
+    "timeline": {
+      "title": "Cronologia",
+      "clickHint": "clique para avançar"
+    },
+    "cameras": {
+      "DEFAULT": "Geral",
+      "TOP_DOWN": "Topo",
+      "BEHIND_SERVE": "Servidor",
+      "ATTACKER_VIEW": "Atacante"
+    },
+    "summary": {
+      "keyPoints": "PONTOS-CHAVE",
+      "commonMistakes": "ERROS COMUNS",
+      "context": "Contexto"
+    },
+    "step": {
+      "label": "Passo {{current}} / {{total}}",
+      "defaultTitle": "Passo {{index}}"
+    },
+    "loading": "A CARREGAR…"
+  }
+}
