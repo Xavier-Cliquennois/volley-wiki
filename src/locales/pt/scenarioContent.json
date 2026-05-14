@@ -1,1992 +1,1992 @@
 {
   "4v4-attack-losange": {
-    "title": "4v4 · Diamond attack",
-    "shortDescription": "Canonical diamond: setter at P3 + 2 wings on the 3 m line + back. Reception → zone-4 attack.",
-    "contextLabel": "4v4 · Diamond (1-2-1) · School / recreational",
+    "title": "4v4 · Ataque em losango",
+    "shortDescription": "Losango canónico: distribuidor em P3 + 2 asas na linha dos 3 m + atrás. Receção → ataque pela zona 4.",
+    "contextLabel": "4v4 · Losango (1-2-1) · Escolar / recreativo",
     "players": {
-      "P": "Setter (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_B": "Opposing block",
-      "OPP_OFF": "Opposing off-blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "P": "Distribuidor (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_B": "Bloco adversário",
+      "OPP_OFF": "Bloqueador secundário adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond formation",
-        "description": "Canonical layout: setter AT THE CENTER of the net (P3) + 2 wings on the 3 m line + back deep."
+        "title": "1. Formação em losango",
+        "description": "Esquema canónico: distribuidor NO CENTRO da rede (P3) + 2 asas na linha dos 3 m + atrás profundo."
       },
       "s2": {
-        "title": "2. Serve + back-court reception",
-        "description": "The lone back moves forward and bumps. High trajectory toward the setter at the net."
+        "title": "2. Serviço + receção no fundo do campo",
+        "description": "O único atrás avança e faz a manchete. Trajetória alta em direção ao distribuidor junto à rede."
       },
       "s3": {
-        "title": "3. Set + approach + coverage",
-        "description": "R4 chains his approach toward zone 4. Setter, A2 and A close into a triangle for coverage. Opposing block slides toward the hitter."
+        "title": "3. Passe + corrida de balanço + cobertura",
+        "description": "R4 encadeia a sua corrida de balanço para a zona 4. Distribuidor, A2 e A fecham num triângulo para cobertura. O bloco adversário desliza em direção ao atacante."
       },
       "s4": {
-        "title": "4. Cross-court spike + single block",
-        "description": "Powerful spike. Against a single block the angle is wide: the hitter can aim long cross-court or short line."
+        "title": "4. Remate em diagonal + bloco a 1",
+        "description": "Remate potente. Contra um bloco a 1, o ângulo é amplo: o atacante pode apontar à diagonal longa ou à paralela curta."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court — arrives a touch too late, the ball has already hit the floor."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa — chega um pouco tarde, a bola já tocou o chão."
       },
       "s6": {
-        "title": "6. RESET — back to diamond",
-        "description": "Everyone resumes their position in the diamond for the next rally. The setter returns to the center of the net."
+        "title": "6. RESET — regresso ao losango",
+        "description": "Todos retomam a sua posição no losango para a próxima jogada. O distribuidor volta para o centro da rede."
       }
     },
     "summary": {
       "keyPoints": [
-        "Canonical diamond = the most common 4v4 formation.",
-        "\"Center setter\" variant: setter at P3, distributes to the left or to the right.",
-        "Standard single opposing block in 4v4: wide attack angle.",
-        "Limited coverage: 3 players around the hitter."
+        "Losango canónico = a formação mais comum no 4v4.",
+        "Variante \"distribuidor central\": distribuidor em P3, distribui para a esquerda ou para a direita.",
+        "Bloco a 1 adversário padrão no 4v4: ângulo de ataque amplo.",
+        "Cobertura limitada: 3 jogadores à volta do atacante."
       ],
       "commonMistakes": [
-        "Setter who also receives → impossible to set behind.",
-        "Wings too deep → difficult set for the center setter.",
-        "Back too deep → no coverage of short block returns."
+        "Distribuidor que também recebe → impossível fazer o passe a seguir.",
+        "Asas demasiado recuadas → passe difícil para o distribuidor central.",
+        "Atrás demasiado profundo → sem cobertura dos rechaços curtos do bloco."
       ]
     }
   },
   "4v4-attack-penetrant": {
-    "title": "4v4 · Penetrating setter",
-    "shortDescription": "Simplified 3-1 system: single setter in P1 penetrates to zone 2, freeing 3 front-row hitters.",
-    "contextLabel": "4v4 · Back-row setter · 3 hitters",
+    "title": "4v4 · Distribuidor a infiltrar",
+    "shortDescription": "Sistema 3-1 simplificado: distribuidor único em P1 infiltra para a zona 2, libertando 3 atacantes à frente.",
+    "contextLabel": "4v4 · Distribuidor de trás · 3 atacantes",
     "players": {
-      "R4": "Left wing (P4)",
-      "C": "Middle (P3)",
-      "A2": "Right wing (P2)",
-      "P": "Setter (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_B": "Opposing block",
-      "OPP_OFF": "Opposing off-blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "R4": "Asa esquerda (P4)",
+      "C": "Central (P3)",
+      "A2": "Asa direita (P2)",
+      "P": "Distribuidor (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_B": "Bloco adversário",
+      "OPP_OFF": "Bloqueador secundário adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 3-1 configuration",
-        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4. No libero: the receiver chains his approach."
+        "title": "1. Configuração 3-1",
+        "description": "Distribuidor único em P1 (linha de trás). 3 atacantes à frente em P2, P3, P4. Sem líbero: o recetor encadeia a sua corrida de balanço."
       },
       "s2": {
-        "title": "2. Serve + reception + penetration",
-        "description": "The left wing bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
+        "title": "2. Serviço + receção + infiltração",
+        "description": "A asa esquerda faz a manchete na receção. O distribuidor inicia simultaneamente a sua infiltração a partir de P1 para a zona 2."
       },
       "s3": {
-        "title": "3. Set + R4 approach",
-        "description": "High set toward the left wing after R4's reception run. The opposing block slides toward him."
+        "title": "3. Passe + corrida de R4",
+        "description": "Passe alto para a asa esquerda após a corrida de receção de R4. O bloco adversário desliza para ele."
       },
       "s4": {
-        "title": "4. Cross-court spike + single block",
-        "description": "Powerful long cross-court spike. With only 3 coverers, they form a short triangle around the hitter."
+        "title": "4. Remate em diagonal + bloco a 1",
+        "description": "Remate potente em diagonal longa. Com apenas 3 jogadores em cobertura, formam um triângulo curto à volta do atacante."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court — arrives 0.1 s too late on impact."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa — chega 0,1 s tarde no impacto."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The setter returns to back-row P1, R4 returns to zone 4. The penetration must be anticipated from the next serve onward."
+        "title": "6. RESET — regresso à formação",
+        "description": "O distribuidor regressa ao P1 da linha de trás, R4 regressa à zona 4. A infiltração tem de ser antecipada já no próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "3-1 system = the 4v4 equivalent of the 5-1. 1 dedicated penetrating setter.",
-        "Advantage: 3 hitters in front at all times, like in 6v6.",
-        "Drawback: requires very clean reception since the setter is not at the net.",
-        "No libero: the receiver also chains his attack approach."
+        "Sistema 3-1 = o equivalente em 4v4 do 5-1. 1 distribuidor dedicado a infiltrar.",
+        "Vantagem: 3 atacantes à frente em todos os momentos, como no 6v6.",
+        "Desvantagem: exige uma receção muito limpa pois o distribuidor não está junto à rede.",
+        "Sem líbero: o recetor encadeia também a sua corrida de balanço de ataque."
       ],
       "commonMistakes": [
-        "Penetration too late → another player has to make the set.",
-        "Reception too short → setter arrives too far from the net.",
-        "Coverage forgotten — opposing block-out = point."
+        "Infiltração demasiado tarde → outro jogador tem de fazer o passe.",
+        "Receção demasiado curta → distribuidor chega longe da rede.",
+        "Cobertura esquecida — block-out adversário = ponto."
       ]
     }
   },
   "4v4-attack-square": {
-    "title": "4v4 · Box attack",
-    "shortDescription": "Box formation (2 front / 2 back): 2 blockers + 2 balanced defenders.",
-    "contextLabel": "4v4 · Box · Double block possible",
+    "title": "4v4 · Ataque em quadrado",
+    "shortDescription": "Formação em quadrado (2 à frente / 2 atrás): 2 bloqueadores + 2 defensores equilibrados.",
+    "contextLabel": "4v4 · Quadrado · Bloco a 2 possível",
     "players": {
-      "P": "Setter-hitter (P2)",
-      "R4": "Hitter (P4)",
-      "A1": "Left back (P5)",
-      "A2": "Right back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "P": "Distribuidor-atacante (P2)",
+      "R4": "Atacante (P4)",
+      "A1": "Trás esquerda (P5)",
+      "A2": "Trás direita (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário",
+      "OPP_D2": "Atrás adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Box configuration",
-        "description": "2 players at the net (P2 and P4), 2 players at the back. Balanced coverage of the court front and back."
+        "title": "1. Configuração em quadrado",
+        "description": "2 jogadores junto à rede (P2 e P4), 2 jogadores atrás. Cobertura equilibrada do campo à frente e atrás."
       },
       "s2": {
-        "title": "2. Serve + high reception",
-        "description": "The left back bumps a lofted pass to the setter-hitter in zone 2."
+        "title": "2. Serviço + receção alta",
+        "description": "O atrás esquerdo faz uma manchete elevada para o distribuidor-atacante na zona 2."
       },
       "s3": {
-        "title": "3. Set to the wing + approach",
-        "description": "The setter distributes to the hitter in zone 4. No middle option (no specialized middle). The double block slides toward the hitter."
+        "title": "3. Passe para a asa + corrida",
+        "description": "O distribuidor distribui para o atacante na zona 4. Sem opção pelo central (não há central especializado). O bloco a 2 desliza para o atacante."
       },
       "s4": {
-        "title": "4. Spike against a double block",
-        "description": "The hitter must choose: short line, long cross-court or tip into the open lane. Double block (vs single block in the diamond) — defense made tougher offensively."
+        "title": "4. Remate contra um bloco a 2",
+        "description": "O atacante tem de escolher: paralela curta, diagonal longa ou amorti no espaço livre. Bloco a 2 (em vez de bloco a 1 do losango) — defesa mais difícil ofensivamente."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court. With only 2 players on the floor, the zone is vulnerable."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa. Com apenas 2 jogadores no chão, a zona fica vulnerável."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes the box for the next rally. This formation suits teams with 2 strong blockers and 2 strong defenders."
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam o quadrado para a próxima jogada. Esta formação é adequada a equipas com 2 bons bloqueadores e 2 bons defensores."
       }
     },
     "summary": {
       "keyPoints": [
-        "Box formation: balance between attack/defense, 2 front zones + 2 back zones.",
-        "Allows a double block (vs single block of the diamond) — better defense at the net.",
-        "But only 2 players on the floor → vulnerable to long cross-courts.",
-        "Good for teams with 2 strong blockers and 2 strong defenders."
+        "Formação em quadrado: equilíbrio entre ataque/defesa, 2 zonas à frente + 2 zonas atrás.",
+        "Permite um bloco a 2 (vs bloco a 1 do losango) — melhor defesa junto à rede.",
+        "Mas apenas 2 jogadores no chão → vulnerável às diagonais longas.",
+        "Boa para equipas com 2 bons bloqueadores e 2 bons defensores."
       ],
       "commonMistakes": [
-        "Net players too far from the center → easy opposing block.",
-        "Backs frozen deep → no short coverage.",
-        "Confusion over who sets: the setter-hitter must always be in front."
+        "Jogadores da rede demasiado afastados do centro → bloco adversário fácil.",
+        "Defensores parados no fundo → sem cobertura curta.",
+        "Confusão sobre quem distribui: o distribuidor-atacante tem de estar sempre à frente."
       ]
     }
   },
   "5v5-attack-pentagon": {
-    "title": "5v5 · Pentagon attack",
-    "shortDescription": "5v5 format: 1 single setter + 1 middle + 2 wings + 1 back. Zone-4 attack.",
-    "contextLabel": "5v5 · 4-1 system · Hybrid format",
+    "title": "5v5 · Ataque em pentágono",
+    "shortDescription": "Formato 5v5: 1 distribuidor único + 1 central + 2 asas + 1 atrás. Ataque pela zona 4.",
+    "contextLabel": "5v5 · Sistema 4-1 · Formato híbrido",
     "players": {
-      "R4": "Left wing",
-      "C": "Middle",
-      "P": "Setter (P2)",
-      "A1": "Left back (P5)",
-      "A2": "Right back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4": "Asa esquerda",
+      "C": "Central",
+      "P": "Distribuidor (P2)",
+      "A1": "Trás esquerda (P5)",
+      "A2": "Trás direita (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Offensive pentagon",
-        "description": "5 players in a pentagon: 3 in front (R4, C, P) + 2 in the back. Regular court coverage. No libero, all backs receive."
+        "title": "1. Pentágono ofensivo",
+        "description": "5 jogadores em pentágono: 3 à frente (R4, C, P) + 2 atrás. Cobertura regular do campo. Sem líbero, todos os jogadores de trás recebem."
       },
       "s2": {
-        "title": "2. Serve + back reception",
-        "description": "The left back takes the first ball. Without a libero, the most reliable back in reception takes it."
+        "title": "2. Serviço + receção pelo atrás",
+        "description": "O atrás esquerdo faz a primeira bola. Sem líbero, recebe o atrás mais fiável."
       },
       "s3": {
-        "title": "3. Set + approach",
-        "description": "The setter, already at the net, easily distributes to zone 4. No penetration in 5v5 — he is in P2. R4 starts his approach."
+        "title": "3. Passe + corrida",
+        "description": "O distribuidor, já junto à rede, distribui facilmente para a zona 4. Sem infiltração no 5v5 — está em P2. R4 inicia a sua corrida."
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "The left wing finishes long cross-court. The opposing block also pentagons up: 2 blockers on the wing."
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "A asa esquerda finaliza em diagonal longa. O bloco adversário também em pentágono: 2 bloqueadores na asa."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the cross-court. Floor defense is rarer with a single back per channel."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal. A defesa de solo é mais rara com um único atrás por corredor."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes the pentagon. Without a libero, rotating the backs is essential to spread the reception load."
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam o pentágono. Sem líbero, rodar os jogadores de trás é essencial para repartir a carga da receção."
       }
     },
     "summary": {
       "keyPoints": [
-        "5v5 = hybrid format (training, missing players). No official FFVB rules.",
-        "Pentagon: 1 player per key zone, regular coverage of the whole court.",
-        "4-1 system = equivalent of the 5-1 but with one less hitter.",
-        "Recommendation: keep the 6v6 5-1 system by removing one non-setter back."
+        "5v5 = formato híbrido (treino, equipas incompletas). Sem regras oficiais FPV.",
+        "Pentágono: 1 jogador por zona-chave, cobertura regular de todo o campo.",
+        "Sistema 4-1 = equivalente ao 5-1 mas com um atacante a menos.",
+        "Recomendação: manter o sistema 5-1 do 6v6, retirando um atrás não distribuidor."
       ],
       "commonMistakes": [
-        "No libero in 5v5 → all backs must be able to receive.",
-        "Trying to triple-block → only 2 floor defenders left.",
-        "Forgetting attack coverage → one less player in coverage."
+        "Sem líbero no 5v5 → todos os jogadores de trás têm de saber receber.",
+        "Tentar bloco a 3 → restam apenas 2 defensores no chão.",
+        "Esquecer a cobertura do ataque → um jogador a menos em cobertura."
       ]
     }
   },
   "6v6-attack-4-2": {
-    "title": "Attack · 4-2 system",
-    "shortDescription": "Beginner 4-2 system: fixed front-row setter in zone 2, 2 hitters available.",
-    "contextLabel": "4-2 · 2 setters in opposition · U13/U15",
+    "title": "Ataque · Sistema 4-2",
+    "shortDescription": "Sistema 4-2 de iniciante: distribuidor fixo à frente na zona 2, 2 atacantes disponíveis.",
+    "contextLabel": "4-2 · 2 distribuidores em diagonal oposta · Sub-13/Sub-15",
     "players": {
-      "R4a": "OH (P4)",
-      "C": "Middle (P3)",
-      "P1": "Setter 1 (P2)",
-      "P2": "Setter 2 (P5)",
-      "C2": "Middle 2 (P6)",
-      "R4b": "OH (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "Ponta (P4)",
+      "C": "Central (P3)",
+      "P1": "Distribuidor 1 (P2)",
+      "P2": "Distribuidor 2 (P5)",
+      "C2": "Central 2 (P6)",
+      "R4b": "Ponta (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 4-2 configuration",
-        "description": "2 setters in diagonal opposition (P2 and P5). The front-row setter (P1) always makes the 2nd touch. W reception with C2 in the center."
+        "title": "1. Configuração 4-2",
+        "description": "2 distribuidores em diagonal oposta (P2 e P5). O distribuidor da frente (P1) faz sempre o 2º toque. Receção em W com C2 no centro."
       },
       "s2": {
-        "title": "2. Serve + central reception",
-        "description": "The back middle takes the first touch in a classic W reception. High trajectory to the front setter in P2."
+        "title": "2. Serviço + receção central",
+        "description": "O central de trás faz o primeiro toque numa receção clássica em W. Trajetória alta para o distribuidor da frente em P2."
       },
       "s3": {
-        "title": "3. Direct set + approach",
-        "description": "The front setter only needs to distribute: no penetration, no switch. He sends a high set to the OH in zone 4. Double block on the wing."
+        "title": "3. Passe direto + corrida",
+        "description": "O distribuidor da frente só tem de distribuir: sem infiltração, sem switch. Envia um passe alto para a ponta na zona 4. Bloco a 2 na asa."
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "The OH attacks in zone 4. No middle option since the middle received. Spike on the long cross-court against a double block."
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "A ponta ataca pela zona 4. Sem opção pelo central, pois o central recebeu. Remate em diagonal longa contra um bloco a 2."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives cross-court to try to recover the ball."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha em diagonal para tentar recuperar a bola."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their position. The 4-2 remains the simplest system: no switch required."
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição. O 4-2 continua a ser o sistema mais simples: nenhum switch necessário."
       }
     },
     "summary": {
       "keyPoints": [
-        "4-2: 2 setters + 2 middles + 2 outsides. Always 2 hitters in front.",
-        "The front setter (in P2 or P3 depending on the variant) systematically makes the 2nd touch.",
-        "No penetration, no switch: the easiest system to learn.",
-        "Ideal for U13/U15 or adult beginners. Promotes learning rotations."
+        "4-2: 2 distribuidores + 2 centrais + 2 pontas. Sempre 2 atacantes à frente.",
+        "O distribuidor da frente (em P2 ou P3 conforme a variante) faz sistematicamente o 2º toque.",
+        "Sem infiltração, sem switch: o sistema mais fácil de aprender.",
+        "Ideal para Sub-13/Sub-15 ou adultos iniciantes. Favorece a aprendizagem das rotações."
       ],
       "commonMistakes": [
-        "Front setter who also receives → impossible to make the 2nd touch.",
-        "Back setter wanting to set → front-setter rule not respected.",
-        "Middle who does not commit → easy double block."
+        "Distribuidor da frente que também recebe → impossível fazer o 2º toque.",
+        "Distribuidor de trás a querer distribuir → regra do distribuidor da frente não respeitada.",
+        "Central que não se compromete → bloco a 2 fácil."
       ]
     }
   },
   "6v6-attack-5-1-p1": {
-    "title": "Attack · 5-1 P1 rotation",
-    "shortDescription": "3-receiver reception → setter penetrates from P1 → zone-4 attack by the OH.",
-    "contextLabel": "5-1 · P1 rotation · Opposing serve",
+    "title": "Ataque · Rotação P1 do 5-1",
+    "shortDescription": "Receção a 3 → distribuidor infiltra a partir de P1 → ataque pela zona 4 pela ponta.",
+    "contextLabel": "5-1 · Rotação P1 · Serviço adversário",
     "players": {
-      "L": "Libero (P5)",
-      "R4a": "OH (P4)",
-      "R4b": "OH (P6)",
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "P": "Setter (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_C": "Opposing middle",
-      "OPP_S": "Opposing setter",
-      "OPP_BC": "Opposing libero"
+      "L": "Líbero (P5)",
+      "R4a": "Ponta (P4)",
+      "R4b": "Ponta (P6)",
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "P": "Distribuidor (P1)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_C": "Central adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_BC": "Líbero adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Our team is in a 3-receiver formation: libero (P5), OH in P6 and OH in P4 pulled back on the 3 m line. Middle and opposite are out at the net. The setter waits in P1 to penetrate as soon as the serve is struck."
+        "title": "1. Formação de receção",
+        "description": "A nossa equipa está numa formação de receção a 3: líbero (P5), ponta em P6 e ponta em P4 recuadas sobre a linha dos 3 m. Central e oposto estão fora da receção junto à rede. O distribuidor espera em P1 para infiltrar assim que o serviço for batido."
       },
       "s2": {
-        "title": "2. Serve + reception",
-        "description": "Opposing lofted serve to the OH in P6 who bumps it. In parallel, the setter triggers his penetration from P1 toward zone 2-3."
+        "title": "2. Serviço + receção",
+        "description": "Serviço alto adversário para a ponta em P6 que faz a manchete. Em paralelo, o distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
       },
       "s3": {
-        "title": "3. High set + approach",
-        "description": "The ball rises to the setter who has arrived at the net. He delivers a lofted set to zone 4 where the OH has already started his approach. Coverage forms around him."
+        "title": "3. Passe alto + corrida",
+        "description": "A bola sobe para o distribuidor que chegou à rede. Ele entrega um passe alto para a zona 4 onde a ponta já iniciou a sua corrida de balanço. A cobertura forma-se à volta dele."
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The OH lifts off and hits long cross-court toward the opponent's zone 6. The two opposing blockers jump in parallel to close cross-court and line."
+        "title": "4. Remate + bloco a 2",
+        "description": "A ponta levanta voo e bate em diagonal longa em direção à zona 6 adversária. Os dois bloqueadores adversários saltam em paralelo para fechar a diagonal e a paralela."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing libero dives toward zone 6 to try a desperate bump. The opposing setter moves toward zone 2 to relay if defense touches the ball."
+        "title": "5. Defesa adversária",
+        "description": "O líbero adversário mergulha em direção à zona 6 para tentar uma manchete desesperada. O distribuidor adversário desloca-se para a zona 2 para fazer o passe se a defesa tocar na bola."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position for the next serve. This placement determines the quality of the next attack."
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção para o próximo serviço. Esta colocação determina a qualidade do próximo ataque."
       }
     },
     "summary": {
       "keyPoints": [
-        "3-receiver reception: libero + 2 OHs take the full width of the court.",
-        "The setter penetrates from P1 toward zone 2-3 as soon as the serve is struck.",
-        "The OH attacker slides on the 3 m line during reception to prepare his approach.",
-        "5-player coverage (3 close + 2 far) in low position around the hitter."
+        "Receção a 3: líbero + 2 pontas ocupam toda a largura do campo.",
+        "O distribuidor infiltra a partir de P1 para a zona 2-3 assim que o serviço é batido.",
+        "A ponta atacante desliza para a linha dos 3 m durante a receção para preparar a sua corrida.",
+        "Cobertura a 5 jogadores (3 perto + 2 longe) em posição baixa à volta do atacante."
       ],
       "commonMistakes": [
-        "Setter penetrating too late → forced jump set by another player.",
-        "OH attacker triggering his approach too early → arrives under the ball instead of committing.",
-        "Coverage forgotten → successful opposing block = point lost directly."
+        "Distribuidor que infiltra demasiado tarde → passe em salto forçado por outro jogador.",
+        "Ponta atacante que dispara a corrida cedo demais → chega debaixo da bola em vez de se comprometer.",
+        "Cobertura esquecida → bloco adversário bem-sucedido = ponto perdido diretamente."
       ]
     }
   },
   "6v6-attack-5-1-p2": {
-    "title": "Attack · 5-1 P2 rotation",
-    "shortDescription": "Setter already at the net in P2: 2 hitters in front + opposite attacks in 4 exceptionally.",
-    "contextLabel": "5-1 · P2 rotation · Front-row setter",
+    "title": "Ataque · Rotação P2 do 5-1",
+    "shortDescription": "Distribuidor já junto à rede em P2: 2 atacantes à frente + oposto ataca na 4 excecionalmente.",
+    "contextLabel": "5-1 · Rotação P2 · Distribuidor da frente",
     "players": {
-      "R4a": "OH (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P3)",
-      "Pt": "Opposite (P4)",
-      "P": "Setter (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "Ponta (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Ponta (P1)",
+      "C": "Central (P3)",
+      "Pt": "Oposto (P4)",
+      "P": "Distribuidor (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing serve",
-        "description": "Serve toward zone 5-6. The libero calls and prepares to bump. The setter already waits at the net in P2."
+        "title": "1. Serviço adversário",
+        "description": "Serviço para a zona 5-6. O líbero chama e prepara a manchete. O distribuidor já espera junto à rede em P2."
       },
       "s2": {
-        "title": "2. Serve + libero reception",
-        "description": "Lofted serve to zone 6. The libero steps in and bumps precisely to the setter target (zone 2)."
+        "title": "2. Serviço + receção do líbero",
+        "description": "Serviço alto para a zona 6. O líbero avança e faz uma manchete precisa para o alvo do distribuidor (zona 2)."
       },
       "s3": {
-        "title": "3. Set to the opposite + approach",
-        "description": "The setter, already in P2, exceptionally distributes to zone 4 where the opposite starts his approach. The opposing block regroups in the center."
+        "title": "3. Passe para o oposto + corrida",
+        "description": "O distribuidor, já em P2, distribui excecionalmente para a zona 4 onde o oposto inicia a sua corrida. O bloco adversário reagrupa-se no centro."
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The opposite lifts off on the left and hits long cross-court. A rare configuration but unavoidable in P2 — the setter stays in place."
+        "title": "4. Remate + bloco a 2",
+        "description": "O oposto levanta voo à esquerda e bate em diagonal longa. Uma configuração rara mas inevitável em P2 — o distribuidor fica no sítio."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court to try a desperate bump save."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa para tentar uma manchete desesperada de recuperação."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their reception position. The P2 rotation remains the most offensively limited: only 2 hitters in front."
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição de receção. A rotação P2 continua a ser a mais limitada ofensivamente: apenas 2 atacantes à frente."
       }
     },
     "summary": {
       "keyPoints": [
-        "P2 rotation = the most offensively limited (only 2 hitters in front).",
-        "Setter already in place: zero penetration, easy distribution.",
-        "The opposite exceptionally attacks on the left (zone 4) to free the setter.",
-        "Prioritize the wings and OH back-row attacks as options."
+        "Rotação P2 = a mais limitada ofensivamente (apenas 2 atacantes à frente).",
+        "Distribuidor já em posição: zero infiltração, distribuição fácil.",
+        "O oposto ataca excecionalmente à esquerda (zona 4) para libertar o distribuidor.",
+        "Privilegiar as asas e os ataques da linha de trás da ponta como opções."
       ],
       "commonMistakes": [
-        "Setter trying to jump-set in 2 when he's already there → difficult 2nd touch.",
-        "Opposite hesitating between 2 and 4 → opposing block in place.",
-        "Middles not committing → easy double block for the opponent."
+        "Distribuidor a tentar passe em salto em 2 quando já lá está → 2º toque difícil.",
+        "Oposto que hesita entre 2 e 4 → bloco adversário em posição.",
+        "Centrais que não se comprometem → bloco a 2 fácil para o adversário."
       ]
     }
   },
   "6v6-attack-5-1-p3": {
-    "title": "Attack · 5-1 P3 rotation (pipe)",
-    "shortDescription": "Setter at P3 switches toward 2-3 → pipe by the back-row OH in zone 6.",
-    "contextLabel": "5-1 · P3 rotation · Back-row attack",
+    "title": "Ataque · Rotação P3 do 5-1 (pipe)",
+    "shortDescription": "Distribuidor em P3 desloca-se para 2-3 → pipe pela ponta da linha de trás na zona 6.",
+    "contextLabel": "5-1 · Rotação P3 · Ataque da linha de trás",
     "players": {
-      "L": "Libero (P5)",
-      "Pt": "Opposite (P6)",
-      "R4b": "OH (P1)",
-      "R4a": "OH (P4)",
-      "P": "Setter (P3)",
-      "C": "Middle (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "L": "Líbero (P5)",
+      "Pt": "Oposto (P6)",
+      "R4b": "Ponta (P1)",
+      "R4a": "Ponta (P4)",
+      "P": "Distribuidor (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Serve expected on the right side. The OH in P1 takes the reception. The setter in P3 is ready to switch toward 2-3 as soon as the serve is struck."
+        "title": "1. Formação de receção",
+        "description": "Serviço previsto pelo lado direito. A ponta em P1 faz a receção. O distribuidor em P3 está pronto a deslocar-se para 2-3 assim que o serviço for batido."
       },
       "s2": {
-        "title": "2. Serve + reception",
-        "description": "Lofted serve to zone 1. The OH in P1 bumps to the target. The setter starts his switch toward 2-3."
+        "title": "2. Serviço + receção",
+        "description": "Serviço alto para a zona 1. A ponta em P1 faz manchete para o alvo. O distribuidor inicia o seu deslocamento para 2-3."
       },
       "s3": {
-        "title": "3. Pipe set + approach",
-        "description": "The setter sends a flat set to zone 6: fast trajectory 2 m from the net. The opposite launches his approach behind the 3 m line for the pipe."
+        "title": "3. Passe de pipe + corrida",
+        "description": "O distribuidor envia um passe esticado para a zona 6: trajetória rápida a 2 m da rede. O oposto inicia a corrida atrás da linha dos 3 m para o pipe."
       },
       "s4": {
-        "title": "4. Pipe + double block",
-        "description": "Powerful hit in the center from the back court. The wing double block cannot screen at the center — a key option of the modern 5-1."
+        "title": "4. Pipe + bloco a 2",
+        "description": "Batida potente no centro a partir da retaguarda. O bloco a 2 das asas não consegue cobrir o centro — uma opção-chave do 5-1 moderno."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing central defender dives at the core to try to catch the pipe — the ball arrives fast, little time to react."
+        "title": "5. Defesa adversária",
+        "description": "O defensor central adversário mergulha no eixo para tentar apanhar o pipe — a bola chega rápido, pouco tempo para reagir."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position. The middle must stay ready to switch to the center of the net for the next sequence."
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção. O central tem de continuar pronto para se deslocar para o centro da rede na próxima sequência."
       }
     },
     "summary": {
       "keyPoints": [
-        "The pipe is the 4th offensive option on top of the 3 attacks at the net.",
-        "The middle switches to the center of the net while the setter slides to 2-3.",
-        "Pipe trajectory: flat, 2 m from the net, take-off behind the 3 m line.",
-        "Very effective against a block that focuses on the wings."
+        "O pipe é a 4ª opção ofensiva para além dos 3 ataques junto à rede.",
+        "O central desloca-se para o centro da rede enquanto o distribuidor desliza para 2-3.",
+        "Trajetória do pipe: esticada, a 2 m da rede, chamada atrás da linha dos 3 m.",
+        "Muito eficaz contra um bloco que se concentra nas asas."
       ],
       "commonMistakes": [
-        "Pipe too high → opposing block has time to recover to the center.",
-        "Back-row OH taking off in the front zone → back-row attack fault.",
-        "Middle switching too late → zone 3 blocked."
+        "Pipe demasiado alto → bloco adversário tem tempo de recuar para o centro.",
+        "Ponta de trás a chamar na zona de ataque → falta de ataque da linha de trás.",
+        "Central desloca-se tarde demais → zona 3 bloqueada."
       ]
     }
   },
   "6v6-attack-5-1-p4": {
-    "title": "Attack · 5-1 P4 rotation",
-    "shortDescription": "Front-row setter at P4 switches to the right; OH* attacks in 4, middle in 3, opposite back-row in 1.",
-    "contextLabel": "5-1 · P4 rotation · Front-row setter",
+    "title": "Ataque · Rotação P4 do 5-1",
+    "shortDescription": "Distribuidor da frente em P4 desloca-se para a direita; a ponta* ataca em 4, central em 3, oposto da linha de trás em 1.",
+    "contextLabel": "5-1 · Rotação P4 · Distribuidor da frente",
     "players": {
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "Pt": "Opposite (P1)",
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4a": "OH (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "Pt": "Oposto (P1)",
+      "P": "Distribuidor (P4)",
+      "C": "Central (P3)",
+      "R4a": "Ponta (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. P4 configuration + offset",
-        "description": "Setter in zone 4, OH* in zone 2 — crossed placement. Setter and middle shift left to free the reception zone for the libero."
+        "title": "1. Configuração P4 + offset",
+        "description": "Distribuidor na zona 4, ponta* na zona 2 — colocação cruzada. Distribuidor e central deslocam-se para a esquerda para libertar a zona de receção para o líbero."
       },
       "s2": {
-        "title": "2. Serve + libero reception",
-        "description": "The serve targets zone 6. The libero steps in and bumps to the classic target (between P2 and P3)."
+        "title": "2. Serviço + receção do líbero",
+        "description": "O serviço aponta à zona 6. O líbero avança e faz manchete para o alvo clássico (entre P2 e P3)."
       },
       "s3": {
-        "title": "3. Setter↔OH* switch + high set",
-        "description": "Essential crossover: the setter leaves P4 toward 2-3, the OH* leaves P2 toward 4 to attack. Lofted set to the left wing."
+        "title": "3. Switch distribuidor↔ponta* + passe alto",
+        "description": "Cruzamento essencial: o distribuidor deixa P4 em direção a 2-3, a ponta* deixa P2 em direção a 4 para atacar. Passe alto para a asa esquerda."
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "Long cross-court spike. With a front-row setter (small at the block), the attack must finish quickly. Double block shifted toward the wing."
+        "title": "4. Ataque pela asa + bloco a 2",
+        "description": "Remate em diagonal longa. Com um distribuidor à frente (pequeno no bloco), o ataque tem de terminar rapidamente. Bloco a 2 deslocado para a asa."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives on the long trajectory to try a desperate bump."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha na trajetória longa para tentar uma manchete desesperada."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their initial position. The setter/middle left offset is kept for the next serve."
+        "title": "6. RESET — regresso à formação",
+        "description": "Todos retomam a sua posição inicial. O offset distribuidor/central à esquerda mantém-se para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "P4 rotation = front-row setter. Setter↔OH* switch mandatory.",
-        "2 hitters in front: OH* in 4, middle in 3. Pipe or back-row opposite as options.",
-        "The setter and middle shift left at the serve to free zone 6.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "Rotação P4 = distribuidor à frente. Switch distribuidor↔ponta* obrigatório.",
+        "2 atacantes à frente: ponta* em 4, central em 3. Pipe ou oposto da linha de trás como opções.",
+        "Distribuidor e central deslocam-se para a esquerda no serviço para libertar a zona 6.",
+        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
       ],
       "commonMistakes": [
-        "Switch forgotten → the OH* stays on the right, hitter in poor position.",
-        "Setter and middle too far right at the serve → reception conflict in zone 6.",
-        "Opposing block not committed by the middle → easy double block on the left wing."
+        "Switch esquecido → a ponta* fica à direita, atacante mal colocado.",
+        "Distribuidor e central demasiado à direita no serviço → conflito de receção na zona 6.",
+        "Bloco adversário não comprometido pelo central → bloco a 2 fácil pela asa esquerda."
       ]
     }
   },
   "6v6-attack-5-1-p5": {
-    "title": "Attack · 5-1 P5 rotation",
-    "shortDescription": "Long penetration from P5. C/OH switch. Set to the opposite in zone 2.",
-    "contextLabel": "5-1 · P5 rotation · Long penetration",
+    "title": "Ataque · Rotação P5 do 5-1",
+    "shortDescription": "Infiltração longa a partir de P5. Switch C/ponta. Passe ao oposto na zona 2.",
+    "contextLabel": "5-1 · Rotação P5 · Infiltração longa",
     "players": {
-      "P": "Setter (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P4)",
-      "R4a": "OH (P3)",
-      "Pt": "Opposite (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "P": "Distribuidor (P5)",
+      "L": "Líbero (P6)",
+      "R4b": "Ponta (P1)",
+      "C": "Central (P4)",
+      "R4a": "Ponta (P3)",
+      "Pt": "Oposto (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Setter in back-left P5, as far from the net as possible. C in P4 and OH in P3 will switch as soon as the serve is struck."
+        "title": "1. Formação de receção",
+        "description": "Distribuidor atrás à esquerda em P5, o mais afastado possível da rede. C em P4 e ponta em P3 vão fazer switch assim que o serviço for batido."
       },
       "s2": {
-        "title": "2. Serve + reception + C↔OH switch",
-        "description": "The serve targets zone 1 where the OH receives. Simultaneously, the middle slides to the center and the attacking OH takes zone 4."
+        "title": "2. Serviço + receção + switch C↔ponta",
+        "description": "O serviço aponta à zona 1 onde a ponta recebe. Simultaneamente, o central desliza para o centro e a ponta atacante ocupa a zona 4."
       },
       "s3": {
-        "title": "3. Long penetration + set in zone 2",
-        "description": "The setter crosses the whole court from P5 — the longest penetration. He distributes short to the opposite in zone 2. The opposing block slides right to close."
+        "title": "3. Infiltração longa + passe para a zona 2",
+        "description": "O distribuidor atravessa todo o campo a partir de P5 — a infiltração mais longa. Distribui curto para o oposto na zona 2. O bloco adversário desliza para a direita para fechar."
       },
       "s4": {
-        "title": "4. Cross-court spike + double block",
-        "description": "The opposite lifts off in zone 2 and hits long cross-court. A classic combination on this rotation. The double block is in place on the right."
+        "title": "4. Remate em diagonal + bloco a 2",
+        "description": "O oposto levanta voo na zona 2 e bate em diagonal longa. Uma combinação clássica nesta rotação. O bloco a 2 está em posição à direita."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives into zone 5 to try to catch the long ball."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal adversário mergulha para a zona 5 para tentar apanhar a bola longa."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position. The middle returns to P4, the OH to P3, the setter to P5."
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção. O central regressa a P4, a ponta a P3, o distribuidor a P5."
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = the longest penetration. Requires perfect reception.",
-        "The middle and the OH switch as soon as the serve is struck to place C in zone 3.",
-        "The opposite in zone 2 is the most accessible target for the setter.",
-        "Pipe possible as an option if the set is flat and fast."
+        "P5 = a infiltração mais longa. Exige receção perfeita.",
+        "O central e a ponta fazem switch assim que o serviço é batido para colocar C na zona 3.",
+        "O oposto na zona 2 é o alvo mais acessível para o distribuidor.",
+        "Pipe possível como opção se o passe for esticado e rápido."
       ],
       "commonMistakes": [
-        "Too flat a set during an ongoing penetration → setter under the ball.",
-        "Late C↔OH switch → middle in zone 4 = useless at the block.",
-        "Short reception → setter arrives too far from the net."
+        "Passe demasiado esticado durante uma infiltração em curso → distribuidor debaixo da bola.",
+        "Switch C↔ponta tardio → central na zona 4 = inútil no bloco.",
+        "Receção curta → distribuidor chega longe da rede."
       ]
     }
   },
   "6v6-attack-5-1-p6": {
-    "title": "Attack · 5-1 P6 rotation (quick)",
-    "shortDescription": "Medium penetration from P6 → fast central attack by the middle.",
-    "contextLabel": "5-1 · P6 rotation · Quick combination",
+    "title": "Ataque · Rotação P6 do 5-1 (bola rápida)",
+    "shortDescription": "Infiltração média a partir de P6 → ataque central rápido pelo central.",
+    "contextLabel": "5-1 · Rotação P6 · Combinação rápida",
     "players": {
-      "L": "Libero (P5)",
-      "P": "Setter (P6)",
-      "R4b": "OH (P1)",
-      "R4a": "OH (P4)",
-      "Pt": "Opposite (P3)",
-      "C": "Middle (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing central defender"
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P6)",
+      "R4b": "Ponta (P1)",
+      "R4a": "Ponta (P4)",
+      "Pt": "Oposto (P3)",
+      "C": "Central (P2)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor central adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Serve expected on the left side. The libero takes his channel. The opposite at P3 will switch to P2, the middle at P2 will slide to the center of the net."
+        "title": "1. Formação de receção",
+        "description": "Serviço previsto pelo lado esquerdo. O líbero ocupa o seu corredor. O oposto em P3 vai fazer switch para P2, o central em P2 desliza para o centro da rede."
       },
       "s2": {
-        "title": "2. Serve + reception + Opp↔C switch",
-        "description": "Lofted serve to zone 5. The libero receives. The opposite slides to zone 2 and the middle takes the center of the net to prepare the quick."
+        "title": "2. Serviço + receção + switch Op↔C",
+        "description": "Serviço alto para a zona 5. O líbero recebe. O oposto desliza para a zona 2 e o central ocupa o centro da rede para preparar a bola rápida."
       },
       "s3": {
-        "title": "3. Medium penetration",
-        "description": "The setter crosses from P6 to zone 2-3 (medium path, shorter than P5). The middle starts to load for tempo 1."
+        "title": "3. Infiltração média",
+        "description": "O distribuidor atravessa de P6 para a zona 2-3 (trajeto médio, mais curto do que P5). O central começa a tomar balanço para o tempo 1."
       },
       "s4": {
-        "title": "4. Pre-jump + fast flat set",
-        "description": "The middle takes off ALREADY before the set — that's tempo 1. The setter sends a fast ball at 1 m, just in front of him. The middle is already airborne."
+        "title": "4. Pré-salto + passe esticado rápido",
+        "description": "O central levanta voo JÁ antes do passe — isto é o tempo 1. O distribuidor envia uma bola rápida a 1 m, mesmo à frente dele. O central já está no ar."
       },
       "s5": {
-        "title": "5. Center hit + block too late",
-        "description": "Fast central hit that surprises the opposing block before it's in place. The opposing blockers jump just after — too late."
+        "title": "5. Batida no centro + bloco tarde demais",
+        "description": "Batida rápida no centro que surpreende o bloco adversário antes de estar em posição. Os bloqueadores adversários saltam logo a seguir — tarde demais."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The middle returns to the center, everyone resumes the reception formation. The fast central is the signature combination of this rotation."
+        "title": "6. RESET — regresso à formação",
+        "description": "O central regressa ao centro, todos retomam a formação de receção. A bola rápida central é a combinação típica desta rotação."
       }
     },
     "summary": {
       "keyPoints": [
-        "P6 = medium penetration. Ideal for fast combinations.",
-        "Tempo 1: middle already in the air when the setter touches the ball.",
-        "The middle commits the opposing central block: frees the wings for the OHs.",
-        "Systematic Opp↔C switch to place the middle back at the center."
+        "P6 = infiltração média. Ideal para combinações rápidas.",
+        "Tempo 1: central já no ar quando o distribuidor toca na bola.",
+        "O central compromete o bloco central adversário: liberta as asas para as pontas.",
+        "Switch sistemático Op↔C para recolocar o central no centro."
       ],
       "commonMistakes": [
-        "Middle taking off too late → ball passes over his hand.",
-        "Set too high for tempo 1 → opposing block in place.",
-        "Opposite who does not switch → middle stuck in zone 2."
+        "Central a chamar tarde demais → bola passa por cima da mão.",
+        "Passe demasiado alto para tempo 1 → bloco adversário em posição.",
+        "Oposto que não faz switch → central preso na zona 2."
       ]
     }
   },
   "6v6-attack-6-2": {
-    "title": "Attack · 6-2 system",
-    "shortDescription": "6-2 system: back-row setter penetrates, 3 hitters in front at all times.",
-    "contextLabel": "6-2 · Penetrating setter · Intermediate",
+    "title": "Ataque · Sistema 6-2",
+    "shortDescription": "Sistema 6-2: distribuidor da linha de trás infiltra, 3 atacantes à frente em todos os momentos.",
+    "contextLabel": "6-2 · Distribuidor a infiltrar · Intermédio",
     "players": {
-      "R4a": "OH (P4)",
-      "C": "Middle (P3)",
-      "PA": "Setter-hitter (P2)",
-      "P": "Setter (P1)",
-      "C2": "Middle (P6)",
-      "R4b": "OH (P5)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "Ponta (P4)",
+      "C": "Central (P3)",
+      "PA": "Distribuidor-atacante (P2)",
+      "P": "Distribuidor (P1)",
+      "C2": "Central (P6)",
+      "R4b": "Ponta (P5)",
+      "OPP_SRV": "Servidor adversário",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário",
+      "OPP_D1": "Defensor da diagonal adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 6-2 configuration",
-        "description": "2 versatile setters: the front one attacks (setter-hitter), the back one distributes (and penetrates). 3 hitters in front at all times."
+        "title": "1. Configuração 6-2",
+        "description": "2 distribuidores polivalentes: o da frente ataca (distribuidor-atacante), o de trás distribui (e infiltra). 3 atacantes à frente em todos os momentos."
       },
       "s2": {
-        "title": "2. Serve + back-middle reception",
-        "description": "Classic central reception by C2. The setter triggers his penetration from P1 toward zone 2-3."
+        "title": "2. Serviço + receção pelo central de trás",
+        "description": "Receção central clássica por C2. O distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
       },
       "s3": {
-        "title": "3. Set in zone 2 + approach",
-        "description": "Distribution to the setter-hitter in zone 2. Maximum variety: 3 offensive threats in front. Double block shifted to the right."
+        "title": "3. Passe na zona 2 + corrida",
+        "description": "Distribuição para o distribuidor-atacante na zona 2. Variedade máxima: 3 ameaças ofensivas à frente. Bloco a 2 deslocado para a direita."
       },
       "s4": {
-        "title": "4. Cross-court attack + double block",
-        "description": "The setter-hitter hits long cross-court. The 6-2 always guarantees 3 offensive threats — the opposing block cannot anticipate."
+        "title": "4. Ataque em diagonal + bloco a 2",
+        "description": "O distribuidor-atacante bate em diagonal longa. O 6-2 garante sempre 3 ameaças ofensivas — o bloco adversário não consegue antecipar."
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The cross defender dives on the long trajectory on the opponent's left side — a desperate save attempt."
+        "title": "5. Defesa adversária",
+        "description": "O defensor da diagonal mergulha na trajetória longa do lado esquerdo do adversário — uma tentativa desesperada de recuperação."
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its position. The setter-hitter stays in front, the setter returns to P1."
+        "title": "6. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição. O distribuidor-atacante fica à frente, o distribuidor regressa a P1."
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 versatile setters in diagonal opposition.",
-        "Always 3 hitters in front (the front setter attacks, the back setter distributes).",
-        "Systematic penetration, like in 5-1, but with 2 alternating distributors.",
-        "Excellent for developing versatility before switching to a 5-1."
+        "6-2: 2 distribuidores polivalentes em diagonal oposta.",
+        "Sempre 3 atacantes à frente (o distribuidor da frente ataca, o de trás distribui).",
+        "Infiltração sistemática, como no 5-1, mas com 2 distribuidores alternados.",
+        "Excelente para desenvolver a polivalência antes de passar a um 5-1."
       ],
       "commonMistakes": [
-        "Style difference between the 2 setters → inconsistent distribution.",
-        "Front setter not showing up for the attack → only 2 options.",
-        "Penetration too late → another player has to make the set."
+        "Diferença de estilo entre os 2 distribuidores → distribuição inconsistente.",
+        "Distribuidor da frente que não se mostra para o ataque → apenas 2 opções.",
+        "Infiltração tardia → outro jogador tem de fazer o passe."
       ]
     }
   },
   "4v4-defense-block-1": {
-    "title": "4v4 · System A defense (1 blocker + 3 defenders)",
-    "shortDescription": "System A in 4v4 (diamond formation): 1 solo blocker + tip + cross + line. The most common configuration.",
-    "contextLabel": "4v4 · System A · 1 blocker + 3 defenders",
+    "title": "4v4 · Defesa sistema A (1 bloqueador + 3 defensores)",
+    "shortDescription": "Sistema A no 4v4 (formação em losango): 1 bloqueador solo + amorti + diagonal + paralela. A configuração mais comum.",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond base + read",
-        "description": "With 4 players each defender is crucial. Our middle prepares to block solo. Mandatory read of the opposing set."
+        "title": "1. Base em losango + leitura",
+        "description": "Com 4 jogadores, cada defensor é crucial. O nosso central prepara-se para bloquear sozinho. Leitura obrigatória do passe adversário."
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The attack arrives on our front-LEFT corner. The middle must slide to the left side."
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. O ataque chega ao nosso canto frente-ESQUERDA. O central tem de deslizar para o lado esquerdo."
       },
       "s3": {
-        "title": "3. Solo central block + line/cross signal",
-        "description": "The middle slides left and blocks alone. Mandatory signal (line or cross-court) to orient the 3 defenders. Without a signal, they don't know what to cover."
+        "title": "3. Bloco central solo + sinal paralela/diagonal",
+        "description": "O central desliza para a esquerda e bloqueia sozinho. Sinal obrigatório (paralela ou diagonal) para orientar os 3 defensores. Sem sinal, não sabem o que cobrir."
       },
       "s4": {
-        "title": "4. Long cross-court spike + block",
-        "description": "The hitter strikes long cross-court. The solo block closes the line, signal announced beforehand."
+        "title": "4. Remate em diagonal longa + bloco",
+        "description": "O atacante bate em diagonal longa. O bloco solo fecha a paralela, sinal anunciado previamente."
       },
       "s5": {
-        "title": "5. Recovery by the lone back",
-        "description": "The P1 back defends in his axis — his read must be perfect, no other back to compensate. High bump to the target."
+        "title": "5. Recuperação pelo único atrás",
+        "description": "O atrás em P1 defende no seu eixo — a sua leitura tem de ser perfeita, não há outro atrás para compensar. Manchete alta para o alvo."
       },
       "s6": {
-        "title": "6. RESET — diamond formation",
-        "description": "Back to the diamond formation. Coverage will adapt to the next attack zone from the next read on."
+        "title": "6. RESET — formação em losango",
+        "description": "Regresso à formação em losango. A cobertura adapta-se à próxima zona de ataque a partir da leitura seguinte."
       }
     },
     "summary": {
       "keyPoints": [
-        "System A (1 blocker + 3 defenders): the most common configuration in indoor 4v4.",
-        "Line/cross blocker signal mandatory — without it, the 3 defenders don't know what to cover.",
-        "Key distances: blocker 0.3 m from the net; deep defenders 7-7.5 m; tip/behind-block 3.5-4 m.",
-        "Each defender covers ~30-40 m² (vs 20 m² in 6v6) → anticipation = skill #1.",
-        "Double block (system B) reserved for big hitters: leaves only 2 deep defenders."
+        "Sistema A (1 bloqueador + 3 defensores): a configuração mais comum no 4v4 de pavilhão.",
+        "Sinal paralela/diagonal do bloqueador obrigatório — sem ele, os 3 defensores não sabem o que cobrir.",
+        "Distâncias-chave: bloqueador a 0,3 m da rede; defensores profundos a 7-7,5 m; amorti/atrás do bloco a 3,5-4 m.",
+        "Cada defensor cobre ~30-40 m² (vs 20 m² em 6v6) → antecipação = competência nº 1.",
+        "Bloco a 2 (sistema B) reservado a grandes atacantes: deixa apenas 2 defensores profundos."
       ],
       "commonMistakes": [
-        "Isolated blocker with no tip coverage: the 3 defenders all go deep, leaving the 3-5 m zone empty.",
-        "2 defenders in a straight line: side by side at the same depth → the cut shot lands between them.",
-        "No signal between blocker and defenders (line vs cross-court).",
-        "Tip defender too far from the net: drops back with the others and can no longer cover short tips.",
-        "Setter running to his target before the ball is defended → defensive hole."
+        "Bloqueador isolado sem cobertura do amorti: os 3 defensores recuam todos, deixando a zona dos 3-5 m vazia.",
+        "2 defensores em linha reta: lado a lado à mesma profundidade → o cut shot cai entre eles.",
+        "Sem sinal entre bloqueador e defensores (paralela vs diagonal).",
+        "Defensor do amorti demasiado afastado da rede: recua com os outros e já não consegue cobrir amortis curtos.",
+        "Distribuidor que corre para o seu alvo antes de a bola estar defendida → buraco defensivo."
       ]
     }
   },
   "4v4-defense-vs-z2": {
-    "title": "4v4 · Z2 defense",
-    "shortDescription": "Mirror of system A: 1 blocker + 3 defenders against opposing Z2 attack (their right → arrives on our left).",
-    "contextLabel": "4v4 · System A · 1 blocker + 3 defenders",
+    "title": "4v4 · Defesa de Z2",
+    "shortDescription": "Espelho do sistema A: 1 bloqueador + 3 defensores contra ataque adversário pela Z2 (direita deles → chega à nossa esquerda).",
+    "contextLabel": "4v4 · Sistema A · 1 bloqueador + 3 defensores",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z2 attack",
-        "description": "Opposing attack from their zone 2 (their right) → arrives on our front-LEFT corner. The middle will need to slide to the left side to block."
+        "title": "1. Leitura do ataque pela Z2 adversária",
+        "description": "Ataque adversário pela zona 2 deles (direita deles) → chega ao nosso canto frente-ESQUERDA. O central terá de deslizar para o lado esquerdo para bloquear."
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The defense triggers its mirror adjustment."
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. A defesa inicia o seu ajuste em espelho."
       },
       "s3": {
-        "title": "3. Solo central block on the left side",
-        "description": "The middle slides to the left side and blocks alone. Line/cross signal mandatory. R4 (left wing) stays off-blocker at 2.5 m, A2 (right wing) defends the long cross-court."
+        "title": "3. Bloco central solo do lado esquerdo",
+        "description": "O central desliza para o lado esquerdo e bloqueia sozinho. Sinal paralela/diagonal obrigatório. R4 (asa esquerda) fica como bloqueador secundário a 2,5 m, A2 (asa direita) defende a diagonal longa."
       },
       "s4": {
-        "title": "4. Diagonal spike + solo block",
-        "description": "The hitter strikes long cross-court. The solo block covers the signaled line."
+        "title": "4. Remate em diagonal + bloco solo",
+        "description": "O atacante bate em diagonal longa. O bloco solo cobre a paralela sinalizada."
       },
       "s5": {
-        "title": "5. Recovery by the lone back",
-        "description": "The P1 back (slightly shifted to the ball side) defends with a bump. His read compensates for the absence of other backs."
+        "title": "5. Recuperação pelo único atrás",
+        "description": "O atrás em P1 (ligeiramente deslocado para o lado da bola) defende com manchete. A sua leitura compensa a ausência dos outros atrás."
       },
       "s6": {
-        "title": "6. RESET — diamond formation",
-        "description": "Back to diamond formation. The middle returns to the center, ready to slide again if the opponent switches sides."
+        "title": "6. RESET — formação em losango",
+        "description": "Regresso à formação em losango. O central regressa ao centro, pronto a deslizar novamente se o adversário mudar de lado."
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4 in 4v4: system A (1 blocker + 3 defenders).",
-        "P3 solo blocker on the left side, line/cross signal mandatory.",
-        "P4 (left wing) as off-blocker 3.5-4 m from the net — short coverage and tips.",
-        "P2 (right wing) defends the short cross-court (~7 m, straight line).",
-        "The lone P1 back defends the long cross-court."
+        "Espelho perfeito da Z4 no 4v4: sistema A (1 bloqueador + 3 defensores).",
+        "P3 bloqueador solo no lado esquerdo, sinal paralela/diagonal obrigatório.",
+        "P4 (asa esquerda) como bloqueador secundário a 3,5-4 m da rede — cobertura curta e amortis.",
+        "P2 (asa direita) defende a diagonal curta (~7 m, em linha reta).",
+        "O único atrás P1 defende a diagonal longa."
       ],
       "commonMistakes": [
-        "Left wing P4 blocking with the middle → off-blocker missing on the left side.",
-        "Lone back too far forward → deep cross-court ball not covered.",
-        "Blocker with no signal → the 3 defenders don't know what to cover.",
-        "P2 too far from the net → does not cover the short cross-court."
+        "Asa esquerda P4 a bloquear com o central → bloqueador secundário em falta do lado esquerdo.",
+        "Único atrás demasiado avançado → bola de diagonal profunda não coberta.",
+        "Bloqueador sem sinal → os 3 defensores não sabem o que cobrir.",
+        "P2 demasiado afastado da rede → não cobre a diagonal curta."
       ]
     }
   },
   "4v4-defense-vs-z3": {
-    "title": "4v4 · Z3 defense (central quick)",
-    "shortDescription": "Opposing fast central attack in 4v4: read block-of-1 + 3 defenders. The hardest configuration to defend.",
-    "contextLabel": "4v4 · Block-of-1 (read) · Structural weakness",
+    "title": "4v4 · Defesa de Z3 (bola rápida central)",
+    "shortDescription": "Ataque rápido central adversário no 4v4: leitura bloco a 1 + 3 defensores. A configuração mais difícil de defender.",
+    "contextLabel": "4v4 · Bloco a 1 (read) · Fraqueza estrutural",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing quick",
-        "description": "In 4v4 the central quick (tempo 1) is the most dangerous attack since only 1 blocker is available. The lone back already scans the deep axis."
+        "title": "1. Leitura da bola rápida adversária",
+        "description": "No 4v4 a bola rápida central (tempo 1) é o ataque mais perigoso, pois apenas 1 bloqueador está disponível. O único atrás já varre o eixo profundo."
       },
       "s2": {
-        "title": "2. Fast central set",
-        "description": "The setter flat-sets to the middle who has already started his approach. Our wings drop to mid-court to cover the cross-courts."
+        "title": "2. Passe central rápido",
+        "description": "O distribuidor faz passe esticado ao central que já iniciou a sua corrida. As nossas asas baixam para meio-campo para cobrir as diagonais."
       },
       "s3": {
-        "title": "3. Block-of-1 (read) + fast spike",
-        "description": "The middle alone jumps on a READ — no commitment possible with a defensive middle. The opposing middle hits straight down the axis."
+        "title": "3. Bloco a 1 (read) + remate rápido",
+        "description": "O central salta sozinho em READ — sem commit possível com um central defensivo. O central adversário bate em frente no eixo."
       },
       "s4": {
-        "title": "4. Defensive pivot: the lone back",
-        "description": "The P1 back defends the powerful ball straight on axis — he plays the role of Z6 of 6v6. His read must be PERFECT."
+        "title": "4. Pivô defensivo: o único atrás",
+        "description": "O atrás em P1 defende a bola potente em pleno eixo — desempenha o papel da Z6 do 6v6. A sua leitura tem de ser PERFEITA."
       },
       "s5": {
-        "title": "5. RESET — diamond formation",
-        "description": "Back to 4v4 base. The middle drops back at the net, the back resumes his axial position."
+        "title": "5. RESET — formação em losango",
+        "description": "Regresso à base do 4v4. O central volta para junto da rede, o atrás retoma a sua posição axial."
       }
     },
     "summary": {
       "keyPoints": [
-        "The 4v4 doc confirms it: the central quick is A REAL WEAKNESS of 4v4 (only 1 blocker).",
-        "Block-of-1 on READ: no commitment possible with a defensive middle.",
-        "The 2 wings cover the 2 short cross-courts at mid-court (~3.5-4 m from the net).",
-        "The lone back is the defensive pivot — he plays the role of Z6 of 6v6 on the central axis.",
-        "Anticipation = skill #1: with ~40 m² to cover, a read error is unrecoverable."
+        "A documentação do 4v4 confirma-o: a bola rápida central é UMA FRAQUEZA REAL do 4v4 (apenas 1 bloqueador).",
+        "Bloco a 1 em READ: sem commit possível com um central defensivo.",
+        "As 2 asas cobrem as 2 diagonais curtas a meio-campo (~3,5-4 m da rede).",
+        "O único atrás é o pivô defensivo — desempenha o papel da Z6 do 6v6 no eixo central.",
+        "Antecipação = competência nº 1: com ~40 m² para cobrir, um erro de leitura é irrecuperável."
       ],
       "commonMistakes": [
-        "Double block on a quick → only 2 floor defenders, cross-courts wide open.",
-        "Back moving forward too early → deep ball lands behind him.",
-        "Wings staying at the net without blocking → holes on the 3 m line behind the block.",
-        "Read of the opposing middle too late → we absorb the attack without moving."
+        "Bloco a 2 numa bola rápida → apenas 2 defensores no chão, diagonais escancaradas.",
+        "Atrás a avançar demasiado cedo → bola profunda cai atrás dele.",
+        "Asas paradas junto à rede sem bloquear → buracos na linha dos 3 m atrás do bloco.",
+        "Leitura do central adversário tardia → absorvemos o ataque sem nos movermos."
       ]
     }
   },
   "5v5-defense-vs-z2": {
-    "title": "5v5 · Z2 defense",
-    "shortDescription": "Perfect mirror of Z4. 2-1-2 system against opposing Z2 attack (their right → arrives on our left).",
-    "contextLabel": "5v5 · 2-1-2 · Double block + off-blocker",
+    "title": "5v5 · Defesa de Z2",
+    "shortDescription": "Espelho perfeito da Z4. Sistema 2-1-2 contra ataque adversário pela Z2 (direita deles → chega à nossa esquerda).",
+    "contextLabel": "5v5 · 2-1-2 · Bloco a 2 + bloqueador secundário",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z2 attack",
-        "description": "Opposing attack from their zone 2 (their right) → arrives on our front-LEFT corner. Perfect mirror of Z4."
+        "title": "1. Leitura do ataque pela Z2 adversária",
+        "description": "Ataque adversário pela zona 2 deles (direita deles) → chega ao nosso canto frente-ESQUERDA. Espelho perfeito da Z4."
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The attack arrives on our front-LEFT corner."
+        "title": "2. Passe alto para a Z2 adversária",
+        "description": "Distribuição para a asa direita adversária. O ataque chega ao nosso canto frente-ESQUERDA."
       },
       "s3": {
-        "title": "3. Mirror double block (OH + middle)",
-        "description": "OH blocker line + middle cross-court on the left side. Opposite (P2) drops off as off-blocker on the right. Libero defends the line in the block shadow, setter defends the long cross-court."
+        "title": "3. Bloco a 2 em espelho (ponta + central)",
+        "description": "Ponta bloqueia paralela + central bloqueia diagonal pelo lado esquerdo. Oposto (P2) recua como bloqueador secundário à direita. Líbero defende a paralela na sombra do bloco, distribuidor defende a diagonal longa."
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The opposing right wing hits long cross-court. OH + middle jump."
+        "title": "4. Remate + bloco a 2",
+        "description": "A asa direita adversária bate em diagonal longa. Ponta + central saltam."
       },
       "s5": {
-        "title": "5. Setter defense — complex transition",
-        "description": "The setter is on the long cross-court trajectory. Defensive bump — since he's the primary defender, the opposite must take the 2nd touch."
+        "title": "5. Defesa do distribuidor — transição complexa",
+        "description": "O distribuidor está na trajetória da diagonal longa. Manchete defensiva — como é o defensor principal, o oposto tem de fazer o 2º toque."
       },
       "s6": {
         "title": "6. RESET",
-        "description": "Back to 5v5 base. Mandatory communication between setter and opposite for the next sequence."
+        "description": "Regresso à base do 5v5. Comunicação obrigatória entre distribuidor e oposto para a próxima sequência."
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4 in 5v5: 2-1-2 system (double block + off-blocker + 2 defenders).",
-        "Double block: OH (P4) blocker line + middle (P3) closes the cross-court.",
-        "The opposite (P2) becomes off-blocker on the right side, drops off on the 3 m line.",
-        "The back-row setter (P1) defends the long cross-court.",
-        "If the setter defends → 2nd touch by the opposite (back-up setter) is mandatory."
+        "Espelho perfeito da Z4 no 5v5: sistema 2-1-2 (bloco a 2 + bloqueador secundário + 2 defensores).",
+        "Bloco a 2: ponta (P4) bloqueia paralela + central (P3) fecha a diagonal.",
+        "O oposto (P2) torna-se bloqueador secundário do lado direito, recua para a linha dos 3 m.",
+        "O distribuidor da linha de trás (P1) defende a diagonal longa.",
+        "Se o distribuidor defender → 2º toque pelo oposto (distribuidor de reserva) é obrigatório."
       ],
       "commonMistakes": [
-        "Opposite blocking from Z2 → off-blocker missing on the right side.",
-        "Setter who defends AND wants to relay → confusion on the 2nd touch.",
-        "Libero misplaced on Z2 (defends the LINE here, not the long cross-court).",
-        "No communication between setter and opposite."
+        "Oposto a bloquear a partir da Z2 → bloqueador secundário em falta do lado direito.",
+        "Distribuidor que defende E quer distribuir → confusão no 2º toque.",
+        "Líbero mal colocado em Z2 (defende a PARALELA aqui, não a diagonal longa).",
+        "Sem comunicação entre distribuidor e oposto."
       ]
     }
   },
   "5v5-defense-vs-z3": {
-    "title": "5v5 · Z3 defense (quick / tempo 1)",
-    "shortDescription": "Block-of-1 (middle) on opposing central quick attack in 5v5 — partial axial coverage.",
-    "contextLabel": "5v5 · Block-of-1 (read) · Quick read",
+    "title": "5v5 · Defesa de Z3 (bola rápida / tempo 1)",
+    "shortDescription": "Bloco a 1 (central) contra ataque rápido central adversário no 5v5 — cobertura axial parcial.",
+    "contextLabel": "5v5 · Bloco a 1 (read) · Leitura rápida",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing quick",
-        "description": "Flat distribution imminent toward the middle. 0.3-0.5 s between set and hit — our middle scans his counterpart, already on the move."
+        "title": "1. Leitura da bola rápida adversária",
+        "description": "Distribuição esticada iminente para o central. 0,3-0,5 s entre passe e batida — o nosso central observa o seu homólogo, já em movimento."
       },
       "s2": {
-        "title": "2. Flat set + wings as off-blockers",
-        "description": "The opposing setter flat-sets the middle. Our wings drop to 1.5 m from the net on the attack line to cover lateral deflections."
+        "title": "2. Passe esticado + asas como bloqueadores secundários",
+        "description": "O distribuidor adversário faz passe esticado para o central. As nossas asas baixam para 1,5 m da rede sobre a linha de ataque para cobrir rechaços laterais."
       },
       "s3": {
-        "title": "3. Block-of-1 (read) + fast spike",
-        "description": "Our middle alone jumps on a read. The opposing middle hits short cross-court — angles are short compared to a high set."
+        "title": "3. Bloco a 1 (read) + remate rápido",
+        "description": "O nosso central salta sozinho em leitura. O central adversário bate em diagonal curta — os ângulos são curtos em comparação a um passe alto."
       },
       "s4": {
-        "title": "4. Libero defense",
-        "description": "The libero (pulled up to 5 m since angles are short) defends with a bump in his left channel. High trajectory to the target — the setter will return to the net."
+        "title": "4. Defesa do líbero",
+        "description": "O líbero (avançado para 5 m, pois os ângulos são curtos) defende com manchete no seu corredor esquerdo. Trajetória alta para o alvo — o distribuidor regressa à rede."
       },
       "s5": {
         "title": "5. RESET",
-        "description": "Back to 5v5 base after the sequence. The middle and wings realign."
+        "description": "Regresso à base do 5v5 após a sequência. Central e asas realinham-se."
       }
     },
     "summary": {
       "keyPoints": [
-        "Block-of-1 (P3 middle) on read — no commit possible on a quick.",
-        "Wings (P4 + P2) 2 m from the net on the attack line: cover block deflections.",
-        "With only 2 deep defenders (P5 + P1), AXIAL deep coverage is partial.",
-        "Z1 and Z5 ADVANCE 1 m (~7 m from the net) because angles are shorter on a quick.",
-        "\"Stopped on contact\": everyone stopped at the exact moment of the hit."
+        "Bloco a 1 (P3 central) em leitura — sem commit possível numa bola rápida.",
+        "Asas (P4 + P2) a 2 m da rede sobre a linha de ataque: cobrem rechaços do bloco.",
+        "Com apenas 2 defensores profundos (P5 + P1), a cobertura AXIAL profunda é parcial.",
+        "Z1 e Z5 AVANÇAM 1 m (~7 m da rede) porque os ângulos são mais curtos numa bola rápida.",
+        "\"Parados no contacto\": todos parados no momento exato da batida."
       ],
       "commonMistakes": [
-        "Double block on a quick → too late, and leaves only 1 floor defender.",
-        "Defenders frozen at the back (8 m+) → fast ball lands before they move.",
-        "\"False stepping\" (first step backwards) → time lost on tempo 1.",
-        "Off-blockers staying at the net → don't cover deflections."
+        "Bloco a 2 numa bola rápida → tarde demais e deixa apenas 1 defensor no chão.",
+        "Defensores parados no fundo (8 m+) → bola rápida cai antes de se moverem.",
+        "\"False stepping\" (primeiro passo atrás) → tempo perdido num tempo 1.",
+        "Bloqueadores secundários parados junto à rede → não cobrem rechaços."
       ]
     }
   },
   "5v5-defense-vs-z4": {
-    "title": "5v5 · Z4 defense",
-    "shortDescription": "2-1-2 system against opposing Z4 attack (their left → arrives on our right): double block + off-blocker + 2 defenders.",
-    "contextLabel": "5v5 · 2-1-2 · Double block + off-blocker",
+    "title": "5v5 · Defesa de Z4",
+    "shortDescription": "Sistema 2-1-2 contra ataque adversário pela Z4 (esquerda deles → chega à nossa direita): bloco a 2 + bloqueador secundário + 2 defensores.",
+    "contextLabel": "5v5 · 2-1-2 · Bloco a 2 + bloqueador secundário",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "Central (P3)",
+      "Op": "Oposto (P2)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "P": "Distribuidor (P1)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z4 attack",
-        "description": "Opposing attack from their zone 4 (their left) → arrives on our front-RIGHT corner. Sequential read \"ball → setter → ball → hitter\"."
+        "title": "1. Leitura do ataque pela Z4 adversária",
+        "description": "Ataque adversário pela zona 4 deles (esquerda deles) → chega ao nosso canto frente-DIREITA. Leitura sequencial \"bola → distribuidor → bola → atacante\"."
       },
       "s2": {
-        "title": "2. High set to opposing Z4",
-        "description": "Standard distribution from their setter to the left wing. Our front line identifies the attack zone."
+        "title": "2. Passe alto para a Z4 adversária",
+        "description": "Distribuição padrão do distribuidor deles para a asa esquerda. A nossa linha da frente identifica a zona de ataque."
       },
       "s3": {
-        "title": "3. Double block + OH off-blocker",
-        "description": "Opposite (P2) + middle (P3) go up to block on the right side. OH drops off at 1.5 m from the net as off-blocker. Libero in the long cross-court, setter on the straight line — each covers ~30 m²."
+        "title": "3. Bloco a 2 + ponta bloqueador secundário",
+        "description": "Oposto (P2) + central (P3) sobem para bloquear do lado direito. Ponta recua para 1,5 m da rede como bloqueador secundário. Líbero na diagonal longa, distribuidor na paralela — cada um cobre ~30 m²."
       },
       "s4": {
-        "title": "4. Long cross-court spike + block",
-        "description": "The hitter strikes long cross-court (statistically the most frequent trajectory). Opposite + middle jump."
+        "title": "4. Remate em diagonal longa + bloco",
+        "description": "O atacante bate em diagonal longa (estatisticamente a trajetória mais frequente). Oposto + central saltam."
       },
       "s5": {
-        "title": "5. Libero defense",
-        "description": "The libero is on the main trajectory. High bump to the target — transition to counter-attack."
+        "title": "5. Defesa do líbero",
+        "description": "O líbero está sobre a trajetória principal. Manchete alta para o alvo — transição para contra-ataque."
       },
       "s6": {
-        "title": "6. RESET — back to 2-1-2 base",
-        "description": "Switch to base formation. The setter returns to his zone 1, defense reorganizes for the next sequence."
+        "title": "6. RESET — regresso à base 2-1-2",
+        "description": "Passagem à formação de base. O distribuidor regressa à zona 1, a defesa reorganiza-se para a próxima sequência."
       }
     },
     "summary": {
       "keyPoints": [
-        "2-1-2 system: 2 blockers + 1 off-blocker (tip coverer) + 2 deep defenders.",
-        "Recommendation: keep the 6v6 5-1 by removing one non-setter back (3F-2B configuration).",
-        "Off-blocker 2-2.5 m from the net, 1 m from the line — covers the 3 m zone behind the block.",
-        "Critical read: ~30 m² per defender (vs 20 m² in 6v6), reduced initial positional safety.",
-        "\"Stopped on contact\": stopped and balanced at the exact moment of the hit."
+        "Sistema 2-1-2: 2 bloqueadores + 1 bloqueador secundário (cobertura do amorti) + 2 defensores profundos.",
+        "Recomendação: manter o 5-1 do 6v6 retirando um atrás não distribuidor (configuração 3F-2B).",
+        "Bloqueador secundário a 2-2,5 m da rede, a 1 m da linha — cobre a zona dos 3 m atrás do bloco.",
+        "Leitura crítica: ~30 m² por defensor (vs 20 m² em 6v6), segurança posicional inicial reduzida.",
+        "\"Parados no contacto\": parados e equilibrados no momento exato da batida."
       ],
       "commonMistakes": [
-        "Triple block → only 1 floor defender = guaranteed point.",
-        "Off-blocker staying at the net → 3 m zone behind the block uncovered.",
-        "No priority hierarchy between the 2 deep defenders → 2 players on the same ball.",
-        "Mechanically reproducing 6v6 without adapting zones (the libero must cover wider here)."
+        "Bloco a 3 → apenas 1 defensor no chão = ponto garantido.",
+        "Bloqueador secundário parado junto à rede → zona dos 3 m atrás do bloco descoberta.",
+        "Sem hierarquia de prioridade entre os 2 defensores profundos → 2 jogadores na mesma bola.",
+        "Reproduzir mecanicamente o 6v6 sem adaptar zonas (o líbero tem de cobrir uma área maior aqui)."
       ]
     }
   },
   "6v6-attack-coverage": {
-    "title": "Coverage · 5-1 attack",
-    "shortDescription": "5-player coverage on a zone-4 attack: 2 arcs (3 close + 2 far) to dig a potential block-out.",
-    "contextLabel": "5-1 · 5-player coverage · 3-2 layout",
+    "title": "Cobertura · Ataque 5-1",
+    "shortDescription": "Cobertura a 5 jogadores num ataque pela zona 4: 2 arcos (3 perto + 2 longe) para defender um possível block-out.",
+    "contextLabel": "5-1 · Cobertura a 5 · Esquema 3-2",
     "players": {
-      "R4a": "OH hitter (P4)",
-      "C": "Middle (P3)",
-      "P": "Setter (penetrated)",
-      "Op": "Opposite (P2)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker"
+      "R4a": "Ponta atacante (P4)",
+      "C": "Central (P3)",
+      "P": "Distribuidor (infiltrado)",
+      "Op": "Oposto (P2)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_BL": "Bloqueador esquerdo adversário",
+      "OPP_BR": "Bloqueador direito adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Preparing the Z4 attack",
-        "description": "Our OH is in his approach, about to take off. Even before the hit, coverage organizes: it's anticipation that saves a block-out, not reaction."
+        "title": "1. Preparação do ataque pela Z4",
+        "description": "A nossa ponta está em corrida de balanço, prestes a levantar voo. Mesmo antes da batida, a cobertura organiza-se: é a antecipação que salva um block-out, não a reação."
       },
       "s2": {
-        "title": "2. First arc (3 close players)",
-        "description": "Setter + middle + libero form a half-circle 1-1.5 m from the hitter, VERY low position, arms extended forward, ready to short-bump."
+        "title": "2. Primeiro arco (3 jogadores próximos)",
+        "description": "Distribuidor + central + líbero formam um semicírculo a 1-1,5 m do atacante, posição MUITO baixa, braços estendidos à frente, prontos a fazer manchete curta."
       },
       "s3": {
-        "title": "3. Spike + opposing double block",
-        "description": "Our OH lifts off and hits cross-court. The two opposing blockers jump in parallel to close the trajectory — coverage is already frozen, waiting."
+        "title": "3. Remate + bloco a 2 adversário",
+        "description": "A nossa ponta levanta voo e bate em diagonal. Os dois bloqueadores adversários saltam em paralelo para fechar a trajetória — a cobertura já está parada, à espera."
       },
       "s4": {
-        "title": "4. Block-out: the ball comes back",
-        "description": "The opposing block touches the ball which ricochets into our court 1.5 m from the hitter. Without coverage, that's a lost point — here, the setter is exactly at the landing spot."
+        "title": "4. Block-out: a bola volta",
+        "description": "O bloco adversário toca na bola que ressalta no nosso campo a 1,5 m do atacante. Sem cobertura, é um ponto perdido — aqui, o distribuidor está exatamente no ponto de queda."
       },
       "s5": {
-        "title": "5. Recovery by the setter (1st support)",
-        "description": "The setter (1st close support) digs the ball with a bump 1 m from the hitter. It's HIS responsibility after a set to zone 4 — non-negotiable rule."
+        "title": "5. Recuperação pelo distribuidor (1ª cobertura)",
+        "description": "O distribuidor (1ª cobertura próxima) defende a bola com manchete a 1 m do atacante. É SUA responsabilidade após um passe para a zona 4 — regra inegociável."
       },
       "s6": {
-        "title": "6. New attack possible",
-        "description": "The save allows a new ball back at the net. Without 5-player coverage = point lost directly on the block-out."
+        "title": "6. Novo ataque possível",
+        "description": "A recuperação permite uma nova bola de volta junto à rede. Sem cobertura a 5 = ponto perdido diretamente no block-out."
       }
     },
     "summary": {
       "keyPoints": [
-        "5-player coverage = elite-level standard. 3-2 layout (3 close + 2 far).",
-        "The setter is ALWAYS the 1st close support, 1-1.5 m from the hitter.",
-        "VERY low position for the 3 close players, arms extended forward.",
-        "Without coverage, a successful opposing block = point lost directly.",
-        "Anticipation outweighs reaction: coverage organizes BEFORE the hit."
+        "Cobertura a 5 = padrão de elite. Esquema 3-2 (3 perto + 2 longe).",
+        "O distribuidor é SEMPRE a 1ª cobertura próxima, a 1-1,5 m do atacante.",
+        "Posição MUITO baixa para os 3 jogadores próximos, braços estendidos à frente.",
+        "Sem cobertura, um bloco adversário bem-sucedido = ponto perdido diretamente.",
+        "Antecipação supera reação: a cobertura organiza-se ANTES da batida."
       ],
       "commonMistakes": [
-        "No coverage → opposing block = point.",
-        "Setter staying at the net after his set → 1st support missing.",
-        "Coverers standing or too far → short balls not recovered.",
-        "Only 2 or 3 coverers instead of 5 → long block-outs lost."
+        "Sem cobertura → bloco adversário = ponto.",
+        "Distribuidor parado junto à rede após o passe → 1ª cobertura em falta.",
+        "Cobridores em pé ou demasiado afastados → bolas curtas não recuperadas.",
+        "Apenas 2 ou 3 cobridores em vez de 5 → block-outs longos perdidos."
       ]
     }
   },
   "6v6-defense-6-front": {
-    "title": "Defense · man-up (2-1-3)",
-    "shortDescription": "Man-up system (2-1-3, formerly \"W defense\"): a defender pulled up behind the block for short tips.",
-    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-tip",
+    "title": "Defesa · man-up (2-1-3)",
+    "shortDescription": "Sistema man-up (2-1-3, antiga \"defesa em W\"): um defensor avançado atrás do bloco para amortis curtos.",
+    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-amorti",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6 pulled up)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6 avançada)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Man-up base",
-        "description": "The opponent is known for tipping — tactical choice of the man-up. The OH (in P6) is already pulled up to 2.5 m, ready to move up behind the block."
+        "title": "1. Base do man-up",
+        "description": "O adversário é conhecido por amortir — escolha tática do man-up. A ponta (em P6) já está avançada para 2,5 m, pronta a avançar atrás do bloco."
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "Standard distribution to opposing Z4. The defense recognizes the configuration and sets up."
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "Distribuição padrão para a Z4 adversária. A defesa reconhece a configuração e coloca-se."
       },
       "s3": {
-        "title": "3. Player up behind the block",
-        "description": "Key difference of the man-up: R4b moves up to 2.5 m from the net, in the block shadow. Libero and setter drop back to 6 m to compensate. Standard double block (opposite + middle)."
+        "title": "3. Jogador avançado atrás do bloco",
+        "description": "Diferença-chave do man-up: R4b avança para 2,5 m da rede, na sombra do bloco. Líbero e distribuidor recuam para 6 m para compensar. Bloco a 2 padrão (oposto + central)."
       },
       "s4": {
-        "title": "4. Opposing jump tip",
-        "description": "The hitter chooses to tip rather than spike. The ball lands just behind the block — exactly where the up-player is."
+        "title": "4. Amorti em salto adversário",
+        "description": "O atacante opta por amortir em vez de rematar. A bola cai mesmo atrás do bloco — exatamente onde está o jogador avançado."
       },
       "s5": {
-        "title": "5. Short recovery by the up-player",
-        "description": "The up-player is exactly where the ball falls. Precise bump to the opposite to relay a jump 2nd touch."
+        "title": "5. Recuperação curta pelo jogador avançado",
+        "description": "O jogador avançado está exatamente onde a bola cai. Manchete precisa para o oposto fazer um 2º toque em salto."
       },
       "s6": {
-        "title": "6. RESET — man-up base",
-        "description": "Back to 2-1-3 base position. R4b repositioned at 2.5 m, libero and setter deep."
+        "title": "6. RESET — base do man-up",
+        "description": "Regresso à posição de base 2-1-3. R4b recolocado a 2,5 m, líbero e distribuidor profundos."
       }
     },
     "summary": {
       "keyPoints": [
-        "Man-up = 2-1-3 (Keller / USAV) — formerly \"red defense\".",
-        "⚠ DO NOT confuse with \"W-formation\" which is a RECEPTION formation, not a defensive system.",
-        "Exceptional coverage of tips, roll shots and \"junk\" balls behind the block.",
-        "But: only 3 deep defenders → vulnerable to powerful spikes in tight cross-courts.",
-        "Indication: youth teams, school, tactical opponents who play many tips or off-speed shots."
+        "Man-up = 2-1-3 (Keller / USAV) — antiga \"defesa vermelha\".",
+        "⚠ NÃO confundir com \"formação em W\" que é uma formação de RECEÇÃO, não um sistema defensivo.",
+        "Cobertura excecional de amortis, roll shots e bolas \"junk\" atrás do bloco.",
+        "Mas: apenas 3 defensores profundos → vulnerável a remates potentes em diagonais curtas.",
+        "Indicação: equipas jovens, escolares, adversários táticos que jogam muitos amortis ou off-speed."
       ],
       "commonMistakes": [
-        "Keeping the perimeter system against a team that tips → short balls lost.",
-        "Up-player too far forward (at the net) → blocked in his blocking momentum.",
-        "Libero who does not drop back → hole at the back on a powerful spike.",
-        "Confusing \"W defense\" and \"man-up\" in team vocabulary — source of misunderstandings."
+        "Manter o sistema de perímetro contra uma equipa que amortiece → bolas curtas perdidas.",
+        "Jogador avançado demasiado à frente (junto à rede) → bloqueado no impulso de bloco.",
+        "Líbero que não recua → buraco no fundo num remate potente.",
+        "Confundir \"defesa em W\" e \"man-up\" no vocabulário da equipa — fonte de mal-entendidos."
       ]
     }
   },
   "6v6-defense-perimeter": {
-    "title": "Defense · perimeter (2-0-4)",
-    "shortDescription": "White defense: 4 defenders on the lines, U open toward the net. Dominant in elite men's volleyball.",
-    "contextLabel": "5-1 · Perimeter 2-0-4 (white defense)",
+    "title": "Defesa · perímetro (2-0-4)",
+    "shortDescription": "Defesa branca: 4 defensores nas linhas, U aberto para a rede. Dominante no voleibol masculino de elite.",
+    "contextLabel": "5-1 · Perímetro 2-0-4 (defesa branca)",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Perimeter configuration (2-0-4)",
-        "description": "The 4 defenders form a U open toward the net, almost on the lines — \"one foot on the line\" (Liskevych). The middle of the court is deliberately abandoned."
+        "title": "1. Configuração em perímetro (2-0-4)",
+        "description": "Os 4 defensores formam um U aberto para a rede, quase nas linhas — \"um pé na linha\" (Liskevych). O meio do campo é deliberadamente abandonado."
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "Set to their left wing. Our front line identifies the zone, the perimeter players stay strictly on the lines."
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "Passe para a asa esquerda deles. A nossa linha da frente identifica a zona, os jogadores em perímetro permanecem estritamente nas linhas."
       },
       "s3": {
-        "title": "3. Double block + 4 defenders on the perimeter",
-        "description": "Standard double block (opposite line + middle cross-court). No defender pulled up behind the block (hence the 0 in the middle). Libero on the left line, P6 on the baseline, P1 on the right line."
+        "title": "3. Bloco a 2 + 4 defensores em perímetro",
+        "description": "Bloco a 2 padrão (oposto na paralela + central na diagonal). Nenhum defensor avançado atrás do bloco (daí o 0 no centro). Líbero na linha esquerda, P6 na linha de fundo, P1 na linha direita."
       },
       "s4": {
-        "title": "4. Powerful line spike + block",
-        "description": "The hitter strikes the line on our back-left corner. The trajectory passes close to the block — a long block-out is likely."
+        "title": "4. Remate potente em paralela + bloco",
+        "description": "O atacante bate em paralela para o nosso canto trás-esquerda. A trajetória passa perto do bloco — um block-out longo é provável."
       },
       "s5": {
-        "title": "5. Recovery on the line",
-        "description": "The libero recovers on the line — perfect perimeter coverage. Easily identifies \"out\" balls. High bump to zone 2-3."
+        "title": "5. Recuperação na linha",
+        "description": "O líbero recupera na linha — cobertura de perímetro perfeita. Identifica facilmente as bolas \"fora\". Manchete alta para a zona 2-3."
       },
       "s6": {
-        "title": "6. RESET — perimeter",
-        "description": "Back to the pure perimeter formation: all backs on the lines, central middle abandoned by tactical convention."
+        "title": "6. RESET — perímetro",
+        "description": "Regresso à formação de perímetro pura: todos os atrás nas linhas, centro abandonado por convenção tática."
       }
     },
     "summary": {
       "keyPoints": [
-        "Perimeter = 2-0-4 (\"white defense\"): 4 defenders on the perimeter, none pulled up.",
-        "System dominant in modern and international men's volleyball where power dominates.",
-        "Logic: statistically populate the zones where powerful spikes land (lines and deep corners).",
-        "Excellent identification of \"out\" balls and defense of block-outs.",
-        "⚠ The middle of the court (central zone between 3 and 5 m) is deliberately left open."
+        "Perímetro = 2-0-4 (\"defesa branca\"): 4 defensores no perímetro, ninguém avançado.",
+        "Sistema dominante no voleibol masculino moderno e internacional onde a potência domina.",
+        "Lógica: ocupar estatisticamente as zonas onde caem os remates potentes (linhas e cantos profundos).",
+        "Excelente identificação das bolas \"fora\" e defesa dos block-outs.",
+        "⚠ O meio do campo (zona central entre os 3 e os 5 m) fica deliberadamente aberto."
       ],
       "commonMistakes": [
-        "Defenders collapsing toward the center → lose the system's logic and no longer cover the lines.",
-        "System chosen against a team that tips → center of the court uncovered, tips lost.",
-        "Inexperienced libero → misread of \"out\" balls on the sides.",
-        "Lack of athleticism to dive forward on tips → weakness exploited."
+        "Defensores a colapsar para o centro → perdem a lógica do sistema e já não cobrem as linhas.",
+        "Sistema escolhido contra uma equipa que amortiece → centro do campo descoberto, amortis perdidos.",
+        "Líbero inexperiente → má leitura das bolas \"fora\" nas laterais.",
+        "Falta de atletismo para mergulhar à frente sobre amortis → fraqueza explorada."
       ]
     }
   },
   "6v6-defense-read": {
-    "title": "Defense · read",
-    "shortDescription": "Elite reactive defense: adaptive positions based on set, approach and opposing armed-arm cues.",
-    "contextLabel": "5-1 · Read defense · International",
+    "title": "Defesa · read",
+    "shortDescription": "Defesa reativa de elite: posições adaptativas em função do passe, da corrida e dos indícios do braço armado adversário.",
+    "contextLabel": "5-1 · Defesa read · Internacional",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Neutral base position",
-        "description": "All defenders in read position, knees flexed, feet parallel. Mandatory visual sequence: \"ball → setter → ball → hitter\"."
+        "title": "1. Posição neutra de base",
+        "description": "Todos os defensores em posição de leitura, joelhos fletidos, pés paralelos. Sequência visual obrigatória: \"bola → distribuidor → bola → atacante\"."
       },
       "s2": {
-        "title": "2. Read the set (toward opposing Z2)",
-        "description": "As soon as the ball leaves the opposing setter's hands → adjust toward the attack zone. Here opposing Z2 (their right = our left)."
+        "title": "2. Leitura do passe (para a Z2 adversária)",
+        "description": "Assim que a bola sai das mãos do distribuidor adversário → ajuste para a zona de ataque. Aqui Z2 adversária (direita deles = nossa esquerda)."
       },
       "s3": {
-        "title": "3. Read the hitter + adjustment",
-        "description": "Read in parallel the approach, the armed-arm orientation and shoulders. Everyone repositions based on the cues: high shoulder = spike, rotation = probable direction."
+        "title": "3. Leitura do atacante + ajuste",
+        "description": "Ler em paralelo a corrida, a orientação do braço armado e os ombros. Todos se reposicionam consoante os indícios: ombro alto = remate, rotação = direção provável."
       },
       "s4": {
-        "title": "4. Read spike + double block",
-        "description": "The hitter opens long cross-court. Defense is already in place thanks to visual cues. OH + middle block. \"Stopped on contact\" mandatory."
+        "title": "4. Leitura do remate + bloco a 2",
+        "description": "O atacante abre em diagonal longa. A defesa já está em posição graças aos indícios visuais. Ponta + central bloqueiam. \"Parados no contacto\" obrigatório."
       },
       "s5": {
-        "title": "5. Read recovery by the libero",
-        "description": "Perfect anticipation: the libero is already in the long cross-court, exactly on the trajectory. High bump to the target."
+        "title": "5. Recuperação em leitura pelo líbero",
+        "description": "Antecipação perfeita: o líbero já está na diagonal longa, exatamente sobre a trajetória. Manchete alta para o alvo."
       },
       "s6": {
-        "title": "6. RESET — neutral base",
-        "description": "Back to neutral position, ready to read the next phase. The read restarts at every opposing touch."
+        "title": "6. RESET — base neutra",
+        "description": "Regresso à posição neutra, pronto a ler a fase seguinte. A leitura recomeça em cada toque adversário."
       }
     },
     "summary": {
       "keyPoints": [
-        "Read defense = no fixed positioning, everything is adaptive. Modern defense is defined less by formation than by reading.",
-        "Visual sequence \"ball → setter → ball → hitter\" (Hebert, Liskevych, FIVB Top Volley).",
-        "Phases: neutral base → read set → read hitter → adjustment → \"stopped on contact\" → pursuit.",
-        "Preferred system at the international elite level (FIVB seniors).",
-        "Most effective against versatile hitters."
+        "Defesa read = sem posicionamento fixo, tudo é adaptativo. A defesa moderna define-se menos pela formação do que pela leitura.",
+        "Sequência visual \"bola → distribuidor → bola → atacante\" (Hebert, Liskevych, FIVB Top Volley).",
+        "Fases: base neutra → leitura do passe → leitura do atacante → ajuste → \"parados no contacto\" → perseguição.",
+        "Sistema privilegiado ao nível da elite internacional (FIVB sénior).",
+        "Mais eficaz contra atacantes versáteis."
       ],
       "commonMistakes": [
-        "Moving BEFORE the set → bad read, player on the wrong foot.",
-        "Incomplete read: only reading the set, not the armed arm.",
-        "Still moving at the moment of the hitter's contact (not \"stopped on contact\") → reactivity cut in half.",
-        "Lack of coordination → 2 defenders on the same ball, hole elsewhere."
+        "Mover-se ANTES do passe → má leitura, jogador no pé errado.",
+        "Leitura incompleta: ler apenas o passe, não o braço armado.",
+        "Continuar em movimento no momento do contacto do atacante (não \"parados no contacto\") → reatividade cortada a meio.",
+        "Falta de coordenação → 2 defensores na mesma bola, buraco noutro local."
       ]
     }
   },
   "6v6-defense-rotation": {
-    "title": "Defense · rotation (3-2-1)",
-    "shortDescription": "Rotation / slide defense: backs slide toward the attack side, the opposite back moves up behind the block.",
-    "contextLabel": "5-1 · Rotation 3-2-1 · Slide defense",
+    "title": "Defesa · rotação (3-2-1)",
+    "shortDescription": "Defesa em rotação / slide: os atrás deslizam para o lado do ataque, o atrás oposto avança atrás do bloco.",
+    "contextLabel": "5-1 · Rotação 3-2-1 · Slide defense",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Base + read of the Z4 set",
-        "description": "Base configuration before rotating. The opposing setter penetrates and prepares a set to their left wing."
+        "title": "1. Base + leitura do passe para Z4",
+        "description": "Configuração de base antes da rotação. O distribuidor adversário infiltra e prepara um passe para a asa esquerda deles."
       },
       "s2": {
-        "title": "2. High set to opposing Z4",
-        "description": "Standard distribution. Our team triggers the rotation: P1 will move up behind the block, P6 will slide toward the right line, libero keeps the cross-court."
+        "title": "2. Passe alto para a Z4 adversária",
+        "description": "Distribuição padrão. A nossa equipa inicia a rotação: P1 vai avançar atrás do bloco, P6 vai deslizar para a linha direita, líbero mantém a diagonal."
       },
       "s3": {
-        "title": "3. 3-2-1 rotation engaged",
-        "description": "The setter (P1) MOVES UP to 3 m behind the block to cover the tip. P6 slides toward the right line at 8 m. Libero stays in the long cross-court. R4 classic off-blocker on the left."
+        "title": "3. Rotação 3-2-1 acionada",
+        "description": "O distribuidor (P1) AVANÇA para 3 m atrás do bloco para cobrir o amorti. P6 desliza para a linha direita a 8 m. Líbero mantém-se na diagonal longa. R4 bloqueador secundário clássico à esquerda."
       },
       "s4": {
-        "title": "4. Cross-court spike + block",
-        "description": "The hitter strikes long cross-court. Double block (opposite + middle) — the main trajectory is covered by the libero."
+        "title": "4. Remate em diagonal + bloco",
+        "description": "O atacante bate em diagonal longa. Bloco a 2 (oposto + central) — a trajetória principal é coberta pelo líbero."
       },
       "s5": {
-        "title": "5. Libero defense on the cross-court",
-        "description": "The libero is exactly at the landing spot of the primary hit. High bump to zone 2-3 — smooth transition to counter-attack."
+        "title": "5. Defesa do líbero na diagonal",
+        "description": "O líbero está exatamente no ponto de queda da batida principal. Manchete alta para a zona 2-3 — transição limpa para contra-ataque."
       },
       "s6": {
-        "title": "6. RESET — base before next rotation",
-        "description": "Back to base. The rotation was effective: the short tip would have been picked up by the up-setter, the long cross-court by the libero."
+        "title": "6. RESET — base antes da próxima rotação",
+        "description": "Regresso à base. A rotação foi eficaz: o amorti curto teria sido apanhado pelo distribuidor avançado, a diagonal longa pelo líbero."
       }
     },
     "summary": {
       "keyPoints": [
-        "3-2-1 rotation (slide defense): 3 back defenders slide toward the attack side.",
-        "The opposite back (often the setter if in P1) MOVES UP behind the block to cover the tip.",
-        "Back middle slides toward the line on the attacked side (~8.5 m, 1-1.5 m from the line).",
-        "Excellent coverage of the deep line AND tip simultaneously.",
-        "Quick setter transition if the setter is the up-player.",
-        "\"Counter-rotate\" variant: rotation in the opposite direction."
+        "Rotação 3-2-1 (slide defense): 3 defensores de trás deslizam para o lado do ataque.",
+        "O atrás oposto (frequentemente o distribuidor, se em P1) AVANÇA atrás do bloco para cobrir o amorti.",
+        "Central de trás desliza para a linha do lado atacado (~8,5 m, 1-1,5 m da linha).",
+        "Excelente cobertura da paralela profunda E do amorti em simultâneo.",
+        "Transição rápida do distribuidor se ele for o jogador avançado.",
+        "Variante \"counter-rotate\": rotação no sentido oposto."
       ],
       "commonMistakes": [
-        "Incomplete rotation → coverage holes.",
-        "Opposite-diagonal corner vulnerable (one less defender deep).",
-        "Confusion between rotate (toward the ball) and counter-rotate (opposite) — requires strong communication.",
-        "Up-player frozen → does not read tips vs spikes."
+        "Rotação incompleta → buracos de cobertura.",
+        "Canto oposto-diagonal vulnerável (um defensor a menos no fundo).",
+        "Confusão entre rotate (para a bola) e counter-rotate (oposto) — requer comunicação forte.",
+        "Jogador avançado parado → não lê amortis vs remates."
       ]
     }
   },
   "6v6-defense-vs-pipe": {
-    "title": "Defense · opposing pipe (BIC)",
-    "shortDescription": "Defense against an opposing pipe (back-row Z6 attack): block-of-1 or 2, P6 moves up to \"cinch the court\".",
-    "contextLabel": "5-1 · Pipe / BIC · P6 up, tightened perimeter",
+    "title": "Defesa · pipe adversário (BIC)",
+    "shortDescription": "Defesa contra um pipe adversário (ataque da linha de trás Z6): bloco a 1 ou a 2, P6 avança para \"apertar o campo\".",
+    "contextLabel": "5-1 · Pipe / BIC · P6 avançado, perímetro apertado",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing pipe",
-      "OPP_S": "Opposing setter"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Pipe adversário",
+      "OPP_S": "Distribuidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reading the pipe",
-        "description": "Their setter is about to send a flat set to the center back. Our middle scans both the possible opposing middle AND the pipe lane. P6 must be ready to move up."
+        "title": "1. Leitura do pipe",
+        "description": "O distribuidor deles está prestes a enviar um passe esticado para o central da retaguarda. O nosso central observa simultaneamente o possível central adversário E o corredor do pipe. P6 tem de estar pronto a avançar."
       },
       "s2": {
-        "title": "2. Flat central set + pipe approach",
-        "description": "The opposing setter delivers a flat set toward the Z6 axis. The pipe hitter enters his approach from behind the 3 m line, long run-up. P6 starts sliding forward."
+        "title": "2. Passe central esticado + corrida do pipe",
+        "description": "O distribuidor adversário entrega um passe esticado para o eixo da Z6. O atacante do pipe entra na sua corrida a partir de trás da linha dos 3 m, balanço longo. P6 começa a deslizar para a frente."
       },
       "s3": {
-        "title": "3. Central block + tightened wings",
-        "description": "Our middle alone jumps on the pipe. Wings (OH + opposite) drop to ~1.5 m from the net to cover lateral deflections. Z1 and Z5 sacrifice the lines to defend the axis."
+        "title": "3. Bloco central + asas apertadas",
+        "description": "O nosso central salta sozinho ao pipe. As asas (ponta + oposto) baixam para ~1,5 m da rede para cobrir rechaços laterais. Z1 e Z5 sacrificam as linhas para defender o eixo."
       },
       "s4": {
-        "title": "4. Pipe hit + central block",
-        "description": "The hitter strikes deep on the axis. Our middle goes up to the net for a block-of-1 — the fast pipe doesn't allow time to put up two blockers."
+        "title": "4. Batida do pipe + bloco central",
+        "description": "O atacante bate profundo no eixo. O nosso central sobe à rede para um bloco a 1 — o pipe rápido não dá tempo para colocar dois bloqueadores."
       },
       "s5": {
-        "title": "5. Axial recovery by P6",
-        "description": "The ball crosses to the deep axis — P6 (pulled up to 6.5 m) is exactly on the impact spot. Bump straight on axis to the setter's zone 2-3."
+        "title": "5. Recuperação axial por P6",
+        "description": "A bola passa para o eixo profundo — P6 (avançado para 6,5 m) está exatamente no ponto de impacto. Manchete em pleno eixo para a zona 2-3 do distribuidor."
       },
       "s6": {
-        "title": "6. RESET — back to the tightened base",
-        "description": "Switch to the pipe-ready base position: P6 up, Z1/Z5 on the central axis. The configuration remains valid if play continues to rotate."
+        "title": "6. RESET — regresso à base apertada",
+        "description": "Passagem à posição de base anti-pipe: P6 avançado, Z1/Z5 no eixo central. A configuração mantém-se válida se o jogo continuar a rodar."
       }
     },
     "summary": {
       "keyPoints": [
-        "Pipe = back-row attack from Z6 (center back) by OH2 or OPP — targets the deep central axis.",
-        "Block-of-1 (middle) most frequent — double block hard on a fast tempo.",
-        "Defensive P6 MOVES UP to ~6-7 m from the net, exact axis (\"cinch the court\").",
-        "Z1 and Z5 close toward the center (~7 m, 1.5 m from the lines) — sacrifice the lines a bit.",
-        "BIC (fast pipe) = one of the hardest attacks to defend since the middle can't honor quick + pipe + two wings."
+        "Pipe = ataque da linha de trás a partir da Z6 (central da retaguarda) por OH2 ou OPP — aponta ao eixo central profundo.",
+        "Bloco a 1 (central) mais frequente — bloco a 2 difícil num tempo rápido.",
+        "P6 defensivo AVANÇA para ~6-7 m da rede, em pleno eixo (\"apertar o campo\").",
+        "Z1 e Z5 fecham para o centro (~7 m, 1,5 m das linhas) — sacrificam as linhas um pouco.",
+        "BIC (pipe rápido) = um dos ataques mais difíceis de defender pois o central não consegue cobrir bola rápida + pipe + duas asas."
       ],
       "commonMistakes": [
-        "Double block on a pipe → leaves a wing completely open if the opponent switches attacks.",
-        "P6 frozen at the back (8 m+) → fast pipe lands before he moves.",
-        "Z1/Z5 spread too wide on the lines → central axis uncovered.",
-        "No communication between middle and wings on who takes the pipe vs the quick."
+        "Bloco a 2 num pipe → deixa uma asa completamente aberta se o adversário mudar de ataque.",
+        "P6 parado no fundo (8 m+) → pipe rápido cai antes de ele se mover.",
+        "Z1/Z5 demasiado abertos nas linhas → eixo central descoberto.",
+        "Sem comunicação entre central e asas sobre quem fica com o pipe vs a bola rápida."
       ]
     }
   },
   "6v6-defense-vs-z2": {
-    "title": "Defense · opposing Z2 attack",
-    "shortDescription": "Perfect mirror of Z4. Double block (OH line + middle cross-court) against opposing Z2 attack → arrives on our left.",
-    "contextLabel": "5-1 · P1 back-row setter · Double block · Perimeter",
+    "title": "Defesa · ataque adversário pela Z2",
+    "shortDescription": "Espelho perfeito da Z4. Bloco a 2 (ponta na paralela + central na diagonal) contra ataque adversário pela Z2 → chega à nossa esquerda.",
+    "contextLabel": "5-1 · Distribuidor da linha de trás P1 · Bloco a 2 · Perímetro",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing Z2 hitter",
-      "OPP_S": "Opposing setter",
-      "OPP_R": "Opposing receiver"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante Z2 adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R": "Recetor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + penetration",
-        "description": "Their back has bumped. The opposing setter penetrates from their P1 to the target. Our defense reads in READY."
+        "title": "1. Receção + infiltração adversárias",
+        "description": "O atrás deles fez manchete. O distribuidor adversário infiltra a partir do P1 deles para o alvo. A nossa defesa lê em READY."
       },
       "s2": {
-        "title": "2. Opposing high set to Z2",
-        "description": "The opposing setter distributes to their right wing. The attack arrives on our front-LEFT corner. Perfect mirror configuration of Z4."
+        "title": "2. Passe alto adversário para a Z2",
+        "description": "O distribuidor adversário distribui para a asa direita deles. O ataque chega ao nosso canto frente-ESQUERDA. Configuração em espelho perfeito da Z4."
       },
       "s3": {
-        "title": "3. Mirror double block + defensive shift",
-        "description": "OH (P4) blocker line + middle (P3) closes the cross-court. Opposite (P2) off-blocker on the right at the 3 m line. Libero defends the deep left line. P1 takes the long cross-court."
+        "title": "3. Bloco a 2 em espelho + ajuste defensivo",
+        "description": "Ponta (P4) bloqueia paralela + central (P3) fecha diagonal. Oposto (P2) bloqueador secundário à direita na linha dos 3 m. Líbero defende a paralela esquerda profunda. P1 ocupa a diagonal longa."
       },
       "s4": {
-        "title": "4. Opposing spike + double block",
-        "description": "The opposing right wing hits long cross-court. OH and middle jump. Stopped on contact mandatory."
+        "title": "4. Remate adversário + bloco a 2",
+        "description": "A asa direita adversária bate em diagonal longa. Ponta e central saltam. Parados no contacto obrigatório."
       },
       "s5": {
-        "title": "5. Setter defense on the cross-court",
-        "description": "The setter (P1) is on the primary trajectory of the long cross-court. Defensive bump — immediate question: who takes the 2nd touch?"
+        "title": "5. Defesa do distribuidor na diagonal",
+        "description": "O distribuidor (P1) está na trajetória principal da diagonal longa. Manchete defensiva — questão imediata: quem faz o 2º toque?"
       },
       "s6": {
-        "title": "6. Opposite relay + counter-attack",
-        "description": "The opposite leaves his off-blocker spot to make the 2nd touch. Distribution to the OH in zone 4 who prepares the hit."
+        "title": "6. Distribuidor de reserva + contra-ataque",
+        "description": "O oposto deixa a posição de bloqueador secundário para fazer o 2º toque. Distribuição para a ponta na zona 4 que prepara a batida."
       },
       "s7": {
-        "title": "7. RESET — back to defensive base",
-        "description": "Everyone switches to base position as soon as the ball goes back to the opposing side."
+        "title": "7. RESET — regresso à base defensiva",
+        "description": "Todos passam à posição de base assim que a bola regressa ao lado adversário."
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4: OH (P4 = OH) blocker line + middle (P3) closes the cross-court.",
-        "The opposite (P2 = OPP) becomes off-blocker on the right side, drops off on the 3 m line.",
-        "The setter at P1 (back-row) defends the long cross-court.",
-        "Critical management: if the setter is in P2 (front-row), HE blocks the line — tense transition.",
-        "If the setter defends in P1 → 2nd touch by the opposite (back-up setter) is mandatory."
+        "Espelho perfeito da Z4: ponta (P4 = OH) bloqueia paralela + central (P3) fecha diagonal.",
+        "O oposto (P2 = OPP) torna-se bloqueador secundário do lado direito, recua para a linha dos 3 m.",
+        "O distribuidor em P1 (linha de trás) defende a diagonal longa.",
+        "Gestão crítica: se o distribuidor estiver em P2 (linha da frente), É ELE que bloqueia a paralela — transição tensa.",
+        "Se o distribuidor defender em P1 → 2º toque pelo oposto (distribuidor de reserva) é obrigatório."
       ],
       "commonMistakes": [
-        "Opposite blocking from zone 2 → off-blocker missing on the right side.",
-        "Middle not aligning with the OH → open block.",
-        "Libero misplaced on Z2 — defends the deep LINE here, not the long cross-court.",
-        "Setter defending AND wanting to relay → confusion on the 2nd touch."
+        "Oposto a bloquear a partir da zona 2 → bloqueador secundário em falta do lado direito.",
+        "Central que não se alinha com a ponta → bloco aberto.",
+        "Líbero mal colocado em Z2 — defende a PARALELA profunda aqui, não a diagonal longa.",
+        "Distribuidor que defende E quer distribuir → confusão no 2º toque."
       ]
     }
   },
   "6v6-defense-vs-z3": {
-    "title": "Defense · opposing Z3 attack (quick / tempo 1)",
-    "shortDescription": "Block-of-1 in read (middle) against opposing fast central attack — backs pulled up by one meter.",
-    "contextLabel": "5-1 · Block-of-1 (read) · Stopped on contact",
+    "title": "Defesa · ataque adversário pela Z3 (bola rápida / tempo 1)",
+    "shortDescription": "Bloco a 1 em leitura (central) contra ataque rápido central adversário — atrás avançados em um metro.",
+    "contextLabel": "5-1 · Bloco a 1 (read) · Parados no contacto",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter",
-      "OPP_R4": "Opposing OH",
-      "OPP_R": "Opposing receiver"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Central adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R4": "Ponta adversária",
+      "OPP_R": "Recetor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + lightning penetration",
-        "description": "Their back has just bumped. The setter sprints to the net for a quick. Tempo 1 = 0.3-0.5 s between set and hit. Our middle scans the opposing middle's movement, already on the move."
+        "title": "1. Receção adversária + infiltração relâmpago",
+        "description": "O atrás deles acabou de fazer manchete. O distribuidor corre para a rede para uma bola rápida. Tempo 1 = 0,3-0,5 s entre passe e batida. O nosso central observa o movimento do central adversário, já em deslocamento."
       },
       "s2": {
-        "title": "2. Flat set + middle airborne",
-        "description": "The opposing setter sends a very low flat set to the middle who has already taken off. Our wings drop to the 3 m line to free up block deflections."
+        "title": "2. Passe esticado + central no ar",
+        "description": "O distribuidor adversário envia um passe muito baixo e esticado ao central que já levantou voo. As nossas asas baixam para a linha dos 3 m para libertar rechaços do bloco."
       },
       "s3": {
-        "title": "3. Block-of-1 + fast spike",
-        "description": "Our middle alone jumps on read. The opposing middle hits short cross-court. The most dangerous shot: ball diving under the block."
+        "title": "3. Bloco a 1 + remate rápido",
+        "description": "O nosso central salta sozinho em leitura. O central adversário bate em diagonal curta. A batida mais perigosa: bola que mergulha debaixo do bloco."
       },
       "s4": {
-        "title": "4. Setter defense on the straight line",
-        "description": "Z1 (setter) and Z5 (libero) are pulled up to ~7 m since angles are short on a quick. The setter (Z1) recovers in his channel."
+        "title": "4. Defesa do distribuidor na paralela",
+        "description": "Z1 (distribuidor) e Z5 (líbero) avançaram para ~7 m porque os ângulos são curtos numa bola rápida. O distribuidor (Z1) recupera no seu corredor."
       },
       "s5": {
-        "title": "5. 2nd touch by the opposite (back-up setter)",
-        "description": "Since our setter has defended, the opposite at P2 takes the 2nd touch to relay. Our OH prepares a counter-attack in zone 4."
+        "title": "5. 2º toque pelo oposto (distribuidor de reserva)",
+        "description": "Como o nosso distribuidor defendeu, o oposto em P2 faz o 2º toque para distribuir. A nossa ponta prepara um contra-ataque na zona 4."
       },
       "s6": {
-        "title": "6. RESET — back to base",
-        "description": "Switch to base position as soon as the opposing setter touches the ball. Defense reorganizes for the next sequence."
+        "title": "6. RESET — regresso à base",
+        "description": "Passagem à posição de base assim que o distribuidor adversário toca na bola. A defesa reorganiza-se para a próxima sequência."
       }
     },
     "summary": {
       "keyPoints": [
-        "Block-of-1 on the central quick: only the middle jumps (read most frequent, commit if scouting is strong).",
-        "Z1 and Z5 ADVANCE one meter (~7.5 m) since angles are shorter on a quick.",
-        "Wings stay on the 3 m line (~2-2.5 m from the net) for block deflections.",
-        "\"Stopped on contact\": everyone stopped and balanced at the exact moment of the hit."
+        "Bloco a 1 na bola rápida central: só o central salta (read mais frequente, commit se o scouting for forte).",
+        "Z1 e Z5 AVANÇAM um metro (~7,5 m) porque os ângulos são mais curtos numa bola rápida.",
+        "Asas mantêm-se sobre a linha dos 3 m (~2-2,5 m da rede) para rechaços do bloco.",
+        "\"Parados no contacto\": todos parados e equilibrados no momento exato da batida."
       ],
       "commonMistakes": [
-        "All front-row players jumping → leaves wings open for the next set.",
-        "Block too late → ball passes over the hands.",
-        "\"False stepping\" (first step backwards) → wasting the little time available.",
-        "Z1/Z5 frozen at the back (8 m+) → fast ball lands short before they've moved."
+        "Todos os jogadores da frente a saltar → deixa as asas abertas para o passe seguinte.",
+        "Bloco tarde demais → bola passa por cima das mãos.",
+        "\"False stepping\" (primeiro passo atrás) → desperdiçar o pouco tempo disponível.",
+        "Z1/Z5 parados no fundo (8 m+) → bola rápida cai curta antes de eles se moverem."
       ]
     }
   },
   "6v6-defense-vs-z4": {
-    "title": "Defense · opposing Z4 attack",
-    "shortDescription": "Double block on opposing zone-4 attack (their left wing → arrives on our right) in perimeter defense.",
-    "contextLabel": "5-1 · P1 back-row setter · Double block · Perimeter",
+    "title": "Defesa · ataque adversário pela Z4",
+    "shortDescription": "Bloco a 2 num ataque adversário pela zona 4 (asa esquerda deles → chega à nossa direita) em defesa de perímetro.",
+    "contextLabel": "5-1 · Distribuidor da linha de trás P1 · Bloco a 2 · Perímetro",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing Z4 hitter",
-      "OPP_S": "Opposing setter",
-      "OPP_R": "Opposing receiver"
+      "P": "Distribuidor (P1)",
+      "Op": "Oposto (P2)",
+      "C": "Central (P3)",
+      "R4": "Ponta (P4)",
+      "L": "Líbero (P5)",
+      "R4b": "Ponta (P6)",
+      "OPP_A": "Atacante Z4 adversário",
+      "OPP_S": "Distribuidor adversário",
+      "OPP_R": "Recetor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + penetration",
-        "description": "Their back has just bumped. The opposing setter penetrates toward his target between Z2 and Z3. Our defense reads in READY, visual sequence \"ball → setter → ball → hitter\"."
+        "title": "1. Receção + infiltração adversárias",
+        "description": "O atrás deles acabou de fazer manchete. O distribuidor adversário infiltra em direção ao seu alvo entre a Z2 e a Z3. A nossa defesa lê em READY, sequência visual \"bola → distribuidor → bola → atacante\"."
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "The opposing setter distributes a lofted set to their left wing. The attack will arrive on our front-right corner. The front line already identifies the attack zone."
+        "title": "2. Passe alto adversário para a Z4",
+        "description": "O distribuidor adversário distribui um passe alto para a asa esquerda deles. O ataque vai chegar ao nosso canto frente-direita. A linha da frente já identifica a zona de ataque."
       },
       "s3": {
-        "title": "3. Double block + perimeter shift",
-        "description": "Opposite (P2) line + middle (P3) closes the cross-court. R4 off-blocker on the 3 m line on the left side. Libero in long cross-court ~7.5 m, P6 on axis at 8 m, P1 deep line in the block shadow."
+        "title": "3. Bloco a 2 + ajuste em perímetro",
+        "description": "Oposto (P2) na paralela + central (P3) fecha a diagonal. R4 bloqueador secundário sobre a linha dos 3 m do lado esquerdo. Líbero na diagonal longa ~7,5 m, P6 no eixo a 8 m, P1 na paralela profunda na sombra do bloco."
       },
       "s4": {
-        "title": "4. Opposing spike + double block",
-        "description": "The opposing hitter strikes long cross-court. Opposite and middle jump in parallel. At the moment of contact, all defenders are stopped and balanced (\"stopped on contact\")."
+        "title": "4. Remate adversário + bloco a 2",
+        "description": "O atacante adversário bate em diagonal longa. Oposto e central saltam em paralelo. No momento do contacto, todos os defensores estão parados e equilibrados (\"parados no contacto\")."
       },
       "s5": {
-        "title": "5. Libero defense on the long cross-court",
-        "description": "The libero is exactly on the primary trajectory (long cross-court). High bump to zone 2-3 to prepare the counter-attack."
+        "title": "5. Defesa do líbero na diagonal longa",
+        "description": "O líbero está exatamente sobre a trajetória principal (diagonal longa). Manchete alta para a zona 2-3 para preparar o contra-ataque."
       },
       "s6": {
-        "title": "6. Counter-attack by the OH",
-        "description": "Our setter delivers a high set to the OH who has dropped back to the 3 m line. Long cross-court hit on the opposing side to close the rally."
+        "title": "6. Contra-ataque pela ponta",
+        "description": "O nosso distribuidor entrega um passe alto à ponta que recuou para a linha dos 3 m. Batida em diagonal longa para o lado adversário para fechar a jogada."
       },
       "s7": {
-        "title": "7. RESET — back to defensive base",
-        "description": "Everyone switches to base position as soon as the ball returns to the opposing side — no transition frozen in reception formation."
+        "title": "7. RESET — regresso à base defensiva",
+        "description": "Todos passam à posição de base assim que a bola regressa ao lado adversário — sem transição parada em formação de receção."
       }
     },
     "summary": {
       "keyPoints": [
-        "Double block: opposite (P2) line + middle (P3) cross-court. This is the FIVB standard configuration on opposing Z4.",
-        "Off-blocker = OH (P4) on the 3 m line on the left side — covers cut shot and short tip.",
-        "Perimeter system: libero (P5) in long cross-court ~7.5 m, P6 on axis ~8 m, P1 deep line in the block shadow.",
-        "Libero aligned with the inside shoulder of the central blocker — that's his priority zone.",
-        "Main shot defended: long cross-court (the opposing OH is the most solicited)."
+        "Bloco a 2: oposto (P2) na paralela + central (P3) na diagonal. É a configuração padrão FIVB em Z4 adversária.",
+        "Bloqueador secundário = ponta (P4) na linha dos 3 m do lado esquerdo — cobre cut shot e amorti curto.",
+        "Sistema de perímetro: líbero (P5) na diagonal longa ~7,5 m, P6 no eixo ~8 m, P1 na paralela profunda na sombra do bloco.",
+        "Líbero alinhado com o ombro interior do bloqueador central — é a sua zona prioritária.",
+        "Batida principal defendida: diagonal longa (a ponta adversária é a mais solicitada)."
       ],
       "commonMistakes": [
-        "Unintentionally open block (P3 not aligned with P2) → ball passes between the blockers.",
-        "Off-blocker staying at the net → block shadow uncovered (mistake #1 according to Hebert).",
-        "Misplaced libero (too close to the net) → deep spikes land.",
-        "Setter who blocks then doesn't get to the net → 2nd touch by a non-specialized player.",
-        "Defenders still moving at the moment of the hitter's contact (not \"stopped on contact\")."
+        "Bloco aberto involuntariamente (P3 não alinhado com P2) → bola passa entre os bloqueadores.",
+        "Bloqueador secundário parado junto à rede → sombra do bloco descoberta (erro nº 1 segundo Hebert).",
+        "Líbero mal colocado (demasiado perto da rede) → remates profundos caem.",
+        "Distribuidor que bloqueia e depois não chega à rede → 2º toque por um jogador não especializado.",
+        "Defensores ainda em movimento no momento do contacto do atacante (não \"parados no contacto\")."
       ]
     }
   },
   "4v4-reception-losange": {
-    "title": "4v4 · Diamond reception",
-    "shortDescription": "Canonical diamond formation: setter at P3 (center net) + 2 wings on the 3 m line + back deep.",
-    "contextLabel": "4v4 · Diamond (1-2-1) · Center setter",
+    "title": "4v4 · Receção em losango",
+    "shortDescription": "Formação em losango canónico: distribuidor em P3 (centro da rede) + 2 asas na linha dos 3 m + atrás profundo.",
+    "contextLabel": "4v4 · Losango (1-2-1) · Distribuidor central",
     "players": {
-      "P": "Setter (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (P3)",
+      "R4": "Asa esquerda (P4)",
+      "A2": "Asa direita (P2)",
+      "A": "Atrás (P1)",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond formation",
-        "description": "Canonical 1-2-1 layout: setter AT THE CENTER of the net (P3), 2 wings on the 3 m line (L + R), back deep. No libero allowed in 4v4 school. Everyone READY."
+        "title": "1. Formação em losango",
+        "description": "Esquema canónico 1-2-1: distribuidor NO CENTRO da rede (P3), 2 asas na linha dos 3 m (E + D), atrás profundo. Sem líbero permitido no 4v4 escolar. Todos READY."
       },
       "s2": {
-        "title": "2. Serve + back bump",
-        "description": "Lofted serve to the central zone. The lone back calls \"Mine!\" and steps slightly toward the ball."
+        "title": "2. Serviço + manchete pelo atrás",
+        "description": "Serviço alto para a zona central. O único atrás chama \"Minha!\" e avança ligeiramente para a bola."
       },
       "s3": {
-        "title": "3. Set to the left wing",
-        "description": "High bump to the setter at the center of the net (no penetration in the diamond). He distributes to zone 4. The left wing chains his short approach."
+        "title": "3. Passe para a asa esquerda",
+        "description": "Manchete alta para o distribuidor no centro da rede (sem infiltração no losango). Distribui para a zona 4. A asa esquerda encadeia a sua corrida curta."
       },
       "s4": {
-        "title": "4. Ball available + short coverage",
-        "description": "The set arrives in zone 4. The right wing tightens toward the center to cover, the back moves up slightly. With a single opposing block, the hitting angle stays wide."
+        "title": "4. Bola disponível + cobertura curta",
+        "description": "O passe chega à zona 4. A asa direita fecha para o centro para cobrir, o atrás avança ligeiramente. Com bloco a 1 adversário, o ângulo de batida mantém-se amplo."
       },
       "s5": {
-        "title": "5. RESET — back to the diamond",
-        "description": "Everyone resumes their position in the diamond for the next serve."
+        "title": "5. RESET — regresso ao losango",
+        "description": "Todos retomam a sua posição no losango para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "Canonical diamond (1-2-1) = the most used 4v4 formation.",
-        "\"Center setter\" variant: setter at P3 at the net, distributes left OR right.",
-        "No libero allowed in 4v4 school — everyone must know how to receive.",
-        "Each player covers ~30-40 m² (vs ~20 m² in 6v6)."
+        "Losango canónico (1-2-1) = a formação 4v4 mais usada.",
+        "Variante \"distribuidor central\": distribuidor em P3 junto à rede, distribui para a esquerda OU para a direita.",
+        "Sem líbero permitido no 4v4 escolar — todos têm de saber receber.",
+        "Cada jogador cobre ~30-40 m² (vs ~20 m² em 6v6)."
       ],
       "commonMistakes": [
-        "Confusion on central balls between 2 zones → call mandatory.",
-        "Lone back too far back → short balls behind the net not covered.",
-        "Setter who also receives → impossible to make the 2nd touch behind."
+        "Confusão em bolas centrais entre 2 zonas → chamada obrigatória.",
+        "Único atrás demasiado recuado → bolas curtas atrás da rede não cobertas.",
+        "Distribuidor que também recebe → impossível fazer o 2º toque a seguir."
       ]
     }
   },
   "4v4-reception-u": {
-    "title": "4v4 · U-formation reception",
-    "shortDescription": "U formation: setter out + 3 receivers (left, back, right).",
-    "contextLabel": "4v4 · U · Competitive 4v4",
+    "title": "4v4 · Receção em U",
+    "shortDescription": "Formação em U: distribuidor fora + 3 recetores (esquerda, atrás, direita).",
+    "contextLabel": "4v4 · U · 4v4 competitivo",
     "players": {
-      "P": "Setter (hidden)",
-      "R4": "Left wing",
-      "A": "Back center",
-      "A2": "Right wing",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (escondido)",
+      "R4": "Asa esquerda",
+      "A": "Atrás centro",
+      "A2": "Asa direita",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. U configuration",
-        "description": "The setter is hidden at P2 at the net. 3 receivers in a U: left wing, back center, right wing. Each player covers about 1/3 of the width."
+        "title": "1. Configuração em U",
+        "description": "O distribuidor está escondido em P2 junto à rede. 3 recetores em U: asa esquerda, atrás central, asa direita. Cada jogador cobre cerca de 1/3 da largura."
       },
       "s2": {
-        "title": "2. Serve + left wing bump",
-        "description": "Lofted serve to the left channel. The left wing calls and takes the ball in his channel. High trajectory to give the setter time."
+        "title": "2. Serviço + manchete pela asa esquerda",
+        "description": "Serviço alto para o corredor esquerdo. A asa esquerda chama e fica com a bola no seu corredor. Trajetória alta para dar tempo ao distribuidor."
       },
       "s3": {
-        "title": "3. Distribution to the left wing",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach."
+        "title": "3. Distribuição para a asa esquerda",
+        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 4v4). Distribuição rápida para a asa esquerda que encadeia imediatamente a sua corrida."
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: the setter has not received, the attack is fast and readable."
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe chega à zona 4 para a asa esquerda. Sistema mais ofensivo do que o losango: o distribuidor não recebeu, o ataque é rápido e legível."
       },
       "s5": {
-        "title": "5. RESET — back to the U",
-        "description": "The 3 receivers return to the U and the setter goes back to his hiding spot at P2."
+        "title": "5. RESET — regresso ao U",
+        "description": "Os 3 recetores regressam ao U e o distribuidor volta ao seu esconderijo em P2."
       }
     },
     "summary": {
       "keyPoints": [
-        "U reception = the most effective competitive 4v4 configuration.",
-        "3 specialized receivers + setter out = 1 player available for the attack without having received.",
-        "Target: zone 2 (fixed setter) → fast distribution.",
-        "Technically more demanding than the diamond but more offensive."
+        "Receção em U = a configuração 4v4 competitiva mais eficaz.",
+        "3 recetores especializados + distribuidor fora = 1 jogador disponível para o ataque sem ter recebido.",
+        "Alvo: zona 2 (distribuidor fixo) → distribuição rápida.",
+        "Tecnicamente mais exigente do que o losango mas mais ofensiva."
       ],
       "commonMistakes": [
-        "Wing not covering the whole channel → ball between wing and back lost.",
-        "Back center too far forward → long balls pass overhead.",
-        "Setter leaning toward reception → confusion."
+        "Asa que não cobre todo o corredor → bola entre asa e atrás perdida.",
+        "Atrás central demasiado avançado → bolas longas passam por cima.",
+        "Distribuidor inclinado para a receção → confusão."
       ]
     }
   },
   "5-1-reception-3-receivers": {
-    "title": "Reception · 3-receiver (5-1)",
-    "shortDescription": "3-receiver reception (libero + 2 OHs) with setter out and opposite hidden — modern standard formation.",
-    "contextLabel": "5-1 · 3-receiver reception · Opposing serve",
+    "title": "Receção · a 3 (5-1)",
+    "shortDescription": "Receção a 3 (líbero + 2 pontas) com distribuidor fora e oposto escondido — formação padrão moderna.",
+    "contextLabel": "5-1 · Receção a 3 · Serviço adversário",
     "players": {
-      "R4a": "Left OH",
-      "L": "Libero",
-      "R4b": "Right OH",
-      "C": "Middle",
-      "Op": "Opposite (hidden)",
-      "P": "Setter (hidden)",
-      "OPP_SRV": "Opposing server"
+      "R4a": "Ponta esquerda",
+      "L": "Líbero",
+      "R4b": "Ponta direita",
+      "C": "Central",
+      "Op": "Oposto (escondido)",
+      "P": "Distribuidor (escondido)",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception position",
-        "description": "Three receivers in an arc: left OH, central libero, right OH. Each covers ~1/3 of the width. The setter and opposite hide at the net, ready to step in as soon as the server hits."
+        "title": "1. Posição de receção",
+        "description": "Três recetores em arco: ponta esquerda, líbero central, ponta direita. Cada um cobre ~1/3 da largura. Distribuidor e oposto escondem-se junto à rede, prontos a avançar assim que o servidor bater."
       },
       "s2": {
-        "title": "2. Serve + bump",
-        "description": "Lofted serve to the left OH who calls \"Mine!\" and bumps. In parallel, the setter triggers his penetration from his hiding spot at P1 toward zone 2-3."
+        "title": "2. Serviço + manchete",
+        "description": "Serviço alto para a ponta esquerda que chama \"Minha!\" e faz manchete. Em paralelo, o distribuidor inicia a sua infiltração a partir do esconderijo em P1 em direção à zona 2-3."
       },
       "s3": {
-        "title": "3. High set to zone 4",
-        "description": "The ball rises to the target (between P2 and P3) where the setter arrives just in time. He distributes a lofted set to zone 4. The receiving OH has already triggered his drop back to the 3 m line."
+        "title": "3. Passe alto para a zona 4",
+        "description": "A bola sobe para o alvo (entre P2 e P3) onde o distribuidor chega mesmo a tempo. Entrega um passe alto para a zona 4. A ponta recetora já iniciou o seu recuo para a linha dos 3 m."
       },
       "s4": {
-        "title": "4. Ball available to the hitter",
-        "description": "The ball arrives in zone 4 at hitting height. The OH takes his last steps before his jump. The quality of the set validates the quality of the initial reception."
+        "title": "4. Bola disponível para o atacante",
+        "description": "A bola chega à zona 4 à altura de batida. A ponta dá os últimos passos antes do salto. A qualidade do passe valida a qualidade da receção inicial."
       },
       "s5": {
-        "title": "5. RESET — back to formation",
-        "description": "The whole team resumes its reception position for the next serve."
+        "title": "5. RESET — regresso à formação",
+        "description": "Toda a equipa retoma a sua posição de receção para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "3-receiver reception = modern 5-1 standard. Maximum specialization.",
-        "Target: zone 2-3, one arm from the net, height ~3 m.",
-        "The setter stays hidden at the net until the server hits, then penetrates.",
-        "The receiving OH IMMEDIATELY chains his attack approach."
+        "Receção a 3 = padrão moderno do 5-1. Especialização máxima.",
+        "Alvo: zona 2-3, um braço da rede, altura ~3 m.",
+        "O distribuidor fica escondido junto à rede até o servidor bater, depois infiltra.",
+        "A ponta recetora encadeia IMEDIATAMENTE a sua corrida de balanço."
       ],
       "commonMistakes": [
-        "Reception too flat or too short → setter arrives late.",
-        "Conflict between 2 receivers → vocal call mandatory.",
-        "OH frozen after reception → loses an offensive option in zone 4."
+        "Receção demasiado esticada ou demasiado curta → distribuidor chega tarde.",
+        "Conflito entre 2 recetores → chamada vocal obrigatória.",
+        "Ponta parada após a receção → perde uma opção ofensiva na zona 4."
       ]
     }
   },
   "5v5-reception-4-receivers": {
-    "title": "5v5 · 4-receiver reception",
-    "shortDescription": "5v5 format: setter out + 4 receivers in U or in line.",
-    "contextLabel": "5v5 · 4 receivers · Hybrid format",
+    "title": "5v5 · Receção a 4",
+    "shortDescription": "Formato 5v5: distribuidor fora + 4 recetores em U ou em linha.",
+    "contextLabel": "5v5 · 4 recetores · Formato híbrido",
     "players": {
-      "P": "Setter (out)",
-      "R4a": "Front left",
-      "C": "Front right / middle",
-      "A1": "Left back",
-      "A2": "Right back",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (fora)",
+      "R4a": "Frente esquerda",
+      "C": "Frente direita / central",
+      "A1": "Trás esquerda",
+      "A2": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 5v5 configuration",
-        "description": "The setter (at P2) is out at the net. The 4 receivers form a U: 2 on the 3 m line, 2 deep. The best receiver takes the most exposed zone."
+        "title": "1. Configuração 5v5",
+        "description": "O distribuidor (em P2) está fora junto à rede. Os 4 recetores formam um U: 2 sobre a linha dos 3 m, 2 profundos. O melhor recetor fica na zona mais exposta."
       },
       "s2": {
-        "title": "2. Serve + back bump",
-        "description": "Lofted serve in the back-left channel. The left back calls and bumps in his channel."
+        "title": "2. Serviço + manchete pelo atrás",
+        "description": "Serviço alto para o corredor trás-esquerda. O atrás esquerdo chama e faz manchete no seu corredor."
       },
       "s3": {
-        "title": "3. Set to zone 4",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 5v5). Quick distribution to the left wing. The front-left starts his approach."
+        "title": "3. Passe para a zona 4",
+        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 5v5). Distribuição rápida para a asa esquerda. A frente esquerda inicia a sua corrida."
       },
       "s4": {
-        "title": "4. Ball available — 3-player coverage",
-        "description": "The set arrives in zone 4. The front-left takes his steps. Coverage in 5v5 is done with only 3 players (not 5 as in 6v6) — the middle and setter stay close."
+        "title": "4. Bola disponível — cobertura a 3",
+        "description": "O passe chega à zona 4. A frente esquerda dá os seus passos. A cobertura em 5v5 é feita apenas com 3 jogadores (não com 5 como em 6v6) — o central e o distribuidor ficam perto."
       },
       "s5": {
-        "title": "5. RESET — back to the U",
-        "description": "The 4 receivers find their place in the U, setter fixed at P2."
+        "title": "5. RESET — regresso ao U",
+        "description": "Os 4 recetores encontram o seu lugar no U, distribuidor fixo em P2."
       }
     },
     "summary": {
       "keyPoints": [
-        "In 5v5 without a libero, the best receiver takes the most exposed zone.",
-        "U formation: 2 receivers on the 3 m line + 2 deep.",
-        "In-line variant possible (4 lined up at mid-court) if levels are similar.",
-        "No penetration → fixed setter (simplified 4-1 system)."
+        "Em 5v5 sem líbero, o melhor recetor fica na zona mais exposta.",
+        "Formação em U: 2 recetores sobre a linha dos 3 m + 2 profundos.",
+        "Variante em linha possível (4 alinhados a meio-campo) se os níveis forem semelhantes.",
+        "Sem infiltração → distribuidor fixo (sistema 4-1 simplificado)."
       ],
       "commonMistakes": [
-        "U shape too narrow → long cross-courts uncovered.",
-        "Weak receiver → isolate them in the smallest zone.",
-        "Setter who still penetrates → confusion with standard 6v6."
+        "Forma de U demasiado fechada → diagonais longas descobertas.",
+        "Recetor fraco → isolá-lo na zona mais pequena.",
+        "Distribuidor que ainda infiltra → confusão com o 6v6 padrão."
       ]
     }
   },
   "5v5-reception-pentagon": {
-    "title": "5v5 · Pentagon reception",
-    "shortDescription": "Pentagon reception (5 players without a setter out) — beginner or recreational version.",
-    "contextLabel": "5v5 · Pentagon · No dedicated setter",
+    "title": "5v5 · Receção em pentágono",
+    "shortDescription": "Receção em pentágono (5 jogadores sem distribuidor fora) — versão iniciante ou recreativa.",
+    "contextLabel": "5v5 · Pentágono · Sem distribuidor dedicado",
     "players": {
-      "A1": "Front left",
-      "C": "Center",
-      "A2": "Front right",
-      "A3": "Left back",
-      "A4": "Right back",
-      "OPP_SRV": "Opposing server"
+      "A1": "Frente esquerda",
+      "C": "Centro",
+      "A2": "Frente direita",
+      "A3": "Trás esquerda",
+      "A4": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 5-player pentagon",
-        "description": "All players receive. No dedicated setter — whoever touches first leaves the 2nd touch to the player closest to the net. Recreational / beginner configuration."
+        "title": "1. Pentágono a 5",
+        "description": "Todos os jogadores recebem. Sem distribuidor dedicado — quem toca primeiro deixa o 2º toque ao jogador mais perto da rede. Configuração recreativa / iniciante."
       },
       "s2": {
-        "title": "2. Serve + center calls",
-        "description": "Serve to the central medium zone. The center player calls and bumps — that's his area in the pentagon."
+        "title": "2. Serviço + central chama",
+        "description": "Serviço para a zona média central. O jogador central chama e faz manchete — é a sua área no pentágono."
       },
       "s3": {
-        "title": "3. Opportunity set",
-        "description": "The ball rises toward the center of the net. The front-right, closest to the ball, steps forward and takes the 2nd touch with a high set depending on the quality of the reception."
+        "title": "3. Passe de oportunidade",
+        "description": "A bola sobe para o centro da rede. A frente direita, mais perto da bola, avança e faz o 2º toque com um passe alto consoante a qualidade da receção."
       },
       "s4": {
-        "title": "4. Ball available — simple system",
-        "description": "The set goes to the front-left. Readable distribution, ideal for beginners. Any player can make the 2nd touch depending on the ball's angle."
+        "title": "4. Bola disponível — sistema simples",
+        "description": "O passe vai para a frente esquerda. Distribuição legível, ideal para iniciantes. Qualquer jogador pode fazer o 2º toque consoante o ângulo da bola."
       },
       "s5": {
-        "title": "5. RESET — back to pentagon",
-        "description": "The 5 players find their place in the pentagon for the next serve."
+        "title": "5. RESET — regresso ao pentágono",
+        "description": "Os 5 jogadores encontram o seu lugar no pentágono para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "Pentagon without a dedicated setter = recreational or beginner configuration.",
-        "5 players in a pentagon: 2 in front, 1 center, 2 in the back.",
-        "Any player can make the 2nd touch depending on where the ball arrives.",
-        "Advantage: great adaptability. Drawback: less offensive consistency."
+        "Pentágono sem distribuidor dedicado = configuração recreativa ou de iniciante.",
+        "5 jogadores em pentágono: 2 à frente, 1 ao centro, 2 atrás.",
+        "Qualquer jogador pode fazer o 2º toque consoante onde chega a bola.",
+        "Vantagem: grande adaptabilidade. Desvantagem: menor consistência ofensiva."
       ],
       "commonMistakes": [
-        "No hierarchy on the 2nd touch → 2 players hesitate.",
-        "Center frozen → balls on each side missed.",
-        "Systematic high sets without clear distribution."
+        "Sem hierarquia no 2º toque → 2 jogadores hesitam.",
+        "Central parado → bolas em cada lado falhadas.",
+        "Passes sistematicamente altos sem distribuição clara."
       ]
     }
   },
   "6v6-reception-2-receivers": {
-    "title": "Reception · 2-receiver (elite)",
-    "shortDescription": "Ultra-specialized 2-receiver reception (libero + OH): all others ready to attack.",
-    "contextLabel": "5-1 · 2-receiver reception · Elite / free balls",
+    "title": "Receção · a 2 (elite)",
+    "shortDescription": "Receção a 2 ultra-especializada (líbero + ponta): todos os outros prontos a atacar.",
+    "contextLabel": "5-1 · Receção a 2 · Elite / free balls",
     "players": {
-      "L": "Libero",
-      "R4a": "Receiving OH",
-      "R4b": "Attacking OH",
-      "C": "Middle",
-      "Op": "Opposite (hidden)",
-      "P": "Setter (hidden)",
-      "OPP_SRV": "Opposing server"
+      "L": "Líbero",
+      "R4a": "Ponta recetora",
+      "R4b": "Ponta atacante",
+      "C": "Central",
+      "Op": "Oposto (escondido)",
+      "P": "Distribuidor (escondido)",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 2-receiver configuration",
-        "description": "Only 2 receivers: libero on the left side, receiving OH on the right side. The 4 other players are already in attack stance, ready to trigger as soon as the serve is struck."
+        "title": "1. Configuração a 2 recetores",
+        "description": "Apenas 2 recetores: líbero do lado esquerdo, ponta recetora do lado direito. Os outros 4 jogadores já estão em postura de ataque, prontos a arrancar assim que o serviço for batido."
       },
       "s2": {
-        "title": "2. Serve + libero bump",
-        "description": "Serve to the left. The libero calls and bumps. With only 2 zones, the technical demand is extreme: an exceptional libero is required. The setter triggers his penetration."
+        "title": "2. Serviço + manchete do líbero",
+        "description": "Serviço pela esquerda. O líbero chama e faz manchete. Com apenas 2 zonas, a exigência técnica é extrema: é necessário um líbero excecional. O distribuidor inicia a sua infiltração."
       },
       "s3": {
-        "title": "3. Set + simultaneous approaches",
-        "description": "The ball rises to the target. The setter distributes to zone 4. The attacking OH, free of any reception, launches a fast approach at full speed — he arrives at full power."
+        "title": "3. Passe + corridas simultâneas",
+        "description": "A bola sobe para o alvo. O distribuidor distribui para a zona 4. A ponta atacante, livre de qualquer receção, inicia uma corrida rápida a toda a velocidade — chega em pleno poder."
       },
       "s4": {
-        "title": "4. Ball available — maximum variety",
-        "description": "The ball arrives in zone 4 for the attacking OH. At that moment the setter simultaneously has a middle on quick and an opposite on a back-row attack available — 3-hitter combinations possible."
+        "title": "4. Bola disponível — variedade máxima",
+        "description": "A bola chega à zona 4 para a ponta atacante. Nesse momento o distribuidor tem simultaneamente um central em bola rápida e um oposto em ataque da linha de trás disponíveis — combinações a 3 atacantes possíveis."
       },
       "s5": {
-        "title": "5. RESET — back to 2-receiver formation",
-        "description": "The libero and the receiving OH return to their zones, the hitters reposition ready to attack."
+        "title": "5. RESET — regresso à formação a 2",
+        "description": "O líbero e a ponta recetora regressam às suas zonas, os atacantes reposicionam-se prontos a atacar."
       }
     },
     "summary": {
       "keyPoints": [
-        "2-receiver reception = elite configuration (professional volleyball).",
-        "Used on easy serves or \"front-row setter\" rotations.",
-        "Maximum offensive variety: all hitters available immediately.",
-        "Extreme technical demand: 2 solid receivers required."
+        "Receção a 2 = configuração de elite (voleibol profissional).",
+        "Usada em serviços fáceis ou rotações \"distribuidor da frente\".",
+        "Variedade ofensiva máxima: todos os atacantes disponíveis imediatamente.",
+        "Exigência técnica extrema: 2 recetores sólidos obrigatórios."
       ],
       "commonMistakes": [
-        "Adopting this system against a powerful serve → catastrophic receptions.",
-        "Attacking OH not starting his approach in parallel → option lost.",
-        "No call → hesitation between the 2 receivers."
+        "Adotar este sistema contra um serviço potente → receções catastróficas.",
+        "Ponta atacante que não inicia a corrida em paralelo → opção perdida.",
+        "Sem chamada → hesitação entre os 2 recetores."
       ]
     }
   },
   "6v6-reception-4-2": {
-    "title": "Reception · 4-2 (4 receivers)",
-    "shortDescription": "4-2 system: fixed setter at P2 + 4 receivers (the 2 OHs + middle + back).",
-    "contextLabel": "4-2 · 4 receivers · Fixed front setter",
+    "title": "Receção · 4-2 (4 recetores)",
+    "shortDescription": "Sistema 4-2: distribuidor fixo em P2 + 4 recetores (as 2 pontas + central + atrás).",
+    "contextLabel": "4-2 · 4 recetores · Distribuidor da frente fixo",
     "players": {
-      "P": "Setter (P2 fixed)",
-      "C2": "Front middle",
-      "R4a": "Left OH",
-      "C": "Back middle",
-      "R4b": "Right OH",
-      "P2": "Back setter",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (P2 fixo)",
+      "C2": "Central da frente",
+      "R4a": "Ponta esquerda",
+      "C": "Central de trás",
+      "R4b": "Ponta direita",
+      "P2": "Distribuidor de trás",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. 4-2 layout",
-        "description": "4-2 system: 2 opposing setters. The front setter (P2) and the front middle step out at the net. 4 receivers in a trapezoid: 2 OHs on the diagonal, back middle and back setter deep."
+        "title": "1. Esquema 4-2",
+        "description": "Sistema 4-2: 2 distribuidores em oposição. O distribuidor da frente (P2) e o central da frente saem para a rede. 4 recetores em trapézio: 2 pontas na diagonal, central de trás e distribuidor de trás profundos."
       },
       "s2": {
-        "title": "2. Serve + left OH bump",
-        "description": "Lofted serve to the left channel. The left OH calls and bumps. The setter is already fixed at P2 at the net, no penetration."
+        "title": "2. Serviço + manchete pela ponta esquerda",
+        "description": "Serviço alto para o corredor esquerdo. A ponta esquerda chama e faz manchete. O distribuidor já está fixo em P2 junto à rede, sem infiltração."
       },
       "s3": {
-        "title": "3. Set to the left wing",
-        "description": "The ball arrives at the fixed setter at P2 (easy target, no movement). He distributes to the left wing. The left OH immediately chains his approach."
+        "title": "3. Passe para a asa esquerda",
+        "description": "A bola chega ao distribuidor fixo em P2 (alvo fácil, sem deslocamento). Distribui para a asa esquerda. A ponta esquerda encadeia imediatamente a sua corrida."
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set is in place. In 4-2, only 2 offensive options exist in front (the middle and the wing) → readable but limited distribution."
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe está em posição. No 4-2 existem apenas 2 opções ofensivas à frente (o central e a asa) → distribuição legível mas limitada."
       },
       "s5": {
-        "title": "5. RESET — back to trapezoid",
-        "description": "The whole team resumes its position in the 4-2 system."
+        "title": "5. RESET — regresso ao trapézio",
+        "description": "Toda a equipa retoma a sua posição no sistema 4-2."
       }
     },
     "summary": {
       "keyPoints": [
-        "4-receiver reception = 4-2 system. 2 front-row players out (setter + front middle).",
-        "Bigger zones than in a W but less demanding than a 3-receiver reception.",
-        "Easy target: the setter does not move.",
-        "Drawback: only 2 hitters in front."
+        "Receção a 4 = sistema 4-2. 2 jogadores da linha da frente fora (distribuidor + central da frente).",
+        "Zonas maiores do que num W mas menos exigentes do que uma receção a 3.",
+        "Alvo fácil: o distribuidor não se desloca.",
+        "Desvantagem: apenas 2 atacantes à frente."
       ],
       "commonMistakes": [
-        "Front middle who also receives → no commit at the net.",
-        "Trapezoid too open → central balls not covered.",
-        "Confusion on the 2nd touch between the 2 setters."
+        "Central da frente que também recebe → sem commit junto à rede.",
+        "Trapézio demasiado aberto → bolas centrais não cobertas.",
+        "Confusão no 2º toque entre os 2 distribuidores."
       ]
     }
   },
   "6v6-reception-rotation-p4": {
-    "title": "Reception · 5-1 P4 rotation",
-    "shortDescription": "P4 special case: the setter and the middle shift left to free the OH in zone 6.",
-    "contextLabel": "5-1 · 3-receiver · P4 rotation (front-row setter)",
+    "title": "Receção · Rotação P4 do 5-1",
+    "shortDescription": "Caso especial P4: distribuidor e central deslocam-se para a esquerda para libertar a ponta na zona 6.",
+    "contextLabel": "5-1 · Receção a 3 · Rotação P4 (distribuidor da frente)",
     "players": {
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4b": "OH* (P2)",
-      "L": "Libero (P5)",
-      "R4a": "OH (P6)",
-      "Op": "Opposite (P1)",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (P4)",
+      "C": "Central (P3)",
+      "R4b": "Ponta* (P2)",
+      "L": "Líbero (P5)",
+      "R4a": "Ponta (P6)",
+      "Op": "Oposto (P1)",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Left shift",
-        "description": "BEFORE the hit: the setter (P4) and the middle (P3) place themselves AS FAR LEFT as alignment rules allow. This shift frees zone 6 for the receiving OH."
+        "title": "1. Deslocamento para a esquerda",
+        "description": "ANTES da batida: o distribuidor (P4) e o central (P3) colocam-se O MAIS À ESQUERDA possível conforme as regras de alinhamento permitem. Este deslocamento liberta a zona 6 para a ponta recetora."
       },
       "s2": {
-        "title": "2. Serve + bump by the OH in P6",
-        "description": "Serve to the central zone 6. The OH in P6 calls and bumps in the zone freed by the setter's shift. Three receivers: libero, OH and opposite (on the edge)."
+        "title": "2. Serviço + manchete pela ponta em P6",
+        "description": "Serviço para a zona central 6. A ponta em P6 chama e faz manchete na zona libertada pelo deslocamento do distribuidor. Três recetores: líbero, ponta e oposto (na borda)."
       },
       "s3": {
-        "title": "3. Penetration + OH* switch",
-        "description": "The setter rushes from P4 to zone 2-3. Simultaneously, the OH* in P2 crosses over to P4 to attack. The middle repositions in zone 3."
+        "title": "3. Infiltração + switch da ponta*",
+        "description": "O distribuidor desloca-se de P4 para a zona 2-3. Simultaneamente, a ponta* em P2 cruza para P4 para atacar. O central reposiciona-se na zona 3."
       },
       "s4": {
-        "title": "4. Ball available for OH* in zone 4",
-        "description": "The set arrives for the OH* who has completed his crossover. With only 2 hitters in front (OH* + middle), the main option is the left wing."
+        "title": "4. Bola disponível para a ponta* na zona 4",
+        "description": "O passe chega à ponta* que terminou o seu cruzamento. Com apenas 2 atacantes à frente (ponta* + central), a opção principal é a asa esquerda."
       },
       "s5": {
-        "title": "5. RESET — back to the shift",
-        "description": "All players resume the left shift for the next serve in P4 rotation."
+        "title": "5. RESET — regresso ao deslocamento",
+        "description": "Todos os jogadores retomam o deslocamento para a esquerda para o próximo serviço em rotação P4."
       }
     },
     "summary": {
       "keyPoints": [
-        "In P4, the setter and middle MUST shift left at the serve.",
-        "This shift opens zone 6 for the OH reception at P6.",
-        "Setter↔OH* switch mandatory during the set.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "Em P4, o distribuidor e o central DEVEM deslocar-se para a esquerda no serviço.",
+        "Este deslocamento abre a zona 6 para a receção da ponta em P6.",
+        "Switch distribuidor↔ponta* obrigatório durante o passe.",
+        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
       ],
       "commonMistakes": [
-        "Shift forgotten → reception conflict in zone 6.",
-        "Switch too late → OH* attacks at P2 (wrong side).",
-        "Opposite who receives → loses the back-row attack option."
+        "Deslocamento esquecido → conflito de receção na zona 6.",
+        "Switch demasiado tardio → a ponta* ataca em P2 (lado errado).",
+        "Oposto que recebe → perde a opção de ataque da linha de trás."
       ]
     }
   },
   "6v6-reception-semi-circle": {
-    "title": "Reception · semi-circle",
-    "shortDescription": "Reception in an arc open toward the server, equidistant. U15-U18 stage.",
-    "contextLabel": "5-1 · Semi-circle · U15-U18",
+    "title": "Receção · semicírculo",
+    "shortDescription": "Receção em arco aberto para o servidor, equidistante. Etapa Sub-15/Sub-18.",
+    "contextLabel": "5-1 · Semicírculo · Sub-15/Sub-18",
     "players": {
-      "P": "Setter (hidden)",
-      "R4a": "Left OH",
-      "C": "Middle",
-      "L": "Libero",
-      "R4b": "Right OH",
-      "Op": "Opposite",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (escondido)",
+      "R4a": "Ponta esquerda",
+      "C": "Central",
+      "L": "Líbero",
+      "R4b": "Ponta direita",
+      "Op": "Oposto",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. Semi-circular arc",
-        "description": "The 5 receivers form an arc equidistant from the server. All oriented toward the setter hidden at P1. The middle stays in reception (vs out in the 3-receiver formation)."
+        "title": "1. Arco semicircular",
+        "description": "Os 5 recetores formam um arco equidistante do servidor. Todos orientados para o distribuidor escondido em P1. O central fica em receção (vs fora na formação a 3)."
       },
       "s2": {
-        "title": "2. Serve + common read",
-        "description": "Lofted serve to the central zone. All players read in the same direction. The middle calls his ball — it's his zone in the arc."
+        "title": "2. Serviço + leitura comum",
+        "description": "Serviço alto para a zona central. Todos os jogadores leem na mesma direção. O central chama a sua bola — é a sua zona no arco."
       },
       "s3": {
-        "title": "3. Penetration + high set",
-        "description": "The setter leaves his hiding spot as the ball rises. He arrives at the target in zone 2-3 and distributes to the left wing where the left OH has already started his approach."
+        "title": "3. Infiltração + passe alto",
+        "description": "O distribuidor sai do esconderijo enquanto a bola sobe. Chega ao alvo na zona 2-3 e distribui para a asa esquerda onde a ponta esquerda já iniciou a sua corrida."
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4. The left OH is in position to hit. Classic, readable distribution — typical of the U15-U18 learning stage."
+        "title": "4. Bola disponível na zona 4",
+        "description": "O passe chega à zona 4. A ponta esquerda está em posição de bater. Distribuição clássica e legível — típica da etapa de aprendizagem Sub-15/Sub-18."
       },
       "s5": {
-        "title": "5. RESET — back to the arc",
-        "description": "Everyone returns to the semi-circular arc for the next serve."
+        "title": "5. RESET — regresso ao arco",
+        "description": "Todos regressam ao arco semicircular para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "Semi-circular arc = intermediate stage between W and 3-receiver reception.",
-        "The 5 players equidistant from the server → homogeneous coverage.",
-        "Suited to youth teams (U15-U18) learning specialization.",
-        "Keeps a middle in reception (vs 3-receiver where he is out)."
+        "Arco semicircular = etapa intermédia entre o W e a receção a 3.",
+        "Os 5 jogadores equidistantes do servidor → cobertura homogénea.",
+        "Adaptada a equipas jovens (Sub-15/Sub-18) em aprendizagem da especialização.",
+        "Mantém um central em receção (vs receção a 3 onde está fora)."
       ],
       "commonMistakes": [
-        "Arc too open to the sides → holes in the center.",
-        "Players too far from the server → late reaction to fast serves.",
-        "Conflict with the setter who also wants to receive."
+        "Arco demasiado aberto para as laterais → buracos no centro.",
+        "Jogadores demasiado afastados do servidor → reação tardia a serviços rápidos.",
+        "Conflito com o distribuidor que também quer receber."
       ]
     }
   },
   "6v6-reception-w": {
-    "title": "Reception · W (5 receivers)",
-    "shortDescription": "W formation: 5 players except the setter. Suited to beginners and the 4-2 system.",
-    "contextLabel": "4-2 · W · Beginners / U13",
+    "title": "Receção · W (5 recetores)",
+    "shortDescription": "Formação em W: 5 jogadores exceto o distribuidor. Adequada a iniciantes e ao sistema 4-2.",
+    "contextLabel": "4-2 · W · Iniciantes / Sub-13",
     "players": {
-      "P": "Setter (out)",
-      "R4a": "Front left",
-      "R4b": "Front right",
-      "C": "Middle player",
-      "A1": "Left back",
-      "A2": "Right back",
-      "OPP_SRV": "Opposing server"
+      "P": "Distribuidor (fora)",
+      "R4a": "Frente esquerda",
+      "R4b": "Frente direita",
+      "C": "Jogador central",
+      "A1": "Trás esquerda",
+      "A2": "Trás direita",
+      "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
-        "title": "1. W formation",
-        "description": "W layout: 2 front players at mid-court, 1 middle player in the center, 2 backs deep. The setter is already out at the net at P2 (4-2 system). Each player defends a small, well-defined zone."
+        "title": "1. Formação em W",
+        "description": "Esquema em W: 2 jogadores da frente a meio-campo, 1 jogador central no meio, 2 atrás profundos. O distribuidor já está fora junto à rede em P2 (sistema 4-2). Cada jogador defende uma zona pequena e bem definida."
       },
       "s2": {
-        "title": "2. Serve + middle player calls",
-        "description": "Lofted serve to the central zone. The middle player calls \"Mine!\" because the ball lands in the central pocket of the W, equidistant from the front players."
+        "title": "2. Serviço + jogador central chama",
+        "description": "Serviço alto para a zona central. O jogador central chama \"Minha!\" porque a bola cai no bolso central do W, equidistante dos jogadores da frente."
       },
       "s3": {
-        "title": "3. High set to zone 4",
-        "description": "Bump aimed at zone 2 where the setter already waits at the net (no penetration in 4-2). He distributes a lofted set to zone 4. The front-left triggers his approach."
+        "title": "3. Passe alto para a zona 4",
+        "description": "Manchete dirigida à zona 2 onde o distribuidor já espera junto à rede (sem infiltração no 4-2). Distribui um passe alto para a zona 4. A frente esquerda inicia a sua corrida."
       },
       "s4": {
-        "title": "4. Ball available to the hitter",
-        "description": "The ball arrives in zone 4. The front-left takes his last steps. In 4-2, offensive options are limited (2 hitters in front), but the simplicity of the system compensates."
+        "title": "4. Bola disponível para o atacante",
+        "description": "A bola chega à zona 4. A frente esquerda dá os últimos passos. No 4-2, as opções ofensivas são limitadas (2 atacantes à frente), mas a simplicidade do sistema compensa."
       },
       "s5": {
-        "title": "5. RESET — back to W formation",
-        "description": "Everyone returns to their zone in the W for the next serve."
+        "title": "5. RESET — regresso à formação em W",
+        "description": "Todos regressam à sua zona no W para o próximo serviço."
       }
     },
     "summary": {
       "keyPoints": [
-        "W formation = 5 receivers, the setter steps out.",
-        "Small individual zones → less doubt, few conflicts.",
-        "Ideal in U13/U15 and in the 4-2 system (beginners).",
-        "Drawback: specialized hitters are constrained in reception."
+        "Formação em W = 5 recetores, o distribuidor sai para fora.",
+        "Zonas individuais pequenas → menos dúvidas, poucos conflitos.",
+        "Ideal em Sub-13/Sub-15 e no sistema 4-2 (iniciantes).",
+        "Desvantagem: os atacantes especializados ficam limitados na receção."
       ],
       "commonMistakes": [
-        "Central conflict between middle player and front players → call mandatory.",
-        "Players too frozen in their zone → ball between 2 zones lost.",
-        "Setter staying in reception → impossible to make the 2nd touch."
+        "Conflito central entre jogador central e jogadores da frente → chamada obrigatória.",
+        "Jogadores demasiado parados na sua zona → bola entre 2 zonas perdida.",
+        "Distribuidor parado em receção → impossível fazer o 2º toque."
       ]
     }
   }

@@ -1,1992 +1,1992 @@
 {
   "4v4-attack-losange": {
-    "title": "4v4 · Diamond attack",
-    "shortDescription": "Canonical diamond: setter at P3 + 2 wings on the 3 m line + back. Reception → zone-4 attack.",
-    "contextLabel": "4v4 · Diamond (1-2-1) · School / recreational",
+    "title": "4v4 · ダイヤモンドの攻撃",
+    "shortDescription": "標準的なダイヤモンド: P3にセッター＋3 mライン上にサイド2人＋後衛1人。レセプション→ゾーン4攻撃。",
+    "contextLabel": "4v4 · ダイヤモンド（1-2-1）· 学校 / レクリエーション",
     "players": {
-      "P": "Setter (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_B": "Opposing block",
-      "OPP_OFF": "Opposing off-blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "P": "セッター（P3）",
+      "R4": "左サイド（P4）",
+      "A2": "右サイド（P2）",
+      "A": "後衛（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_B": "相手ブロック",
+      "OPP_OFF": "相手オフブロッカー",
+      "OPP_D1": "相手クロスディフェンダー",
+      "OPP_D2": "相手後衛"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond formation",
-        "description": "Canonical layout: setter AT THE CENTER of the net (P3) + 2 wings on the 3 m line + back deep."
+        "title": "1. ダイヤモンド配置",
+        "description": "標準配置: セッターがネット<strong>中央</strong>（P3）、3 mライン上にサイド2人、後衛は深く位置取り。"
       },
       "s2": {
-        "title": "2. Serve + back-court reception",
-        "description": "The lone back moves forward and bumps. High trajectory toward the setter at the net."
+        "title": "2. サーブ＋後衛レセプション",
+        "description": "唯一の後衛が前進してアンダーパス。ネット際のセッターへ高い軌道で送る。"
       },
       "s3": {
-        "title": "3. Set + approach + coverage",
-        "description": "R4 chains his approach toward zone 4. Setter, A2 and A close into a triangle for coverage. Opposing block slides toward the hitter."
+        "title": "3. トス＋助走＋カバー",
+        "description": "R4はゾーン4へ助走を続ける。セッター、A2、Aは三角形でカバーを形成。相手ブロックはアタッカー側にスライドする。"
       },
       "s4": {
-        "title": "4. Cross-court spike + single block",
-        "description": "Powerful spike. Against a single block the angle is wide: the hitter can aim long cross-court or short line."
+        "title": "4. クロス強打＋単独ブロック",
+        "description": "強烈なスパイク。単独ブロックに対しては角度が広い: アタッカーはロングクロスまたはショートストレートを狙える。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court — arrives a touch too late, the ball has already hit the floor."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがロングクロスへ飛び込む — わずかに遅れ、ボールはすでに床に落ちている。"
       },
       "s6": {
-        "title": "6. RESET — back to diamond",
-        "description": "Everyone resumes their position in the diamond for the next rally. The setter returns to the center of the net."
+        "title": "6. リセット — ダイヤモンドに戻る",
+        "description": "全員が次のラリーに向けてダイヤモンドの位置に戻る。セッターはネット中央に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Canonical diamond = the most common 4v4 formation.",
-        "\"Center setter\" variant: setter at P3, distributes to the left or to the right.",
-        "Standard single opposing block in 4v4: wide attack angle.",
-        "Limited coverage: 3 players around the hitter."
+        "標準的なダイヤモンド = 4対4で最も一般的なフォーメーション。",
+        "「センターセッター」型: セッターがP3に位置し、左右に配球する。",
+        "4対4の標準は相手の単独ブロック: 広い攻撃角度を使える。",
+        "限られたカバー: アタッカー周囲に3人。"
       ],
       "commonMistakes": [
-        "Setter who also receives → impossible to set behind.",
-        "Wings too deep → difficult set for the center setter.",
-        "Back too deep → no coverage of short block returns."
+        "セッターが同時にレセプションする → 後ろにトスできない。",
+        "サイドが深すぎる → センターセッターからのトスが難しい。",
+        "後衛が深すぎる → ブロックのショートリターンをカバーできない。"
       ]
     }
   },
   "4v4-attack-penetrant": {
-    "title": "4v4 · Penetrating setter",
-    "shortDescription": "Simplified 3-1 system: single setter in P1 penetrates to zone 2, freeing 3 front-row hitters.",
-    "contextLabel": "4v4 · Back-row setter · 3 hitters",
+    "title": "4v4 · 潜り込みセッター",
+    "shortDescription": "簡易3-1システム: P1の唯一のセッターがゾーン2へ潜り込み、前衛3人のアタッカーを確保。",
+    "contextLabel": "4v4 · バックロウセッター · 3人のアタッカー",
     "players": {
-      "R4": "Left wing (P4)",
-      "C": "Middle (P3)",
-      "A2": "Right wing (P2)",
-      "P": "Setter (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_B": "Opposing block",
-      "OPP_OFF": "Opposing off-blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "R4": "左サイド（P4）",
+      "C": "ミドル（P3）",
+      "A2": "右サイド（P2）",
+      "P": "セッター（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_B": "相手ブロック",
+      "OPP_OFF": "相手オフブロッカー",
+      "OPP_D1": "相手クロスディフェンダー",
+      "OPP_D2": "相手後衛"
     },
     "steps": {
       "s1": {
-        "title": "1. 3-1 configuration",
-        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4. No libero: the receiver chains his approach."
+        "title": "1. 3-1構成",
+        "description": "唯一のセッターがP1（後衛）。前衛にP2、P3、P4の3人のアタッカー。リベロなし: レシーバーは助走を続ける。"
       },
       "s2": {
-        "title": "2. Serve + reception + penetration",
-        "description": "The left wing bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
+        "title": "2. サーブ＋レセプション＋潜り込み",
+        "description": "左サイドがレセプションする。同時にセッターはP1からゾーン2へ潜り込みを開始する。"
       },
       "s3": {
-        "title": "3. Set + R4 approach",
-        "description": "High set toward the left wing after R4's reception run. The opposing block slides toward him."
+        "title": "3. トス＋R4の助走",
+        "description": "R4のレセプション後の助走を経て、左サイドへ高いトス。相手ブロックがそちらへスライドする。"
       },
       "s4": {
-        "title": "4. Cross-court spike + single block",
-        "description": "Powerful long cross-court spike. With only 3 coverers, they form a short triangle around the hitter."
+        "title": "4. クロス強打＋単独ブロック",
+        "description": "強烈なロングクロスのスパイク。カバー要員は3人のみで、アタッカー周りに短い三角形を作る。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court — arrives 0.1 s too late on impact."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがロングクロスへ飛び込む — インパクトに対して0.1秒遅い。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The setter returns to back-row P1, R4 returns to zone 4. The penetration must be anticipated from the next serve onward."
+        "title": "6. リセット — 配置に戻る",
+        "description": "セッターは後衛P1に戻り、R4はゾーン4に戻る。次のサーブ以降も潜り込みを予測しておく必要がある。"
       }
     },
     "summary": {
       "keyPoints": [
-        "3-1 system = the 4v4 equivalent of the 5-1. 1 dedicated penetrating setter.",
-        "Advantage: 3 hitters in front at all times, like in 6v6.",
-        "Drawback: requires very clean reception since the setter is not at the net.",
-        "No libero: the receiver also chains his attack approach."
+        "3-1システム = 4対4における5-1の同等版。専属の潜り込みセッター1人。",
+        "利点: 6対6と同様に常に前衛に3人のアタッカー。",
+        "欠点: セッターがネットにいないため、非常に正確なレセプションが必要。",
+        "リベロなし: レシーバーがそのまま助走に入る。"
       ],
       "commonMistakes": [
-        "Penetration too late → another player has to make the set.",
-        "Reception too short → setter arrives too far from the net.",
-        "Coverage forgotten — opposing block-out = point."
+        "潜り込みが遅すぎる → 別の選手がトスを上げざるを得ない。",
+        "レセプションが短すぎる → セッターがネットから遠くで受ける。",
+        "カバー忘れ — 相手のブロックアウトで失点。"
       ]
     }
   },
   "4v4-attack-square": {
-    "title": "4v4 · Box attack",
-    "shortDescription": "Box formation (2 front / 2 back): 2 blockers + 2 balanced defenders.",
-    "contextLabel": "4v4 · Box · Double block possible",
+    "title": "4v4 · ボックスの攻撃",
+    "shortDescription": "ボックスフォーメーション（前衛2 / 後衛2）: ブロッカー2＋バランス重視のディフェンダー2。",
+    "contextLabel": "4v4 · ボックス · 2枚ブロック可能",
     "players": {
-      "P": "Setter-hitter (P2)",
-      "R4": "Hitter (P4)",
-      "A1": "Left back (P5)",
-      "A2": "Right back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender",
-      "OPP_D2": "Opposing back"
+      "P": "セッター兼アタッカー（P2）",
+      "R4": "アタッカー（P4）",
+      "A1": "左後衛（P5）",
+      "A2": "右後衛（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手クロスディフェンダー",
+      "OPP_D2": "相手後衛"
     },
     "steps": {
       "s1": {
-        "title": "1. Box configuration",
-        "description": "2 players at the net (P2 and P4), 2 players at the back. Balanced coverage of the court front and back."
+        "title": "1. ボックス構成",
+        "description": "ネットに2人（P2とP4）、後衛に2人。コートの前後をバランスよくカバーする。"
       },
       "s2": {
-        "title": "2. Serve + high reception",
-        "description": "The left back bumps a lofted pass to the setter-hitter in zone 2."
+        "title": "2. サーブ＋高いレセプション",
+        "description": "左後衛がゾーン2のセッター兼アタッカーへ高くアンダーパスを送る。"
       },
       "s3": {
-        "title": "3. Set to the wing + approach",
-        "description": "The setter distributes to the hitter in zone 4. No middle option (no specialized middle). The double block slides toward the hitter."
+        "title": "3. サイドへのトス＋助走",
+        "description": "セッターはゾーン4のアタッカーへ配球。ミドル攻撃なし（専門のミドル不在）。2枚ブロックがアタッカーへスライドする。"
       },
       "s4": {
-        "title": "4. Spike against a double block",
-        "description": "The hitter must choose: short line, long cross-court or tip into the open lane. Double block (vs single block in the diamond) — defense made tougher offensively."
+        "title": "4. 2枚ブロックに対するスパイク",
+        "description": "アタッカーは選択を迫られる: ショートストレート、ロングクロス、ブロックの空いた隙間へフェイント。2枚ブロック（ダイヤモンドの単独に対し）で守備は強化される。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court. With only 2 players on the floor, the zone is vulnerable."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがロングクロスへ飛び込む。床のディフェンダーが2人だけのため、脆いゾーンが生まれる。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes the box for the next rally. This formation suits teams with 2 strong blockers and 2 strong defenders."
+        "title": "6. リセット — 配置に戻る",
+        "description": "全員が次のラリーへ向けてボックスに戻る。強いブロッカー2人と強いディフェンダー2人を擁するチームに向く。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Box formation: balance between attack/defense, 2 front zones + 2 back zones.",
-        "Allows a double block (vs single block of the diamond) — better defense at the net.",
-        "But only 2 players on the floor → vulnerable to long cross-courts.",
-        "Good for teams with 2 strong blockers and 2 strong defenders."
+        "ボックスフォーメーション: 攻守のバランス、前2ゾーン＋後2ゾーン。",
+        "2枚ブロックが可能（ダイヤモンドの単独ブロックに対して）— ネット際の守備が強い。",
+        "ただし床のディフェンダーは2人だけ → ロングクロスに脆い。",
+        "強いブロッカー2人と強いディフェンダー2人がいるチームに向く。"
       ],
       "commonMistakes": [
-        "Net players too far from the center → easy opposing block.",
-        "Backs frozen deep → no short coverage.",
-        "Confusion over who sets: the setter-hitter must always be in front."
+        "ネット選手が中央から離れすぎる → 相手のブロックが楽になる。",
+        "後衛が深くで固まる → ショートカバーがない。",
+        "誰がトスするかが曖昧: セッター兼アタッカーは常に前にいなければならない。"
       ]
     }
   },
   "5v5-attack-pentagon": {
-    "title": "5v5 · Pentagon attack",
-    "shortDescription": "5v5 format: 1 single setter + 1 middle + 2 wings + 1 back. Zone-4 attack.",
-    "contextLabel": "5v5 · 4-1 system · Hybrid format",
+    "title": "5v5 · ペンタゴンの攻撃",
+    "shortDescription": "5対5形式: セッター1人＋ミドル1人＋サイド2人＋後衛1人。ゾーン4への攻撃。",
+    "contextLabel": "5v5 · 4-1システム · ハイブリッド形式",
     "players": {
-      "R4": "Left wing",
-      "C": "Middle",
-      "P": "Setter (P2)",
-      "A1": "Left back (P5)",
-      "A2": "Right back (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4": "左サイド",
+      "C": "ミドル",
+      "P": "セッター（P2）",
+      "A1": "左後衛（P5）",
+      "A2": "右後衛（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手クロスディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. Offensive pentagon",
-        "description": "5 players in a pentagon: 3 in front (R4, C, P) + 2 in the back. Regular court coverage. No libero, all backs receive."
+        "title": "1. 攻撃ペンタゴン",
+        "description": "5人がペンタゴン状に配置: 前衛3人（R4、C、P）＋後衛2人。均一なコートカバー。リベロなしで、すべての後衛がレセプションする。"
       },
       "s2": {
-        "title": "2. Serve + back reception",
-        "description": "The left back takes the first ball. Without a libero, the most reliable back in reception takes it."
+        "title": "2. サーブ＋後衛のレセプション",
+        "description": "左後衛が第1ボールを処理。リベロなしのため、レセプション最強の後衛が取る。"
       },
       "s3": {
-        "title": "3. Set + approach",
-        "description": "The setter, already at the net, easily distributes to zone 4. No penetration in 5v5 — he is in P2. R4 starts his approach."
+        "title": "3. トス＋助走",
+        "description": "セッターはすでにネットにいるため、簡単にゾーン4へ配球。5対5では潜り込みなし — P2に固定。R4が助走を開始する。"
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "The left wing finishes long cross-court. The opposing block also pentagons up: 2 blockers on the wing."
+        "title": "4. サイド攻撃＋2枚ブロック",
+        "description": "左サイドがロングクロスでフィニッシュ。相手ブロックもペンタゴン: サイドに2枚ブロック。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the cross-court. Floor defense is rarer with a single back per channel."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがクロスへ飛び込む。チャンネルあたり後衛が1人のため、床ディフェンスは少ない。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes the pentagon. Without a libero, rotating the backs is essential to spread the reception load."
+        "title": "6. リセット — 配置に戻る",
+        "description": "全員がペンタゴンに戻る。リベロがいない以上、後衛のローテーションでレセプション負荷を分散することが重要。"
       }
     },
     "summary": {
       "keyPoints": [
-        "5v5 = hybrid format (training, missing players). No official FFVB rules.",
-        "Pentagon: 1 player per key zone, regular coverage of the whole court.",
-        "4-1 system = equivalent of the 5-1 but with one less hitter.",
-        "Recommendation: keep the 6v6 5-1 system by removing one non-setter back."
+        "5対5 = ハイブリッド形式（トレーニング、人員不足）。FFVB公式ルールなし。",
+        "ペンタゴン: 主要ゾーンに1人ずつ、コート全体を均等にカバー。",
+        "4-1システム = 5-1の同等版だが、アタッカーが1人少ない。",
+        "推奨: 6対6の5-1を維持し、セッター以外の後衛を1人減らす。"
       ],
       "commonMistakes": [
-        "No libero in 5v5 → all backs must be able to receive.",
-        "Trying to triple-block → only 2 floor defenders left.",
-        "Forgetting attack coverage → one less player in coverage."
+        "5対5でリベロなし → すべての後衛がレセプション可能でなければならない。",
+        "3枚ブロックを試みる → 床ディフェンダーが2人になる。",
+        "アタックカバーを忘れる → カバーが1人少なくなる。"
       ]
     }
   },
   "6v6-attack-4-2": {
-    "title": "Attack · 4-2 system",
-    "shortDescription": "Beginner 4-2 system: fixed front-row setter in zone 2, 2 hitters available.",
-    "contextLabel": "4-2 · 2 setters in opposition · U13/U15",
+    "title": "攻撃 · 4-2システム",
+    "shortDescription": "初級4-2システム: ゾーン2の前衛固定セッター、利用可能なアタッカー2人。",
+    "contextLabel": "4-2 · 対角に2人のセッター · U13/U15",
     "players": {
-      "R4a": "OH (P4)",
-      "C": "Middle (P3)",
-      "P1": "Setter 1 (P2)",
-      "P2": "Setter 2 (P5)",
-      "C2": "Middle 2 (P6)",
-      "R4b": "OH (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "OH（P4）",
+      "C": "ミドル（P3）",
+      "P1": "セッター1（P2）",
+      "P2": "セッター2（P5）",
+      "C2": "ミドル2（P6）",
+      "R4b": "OH（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手クロスディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. 4-2 configuration",
-        "description": "2 setters in diagonal opposition (P2 and P5). The front-row setter (P1) always makes the 2nd touch. W reception with C2 in the center."
+        "title": "1. 4-2構成",
+        "description": "対角に2人のセッター（P2とP5）。前衛セッター（P1）が常に2本目を取る。中央にC2を配したWレセプション。"
       },
       "s2": {
-        "title": "2. Serve + central reception",
-        "description": "The back middle takes the first touch in a classic W reception. High trajectory to the front setter in P2."
+        "title": "2. サーブ＋中央レセプション",
+        "description": "後衛ミドルが伝統的なWレセプションで第1接触。P2の前衛セッターへ高い軌道で送る。"
       },
       "s3": {
-        "title": "3. Direct set + approach",
-        "description": "The front setter only needs to distribute: no penetration, no switch. He sends a high set to the OH in zone 4. Double block on the wing."
+        "title": "3. ダイレクトなトス＋助走",
+        "description": "前衛セッターは配球のみ: 潜り込みもスイッチもない。OHへゾーン4に高いトスを送る。サイドに2枚ブロック。"
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "The OH attacks in zone 4. No middle option since the middle received. Spike on the long cross-court against a double block."
+        "title": "4. サイド攻撃＋2枚ブロック",
+        "description": "OHがゾーン4から攻撃。ミドルがレセプションしたためミドル攻撃なし。ロングクロスへのスパイクが2枚ブロックに対して放たれる。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives cross-court to try to recover the ball."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがクロスに飛び込み、ボールを拾おうとする。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their position. The 4-2 remains the simplest system: no switch required."
+        "title": "6. リセット — 配置に戻る",
+        "description": "全員が元の位置に戻る。4-2はスイッチも不要な、最もシンプルなシステム。"
       }
     },
     "summary": {
       "keyPoints": [
-        "4-2: 2 setters + 2 middles + 2 outsides. Always 2 hitters in front.",
-        "The front setter (in P2 or P3 depending on the variant) systematically makes the 2nd touch.",
-        "No penetration, no switch: the easiest system to learn.",
-        "Ideal for U13/U15 or adult beginners. Promotes learning rotations."
+        "4-2: セッター2人＋ミドル2人＋アウトサイド2人。常に前衛に2人のアタッカー。",
+        "前衛セッター（バリエーションに応じてP2またはP3）が常に2本目を取る。",
+        "潜り込みもスイッチもなし: 最も習得しやすいシステム。",
+        "U13/U15や成人初心者に最適。ローテーションの学習に向く。"
       ],
       "commonMistakes": [
-        "Front setter who also receives → impossible to make the 2nd touch.",
-        "Back setter wanting to set → front-setter rule not respected.",
-        "Middle who does not commit → easy double block."
+        "前衛セッターが同時にレセプション → 2本目を取れない。",
+        "後衛セッターがトスしようとする → 前衛セッターのルールが守られない。",
+        "ミドルがコミットしない → 2枚ブロックが楽になる。"
       ]
     }
   },
   "6v6-attack-5-1-p1": {
-    "title": "Attack · 5-1 P1 rotation",
-    "shortDescription": "3-receiver reception → setter penetrates from P1 → zone-4 attack by the OH.",
-    "contextLabel": "5-1 · P1 rotation · Opposing serve",
+    "title": "攻撃 · 5-1 P1ローテ",
+    "shortDescription": "3人レセプション → セッターがP1から潜り込み → OHのゾーン4攻撃。",
+    "contextLabel": "5-1 · P1ローテ · 相手サーブ",
     "players": {
-      "L": "Libero (P5)",
-      "R4a": "OH (P4)",
-      "R4b": "OH (P6)",
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "P": "Setter (P1)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_C": "Opposing middle",
-      "OPP_S": "Opposing setter",
-      "OPP_BC": "Opposing libero"
+      "L": "リベロ（P5）",
+      "R4a": "OH（P4）",
+      "R4b": "OH（P6）",
+      "C": "ミドル（P3）",
+      "Op": "オポジット（P2）",
+      "P": "セッター（P1）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_C": "相手ミドル",
+      "OPP_S": "相手セッター",
+      "OPP_BC": "相手リベロ"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Our team is in a 3-receiver formation: libero (P5), OH in P6 and OH in P4 pulled back on the 3 m line. Middle and opposite are out at the net. The setter waits in P1 to penetrate as soon as the serve is struck."
+        "title": "1. レセプション配置",
+        "description": "自チームは3人レセプション: リベロ（P5）、P6のOH、3 mラインまで下がったP4のOH。ミドルとオポジットはネット際で外れる。セッターはサーブが打たれた瞬間にP1から潜り込む準備をする。"
       },
       "s2": {
-        "title": "2. Serve + reception",
-        "description": "Opposing lofted serve to the OH in P6 who bumps it. In parallel, the setter triggers his penetration from P1 toward zone 2-3."
+        "title": "2. サーブ＋レセプション",
+        "description": "相手の高いサーブがP6のOHへ届き、アンダーパスで処理。同時に、セッターはP1からゾーン2-3へ潜り込みを開始する。"
       },
       "s3": {
-        "title": "3. High set + approach",
-        "description": "The ball rises to the setter who has arrived at the net. He delivers a lofted set to zone 4 where the OH has already started his approach. Coverage forms around him."
+        "title": "3. 高いトス＋助走",
+        "description": "ボールがネット際に到着したセッターへ上がる。彼はゾーン4のOH（すでに助走を開始）へ高いトスを上げる。カバーが彼の周りに形成される。"
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The OH lifts off and hits long cross-court toward the opponent's zone 6. The two opposing blockers jump in parallel to close cross-court and line."
+        "title": "4. スパイク＋2枚ブロック",
+        "description": "OHが飛び上がり、相手のゾーン6に向けてロングクロスを打つ。相手の2人のブロッカーが平行に飛び、クロスとラインを締める。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing libero dives toward zone 6 to try a desperate bump. The opposing setter moves toward zone 2 to relay if defense touches the ball."
+        "title": "5. 相手のディグ",
+        "description": "相手のリベロがゾーン6へ飛び込み、決死のアンダーパスを試みる。相手セッターはディフェンスがボールに触れた場合に備えてゾーン2へ移動する。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position for the next serve. This placement determines the quality of the next attack."
+        "title": "6. リセット — 配置に戻る",
+        "description": "チーム全体が次のサーブに向けてレセプション位置に戻る。この配置が次の攻撃の質を決める。"
       }
     },
     "summary": {
       "keyPoints": [
-        "3-receiver reception: libero + 2 OHs take the full width of the court.",
-        "The setter penetrates from P1 toward zone 2-3 as soon as the serve is struck.",
-        "The OH attacker slides on the 3 m line during reception to prepare his approach.",
-        "5-player coverage (3 close + 2 far) in low position around the hitter."
+        "3人レセプション: リベロ＋2人のOHがコートの幅全体をカバーする。",
+        "サーブが打たれた瞬間にセッターがP1からゾーン2-3へ潜り込む。",
+        "レシーブするOHはレセプション中に3 mラインへ流れ、助走の準備をする。",
+        "アタッカー周辺で5人カバー（近接3＋遠距離2）、低い姿勢で構える。"
       ],
       "commonMistakes": [
-        "Setter penetrating too late → forced jump set by another player.",
-        "OH attacker triggering his approach too early → arrives under the ball instead of committing.",
-        "Coverage forgotten → successful opposing block = point lost directly."
+        "セッターの潜り込みが遅い → 他の選手がジャンプセットを強いられる。",
+        "OHアタッカーの助走開始が早すぎる → コミットせずボールの下に入ってしまう。",
+        "カバーを忘れる → 相手のブロックが決まれば直接失点。"
       ]
     }
   },
   "6v6-attack-5-1-p2": {
-    "title": "Attack · 5-1 P2 rotation",
-    "shortDescription": "Setter already at the net in P2: 2 hitters in front + opposite attacks in 4 exceptionally.",
-    "contextLabel": "5-1 · P2 rotation · Front-row setter",
+    "title": "攻撃 · 5-1 P2ローテ",
+    "shortDescription": "セッターは既にP2でネット際: 前衛アタッカー2人＋例外的にオポジットがゾーン4で攻撃。",
+    "contextLabel": "5-1 · P2ローテ · 前衛セッター",
     "players": {
-      "R4a": "OH (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P3)",
-      "Pt": "Opposite (P4)",
-      "P": "Setter (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "OH（P5）",
+      "L": "リベロ（P6）",
+      "R4b": "OH（P1）",
+      "C": "ミドル（P3）",
+      "Pt": "オポジット（P4）",
+      "P": "セッター（P2）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手クロスディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing serve",
-        "description": "Serve toward zone 5-6. The libero calls and prepares to bump. The setter already waits at the net in P2."
+        "title": "1. 相手のサーブ",
+        "description": "ゾーン5-6へのサーブ。リベロが声を出してアンダーパスの準備。セッターはすでにネット際のP2で待機している。"
       },
       "s2": {
-        "title": "2. Serve + libero reception",
-        "description": "Lofted serve to zone 6. The libero steps in and bumps precisely to the setter target (zone 2)."
+        "title": "2. サーブ＋リベロのレセプション",
+        "description": "ゾーン6への高いサーブ。リベロが入って、セッターのターゲット（ゾーン2）へ正確にアンダーパスを送る。"
       },
       "s3": {
-        "title": "3. Set to the opposite + approach",
-        "description": "The setter, already in P2, exceptionally distributes to zone 4 where the opposite starts his approach. The opposing block regroups in the center."
+        "title": "3. オポジットへのトス＋助走",
+        "description": "セッターはすでにP2にいるため、例外的にゾーン4へ配球してオポジットの助走に合わせる。相手ブロックは中央へ集まる。"
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The opposite lifts off on the left and hits long cross-court. A rare configuration but unavoidable in P2 — the setter stays in place."
+        "title": "4. スパイク＋2枚ブロック",
+        "description": "オポジットが左で飛び上がり、ロングクロスを打つ。珍しい配置だが、P2では避けられない — セッターは動けない。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court to try a desperate bump save."
+        "title": "5. 相手のディグ",
+        "description": "相手クロスディフェンダーがロングクロスへ飛び込み、決死のアンダーパスでセーブを試みる。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their reception position. The P2 rotation remains the most offensively limited: only 2 hitters in front."
+        "title": "6. リセット — 配置に戻る",
+        "description": "全員がレセプション位置に戻る。P2ローテは攻撃面で最も制限的: 前衛にアタッカー2人だけ。"
       }
     },
     "summary": {
       "keyPoints": [
-        "P2 rotation = the most offensively limited (only 2 hitters in front).",
-        "Setter already in place: zero penetration, easy distribution.",
-        "The opposite exceptionally attacks on the left (zone 4) to free the setter.",
-        "Prioritize the wings and OH back-row attacks as options."
+        "P2ローテ = 攻撃面で最も制限的（前衛にアタッカー2人だけ）。",
+        "セッターはすでに位置取り済み: 潜り込みなし、配球が楽。",
+        "オポジットが例外的に左（ゾーン4）から攻撃してセッターを解放する。",
+        "サイドアタックとOHのバックロウ攻撃を選択肢として優先する。"
       ],
       "commonMistakes": [
-        "Setter trying to jump-set in 2 when he's already there → difficult 2nd touch.",
-        "Opposite hesitating between 2 and 4 → opposing block in place.",
-        "Middles not committing → easy double block for the opponent."
+        "セッターがすでに2にいるのにジャンプセットしようとする → 2本目が難しくなる。",
+        "オポジットが2と4で迷う → 相手ブロックに合わせられる。",
+        "ミドルがコミットしない → 相手の2枚ブロックが楽になる。"
       ]
     }
   },
   "6v6-attack-5-1-p3": {
-    "title": "Attack · 5-1 P3 rotation (pipe)",
-    "shortDescription": "Setter at P3 switches toward 2-3 → pipe by the back-row OH in zone 6.",
-    "contextLabel": "5-1 · P3 rotation · Back-row attack",
+    "title": "攻撃 · 5-1 P3ローテ（パイプ）",
+    "shortDescription": "P3のセッターが2-3へスイッチ → ゾーン6にいる後衛OHのパイプ。",
+    "contextLabel": "5-1 · P3ローテ · バックロウ攻撃",
     "players": {
-      "L": "Libero (P5)",
-      "Pt": "Opposite (P6)",
-      "R4b": "OH (P1)",
-      "R4a": "OH (P4)",
-      "P": "Setter (P3)",
-      "C": "Middle (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "L": "リベロ（P5）",
+      "Pt": "オポジット（P6）",
+      "R4b": "OH（P1）",
+      "R4a": "OH（P4）",
+      "P": "セッター（P3）",
+      "C": "ミドル（P2）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手ディアゴナルディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Serve expected on the right side. The OH in P1 takes the reception. The setter in P3 is ready to switch toward 2-3 as soon as the serve is struck."
+        "title": "1. レセプション配置",
+        "description": "右側へのサーブが予測される。P1のOHがレセプションを受ける。P3のセッターはサーブの瞬間に2-3へスイッチする準備をする。"
       },
       "s2": {
-        "title": "2. Serve + reception",
-        "description": "Lofted serve to zone 1. The OH in P1 bumps to the target. The setter starts his switch toward 2-3."
+        "title": "2. サーブ＋レセプション",
+        "description": "ゾーン1への高いサーブ。P1のOHがターゲットへアンダーパス。セッターは2-3へスイッチを開始する。"
       },
       "s3": {
-        "title": "3. Pipe set + approach",
-        "description": "The setter sends a flat set to zone 6: fast trajectory 2 m from the net. The opposite launches his approach behind the 3 m line for the pipe."
+        "title": "3. パイプ用トス＋助走",
+        "description": "セッターはゾーン6へフラットなトスを送る: ネットから2 mの位置に速い軌道。オポジットがパイプのため3 mラインの後方で助走を開始する。"
       },
       "s4": {
-        "title": "4. Pipe + double block",
-        "description": "Powerful hit in the center from the back court. The wing double block cannot screen at the center — a key option of the modern 5-1."
+        "title": "4. パイプ＋2枚ブロック",
+        "description": "後衛コートから中央への強烈なヒット。サイドの2枚ブロックは中央を塞げない — 現代5-1の重要な選択肢。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing central defender dives at the core to try to catch the pipe — the ball arrives fast, little time to react."
+        "title": "5. 相手のディグ",
+        "description": "相手の中央ディフェンダーが中央へ飛び込みパイプを拾おうとする — ボールが速く、反応する時間がほとんどない。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position. The middle must stay ready to switch to the center of the net for the next sequence."
+        "title": "6. リセット — 配置に戻る",
+        "description": "チーム全体がレセプション位置に戻る。ミドルは次のラリーに向けてネット中央へスイッチする準備を続ける。"
       }
     },
     "summary": {
       "keyPoints": [
-        "The pipe is the 4th offensive option on top of the 3 attacks at the net.",
-        "The middle switches to the center of the net while the setter slides to 2-3.",
-        "Pipe trajectory: flat, 2 m from the net, take-off behind the 3 m line.",
-        "Very effective against a block that focuses on the wings."
+        "パイプはネット際の3つの攻撃に加えて4つ目の攻撃選択肢。",
+        "セッターが2-3へ移動する間に、ミドルがネット中央へスイッチする。",
+        "パイプの軌道: 平らで、ネットから2 m、3 mラインの後方で踏み切る。",
+        "サイドに集中するブロックに対して非常に有効。"
       ],
       "commonMistakes": [
-        "Pipe too high → opposing block has time to recover to the center.",
-        "Back-row OH taking off in the front zone → back-row attack fault.",
-        "Middle switching too late → zone 3 blocked."
+        "パイプのトスが高すぎる → 相手ブロックが中央へ戻る時間ができる。",
+        "後衛OHがフロントゾーンで踏み切る → バックロウ攻撃の反則。",
+        "ミドルのスイッチが遅い → ゾーン3がブロックされる。"
       ]
     }
   },
   "6v6-attack-5-1-p4": {
-    "title": "Attack · 5-1 P4 rotation",
-    "shortDescription": "Front-row setter at P4 switches to the right; OH* attacks in 4, middle in 3, opposite back-row in 1.",
-    "contextLabel": "5-1 · P4 rotation · Front-row setter",
+    "title": "攻撃 · 5-1 P4ローテ",
+    "shortDescription": "P4の前衛セッターが右へスイッチ、OH*がゾーン4で攻撃、ミドルがゾーン3、オポジットはP1から後衛攻撃。",
+    "contextLabel": "5-1 · P4ローテ · 前衛セッター",
     "players": {
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "Pt": "Opposite (P1)",
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4a": "OH (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "Pt": "オポジット（P1）",
+      "P": "セッター（P4）",
+      "C": "ミドル（P3）",
+      "R4a": "OH（P2）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手ディアゴナルディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. P4 configuration + offset",
-        "description": "Setter in zone 4, OH* in zone 2 — crossed placement. Setter and middle shift left to free the reception zone for the libero."
+        "title": "1. P4構成＋オフセット",
+        "description": "セッターがゾーン4、OH*がゾーン2 — クロスした配置。セッターとミドルが左にずれ、リベロのレセプションゾーンを空ける。"
       },
       "s2": {
-        "title": "2. Serve + libero reception",
-        "description": "The serve targets zone 6. The libero steps in and bumps to the classic target (between P2 and P3)."
+        "title": "2. サーブ＋リベロのレセプション",
+        "description": "サーブはゾーン6を狙う。リベロが入って、標準のターゲット（P2とP3の間）へアンダーパスを送る。"
       },
       "s3": {
-        "title": "3. Setter↔OH* switch + high set",
-        "description": "Essential crossover: the setter leaves P4 toward 2-3, the OH* leaves P2 toward 4 to attack. Lofted set to the left wing."
+        "title": "3. セッター↔OH*スイッチ＋高いトス",
+        "description": "必須のクロスオーバー: セッターはP4から2-3へ、OH*はP2から4へ移動して攻撃する。左サイドへの高いトス。"
       },
       "s4": {
-        "title": "4. Wing attack + double block",
-        "description": "Long cross-court spike. With a front-row setter (small at the block), the attack must finish quickly. Double block shifted toward the wing."
+        "title": "4. サイド攻撃＋2枚ブロック",
+        "description": "ロングクロスのスパイク。前衛セッター（ブロックでは小さい）があるため、攻撃を素早く決める必要がある。2枚ブロックはサイドへスライド。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives on the long trajectory to try a desperate bump."
+        "title": "5. 相手のディグ",
+        "description": "相手ディアゴナルディフェンダーが長い軌道に飛び込み、決死のアンダーパスを試みる。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their initial position. The setter/middle left offset is kept for the next serve."
+        "title": "6. リセット — 配置に戻る",
+        "description": "全員が初期位置に戻る。セッター/ミドルの左オフセットは次のサーブまで維持される。"
       }
     },
     "summary": {
       "keyPoints": [
-        "P4 rotation = front-row setter. Setter↔OH* switch mandatory.",
-        "2 hitters in front: OH* in 4, middle in 3. Pipe or back-row opposite as options.",
-        "The setter and middle shift left at the serve to free zone 6.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "P4ローテ = 前衛セッター。セッター↔OH*のスイッチが必須。",
+        "前衛にアタッカー2人: ゾーン4にOH*、ゾーン3にミドル。パイプまたはバックロウのオポジットが選択肢。",
+        "セッターとミドルがサーブ時に左へずれてゾーン6を空ける。",
+        "オポジット（P1）はレセプションせず、バックロウ攻撃に備える。"
       ],
       "commonMistakes": [
-        "Switch forgotten → the OH* stays on the right, hitter in poor position.",
-        "Setter and middle too far right at the serve → reception conflict in zone 6.",
-        "Opposing block not committed by the middle → easy double block on the left wing."
+        "スイッチを忘れる → OH*が右側に残り、悪い位置で攻撃。",
+        "サーブ時にセッターとミドルが右に寄りすぎる → ゾーン6でレセプションが衝突。",
+        "ミドルが相手ブロックをコミットさせない → 左サイドで楽な2枚ブロック。"
       ]
     }
   },
   "6v6-attack-5-1-p5": {
-    "title": "Attack · 5-1 P5 rotation",
-    "shortDescription": "Long penetration from P5. C/OH switch. Set to the opposite in zone 2.",
-    "contextLabel": "5-1 · P5 rotation · Long penetration",
+    "title": "攻撃 · 5-1 P5ローテ",
+    "shortDescription": "P5からの長い潜り込み。C/OHのスイッチ。ゾーン2のオポジットへ配球。",
+    "contextLabel": "5-1 · P5ローテ · 長い潜り込み",
     "players": {
-      "P": "Setter (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P4)",
-      "R4a": "OH (P3)",
-      "Pt": "Opposite (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing diagonal defender"
+      "P": "セッター（P5）",
+      "L": "リベロ（P6）",
+      "R4b": "OH（P1）",
+      "C": "ミドル（P4）",
+      "R4a": "OH（P3）",
+      "Pt": "オポジット（P2）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手ディアゴナルディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Setter in back-left P5, as far from the net as possible. C in P4 and OH in P3 will switch as soon as the serve is struck."
+        "title": "1. レセプション配置",
+        "description": "セッターはバック左のP5、ネットからできるだけ遠くに位置取り。P4のCとP3のOHはサーブの瞬間にスイッチする。"
       },
       "s2": {
-        "title": "2. Serve + reception + C↔OH switch",
-        "description": "The serve targets zone 1 where the OH receives. Simultaneously, the middle slides to the center and the attacking OH takes zone 4."
+        "title": "2. サーブ＋レセプション＋C↔OHスイッチ",
+        "description": "サーブはゾーン1のOHを狙う。同時にミドルが中央へ、攻撃するOHがゾーン4へ移動する。"
       },
       "s3": {
-        "title": "3. Long penetration + set in zone 2",
-        "description": "The setter crosses the whole court from P5 — the longest penetration. He distributes short to the opposite in zone 2. The opposing block slides right to close."
+        "title": "3. 長い潜り込み＋ゾーン2へのトス",
+        "description": "セッターがP5からコート全体を横切る — 最長の潜り込み。ゾーン2のオポジットへショートな配球。相手ブロックが右へスライドして塞ぐ。"
       },
       "s4": {
-        "title": "4. Cross-court spike + double block",
-        "description": "The opposite lifts off in zone 2 and hits long cross-court. A classic combination on this rotation. The double block is in place on the right."
+        "title": "4. クロス強打＋2枚ブロック",
+        "description": "オポジットがゾーン2で飛び上がりロングクロスを打つ。このローテーションの代表的な組み合わせ。右側に2枚ブロックが配置される。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives into zone 5 to try to catch the long ball."
+        "title": "5. 相手のディグ",
+        "description": "相手ディアゴナルディフェンダーがゾーン5へ飛び込み、長いボールを拾おうとする。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position. The middle returns to P4, the OH to P3, the setter to P5."
+        "title": "6. リセット — 配置に戻る",
+        "description": "チーム全体がレセプション位置に戻る。ミドルはP4、OHはP3、セッターはP5に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = the longest penetration. Requires perfect reception.",
-        "The middle and the OH switch as soon as the serve is struck to place C in zone 3.",
-        "The opposite in zone 2 is the most accessible target for the setter.",
-        "Pipe possible as an option if the set is flat and fast."
+        "P5 = 最長の潜り込み。完璧なレセプションが必要。",
+        "ミドルとOHはサーブの瞬間にスイッチし、Cをゾーン3に置く。",
+        "ゾーン2のオポジットはセッターから最もアクセスしやすいターゲット。",
+        "トスが平らで速ければパイプも選択肢。"
       ],
       "commonMistakes": [
-        "Too flat a set during an ongoing penetration → setter under the ball.",
-        "Late C↔OH switch → middle in zone 4 = useless at the block.",
-        "Short reception → setter arrives too far from the net."
+        "潜り込みの最中にトスが平らすぎる → セッターがボールの下に入ってしまう。",
+        "C↔OHスイッチが遅い → ミドルがゾーン4にいてブロックで役に立たない。",
+        "レセプションが短すぎる → セッターがネットから遠くに到着。"
       ]
     }
   },
   "6v6-attack-5-1-p6": {
-    "title": "Attack · 5-1 P6 rotation (quick)",
-    "shortDescription": "Medium penetration from P6 → fast central attack by the middle.",
-    "contextLabel": "5-1 · P6 rotation · Quick combination",
+    "title": "攻撃 · 5-1 P6ローテ（クイック）",
+    "shortDescription": "P6からの中程度の潜り込み → ミドルによる速い中央攻撃。",
+    "contextLabel": "5-1 · P6ローテ · クイックコンビ",
     "players": {
-      "L": "Libero (P5)",
-      "P": "Setter (P6)",
-      "R4b": "OH (P1)",
-      "R4a": "OH (P4)",
-      "Pt": "Opposite (P3)",
-      "C": "Middle (P2)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing central defender"
+      "L": "リベロ（P5）",
+      "P": "セッター（P6）",
+      "R4b": "OH（P1）",
+      "R4a": "OH（P4）",
+      "Pt": "オポジット（P3）",
+      "C": "ミドル（P2）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手中央ディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception formation",
-        "description": "Serve expected on the left side. The libero takes his channel. The opposite at P3 will switch to P2, the middle at P2 will slide to the center of the net."
+        "title": "1. レセプション配置",
+        "description": "左側へのサーブが予測される。リベロが自分のチャンネルを取る。P3のオポジットはP2へスイッチし、P2のミドルがネット中央へ移動する。"
       },
       "s2": {
-        "title": "2. Serve + reception + Opp↔C switch",
-        "description": "Lofted serve to zone 5. The libero receives. The opposite slides to zone 2 and the middle takes the center of the net to prepare the quick."
+        "title": "2. サーブ＋レセプション＋Opp↔Cスイッチ",
+        "description": "ゾーン5への高いサーブ。リベロがレセプション。オポジットがゾーン2へ、ミドルがネット中央へ移動してクイックの準備をする。"
       },
       "s3": {
-        "title": "3. Medium penetration",
-        "description": "The setter crosses from P6 to zone 2-3 (medium path, shorter than P5). The middle starts to load for tempo 1."
+        "title": "3. 中程度の潜り込み",
+        "description": "セッターがP6からゾーン2-3へ移動（P5より短い中程度の経路）。ミドルがテンポ1のために助走を開始する。"
       },
       "s4": {
-        "title": "4. Pre-jump + fast flat set",
-        "description": "The middle takes off ALREADY before the set — that's tempo 1. The setter sends a fast ball at 1 m, just in front of him. The middle is already airborne."
+        "title": "4. 事前ジャンプ＋速いフラットなトス",
+        "description": "ミドルはトスの<strong>前</strong>に飛び始める — それがテンポ1。セッターが1 mの高さで彼の前に速いボールを送る。ミドルはすでに空中にいる。"
       },
       "s5": {
-        "title": "5. Center hit + block too late",
-        "description": "Fast central hit that surprises the opposing block before it's in place. The opposing blockers jump just after — too late."
+        "title": "5. 中央ヒット＋遅れたブロック",
+        "description": "相手ブロックが整う前に放たれる、中央の速い打球。相手ブロッカーは少し遅れて飛ぶ — 間に合わない。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The middle returns to the center, everyone resumes the reception formation. The fast central is the signature combination of this rotation."
+        "title": "6. リセット — 配置に戻る",
+        "description": "ミドルが中央に戻り、全員がレセプション配置に戻る。中央クイックはこのローテーションの代表的なコンビ。"
       }
     },
     "summary": {
       "keyPoints": [
-        "P6 = medium penetration. Ideal for fast combinations.",
-        "Tempo 1: middle already in the air when the setter touches the ball.",
-        "The middle commits the opposing central block: frees the wings for the OHs.",
-        "Systematic Opp↔C switch to place the middle back at the center."
+        "P6 = 中程度の潜り込み。速いコンビに最適。",
+        "テンポ1: セッターがボールに触れた時点でミドルはすでに空中にいる。",
+        "ミドルが相手中央ブロックをコミットさせ、サイドのOHを解放する。",
+        "ミドルを中央に置くため、Opp↔Cの体系的なスイッチを行う。"
       ],
       "commonMistakes": [
-        "Middle taking off too late → ball passes over his hand.",
-        "Set too high for tempo 1 → opposing block in place.",
-        "Opposite who does not switch → middle stuck in zone 2."
+        "ミドルの踏み切りが遅い → ボールが手の上を通過する。",
+        "テンポ1のトスが高すぎる → 相手ブロックが整う。",
+        "オポジットがスイッチしない → ミドルがゾーン2で詰まる。"
       ]
     }
   },
   "6v6-attack-6-2": {
-    "title": "Attack · 6-2 system",
-    "shortDescription": "6-2 system: back-row setter penetrates, 3 hitters in front at all times.",
-    "contextLabel": "6-2 · Penetrating setter · Intermediate",
+    "title": "攻撃 · 6-2システム",
+    "shortDescription": "6-2システム: 後衛セッターが潜り込み、常に前衛に3人のアタッカー。",
+    "contextLabel": "6-2 · 潜り込みセッター · 中級",
     "players": {
-      "R4a": "OH (P4)",
-      "C": "Middle (P3)",
-      "PA": "Setter-hitter (P2)",
-      "P": "Setter (P1)",
-      "C2": "Middle (P6)",
-      "R4b": "OH (P5)",
-      "OPP_SRV": "Opposing server",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker",
-      "OPP_D1": "Opposing cross defender"
+      "R4a": "OH（P4）",
+      "C": "ミドル（P3）",
+      "PA": "セッター兼アタッカー（P2）",
+      "P": "セッター（P1）",
+      "C2": "ミドル（P6）",
+      "R4b": "OH（P5）",
+      "OPP_SRV": "相手サーバー",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー",
+      "OPP_D1": "相手クロスディフェンダー"
     },
     "steps": {
       "s1": {
-        "title": "1. 6-2 configuration",
-        "description": "2 versatile setters: the front one attacks (setter-hitter), the back one distributes (and penetrates). 3 hitters in front at all times."
+        "title": "1. 6-2構成",
+        "description": "万能セッター2人: 前衛側が攻撃（セッター兼アタッカー）、後衛側が配球（潜り込み）。常に前衛に3人のアタッカー。"
       },
       "s2": {
-        "title": "2. Serve + back-middle reception",
-        "description": "Classic central reception by C2. The setter triggers his penetration from P1 toward zone 2-3."
+        "title": "2. サーブ＋後衛ミドルのレセプション",
+        "description": "C2による標準的な中央レセプション。セッターはP1からゾーン2-3へ潜り込みを開始する。"
       },
       "s3": {
-        "title": "3. Set in zone 2 + approach",
-        "description": "Distribution to the setter-hitter in zone 2. Maximum variety: 3 offensive threats in front. Double block shifted to the right."
+        "title": "3. ゾーン2へのトス＋助走",
+        "description": "ゾーン2のセッター兼アタッカーへ配球。最大限の多彩さ: 前衛に3つの攻撃選択肢。2枚ブロックが右へスライド。"
       },
       "s4": {
-        "title": "4. Cross-court attack + double block",
-        "description": "The setter-hitter hits long cross-court. The 6-2 always guarantees 3 offensive threats — the opposing block cannot anticipate."
+        "title": "4. クロス攻撃＋2枚ブロック",
+        "description": "セッター兼アタッカーがロングクロスを打つ。6-2は常に3つの攻撃選択肢を保証し、相手ブロックは予測できない。"
       },
       "s5": {
-        "title": "5. Opposing dig",
-        "description": "The cross defender dives on the long trajectory on the opponent's left side — a desperate save attempt."
+        "title": "5. 相手のディグ",
+        "description": "クロスディフェンダーが相手の左側の長い軌道に飛び込み、決死のセーブを試みる。"
       },
       "s6": {
-        "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its position. The setter-hitter stays in front, the setter returns to P1."
+        "title": "6. リセット — 配置に戻る",
+        "description": "チーム全体が配置に戻る。セッター兼アタッカーは前衛に残り、セッターはP1に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 versatile setters in diagonal opposition.",
-        "Always 3 hitters in front (the front setter attacks, the back setter distributes).",
-        "Systematic penetration, like in 5-1, but with 2 alternating distributors.",
-        "Excellent for developing versatility before switching to a 5-1."
+        "6-2: 対角に2人の万能セッター。",
+        "常に前衛に3人のアタッカー（前衛セッターが攻撃、後衛セッターが配球）。",
+        "5-1のように体系的に潜り込みするが、2人が交互に配球する。",
+        "5-1へ移行する前の万能性を養うのに最適。"
       ],
       "commonMistakes": [
-        "Style difference between the 2 setters → inconsistent distribution.",
-        "Front setter not showing up for the attack → only 2 options.",
-        "Penetration too late → another player has to make the set."
+        "2人のセッターのスタイルが違う → 配球が一定しない。",
+        "前衛セッターが攻撃に上がらない → 選択肢が2つだけになる。",
+        "潜り込みが遅すぎる → 他の選手がトスを上げざるを得ない。"
       ]
     }
   },
   "4v4-defense-block-1": {
-    "title": "4v4 · System A defense (1 blocker + 3 defenders)",
-    "shortDescription": "System A in 4v4 (diamond formation): 1 solo blocker + tip + cross + line. The most common configuration.",
-    "contextLabel": "4v4 · System A · 1 blocker + 3 defenders",
+    "title": "4v4 · システムAの守備（ブロッカー1＋ディフェンダー3）",
+    "shortDescription": "4v4のシステムA（ダイヤモンド配置）: 単独ブロッカー＋フェイント＋クロス＋ライン。最も一般的な構成。",
+    "contextLabel": "4v4 · システムA · ブロッカー1＋ディフェンダー3",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "R4": "左サイド（P4）",
+      "A2": "右サイド（P2）",
+      "A": "後衛（P1）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond base + read",
-        "description": "With 4 players each defender is crucial. Our middle prepares to block solo. Mandatory read of the opposing set."
+        "title": "1. ダイヤモンドの基本＋読み",
+        "description": "4人ではディフェンダー1人ひとりが重要。ミドルが単独ブロックの準備をする。相手のトスを読むことが必須。"
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The attack arrives on our front-LEFT corner. The middle must slide to the left side."
+        "title": "2. 相手Z2への高いトス",
+        "description": "相手の右サイドへの配球。攻撃はこちらのフロント左コーナーに来る。ミドルは左へスライドしなければならない。"
       },
       "s3": {
-        "title": "3. Solo central block + line/cross signal",
-        "description": "The middle slides left and blocks alone. Mandatory signal (line or cross-court) to orient the 3 defenders. Without a signal, they don't know what to cover."
+        "title": "3. 中央単独ブロック＋ライン/クロスの合図",
+        "description": "ミドルが左へスライドして単独でブロック。3人のディフェンダーの向きを定めるため、合図（ラインかクロス）を必ず出す。合図がなければ、何を守ればよいかわからない。"
       },
       "s4": {
-        "title": "4. Long cross-court spike + block",
-        "description": "The hitter strikes long cross-court. The solo block closes the line, signal announced beforehand."
+        "title": "4. ロングクロス強打＋ブロック",
+        "description": "アタッカーがロングクロスを打つ。事前に合図した通り、単独ブロックがラインを締める。"
       },
       "s5": {
-        "title": "5. Recovery by the lone back",
-        "description": "The P1 back defends in his axis — his read must be perfect, no other back to compensate. High bump to the target."
+        "title": "5. 唯一の後衛による拾い",
+        "description": "P1の後衛が自分の軸でディフェンス — 補完してくれる他の後衛がいないため、読みは完璧でなければならない。ターゲットへ高いアンダーパスを送る。"
       },
       "s6": {
-        "title": "6. RESET — diamond formation",
-        "description": "Back to the diamond formation. Coverage will adapt to the next attack zone from the next read on."
+        "title": "6. リセット — ダイヤモンド配置",
+        "description": "ダイヤモンド配置に戻る。次の読みから攻撃ゾーンに応じてカバーを調整する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "System A (1 blocker + 3 defenders): the most common configuration in indoor 4v4.",
-        "Line/cross blocker signal mandatory — without it, the 3 defenders don't know what to cover.",
-        "Key distances: blocker 0.3 m from the net; deep defenders 7-7.5 m; tip/behind-block 3.5-4 m.",
-        "Each defender covers ~30-40 m² (vs 20 m² in 6v6) → anticipation = skill #1.",
-        "Double block (system B) reserved for big hitters: leaves only 2 deep defenders."
+        "システムA（ブロッカー1＋ディフェンダー3）: インドア4対4で最も一般的な構成。",
+        "ブロッカーのライン/クロス合図は必須 — 合図がなければ3人のディフェンダーは何を守るかわからない。",
+        "重要な距離: ブロッカーはネットから0.3 m、深部ディフェンダーは7-7.5 m、フェイント/ブロック後方は3.5-4 m。",
+        "各ディフェンダーが約30-40 m²を担当（6対6では20 m²）→ 予測能力が最重要スキル。",
+        "2枚ブロック（システムB）は大型アタッカー専用: 深部のディフェンダーが2人しか残らない。"
       ],
       "commonMistakes": [
-        "Isolated blocker with no tip coverage: the 3 defenders all go deep, leaving the 3-5 m zone empty.",
-        "2 defenders in a straight line: side by side at the same depth → the cut shot lands between them.",
-        "No signal between blocker and defenders (line vs cross-court).",
-        "Tip defender too far from the net: drops back with the others and can no longer cover short tips.",
-        "Setter running to his target before the ball is defended → defensive hole."
+        "孤立したブロッカーとフェイントカバーなし: 3人のディフェンダーが全員深く位置取り、3-5 mのゾーンが空く。",
+        "2人のディフェンダーが直線に並ぶ: 同じ深さで横並び → カットショットが間に落ちる。",
+        "ブロッカーとディフェンダー間の合図がない（ラインかクロスか）。",
+        "フェイントディフェンダーがネットから離れすぎる: 他と一緒に下がり、ショートフェイントをカバーできなくなる。",
+        "ボールがディフェンスされる前にセッターがターゲットへ走る → 守備に穴。"
       ]
     }
   },
   "4v4-defense-vs-z2": {
-    "title": "4v4 · Z2 defense",
-    "shortDescription": "Mirror of system A: 1 blocker + 3 defenders against opposing Z2 attack (their right → arrives on our left).",
-    "contextLabel": "4v4 · System A · 1 blocker + 3 defenders",
+    "title": "4v4 · Z2へのディフェンス",
+    "shortDescription": "システムAの鏡像: ブロッカー1＋ディフェンダー3で相手のZ2攻撃に対応（彼らの右 → こちらの左に到達）。",
+    "contextLabel": "4v4 · システムA · ブロッカー1＋ディフェンダー3",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "R4": "左サイド（P4）",
+      "A2": "右サイド（P2）",
+      "A": "後衛（P1）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z2 attack",
-        "description": "Opposing attack from their zone 2 (their right) → arrives on our front-LEFT corner. The middle will need to slide to the left side to block."
+        "title": "1. 相手Z2攻撃を読む",
+        "description": "相手のゾーン2（彼らの右）からの攻撃 → こちらのフロント左コーナーに到達する。ミドルは左側へスライドしてブロックする必要がある。"
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The defense triggers its mirror adjustment."
+        "title": "2. 相手Z2への高いトス",
+        "description": "彼らの右サイドへの配球。ディフェンスは鏡像の調整を始める。"
       },
       "s3": {
-        "title": "3. Solo central block on the left side",
-        "description": "The middle slides to the left side and blocks alone. Line/cross signal mandatory. R4 (left wing) stays off-blocker at 2.5 m, A2 (right wing) defends the long cross-court."
+        "title": "3. 左側で中央単独ブロック",
+        "description": "ミドルが左へスライドして単独でブロック。ライン/クロスの合図は必須。R4（左サイド）はネットから2.5 mのオフブロッカー、A2（右サイド）がロングクロスを守る。"
       },
       "s4": {
-        "title": "4. Diagonal spike + solo block",
-        "description": "The hitter strikes long cross-court. The solo block covers the signaled line."
+        "title": "4. クロス強打＋単独ブロック",
+        "description": "アタッカーがロングクロスを打つ。単独ブロックは合図通りのラインを塞ぐ。"
       },
       "s5": {
-        "title": "5. Recovery by the lone back",
-        "description": "The P1 back (slightly shifted to the ball side) defends with a bump. His read compensates for the absence of other backs."
+        "title": "5. 唯一の後衛による拾い",
+        "description": "P1の後衛（少しボール側にずれている）がアンダーパスでディフェンス。他の後衛がいないため、読みが補完となる。"
       },
       "s6": {
-        "title": "6. RESET — diamond formation",
-        "description": "Back to diamond formation. The middle returns to the center, ready to slide again if the opponent switches sides."
+        "title": "6. リセット — ダイヤモンド配置",
+        "description": "ダイヤモンド配置に戻る。相手がサイドを変えても再びスライドできるよう、ミドルが中央に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4 in 4v4: system A (1 blocker + 3 defenders).",
-        "P3 solo blocker on the left side, line/cross signal mandatory.",
-        "P4 (left wing) as off-blocker 3.5-4 m from the net — short coverage and tips.",
-        "P2 (right wing) defends the short cross-court (~7 m, straight line).",
-        "The lone P1 back defends the long cross-court."
+        "4対4のZ4の完全な鏡像: システムA（ブロッカー1＋ディフェンダー3）。",
+        "P3が左側で単独ブロック、ライン/クロスの合図は必須。",
+        "P4（左サイド）がネットから3.5-4 mのオフブロッカー — ショートカバーとフェイント担当。",
+        "P2（右サイド）がショートクロスを守る（約7 m、直線）。",
+        "唯一のP1の後衛がロングクロスを守る。"
       ],
       "commonMistakes": [
-        "Left wing P4 blocking with the middle → off-blocker missing on the left side.",
-        "Lone back too far forward → deep cross-court ball not covered.",
-        "Blocker with no signal → the 3 defenders don't know what to cover.",
-        "P2 too far from the net → does not cover the short cross-court."
+        "左サイドP4がミドルと一緒にブロック → 左側にオフブロッカーが不在。",
+        "唯一の後衛が前に出すぎる → 深いクロスのボールを拾えない。",
+        "合図のないブロッカー → 3人のディフェンダーは何を守るかわからない。",
+        "P2がネットから離れすぎる → ショートクロスを守れない。"
       ]
     }
   },
   "4v4-defense-vs-z3": {
-    "title": "4v4 · Z3 defense (central quick)",
-    "shortDescription": "Opposing fast central attack in 4v4: read block-of-1 + 3 defenders. The hardest configuration to defend.",
-    "contextLabel": "4v4 · Block-of-1 (read) · Structural weakness",
+    "title": "4v4 · Z3へのディフェンス（中央クイック）",
+    "shortDescription": "4対4での相手中央クイック: リード単独ブロック＋ディフェンダー3。守りにくい最難の構成。",
+    "contextLabel": "4v4 · 単独ブロック（リード）· 構造的弱点",
     "players": {
-      "C": "Middle (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "R4": "左サイド（P4）",
+      "A2": "右サイド（P2）",
+      "A": "後衛（P1）",
+      "OPP_A": "相手ミドル",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing quick",
-        "description": "In 4v4 the central quick (tempo 1) is the most dangerous attack since only 1 blocker is available. The lone back already scans the deep axis."
+        "title": "1. 相手クイックを読む",
+        "description": "4対4では中央クイック（テンポ1）が最も危険な攻撃 — ブロッカーが1人しか使えない。唯一の後衛はすでに深い軸を観察している。"
       },
       "s2": {
-        "title": "2. Fast central set",
-        "description": "The setter flat-sets to the middle who has already started his approach. Our wings drop to mid-court to cover the cross-courts."
+        "title": "2. 高速中央トス",
+        "description": "セッターはすでに助走を開始したミドルへフラットなトス。サイドは中央コートに下がり、両側のクロスをカバーする。"
       },
       "s3": {
-        "title": "3. Block-of-1 (read) + fast spike",
-        "description": "The middle alone jumps on a READ — no commitment possible with a defensive middle. The opposing middle hits straight down the axis."
+        "title": "3. 単独ブロック（リード）＋速い強打",
+        "description": "ミドルが単独でリードに合わせて飛ぶ — 守備型ミドルではコミットはできない。相手ミドルが軸線上にまっすぐ強打する。"
       },
       "s4": {
-        "title": "4. Defensive pivot: the lone back",
-        "description": "The P1 back defends the powerful ball straight on axis — he plays the role of Z6 of 6v6. His read must be PERFECT."
+        "title": "4. 守備の要: 唯一の後衛",
+        "description": "P1の後衛が軸線上の強烈なボールを守る — 6対6のZ6の役割を担う。読みは完璧でなければならない。"
       },
       "s5": {
-        "title": "5. RESET — diamond formation",
-        "description": "Back to 4v4 base. The middle drops back at the net, the back resumes his axial position."
+        "title": "5. リセット — ダイヤモンド配置",
+        "description": "4対4の基本に戻る。ミドルがネット際に戻り、後衛が軸線位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "The 4v4 doc confirms it: the central quick is A REAL WEAKNESS of 4v4 (only 1 blocker).",
-        "Block-of-1 on READ: no commitment possible with a defensive middle.",
-        "The 2 wings cover the 2 short cross-courts at mid-court (~3.5-4 m from the net).",
-        "The lone back is the defensive pivot — he plays the role of Z6 of 6v6 on the central axis.",
-        "Anticipation = skill #1: with ~40 m² to cover, a read error is unrecoverable."
+        "4対4のドキュメントが示す通り、中央クイックは4対4の<strong>真の弱点</strong>（ブロッカーが1人しかいない）。",
+        "リード単独ブロック: 守備型ミドルではコミットは不可。",
+        "2人のサイドがミッドコートで2つのショートクロスをカバー（ネットから3.5-4 m）。",
+        "唯一の後衛が守備の要 — 中央軸で6対6のZ6の役割を担う。",
+        "予測能力が最重要スキル: 約40 m²をカバーする以上、読みのミスは取り返せない。"
       ],
       "commonMistakes": [
-        "Double block on a quick → only 2 floor defenders, cross-courts wide open.",
-        "Back moving forward too early → deep ball lands behind him.",
-        "Wings staying at the net without blocking → holes on the 3 m line behind the block.",
-        "Read of the opposing middle too late → we absorb the attack without moving."
+        "クイックに対して2枚ブロック → 床ディフェンダーが2人だけで、クロスが大きく空く。",
+        "後衛が早く前進しすぎる → 深いボールが後ろに落ちる。",
+        "サイドがブロックせずにネットに残る → ブロック後方の3 mライン上に穴ができる。",
+        "相手ミドルの読みが遅い → 動けずに攻撃を受ける。"
       ]
     }
   },
   "5v5-defense-vs-z2": {
-    "title": "5v5 · Z2 defense",
-    "shortDescription": "Perfect mirror of Z4. 2-1-2 system against opposing Z2 attack (their right → arrives on our left).",
-    "contextLabel": "5v5 · 2-1-2 · Double block + off-blocker",
+    "title": "5v5 · Z2へのディフェンス",
+    "shortDescription": "Z4の完全な鏡像。相手Z2攻撃（彼らの右 → こちらの左に到達）に対する2-1-2システム。",
+    "contextLabel": "5v5 · 2-1-2 · 2枚ブロック＋オフブロッカー",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "Op": "オポジット（P2）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "P": "セッター（P1）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z2 attack",
-        "description": "Opposing attack from their zone 2 (their right) → arrives on our front-LEFT corner. Perfect mirror of Z4."
+        "title": "1. 相手Z2攻撃を読む",
+        "description": "相手のゾーン2（彼らの右）からの攻撃 → こちらのフロント左コーナーに到達する。Z4の完全な鏡像。"
       },
       "s2": {
-        "title": "2. High set to opposing Z2",
-        "description": "Distribution to their right wing. The attack arrives on our front-LEFT corner."
+        "title": "2. 相手Z2への高いトス",
+        "description": "彼らの右サイドへの配球。攻撃はこちらのフロント左コーナーに到達する。"
       },
       "s3": {
-        "title": "3. Mirror double block (OH + middle)",
-        "description": "OH blocker line + middle cross-court on the left side. Opposite (P2) drops off as off-blocker on the right. Libero defends the line in the block shadow, setter defends the long cross-court."
+        "title": "3. 鏡像の2枚ブロック（OH＋ミドル）",
+        "description": "OHがラインブロッカー＋ミドルが左側でクロスを締める。オポジット（P2）が右にオフブロッカーとして下がる。リベロがブロックの影でラインを守り、セッターがロングクロスを守る。"
       },
       "s4": {
-        "title": "4. Spike + double block",
-        "description": "The opposing right wing hits long cross-court. OH + middle jump."
+        "title": "4. スパイク＋2枚ブロック",
+        "description": "相手の右サイドがロングクロスを打つ。OH＋ミドルが飛ぶ。"
       },
       "s5": {
-        "title": "5. Setter defense — complex transition",
-        "description": "The setter is on the long cross-court trajectory. Defensive bump — since he's the primary defender, the opposite must take the 2nd touch."
+        "title": "5. セッターのディフェンス — 複雑なトランジション",
+        "description": "セッターがロングクロスの軌道上にいる。彼が拾うため、オポジットが2本目を取る必要がある。"
       },
       "s6": {
-        "title": "6. RESET",
-        "description": "Back to 5v5 base. Mandatory communication between setter and opposite for the next sequence."
+        "title": "6. リセット",
+        "description": "5対5の基本に戻る。次のラリーに向けてセッターとオポジット間のコミュニケーションが必須。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4 in 5v5: 2-1-2 system (double block + off-blocker + 2 defenders).",
-        "Double block: OH (P4) blocker line + middle (P3) closes the cross-court.",
-        "The opposite (P2) becomes off-blocker on the right side, drops off on the 3 m line.",
-        "The back-row setter (P1) defends the long cross-court.",
-        "If the setter defends → 2nd touch by the opposite (back-up setter) is mandatory."
+        "5対5におけるZ4の完全な鏡像: 2-1-2システム（2枚ブロック＋オフブロッカー＋ディフェンダー2）。",
+        "2枚ブロック: OH（P4）がラインブロッカー＋ミドル（P3）がクロスを締める。",
+        "オポジット（P2）が右側でオフブロッカーになり、3 mラインまで下がる。",
+        "後衛セッター（P1）がロングクロスを守る。",
+        "セッターが拾った場合は、オポジット（バックアップセッター）が2本目を取らなければならない。"
       ],
       "commonMistakes": [
-        "Opposite blocking from Z2 → off-blocker missing on the right side.",
-        "Setter who defends AND wants to relay → confusion on the 2nd touch.",
-        "Libero misplaced on Z2 (defends the LINE here, not the long cross-court).",
-        "No communication between setter and opposite."
+        "オポジットがZ2でブロック → 右側にオフブロッカーが不在。",
+        "セッターがディフェンスしながらトスに上がろうとする → 2本目が混乱する。",
+        "リベロのZ2での位置が誤り（ここではラインを守るのであって、ロングクロスではない）。",
+        "セッターとオポジット間のコミュニケーション不足。"
       ]
     }
   },
   "5v5-defense-vs-z3": {
-    "title": "5v5 · Z3 defense (quick / tempo 1)",
-    "shortDescription": "Block-of-1 (middle) on opposing central quick attack in 5v5 — partial axial coverage.",
-    "contextLabel": "5v5 · Block-of-1 (read) · Quick read",
+    "title": "5v5 · Z3へのディフェンス（クイック / テンポ1）",
+    "shortDescription": "5対5での相手中央クイックに対する単独ブロック（ミドル）— 部分的な軸線カバー。",
+    "contextLabel": "5v5 · 単独ブロック（リード）· クイックの読み",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "Op": "オポジット（P2）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "P": "セッター（P1）",
+      "OPP_A": "相手ミドル",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing quick",
-        "description": "Flat distribution imminent toward the middle. 0.3-0.5 s between set and hit — our middle scans his counterpart, already on the move."
+        "title": "1. 相手クイックを読む",
+        "description": "ミドルへのフラットな配球が迫る。トスからヒットまで0.3-0.5秒 — こちらのミドルは既に動いている相手ミドルを観察する。"
       },
       "s2": {
-        "title": "2. Flat set + wings as off-blockers",
-        "description": "The opposing setter flat-sets the middle. Our wings drop to 1.5 m from the net on the attack line to cover lateral deflections."
+        "title": "2. フラットなトス＋サイドのオフブロッカー",
+        "description": "相手セッターがミドルへフラットなトス。こちらのサイドはネットから1.5 m、アタックラインに下がって横方向の弾を覆う。"
       },
       "s3": {
-        "title": "3. Block-of-1 (read) + fast spike",
-        "description": "Our middle alone jumps on a read. The opposing middle hits short cross-court — angles are short compared to a high set."
+        "title": "3. 単独ブロック（リード）＋速い強打",
+        "description": "こちらのミドルが単独でリードして飛ぶ。相手ミドルがショートクロスを打つ — 高いトスに比べ角度は短い。"
       },
       "s4": {
-        "title": "4. Libero defense",
-        "description": "The libero (pulled up to 5 m since angles are short) defends with a bump in his left channel. High trajectory to the target — the setter will return to the net."
+        "title": "4. リベロのディフェンス",
+        "description": "リベロ（角度が短いため5 mまで前進）が自分の左チャンネルでアンダーパス。ターゲットへ高い軌道 — セッターがネットへ戻る。"
       },
       "s5": {
-        "title": "5. RESET",
-        "description": "Back to 5v5 base after the sequence. The middle and wings realign."
+        "title": "5. リセット",
+        "description": "プレー後、5対5の基本に戻る。ミドルとサイドが再配置する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Block-of-1 (P3 middle) on read — no commit possible on a quick.",
-        "Wings (P4 + P2) 2 m from the net on the attack line: cover block deflections.",
-        "With only 2 deep defenders (P5 + P1), AXIAL deep coverage is partial.",
-        "Z1 and Z5 ADVANCE 1 m (~7 m from the net) because angles are shorter on a quick.",
-        "\"Stopped on contact\": everyone stopped at the exact moment of the hit."
+        "リードによる単独ブロック（P3ミドル）— クイックではコミット不可。",
+        "サイド（P4＋P2）はネットから2 m、アタックライン上: ブロックの弾きをカバーする。",
+        "深部ディフェンダーが2人（P5＋P1）のみで、軸線方向の深いカバーは部分的。",
+        "Z1とZ5はクイックでは角度が短いため1 m前進（ネットから約7 m）。",
+        "「ストップド・オン・コンタクト」: ヒットの瞬間に全員が停止する。"
       ],
       "commonMistakes": [
-        "Double block on a quick → too late, and leaves only 1 floor defender.",
-        "Defenders frozen at the back (8 m+) → fast ball lands before they move.",
-        "\"False stepping\" (first step backwards) → time lost on tempo 1.",
-        "Off-blockers staying at the net → don't cover deflections."
+        "クイックに2枚ブロック → 遅れる上に床ディフェンダーが1人だけになる。",
+        "ディフェンダーが奥（8 m以上）で固まる → 動く前に速い球が落ちる。",
+        "「フォルスステップ」（最初の一歩を後ろに）→ テンポ1で時間を失う。",
+        "オフブロッカーがネットに残る → 弾きをカバーできない。"
       ]
     }
   },
   "5v5-defense-vs-z4": {
-    "title": "5v5 · Z4 defense",
-    "shortDescription": "2-1-2 system against opposing Z4 attack (their left → arrives on our right): double block + off-blocker + 2 defenders.",
-    "contextLabel": "5v5 · 2-1-2 · Double block + off-blocker",
+    "title": "5v5 · Z4へのディフェンス",
+    "shortDescription": "相手Z4攻撃（彼らの左 → こちらの右に到達）に対する2-1-2システム: 2枚ブロック＋オフブロッカー＋ディフェンダー2。",
+    "contextLabel": "5v5 · 2-1-2 · 2枚ブロック＋オフブロッカー",
     "players": {
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "P": "Setter (P1)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "C": "ミドル（P3）",
+      "Op": "オポジット（P2）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "P": "セッター（P1）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Read opposing Z4 attack",
-        "description": "Opposing attack from their zone 4 (their left) → arrives on our front-RIGHT corner. Sequential read \"ball → setter → ball → hitter\"."
+        "title": "1. 相手Z4攻撃を読む",
+        "description": "相手のゾーン4（彼らの左）からの攻撃 → こちらのフロント右コーナーに到達する。順次の読み「ボール → セッター → ボール → アタッカー」。"
       },
       "s2": {
-        "title": "2. High set to opposing Z4",
-        "description": "Standard distribution from their setter to the left wing. Our front line identifies the attack zone."
+        "title": "2. 相手Z4への高いトス",
+        "description": "相手セッターから左サイドへの標準的な配球。こちらの前衛が攻撃ゾーンを認識する。"
       },
       "s3": {
-        "title": "3. Double block + OH off-blocker",
-        "description": "Opposite (P2) + middle (P3) go up to block on the right side. OH drops off at 1.5 m from the net as off-blocker. Libero in the long cross-court, setter on the straight line — each covers ~30 m²."
+        "title": "3. 2枚ブロック＋OHオフブロッカー",
+        "description": "オポジット（P2）＋ミドル（P3）が右側でブロックに上がる。OHはネットから1.5 mのオフブロッカーとして下がる。リベロはロングクロス、セッターは直線で、それぞれ約30 m²をカバーする。"
       },
       "s4": {
-        "title": "4. Long cross-court spike + block",
-        "description": "The hitter strikes long cross-court (statistically the most frequent trajectory). Opposite + middle jump."
+        "title": "4. ロングクロス強打＋ブロック",
+        "description": "アタッカーがロングクロスを打つ（統計的に最も多い軌道）。オポジット＋ミドルが飛ぶ。"
       },
       "s5": {
-        "title": "5. Libero defense",
-        "description": "The libero is on the main trajectory. High bump to the target — transition to counter-attack."
+        "title": "5. リベロのディフェンス",
+        "description": "リベロは主要な軌道上にいる。ターゲットへ高いアンダーパスを送り、カウンター攻撃に移る。"
       },
       "s6": {
-        "title": "6. RESET — back to 2-1-2 base",
-        "description": "Switch to base formation. The setter returns to his zone 1, defense reorganizes for the next sequence."
+        "title": "6. リセット — 2-1-2の基本に戻る",
+        "description": "基本フォーメーションへ移行。セッターは自分のゾーン1に戻り、ディフェンスは次のラリーに向けて再編成する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "2-1-2 system: 2 blockers + 1 off-blocker (tip coverer) + 2 deep defenders.",
-        "Recommendation: keep the 6v6 5-1 by removing one non-setter back (3F-2B configuration).",
-        "Off-blocker 2-2.5 m from the net, 1 m from the line — covers the 3 m zone behind the block.",
-        "Critical read: ~30 m² per defender (vs 20 m² in 6v6), reduced initial positional safety.",
-        "\"Stopped on contact\": stopped and balanced at the exact moment of the hit."
+        "2-1-2システム: ブロッカー2＋オフブロッカー1（フェイントカバー）＋深部ディフェンダー2。",
+        "推奨: 6対6の5-1を維持し、セッター以外の後衛を1人減らす（3F-2B構成）。",
+        "オフブロッカーはネットから2-2.5 m、ラインから1 m — ブロック後方の3 mゾーンをカバー。",
+        "重要な読み: ディフェンダー1人あたり約30 m²（6対6では20 m²）、初期の位置取り余裕が少ない。",
+        "「ストップド・オン・コンタクト」: ヒットの瞬間に停止しバランスを取る。"
       ],
       "commonMistakes": [
-        "Triple block → only 1 floor defender = guaranteed point.",
-        "Off-blocker staying at the net → 3 m zone behind the block uncovered.",
-        "No priority hierarchy between the 2 deep defenders → 2 players on the same ball.",
-        "Mechanically reproducing 6v6 without adapting zones (the libero must cover wider here)."
+        "3枚ブロック → 床ディフェンダーが1人だけで失点確定。",
+        "オフブロッカーがネットに残る → ブロック後方の3 mゾーンが空く。",
+        "深部の2人のディフェンダー間で優先順位がない → 2人が同じボールに行く。",
+        "6対6を機械的に再現してゾーンを調整しない（リベロはここで広く守らなければならない）。"
       ]
     }
   },
   "6v6-attack-coverage": {
-    "title": "Coverage · 5-1 attack",
-    "shortDescription": "5-player coverage on a zone-4 attack: 2 arcs (3 close + 2 far) to dig a potential block-out.",
-    "contextLabel": "5-1 · 5-player coverage · 3-2 layout",
+    "title": "カバー · 5-1の攻撃",
+    "shortDescription": "ゾーン4攻撃時の5人カバー: 2つの円弧（近接3＋遠距離2）でブロックアウトを拾う。",
+    "contextLabel": "5-1 · 5人カバー · 3-2配置",
     "players": {
-      "R4a": "OH hitter (P4)",
-      "C": "Middle (P3)",
-      "P": "Setter (penetrated)",
-      "Op": "Opposite (P2)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_BL": "Opposing left blocker",
-      "OPP_BR": "Opposing right blocker"
+      "R4a": "OHアタッカー（P4）",
+      "C": "ミドル（P3）",
+      "P": "セッター（潜り込み済み）",
+      "Op": "オポジット（P2）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_BL": "相手左ブロッカー",
+      "OPP_BR": "相手右ブロッカー"
     },
     "steps": {
       "s1": {
-        "title": "1. Preparing the Z4 attack",
-        "description": "Our OH is in his approach, about to take off. Even before the hit, coverage organizes: it's anticipation that saves a block-out, not reaction."
+        "title": "1. Z4攻撃の準備",
+        "description": "OHが助走中で、いま飛び上がろうとしている。ヒットの前から、カバーは整い始める: 反応ではなく予測がブロックアウトを救う。"
       },
       "s2": {
-        "title": "2. First arc (3 close players)",
-        "description": "Setter + middle + libero form a half-circle 1-1.5 m from the hitter, VERY low position, arms extended forward, ready to short-bump."
+        "title": "2. 第1円弧（近接3人）",
+        "description": "セッター＋ミドル＋リベロがアタッカーから1-1.5 mの半円を形成、非常に低い姿勢で腕を前に伸ばし、ショートアンダーパスの準備をする。"
       },
       "s3": {
-        "title": "3. Spike + opposing double block",
-        "description": "Our OH lifts off and hits cross-court. The two opposing blockers jump in parallel to close the trajectory — coverage is already frozen, waiting."
+        "title": "3. スパイク＋相手の2枚ブロック",
+        "description": "OHが飛び上がりクロスへ打つ。相手の2人のブロッカーが平行に飛んで軌道を塞ぐ — カバーは既に止まって待機している。"
       },
       "s4": {
-        "title": "4. Block-out: the ball comes back",
-        "description": "The opposing block touches the ball which ricochets into our court 1.5 m from the hitter. Without coverage, that's a lost point — here, the setter is exactly at the landing spot."
+        "title": "4. ブロックアウト: ボールが戻る",
+        "description": "相手ブロックがボールに触れ、こちらのコートのアタッカーから1.5 mの位置に跳ね返る。カバーがなければ失点だが、セッターがちょうど落下地点にいる。"
       },
       "s5": {
-        "title": "5. Recovery by the setter (1st support)",
-        "description": "The setter (1st close support) digs the ball with a bump 1 m from the hitter. It's HIS responsibility after a set to zone 4 — non-negotiable rule."
+        "title": "5. セッターによる拾い（第1サポート）",
+        "description": "セッター（第1近接サポート）がアタッカーから1 mでアンダーパス。ゾーン4へのトス後は彼の責任 — 譲れないルール。"
       },
       "s6": {
-        "title": "6. New attack possible",
-        "description": "The save allows a new ball back at the net. Without 5-player coverage = point lost directly on the block-out."
+        "title": "6. 新たな攻撃が可能",
+        "description": "セーブによって新しいボールがネット際に戻る。5人カバーがなければ = ブロックアウトで直接失点。"
       }
     },
     "summary": {
       "keyPoints": [
-        "5-player coverage = elite-level standard. 3-2 layout (3 close + 2 far).",
-        "The setter is ALWAYS the 1st close support, 1-1.5 m from the hitter.",
-        "VERY low position for the 3 close players, arms extended forward.",
-        "Without coverage, a successful opposing block = point lost directly.",
-        "Anticipation outweighs reaction: coverage organizes BEFORE the hit."
+        "5人カバー = トップレベルの標準。3-2配置（近接3＋遠距離2）。",
+        "セッターは<strong>常に</strong>第1近接サポートで、アタッカーから1-1.5 mにいる。",
+        "近接3人は非常に低い姿勢、腕を前に伸ばす。",
+        "カバーなしでは、相手のブロック成功 = 直接失点。",
+        "予測が反応に勝る: カバーはヒット<strong>前</strong>に整える。"
       ],
       "commonMistakes": [
-        "No coverage → opposing block = point.",
-        "Setter staying at the net after his set → 1st support missing.",
-        "Coverers standing or too far → short balls not recovered.",
-        "Only 2 or 3 coverers instead of 5 → long block-outs lost."
+        "カバーなし → 相手のブロック = 失点。",
+        "トス後にセッターがネットに残る → 第1サポートが不在。",
+        "カバーする者が立っていたり遠すぎたりする → ショートボールを拾えない。",
+        "5人ではなく2人か3人でカバー → ロングブロックアウトを失う。"
       ]
     }
   },
   "6v6-defense-6-front": {
-    "title": "Defense · man-up (2-1-3)",
-    "shortDescription": "Man-up system (2-1-3, formerly \"W defense\"): a defender pulled up behind the block for short tips.",
-    "contextLabel": "5-1 · Man-up 2-1-3 · Anti-tip",
+    "title": "守備 · マンナップ（2-1-3）",
+    "shortDescription": "マンナップシステム（2-1-3、旧「Wディフェンス」）: ブロックの後方にディフェンダーを上げてショートフェイントに対応。",
+    "contextLabel": "5-1 · マンナップ2-1-3 · 対フェイント",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6 pulled up)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6から前進）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Man-up base",
-        "description": "The opponent is known for tipping — tactical choice of the man-up. The OH (in P6) is already pulled up to 2.5 m, ready to move up behind the block."
+        "title": "1. マンナップの基本",
+        "description": "相手がフェイントを多用する — マンナップの戦術的選択。OH（P6）はすでに2.5 mに前進し、ブロック後方へ移動する準備をしている。"
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "Standard distribution to opposing Z4. The defense recognizes the configuration and sets up."
+        "title": "2. 相手のZ4への高いトス",
+        "description": "相手Z4への標準的な配球。ディフェンスが構成を認識して配置する。"
       },
       "s3": {
-        "title": "3. Player up behind the block",
-        "description": "Key difference of the man-up: R4b moves up to 2.5 m from the net, in the block shadow. Libero and setter drop back to 6 m to compensate. Standard double block (opposite + middle)."
+        "title": "3. ブロック後方の前進ディフェンダー",
+        "description": "マンナップの肝: R4bがネットから2.5 m、ブロックの影に前進する。リベロとセッターは6 mに下がって補う。標準的な2枚ブロック（オポジット＋ミドル）。"
       },
       "s4": {
-        "title": "4. Opposing jump tip",
-        "description": "The hitter chooses to tip rather than spike. The ball lands just behind the block — exactly where the up-player is."
+        "title": "4. 相手のジャンプフェイント",
+        "description": "アタッカーが強打ではなくフェイントを選ぶ。ボールがちょうどブロックの後ろに落ちる — 前進ディフェンダーがいる場所だ。"
       },
       "s5": {
-        "title": "5. Short recovery by the up-player",
-        "description": "The up-player is exactly where the ball falls. Precise bump to the opposite to relay a jump 2nd touch."
+        "title": "5. 前進ディフェンダーによるショート拾い",
+        "description": "前進ディフェンダーはちょうどボールの落下地点にいる。オポジットへ正確なアンダーパスを送り、ジャンプして2本目を中継する。"
       },
       "s6": {
-        "title": "6. RESET — man-up base",
-        "description": "Back to 2-1-3 base position. R4b repositioned at 2.5 m, libero and setter deep."
+        "title": "6. リセット — マンナップの基本",
+        "description": "2-1-3の基本配置に戻る。R4bが2.5 mに再配置、リベロとセッターは深く位置取る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Man-up = 2-1-3 (Keller / USAV) — formerly \"red defense\".",
-        "⚠ DO NOT confuse with \"W-formation\" which is a RECEPTION formation, not a defensive system.",
-        "Exceptional coverage of tips, roll shots and \"junk\" balls behind the block.",
-        "But: only 3 deep defenders → vulnerable to powerful spikes in tight cross-courts.",
-        "Indication: youth teams, school, tactical opponents who play many tips or off-speed shots."
+        "マンナップ = 2-1-3（Keller / USAV）— 旧称「レッドディフェンス」。",
+        "⚠ <strong>レセプション</strong>フォーメーションである「Wフォーメーション」と混同しないこと。これは守備システムではない。",
+        "フェイント、ロールショット、ブロック後方の「ジャンク」ボールへの優れたカバー。",
+        "ただし: 深部ディフェンダーが3人だけ → 厳しいクロスへの強打に脆い。",
+        "適用: ジュニア、学校、フェイントやオフスピードショットを多用する戦術的相手。"
       ],
       "commonMistakes": [
-        "Keeping the perimeter system against a team that tips → short balls lost.",
-        "Up-player too far forward (at the net) → blocked in his blocking momentum.",
-        "Libero who does not drop back → hole at the back on a powerful spike.",
-        "Confusing \"W defense\" and \"man-up\" in team vocabulary — source of misunderstandings."
+        "フェイントを多用するチームに対して周辺システムを維持する → ショートボールを失う。",
+        "前進ディフェンダーが前に行きすぎる（ネット際）→ ブロックの勢いに巻き込まれる。",
+        "リベロが下がらない → 強打で奥に穴ができる。",
+        "「Wディフェンス」と「マンナップ」をチーム内の語彙で混同 — 誤解の元。"
       ]
     }
   },
   "6v6-defense-perimeter": {
-    "title": "Defense · perimeter (2-0-4)",
-    "shortDescription": "White defense: 4 defenders on the lines, U open toward the net. Dominant in elite men's volleyball.",
-    "contextLabel": "5-1 · Perimeter 2-0-4 (white defense)",
+    "title": "守備 · 周辺型（2-0-4）",
+    "shortDescription": "ホワイトディフェンス: 4人のディフェンダーがラインに沿い、ネット側に開いたU字を作る。男子トップレベルで主流。",
+    "contextLabel": "5-1 · 周辺型2-0-4（ホワイトディフェンス）",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Perimeter configuration (2-0-4)",
-        "description": "The 4 defenders form a U open toward the net, almost on the lines — \"one foot on the line\" (Liskevych). The middle of the court is deliberately abandoned."
+        "title": "1. 周辺型構成（2-0-4）",
+        "description": "4人のディフェンダーがネット側に開いたU字を形成、ほぼライン上に位置取る — 「ラインに片足」（Liskevych）。コートの中央は意図的に放棄する。"
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "Set to their left wing. Our front line identifies the zone, the perimeter players stay strictly on the lines."
+        "title": "2. 相手のZ4への高いトス",
+        "description": "相手の左サイドへのトス。前衛がゾーンを特定し、周辺のディフェンダーは厳密にライン上に留まる。"
       },
       "s3": {
-        "title": "3. Double block + 4 defenders on the perimeter",
-        "description": "Standard double block (opposite line + middle cross-court). No defender pulled up behind the block (hence the 0 in the middle). Libero on the left line, P6 on the baseline, P1 on the right line."
+        "title": "3. 2枚ブロック＋4人の周辺ディフェンダー",
+        "description": "標準的な2枚ブロック（オポジットがライン、ミドルがクロス）。ブロックの後ろに前進ディフェンダーなし（だから中央が0）。リベロは左ライン、P6はベースライン、P1は右ライン。"
       },
       "s4": {
-        "title": "4. Powerful line spike + block",
-        "description": "The hitter strikes the line on our back-left corner. The trajectory passes close to the block — a long block-out is likely."
+        "title": "4. 強烈なラインスパイク＋ブロック",
+        "description": "アタッカーがこちらのバック左コーナーにラインを打つ。軌道はブロックの近くを通過し、ロングなブロックアウトの可能性が高い。"
       },
       "s5": {
-        "title": "5. Recovery on the line",
-        "description": "The libero recovers on the line — perfect perimeter coverage. Easily identifies \"out\" balls. High bump to zone 2-3."
+        "title": "5. ラインでの拾い",
+        "description": "リベロがライン上で拾う — 周辺カバーの真骨頂。「アウト」のボールを簡単に判別できる。ゾーン2-3へ高いアンダーパス。"
       },
       "s6": {
-        "title": "6. RESET — perimeter",
-        "description": "Back to the pure perimeter formation: all backs on the lines, central middle abandoned by tactical convention."
+        "title": "6. リセット — 周辺型",
+        "description": "純粋な周辺フォーメーションに戻る: すべての後衛がライン上、中央は戦術的に放棄。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Perimeter = 2-0-4 (\"white defense\"): 4 defenders on the perimeter, none pulled up.",
-        "System dominant in modern and international men's volleyball where power dominates.",
-        "Logic: statistically populate the zones where powerful spikes land (lines and deep corners).",
-        "Excellent identification of \"out\" balls and defense of block-outs.",
-        "⚠ The middle of the court (central zone between 3 and 5 m) is deliberately left open."
+        "周辺型 = 2-0-4（「ホワイトディフェンス」）: 周辺に4人のディフェンダー、前進ディフェンダーなし。",
+        "パワーが支配する現代男子・国際バレーで主流のシステム。",
+        "論理: 強打が落ちるゾーン（ラインと深いコーナー）を統計的に埋める。",
+        "「アウト」ボールの判別とブロックアウトのディフェンスに優れる。",
+        "⚠ コートの中央（3〜5 mの中央ゾーン）は意図的に空ける。"
       ],
       "commonMistakes": [
-        "Defenders collapsing toward the center → lose the system's logic and no longer cover the lines.",
-        "System chosen against a team that tips → center of the court uncovered, tips lost.",
-        "Inexperienced libero → misread of \"out\" balls on the sides.",
-        "Lack of athleticism to dive forward on tips → weakness exploited."
+        "ディフェンダーが中央に寄ってしまう → システムの論理を失い、ラインをカバーできなくなる。",
+        "フェイントを多用するチームに対してこのシステムを選ぶ → 中央が空きフェイントを失う。",
+        "未熟なリベロ → サイドの「アウト」ボールを判別できない。",
+        "フェイントへ前に飛び込む運動能力が不足 → 弱点を突かれる。"
       ]
     }
   },
   "6v6-defense-read": {
-    "title": "Defense · read",
-    "shortDescription": "Elite reactive defense: adaptive positions based on set, approach and opposing armed-arm cues.",
-    "contextLabel": "5-1 · Read defense · International",
+    "title": "守備 · リード",
+    "shortDescription": "トップレベルの反応的ディフェンス: トス、助走、相手の打つ腕の合図に応じて位置を適応させる。",
+    "contextLabel": "5-1 · リードディフェンス · 国際レベル",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Neutral base position",
-        "description": "All defenders in read position, knees flexed, feet parallel. Mandatory visual sequence: \"ball → setter → ball → hitter\"."
+        "title": "1. ニュートラルの基本位置",
+        "description": "全ディフェンダーがリード位置、膝を曲げ、足は平行。視線の順序は必須: 「ボール → セッター → ボール → アタッカー」。"
       },
       "s2": {
-        "title": "2. Read the set (toward opposing Z2)",
-        "description": "As soon as the ball leaves the opposing setter's hands → adjust toward the attack zone. Here opposing Z2 (their right = our left)."
+        "title": "2. トスを読む（相手のZ2へ）",
+        "description": "相手セッターの手からボールが離れた瞬間 → 攻撃ゾーンへ向けて調整。ここでは相手Z2（彼らの右＝こちらの左）。"
       },
       "s3": {
-        "title": "3. Read the hitter + adjustment",
-        "description": "Read in parallel the approach, the armed-arm orientation and shoulders. Everyone repositions based on the cues: high shoulder = spike, rotation = probable direction."
+        "title": "3. アタッカーを読む＋調整",
+        "description": "助走、打つ腕の向き、肩を同時に読む。合図に応じて全員が再配置: 肩が高い＝強打、回転＝可能性のある方向。"
       },
       "s4": {
-        "title": "4. Read spike + double block",
-        "description": "The hitter opens long cross-court. Defense is already in place thanks to visual cues. OH + middle block. \"Stopped on contact\" mandatory."
+        "title": "4. 強打を読む＋2枚ブロック",
+        "description": "アタッカーがロングクロスを開く。視覚的合図のおかげでディフェンスはすでに配置済み。OH＋ミドルがブロック。「ストップド・オン・コンタクト」が必須。"
       },
       "s5": {
-        "title": "5. Read recovery by the libero",
-        "description": "Perfect anticipation: the libero is already in the long cross-court, exactly on the trajectory. High bump to the target."
+        "title": "5. リベロによる読みの拾い",
+        "description": "完璧な予測: リベロはすでにロングクロスの軌道上、ちょうど軌跡に乗っている。ターゲットへ高いアンダーパス。"
       },
       "s6": {
-        "title": "6. RESET — neutral base",
-        "description": "Back to neutral position, ready to read the next phase. The read restarts at every opposing touch."
+        "title": "6. リセット — ニュートラル基本",
+        "description": "ニュートラル位置に戻り、次の局面を読む準備をする。相手の接触ごとに読みは再開される。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Read defense = no fixed positioning, everything is adaptive. Modern defense is defined less by formation than by reading.",
-        "Visual sequence \"ball → setter → ball → hitter\" (Hebert, Liskevych, FIVB Top Volley).",
-        "Phases: neutral base → read set → read hitter → adjustment → \"stopped on contact\" → pursuit.",
-        "Preferred system at the international elite level (FIVB seniors).",
-        "Most effective against versatile hitters."
+        "リードディフェンス = 固定の配置はなく、すべてが適応的。現代のディフェンスは形ではなく読みで定義される。",
+        "視線の順序「ボール → セッター → ボール → アタッカー」（Hebert、Liskevych、FIVB Top Volley）。",
+        "段階: ニュートラル → トスを読む → アタッカーを読む → 調整 → 「ストップド・オン・コンタクト」 → 追撃。",
+        "国際トップレベル（FIVBシニア）で好まれるシステム。",
+        "万能型のアタッカーに対して最も有効。"
       ],
       "commonMistakes": [
-        "Moving BEFORE the set → bad read, player on the wrong foot.",
-        "Incomplete read: only reading the set, not the armed arm.",
-        "Still moving at the moment of the hitter's contact (not \"stopped on contact\") → reactivity cut in half.",
-        "Lack of coordination → 2 defenders on the same ball, hole elsewhere."
+        "トス前に動く → 読みが悪く、逆足になる。",
+        "不完全な読み: トスだけ読み、打つ腕を読まない。",
+        "アタッカーのヒット瞬間にまだ動いている（「ストップド・オン・コンタクト」できていない）→ 反応性が半減。",
+        "連携不足 → 2人のディフェンダーが同じボールに、他のところに穴。"
       ]
     }
   },
   "6v6-defense-rotation": {
-    "title": "Defense · rotation (3-2-1)",
-    "shortDescription": "Rotation / slide defense: backs slide toward the attack side, the opposite back moves up behind the block.",
-    "contextLabel": "5-1 · Rotation 3-2-1 · Slide defense",
+    "title": "守備 · ローテーション（3-2-1）",
+    "shortDescription": "ローテーション / スライドディフェンス: 後衛が攻撃側へスライドし、反対側の後衛がブロック後方へ上がる。",
+    "contextLabel": "5-1 · ローテーション3-2-1 · スライドディフェンス",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing hitter",
-      "OPP_S": "Opposing setter"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手アタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Base + read of the Z4 set",
-        "description": "Base configuration before rotating. The opposing setter penetrates and prepares a set to their left wing."
+        "title": "1. 基本＋Z4トスの読み",
+        "description": "ローテーション前の基本構成。相手セッターが潜り込み、左サイドへのトスを準備する。"
       },
       "s2": {
-        "title": "2. High set to opposing Z4",
-        "description": "Standard distribution. Our team triggers the rotation: P1 will move up behind the block, P6 will slide toward the right line, libero keeps the cross-court."
+        "title": "2. 相手のZ4への高いトス",
+        "description": "標準的な配球。チームはローテーションを始動: P1がブロック後方へ上がり、P6が右ラインへスライド、リベロがクロスを保つ。"
       },
       "s3": {
-        "title": "3. 3-2-1 rotation engaged",
-        "description": "The setter (P1) MOVES UP to 3 m behind the block to cover the tip. P6 slides toward the right line at 8 m. Libero stays in the long cross-court. R4 classic off-blocker on the left."
+        "title": "3. 3-2-1ローテーション開始",
+        "description": "セッター（P1）がブロック後方の3 mに<strong>前進</strong>してフェイントをカバー。P6が右ラインの8 mへスライド。リベロはロングクロスに残る。R4は左で標準のオフブロッカー。"
       },
       "s4": {
-        "title": "4. Cross-court spike + block",
-        "description": "The hitter strikes long cross-court. Double block (opposite + middle) — the main trajectory is covered by the libero."
+        "title": "4. クロス強打＋ブロック",
+        "description": "アタッカーがロングクロスを打つ。2枚ブロック（オポジット＋ミドル）— 主要な軌道はリベロがカバーする。"
       },
       "s5": {
-        "title": "5. Libero defense on the cross-court",
-        "description": "The libero is exactly at the landing spot of the primary hit. High bump to zone 2-3 — smooth transition to counter-attack."
+        "title": "5. リベロのクロスでのディフェンス",
+        "description": "リベロは主要なヒットの落下地点にちょうどいる。ゾーン2-3へ高いアンダーパス — スムーズにカウンター攻撃へ移行。"
       },
       "s6": {
-        "title": "6. RESET — base before next rotation",
-        "description": "Back to base. The rotation was effective: the short tip would have been picked up by the up-setter, the long cross-court by the libero."
+        "title": "6. リセット — 次のローテ前の基本",
+        "description": "基本に戻る。ローテーションは効果的だった: ショートフェイントは前進セッター、ロングクロスはリベロが拾う。"
       }
     },
     "summary": {
       "keyPoints": [
-        "3-2-1 rotation (slide defense): 3 back defenders slide toward the attack side.",
-        "The opposite back (often the setter if in P1) MOVES UP behind the block to cover the tip.",
-        "Back middle slides toward the line on the attacked side (~8.5 m, 1-1.5 m from the line).",
-        "Excellent coverage of the deep line AND tip simultaneously.",
-        "Quick setter transition if the setter is the up-player.",
-        "\"Counter-rotate\" variant: rotation in the opposite direction."
+        "3-2-1ローテーション（スライドディフェンス）: 後衛3人が攻撃側へスライドする。",
+        "反対側の後衛（P1にいる場合はセッター）がブロック後方へ<strong>前進</strong>してフェイントをカバー。",
+        "後衛ミドルが攻撃された側のラインへスライド（約8.5 m、ラインから1-1.5 m）。",
+        "深いラインとフェイントを同時に優れてカバー。",
+        "セッターが前進ディフェンダーの場合、迅速なセッター移行が可能。",
+        "「カウンターローテート」バリエーション: 逆方向のローテーション。"
       ],
       "commonMistakes": [
-        "Incomplete rotation → coverage holes.",
-        "Opposite-diagonal corner vulnerable (one less defender deep).",
-        "Confusion between rotate (toward the ball) and counter-rotate (opposite) — requires strong communication.",
-        "Up-player frozen → does not read tips vs spikes."
+        "ローテーションが不完全 → カバーに穴。",
+        "対角コーナーが脆弱（奥にディフェンダーが1人少なくなる）。",
+        "ローテート（ボール側へ）とカウンターローテート（反対）の混乱 — 強いコミュニケーションが必要。",
+        "前進ディフェンダーが固まる → フェイントと強打を読み分けない。"
       ]
     }
   },
   "6v6-defense-vs-pipe": {
-    "title": "Defense · opposing pipe (BIC)",
-    "shortDescription": "Defense against an opposing pipe (back-row Z6 attack): block-of-1 or 2, P6 moves up to \"cinch the court\".",
-    "contextLabel": "5-1 · Pipe / BIC · P6 up, tightened perimeter",
+    "title": "守備 · 相手のパイプ（BIC）",
+    "shortDescription": "相手のパイプ（バックロウのZ6攻撃）に対する守備: 1枚または2枚ブロック、P6が前進してコートを「絞る」。",
+    "contextLabel": "5-1 · パイプ / BIC · P6前進、絞った周辺型",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing pipe",
-      "OPP_S": "Opposing setter"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手パイプアタッカー",
+      "OPP_S": "相手セッター"
     },
     "steps": {
       "s1": {
-        "title": "1. Reading the pipe",
-        "description": "Their setter is about to send a flat set to the center back. Our middle scans both the possible opposing middle AND the pipe lane. P6 must be ready to move up."
+        "title": "1. パイプを読む",
+        "description": "相手セッターがセンター後衛へフラットなトスを送ろうとしている。こちらのミドルは可能な相手ミドルとパイプの軌跡の両方を観察する。P6は前進する準備をする。"
       },
       "s2": {
-        "title": "2. Flat central set + pipe approach",
-        "description": "The opposing setter delivers a flat set toward the Z6 axis. The pipe hitter enters his approach from behind the 3 m line, long run-up. P6 starts sliding forward."
+        "title": "2. フラットな中央トス＋パイプの助走",
+        "description": "相手セッターがZ6軸へフラットなトスを送る。パイプアタッカーが3 mラインの後方から長い助走で入る。P6が前へスライドを始める。"
       },
       "s3": {
-        "title": "3. Central block + tightened wings",
-        "description": "Our middle alone jumps on the pipe. Wings (OH + opposite) drop to ~1.5 m from the net to cover lateral deflections. Z1 and Z5 sacrifice the lines to defend the axis."
+        "title": "3. 中央ブロック＋絞ったサイド",
+        "description": "こちらのミドルが単独でパイプに飛ぶ。サイド（OH＋オポジット）はネットから約1.5 mに下がり、横方向の弾きをカバー。Z1とZ5はラインを犠牲にして軸を守る。"
       },
       "s4": {
-        "title": "4. Pipe hit + central block",
-        "description": "The hitter strikes deep on the axis. Our middle goes up to the net for a block-of-1 — the fast pipe doesn't allow time to put up two blockers."
+        "title": "4. パイプのヒット＋中央ブロック",
+        "description": "アタッカーが軸の深い位置を打つ。こちらのミドルが単独ブロック — 速いパイプでは2枚ブロックを上げる時間がない。"
       },
       "s5": {
-        "title": "5. Axial recovery by P6",
-        "description": "The ball crosses to the deep axis — P6 (pulled up to 6.5 m) is exactly on the impact spot. Bump straight on axis to the setter's zone 2-3."
+        "title": "5. P6による軸線上の拾い",
+        "description": "ボールが深い軸に飛ぶ — P6（6.5 mに前進）がちょうどインパクト地点にいる。軸線上で、セッターのゾーン2-3へアンダーパスを送る。"
       },
       "s6": {
-        "title": "6. RESET — back to the tightened base",
-        "description": "Switch to the pipe-ready base position: P6 up, Z1/Z5 on the central axis. The configuration remains valid if play continues to rotate."
+        "title": "6. リセット — 絞った基本に戻る",
+        "description": "パイプに備える基本位置に移行: P6前進、Z1/Z5は中央軸。プレーがローテーションし続ける場合もこの構成は有効。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Pipe = back-row attack from Z6 (center back) by OH2 or OPP — targets the deep central axis.",
-        "Block-of-1 (middle) most frequent — double block hard on a fast tempo.",
-        "Defensive P6 MOVES UP to ~6-7 m from the net, exact axis (\"cinch the court\").",
-        "Z1 and Z5 close toward the center (~7 m, 1.5 m from the lines) — sacrifice the lines a bit.",
-        "BIC (fast pipe) = one of the hardest attacks to defend since the middle can't honor quick + pipe + two wings."
+        "パイプ = Z6（センター後衛）からのバックロウ攻撃。OH2やOPPによる、中央軸の深い狙い。",
+        "単独ブロック（ミドル）が最頻 — 速いテンポでの2枚ブロックは難しい。",
+        "守備のP6はネットから約6-7 m、正確に軸線上に<strong>前進</strong>する（「コートを絞る」）。",
+        "Z1とZ5は中央へ寄せる（約7 m、ラインから1.5 m）— ラインを少し犠牲にする。",
+        "BIC（速いパイプ）= ミドルがクイック＋パイプ＋両サイドを同時にこなせないため、最も守りにくい攻撃の一つ。"
       ],
       "commonMistakes": [
-        "Double block on a pipe → leaves a wing completely open if the opponent switches attacks.",
-        "P6 frozen at the back (8 m+) → fast pipe lands before he moves.",
-        "Z1/Z5 spread too wide on the lines → central axis uncovered.",
-        "No communication between middle and wings on who takes the pipe vs the quick."
+        "パイプに2枚ブロック → 相手が攻撃を切り替えるとサイドが完全に空く。",
+        "P6が奥（8 m以上）で固まる → 速いパイプが届く前に動けない。",
+        "Z1/Z5がライン側に広がりすぎる → 中央軸が空く。",
+        "ミドルとサイドの間で誰がパイプ/クイックを取るかのコミュニケーション不足。"
       ]
     }
   },
   "6v6-defense-vs-z2": {
-    "title": "Defense · opposing Z2 attack",
-    "shortDescription": "Perfect mirror of Z4. Double block (OH line + middle cross-court) against opposing Z2 attack → arrives on our left.",
-    "contextLabel": "5-1 · P1 back-row setter · Double block · Perimeter",
+    "title": "守備 · 相手のZ2攻撃",
+    "shortDescription": "Z4の完全な鏡像。相手Z2攻撃に対する2枚ブロック（OHライン＋ミドルクロス）→ こちらの左に到達。",
+    "contextLabel": "5-1 · P1バックロウセッター · 2枚ブロック · 周辺型",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing Z2 hitter",
-      "OPP_S": "Opposing setter",
-      "OPP_R": "Opposing receiver"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手Z2アタッカー",
+      "OPP_S": "相手セッター",
+      "OPP_R": "相手レシーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + penetration",
-        "description": "Their back has bumped. The opposing setter penetrates from their P1 to the target. Our defense reads in READY."
+        "title": "1. 相手のレセプション＋潜り込み",
+        "description": "相手の後衛がアンダーパスした。相手セッターがP1からターゲットへ潜り込む。こちらのディフェンスはREADYで読む。"
       },
       "s2": {
-        "title": "2. Opposing high set to Z2",
-        "description": "The opposing setter distributes to their right wing. The attack arrives on our front-LEFT corner. Perfect mirror configuration of Z4."
+        "title": "2. 相手Z2への高いトス",
+        "description": "相手セッターが右サイドへ配球する。攻撃はこちらのフロント左コーナーに到達する。Z4の完全な鏡像構成。"
       },
       "s3": {
-        "title": "3. Mirror double block + defensive shift",
-        "description": "OH (P4) blocker line + middle (P3) closes the cross-court. Opposite (P2) off-blocker on the right at the 3 m line. Libero defends the deep left line. P1 takes the long cross-court."
+        "title": "3. 鏡像の2枚ブロック＋守備のシフト",
+        "description": "OH（P4）がラインブロッカー＋ミドル（P3）がクロスを締める。オポジット（P2）が右の3 mラインでオフブロッカー。リベロは深い左ラインを守る。P1がロングクロスを取る。"
       },
       "s4": {
-        "title": "4. Opposing spike + double block",
-        "description": "The opposing right wing hits long cross-court. OH and middle jump. Stopped on contact mandatory."
+        "title": "4. 相手のスパイク＋2枚ブロック",
+        "description": "相手の右サイドがロングクロスを打つ。OHとミドルが飛ぶ。「ストップド・オン・コンタクト」が必須。"
       },
       "s5": {
-        "title": "5. Setter defense on the cross-court",
-        "description": "The setter (P1) is on the primary trajectory of the long cross-court. Defensive bump — immediate question: who takes the 2nd touch?"
+        "title": "5. セッターのクロスでのディフェンス",
+        "description": "セッター（P1）はロングクロスの主要軌道上にいる。アンダーパスで拾う — すぐに問題: 誰が2本目を取るのか？"
       },
       "s6": {
-        "title": "6. Opposite relay + counter-attack",
-        "description": "The opposite leaves his off-blocker spot to make the 2nd touch. Distribution to the OH in zone 4 who prepares the hit."
+        "title": "6. オポジットの中継＋カウンター攻撃",
+        "description": "オポジットがオフブロッカーの位置を離れ、2本目を取る。ゾーン4のOHへ配球し、OHは打ちに行く。"
       },
       "s7": {
-        "title": "7. RESET — back to defensive base",
-        "description": "Everyone switches to base position as soon as the ball goes back to the opposing side."
+        "title": "7. リセット — 守備の基本に戻る",
+        "description": "ボールが相手側に戻ったらすぐに、全員が基本位置に移行する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Perfect mirror of Z4: OH (P4 = OH) blocker line + middle (P3) closes the cross-court.",
-        "The opposite (P2 = OPP) becomes off-blocker on the right side, drops off on the 3 m line.",
-        "The setter at P1 (back-row) defends the long cross-court.",
-        "Critical management: if the setter is in P2 (front-row), HE blocks the line — tense transition.",
-        "If the setter defends in P1 → 2nd touch by the opposite (back-up setter) is mandatory."
+        "Z4の完全な鏡像: OH（P4 = OH）がラインブロッカー＋ミドル（P3）がクロスを締める。",
+        "オポジット（P2 = OPP）が右側でオフブロッカーになり、3 mラインまで下がる。",
+        "P1の後衛セッターがロングクロスを守る。",
+        "重要な管理: セッターがP2（前衛）にいる場合は、彼がラインをブロック — 緊張するトランジション。",
+        "セッターがP1で拾う場合は、オポジット（バックアップセッター）が2本目を取らなければならない。"
       ],
       "commonMistakes": [
-        "Opposite blocking from zone 2 → off-blocker missing on the right side.",
-        "Middle not aligning with the OH → open block.",
-        "Libero misplaced on Z2 — defends the deep LINE here, not the long cross-court.",
-        "Setter defending AND wanting to relay → confusion on the 2nd touch."
+        "オポジットがゾーン2からブロック → 右側にオフブロッカーが不在。",
+        "ミドルがOHと並ばない → ブロックが開く。",
+        "リベロのZ2での位置が誤り — ここでは深いラインを守るのであって、ロングクロスではない。",
+        "セッターがディフェンスしながらトスに上がろうとする → 2本目が混乱する。"
       ]
     }
   },
   "6v6-defense-vs-z3": {
-    "title": "Defense · opposing Z3 attack (quick / tempo 1)",
-    "shortDescription": "Block-of-1 in read (middle) against opposing fast central attack — backs pulled up by one meter.",
-    "contextLabel": "5-1 · Block-of-1 (read) · Stopped on contact",
+    "title": "守備 · 相手のZ3攻撃（クイック / テンポ1）",
+    "shortDescription": "相手の中央クイックに対するリード単独ブロック（ミドル）— 後衛を1 m前進させる。",
+    "contextLabel": "5-1 · 単独ブロック（リード）· ストップド・オン・コンタクト",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing middle",
-      "OPP_S": "Opposing setter",
-      "OPP_R4": "Opposing OH",
-      "OPP_R": "Opposing receiver"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手ミドル",
+      "OPP_S": "相手セッター",
+      "OPP_R4": "相手OH",
+      "OPP_R": "相手レシーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + lightning penetration",
-        "description": "Their back has just bumped. The setter sprints to the net for a quick. Tempo 1 = 0.3-0.5 s between set and hit. Our middle scans the opposing middle's movement, already on the move."
+        "title": "1. 相手のレセプション＋電光石火の潜り込み",
+        "description": "相手の後衛が拾ったところ。セッターがネットへ走ってクイックを上げる。テンポ1 = トスからヒットまで0.3-0.5秒。こちらのミドルはすでに動いている相手ミドルの動きを観察する。"
       },
       "s2": {
-        "title": "2. Flat set + middle airborne",
-        "description": "The opposing setter sends a very low flat set to the middle who has already taken off. Our wings drop to the 3 m line to free up block deflections."
+        "title": "2. フラットなトス＋空中のミドル",
+        "description": "相手セッターがすでに飛んでいるミドルへ非常に低いフラットなトスを送る。こちらのサイドは3 mラインへ下がり、ブロックの弾きに備える。"
       },
       "s3": {
-        "title": "3. Block-of-1 + fast spike",
-        "description": "Our middle alone jumps on read. The opposing middle hits short cross-court. The most dangerous shot: ball diving under the block."
+        "title": "3. 単独ブロック＋速い強打",
+        "description": "こちらのミドルが単独でリードに合わせて飛ぶ。相手ミドルがショートクロスを打つ。最も危険なショット: ボールがブロックの下に潜り込む。"
       },
       "s4": {
-        "title": "4. Setter defense on the straight line",
-        "description": "Z1 (setter) and Z5 (libero) are pulled up to ~7 m since angles are short on a quick. The setter (Z1) recovers in his channel."
+        "title": "4. 直線でのセッターのディフェンス",
+        "description": "クイックでは角度が短いため、Z1（セッター）とZ5（リベロ）が約7 mに前進している。セッター（Z1）が自分のチャンネルで拾う。"
       },
       "s5": {
-        "title": "5. 2nd touch by the opposite (back-up setter)",
-        "description": "Since our setter has defended, the opposite at P2 takes the 2nd touch to relay. Our OH prepares a counter-attack in zone 4."
+        "title": "5. オポジット（バックアップセッター）の2本目",
+        "description": "セッターが拾ったため、P2のオポジットが2本目を取り中継する。こちらのOHがゾーン4でカウンター攻撃の準備をする。"
       },
       "s6": {
-        "title": "6. RESET — back to base",
-        "description": "Switch to base position as soon as the opposing setter touches the ball. Defense reorganizes for the next sequence."
+        "title": "6. リセット — 基本に戻る",
+        "description": "相手セッターがボールに触れた瞬間に基本位置へ移行。ディフェンスは次の局面のため再編成する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Block-of-1 on the central quick: only the middle jumps (read most frequent, commit if scouting is strong).",
-        "Z1 and Z5 ADVANCE one meter (~7.5 m) since angles are shorter on a quick.",
-        "Wings stay on the 3 m line (~2-2.5 m from the net) for block deflections.",
-        "\"Stopped on contact\": everyone stopped and balanced at the exact moment of the hit."
+        "中央クイックへの単独ブロック: ミドルのみが飛ぶ（リードが最頻、スカウティングが強ければコミット）。",
+        "クイックでは角度が短いため、Z1とZ5は1 m前進（約7.5 m）。",
+        "サイドは3 mライン（ネットから2-2.5 m）に残り、ブロックの弾きに対応。",
+        "「ストップド・オン・コンタクト」: ヒットの瞬間、全員が停止しバランスを取る。"
       ],
       "commonMistakes": [
-        "All front-row players jumping → leaves wings open for the next set.",
-        "Block too late → ball passes over the hands.",
-        "\"False stepping\" (first step backwards) → wasting the little time available.",
-        "Z1/Z5 frozen at the back (8 m+) → fast ball lands short before they've moved."
+        "前衛全員が飛ぶ → 次のトスでサイドが空く。",
+        "ブロックが遅すぎる → ボールが手の上を通過する。",
+        "「フォルスステップ」（最初の一歩を後ろに）→ わずかな時間を浪費する。",
+        "Z1/Z5が奥（8 m以上）で固まる → 速い球が前に落ち、動けない。"
       ]
     }
   },
   "6v6-defense-vs-z4": {
-    "title": "Defense · opposing Z4 attack",
-    "shortDescription": "Double block on opposing zone-4 attack (their left wing → arrives on our right) in perimeter defense.",
-    "contextLabel": "5-1 · P1 back-row setter · Double block · Perimeter",
+    "title": "守備 · 相手のZ4攻撃",
+    "shortDescription": "周辺型ディフェンスで、相手のゾーン4攻撃（彼らの左サイド → こちらの右に到達）に対する2枚ブロック。",
+    "contextLabel": "5-1 · P1バックロウセッター · 2枚ブロック · 周辺型",
     "players": {
-      "P": "Setter (P1)",
-      "Op": "Opposite (P2)",
-      "C": "Middle (P3)",
-      "R4": "OH (P4)",
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "OPP_A": "Opposing Z4 hitter",
-      "OPP_S": "Opposing setter",
-      "OPP_R": "Opposing receiver"
+      "P": "セッター（P1）",
+      "Op": "オポジット（P2）",
+      "C": "ミドル（P3）",
+      "R4": "OH（P4）",
+      "L": "リベロ（P5）",
+      "R4b": "OH（P6）",
+      "OPP_A": "相手Z4アタッカー",
+      "OPP_S": "相手セッター",
+      "OPP_R": "相手レシーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing reception + penetration",
-        "description": "Their back has just bumped. The opposing setter penetrates toward his target between Z2 and Z3. Our defense reads in READY, visual sequence \"ball → setter → ball → hitter\"."
+        "title": "1. 相手のレセプション＋潜り込み",
+        "description": "相手の後衛が拾ったところ。相手セッターはZ2とZ3の間のターゲットへ潜り込む。こちらのディフェンスはREADYで読む、視線の順序「ボール → セッター → ボール → アタッカー」。"
       },
       "s2": {
-        "title": "2. Opposing high set to Z4",
-        "description": "The opposing setter distributes a lofted set to their left wing. The attack will arrive on our front-right corner. The front line already identifies the attack zone."
+        "title": "2. 相手Z4への高いトス",
+        "description": "相手セッターが左サイドへ高いトスを配球。攻撃はこちらのフロント右コーナーに到達する。前衛はすでに攻撃ゾーンを特定する。"
       },
       "s3": {
-        "title": "3. Double block + perimeter shift",
-        "description": "Opposite (P2) line + middle (P3) closes the cross-court. R4 off-blocker on the 3 m line on the left side. Libero in long cross-court ~7.5 m, P6 on axis at 8 m, P1 deep line in the block shadow."
+        "title": "3. 2枚ブロック＋周辺シフト",
+        "description": "オポジット（P2）がライン＋ミドル（P3）がクロスを締める。R4は左側の3 mラインでオフブロッカー。リベロはロングクロス約7.5 m、P6は軸の8 m、P1はブロックの影で深いライン。"
       },
       "s4": {
-        "title": "4. Opposing spike + double block",
-        "description": "The opposing hitter strikes long cross-court. Opposite and middle jump in parallel. At the moment of contact, all defenders are stopped and balanced (\"stopped on contact\")."
+        "title": "4. 相手のスパイク＋2枚ブロック",
+        "description": "相手アタッカーがロングクロスを打つ。オポジットとミドルが平行に飛ぶ。ヒットの瞬間、すべてのディフェンダーが停止しバランスを取る（「ストップド・オン・コンタクト」）。"
       },
       "s5": {
-        "title": "5. Libero defense on the long cross-court",
-        "description": "The libero is exactly on the primary trajectory (long cross-court). High bump to zone 2-3 to prepare the counter-attack."
+        "title": "5. リベロのロングクロスでのディフェンス",
+        "description": "リベロはちょうど主要軌道（ロングクロス）上にいる。ゾーン2-3へ高いアンダーパスを送り、カウンター攻撃を準備する。"
       },
       "s6": {
-        "title": "6. Counter-attack by the OH",
-        "description": "Our setter delivers a high set to the OH who has dropped back to the 3 m line. Long cross-court hit on the opposing side to close the rally."
+        "title": "6. OHによるカウンター攻撃",
+        "description": "セッターが3 mラインまで下がったOHへ高いトスを送る。相手側へロングクロスを打ってラリーを締める。"
       },
       "s7": {
-        "title": "7. RESET — back to defensive base",
-        "description": "Everyone switches to base position as soon as the ball returns to the opposing side — no transition frozen in reception formation."
+        "title": "7. リセット — 守備の基本に戻る",
+        "description": "ボールが相手側に戻ったらすぐに全員が基本位置へ移行する — レセプション配置で固まらない。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Double block: opposite (P2) line + middle (P3) cross-court. This is the FIVB standard configuration on opposing Z4.",
-        "Off-blocker = OH (P4) on the 3 m line on the left side — covers cut shot and short tip.",
-        "Perimeter system: libero (P5) in long cross-court ~7.5 m, P6 on axis ~8 m, P1 deep line in the block shadow.",
-        "Libero aligned with the inside shoulder of the central blocker — that's his priority zone.",
-        "Main shot defended: long cross-court (the opposing OH is the most solicited)."
+        "2枚ブロック: オポジット（P2）がライン＋ミドル（P3）がクロス。これがFIVB標準の相手Z4対応構成。",
+        "オフブロッカー = OH（P4）が左側の3 mライン上 — カットショットとショートフェイントをカバー。",
+        "周辺システム: リベロ（P5）がロングクロス約7.5 m、P6が軸約8 m、P1がブロックの影で深いライン。",
+        "リベロは中央ブロッカーの内側の肩と並ぶ — そこが彼の優先ゾーン。",
+        "主に守るショット: ロングクロス（相手のOHが最も使う軌道）。"
       ],
       "commonMistakes": [
-        "Unintentionally open block (P3 not aligned with P2) → ball passes between the blockers.",
-        "Off-blocker staying at the net → block shadow uncovered (mistake #1 according to Hebert).",
-        "Misplaced libero (too close to the net) → deep spikes land.",
-        "Setter who blocks then doesn't get to the net → 2nd touch by a non-specialized player.",
-        "Defenders still moving at the moment of the hitter's contact (not \"stopped on contact\")."
+        "意図せずブロックが開く（P3がP2と並ばない）→ ブロッカー間をボールが通過する。",
+        "オフブロッカーがネットに残る → ブロックの影が空く（Hebertによれば最大のミス）。",
+        "リベロの位置が誤り（ネットに近すぎる）→ 深い強打が落ちる。",
+        "セッターがブロックして、その後ネットに戻れない → 2本目を専門でない選手が取る。",
+        "アタッカーのヒット瞬間にまだ動いている（「ストップド・オン・コンタクト」できていない）。"
       ]
     }
   },
   "4v4-reception-losange": {
-    "title": "4v4 · Diamond reception",
-    "shortDescription": "Canonical diamond formation: setter at P3 (center net) + 2 wings on the 3 m line + back deep.",
-    "contextLabel": "4v4 · Diamond (1-2-1) · Center setter",
+    "title": "4v4 · ダイヤモンドのレセプション",
+    "shortDescription": "標準的なダイヤモンド配置: P3にセッター（中央ネット）＋3 mライン上にサイド2人＋深い位置に後衛1人。",
+    "contextLabel": "4v4 · ダイヤモンド（1-2-1）· センターセッター",
     "players": {
-      "P": "Setter (P3)",
-      "R4": "Left wing (P4)",
-      "A2": "Right wing (P2)",
-      "A": "Back (P1)",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（P3）",
+      "R4": "左サイド（P4）",
+      "A2": "右サイド（P2）",
+      "A": "後衛（P1）",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Diamond formation",
-        "description": "Canonical 1-2-1 layout: setter AT THE CENTER of the net (P3), 2 wings on the 3 m line (L + R), back deep. No libero allowed in 4v4 school. Everyone READY."
+        "title": "1. ダイヤモンド配置",
+        "description": "標準的な1-2-1配置: セッターはネット<strong>中央</strong>（P3）、3 mライン上にサイド2人（L＋R）、後衛は深く位置取り。学校4対4ではリベロ不可。全員がREADY。"
       },
       "s2": {
-        "title": "2. Serve + back bump",
-        "description": "Lofted serve to the central zone. The lone back calls \"Mine!\" and steps slightly toward the ball."
+        "title": "2. サーブ＋後衛アンダーパス",
+        "description": "中央への高いサーブ。唯一の後衛が「マイン!」と声を出し、ボールへ少し前進する。"
       },
       "s3": {
-        "title": "3. Set to the left wing",
-        "description": "High bump to the setter at the center of the net (no penetration in the diamond). He distributes to zone 4. The left wing chains his short approach."
+        "title": "3. 左サイドへのトス",
+        "description": "ネット中央のセッター（ダイヤモンドでは潜り込みなし）へ高いアンダーパス。彼はゾーン4へ配球。左サイドが短い助走を続ける。"
       },
       "s4": {
-        "title": "4. Ball available + short coverage",
-        "description": "The set arrives in zone 4. The right wing tightens toward the center to cover, the back moves up slightly. With a single opposing block, the hitting angle stays wide."
+        "title": "4. 利用可能なボール＋ショートカバー",
+        "description": "トスがゾーン4に到着。右サイドが中央側に絞ってカバー、後衛が少し前進する。相手の単独ブロックに対して攻撃角度は広いままだ。"
       },
       "s5": {
-        "title": "5. RESET — back to the diamond",
-        "description": "Everyone resumes their position in the diamond for the next serve."
+        "title": "5. リセット — ダイヤモンドに戻る",
+        "description": "次のサーブに向けて全員がダイヤモンド位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Canonical diamond (1-2-1) = the most used 4v4 formation.",
-        "\"Center setter\" variant: setter at P3 at the net, distributes left OR right.",
-        "No libero allowed in 4v4 school — everyone must know how to receive.",
-        "Each player covers ~30-40 m² (vs ~20 m² in 6v6)."
+        "標準的なダイヤモンド（1-2-1）= 4対4で最も使われるフォーメーション。",
+        "「センターセッター」型: P3のネット際にセッター、左右どちらにも配球。",
+        "学校4対4ではリベロ不可 — 全員がレセプションできる必要がある。",
+        "各選手が約30-40 m²をカバー（6対6では約20 m²）。"
       ],
       "commonMistakes": [
-        "Confusion on central balls between 2 zones → call mandatory.",
-        "Lone back too far back → short balls behind the net not covered.",
-        "Setter who also receives → impossible to make the 2nd touch behind."
+        "2つのゾーンの間の中央ボールでの混乱 → 声出しが必須。",
+        "唯一の後衛が下がりすぎる → ネット近くのショートボールをカバーできない。",
+        "セッターがレセプションする → 後ろに2本目を取れない。"
       ]
     }
   },
   "4v4-reception-u": {
-    "title": "4v4 · U-formation reception",
-    "shortDescription": "U formation: setter out + 3 receivers (left, back, right).",
-    "contextLabel": "4v4 · U · Competitive 4v4",
+    "title": "4v4 · Uフォーメーションのレセプション",
+    "shortDescription": "Uフォーメーション: セッター外＋レシーバー3人（左、後衛、右）。",
+    "contextLabel": "4v4 · U · 競技4対4",
     "players": {
-      "P": "Setter (hidden)",
-      "R4": "Left wing",
-      "A": "Back center",
-      "A2": "Right wing",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（隠れている）",
+      "R4": "左サイド",
+      "A": "センター後衛",
+      "A2": "右サイド",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. U configuration",
-        "description": "The setter is hidden at P2 at the net. 3 receivers in a U: left wing, back center, right wing. Each player covers about 1/3 of the width."
+        "title": "1. U構成",
+        "description": "セッターはネット際のP2に隠れる。レシーバー3人がU字に: 左サイド、センター後衛、右サイド。各選手がコート幅の約1/3をカバーする。"
       },
       "s2": {
-        "title": "2. Serve + left wing bump",
-        "description": "Lofted serve to the left channel. The left wing calls and takes the ball in his channel. High trajectory to give the setter time."
+        "title": "2. サーブ＋左サイドのアンダーパス",
+        "description": "左チャンネルへの高いサーブ。左サイドが声を出し、自分のチャンネルでボールを取る。セッターに時間を与えるため高い軌道で送る。"
       },
       "s3": {
-        "title": "3. Distribution to the left wing",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach."
+        "title": "3. 左サイドへの配球",
+        "description": "ボールがゾーン2の固定セッターに到着（4対4では潜り込みなし）。素早く左サイドへ配球し、左サイドはすぐに助走に入る。"
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: the setter has not received, the attack is fast and readable."
+        "title": "4. ゾーン4の利用可能なボール",
+        "description": "トスがゾーン4の左サイドへ到着。ダイヤモンドより攻撃寄りなシステム: セッターはレセプションしていないため、攻撃が速くて読みやすい。"
       },
       "s5": {
-        "title": "5. RESET — back to the U",
-        "description": "The 3 receivers return to the U and the setter goes back to his hiding spot at P2."
+        "title": "5. リセット — Uに戻る",
+        "description": "3人のレシーバーがUに戻り、セッターはP2の隠れ場所に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "U reception = the most effective competitive 4v4 configuration.",
-        "3 specialized receivers + setter out = 1 player available for the attack without having received.",
-        "Target: zone 2 (fixed setter) → fast distribution.",
-        "Technically more demanding than the diamond but more offensive."
+        "Uレセプション = 最も効率的な競技4対4の構成。",
+        "専門のレシーバー3人＋セッター外 = 1人がレセプションせず攻撃可能。",
+        "ターゲット: ゾーン2（固定セッター）→ 速い配球。",
+        "ダイヤモンドより技術要求が高いが、より攻撃的。"
       ],
       "commonMistakes": [
-        "Wing not covering the whole channel → ball between wing and back lost.",
-        "Back center too far forward → long balls pass overhead.",
-        "Setter leaning toward reception → confusion."
+        "サイドが自分のチャンネル全体をカバーしない → サイドと後衛の間でボールを失う。",
+        "センター後衛が前に出すぎる → 長いボールが頭上を抜ける。",
+        "セッターがレセプションに寄る → 混乱。"
       ]
     }
   },
   "5-1-reception-3-receivers": {
-    "title": "Reception · 3-receiver (5-1)",
-    "shortDescription": "3-receiver reception (libero + 2 OHs) with setter out and opposite hidden — modern standard formation.",
-    "contextLabel": "5-1 · 3-receiver reception · Opposing serve",
+    "title": "レセプション · 3人（5-1）",
+    "shortDescription": "3人レセプション（リベロ＋OH2人）でセッター外、オポジット隠し — 現代の標準フォーメーション。",
+    "contextLabel": "5-1 · 3人レセプション · 相手サーブ",
     "players": {
-      "R4a": "Left OH",
-      "L": "Libero",
-      "R4b": "Right OH",
-      "C": "Middle",
-      "Op": "Opposite (hidden)",
-      "P": "Setter (hidden)",
-      "OPP_SRV": "Opposing server"
+      "R4a": "左OH",
+      "L": "リベロ",
+      "R4b": "右OH",
+      "C": "ミドル",
+      "Op": "オポジット（隠れている）",
+      "P": "セッター（隠れている）",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Reception position",
-        "description": "Three receivers in an arc: left OH, central libero, right OH. Each covers ~1/3 of the width. The setter and opposite hide at the net, ready to step in as soon as the server hits."
+        "title": "1. レセプション配置",
+        "description": "3人のレシーバーが弧状に: 左OH、中央リベロ、右OH。各選手が幅の約1/3をカバーする。セッターとオポジットはネット際に隠れ、サーバーが打った瞬間に入る準備をする。"
       },
       "s2": {
-        "title": "2. Serve + bump",
-        "description": "Lofted serve to the left OH who calls \"Mine!\" and bumps. In parallel, the setter triggers his penetration from his hiding spot at P1 toward zone 2-3."
+        "title": "2. サーブ＋アンダーパス",
+        "description": "左OHへの高いサーブ。彼は「マイン!」と声を出してアンダーパスする。同時にセッターがP1の隠れ場所からゾーン2-3へ潜り込みを開始する。"
       },
       "s3": {
-        "title": "3. High set to zone 4",
-        "description": "The ball rises to the target (between P2 and P3) where the setter arrives just in time. He distributes a lofted set to zone 4. The receiving OH has already triggered his drop back to the 3 m line."
+        "title": "3. ゾーン4への高いトス",
+        "description": "ボールがターゲット（P2とP3の間）まで上がり、セッターがちょうど到着する。ゾーン4へ高いトスを送る。レシーブしたOHはすでに3 mラインへ下がって助走の準備をしている。"
       },
       "s4": {
-        "title": "4. Ball available to the hitter",
-        "description": "The ball arrives in zone 4 at hitting height. The OH takes his last steps before his jump. The quality of the set validates the quality of the initial reception."
+        "title": "4. アタッカーが利用できるボール",
+        "description": "ボールがゾーン4の打点に到着。OHがジャンプ前の最後のステップを踏む。トスの質が最初のレセプションの質を証明する。"
       },
       "s5": {
-        "title": "5. RESET — back to formation",
-        "description": "The whole team resumes its reception position for the next serve."
+        "title": "5. リセット — 配置に戻る",
+        "description": "次のサーブに向けてチーム全体がレセプション位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "3-receiver reception = modern 5-1 standard. Maximum specialization.",
-        "Target: zone 2-3, one arm from the net, height ~3 m.",
-        "The setter stays hidden at the net until the server hits, then penetrates.",
-        "The receiving OH IMMEDIATELY chains his attack approach."
+        "3人レセプション = 現代5-1の標準。最大限の専門化。",
+        "ターゲット: ゾーン2-3、ネットから腕1本分、高さ約3 m。",
+        "セッターはサーバーがヒットするまでネット際に隠れ、その後潜り込む。",
+        "レシーブしたOHは<strong>即座に</strong>攻撃の助走へ続ける。"
       ],
       "commonMistakes": [
-        "Reception too flat or too short → setter arrives late.",
-        "Conflict between 2 receivers → vocal call mandatory.",
-        "OH frozen after reception → loses an offensive option in zone 4."
+        "レセプションが平らすぎたり短すぎたりする → セッターが遅れる。",
+        "2人のレシーバー間の衝突 → 声出しが必須。",
+        "レセプション後にOHが固まる → ゾーン4の攻撃選択肢を失う。"
       ]
     }
   },
   "5v5-reception-4-receivers": {
-    "title": "5v5 · 4-receiver reception",
-    "shortDescription": "5v5 format: setter out + 4 receivers in U or in line.",
-    "contextLabel": "5v5 · 4 receivers · Hybrid format",
+    "title": "5v5 · 4人レセプション",
+    "shortDescription": "5対5形式: セッター外＋4人のレシーバーがUまたはライン状に並ぶ。",
+    "contextLabel": "5v5 · 4人のレシーバー · ハイブリッド形式",
     "players": {
-      "P": "Setter (out)",
-      "R4a": "Front left",
-      "C": "Front right / middle",
-      "A1": "Left back",
-      "A2": "Right back",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（外）",
+      "R4a": "前衛左",
+      "C": "前衛右 / ミドル",
+      "A1": "左後衛",
+      "A2": "右後衛",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. 5v5 configuration",
-        "description": "The setter (at P2) is out at the net. The 4 receivers form a U: 2 on the 3 m line, 2 deep. The best receiver takes the most exposed zone."
+        "title": "1. 5対5構成",
+        "description": "セッター（P2）はネット際で外れる。4人のレシーバーがU字に: 2人が3 mライン上、2人が深く。最も狙われやすいゾーンに最良のレシーバーを置く。"
       },
       "s2": {
-        "title": "2. Serve + back bump",
-        "description": "Lofted serve in the back-left channel. The left back calls and bumps in his channel."
+        "title": "2. サーブ＋後衛のアンダーパス",
+        "description": "後衛左チャンネルへの高いサーブ。左後衛が声を出し、自分のチャンネルでアンダーパスする。"
       },
       "s3": {
-        "title": "3. Set to zone 4",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 5v5). Quick distribution to the left wing. The front-left starts his approach."
+        "title": "3. ゾーン4へのトス",
+        "description": "ボールがゾーン2の固定セッターに到着（5対5では潜り込みなし）。素早く左サイドへ配球。前衛左が助走を開始する。"
       },
       "s4": {
-        "title": "4. Ball available — 3-player coverage",
-        "description": "The set arrives in zone 4. The front-left takes his steps. Coverage in 5v5 is done with only 3 players (not 5 as in 6v6) — the middle and setter stay close."
+        "title": "4. 利用可能なボール — 3人カバー",
+        "description": "トスがゾーン4に到着。前衛左がステップを踏む。5対5のカバーは3人だけ（6対6では5人）— ミドルとセッターが近くに残る。"
       },
       "s5": {
-        "title": "5. RESET — back to the U",
-        "description": "The 4 receivers find their place in the U, setter fixed at P2."
+        "title": "5. リセット — Uに戻る",
+        "description": "4人のレシーバーがUの位置に戻り、セッターはP2に固定される。"
       }
     },
     "summary": {
       "keyPoints": [
-        "In 5v5 without a libero, the best receiver takes the most exposed zone.",
-        "U formation: 2 receivers on the 3 m line + 2 deep.",
-        "In-line variant possible (4 lined up at mid-court) if levels are similar.",
-        "No penetration → fixed setter (simplified 4-1 system)."
+        "リベロがいない5対5では、最良のレシーバーを最も狙われやすいゾーンに置く。",
+        "Uフォーメーション: 3 mライン上に2人＋深く2人。",
+        "レベルが揃っていれば、ラインバリエーション（中央コートに4人並ぶ）も可能。",
+        "潜り込みなし → 固定セッター（簡易4-1システム）。"
       ],
       "commonMistakes": [
-        "U shape too narrow → long cross-courts uncovered.",
-        "Weak receiver → isolate them in the smallest zone.",
-        "Setter who still penetrates → confusion with standard 6v6."
+        "U字が狭すぎる → ロングクロスがカバーできない。",
+        "弱いレシーバー → 最小のゾーンに割り当てて隔離する。",
+        "セッターが依然として潜り込もうとする → 標準6対6と混同する。"
       ]
     }
   },
   "5v5-reception-pentagon": {
-    "title": "5v5 · Pentagon reception",
-    "shortDescription": "Pentagon reception (5 players without a setter out) — beginner or recreational version.",
-    "contextLabel": "5v5 · Pentagon · No dedicated setter",
+    "title": "5v5 · ペンタゴンのレセプション",
+    "shortDescription": "ペンタゴンレセプション（セッター外を作らず5人）— 初級またはレクリエーション版。",
+    "contextLabel": "5v5 · ペンタゴン · 専門セッターなし",
     "players": {
-      "A1": "Front left",
-      "C": "Center",
-      "A2": "Front right",
-      "A3": "Left back",
-      "A4": "Right back",
-      "OPP_SRV": "Opposing server"
+      "A1": "前衛左",
+      "C": "センター",
+      "A2": "前衛右",
+      "A3": "左後衛",
+      "A4": "右後衛",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. 5-player pentagon",
-        "description": "All players receive. No dedicated setter — whoever touches first leaves the 2nd touch to the player closest to the net. Recreational / beginner configuration."
+        "title": "1. 5人のペンタゴン",
+        "description": "全員がレセプションする。専門のセッターなし — 最初に触れた者は2本目をネットに近い選手に譲る。レクリエーション / 初級向けの構成。"
       },
       "s2": {
-        "title": "2. Serve + center calls",
-        "description": "Serve to the central medium zone. The center player calls and bumps — that's his area in the pentagon."
+        "title": "2. サーブ＋センターが声出し",
+        "description": "中央の中距離ゾーンへのサーブ。センター選手が声を出してアンダーパス — ペンタゴンでの彼の担当エリアだ。"
       },
       "s3": {
-        "title": "3. Opportunity set",
-        "description": "The ball rises toward the center of the net. The front-right, closest to the ball, steps forward and takes the 2nd touch with a high set depending on the quality of the reception."
+        "title": "3. 偶発的なトス",
+        "description": "ボールがネット中央に上がる。最もボールに近い前衛右が前へ出て、レセプションの質に応じて高めのトスで2本目を取る。"
       },
       "s4": {
-        "title": "4. Ball available — simple system",
-        "description": "The set goes to the front-left. Readable distribution, ideal for beginners. Any player can make the 2nd touch depending on the ball's angle."
+        "title": "4. 利用可能なボール — シンプルなシステム",
+        "description": "トスは前衛左へ。読みやすい配球で、初級者に最適。ボールの角度に応じて、どの選手でも2本目を取れる。"
       },
       "s5": {
-        "title": "5. RESET — back to pentagon",
-        "description": "The 5 players find their place in the pentagon for the next serve."
+        "title": "5. リセット — ペンタゴンに戻る",
+        "description": "5人が次のサーブに向けてペンタゴンの位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Pentagon without a dedicated setter = recreational or beginner configuration.",
-        "5 players in a pentagon: 2 in front, 1 center, 2 in the back.",
-        "Any player can make the 2nd touch depending on where the ball arrives.",
-        "Advantage: great adaptability. Drawback: less offensive consistency."
+        "専門セッターのないペンタゴン = レクリエーションまたは初級向け構成。",
+        "ペンタゴンに5人: 前衛2人、センター1人、後衛2人。",
+        "ボールの落下位置に応じて、どの選手でも2本目を取れる。",
+        "利点: 高い適応性。欠点: 攻撃の一貫性が低い。"
       ],
       "commonMistakes": [
-        "No hierarchy on the 2nd touch → 2 players hesitate.",
-        "Center frozen → balls on each side missed.",
-        "Systematic high sets without clear distribution."
+        "2本目の優先順位がない → 2人が迷う。",
+        "センターが固まる → 両側のボールを取り逃す。",
+        "明確な配球のない毎回の高いトス。"
       ]
     }
   },
   "6v6-reception-2-receivers": {
-    "title": "Reception · 2-receiver (elite)",
-    "shortDescription": "Ultra-specialized 2-receiver reception (libero + OH): all others ready to attack.",
-    "contextLabel": "5-1 · 2-receiver reception · Elite / free balls",
+    "title": "レセプション · 2人（トップレベル）",
+    "shortDescription": "超専門化の2人レセプション（リベロ＋OH）: 他全員が攻撃の準備。",
+    "contextLabel": "5-1 · 2人レセプション · トップ / フリーボール",
     "players": {
-      "L": "Libero",
-      "R4a": "Receiving OH",
-      "R4b": "Attacking OH",
-      "C": "Middle",
-      "Op": "Opposite (hidden)",
-      "P": "Setter (hidden)",
-      "OPP_SRV": "Opposing server"
+      "L": "リベロ",
+      "R4a": "レシーブOH",
+      "R4b": "攻撃OH",
+      "C": "ミドル",
+      "Op": "オポジット（隠れている）",
+      "P": "セッター（隠れている）",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. 2-receiver configuration",
-        "description": "Only 2 receivers: libero on the left side, receiving OH on the right side. The 4 other players are already in attack stance, ready to trigger as soon as the serve is struck."
+        "title": "1. 2人レセプション構成",
+        "description": "レシーバーは2人のみ: 左側にリベロ、右側にレシーブOH。残り4人はすでに攻撃姿勢で、サーブが打たれた瞬間に始動する。"
       },
       "s2": {
-        "title": "2. Serve + libero bump",
-        "description": "Serve to the left. The libero calls and bumps. With only 2 zones, the technical demand is extreme: an exceptional libero is required. The setter triggers his penetration."
+        "title": "2. サーブ＋リベロのアンダーパス",
+        "description": "左へのサーブ。リベロが声を出してアンダーパスする。ゾーンが2つだけのため、技術要求は極めて高く、卓越したリベロが必要。セッターが潜り込みを始動する。"
       },
       "s3": {
-        "title": "3. Set + simultaneous approaches",
-        "description": "The ball rises to the target. The setter distributes to zone 4. The attacking OH, free of any reception, launches a fast approach at full speed — he arrives at full power."
+        "title": "3. トス＋同時助走",
+        "description": "ボールがターゲットに上がる。セッターはゾーン4へ配球。攻撃OHはレセプションから解放され、全速力で速い助走を開始 — フルパワーで到着する。"
       },
       "s4": {
-        "title": "4. Ball available — maximum variety",
-        "description": "The ball arrives in zone 4 for the attacking OH. At that moment the setter simultaneously has a middle on quick and an opposite on a back-row attack available — 3-hitter combinations possible."
+        "title": "4. 利用可能なボール — 最大の多彩さ",
+        "description": "ボールがゾーン4の攻撃OHへ到着。その瞬間、セッターは同時にミドルのクイック、オポジットのバックロウ攻撃を選択肢に持つ — 3人アタッカーの組み合わせが可能だ。"
       },
       "s5": {
-        "title": "5. RESET — back to 2-receiver formation",
-        "description": "The libero and the receiving OH return to their zones, the hitters reposition ready to attack."
+        "title": "5. リセット — 2人レセプション配置に戻る",
+        "description": "リベロとレシーブOHが自分のゾーンに戻り、アタッカーは攻撃準備の位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "2-receiver reception = elite configuration (professional volleyball).",
-        "Used on easy serves or \"front-row setter\" rotations.",
-        "Maximum offensive variety: all hitters available immediately.",
-        "Extreme technical demand: 2 solid receivers required."
+        "2人レセプション = トップレベル（プロバレー）の構成。",
+        "簡単なサーブや「前衛セッター」ローテで使われる。",
+        "最大の攻撃多彩さ: すべてのアタッカーがすぐに利用可能。",
+        "極めて高い技術要求: 強力なレシーバー2人が必須。"
       ],
       "commonMistakes": [
-        "Adopting this system against a powerful serve → catastrophic receptions.",
-        "Attacking OH not starting his approach in parallel → option lost.",
-        "No call → hesitation between the 2 receivers."
+        "強烈なサーブに対してこのシステムを採用 → 致命的なレセプション。",
+        "攻撃OHが並行して助走を始めない → 選択肢を失う。",
+        "声出しなし → 2人のレシーバーが迷う。"
       ]
     }
   },
   "6v6-reception-4-2": {
-    "title": "Reception · 4-2 (4 receivers)",
-    "shortDescription": "4-2 system: fixed setter at P2 + 4 receivers (the 2 OHs + middle + back).",
-    "contextLabel": "4-2 · 4 receivers · Fixed front setter",
+    "title": "レセプション · 4-2（4人レシーバー）",
+    "shortDescription": "4-2システム: P2固定セッター＋4人のレシーバー（OH2人＋ミドル＋後衛）。",
+    "contextLabel": "4-2 · 4人のレシーバー · 固定前衛セッター",
     "players": {
-      "P": "Setter (P2 fixed)",
-      "C2": "Front middle",
-      "R4a": "Left OH",
-      "C": "Back middle",
-      "R4b": "Right OH",
-      "P2": "Back setter",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（P2固定）",
+      "C2": "前衛ミドル",
+      "R4a": "左OH",
+      "C": "後衛ミドル",
+      "R4b": "右OH",
+      "P2": "後衛セッター",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. 4-2 layout",
-        "description": "4-2 system: 2 opposing setters. The front setter (P2) and the front middle step out at the net. 4 receivers in a trapezoid: 2 OHs on the diagonal, back middle and back setter deep."
+        "title": "1. 4-2配置",
+        "description": "4-2システム: 対角に2人のセッター。前衛セッター（P2）と前衛ミドルがネット際で外れる。4人のレシーバーが台形に: 対角に2人のOH、後衛ミドルと後衛セッターが深く位置取り。"
       },
       "s2": {
-        "title": "2. Serve + left OH bump",
-        "description": "Lofted serve to the left channel. The left OH calls and bumps. The setter is already fixed at P2 at the net, no penetration."
+        "title": "2. サーブ＋左OHのアンダーパス",
+        "description": "左チャンネルへの高いサーブ。左OHが声を出してアンダーパス。セッターはすでにネット際のP2に固定、潜り込みなし。"
       },
       "s3": {
-        "title": "3. Set to the left wing",
-        "description": "The ball arrives at the fixed setter at P2 (easy target, no movement). He distributes to the left wing. The left OH immediately chains his approach."
+        "title": "3. 左サイドへのトス",
+        "description": "ボールがP2の固定セッターに到着（動かない簡単なターゲット）。左サイドへ配球。左OHはすぐに助走に入る。"
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set is in place. In 4-2, only 2 offensive options exist in front (the middle and the wing) → readable but limited distribution."
+        "title": "4. ゾーン4の利用可能なボール",
+        "description": "トスが整う。4-2では前衛の攻撃選択肢が2つしかない（ミドルとサイド）→ 読みやすいが限定的な配球。"
       },
       "s5": {
-        "title": "5. RESET — back to trapezoid",
-        "description": "The whole team resumes its position in the 4-2 system."
+        "title": "5. リセット — 台形に戻る",
+        "description": "チーム全体が4-2システムの位置に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "4-receiver reception = 4-2 system. 2 front-row players out (setter + front middle).",
-        "Bigger zones than in a W but less demanding than a 3-receiver reception.",
-        "Easy target: the setter does not move.",
-        "Drawback: only 2 hitters in front."
+        "4人レセプション = 4-2システム。前衛から2人が外れる（セッター＋前衛ミドル）。",
+        "Wより大きなゾーンだが、3人レセプションより要求は低い。",
+        "簡単なターゲット: セッターが動かない。",
+        "欠点: 前衛のアタッカーが2人だけ。"
       ],
       "commonMistakes": [
-        "Front middle who also receives → no commit at the net.",
-        "Trapezoid too open → central balls not covered.",
-        "Confusion on the 2nd touch between the 2 setters."
+        "前衛ミドルがレセプションする → ネット際でコミットできない。",
+        "台形が開きすぎる → 中央ボールがカバーできない。",
+        "2人のセッター間で2本目を巡る混乱。"
       ]
     }
   },
   "6v6-reception-rotation-p4": {
-    "title": "Reception · 5-1 P4 rotation",
-    "shortDescription": "P4 special case: the setter and the middle shift left to free the OH in zone 6.",
-    "contextLabel": "5-1 · 3-receiver · P4 rotation (front-row setter)",
+    "title": "レセプション · 5-1 P4ローテ",
+    "shortDescription": "P4の特別ケース: セッターとミドルが左にずれてゾーン6のOHを解放する。",
+    "contextLabel": "5-1 · 3人レセプション · P4ローテ（前衛セッター）",
     "players": {
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4b": "OH* (P2)",
-      "L": "Libero (P5)",
-      "R4a": "OH (P6)",
-      "Op": "Opposite (P1)",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（P4）",
+      "C": "ミドル（P3）",
+      "R4b": "OH*（P2）",
+      "L": "リベロ（P5）",
+      "R4a": "OH（P6）",
+      "Op": "オポジット（P1）",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Left shift",
-        "description": "BEFORE the hit: the setter (P4) and the middle (P3) place themselves AS FAR LEFT as alignment rules allow. This shift frees zone 6 for the receiving OH."
+        "title": "1. 左へのシフト",
+        "description": "ヒットの<strong>前</strong>: セッター（P4）とミドル（P3）が、配置ルールが許す限り<strong>最も左に</strong>位置取る。このシフトがレシーブするOHのためにゾーン6を空ける。"
       },
       "s2": {
-        "title": "2. Serve + bump by the OH in P6",
-        "description": "Serve to the central zone 6. The OH in P6 calls and bumps in the zone freed by the setter's shift. Three receivers: libero, OH and opposite (on the edge)."
+        "title": "2. サーブ＋P6 OHのアンダーパス",
+        "description": "中央ゾーン6へのサーブ。P6のOHが声を出し、セッターのシフトで空けられたゾーンでアンダーパスする。レシーバーは3人: リベロ、OH、オポジット（端で）。"
       },
       "s3": {
-        "title": "3. Penetration + OH* switch",
-        "description": "The setter rushes from P4 to zone 2-3. Simultaneously, the OH* in P2 crosses over to P4 to attack. The middle repositions in zone 3."
+        "title": "3. 潜り込み＋OH*スイッチ",
+        "description": "セッターがP4からゾーン2-3へ駆け出す。同時にP2のOH*がP4へクロスして攻撃する。ミドルがゾーン3に再配置される。"
       },
       "s4": {
-        "title": "4. Ball available for OH* in zone 4",
-        "description": "The set arrives for the OH* who has completed his crossover. With only 2 hitters in front (OH* + middle), the main option is the left wing."
+        "title": "4. ゾーン4のOH*が利用できるボール",
+        "description": "クロスオーバーを完了したOH*へトスが到着。前衛アタッカーが2人だけ（OH*＋ミドル）のため、主な選択肢は左サイドとなる。"
       },
       "s5": {
-        "title": "5. RESET — back to the shift",
-        "description": "All players resume the left shift for the next serve in P4 rotation."
+        "title": "5. リセット — シフトに戻る",
+        "description": "P4ローテの次のサーブに向けて全員が左へのシフトを再開する。"
       }
     },
     "summary": {
       "keyPoints": [
-        "In P4, the setter and middle MUST shift left at the serve.",
-        "This shift opens zone 6 for the OH reception at P6.",
-        "Setter↔OH* switch mandatory during the set.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "P4ではセッターとミドルがサーブ時に必ず左へずれる。",
+        "このシフトでゾーン6が空き、P6でOHのレセプションが可能になる。",
+        "トスの間にセッター↔OH*スイッチが必須。",
+        "オポジット（P1）はレセプションせず、バックロウ攻撃に備える。"
       ],
       "commonMistakes": [
-        "Shift forgotten → reception conflict in zone 6.",
-        "Switch too late → OH* attacks at P2 (wrong side).",
-        "Opposite who receives → loses the back-row attack option."
+        "シフトを忘れる → ゾーン6でレセプションが衝突する。",
+        "スイッチが遅すぎる → OH*がP2（誤った側）で攻撃する。",
+        "オポジットがレセプションする → バックロウ攻撃の選択肢を失う。"
       ]
     }
   },
   "6v6-reception-semi-circle": {
-    "title": "Reception · semi-circle",
-    "shortDescription": "Reception in an arc open toward the server, equidistant. U15-U18 stage.",
-    "contextLabel": "5-1 · Semi-circle · U15-U18",
+    "title": "レセプション · 半円",
+    "shortDescription": "サーバーに対して開いた弧状のレセプション、等距離。U15-U18の段階。",
+    "contextLabel": "5-1 · 半円 · U15-U18",
     "players": {
-      "P": "Setter (hidden)",
-      "R4a": "Left OH",
-      "C": "Middle",
-      "L": "Libero",
-      "R4b": "Right OH",
-      "Op": "Opposite",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（隠れている）",
+      "R4a": "左OH",
+      "C": "ミドル",
+      "L": "リベロ",
+      "R4b": "右OH",
+      "Op": "オポジット",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. Semi-circular arc",
-        "description": "The 5 receivers form an arc equidistant from the server. All oriented toward the setter hidden at P1. The middle stays in reception (vs out in the 3-receiver formation)."
+        "title": "1. 半円形の弧",
+        "description": "5人のレシーバーがサーバーから等距離の弧を形成。全員がP1に隠れたセッターの方を向く。ミドルもレセプションに参加する（3人レセプションでは外れる）。"
       },
       "s2": {
-        "title": "2. Serve + common read",
-        "description": "Lofted serve to the central zone. All players read in the same direction. The middle calls his ball — it's his zone in the arc."
+        "title": "2. サーブ＋共通の読み",
+        "description": "中央ゾーンへの高いサーブ。全員が同じ方向に読む。ミドルが自分のボールを宣告 — 弧の中で彼のゾーンだ。"
       },
       "s3": {
-        "title": "3. Penetration + high set",
-        "description": "The setter leaves his hiding spot as the ball rises. He arrives at the target in zone 2-3 and distributes to the left wing where the left OH has already started his approach."
+        "title": "3. 潜り込み＋高いトス",
+        "description": "ボールが上がるとセッターが隠れ場所を離れる。ゾーン2-3のターゲットに到着し、すでに助走を始めた左OHのために左サイドへ配球する。"
       },
       "s4": {
-        "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4. The left OH is in position to hit. Classic, readable distribution — typical of the U15-U18 learning stage."
+        "title": "4. ゾーン4の利用可能なボール",
+        "description": "トスがゾーン4に到着。左OHが打点に入る。読みやすい標準的な配球 — U15-U18の学習段階に典型的だ。"
       },
       "s5": {
-        "title": "5. RESET — back to the arc",
-        "description": "Everyone returns to the semi-circular arc for the next serve."
+        "title": "5. リセット — 弧に戻る",
+        "description": "次のサーブに向けて全員が半円形の弧に戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "Semi-circular arc = intermediate stage between W and 3-receiver reception.",
-        "The 5 players equidistant from the server → homogeneous coverage.",
-        "Suited to youth teams (U15-U18) learning specialization.",
-        "Keeps a middle in reception (vs 3-receiver where he is out)."
+        "半円形の弧 = Wと3人レセプションの中間段階。",
+        "5人がサーバーから等距離 → 均一なカバー。",
+        "専門化を学ぶジュニア（U15-U18）に適する。",
+        "ミドルがレセプションに残る（3人レセプションでは外れる）。"
       ],
       "commonMistakes": [
-        "Arc too open to the sides → holes in the center.",
-        "Players too far from the server → late reaction to fast serves.",
-        "Conflict with the setter who also wants to receive."
+        "弧がサイドに開きすぎる → 中央に穴。",
+        "選手がサーバーから離れすぎる → 速いサーブに反応が遅れる。",
+        "セッターも受けようとして衝突する。"
       ]
     }
   },
   "6v6-reception-w": {
-    "title": "Reception · W (5 receivers)",
-    "shortDescription": "W formation: 5 players except the setter. Suited to beginners and the 4-2 system.",
-    "contextLabel": "4-2 · W · Beginners / U13",
+    "title": "レセプション · W（5人レシーバー）",
+    "shortDescription": "Wフォーメーション: セッター以外の5人。初級者と4-2システムに向く。",
+    "contextLabel": "4-2 · W · 初級 / U13",
     "players": {
-      "P": "Setter (out)",
-      "R4a": "Front left",
-      "R4b": "Front right",
-      "C": "Middle player",
-      "A1": "Left back",
-      "A2": "Right back",
-      "OPP_SRV": "Opposing server"
+      "P": "セッター（外）",
+      "R4a": "前衛左",
+      "R4b": "前衛右",
+      "C": "ミドル選手",
+      "A1": "左後衛",
+      "A2": "右後衛",
+      "OPP_SRV": "相手サーバー"
     },
     "steps": {
       "s1": {
-        "title": "1. W formation",
-        "description": "W layout: 2 front players at mid-court, 1 middle player in the center, 2 backs deep. The setter is already out at the net at P2 (4-2 system). Each player defends a small, well-defined zone."
+        "title": "1. Wフォーメーション",
+        "description": "W配置: 前衛2人が中央コートに、ミドル選手が中央、後衛2人が深く。セッターはすでにP2のネット際で外れる（4-2システム）。各選手が小さく明確に区切られたゾーンを守る。"
       },
       "s2": {
-        "title": "2. Serve + middle player calls",
-        "description": "Lofted serve to the central zone. The middle player calls \"Mine!\" because the ball lands in the central pocket of the W, equidistant from the front players."
+        "title": "2. サーブ＋ミドル選手の声出し",
+        "description": "中央ゾーンへの高いサーブ。ミドル選手が「マイン!」と声を出す — ボールがWの中央ポケット、前衛から等距離に落ちるからだ。"
       },
       "s3": {
-        "title": "3. High set to zone 4",
-        "description": "Bump aimed at zone 2 where the setter already waits at the net (no penetration in 4-2). He distributes a lofted set to zone 4. The front-left triggers his approach."
+        "title": "3. ゾーン4への高いトス",
+        "description": "ネット際で待つセッター（4-2では潜り込みなし）がいるゾーン2へアンダーパス。彼はゾーン4へ高いトスを送る。前衛左が助走を始動する。"
       },
       "s4": {
-        "title": "4. Ball available to the hitter",
-        "description": "The ball arrives in zone 4. The front-left takes his last steps. In 4-2, offensive options are limited (2 hitters in front), but the simplicity of the system compensates."
+        "title": "4. アタッカーが利用できるボール",
+        "description": "ボールがゾーン4に到着。前衛左が最後のステップを踏む。4-2では攻撃選択肢が限定的（前衛アタッカー2人）だが、システムのシンプルさが補う。"
       },
       "s5": {
-        "title": "5. RESET — back to W formation",
-        "description": "Everyone returns to their zone in the W for the next serve."
+        "title": "5. リセット — Wフォーメーションに戻る",
+        "description": "次のサーブに向けて全員が自分のゾーンに戻る。"
       }
     },
     "summary": {
       "keyPoints": [
-        "W formation = 5 receivers, the setter steps out.",
-        "Small individual zones → less doubt, few conflicts.",
-        "Ideal in U13/U15 and in the 4-2 system (beginners).",
-        "Drawback: specialized hitters are constrained in reception."
+        "Wフォーメーション = レシーバー5人、セッターは外れる。",
+        "個別のゾーンが小さい → 迷いが少なく、衝突がほぼない。",
+        "U13/U15や4-2システム（初級）に最適。",
+        "欠点: 専門のアタッカーがレセプションに縛られる。"
       ],
       "commonMistakes": [
-        "Central conflict between middle player and front players → call mandatory.",
-        "Players too frozen in their zone → ball between 2 zones lost.",
-        "Setter staying in reception → impossible to make the 2nd touch."
+        "ミドル選手と前衛選手の間の中央衝突 → 声出しが必須。",
+        "ゾーンに固まりすぎる → 2つのゾーンの間のボールを失う。",
+        "セッターがレセプションに残る → 2本目を取れない。"
       ]
     }
   }
