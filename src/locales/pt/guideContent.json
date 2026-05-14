@@ -1,3 +1,1715 @@
 {
-  "_note": "As traduções do conteúdo de cada guia ficam inline nos componentes do guia através de chamadas t()."
+  "attaque": {
+    "goldenRule": {
+      "mantra": "CORRIDA LENTA → RÁPIDA → POWER STEP → CLOSING → SALTO VERTICAL → BRAÇO ESTENDIDO À FRENTE → SNAP DO PUNHO",
+      "body": "A potência vem da cadeia cinética completa, não apenas do braço. Uma corrida de balanço ritmada com os dois últimos passos rápidos gera 70% da potência final."
+    },
+    "phases": {
+      "title": "As 5 fases do remate",
+      "items": [
+        { "name": "Iniciação", "desc": "Leitura do passe e decisão da corrida de balanço" },
+        { "name": "Wind-up", "desc": "Início da corrida de balanço" },
+        { "name": "Cocking", "desc": "Cotovelo acima do ombro, mão atrás da orelha — posição de potência" },
+        { "name": "Aceleração", "desc": "Rotação sequencial: ancas → tronco → ombro → cotovelo → punho" },
+        { "name": "Contacto + acompanhamento", "desc": "Snap do punho, a mão \"agarra\" a bola por cima → topspin" }
+      ],
+      "footerLabel": "Contacto ideal",
+      "footer": "Ligeiramente à frente do ombro que bate, nunca atrás da cabeça (perda de potência + risco de lesão). Distância à rede no impulso: 30-50 cm no mínimo."
+    },
+    "approach": {
+      "title": "Corrida de balanço",
+      "three": {
+        "title": "3 passos — Iniciante",
+        "sub": "Esquerda-direita-esquerda (destro)",
+        "items": [
+          { "label": "Passo 1 (esquerdo)", "text": "Passo curto direccional, orientação para o ataque" },
+          { "label": "Passo 2 (direito)", "text": "Power step — longo e baixo, calcanhar primeiro, descida do centro de gravidade" },
+          { "label": "Passo 3 (esquerdo)", "text": "Closing step — curto, trava a translação horizontal e converte-a em vertical" }
+        ]
+      },
+      "four": {
+        "title": "4 passos — Padrão de competição",
+        "sub": "Direita-esquerda-direita-esquerda (destro)",
+        "items": [
+          { "label": "Passo 1 (direito)", "text": "Passo de observação, ritmo lento" },
+          { "label": "Passo 2 (esquerdo)", "text": "Aceleração" },
+          { "label": "Passo 3 (direito)", "text": "Power step — o mais importante, longo e baixo" },
+          { "label": "Passo 4 (esquerdo)", "text": "Closing step paralelo à rede" }
+        ],
+        "rule": "Regra de ouro: os dois últimos passos são os mais rápidos — slow → fast."
+      }
+    },
+    "timing": {
+      "title": "Timing consoante o tipo de passe",
+      "headerType": "Tipo de passe",
+      "headerWhen": "Quando começar a corrida de balanço",
+      "rows": [
+        { "type": "Bola alta (3.º tempo)", "timing": "Começar TARDE — quando a bola sai das mãos do distribuidor" },
+        { "type": "2.º tempo (Hut/Go)", "timing": "Começar quando o passe chega ao distribuidor" },
+        { "type": "1.º tempo (Quick)", "timing": "Começar CEDO — já no ar quando o distribuidor toca na bola" },
+        { "type": "Slide", "timing": "Começar no momento em que o distribuidor recebe o passe" }
+      ]
+    },
+    "types": {
+      "title": "Tipos de ataque por posição",
+      "keyPointsLabel": "Pontos-chave",
+      "shotsLabel": "Escolha de remates",
+      "items": [
+        {
+          "id": "outside",
+          "name": "Ataque na zona 4 (Outside / OH)",
+          "position": "Ponta esquerda",
+          "description": "Base de aprendizagem do ataque. O ponta (Outside Hitter) recebe o maior volume de bolas — é a opção \"segura\" do distribuidor. Corrida a 45° a partir da esquerda.",
+          "keyPoints": [
+            "Corrida de 4 passos a ~45° em relação à rede",
+            "Chamada a 30-50 cm da rede",
+            "Passe \"Hut\" (3.º tempo alto) ou \"Go\" (2.º tempo rápido)",
+            "Saltar VERTICALMENTE — não em direção à rede",
+            "Contacto ligeiramente à frente do ombro que bate"
+          ],
+          "shots": ["Cross-court (diagonal)", "Line shot (linha lateral)", "Cut shot (ângulo curto <3 m)", "Tip (finta)", "Roll shot (amorti topspin)"]
+        },
+        {
+          "id": "middle",
+          "name": "Ataque central (Quick / 1.º tempo)",
+          "position": "Frente centro",
+          "description": "O ataque mais rápido. O central está no ar ANTES ou no momento em que o distribuidor toca na bola. Passe muito baixo (30-50 cm) e muito curto.",
+          "keyPoints": [
+            "Iniciar a corrida CEDO — já no ar no passe do distribuidor",
+            "Corrida de 2-3 passos, braço já armado na subida",
+            "Conceito \"Ghost Middle\": mesmo que a bola não chegue, correr o quick a fundo para fixar o bloco adversário → liberta os pontas",
+            "Contacto a 30-50 cm acima da rede",
+            "Transição rápida: bloco → corrida em 1-2 segundos"
+          ],
+          "shots": ["Quick à frente do distribuidor (\"1\")", "Back-1 atrás do distribuidor", "Slide (partida atrás ao longo da rede)", "31/Gap (desalinhado entre distribuidor e antena)"]
+        },
+        {
+          "id": "opposite",
+          "name": "Ataque na zona 2 (Oposto)",
+          "position": "Ponta direita",
+          "description": "O oposto ataca a partir da zona 2. Ideal para canhotos (ombro que bate do lado da antena direita = janela máxima). Para destros: rotação do tronco mais pronunciada, posicionar-se mais afastado da antena.",
+          "keyPoints": [
+            "Corrida simétrica à do ponta mas a partir da direita",
+            "Terminar com o polegar para baixo para o cut shot",
+            "Solução \"release\" do distribuidor quando a receção é deficiente",
+            "Ataque de fundo a partir de P1 (zona D) quando em back-row"
+          ],
+          "shots": ["Cross-court", "Line shot", "Pipe/D a partir do back-row", "Cut shot diagonal para a zona 5"]
+        },
+        {
+          "id": "backrow",
+          "name": "Ataque de fundo (Back-row / Pipe)",
+          "position": "Trás centro ou direito",
+          "description": "Ataque a partir da zona de trás. O impulso TEM de ser feito ATRÁS da linha de ataque (3 m). Permite ter 4 atacantes contra 3 bloqueadores.",
+          "keyPoints": [
+            "Chamada obrigatoriamente atrás da linha de ataque (caso contrário, falta)",
+            "Aterragem na zona da frente após salto legal = OK",
+            "Pipe: a partir de P6, passe atrás do quick (BIC = mesmo acima do quick)",
+            "Zona D: a partir de P1, frequentemente ataque-refúgio do oposto"
+          ],
+          "shots": ["Pipe (trás-centro)", "Zona D (trás-direito)", "Zona A (trás-esquerdo, raro)", "Finta em passe mau"]
+        }
+      ]
+    },
+    "special": {
+      "title": "Ataques especiais",
+      "items": [
+        {
+          "name": "Finta / Tip",
+          "level": "beginner-intermediate",
+          "levelLabel": "Iniciante → Intermédio",
+          "desc": "Corrida IDÊNTICA ao remate (disfarce crucial); no contacto, abrandar o braço e colocar a bola com toque de dedos. Direção: zona vazia identificada ANTES do salto."
+        },
+        {
+          "name": "Roll shot / Amorti topspin",
+          "level": "intermediate",
+          "levelLabel": "Intermédio",
+          "desc": "Batida a velocidade reduzida (~50-70%) com forte topspin para bola que cai curta atrás do bloco. Mais difícil de ler que a finta porque é mais rápida."
+        },
+        {
+          "name": "Cut shot / Ângulo curto",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermédio+",
+          "desc": "Ângulo agudo para a zona 1 (a partir da 4) ou zona 5 (a partir da 2). Terminar com o polegar para baixo, mão que corta lateralmente através da bola. Bater no lado da bola, não em cima."
+        },
+        {
+          "name": "Tooling / Wipe",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermédio+",
+          "desc": "Fazer sair a bola voluntariamente pelas mãos do bloco. Em passe colado à rede, saltar verticalmente e empurrar a bola lateralmente, usando a mão exterior do bloqueador como \"calha\"."
+        }
+      ]
+    },
+    "errors": {
+      "title": "Erros frequentes",
+      "subtitle": "A evitar",
+      "items": [
+        { "label": "Timing da corrida", "text": "Demasiado cedo: re-salto sem potência. Demasiado tarde: braço esticado para trás no contacto." },
+        { "label": "Ordem errada dos pés", "text": "Terminar sempre em esquerda-direita (destro) — os dois pés quase em simultâneo." },
+        { "label": "Sem topspin", "text": "Mão plana = sem snap = bola demasiado longa. \"Agarrar\" a bola por cima." },
+        { "label": "Falta de rede", "text": "Salto para a frente em passe colado. Saltar VERTICAL, não para a frente." },
+        { "label": "Falta de back-row", "text": "Pé sobre ou à frente da linha de ataque (3 m) na descolagem." },
+        { "label": "Aterragem num só pé", "text": "Salvo para o slide: aterrar com os dois pés para proteger o joelho (risco de LCA)." }
+      ]
+    },
+    "videos": {
+      "title": "Recursos vídeo",
+      "items": [
+        { "title": "Como atacar — 3 etapas (Sikana)", "url": "https://www.youtube.com/watch?v=3aQgfk0VtEA" },
+        { "title": "O remate no voleibol (CEPSUM)", "url": "https://www.youtube.com/watch?v=Gn1Otje3beg" },
+        { "title": "Corrida de ataque detalhada", "url": "https://www.youtube.com/watch?v=ub4XoCJMUzU" },
+        { "title": "A Sequência do Seb — tudo sobre o remate", "url": "https://www.youtube.com/watch?v=JvxZgViw_os" },
+        { "title": "Saltar para atacar (Sikana)", "url": "https://www.youtube.com/watch?v=6GOHF5cNIKs" },
+        { "title": "Atacar colocado (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
+      ]
+    }
+  },
+  "contre": {
+    "goldenRule": {
+      "mantra": "BOLA → DISTRIBUIDOR → BOLA → OMBRO DO REMATADOR → SALTO → PENETRAÇÃO",
+      "body": "Com prática regular e atenção especial ao timing, melhorará consideravelmente os seus blocos. Mais vale um bloco bem cronometrado com impulsão média do que um salto muito alto mal cronometrado."
+    },
+    "fundamentals": {
+      "title": "Os fundamentos do bloco",
+      "html": "O bloco é um gesto defensivo crucial que pode tornar-se uma arma ofensiva. A chave reside no <strong>timing perfeito</strong> e numa boa leitura do jogo."
+    },
+    "timingSteps": {
+      "title": "O timing: a chave do sucesso",
+      "items": [
+        {
+          "title": "Observe o atacante, não a bola",
+          "desc": "Olhe para os ombros e para o braço do atacante para antecipar o momento e a direção da batida."
+        },
+        {
+          "title": "Salte DEPOIS do atacante",
+          "desc": "Espere que o atacante esteja na sua fase de impulsão. Se saltar ao mesmo tempo ou antes, descerá demasiado cedo."
+        },
+        {
+          "title": "O desfasamento ideal: 0,2 a 0,3 segundos",
+          "desc": "Conte mentalmente \"UM\" quando o atacante salta, depois salte imediatamente a seguir. Esta fração de segundo é crucial."
+        },
+        {
+          "title": "Penetre acima da rede",
+          "desc": "No ponto mais alto do salto, empurre as mãos e os braços para a frente e para baixo — não apenas para cima."
+        }
+      ]
+    },
+    "types": {
+      "title": "Os diferentes tipos de bloco",
+      "objectiveLabel": "Objetivo",
+      "items": [
+        {
+          "name": "O bloco ofensivo",
+          "objective": "Devolver a bola diretamente para o campo adversário",
+          "points": [
+            { "label": "Posição", "text": "Mãos afastadas, dedos esticados e abertos" },
+            { "label": "Ação", "text": "Penetrar ao máximo acima da rede, braços esticados para a frente" },
+            { "label": "Alvo", "text": "Contraia os punhos para empurrar a bola para o chão adversário" },
+            { "label": "Quando", "text": "Quando está bem colocado e leu o ataque" }
+          ]
+        },
+        {
+          "name": "O bloco de cobertura",
+          "objective": "Travar a bola para permitir que a sua defesa recupere",
+          "points": [
+            { "label": "Posição", "text": "Mãos juntas, palmas viradas para si" },
+            { "label": "Ação", "text": "Absorver o impacto em vez de empurrar" },
+            { "label": "Resultado", "text": "A bola cai suavemente no seu campo para ser jogada" },
+            { "label": "Quando", "text": "Quando está atrasado ou mal colocado" }
+          ]
+        },
+        {
+          "name": "O bloco de fixação",
+          "objective": "Impedir certas zonas de ataque",
+          "points": [
+            { "label": "Posição", "text": "Bloquear uma zona específica (linha ou diagonal)" },
+            { "label": "Ação", "text": "Orientar as mãos para a zona a proteger" },
+            { "label": "Tática", "text": "Forçar o atacante a bater numa zona onde os seus defensores estão preparados" },
+            { "label": "Quando", "text": "Em acordo com a sua defesa de fundo" }
+          ]
+        },
+        {
+          "name": "O bloco a 2 ou 3 (bloco coletivo)",
+          "objective": "Criar um muro impenetrável",
+          "points": [
+            { "label": "Coordenação", "text": "Saltar juntos no mesmo momento" },
+            { "label": "Colocação", "text": "Os bloqueadores exteriores posicionam-se em função do bloqueador central" },
+            { "label": "Mãos", "text": "Juntar as mãos com as dos parceiros (sem espaço)" },
+            { "label": "Comunicação", "text": "Um bloqueador anuncia \"linha\" ou \"diagonal\" para coordenar" }
+          ]
+        }
+      ]
+    },
+    "timingTips": {
+      "title": "Dicas para melhorar o seu timing",
+      "items": [
+        { "label": "Exercício do \"um-dois\"", "text": "No treino, diga \"UM\" quando o atacante salta, \"DOIS\" quando salta. Cria o desfasamento necessário." },
+        { "label": "Olhe para os ombros", "text": "A orientação dos ombros do atacante indica a direção da batida." },
+        { "label": "Analise o passe", "text": "Um passe alto = mais tempo. Um passe tenso = reação rápida." },
+        { "label": "Posicione-se cedo", "text": "Mais vale estar em posição de espera do que correr no último momento." },
+        { "label": "Trabalhe a impulsão", "text": "Quanto mais alto saltar, maior margem de erro tem no timing." }
+      ]
+    },
+    "visualSequence": {
+      "title": "Sequência visual de elite",
+      "intro": "Os melhores bloqueadores não olham para a bola — seguem uma sequência precisa:",
+      "chips": ["BOLA", "DISTRIBUIDOR", "BOLA", "OMBRO DO REMATADOR"],
+      "items": [
+        { "label": "1. BOLA", "text": "Ver a bola sair em direção ao distribuidor" },
+        { "label": "2. DISTRIBUIDOR", "text": "Ler as mãos do distribuidor no momento do contacto — direção do passe" },
+        { "label": "3. BOLA", "text": "Acompanhar brevemente a bola para confirmar a direção" },
+        { "label": "4. OMBRO DO REMATADOR", "text": "Fixar o olhar no ombro do atacante — dá a direção da batida antes do contacto" }
+      ]
+    },
+    "timingByAttack": {
+      "title": "Timing preciso consoante o tipo de ataque",
+      "headerType": "Tipo de ataque",
+      "headerWhen": "Timing do salto do bloqueador",
+      "rows": [
+        { "type": "Quick / 1.º tempo (central)", "timing": "COM ou ligeiramente antes do hitter (commit block)" },
+        { "type": "Tensa / 2.º tempo ponta", "timing": "~0,1 s depois do hitter" },
+        { "type": "Bola alta ponta (3.º tempo)", "timing": "0,2–0,3 s depois do hitter" },
+        { "type": "Passe colado à rede", "timing": "COM o hitter" },
+        { "type": "Passe afastado da rede", "timing": "~0,5 s depois ou não saltar" },
+        { "type": "Slide (central)", "timing": "COM ou logo a seguir — acompanhar lateralmente" }
+      ]
+    },
+    "blockStyles": {
+      "title": "Read blocking vs Commit blocking",
+      "read": {
+        "label": "Read blocking — recomendado",
+        "body": "O bloqueador espera a decisão do distribuidor, lê a bola e o atacante, depois desloca-se. Posição \"bunch read\" (todos perto do centro, depois explosão para o pin).",
+        "points": [
+          "Estável e presente na maioria dos passes",
+          "Preserva ancas e joelhos",
+          "Adequado a todos os níveis amadores"
+        ]
+      },
+      "commit": {
+        "label": "Commit blocking — avançado/pro",
+        "body": "O central decide ANTES do release do distribuidor saltar com o quick. Anula o ataque rápido adversário, mas se o distribuidor passar para outro lado, o central fica completamente fora de jogo.",
+        "points": [
+          "Eficaz contra centrais dominantes",
+          "Risco elevado se o distribuidor se adaptar",
+          "Reservado a jogadores com excelente leitura"
+        ]
+      }
+    },
+    "jumpTechnique": {
+      "title": "A técnica de salto para o bloco",
+      "columns": [
+        {
+          "title": "Posição inicial",
+          "items": [
+            { "text": "Pés afastados à largura dos ombros" },
+            { "text": "Peso na parte da frente dos pés" },
+            { "text": "Joelhos ligeiramente fletidos" },
+            { "text": "Braços ao longo do corpo ou ligeiramente à frente" },
+            { "text": "Posição a cerca de 30–50 cm da rede" }
+          ]
+        },
+        {
+          "title": "A impulsão",
+          "items": [
+            { "label": "Passo lateral", "text": "Se precisar de se deslocar, use um passo lateral rápido" },
+            { "label": "Flita", "text": "Flita rapidamente as pernas (não desça demasiado)" },
+            { "label": "Balanço dos braços", "text": "Lance os braços para cima de forma explosiva" },
+            { "label": "Extensão completa", "text": "Estique completamente as pernas para maximizar a altura" }
+          ]
+        },
+        {
+          "title": "No ar",
+          "items": [
+            { "text": "Mantenha os braços esticados e firmes" },
+            { "text": "Mãos afastadas, dedos esticados e abertos" },
+            { "text": "Penetre acima da rede (sem toque na rede!)" },
+            { "text": "Contraia o tronco para se manter estável" }
+          ]
+        }
+      ]
+    },
+    "errors": {
+      "title": "Erros frequentes a evitar",
+      "subtitle": "Erros comuns",
+      "items": [
+        { "label": "Saltar demasiado cedo", "text": "Desce quando o atacante bate — espere mais!" },
+        { "label": "Olhar para a bola", "text": "Perde informação sobre o atacante — olhe para o jogador!" },
+        { "label": "Mãos demasiado moles", "text": "A bola ressalta no seu campo — estique e contraia os dedos!" },
+        { "label": "Saltar para a frente", "text": "Toca na rede — salte verticalmente!" },
+        { "label": "Baixar os braços demasiado cedo", "text": "Mantenha os braços levantados até voltar a cair." }
+      ]
+    },
+    "exercises": {
+      "title": "Exercícios de treino",
+      "items": [
+        {
+          "title": "Timing com parceiro",
+          "desc": "Um parceiro finge atacar (sem bola). Trabalha apenas o timing do seu salto. Repita 20 vezes."
+        },
+        {
+          "title": "Bloco em ataque fixo",
+          "desc": "Um atacante bate a partir de uma posição fixa. Concentre-se no timing e na técnica. Aumente progressivamente a velocidade."
+        },
+        {
+          "title": "Leitura de ombros",
+          "desc": "O atacante varia as batidas (linha/diagonal). Tente ler os ombros para antecipar a direção."
+        },
+        {
+          "title": "Deslocações + bloco",
+          "desc": "Trabalhe as deslocações laterais rápidas seguidas de um bloco. Simula situações de jogo."
+        }
+      ]
+    },
+    "proTips": {
+      "title": "Conselhos de pro",
+      "items": [
+        { "label": "Paciência", "text": "O bloco é uma das técnicas mais difíceis. Seja paciente consigo." },
+        { "label": "Repetição", "text": "A memória muscular cria-se com centenas de repetições." },
+        { "label": "Vídeo", "text": "Filme-se para analisar o seu timing e a sua técnica." },
+        { "label": "Observe os profissionais", "text": "Veja como os jogadores profissionais leem o jogo e cronometram os saltos." },
+        { "label": "Comece simples", "text": "Domine o bloco contra ataques lentos antes de passar aos ataques rápidos." }
+      ]
+    },
+    "videos": {
+      "title": "Recursos vídeo",
+      "items": [
+        { "title": "Aprender o bloco (Sikana)", "url": "https://www.youtube.com/watch?v=hJKueZn-tNQ" },
+        { "title": "O bloco no voleibol (CEPSUM)", "url": "https://www.youtube.com/watch?v=_MchJmDMn0E" },
+        { "title": "Exercício: saltar para bloquear", "url": "https://www.youtube.com/watch?v=GDS8PoWxO6Q" },
+        { "title": "Exercício: bloquear um ataque", "url": "https://www.youtube.com/watch?v=S6TcodMWFz4" }
+      ]
+    }
+  },
+  "service": {
+    "goldenRule": {
+      "mantra": "",
+      "body": "80% dos erros de serviço vêm do lançamento (toss). Estabilizar o lançamento como prioridade antes de procurar potência."
+    },
+    "types": {
+      "title": "TIPOS DE SERVIÇO",
+      "biomechanicsLabel": "BIOMECÂNICA-CHAVE",
+      "stepsLabel": "ETAPAS DE EXECUÇÃO (DESTRO)",
+      "errorsLabel": "✗ ERROS FREQUENTES",
+      "exercisesLabel": "★ EXERCÍCIOS",
+      "videosLabel": "VÍDEOS",
+      "items": [
+        {
+          "id": "cuillere",
+          "name": "Serviço por baixo",
+          "level": "beginner",
+          "levelLabel": "Iniciante",
+          "tagline": "underhand — balanço pendular abaixo da cintura",
+          "description": "Gesto pendular do braço que bate abaixo da cintura. Legal em todos os níveis, recomendado a iniciantes ou em caso de lesão do ombro. Quase inexistente acima do nível regional adulto.",
+          "biomechanics": [
+            "Cadeia cinética curta: bacia → ombro → braço → mão",
+            "Movimento pendular sem rotação do tronco",
+            "Transferência de peso: pé de trás → pé da frente",
+            "Contacto: base da mão ou punho fechado sob o centro da bola"
+          ],
+          "steps": [
+            "Pé esquerdo à frente, peso na perna de trás",
+            "Mão esquerda segura a bola à altura da bacia, no eixo do braço",
+            "Braço direito armado para trás, palma aberta ou punho fechado",
+            "Largar a bola mesmo antes do contacto — não lançar",
+            "Balanço para a frente, batida sob o centro da bola",
+            "Braço acompanha e aponta para o alvo, peso transferido para o pé da frente"
+          ],
+          "errors": [
+            { "label": "Bola segura demasiado baixa ou afastada", "text": "Manter a bola à altura da bacia, no eixo do braço que bate" },
+            { "label": "Bater com os dedos", "text": "Usar a base da mão — superfície mais larga e estável" },
+            { "label": "Lançar demasiado alto", "text": "Apenas largar a bola, não a lançar em altura" },
+            { "label": "Punho mole", "text": "Travar o braço no contacto para um impacto limpo" }
+          ],
+          "exercises": [
+            "Bowling-arcos: apontar a zonas a 4 m da rede",
+            "10 serviços a 4 m, depois recuar 1 m por série até à linha de fundo",
+            "Alvos de 4×3 m no chão — objetivo de 50% de precisão"
+          ],
+          "videos": [
+            { "title": "Serviço por baixo + serviço por cima (Sikana)", "url": "https://www.youtube.com/watch?v=xl6twpn3Qs8" },
+            { "title": "Como servir por baixo", "url": "https://www.youtube.com/watch?v=MWna318SrKo" }
+          ]
+        },
+        {
+          "id": "float",
+          "name": "Serviço flutuante em apoio",
+          "level": "intermediate",
+          "levelLabel": "Intermédio",
+          "tagline": "standing float — serviço por defeito de 90% dos amadores",
+          "description": "Serviço sem rotação que produz uma trajetória imprevisível (efeito \"knuckleball\"). A uma velocidade crítica (~12-13 m/s), turbilhões assimétricos criam forças de sustentação laterais aleatórias. É o serviço a dominar prioritariamente.",
+          "biomechanics": [
+            "Cadeia cinética completa: pernas → bacia → tronco → ombro → cotovelo → mão",
+            "Posição \"arco e flecha\": cotovelo alto acima do ombro, mão atrás da orelha",
+            "Punho BLOQUEADO e firme — condição absoluta para o efeito float",
+            "Contacto: base da mão no centro da bola",
+            "\"Punch and freeze\": acompanhamento CURTO — a mão para imediatamente após o contacto"
+          ],
+          "steps": [
+            "Corpo a 45° em relação à rede, pés afastados à largura dos ombros",
+            "Braço esquerdo esticado à frente do ombro, bola à altura da cabeça",
+            "Lançamento muito curto: \"colocar\" a bola 30-50 cm acima do ombro — a bola não roda",
+            "Pé esquerdo avança para o alvo logo após a colocação da bola",
+            "Extensão completa do braço no contacto, mão firme e plana",
+            "FREEZE: paragem imediata do gesto após o contacto — sem qualquer acompanhamento do braço"
+          ],
+          "errors": [
+            { "label": "Acompanhamento prolongado do braço", "text": "Causa #1 de falha: o acompanhamento adiciona spin que mata o float — freeze imediato" },
+            { "label": "Lançamento demasiado alto", "text": "A bola cai na rede — lançamento curto, apenas 30-50 cm" },
+            { "label": "Lançamento que roda", "text": "Induz spin na bola — colocar a bola, não a lançar" },
+            { "label": "Contacto só com a palma", "text": "Usar a base da mão (parte inferior da palma) para uma superfície plana" }
+          ],
+          "exercises": [
+            "Toss & Drop: marcar uma zona no chão, lançar 20 vezes sem bater — objetivo de 18/20 sobre a marca",
+            "Parede \"punch and freeze\" a 3 m: trabalhar a paragem imediata do gesto",
+            "5 serviços consecutivos sem rotação validados visualmente por um parceiro"
+          ],
+          "videos": [
+            { "title": "Servir flutuante em 4 minutos", "url": "https://www.youtube.com/watch?v=0z2_R2cMU7g" },
+            { "title": "Melhorar o seu serviço flutuante", "url": "https://www.youtube.com/watch?v=mdEXHKNjfQ8" },
+            { "title": "Serviço: flutuante + por cima (CEPSUM)", "url": "https://www.youtube.com/watch?v=_e00ogqoNZw" }
+          ]
+        },
+        {
+          "id": "jumpfloat",
+          "name": "Serviço flutuante em salto",
+          "level": "advanced",
+          "levelLabel": "Avançado",
+          "tagline": "jump float — padrão das elites femininas",
+          "description": "Float com corrida de balanço curta e salto. Ganha em altura de contacto, velocidade e ângulo de descida. Tornou-se o padrão das elites femininas (86% dos serviços no profissional feminino segundo estudos recentes). Menos arriscado que o jump topspin, mantendo-se mais desestabilizador do que o float em apoio.",
+          "biomechanics": [
+            "Corrida de balanço curta (2 a 4 passos)",
+            "Braço em posição arco-e-flecha durante o salto — diferente do remate em que os braços propulsionam",
+            "O balanço dá velocidade à bola, não o braço sozinho",
+            "Contacto em ponto alto ligeiramente à frente da cabeça",
+            "Punho bloqueado + freeze idênticos ao float em apoio"
+          ],
+          "steps": [
+            "Posição 2-3 m atrás da linha, bola na mão esquerda",
+            "Passo 1 (direito) de arranque, braços descontraídos",
+            "Passo 2 (esquerdo): lançar a bola a ~1,5 m de altura, sem rotação",
+            "Passo 3 + hop: chamada com os dois pés atrás da linha — braços sobem em arco-e-flecha",
+            "Salto vertical e ligeiramente para a frente, corpo contraído",
+            "Batida com braço estendido, base da mão no centro da bola",
+            "FREEZE imediato — aterragem dentro do campo"
+          ],
+          "errors": [
+            { "label": "Lançamento demasiado alto", "text": "Reflexo de jump spin — manter o lançamento curto como no float em apoio" },
+            { "label": "Braços que oscilam como no ataque", "text": "Torna-se um remate com spin — manter a posição arco-e-flecha" },
+            { "label": "Acompanhamento prolongado", "text": "Igual ao float em apoio: freeze obrigatório" },
+            { "label": "Falta de pé na descolagem", "text": "Verificar que a chamada se faz atrás da linha de fundo" }
+          ],
+          "exercises": [
+            "Dominar o float em apoio (freeze sólido) antes de juntar a corrida",
+            "Corrida isolada sem bater: trabalhar o lançamento estável a baixa altura",
+            "Jump float a velocidade controlada: a regularidade antes da potência"
+          ],
+          "videos": [
+            { "title": "Serviço saltado flutuante — INF'AUX ENTRAÎNEURS (Bretanha)", "url": "https://www.youtube.com/watch?v=P5xCgV7nfO8" },
+            { "title": "Jump float + rematado (Volleyball Canada)", "url": "https://www.youtube.com/watch?v=X1Mq9K90FCk" }
+          ]
+        },
+        {
+          "id": "jumpspin",
+          "name": "Serviço topspin em salto",
+          "level": "competition",
+          "levelLabel": "Competição",
+          "tagline": "jump serve — remate a partir de trás da linha",
+          "description": "\"Remate a partir de trás da linha\": bola batida em velocidade máxima com topspin (80-100 km/h em clube forte). Maior potencial de ace, mas também a maior taxa de erro. Reservado a quem tenha investido 1000+ repetições no treino.",
+          "biomechanics": [
+            "Corrida de balanço de 3-4 passos idêntica a um remate de back-row",
+            "Lançamento alto (1-1,5 m à frente) com ligeiro spin frontal induzido",
+            "Rotação sequencial: bacia → tronco → ombro → cotovelo → punho",
+            "Contacto na zona 10-11h da bola",
+            "Snap completo do punho para o topspin (~30 rotações/s na elite)",
+            "Acompanhamento completo — oposto do float"
+          ],
+          "steps": [
+            "Posição 3-4 m atrás da linha, bola na mão que bate",
+            "Passo 1 (direito) + lançamento alto com ligeiro topspin induzido",
+            "Passo 2 (esquerdo): aceleração",
+            "Passo 3 (direito): power step longo, centro de gravidade que desce",
+            "Passo 4 (esquerdo): chamada, braços lançam-se para cima",
+            "Salto explosivo vertical-frontal",
+            "Batida no topo: mão passa por cima da bola (10h), palma e depois dedos que rolam",
+            "Snap do punho completo + acompanhamento — aterragem 1-2 m dentro do campo"
+          ],
+          "errors": [
+            { "label": "Lançamento demasiado baixo ou atrás", "text": "Causa #1 de bola na rede — o lançamento deve ser alto e à frente" },
+            { "label": "Lançamento demasiado à frente", "text": "Falta de pé — respeitar os limites da zona de serviço" },
+            { "label": "Falta de snap do punho", "text": "A bola sai longa sem spin descendente" },
+            { "label": "Uso em jogo sem preparação", "text": "1000 repetições no treino primeiro — regra de ouro" }
+          ],
+          "exercises": [
+            "Regra de ouro: 1000 repetições no treino antes de usar em jogo",
+            "Jump spin \"control\": lançamento mais baixo, velocidade reduzida para apontar a zonas precisas",
+            "Filmar o seu lançamento: 80% dos erros vêm da colocação do toss"
+          ],
+          "videos": [
+            { "title": "Serviço rematado potente + flutuante (Sikana)", "url": "https://www.youtube.com/watch?v=50TUVvPLKr8" }
+          ]
+        }
+      ]
+    },
+    "zones": {
+      "title": "ZONAS-ALVO & TÁTICA",
+      "headerZone": "ZONA ADVERSÁRIA",
+      "headerEffect": "EFEITO TÁTICO",
+      "rows": [
+        { "zone": "Zona 1 — trás direito", "effect": "Bloqueia a saída do distribuidor no sistema 5-1" },
+        { "zone": "Zona 2 — frente direito curto", "effect": "Quebra o arranque do lado direito, exclui o líbero" },
+        { "zone": "Zona 3 — frente centro curto", "effect": "Bloqueia o central, quebra os ataques rápidos" },
+        { "zone": "Zona 4 — frente esquerdo curto", "effect": "Força o atacante principal a passar E atacar" },
+        { "zone": "Zona 5 — trás esquerdo profundo", "effect": "Diagonal longa, taxa de erro elevada" },
+        { "zone": "Zona 6 — trás centro profundo", "effect": "Servir longo contra distribuidores baixos" }
+      ],
+      "tips": [
+        { "label": "As seams", "text": "Apontar ao espaço entre dois recetores é mais eficaz do que apontar a um jogador — a comunicação adversária é posta à prova." },
+        { "label": "Alternar curto/longo", "text": "Impede o distribuidor de saber quando recuar. O float curto (zonas 2-3-4) atrás da linha de ataque incomoda particularmente." },
+        { "label": "Métrica FBSO%", "text": "Um serviço que reduz o First Ball Side Out adversário de 70% para 45% sem fazer ace é um serviço muito eficaz." }
+      ]
+    },
+    "learningHierarchy": {
+      "label": "★ HIERARQUIA DE APRENDIZAGEM",
+      "footer": "Dominar cada nível antes de passar ao seguinte. <strong>A regularidade prevalece sobre a potência.</strong>"
+    }
+  },
+  "reception": {
+    "goldenRule": {
+      "body": "A manchete determina 60% do sucesso ofensivo de uma equipa. Sem boa receção, não há ataque rápido. A plataforma é passiva — as pernas são ativas."
+    },
+    "format": {
+      "title": "Formato de jogo",
+      "description": "Os <strong>sistemas de receção</strong>, o <strong>papel do distribuidor</strong> e os <strong>erros frequentes</strong> abaixo adaptam-se ao formato escolhido."
+    },
+    "readyPosition": {
+      "title": "Posição de base (ready position)",
+      "points": [
+        "Pés ligeiramente mais afastados do que os ombros, um pé ligeiramente avançado",
+        "Joelhos fletidos para o interior dos pés, ancas baixas, tronco inclinado a 30-45°",
+        "Costas direitas, peso na planta dos pés (calcanhares ligeiramente aliviados mas não levantados)",
+        "Braços DISSOCIADOS (não juntos), fletidos a 90-145°, à altura da cintura",
+        "Olhar no servidor desde o lançamento da bola"
+      ],
+      "errorLabel": "Erro principal",
+      "errorText": "ter os braços já juntos em plataforma antes da bola chegar — isso atrasa a deslocação e impede a escolha tardia manchete/mãos."
+    },
+    "platform": {
+      "title": "A plataforma",
+      "tips": [
+        { "title": "Sweet spot", "text": "A superfície de contacto ideal situa-se entre 2,5 e 15 cm acima dos punhos." },
+        { "title": "Cup and fold", "text": "Técnica recomendada: um punho fechado, a outra mão envolve por cima — polegares paralelos apontados para baixo." },
+        { "title": "Polegares para baixo", "text": "Apontar os polegares ao chão faz rodar os antebraços para fora e aperta a plataforma." },
+        { "title": "Nunca entrelaçar", "text": "NUNCA entrelaçar os dedos num serviço potente — risco de fratura." },
+        { "title": "O ângulo comanda", "text": "\"A bola vai para onde a plataforma olha\" — para receção profunda: plataforma a 45°; receção curta: plataforma mais paralela ao chão." }
+      ]
+    },
+    "steps": {
+      "title": "Execução — etapas-chave",
+      "items": [
+        "Ler o servidor: identificar o tipo de serviço antes do contacto.",
+        "Ready position com braços dissociados (NÃO juntos antecipadamente).",
+        "Ler a trajetória logo a partir da batida adversária.",
+        "Deslocar-se (passos laterais), chegar ATRÁS da bola antes de os braços se juntarem.",
+        "Build the platform early: juntar as mãos quando a bola chega, não cedo demais.",
+        "FREEZE: imobilizar-se mesmo antes do contacto, peso no pé da frente — manter 1-2 segundos.",
+        "Contacto no sweet spot, ombros orientados para o distribuidor-alvo.",
+        "Acompanhamento: bacia e ombros avançam para o alvo — sem swing dos braços."
+      ],
+      "freezeLabel": "O freeze",
+      "freezeText": "\"Pose for a picture\" — imobilizar-se completamente 1-2 segundos após o contacto. A 50-90 km/h, um defensor em movimento não consegue ajustar o ângulo. Imóvel, pode partir em qualquer direção."
+    },
+    "displacements": {
+      "title": "Deslocações",
+      "items": [
+        {
+          "name": "Lateral (passos laterais)",
+          "desc": "O pé do lado da bola parte primeiro. Passos laterais sem cruzar, ancas baixas. Chegar atrás da bola, reorientar-se para o alvo, freeze + plataforma no último momento. Para grandes distâncias: passos cruzados e depois pivot."
+        },
+        {
+          "name": "Frontal (bola curta)",
+          "desc": "Para serviços curtos ou tips. Termina muitas vezes com um avanço frontal (lunge): joelho a descer para o chão, plataforma colocada à frente do joelho da frente."
+        },
+        {
+          "name": "Recuo (drop step)",
+          "desc": "Pivotar o pé e depois passos laterais para trás. NUNCA correr de costas (perda de equilíbrio). Se for tarde para recuar: pivotar e criar uma plataforma de lado."
+        }
+      ],
+      "oneHand": {
+        "label": "Manchete a uma mão — emergência",
+        "text": "Gesto de último recurso quando a bola está demasiado longe para os dois braços. Braço esticado, plataforma plana sobre o antebraço interior, sem swing — apenas um stab (picada) para desviar para cima. Variante: one-arm stab (punho num remate potente), one-arm scoop (palma aberta para cima, bola baixa)."
+      }
+    },
+    "systems": {
+      "titlePrefix": "Sistemas de receção",
+      "nonOfficialLabel": "⚠ Formato não oficial FIVB",
+      "alert5": "O 5v5 indoor não tem regulamento FIVB ou FFVb dedicado. Os sistemas abaixo são adaptações lógicas do 5-1 6v6 documentadas pela VolleyballXL, The Art of Coaching Volleyball e Volleyball Canada.",
+      "alert4": "O 4v4 indoor não tem regulamento FIVB oficial. As formações abaixo provêm dos intramurals universitários (EUA), dos manuais pedagógicos FFVb / Volleyball Canada e da literatura de praia (Brandon Joyner, Better at Beach).",
+      "prosLabel": "Vantagens",
+      "consLabel": "Inconvenientes",
+      "byTeamSize": {
+        "6": [
+          {
+            "name": "Sistema W — 5 recetores",
+            "level": "Iniciante",
+            "desc": "3 jogadores em primeira linha, 2 em segunda — toda a gente exceto o distribuidor participa. Forma histórica de onde vem o nome «W-formation» (FIVB, USAV IMPACT).",
+            "pros": ["Zonas reduzidas por jogador (~1,8 m de corredor)", "Pouca comunicação necessária", "Ideal para a escola de voleibol e U13-U15"],
+            "cons": ["Muitas zonas de sobreposição entre 5 jogadores", "Maus recetores forçados a participar", "Desorganiza os atacantes (3 frontais em receção)"]
+          },
+          {
+            "name": "Sistema U — 3 recetores",
+            "level": "Padrão moderno",
+            "desc": "Líbero na zona 6 (alvo principal dos servidores), pontas nas zonas 5 e 1. Os 3 melhores recetores recebem todas as bolas; todos os atacantes front-row saem.",
+            "pros": ["Comunicação simplificada a 3", "Os 3 melhores recetores cobrem tudo", "Atacantes front-row livres para a corrida de balanço"],
+            "cons": ["Zonas laterais mais largas a cobrir (~3 m por jogador)", "Exige um líbero competente", "Vulnerável aos serviços curtos nos ângulos"],
+            "recommended": true
+          },
+          {
+            "name": "Receção a 2 — líbero + R4",
+            "level": "Elite",
+            "desc": "Apenas 2 recetores (líbero + um R4 selecionado) cobrem toda a largura. Usado no alto nível para libertar o 2.º R4 e prepará-lo para o ataque sem o desgaste da receção.",
+            "pros": ["Todos os atacantes disponíveis para a transição ofensiva", "Bloco/ataque mais eficazes porque os atacantes não estão gastos pela receção", "Sistema preferido pelas equipas profissionais (Polónia, França, Itália)"],
+            "cons": ["Exige 2 recetores muito atléticos (~4,5 m de corredor cada)", "Nenhuma margem de erro — um serviço mal lido = ponto adversário", "Inutilizável sem líbero de nível internacional"]
+          }
+        ],
+        "5": [
+          {
+            "name": "Receção a 3 — config 2F-3B",
+            "level": "Recomendado",
+            "desc": "Os 3 jogadores de trás (P5, P6, P1) recebem. O distribuidor em P1 sai da receção e penetra no contacto do servidor, como no 5-1 do 6v6. Os 2 da frente (P4, P3) ficam livres para a corrida de balanço.",
+            "pros": ["Configuração mais próxima do 5-1 6v6 (pedagogicamente ideal)", "Boa transição receção → ataque", "2 atacantes à frente + pipe back-row possível"],
+            "cons": ["3 recetores em 9 m (~3 m por jogador)", "O distribuidor tem de ler rápido e decidir penetrar em < 1 segundo", "Buraco em P1 se o distribuidor partir cedo demais"],
+            "recommended": true
+          },
+          {
+            "name": "Receção a 4 — config 3F-2B",
+            "level": "Padrão",
+            "desc": "Os 2 de trás (P5, P1) + 2 da frente (tipicamente P4 e P3 — o distribuidor em P2 sai) recebem. O distribuidor fica no alvo: sem penetração, distribuição imediata.",
+            "pros": ["Zonas reduzidas (~2,25 m por jogador)", "Ideal para equipas mistas ou iniciantes", "Distribuidor já no alvo — sem transição"],
+            "cons": ["Apenas 2 atacantes disponíveis à frente (P4 + P3 ou P4 + central)", "Os da frente que recebem têm depois de correr a sua aproximação", "Bloco a 2 difícil porque o distribuidor sobe à rede"]
+          },
+          {
+            "name": "Receção em pentágono — 4 ou 5 jogadores",
+            "level": "Iniciante / lazer",
+            "desc": "5 recetores (equivalente ao W com 5 jogadores). 1 jogador no centro da rede (frequentemente distribuidor fixo), as 2 pontas no meio, os 2 de trás no fundo. Toda a gente participa salvo se o jogador central for distribuidor dedicado.",
+            "pros": ["Cobertura regular do campo", "Muito pouca exigência técnica", "Adequado a sessões pedagógicas de descoberta"],
+            "cons": ["Muitas sobreposições com 5", "Nenhum atacante é libertado", "Ineficaz a partir do momento em que se sobe de nível"]
+          }
+        ],
+        "4": [
+          {
+            "name": "Losango (3 recetores)",
+            "level": "Padrão 4v4",
+            "desc": "Distribuidor no centro da rede (P3, sai da receção). As 2 pontas (P4, P2) no meio-campo + o único jogador de trás (P1) no fundo recebem. Formação mais usada no 4v4 indoor (intramurals universitários).",
+            "pros": ["Distribuidor já no alvo — sem penetração", "3 zonas claras e simétricas", "Ideal para intramurals, lazer, beach 4s"],
+            "cons": ["Cobrir 9 m de largura com 3 = ~3 m por jogador", "O único jogador de trás tem de defender todo o fundo após a receção", "Apenas 2 atacantes à frente"],
+            "recommended": true
+          },
+          {
+            "name": "Linha 3-1 (3 recetores)",
+            "level": "Intermédio",
+            "desc": "Único distribuidor em P1 (trás) que penetra no contacto do serviço adversário em direção à zona 2. Os 3 atacantes à frente (P4, P3, P2) recebem. Equivalente simplificado do 5-1 6v6.",
+            "pros": ["3 atacantes à frente em permanência", "Pedagógico para preparar o 5-1 6v6", "O distribuidor também pode atacar após distribuição"],
+            "cons": ["Exige uma receção muito limpa (a penetração não perdoa)", "Buraco em P1 se o distribuidor partir antes de a bola estar defendida", "Todos os atacantes têm de saber receber"]
+          },
+          {
+            "name": "Quadrado 2-2 (4 recetores)",
+            "level": "Iniciante",
+            "desc": "2 da frente (P4, P2) + 2 de trás (P5, P1), sem distribuidor dedicado à rede. O jogador melhor colocado faz o 2.º toque. Típico das sessões de descoberta ou dos U11-U13.",
+            "pros": ["Cobre todo o campo (4 zonas de 2,25 m)", "Sem exigência técnica sobre o distribuidor", "Toda a gente recebe — muito pedagógico"],
+            "cons": ["Sem distribuidor dedicado — distribuição aleatória", "Nenhum atacante é libertado para a sua aproximação", "Ineficaz logo que se sobe de nível"]
+          }
+        ]
+      }
+    },
+    "passeur": {
+      "titlePrefix": "Papel do distribuidor em receção",
+      "noteLabel": "Nota",
+      "byTeamSize": {
+        "6": [
+          {
+            "title": "Distribuidor de TRÁS (P1 / P6 / P5) — rotações P1, P6, P5 do 5-1",
+            "bullets": [
+              "Sai da receção: nenhuma bola lhe é destinada.",
+              "Começa em posição especial (ex.: P1: ~7,5 m da rede, 1 m da linha lateral direita), camuflado atrás de outro jogador (stack).",
+              "Penetra em direção ao alvo (entre Z2 e Z3, ~1 m da rede, 3 m à direita do centro) NO CONTACTO do serviço adversário — não antes (falta de sobreposição).",
+              "P1: penetração mais curta; P6: penetração central; P5: penetração mais longa (em diagonal).",
+              "3 atacantes à frente disponíveis (R4 + central + oposto) + back-row attacks."
+            ]
+          },
+          {
+            "title": "Distribuidor da FRENTE (P2 / P3 / P4) — rotações P2, P3, P4 do 5-1",
+            "bullets": [
+              "Sai da receção: já está próximo do alvo.",
+              "Em P2: já no alvo — torna-se também bloqueador de linha frente ao R4 adversário de Z4 (dupla carga defensiva).",
+              "Em P3: switch lateral para o alvo imediatamente após o contacto do serviço.",
+              "Em P4: atravessa toda a rede para chegar ao alvo (deslocação mais longa à frente).",
+              "Apenas 2 atacantes à frente (compensado pelo pipe em P6 e ataque back-row do oposto em P1)."
+            ]
+          }
+        ],
+        "5": [
+          {
+            "title": "Distribuidor PENETRANTE (config 2F-3B, recomendado)",
+            "bullets": [
+              "Começa em P1 de trás, sai da receção.",
+              "Penetra em direção ao alvo (Z2/Z3, ~1 m da rede) NO contacto do serviço adversário — idêntico ao 5-1 6v6.",
+              "Os 3 de trás (P5 + P6 + P1 a partir) cobrem a receção a 3.",
+              "Tem de esperar que a bola esteja defendida antes de partir (erro frequente: partida prematura → buraco em P1)."
+            ],
+            "note": "Configuração mais próxima do 6v6 — recomendada para preparar a transição."
+          },
+          {
+            "title": "Distribuidor FRENTE FIXO (config 3F-2B ou pentágono)",
+            "bullets": [
+              "Fica no alvo (P2 ou P3 conforme a config): sem penetração.",
+              "Sai da receção: nenhuma bola lhe é destinada.",
+              "Distribuição imediata logo no passe — sem transição.",
+              "Em P2: torna-se também bloqueador de linha frente ao ponta esquerdo adversário (como no 5-1 6v6)."
+            ]
+          }
+        ],
+        "4": [
+          {
+            "title": "Distribuidor à FRENTE em losango (P3 centro rede)",
+            "bullets": [
+              "Fica no alvo (Z3, ~1 m da rede): sem penetração.",
+              "Sai da receção: os 3 restantes (2 pontas + 1 trás) recebem.",
+              "Distribuição rápida para Z4 ou Z2 conforme a qualidade do passe.",
+              "A sua transição defesa → passe deve ser executada em menos de 2 segundos (1 só jogador atrás = muita cobertura)."
+            ],
+            "note": "Formação mais usada no 4v4 indoor."
+          },
+          {
+            "title": "Distribuidor PENETRANTE em linha 3-1 (P1 atrás)",
+            "bullets": [
+              "Começa em P1 atrás, sai da receção.",
+              "Penetra em direção à zona 2 no contacto do serviço adversário.",
+              "Os 3 atacantes à frente (P4, P3, P2) recebem.",
+              "Exige uma receção muito limpa — caso contrário, o distribuidor não chega ao alvo a tempo."
+            ]
+          },
+          {
+            "title": "Sem distribuidor dedicado (quadrado 2-2)",
+            "bullets": [
+              "O jogador melhor colocado após o 1.º toque faz o 2.º toque.",
+              "Toda a gente recebe — 4 zonas de ~2,25 m.",
+              "Distribuição aleatória para um dos 3 outros jogadores.",
+              "Reservar para sessões de descoberta (U11-U13, escolar)."
+            ]
+          }
+        ]
+      }
+    },
+    "libero": {
+      "title": "O líbero — receção especializada",
+      "byTeamSize": {
+        "6": {
+          "title": "O líbero — peça-mestra da receção em 6v6",
+          "text": "Especialista defensivo com camisola contrastante. Substitui sistematicamente os centrais quando passam em rotação de trás (substituições ilimitadas, não contadas pela Regra FIVB 19). Joga 3 rotações consecutivas em Z5-Z6-Z1. Posição de receção privilegiada: Z6 (alvo principal dos servidores) ou Z5. Restrições FIVB: sem bloco, sem ataque acima da rede, sem passe alto (mãos) à frente da linha de ataque (3 m) se um colega de equipa atacar a seguir acima da rede.",
+          "accent": "orange"
+        },
+        "5": {
+          "title": "Sem líbero oficial em 5v5",
+          "text": "O 5v5 indoor não tem regulamento FIVB. Na prática, nenhuma federação autoriza o líbero neste formato. O melhor recetor é colocado em P6 ou P5 e joga sistematicamente atrás — torna-se o «líbero de facto» sem a camisola contrastante nem as restrições. Pode, portanto, bloquear e atacar se necessário.",
+          "accent": "teal"
+        },
+        "4": {
+          "title": "Sem líbero em 4v4",
+          "text": "Nenhum líbero é autorizado nos regulamentos 4v4 (intramurals universitários, FFVb pedagógico, beach 4s). O único jogador de trás no losango — ou o distribuidor penetrante na linha 3-1 — assume o papel de melhor recetor/defensor. Com ~3 m de corredor por recetor em losango, a antecipação prevalece sobre a técnica.",
+          "accent": "plum"
+        }
+      }
+    },
+    "reading": {
+      "title": "Ler o serviço para se posicionar",
+      "headerType": "Tipo de serviço",
+      "headerWhen": "Adaptação do recetor",
+      "rows": [
+        { "type": "Por baixo / underhand", "adapt": "Posição normal, receber a bola em altura" },
+        { "type": "Float em apoio", "adapt": "Posição alta, avançar para a receber cedo antes de desviar" },
+        { "type": "Topspin", "adapt": "Posição baixa, pronto a recuar, plataforma angulada" },
+        { "type": "Jump float", "adapt": "Pode ser tratado com passe alto (overhand) a 4 m da rede" },
+        { "type": "Jump topspin", "adapt": "Posição baixa, recuo antecipado, plataforma rígida e passiva" },
+        { "type": "Serviço híbrido", "adapt": "Plataforma pronta para os dois cenários (float ou topspin)" }
+      ],
+      "cuesLabel": "Indícios antes do contacto do servidor",
+      "cues": [
+        "Posição do servidor na linha → ângulo preferido",
+        "Altura e colocação do lançamento: alto+atrás → topspin; baixo+à frente → float",
+        "Comprimento da corrida de balanço: longa → jump topspin; curta → jump float",
+        "Direção dos ombros do servidor no contacto → direção da bola"
+      ]
+    },
+    "errors": {
+      "title": "Erros frequentes",
+      "commonLabel": "Erros técnicos (todos os formatos)",
+      "common": [
+        { "label": "Swinging arms", "text": "Causa #1 — braços que varrem no contacto, bola imprevisível. Correção: \"a plataforma é passiva, as pernas são ativas\"." },
+        { "label": "Plataforma partida", "text": "Um antebraço mais alto do que o outro — travar os cotovelos e empurrar os polegares para baixo." },
+        { "label": "Braços juntos demasiado cedo", "text": "Atrasa a deslocação e impede a escolha tardia manchete/mãos. Juntar as mãos só à chegada." },
+        { "label": "Tronco demasiado direito", "text": "A plataforma passa por baixo da bola → bola demasiado longe da rede. Inclinar-se a 30-45° para a frente." },
+        { "label": "Contacto acima do umbigo", "text": "Demasiado alto = controlo reduzido. Procurar o contacto à altura da cintura ou abaixo." },
+        { "label": "Sem freeze", "text": "Ainda em movimento no contacto = direção impossível de controlar. Imobilizar-se completamente." }
+      ],
+      "sizeLabelPrefix": "Erros específicos do",
+      "byTeamSize": {
+        "6": [
+          { "label": "Líbero mal colocado", "text": "Demasiado centrado, perde os serviços curtos nos ângulos; demasiado lateral, abandona o centro. Alvo de referência: Z6 alinhado com o servidor adversário." },
+          { "label": "Sobreposição do distribuidor", "text": "O distribuidor abandona a sua posição antes do contacto do servidor adversário — falta n.º 1 no 5-1 (Regra 7.4 FIVB). Os seus pés devem respeitar as relações frente/trás até ao contacto." },
+          { "label": "Receção a 5 sem papel claro", "text": "Em W, os 3 da frente atrapalham-se na zona central. Definir explicitamente quem fica com a bola entre P3 e P6 nos serviços em eixo." }
+        ],
+        "5": [
+          { "label": "Distribuidor que parte cedo demais", "text": "Em config 2F-3B com distribuidor penetrante, partida antes de a bola estar defendida = buraco em P1. Esperar a confirmação." },
+          { "label": "2 recetores lado a lado", "text": "Em config 3F-2B, P5 e P1 têm de estar afastados (um por lado). Centrados juntos = linhas a descoberto." },
+          { "label": "Recetor da frente que se esquece de atacar", "text": "Em config 3F-2B, o jogador da frente que recebe tem depois de correr a sua aproximação de ataque — reflexo a treinar especificamente." },
+          { "label": "Sem líbero de facto definido", "text": "Sem papel claro, os 3 de trás devolvem a responsabilidade uns aos outros. Designar explicitamente o melhor recetor como prioritário na zona central." }
+        ],
+        "4": [
+          { "label": "Distribuidor de losango que recebe", "text": "Em losango, o distribuidor em P3 tem de SAIR da receção — caso contrário é impossível distribuir rapidamente. Os 3 restantes recebem." },
+          { "label": "Único jogador de trás sobrecarregado", "text": "Em losango, o jogador de trás P1 cobre ~3,5 m de fundo sozinho. Antecipação = competência n.º 1; passos laterais constantes e leitura precoce." },
+          { "label": "Quadrado 2-2 sem chamada no 2.º toque", "text": "Sem distribuidor dedicado, quem passa? Gritar \"EU!\" no 2.º toque logo na receção é inegociável." },
+          { "label": "Pontas do losango em linha reta", "text": "P4 e P2 no meio-campo ao mesmo nível que P1 → o cut shot curto cai entre eles. Escalonar as posições." }
+        ]
+      }
+    },
+    "videos": {
+      "title": "Recursos vídeo",
+      "items": [
+        { "title": "Fazer uma manchete (Sikana)", "url": "https://www.youtube.com/watch?v=aZkZwAFeye0" },
+        { "title": "A manchete (CEPSUM)", "url": "https://www.youtube.com/watch?v=qIPlthgJvHU" },
+        { "title": "Manchete controlada para o distribuidor", "url": "https://www.youtube.com/watch?v=eUDY6AGS1-A" },
+        { "title": "Aprender a receção alta e baixa (Sikana)", "url": "https://www.youtube.com/watch?v=ZLRy_Gu9LVA" },
+        { "title": "Aquecimento individual de manchete", "url": "https://www.youtube.com/watch?v=nGiE_y09vTY" }
+      ]
+    }
+  },
+  "positionnement": {
+    "selectors": {
+      "title": "Configuração da sua equipa",
+      "description": "Escolha o seu formato e a sua configuração tática: <strong>todo o conteúdo do guia</strong> (posições, zonas, defesa por ataque) adaptar-se-á.",
+      "formatLabel": "Formato de jogo",
+      "configLabel": "Configuração tática"
+    },
+    "principle": {
+      "label": "Princípio de base da defesa",
+      "lead": "O posicionamento defensivo depende de 3 fatores principais:",
+      "points": [
+        "A sua posição (frente ou trás)",
+        "A zona de ataque adversária (zona 4, 3, 2)",
+        "O tipo de ataque (remate potente, finta, amorti)"
+      ]
+    },
+    "postes": {
+      "titlePrefix": "1. Posições e zonas",
+      "layoutCaptionPrefix": "Disposição da sua equipa em",
+      "detailCta": "Ver o detalhe de cada posição em /positions →",
+      "ruleLabel": "Regra importante",
+      "ruleByTeamSize": {
+        "6": "Os jogadores de trás (5, 6, 1) NÃO podem bloquear à rede. Defendem no fundo do campo.",
+        "5": "Com 5 jogadores, cada defensor cobre ~30 m² (vs 20 m² em 6v6). A leitura torna-se crítica.",
+        "4": "Sem líbero. Cada jogador defende ~30-40 m². A antecipação é a competência n.º 1."
+      }
+    },
+    "zonePositioning": {
+      "title": "2. Posicionamento consoante a zona de ataque adversária",
+      "tabLabels": {
+        "zone4": "Ataque Zona 4",
+        "zone3": "Ataque Zona 3",
+        "zone2": "Ataque Zona 2"
+      },
+      "captionsByZone": {
+        "zone4": "Defesa contra ataque em Zona 4 (ponta esquerda adversária)",
+        "zone3": "Defesa contra ataque em Zona 3 (centro)",
+        "zone2": "Defesa contra ataque em Zona 2 (ponta direita adversária)"
+      },
+      "legend": {
+        "zone": "Zona de responsabilidade",
+        "blk": "BLK",
+        "blkDesc": "= no bloco",
+        "off": "OFF",
+        "offDesc": "= off-blocker",
+        "def": "DEF",
+        "defDesc": "= defesa"
+      },
+      "unavailable": "Diagrama não disponível para esta configuração."
+    },
+    "layoutLabels": {
+      "5-1": {
+        "zone4": ["Diag. longa", "Sombra bloco", "Linha", "Off-blocker"],
+        "zone3": ["Diag. E", "Eixo", "Diag. D", "Cobert.", "Cobert."],
+        "zone2": ["Diag. longa", "Sombra bloco", "Linha", "Off-blocker"]
+      },
+      "pentagon": {
+        "zone4": ["Z1 curto", "Diag. longa", "Off-blk"],
+        "zone3": ["Diag E", "Diag D"],
+        "zone2": ["Z5 curto", "Diag. longa", "Off-blk"]
+      },
+      "3F-2B": {
+        "zone4": ["Z1 curto", "Diag. longa", "Off-blk"],
+        "zone3": ["Diag E", "Diag D"],
+        "zone2": ["Z5 curto", "Diag. longa", "Off-blk"]
+      },
+      "2F-3B": {
+        "zone4": ["Linha D", "Eixo", "Diag E", "Off-blk"],
+        "zone3": ["Diag E", "Eixo", "Diag D"],
+        "zone2": ["Linha E", "Eixo", "Diag D", "Off-blk"]
+      },
+      "losange": {
+        "zone4": ["Linha curta", "Diag E", "Fundo"],
+        "zone3": ["Diag E", "Diag D", "Fundo"],
+        "zone2": ["Linha curta", "Diag D", "Fundo"]
+      },
+      "carre": {
+        "zone4": ["Diag. curta", "Diag. longa", "Off-blk"],
+        "zone3": ["Diag E", "Diag D"],
+        "zone2": ["Diag. curta", "Diag. longa", "Off-blk"]
+      }
+    },
+    "layoutNotes": {
+      "5-1": {
+        "zone4": [
+          { "label": "Posição 2 (oposto / OPP)", "text": "Bloqueador de linha — bloqueia, sobe à rede do lado direito." },
+          { "label": "Posição 3 (central)", "text": "Fecha a diagonal em bloco a 2 com o oposto." },
+          { "label": "Posição 4 (R4 off-blocker)", "text": "Recua para a linha dos 3 m do lado esquerdo — cobre o cut shot curto (diagonal aguda) e as fintas." },
+          { "label": "Posição 5 (Líbero)", "text": "Defende a diagonal longa, ~7-8 m da rede, no ombro interior do central bloqueador." },
+          { "label": "Posição 6 (trás centro)", "text": "Bolas altas que passam o bloco, toques de bloco longos, eixo ~8-8,5 m." },
+          { "label": "Posição 1 (trás direito)", "text": "Defende a linha profunda na sombra do bloco, ~7-7,5 m da rede, 0,5 m da linha direita." }
+        ],
+        "zone3": [
+          { "label": "Posição 3 (central)", "text": "Bloco a 1 em leitura (read) ou em commitment conforme o scouting adversário." },
+          { "label": "Posições 4 e 2 (pontas)", "text": "Na linha de ataque (~2-2,5 m da rede, 0,5 m das linhas): cobrem desvios de bloco e bolas através do bloco." },
+          { "label": "Posição 5 (Líbero)", "text": "De frente para o atacante central, no seu corredor de batida (~7-8 m da rede)." },
+          { "label": "Posição 6 (trás centro)", "text": "Ombros frente ao atacante; defende a bola potente que atravessa o bloco (eixo ~8-8,5 m)." },
+          { "label": "Posição 1 (trás direito)", "text": "Avança um metro (~7,5 m da rede, 1 m da linha direita): ângulos mais curtos no quick." },
+          { "label": "Regra-chave", "text": "«Stopped on contact»: todos parados e equilibrados no instante exato da batida." }
+        ],
+        "zone2": [
+          { "label": "Posição 4 (R4)", "text": "Bloqueador de linha — bloqueia à rede do lado esquerdo." },
+          { "label": "Posição 3 (central)", "text": "Fecha a diagonal em bloco a 2 com o R4." },
+          { "label": "Posição 2 (oposto / OPP)", "text": "Torna-se off-blocker do lado direito — recua para os 3 m, cobre cut shot curto e fintas." },
+          { "label": "Posição 5 (Líbero)", "text": "Defende a linha profunda na sombra do bloco, ~7-7,5 m da rede, 0,5 m da linha esquerda." },
+          { "label": "Posição 6 (trás centro)", "text": "Bolas altas por cima do bloco, eixo ~8-8,5 m da rede." },
+          { "label": "Posição 1 (distribuidor ou OH/OPP)", "text": "Defende a diagonal longa cross-court, ~7-8 m da rede." }
+        ]
+      },
+      "pentagon": {
+        "zone4": [
+          "Ataque Z4 adversário (ponta esquerda adversária) → bola chega ao nosso lado direito.",
+          "Sistema 2-1-2: bloco a 2 (P2 oposto linha + P3 diagonal) + 2 defensores profundos.",
+          "P4 (ponta esquerda) em off-blocker a 2-2,5 m da rede, 1 m da linha — cobre tip e cut shot.",
+          "P5 (~7-7,5 m, 0,5 m linha esquerda) defende a diagonal longa cross-court.",
+          "P1 (~7-7,5 m, 0,5 m linha direita) defende a linha profunda, na sombra do bloco.",
+          "Remate principal defendido: diagonal longa cross-court (trajetória estatisticamente mais frequente)."
+        ],
+        "zone3": [
+          "Ataque rápido central (Z3) — ângulos curtos, pouco tempo de reação.",
+          "Bloco a 1: P3 (central) em leitura (read), sem commitment possível.",
+          "P4 e P2 (off-blockers) a 2 m da rede na linha de ataque — cobrem desvios.",
+          "P5 e P1 avançados 1 m (~7 m da rede) — ângulos mais curtos do que em bola alta.",
+          "Fraqueza: sem defensor central de fundo dedicado (apenas 2 jogadores atrás em 5v5).",
+          "Regra-chave: «stopped on contact» — todos parados e equilibrados no instante do contacto."
+        ],
+        "zone2": [
+          "Ataque Z2 adversário (ponta direita adversária) → bola chega ao nosso lado esquerdo. Espelho perfeito de Z4.",
+          "Bloco a 2: P4 (R4 linha) + P3 (central diagonal).",
+          "P2 (oposto / distribuidor) em off-blocker a 2-2,5 m da rede do lado direito.",
+          "P1 (~7-7,5 m, 1 m linha direita) defende a diagonal longa.",
+          "P5 (~7-7,5 m, 0,5 m linha esquerda) defende a linha profunda na sombra do bloco."
+        ]
+      },
+      "3F-2B": {
+        "zone4": [
+          "Ataque Z4 adversário → bola chega ao nosso lado direito.",
+          "Configuração 3F-2B: 3 da frente → bloco a 2 favorável (P3 + P2 distribuidor-bloqueador).",
+          "P4 (R4) off-blocker curto do lado esquerdo na linha de ataque (~2-2,5 m da rede).",
+          "P5 defende a diagonal longa cross-court (~7 m, 0,5 m linha esquerda).",
+          "P1 defende a linha profunda direita na sombra do bloco (~7 m, 0,5 m linha direita).",
+          "Inconveniente: apenas 2 defensores no fundo → 30+ m² por defensor (vs 20 m² em 6v6)."
+        ],
+        "zone3": [
+          "Ataque rápido central (Z3) — ângulos curtos.",
+          "Com 3 da frente, bloco a 3 possível mas deixa apenas 2 defensores no chão — desaconselhado.",
+          "Recomendado: bloco a 2 (P3 + ponta mais próxima do corredor de batida).",
+          "P5 e P1 avançados 1 m (~7 m) porque os ângulos são mais curtos no quick.",
+          "Fraqueza: bola profunda axial não coberta (sem Z6 defensor em 5v5 3F-2B)."
+        ],
+        "zone2": [
+          "Ataque Z2 adversário → bola chega ao nosso lado esquerdo. Espelho perfeito de Z4.",
+          "Bloco a 2: P4 (R4 linha) + P3 (central diagonal).",
+          "O distribuidor (P2) em off-blocker a 2-2,5 m da rede do lado direito (anti-finta + transição rápida para o alvo).",
+          "P1 defende a diagonal longa (~7-7,5 m).",
+          "P5 defende a linha profunda esquerda na sombra do bloco."
+        ]
+      },
+      "2F-3B": {
+        "zone4": [
+          "Ataque Z4 adversário → bola chega ao nosso lado direito.",
+          "Configuração 2F-3B (P4+P3 frente, P5+P6+P1 atrás, P1 penetrante): bloco a 1.",
+          "P3 (central) bloqueia sozinho do lado direito — sem P2 disponível para bloco a 2.",
+          "P4 (R4) off-blocker a 2-2,5 m da rede do lado esquerdo.",
+          "3 defensores profundos: P5 diagonal longa, P6 eixo central (~7-8 m), P1 linha direita.",
+          "O sistema 1-1-3 (1 bloqueador + 1 off-blocker + 3 defensores) é a defesa mais próxima do 6v6 perimétrico."
+        ],
+        "zone3": [
+          "Ataque rápido central (Z3) — ângulos curtos.",
+          "Bloco a 1 (P3) em leitura — a rápida é o alvo mais difícil em 2F-3B.",
+          "P4 lateralizado a meio-campo (~2 m da rede) para os desvios.",
+          "Vantagem: 3 defensores profundos (P5, P6, P1) cobrem as 3 grandes zonas de fundo.",
+          "P6 frente ao atacante central no seu corredor de batida (~7,5-8 m, eixo)."
+        ],
+        "zone2": [
+          "Ataque Z2 adversário → bola chega ao nosso lado esquerdo. Espelho de Z4.",
+          "Bloco a 1: P4 bloqueia sozinho do lado esquerdo (sem P2 em 2F-3B).",
+          "P3 (central) torna-se off-blocker do lado direito a 2-2,5 m da rede.",
+          "P5 defende a linha profunda esquerda, P6 o eixo, P1 a diagonal longa."
+        ]
+      },
+      "losange": {
+        "zone4": [
+          "Ataque Z4 adversário → bola chega ao nosso lado direito.",
+          "Formação losango (1-2-1) → sistema A: 1 bloqueador (P3) + 3 defensores.",
+          "P3 sobe em bloco solo do lado direito (frente ao atacante adversário).",
+          "P2 (frente direita) recua para os 3 m a 3,5-4 m da rede — cobre tip e fintas atrás do bloco.",
+          "P4 (frente esquerda) recua para meio-campo do lado esquerdo — cobertura da diagonal curta.",
+          "P1 (único de trás) defende a diagonal longa cross-court (~7-7,5 m, 1 m linha direita).",
+          "Antecipação = competência n.º 1: 1 só jogador atrás → ~40 m² a cobrir."
+        ],
+        "zone3": [
+          "Ataque rápido central (Z3) — config mais difícil em 4v4: pouco tempo, 1 só bloqueador.",
+          "Bloco a 1 (P3 sozinho) em LEITURA permanente (sem commitment possível).",
+          "P4 e P2 recuam a meio-campo (~3,5-4 m da rede, cobrem as duas diagonais curtas).",
+          "O único jogador de trás P1 faz as vezes de Z6 defensor (eixo central, 7-8 m da rede).",
+          "Remate principal: bola potente axial (para P1) porque o bloco a 1 só cobre o centro."
+        ],
+        "zone2": [
+          "Ataque Z2 adversário → bola chega ao nosso lado esquerdo. Espelho perfeito de Z4.",
+          "Sistema A: 1 bloqueador (P3) + 3 defensores.",
+          "P4 (frente esquerda) recua para os 3 m a 3,5-4 m — cobre tip e fintas do lado esquerdo.",
+          "P2 (frente direita) recua para meio-campo do lado direito — cobre diagonal curta.",
+          "O único jogador de trás P1 defende a diagonal longa cross-court (~7-7,5 m, 1 m linha esquerda)."
+        ]
+      },
+      "carre": {
+        "zone4": [
+          "Ataque Z4 adversário → bola chega ao nosso lado direito.",
+          "Formação quadrado (2-2 / box) → sistema A: 1 bloqueador (P2) + 3 defensores.",
+          "P2 (frente direita) bloco solo frente ao atacante adversário, fixa a linha.",
+          "P4 (frente esquerda) em off-blocker a 2-2,5 m da rede — cobre tip e cut shot do lado esquerdo.",
+          "P5 defende a diagonal longa (~7 m, 0,5 m linha esquerda).",
+          "P1 defende a linha profunda / diagonal curta (~7 m, na sombra do bloco).",
+          "Sistema B (bloco a 2 P2+P4) possível mas deixa apenas 2 defensores — reservar para rematadores potentes."
+        ],
+        "zone3": [
+          "Ataque rápido central (Z3) — ângulos curtos, pouco tempo.",
+          "Bloco a 2 (P4 + P2) fecha o centro — sistema B com 2 defensores atrás.",
+          "P5 e P1 ficam com as diagonais curtas (~7 m, 0,5-1 m das linhas).",
+          "Fraqueza maior: nenhuma cobertura curta atrás do bloco, o quadrado não tem jogador a meio-campo.",
+          "Alternativa: bloco a 1 (papel tipo P3, aqui P4 ou P2 sozinho) para libertar um defensor de tip."
+        ],
+        "zone2": [
+          "Ataque Z2 adversário → bola chega ao nosso lado esquerdo. Espelho perfeito de Z4.",
+          "Sistema A: 1 bloqueador (P4) + 3 defensores.",
+          "P4 (frente esquerda) bloco solo frente ao atacante adversário, fixa a linha.",
+          "P2 (distribuidor-atacante frente direita) em off-blocker a 2-2,5 m da rede — anti-finta + transição rápida para alvo.",
+          "P1 defende a diagonal longa (~7 m, 0,5 m linha direita).",
+          "P5 defende a linha profunda curta (~7 m, na sombra do bloco)."
+        ]
+      }
+    },
+    "generalPrinciples": {
+      "title": "3. Princípios gerais de posicionamento",
+      "responsibilityLabel": "Zonas de responsabilidade",
+      "cards": {
+        "front": {
+          "title": "Jogadores da frente",
+          "points": [
+            "Prioridade: Bloquear à rede",
+            "Se não estiver no bloco: defender a linha oposta",
+            "Distância: à rede ou no fundo do campo"
+          ]
+        },
+        "pivotByTeamSize": {
+          "6": {
+            "title": "Pivot defensivo (Líbero / P6)",
+            "points": [
+              "Posição: centro, adaptável",
+              "Distância: 5–6 m da rede",
+              "Papel: pilar da defesa, cobre o centro"
+            ]
+          },
+          "5": {
+            "title": "Pivot defensivo (Líbero / P6)",
+            "points": [
+              "Posição: centro, adaptável",
+              "Distância: 5–6 m da rede",
+              "Papel: pilar da defesa, cobre o centro"
+            ]
+          },
+          "4": {
+            "title": "Único de trás (P1)",
+            "points": [
+              "Posição: centro, ~40 m² a cobrir",
+              "Distância: 5–6 m da rede",
+              "Papel: pilar defensivo único, antecipação máxima"
+            ]
+          }
+        },
+        "back": {
+          "title": "Jogadores de trás laterais",
+          "points": [
+            "Papel variável: avançam ou recuam",
+            "Lado atacado: avançam (3–4 m)",
+            "Lado oposto: recuam (6–7 m)"
+          ]
+        }
+      },
+      "universalsCard": {
+        "title": "★ Princípios defensivos universais (4v4 / 5v5 / 6v6)",
+        "intro": "Estes princípios oriundos de Hebert, Liskevych e Volleyball Canada aplicam-se independentemente do número de jogadores em campo.",
+        "items": [
+          ["O bloco é a fundação", "Os defensores de trás posicionam-se em função da sombra e da orientação do bloco — não de forma independente."],
+          ["Parado e equilibrado no momento do contacto", "Qualquer defensor que ainda esteja em movimento quando o atacante bate vê a sua reatividade colapsar («stopped on contact»)."],
+          ["Leitura visual sequencial", "«Bola → distribuidor adversário → bola → atacante adversário». Em 4v4 e 5v5, o défice de jogadores impõe uma leitura ainda mais precoce."],
+          ["Comunicação de sinais", "Mesmo em lazer, o bloqueador deve sinalizar «linha» ou «diagonal» — sem isso, os defensores de trás não sabem o que cobrir."],
+          ["Zona da frente coberta", "Alguém tem de cobrir os 3-5 m atrás do bloco — é a zona mais negligenciada nos formatos reduzidos (4v4 / 5v5)."],
+          ["Transição rápida", "O distribuidor nunca deve partir para o seu alvo antes de ter confirmado que a bola foi defendida («release call»)."]
+        ]
+      }
+    },
+    "readingAttacker": {
+      "title": "4. Ler o atacante: os indícios visuais",
+      "intro": "O teu posicionamento deve ajustar-se conforme o que vês. Eis os indícios-chave:",
+      "indicators": [
+        {
+          "title": "Atacante longe da rede",
+          "action": "AVANÇA",
+          "accentColor": "var(--orange)",
+          "points": [
+            "Passe a 2–3 m da rede",
+            "Não consegue rematar com força",
+            "Risco elevado de finta ou amorti",
+            "Avança 1–2 metros"
+          ]
+        },
+        {
+          "title": "Atacante perto da rede",
+          "action": "RECUA",
+          "accentColor": "var(--plum)",
+          "points": [
+            "Passe a menos de 1 m da rede",
+            "Pode rematar a toda a potência",
+            "Trajetória descendente rápida",
+            "Recua ao máximo"
+          ]
+        },
+        {
+          "title": "O ombro do atacante",
+          "action": "Observa o ombro que bate",
+          "accentColor": "var(--teal)",
+          "points": [
+            "Ombro alto e atrás = remate potente",
+            "Ombro baixo = finta provável",
+            "Rotação do ombro = direção da bola",
+            "Ajusta-te em 0,5 s"
+          ]
+        },
+        {
+          "title": "O balanço do atacante",
+          "action": "Observa a sua corrida de aproximação",
+          "accentColor": "var(--ink)",
+          "points": [
+            "Corrida longa e rápida = remate forte",
+            "Pequeno balanço ou paragem = finta",
+            "Ângulo de aproximação = zona visada",
+            "Antecipa a potência"
+          ]
+        }
+      ],
+      "proTipLabel": "Dica de pro",
+      "proTipText": "Nos 2 primeiros segundos após o serviço adversário, foca o olhar no distribuidor e, IMEDIATAMENTE depois, no atacante que vai bater."
+    },
+    "advanceRetreat": {
+      "title": "5. Quando avançar ou recuar?",
+      "label": "Árvore de decisão rápida",
+      "advance": {
+        "title": "Avançar (3–4 m da rede) quando:",
+        "items": [
+          "Estás do mesmo lado que o atacante",
+          "O atacante está longe da rede (passe mau)",
+          "Antecipas uma finta ou amorti",
+          "O bloco é sólido — menos bolas potentes passam"
+        ]
+      },
+      "retreat": {
+        "title": "Recuar (6–7 m da rede) quando:",
+        "items": [
+          "Estás do lado oposto ao atacante",
+          "O atacante tem um bom passe perto da rede",
+          "O atacante é potente ou alto",
+          "O bloco é fraco (1 só bloqueador)",
+          "Defendes a diagonal (trajetória mais longa)"
+        ]
+      }
+    },
+    "mistakes": {
+      "titlePrefix": "6.",
+      "byTeamSize": {
+        "6": {
+          "title": "Os dez erros frequentes de posicionamento defensivo",
+          "intro": "Tipologia retirada de Mike Hebert (Thinking Volleyball), John Forman (CoachingVB), USA Volleyball e do manual FIVB Top Volley.",
+          "mistakes": [
+            ["1. Deriva na sombra do bloco", "Os defensores refugiam-se instintivamente atrás dos bloqueadores em vez de se posicionarem em torno da sombra do bloco — deixando abertas as diagonais e as trajetórias «off the block». Hebert: «creeping into the block shadow»."],
+            ["2. Leitura deficiente", "O defensor fixa a bola em vez de seguir a sequência «bola → distribuidor → bola → atacante». Consequência: adivinha em vez de ler, e não está parado nem equilibrado no momento do contacto («stopped and balanced at the moment of contact»)."],
+            ["3. Líbero mal colocado em profundidade", "Demasiado perto da rede, não defende os remates profundos; demasiado longe, não cobre os tips. Regra: alinhar o ombro exterior pelo ombro interior do bloqueador central, a 6-8 m da rede consoante o bloco."],
+            ["4. Distribuidor defensor mal preparado", "Posição demasiado baixa ou mal orientada que impede ver bola + campo adversário; partida prematura para o alvo criando um buraco em Z1; ausência de «release call» a sinalizar que abandona a defesa."],
+            ["5. Faltas de sobreposição", "As mais frequentes: Z6 desloca-se à frente de Z3, Z5 mais à direita do que Z6, e o distribuidor abandona demasiado cedo a sua posição para penetrar (falta n.º 1 no 5-1). No instante do contacto do servidor, todos os pés devem respeitar as relações frente/trás e esquerda/direita (Regra 7.4)."],
+            ["6. Transição receção → defesa esquecida", "Os jogadores ficam parados na sua formação de receção em W em vez de passar para a posição de base defensiva assim que o distribuidor adversário toca na bola. Hebert: «sluggish recovery after play on the ball»."],
+            ["7. Má gestão da zona 6", "Confusão entre «6-up» (rotacional), «6-back» (perimétrico) e «6-deep». O jogador em Z6 deve deslocar-se lateralmente conforme o lado de ataque adversário, não ficar centrado. Inclinar-se para trás para fazer dig («leaning back») coloca o peso nos calcanhares e mata a reatividade."],
+            ["8. Defesa falhada em ataque rápido central", "Leitura demasiado tardia do central adversário; jogadores de trás não avançados (em quick, Z1 e Z5 devem ganhar um metro para a rede porque os ângulos são mais curtos); «false stepping» (primeiro apoio recuado) que faz perder o tempo disponível."],
+            ["9. Cobertura das fintas órfã", "Nenhum defensor explicitamente atribuído ao tip; «standing up on tips» — o defensor está em postura baixa para o remate, depois endireita-se e estende as mãos na finta, deixando a bola cair mesmo à sua frente. O foco deve manter-se no remate em postura baixa que permite um salto para o tip."],
+            ["10. Silêncio coletivo", "Ausência de calls («tip!», «line!», «out!», «mine!»); bloqueadores que não comunicam a sua orientação linha vs diagonal; nenhum capitão de rotação para verificar as sobreposições antes do serviço."]
+          ]
+        },
+        "5": {
+          "title": "Os erros frequentes em 5v5",
+          "intro": "Erros específicos do formato 5v5 (adaptações do doc Volleyball Canada, VolleyballXL e da doutrina 6v6).",
+          "mistakes": [
+            ["1. Reproduzir mecanicamente o 6v6", "Cobrir 3 zonas profundas com 3 defensores funciona (config 2F-3B), mas falta o off-blocker que recua — a zona dos 3 m não está coberta se ninguém estiver explicitamente atribuído."],
+            ["2. O frente off-blocker fica colado à rede", "Após a batida do bloco, o frente off-blocker deve recuar 2-2,5 m para cobrir os tips. Se ficar à rede, a zona atrás do bloco fica escancarada."],
+            ["3. 2 defensores parados lado a lado", "Em configuração 3F-2B, os 2 defensores profundos devem estar afastados (um lado esquerdo, um lado direito) e não centrados juntos. Caso contrário, as linhas laterais ficam a descoberto."],
+            ["4. O distribuidor sobe cedo demais (config penetrante)", "Em configuração 2F-3B com distribuidor penetrante a partir de P1, tem de esperar que a bola esteja defendida antes de correr para o alvo — caso contrário, buraco em Z1."],
+            ["5. Confusão frente/trás", "Com 5 jogadores, a tentação de deixar os da frente defenderem o seu lado ficando na linha dos 3 m é grande — mas isso deixa o fundo aberto. Os da frente sobem ao bloco, os de trás defendem profundamente."],
+            ["6. Leitura deficiente", "O défice de um jogador impõe uma leitura ainda mais precoce do que em 6v6. Sequência «bola → distribuidor → bola → atacante» + paragem equilibrada no momento do contacto."]
+          ]
+        },
+        "4": {
+          "title": "Os erros frequentes em 4v4",
+          "intro": "Erros específicos do 4v4 indoor (intramurals universitários, doutrina FFVb / Volleyball Canada, beach 4s).",
+          "mistakes": [
+            ["1. O bloqueador isolado sem cobertura de tip", "Os 3 defensores partem todos para o fundo, deixando a zona dos 3-5 m vazia. Alguém tem sempre de estar atribuído ao tip a 3,5-4 m da rede."],
+            ["2. 2 defensores em linha reta", "Lado a lado à mesma profundidade → o cut shot cai entre eles. Em 4v4, os defensores devem estar sempre escalonados (um próximo, um longe) ou afastados lateralmente."],
+            ["3. O distribuidor que corre para o passe antes de a bola estar defendida", "Transição prematura que deixa um buraco em defesa. O distribuidor espera a confirmação de que a bola foi recuperada antes de partir para o seu alvo."],
+            ["4. Ausência de sinal entre bloqueador e defensores", "O bloqueador TEM de sinalizar «linha» ou «diagonal» antes de o ataque sair. Sem isso, os 3 defensores não sabem o que cobrir — cada um improvisa."],
+            ["5. O defensor de tip demasiado longe da rede", "Recua com os outros jogadores de trás e já não consegue cobrir as fintas curtas. A sua posição é a 3,5-4 m da rede, no eixo — não 7 m."],
+            ["6. Bloquear «ao calhas» com o jogador errado", "Em 4v4, bloquear com um jogador mal colocado (longe do atacante) deixa o adversário frente a 3 defensores mal alinhados. O bloqueador deve ser o que está frente ao atacante principal."],
+            ["7. Leitura deficiente", "Com ~40 m² por defensor (vs 20 m² em 6v6), o erro de leitura é irreparável. Antecipação = competência n.º 1 em 4v4."]
+          ]
+        }
+      }
+    },
+    "serviceTransition": {
+      "title": "7. Posicionamento ao serviço",
+      "intro": "<strong>O teu posicionamento ao serviço é DIFERENTE da tua posição defensiva. </strong>Logo que o serviço sai, tens de te reposicionar.",
+      "stepsLabel": "Transição serviço → defesa",
+      "steps": [
+        ["A tua equipa serve", "Estás em posição de rotação"],
+        ["O servidor bate", "Olhas para o distribuidor adversário"],
+        ["O distribuidor toca na bola", "Deslocas-te para a tua zona defensiva"],
+        ["O atacante salta", "Estás na posição final, pronto a reagir"]
+      ]
+    },
+    "communication": {
+      "title": "8. Comunicação defensiva",
+      "intro": "Uma defesa silenciosa é uma defesa ineficaz.",
+      "groups": [
+        {
+          "moment": "Antes do ataque adversário",
+          "calls": [
+            ["\"Número 4!\"", "Anuncia a zona de onde vem o ataque"],
+            ["\"Dois no bloco!\"", "Indica quantos bloqueadores"],
+            ["\"Linha livre!\"", "Se o bloco não cobre a linha"],
+            ["\"Avanço!\" / \"Recuo!\"", "Anuncia o teu movimento"]
+          ]
+        },
+        {
+          "moment": "Durante a ação",
+          "calls": [
+            ["\"Eu!\" / \"Tenho!\"", "Tu ficas com a bola (o MAIS importante)"],
+            ["\"Tu!\" / \"É tua!\"", "Deixas a bola a um colega"],
+            ["\"Fora!\"", "A bola vai sair, não lhe toques"],
+            ["\"Bloqueada!\"", "Se bloqueias, anuncia-o"]
+          ]
+        },
+        {
+          "moment": "Depois da ação",
+          "calls": [
+            ["\"Cobrir!\"", "Pede a cobertura de ataque"],
+            ["\"Livre!\"", "Bola livre, reposicionem-se"],
+            ["\"Mantém!\"", "Mantém-se a defesa no lugar"]
+          ]
+        }
+      ],
+      "ruleLabel": "Regra de ouro",
+      "ruleText": "Em caso de dúvida entre dois jogadores, é SEMPRE o jogador mais avançado que fica com a bola."
+    },
+    "defenseSystems": {
+      "titlePrefix": "9.",
+      "warningLabel": "⚠ Aviso terminológico",
+      "warningLabelNonOfficial": "⚠ Formato não oficial FIVB",
+      "forcesLabel": "Pontos fortes",
+      "weaknessesLabel": "Pontos fracos",
+      "indicationLabel": "Indicação",
+      "tableLabel": "Tabela comparativa sintética",
+      "tableHeaderCriterion": "Critério",
+      "byTeamSize": {
+        "6": {
+          "title": "Os três grandes sistemas defensivos (FIVB / USAV)",
+          "warning": {
+            "label": "⚠ Aviso terminológico",
+            "text": "A expressão «defesa em W», frequente em França, é imprópria. A «W-formation» designa historicamente uma formação de receção de serviço a 5 jogadores — não um sistema defensivo. A doutrina internacional (FIVB, USAV IMPACT, Liskevych, Stone) distingue três sistemas: man-up (2-1-3), perimétrico (2-0-4) e rotacional (3-2-1)."
+          },
+          "systems": [
+            {
+              "name": "Defesa man-up (2-1-3)",
+              "tag": "Antigamente «defesa em W» / red defense",
+              "principe": "Um defensor sobe à altura dos 3 m atrás do bloco para intercetar fintas e amortis. Dois bloqueadores à rede, o off-blocker recua, e três jogadores profundos cobrem os ângulos longos.",
+              "forces": [
+                "Cobertura excecional de tips, roll shots e bolas «podres» atrás do bloco",
+                "Transição rápida para o ataque se o jogador subido for o distribuidor",
+                "Simples de ensinar a equipas jovens"
+              ],
+              "faiblesses": [
+                "Apenas 3 defensores em profundidade — vulnerável a remates potentes em diagonal cerrada",
+                "Um atacante que bate com força entre os bloqueadores atravessa facilmente"
+              ],
+              "indication": "Equipas jovens, escolares, adversários táticos que jogam muitas fintas ou off-speed.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Defesa perimétrica (2-0-4)",
+              "tag": "White defense — sistema dominante no alto nível masculino",
+              "principe": "Os quatro defensores de trás formam um U aberto para a rede, quase em cima das linhas laterais e de fundo — «um pé sobre a linha» (Liskevych). O meio do campo é voluntariamente abandonado.",
+              "forces": [
+                "Excelente cobertura dos remates potentes, linhas e cantos profundos",
+                "Movimento coletivo simples",
+                "Sistema predominante no voleibol masculino moderno internacional"
+              ],
+              "faiblesses": [
+                "Muito vulnerável aos tips curtos atrás do bloco — zona central entre 3 e 5 m livre",
+                "Exige defensores atléticos capazes de mergulhar para a frente"
+              ],
+              "indication": "Sénior, masculino, nível internacional, adversários potentes.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Defesa em rotação (3-2-1)",
+              "tag": "Rotational / slide defense",
+              "principe": "Os três defensores de trás deslizam para o lado de ataque adversário: o de trás oposto sobe atrás do bloco (tip), o do meio desliza para a linha atacada, o defensor do lado atacado coloca-se em ângulo curto.",
+              "forces": [
+                "Excelente cobertura da linha profunda E do tip em simultâneo",
+                "Sistema muito adaptável",
+                "Transição do distribuidor rápida quando este está em P1"
+              ],
+              "faiblesses": [
+                "Um defensor a menos em profundidade (um jogador dedicado ao tip)",
+                "Canto diagonal oposto vulnerável",
+                "Forte capacidade de leitura e coordenação exigidas"
+              ],
+              "indication": "Adversários que combinam potência e linhas/tips; nível intermédio a elite.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["Man-up 2-1-3", "Perim. 2-0-4", "Rotação 3-2-1"],
+          "tableRows": [
+            ["Jogador subido atrás do bloco", "Sim", "Não", "Sim"],
+            ["Defensores profundos", "3", "4", "2"],
+            ["Cobertura tip", "★★★", "★", "★★"],
+            ["Cobertura remate potente", "★★", "★★★", "★★"],
+            ["Cobertura linha profunda", "★★", "★★", "★★★"],
+            ["Cobertura diagonal cerrada", "★", "★★★", "★★"],
+            ["Posição típica do líbero", "Z5 ou Z6", "Z5 (na linha)", "Z5 desliza"],
+            ["Complexidade", "Baixa", "Média", "Elevada"]
+          ],
+          "footer": {
+            "strong": "A escolha não é uma questão de ortodoxia: ",
+            "text": "depende do perfil ofensivo adversário e das qualidades dos seus defensores. A defesa moderna define-se menos pela formação e mais pela leitura — sequência visual «bola → distribuidor → bola → atacante» e paragem equilibrada no instante do contacto."
+          }
+        },
+        "5": {
+          "title": "Os três sistemas defensivos em 5v5",
+          "warning": {
+            "label": "⚠ Formato não oficial FIVB",
+            "text": "O 5v5 indoor não tem regulamento FIVB ou FFVb dedicado. Estes três sistemas são adaptações lógicas do 6v6 documentadas pela VolleyballXL, The Art of Coaching Volleyball e Volleyball Canada. Não existe manual técnico 5v5 oficial — escolha o sistema conforme a configuração da sua equipa (2-3 ou 3-2)."
+          },
+          "systems": [
+            {
+              "name": "Sistema 1-1-3",
+              "tag": "1 bloqueador + 1 cobridor de tip + 3 defensores profundos",
+              "principe": "Adaptado à configuração 2F-3B (2 da frente, 3 de trás). O bloqueador salta sozinho; o 2.º jogador da frente recua em off-blocker a 2-3 m da rede para os tips; 3 defensores profundos cobrem linha, eixo e diagonal longa.",
+              "forces": [
+                "3 defensores profundos como em 6v6 perimétrico — boa cobertura dos remates",
+                "Configuração mais próxima do 5-1 6v6 (preparação para a transição para 6v6)",
+                "Tip coberto pelo off-blocker"
+              ],
+              "faiblesses": [
+                "Bloco a 1 apenas → frágil contra rematadores potentes",
+                "O off-blocker a 2-3 m tem de ser muito reativo"
+              ],
+              "indication": "Configuração 2F-3B (distribuidor penetrante), adversários medianamente potentes. Sistema recomendado para a pedagogia de transição para o 6v6.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Sistema 2-1-2",
+              "tag": "2 bloqueadores + 1 tip + 2 defensores profundos",
+              "principe": "Adaptado à configuração 3F-2B (3 da frente, 2 de trás). Bloco a 2 à rede, o frente centro cobre o tip a 2-3 m da rede, 2 defensores profundos ficam com diagonal longa e linha.",
+              "forces": [
+                "Bloco a 2 como em 6v6 — nitidamente mais eficaz contra remates potentes",
+                "3 atacantes à rede para o contra-ataque"
+              ],
+              "faiblesses": [
+                "Apenas 2 defensores profundos → 9 m de fundo muito difíceis de cobrir",
+                "Forte exigência atlética sobre os 2 jogadores de trás"
+              ],
+              "indication": "Configuração 3F-2B contra equipas muito potentes. Privilegiar no fim do set, quando cada ponto conta.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Sistema 1-2-2",
+              "tag": "Man-up adaptado (equivalente ao 2-1-3 6v6)",
+              "principe": "Bloqueador solo + 2 cobridores da zona da frente (tip + atrás do bloco) + 2 defensores profundos. Adaptado quando o adversário finta muito ou para equipas iniciantes.",
+              "forces": [
+                "Excelente cobertura das fintas curtas (2 cobridores na zona da frente)",
+                "Tip difícil de explorar pelo adversário"
+              ],
+              "faiblesses": [
+                "Apenas 2 defensores profundos → remates potentes difíceis",
+                "Exige coordenação entre os 2 cobridores da zona da frente"
+              ],
+              "indication": "Adversários que fintam muito; voleibol feminino, escalões jovens, equipas técnicas.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["1-1-3", "2-1-2", "1-2-2 (man-up)"],
+          "tableRows": [
+            ["Bloqueadores", "1", "2", "1"],
+            ["Cobridores zona da frente", "1 (off-blocker)", "1 (tip)", "2 (tip + atrás do bloco)"],
+            ["Defensores profundos", "3", "2", "2"],
+            ["Cobertura tip", "★★", "★★", "★★★"],
+            ["Cobertura remate potente", "★★", "★★★", "★★"],
+            ["Cobertura fundo", "★★★", "★★", "★★"],
+            ["Configuração adaptada", "2F-3B", "3F-2B", "2F-3B / 3F-2B"],
+            ["Complexidade", "Baixa", "Média", "Elevada"]
+          ],
+          "footer": {
+            "strong": "Recomendação 5v5: ",
+            "text": "o sistema 1-1-3 em configuração 2F-3B com distribuidor penetrante é a defesa mais próxima do 6v6 — ideal como transição pedagógica. O 2-1-2 só se justifica contra rematadores verdadeiramente potentes."
+          }
+        },
+        "4": {
+          "title": "Os três sistemas defensivos em 4v4",
+          "warning": {
+            "label": "⚠ Formato não oficial FIVB",
+            "text": "O 4v4 indoor não tem regulamento FIVB oficial. Estes três sistemas provêm da prática intramurals universitária (EUA), dos manuais de transição pedagógica FFVb / Volleyball Canada e da literatura de praia (Brandon Joyner, Better at Beach). Com 4 jogadores, cada defensor cobre ~30-40 m² (vs 20 m² em 6v6) — a antecipação é a competência n.º 1."
+          },
+          "systems": [
+            {
+              "name": "Sistema A: 1 bloqueador + 3 defensores",
+              "tag": "O mais difundido em 4v4 indoor",
+              "principe": "Um só jogador sobe ao bloco frente ao atacante principal. Os outros 3 dividem-se: defensor de tip (3-4 m da rede, eixo), defensor cross (7-7,5 m, linha direita, diagonal longa), defensor de linha (7-7,5 m, na sombra do bloco).",
+              "forces": [
+                "Cobre tip, linha e diagonal longa em simultâneo",
+                "O mais equilibrado em 4v4",
+                "Sinal do bloqueador linha/diagonal muito eficaz"
+              ],
+              "faiblesses": [
+                "Bloco a 1 — vulnerável a rematadores potentes",
+                "Exige um defensor de tip disciplinado que não recua"
+              ],
+              "indication": "Adversários de nível equivalente ou moderado. Configuração mais polivalente em 4v4 (formação losango ou linha 3-1).",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Sistema B: 2 bloqueadores + 2 defensores",
+              "tag": "Bloco a 2 (raro em 4v4)",
+              "principe": "Os 2 da frente sobem juntos frente ao atacante principal. Os 2 de trás posicionam-se: um lado linha (7 m, 1 m da linha), um no eixo ligeiramente desviado para a diagonal. O tip não é coberto.",
+              "forces": [
+                "Bloco a 2 nitidamente mais eficaz contra remates potentes",
+                "Pressão máxima sobre o atacante adversário"
+              ],
+              "faiblesses": [
+                "Apenas 2 defensores no chão → impossível cobrir tudo",
+                "Tip atrás do bloco completamente a descoberto",
+                "Impõe uma escolha: linha OU diagonal, não as duas"
+              ],
+              "indication": "Usar apenas contra atacantes muito potentes sem finesse (sem finta). Configuração quadrado 2-2 ou linha 3-1.",
+              "accent": "var(--plum)"
+            },
+            {
+              "name": "Sistema C: 0 bloqueadores",
+              "tag": "Defesa baixa (adversários não rematadores)",
+              "principe": "Nenhum jogador sobe ao bloco. Os 4 jogadores defendem em profundidade: 2 a meio-campo (3-4 m) para as fintas, 2 no fundo (7-8 m) para as bolas mais profundas. O distribuidor faz as vezes de 4.º defensor.",
+              "forces": [
+                "Cobre toda a profundidade do campo",
+                "Bem adaptado a trocas lentas"
+              ],
+              "faiblesses": [
+                "CONTRAPRODUCENTE assim que um adversário bate a sério (o remate passa sem obstáculo)",
+                "Sem pressão à rede"
+              ],
+              "indication": "Níveis escolares, lazer iniciante, adversários que não rematam. A evitar assim que a oposição ganha potência.",
+              "accent": "var(--teal)"
+            }
+          ],
+          "tableHeaders": ["Sistema A", "Sistema B", "Sistema C"],
+          "tableRows": [
+            ["Bloqueadores", "1", "2", "0"],
+            ["Defensores profundos", "3", "2", "4"],
+            ["Cobertura tip", "★★", "★", "★★★"],
+            ["Cobertura remate potente", "★★", "★★★", "★ (∅ bloco)"],
+            ["Cobertura linha profunda", "★★", "★★", "★★"],
+            ["Cobertura diagonal longa", "★★★", "★★", "★★"],
+            ["Adversários recomendados", "Todos os níveis", "Muito potentes", "Não rematadores"],
+            ["Complexidade", "Baixa", "Média", "Baixa"]
+          ],
+          "footer": {
+            "strong": "Recomendação 4v4: ",
+            "text": "o sistema A (1 bloqueador + 3 defensores) é o defeito quase universal. O sistema B só se justifica frente a rematadores verdadeiramente potentes no fim de set. O sistema C só funciona ao nível de lazer iniciante — assim que um adversário remata, regresso ao sistema A."
+          }
+        }
+      }
+    },
+    "transitions": {
+      "title": "10. Transições ataque ↔ defesa",
+      "intro": "O voleibol é um jogo de transições rápidas. Passas constantemente do ataque à defesa e vice-versa.",
+      "groups": [
+        {
+          "label": "Transição ataque → defesa",
+          "items": [
+            ["O teu colega ataca", "Prepara-te mentalmente para defender"],
+            ["A bola é devolvida", "Identifica imediatamente quem vai atacar"],
+            ["Corrida rápida", "Vai para a tua zona defensiva (2–3 segundos no máximo)"],
+            ["Posição baixa", "Flita as pernas, pronto a mergulhar"]
+          ]
+        },
+        {
+          "label": "Transição defesa → ataque",
+          "items": [
+            ["Defendes a bola", "Passe preciso para o distribuidor"],
+            ["Se és da FRENTE", "Corre à rede para atacar ou bloquear"],
+            ["Se és de TRÁS", "Recua ligeiramente, pronto a cobrir o ataque"],
+            ["Cobertura de ataque", "Envolve o teu atacante (em semicírculo a 2–3 m)"]
+          ]
+        }
+      ]
+    },
+    "exercises": {
+      "title": "11. Exercícios para progredir",
+      "durationLabel": "Duração",
+      "materialLabel": "Material",
+      "objectiveLabel": "Objetivo",
+      "items": [
+        {
+          "title": "Leitura de situação",
+          "level": "Iniciante",
+          "duration": "10 min",
+          "materiel": "1 treinador ou parceiro com bolas",
+          "objectif": "Aprender a identificar rapidamente a zona de ataque",
+          "steps": [
+            "O treinador coloca-se do outro lado da rede em zona 4, 3 ou 2",
+            "Sais do centro do campo",
+            "O treinador anuncia a zona e lança a bola",
+            "Tens de te colocar na tua zona defensiva em 2–3 segundos",
+            "Repete 20 vezes variando as zonas"
+          ]
+        },
+        {
+          "title": "Avançar/Recuar consoante o passe",
+          "level": "Intermédio",
+          "duration": "15 min",
+          "materiel": "1 distribuidor, 1 atacante, vários defensores",
+          "objectif": "Ajustar a tua posição conforme a qualidade do passe",
+          "steps": [
+            "O distribuidor faz passes de qualidade variável ao atacante",
+            "Passe perto da rede → Recuas (remate potente esperado)",
+            "Passe longe da rede → Avanças (finta provável)",
+            "O atacante bate e tu defendes",
+            "O treinador corrige a tua posição após cada bola"
+          ]
+        },
+        {
+          "title": "Comunicação defensiva",
+          "level": "Todos os níveis",
+          "duration": "10 min",
+          "materiel": "Equipa completa",
+          "objectif": "Desenvolver a comunicação automática",
+          "steps": [
+            "Jogo no vosso formato (4v4, 5v5 ou 6v6) mas a GRITAR todas as chamadas",
+            "Penalização: -1 ponto se um jogador não gritar \"Eu!\" na sua bola",
+            "Bónus: +1 ponto se toda a equipa comunicar numa troca",
+            "Cada jogador deve anunciar a zona de ataque adversária"
+          ]
+        },
+        {
+          "title": "Defesa contra fintas",
+          "level": "Intermédio",
+          "duration": "15 min",
+          "materiel": "1 atacante, 3 defensores de trás",
+          "objectif": "Melhorar a defesa das bolas curtas",
+          "steps": [
+            "O atacante SÓ faz fintas e amortis",
+            "Os defensores têm todos de avançar (3–4 m)",
+            "Objetivo: recuperar 8 bolas em 10",
+            "Depois alternar: 5 fintas, 5 remates para trabalhar a adaptação"
+          ]
+        },
+        {
+          "title": "Transições rápidas",
+          "level": "Avançado",
+          "duration": "20 min",
+          "materiel": "Equipa completa",
+          "objectif": "Dominar as mudanças ataque-defesa",
+          "steps": [
+            "Jogo normal mas o treinador cronometra as transições",
+            "Objetivo: estar em posição defensiva em menos de 3 segundos",
+            "Se for lento demais, a equipa faz 5 flexões e recomeça",
+            "Aumenta progressivamente o ritmo das trocas"
+          ]
+        },
+        {
+          "title": "Ler o atacante",
+          "level": "Avançado",
+          "duration": "15 min",
+          "materiel": "1 atacante, defensores",
+          "objectif": "Antecipar segundo a linguagem corporal",
+          "steps": [
+            "O atacante alterna remate, finta e amorti sem avisar",
+            "Antes de ele bater, o defensor grita a sua previsão: \"Remate!\" ou \"Finta!\"",
+            "Ponto se a previsão estiver correta E a bola for defendida",
+            "Foco em: ombro, balanço, posição em relação à rede"
+          ]
+        }
+      ]
+    },
+    "commandments": {
+      "title": "12. Os 10 mandamentos do defensor",
+      "items": [
+        ["Olha para o distribuidor", "Depois para o atacante, não para a bola"],
+        ["Mesmo lado = Avança", "Lado oposto = Recua"],
+        ["Passe adversário mau", "→ Avança 1–2 m (finta provável)"],
+        ["Nunca no meio", "Escolhe: avançado OU recuado"],
+        ["Comunica SEMPRE", "\"Eu!\" em cada bola que ficas"],
+        ["Mexe-te após o serviço", "Posição de serviço ≠ Posição defensiva"],
+        ["Lê o ombro", "Ombro alto = remate, baixo = finta"],
+        ["Posição baixa", "Pernas fletidas, braços prontos"],
+        ["Transições rápidas", "3 segundos no máximo para te reposicionares"],
+        ["Defende a tua zona", "Cada jogador tem a sua responsabilidade"]
+      ],
+      "sameSide": {
+        "title": "Mesmo lado que o atacante",
+        "action": "→ AVANÇAR (3–4 m)",
+        "desc": "Defender fintas e amortis"
+      },
+      "oppositeSide": {
+        "title": "Lado oposto ao atacante",
+        "action": "→ RECUAR (6–7 m)",
+        "desc": "Defender diagonais longas"
+      }
+    },
+    "conclusion": {
+      "label": "Conclusão",
+      "body1": "O posicionamento defensivo aprende-se com a prática e a experiência. Não te desencorajes se cometeres erros no início — até os profissionais ajustam constantemente o seu posicionamento.",
+      "body2": "A chave: aplica a regra de base (mesmo lado = avança, oposto = recua), observa o atacante, comunica com os teus colegas e nunca tenhas medo de mergulhar por uma bola.",
+      "mantra": "A defesa ganha os jogos."
+    }
+  }
 }
