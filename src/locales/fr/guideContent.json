@@ -1,3 +1,167 @@
 {
-  "_note": "Le contenu des guides individuels reste en français dans les composants .tsx. Voir locales/en/guideContent.json pour les overlays anglais."
+  "attaque": {
+    "goldenRule": {
+      "mantra": "APPROCHE LENTE → RAPIDE → POWER STEP → CLOSING → SAUT VERTICAL → BRAS TENDU EN AVANT → SNAP DU POIGNET",
+      "body": "La puissance vient de la chaîne cinétique complète, pas du bras seul. Une approche rythmée avec les deux derniers pas rapides génère 70% de la puissance finale."
+    },
+    "phases": {
+      "title": "Les 5 phases du smash",
+      "items": [
+        { "name": "Initiation", "desc": "Lecture du set et décision de l'approche" },
+        { "name": "Wind-up", "desc": "Début de la course d'élan" },
+        { "name": "Cocking", "desc": "Coude au-dessus de l'épaule, main derrière l'oreille — position de puissance" },
+        { "name": "Accélération", "desc": "Rotation séquentielle : hanches → tronc → épaule → coude → poignet" },
+        { "name": "Contact + suivi", "desc": "Snap du poignet, la main \"griffe\" la balle par-dessus → topspin" }
+      ],
+      "footerLabel": "Contact idéal",
+      "footer": "Légèrement en avant de l'épaule frappante, jamais derrière la tête (perte de puissance + risque blessure). Distance au filet à l'impulsion : 30-50 cm minimum."
+    },
+    "approach": {
+      "title": "Course d'approche",
+      "three": {
+        "title": "3 pas — Débutant",
+        "sub": "Gauche-droite-gauche (droitier)",
+        "items": [
+          { "label": "Pas 1 (gauche)", "text": "Pas court directionnel, orientation vers l'attaque" },
+          { "label": "Pas 2 (droit)", "text": "Power step — long et bas, talon d'abord, abaissement du centre de gravité" },
+          { "label": "Pas 3 (gauche)", "text": "Closing step — court, freine la translation horizontale et la convertit en vertical" }
+        ]
+      },
+      "four": {
+        "title": "4 pas — Standard compétition",
+        "sub": "Droite-gauche-droite-gauche (droitier)",
+        "items": [
+          { "label": "Pas 1 (droit)", "text": "Pas d'observation, rythme lent" },
+          { "label": "Pas 2 (gauche)", "text": "Accélération" },
+          { "label": "Pas 3 (droit)", "text": "Power step — le plus important, long et bas" },
+          { "label": "Pas 4 (gauche)", "text": "Closing step parallèle au filet" }
+        ],
+        "rule": "Règle d'or : les deux derniers pas sont les plus rapides — slow → fast."
+      }
+    },
+    "timing": {
+      "title": "Timing selon le type de passe",
+      "headerType": "Type de passe",
+      "headerWhen": "Quand commencer l'approche",
+      "rows": [
+        { "type": "Haute ball (3e tempo)", "timing": "Commencer TARD — quand la balle quitte les mains du passeur" },
+        { "type": "2e tempo (Hut/Go)", "timing": "Commencer quand la passe arrive vers le passeur" },
+        { "type": "1er tempo (Quick)", "timing": "Commencer TÔT — déjà en l'air quand le passeur touche la balle" },
+        { "type": "Slide", "timing": "Commencer au moment où le passeur reçoit la passe" }
+      ]
+    },
+    "types": {
+      "title": "Types d'attaque par poste",
+      "keyPointsLabel": "Points clés",
+      "shotsLabel": "Choix de tirs",
+      "items": [
+        {
+          "id": "outside",
+          "name": "Attaque en zone 4 (Outside / OH)",
+          "position": "Aile gauche",
+          "description": "Base d'apprentissage de l'attaque. L'attaquant aile (Outside Hitter) reçoit le plus grand volume de balles — c'est l'option \"sécurité\" du passeur. Approche à 45° depuis la gauche.",
+          "keyPoints": [
+            "Approche 4 pas à ~45° par rapport au filet",
+            "Appel à 30-50 cm du filet",
+            "Set \"Hut\" (3e tempo haut) ou \"Go\" (2e tempo rapide)",
+            "Sauter VERTICALEMENT — pas vers le filet",
+            "Contact légèrement en avant de l'épaule frappante"
+          ],
+          "shots": ["Cross-court (diagonale)", "Line shot (ligne latérale)", "Cut shot (angle court <3 m)", "Tip (feinte)", "Roll shot (amortie topspin)"]
+        },
+        {
+          "id": "middle",
+          "name": "Attaque centrale (Quick / 1er tempo)",
+          "position": "Avant centre",
+          "description": "L'attaque la plus rapide. Le central est en l'air AVANT ou au moment où le passeur touche la balle. Set très bas (30-50 cm) et très court.",
+          "keyPoints": [
+            "Déclencher l'approche TÔT — déjà en l'air au set du passeur",
+            "Approche 2-3 pas, bras déjà armé en montant",
+            "Concept \"Ghost Middle\" : même si la balle n'arrive pas, courir le quick à fond pour fixer le bloc adverse → libère les ailiers",
+            "Contact à 30-50 cm au-dessus du filet",
+            "Transition rapide : contre → approche en 1-2 secondes"
+          ],
+          "shots": ["Quick devant passeur (\"1\")", "Back-1 derrière passeur", "Slide (départ arrière le long du filet)", "31/Gap (décalé entre passeur et antenne)"]
+        },
+        {
+          "id": "opposite",
+          "name": "Attaque en zone 2 (Opposé / Pointu)",
+          "position": "Aile droite",
+          "description": "L'opposé (pointu) attaque depuis la zone 2. Idéal pour les gauchers (épaule frappante côté antenne droite = fenêtre maximale). Pour droitier : rotation du tronc plus prononcée, se positionner plus loin de l'antenne.",
+          "keyPoints": [
+            "Approche symétrique à l'Outside mais depuis la droite",
+            "Finir avec pouce vers le bas pour le cut shot",
+            "Solution \"release\" du passeur quand la réception est dégradée",
+            "Attaque arrière depuis P1 (zone D) quand en back-row"
+          ],
+          "shots": ["Cross-court", "Line shot", "Pipe/D depuis back-row", "Cut shot diagonal vers zone 5"]
+        },
+        {
+          "id": "backrow",
+          "name": "Attaque arrière (Back-row / Pipe)",
+          "position": "Arrière centre ou droit",
+          "description": "Attaque depuis la zone arrière. Le plant DOIT se faire DERRIÈRE la ligne des 3 m. Permet d'avoir 4 attaquants face à 3 contreurs.",
+          "keyPoints": [
+            "Appel obligatoirement derrière la ligne des 3 m (sinon faute)",
+            "Atterrissage dans la zone avant après saut légal = OK",
+            "Pipe : depuis P6, set arrière du quick (BIC = juste au-dessus du quick)",
+            "Zone D : depuis P1, souvent attaque-refuge de l'opposé"
+          ],
+          "shots": ["Pipe (arrière-centre)", "Zone D (arrière-droit)", "Zone A (arrière-gauche, rare)", "Feinte sur mauvaise passe"]
+        }
+      ]
+    },
+    "special": {
+      "title": "Attaques spéciales",
+      "items": [
+        {
+          "name": "Feinte / Tip",
+          "level": "beginner-intermediate",
+          "levelLabel": "Débutant → Intermédiaire",
+          "desc": "Approche IDENTIQUE au smash (déguisement crucial), puis au contact ralentir le bras et placer la balle d'un coup de doigts. Direction : zone vide repérée AVANT le saut."
+        },
+        {
+          "name": "Roll shot / Amortie topspin",
+          "level": "intermediate",
+          "levelLabel": "Intermédiaire",
+          "desc": "Frappe à vitesse réduite (~50-70%) avec fort topspin pour balle qui plonge court derrière le bloc. Plus rapide à lire que la feinte car plus rapide."
+        },
+        {
+          "name": "Cut shot / Angle court",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermédiaire+",
+          "desc": "Angle aigu vers zone 1 (depuis 4) ou zone 5 (depuis 2). Finir avec pouce vers le bas, main qui coupe latéralement à travers la balle. Frapper le côté du ballon, pas le dessus."
+        },
+        {
+          "name": "Tooling / Wipe",
+          "level": "intermediate-plus",
+          "levelLabel": "Intermédiaire+",
+          "desc": "Faire sortir la balle volontairement par les mains du contre. Sur set serré au filet, sauter verticalement et pousser la balle latéralement en utilisant la main extérieure du contreur comme \"rail\"."
+        }
+      ]
+    },
+    "errors": {
+      "title": "Erreurs fréquentes",
+      "subtitle": "À éviter",
+      "items": [
+        { "label": "Timing d'approche", "text": "Trop tôt : re-saut sans puissance. Trop tard : bras tendu en arrière au contact." },
+        { "label": "Mauvais ordre de pieds", "text": "Terminer toujours sur gauche-droite (droitier) — les deux pieds quasi simultanés." },
+        { "label": "Pas de topspin", "text": "Main plate = pas de snap = ballon trop long. \"Griffer\" la balle par-dessus." },
+        { "label": "Faute de filet", "text": "Saut vers l'avant sur set serré. Sauter VERTICAL, pas avant." },
+        { "label": "Faute de back-row", "text": "Pied sur ou devant la ligne des 3 m au décollage." },
+        { "label": "Atterrissage un pied", "text": "Sauf pour le slide : atterrir sur les deux pieds pour protéger le genou (risque ACL)." }
+      ]
+    },
+    "videos": {
+      "title": "Ressources vidéo",
+      "items": [
+        { "title": "Comment attaquer — 3 étapes (Sikana)", "url": "https://www.youtube.com/watch?v=3aQgfk0VtEA" },
+        { "title": "Le smash au volleyball (CEPSUM)", "url": "https://www.youtube.com/watch?v=Gn1Otje3beg" },
+        { "title": "Course d'attaque détaillée", "url": "https://www.youtube.com/watch?v=ub4XoCJMUzU" },
+        { "title": "La Séquence de Seb — tout sur le smash", "url": "https://www.youtube.com/watch?v=JvxZgViw_os" },
+        { "title": "Sauter pour attaquer (Sikana)", "url": "https://www.youtube.com/watch?v=6GOHF5cNIKs" },
+        { "title": "Attaquer placé (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
+      ]
+    }
+  }
 }
