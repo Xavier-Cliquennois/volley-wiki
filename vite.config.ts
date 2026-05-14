@@ -6,8 +6,8 @@ import { SCENARIOS } from './src/scenarios/data'
 import { GUIDES } from './src/guides/data'
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants'
 
-type Lang = 'fr' | 'en'
-const LANGS: readonly Lang[] = ['fr', 'en']
+type Lang = 'fr' | 'en' | 'pl' | 'it' | 'es' | 'pt' | 'ja' | 'tr'
+const LANGS: readonly Lang[] = ['fr', 'en', 'pl', 'it', 'es', 'pt', 'ja', 'tr']
 
 type SitemapEntry = { path: string; changefreq: string; priority: string }
 

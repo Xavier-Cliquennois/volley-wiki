@@ -4,7 +4,7 @@ import { SCENARIOS } from './src/scenarios/data';
 import { GUIDES } from './src/guides/data';
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants';
 
-const LANGS = ['fr', 'en'] as const;
+const LANGS = ['fr', 'en', 'pl', 'it', 'es', 'pt', 'ja', 'tr'] as const;
 
 const scenarioPaths = SCENARIOS.map((s) => `/scenarios/${s.id}`);
 const guidePaths = GUIDES.filter((g) => g.slug !== 'positionnement-defense').map(
