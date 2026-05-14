@@ -1,77 +1,77 @@
 {
   "header": {
-    "kicker": "★ TACTICS",
-    "title": "GAME SCENARIOS",
-    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+    "kicker": "★ TATTICA",
+    "title": "SCENARI DI GIOCO",
+    "subtitle": "Visualizza situazioni concrete in 3D con narrazione passo dopo passo."
   },
   "construction": {
-    "label": "PAGE UNDER CONSTRUCTION",
-    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+    "label": "PAGINA IN COSTRUZIONE",
+    "body": "Alcune animazioni 3D possono ancora contenere errori o essere incomplete. Grazie per la pazienza — gli scenari sono in fase di completamento."
   },
   "wizard": {
-    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
-    "step2": "2 · WHICH GAME PHASE?",
-    "step3": "3 · WHICH SPECIFIC CONTEXT?",
-    "noMatch": "No scenario available for this combination yet.",
+    "step1": "1 · QUANTI GIOCATORI PER SQUADRA?",
+    "step2": "2 · QUALE FASE DI GIOCO?",
+    "step3": "3 · QUALE CONTESTO SPECIFICO?",
+    "noMatch": "Nessuno scenario disponibile per questa combinazione al momento.",
     "reset": "RESET",
-    "launch": "LAUNCH SCENARIO →"
+    "launch": "AVVIA SCENARIO →"
   },
   "compactBar": {
-    "format": "FORMAT",
-    "phase": "PHASE",
+    "format": "FORMATO",
+    "phase": "FASE",
     "scenario": "SCENARIO",
     "reset": "RESET",
-    "resetTitle": "Reset everything"
+    "resetTitle": "Resetta tutto"
   },
   "placeholder": {
-    "title": "PICK A SCENARIO",
-    "selectFormatAndPhase": "Select a format and a phase above.",
-    "noScenarios": "No scenario available for this combination.",
-    "clickInList": "Click a scenario in the list above."
+    "title": "SCEGLI UNO SCENARIO",
+    "selectFormatAndPhase": "Seleziona un formato e una fase sopra.",
+    "noScenarios": "Nessuno scenario disponibile per questa combinazione.",
+    "clickInList": "Clicca uno scenario nella lista sopra."
   },
   "phase": {
-    "attack": "Attack",
-    "defense": "Defense",
-    "reception": "Reception"
+    "attack": "Attacco",
+    "defense": "Difesa",
+    "reception": "Ricezione"
   },
   "player": {
     "controls": {
       "play": "Play",
-      "pause": "Pause",
+      "pause": "Pausa",
       "replay": "Replay",
-      "previousStep": "Previous step",
-      "nextStep": "Next step",
+      "previousStep": "Passo precedente",
+      "nextStep": "Passo successivo",
       "camera": "Camera",
-      "speed": "Speed",
+      "speed": "Velocità",
       "auto": "Auto",
-      "stepMode": "Step",
-      "playbackModeLabel": "Playback mode"
+      "stepMode": "Passo",
+      "playbackModeLabel": "Modalità di riproduzione"
     },
     "toggles": {
-      "trail": "Trail",
-      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
-      "zones": "Zones",
-      "zonesTitle": "Show the 6 FIVB zones on the court"
+      "trail": "Scia",
+      "trailTitle": "Mostra una scia dietro la palla per visualizzarne la traiettoria",
+      "zones": "Zone",
+      "zonesTitle": "Mostra le 6 zone FIVB sul campo"
     },
     "timeline": {
       "title": "Timeline",
-      "clickHint": "click to jump"
+      "clickHint": "clicca per saltare"
     },
     "cameras": {
-      "DEFAULT": "Wide",
-      "TOP_DOWN": "Top",
-      "BEHIND_SERVE": "Server",
-      "ATTACKER_VIEW": "Hitter"
+      "DEFAULT": "Larga",
+      "TOP_DOWN": "Dall'alto",
+      "BEHIND_SERVE": "Battitore",
+      "ATTACKER_VIEW": "Attaccante"
     },
     "summary": {
-      "keyPoints": "KEY POINTS",
-      "commonMistakes": "COMMON MISTAKES",
-      "context": "Context"
+      "keyPoints": "PUNTI CHIAVE",
+      "commonMistakes": "ERRORI COMUNI",
+      "context": "Contesto"
     },
     "step": {
-      "label": "Step {{current}} / {{total}}",
-      "defaultTitle": "Step {{index}}"
+      "label": "Passo {{current}} / {{total}}",
+      "defaultTitle": "Passo {{index}}"
     },
-    "loading": "LOADING…"
+    "loading": "CARICAMENTO…"
   }
 }

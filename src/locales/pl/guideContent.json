@@ -1,3 +1,3 @@
 {
-  "_note": "Per-guide content translations live inline in the guide components via t() calls."
+  "_note": "Tłumaczenia treści dla poszczególnych poradników znajdują się bezpośrednio w komponentach poradników poprzez wywołania t()."
 }

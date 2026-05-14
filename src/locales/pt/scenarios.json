@@ -1,77 +1,77 @@
 {
   "header": {
-    "kicker": "★ TACTICS",
-    "title": "GAME SCENARIOS",
-    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+    "kicker": "★ TÁTICA",
+    "title": "CENÁRIOS DE JOGO",
+    "subtitle": "Visualize situações concretas em 3D com narração passo a passo."
   },
   "construction": {
-    "label": "PAGE UNDER CONSTRUCTION",
-    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+    "label": "PÁGINA EM CONSTRUÇÃO",
+    "body": "Algumas animações 3D podem ainda conter erros ou estar incompletas. Obrigado pela sua paciência — os cenários estão a ser finalizados."
   },
   "wizard": {
-    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
-    "step2": "2 · WHICH GAME PHASE?",
-    "step3": "3 · WHICH SPECIFIC CONTEXT?",
-    "noMatch": "No scenario available for this combination yet.",
-    "reset": "RESET",
-    "launch": "LAUNCH SCENARIO →"
+    "step1": "1 · QUANTOS JOGADORES POR EQUIPA?",
+    "step2": "2 · QUE FASE DE JOGO?",
+    "step3": "3 · QUE CONTEXTO ESPECÍFICO?",
+    "noMatch": "Ainda não há cenário disponível para esta combinação.",
+    "reset": "REPOR",
+    "launch": "INICIAR CENÁRIO →"
   },
   "compactBar": {
-    "format": "FORMAT",
-    "phase": "PHASE",
-    "scenario": "SCENARIO",
-    "reset": "RESET",
-    "resetTitle": "Reset everything"
+    "format": "FORMATO",
+    "phase": "FASE",
+    "scenario": "CENÁRIO",
+    "reset": "REPOR",
+    "resetTitle": "Repor tudo"
   },
   "placeholder": {
-    "title": "PICK A SCENARIO",
-    "selectFormatAndPhase": "Select a format and a phase above.",
-    "noScenarios": "No scenario available for this combination.",
-    "clickInList": "Click a scenario in the list above."
+    "title": "ESCOLHA UM CENÁRIO",
+    "selectFormatAndPhase": "Selecione um formato e uma fase acima.",
+    "noScenarios": "Não há cenário disponível para esta combinação.",
+    "clickInList": "Clique num cenário na lista acima."
   },
   "phase": {
-    "attack": "Attack",
-    "defense": "Defense",
-    "reception": "Reception"
+    "attack": "Ataque",
+    "defense": "Defesa",
+    "reception": "Receção"
   },
   "player": {
     "controls": {
-      "play": "Play",
-      "pause": "Pause",
-      "replay": "Replay",
-      "previousStep": "Previous step",
-      "nextStep": "Next step",
-      "camera": "Camera",
-      "speed": "Speed",
+      "play": "Reproduzir",
+      "pause": "Pausa",
+      "replay": "Repetir",
+      "previousStep": "Passo anterior",
+      "nextStep": "Passo seguinte",
+      "camera": "Câmara",
+      "speed": "Velocidade",
       "auto": "Auto",
-      "stepMode": "Step",
-      "playbackModeLabel": "Playback mode"
+      "stepMode": "Passo",
+      "playbackModeLabel": "Modo de reprodução"
     },
     "toggles": {
-      "trail": "Trail",
-      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
-      "zones": "Zones",
-      "zonesTitle": "Show the 6 FIVB zones on the court"
+      "trail": "Rasto",
+      "trailTitle": "Mostrar um rasto atrás da bola para visualizar a sua trajetória",
+      "zones": "Zonas",
+      "zonesTitle": "Mostrar as 6 zonas FIVB no campo"
     },
     "timeline": {
-      "title": "Timeline",
-      "clickHint": "click to jump"
+      "title": "Cronologia",
+      "clickHint": "clique para avançar"
     },
     "cameras": {
-      "DEFAULT": "Wide",
-      "TOP_DOWN": "Top",
-      "BEHIND_SERVE": "Server",
-      "ATTACKER_VIEW": "Hitter"
+      "DEFAULT": "Geral",
+      "TOP_DOWN": "Topo",
+      "BEHIND_SERVE": "Servidor",
+      "ATTACKER_VIEW": "Atacante"
     },
     "summary": {
-      "keyPoints": "KEY POINTS",
-      "commonMistakes": "COMMON MISTAKES",
-      "context": "Context"
+      "keyPoints": "PONTOS-CHAVE",
+      "commonMistakes": "ERROS COMUNS",
+      "context": "Contexto"
     },
     "step": {
-      "label": "Step {{current}} / {{total}}",
-      "defaultTitle": "Step {{index}}"
+      "label": "Passo {{current}} / {{total}}",
+      "defaultTitle": "Passo {{index}}"
     },
-    "loading": "LOADING…"
+    "loading": "A CARREGAR…"
   }
 }

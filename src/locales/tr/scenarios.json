@@ -1,77 +1,77 @@
 {
   "header": {
-    "kicker": "★ TACTICS",
-    "title": "GAME SCENARIOS",
-    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+    "kicker": "★ TAKTİKLER",
+    "title": "OYUN SENARYOLARI",
+    "subtitle": "Adım adım anlatımla somut durumları 3D olarak görselleştirin."
   },
   "construction": {
-    "label": "PAGE UNDER CONSTRUCTION",
-    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+    "label": "SAYFA YAPIM AŞAMASINDA",
+    "body": "Bazı 3D animasyonlar hâlâ hatalar içerebilir veya eksik olabilir. Sabrınız için teşekkürler — senaryolar tamamlanıyor."
   },
   "wizard": {
-    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
-    "step2": "2 · WHICH GAME PHASE?",
-    "step3": "3 · WHICH SPECIFIC CONTEXT?",
-    "noMatch": "No scenario available for this combination yet.",
-    "reset": "RESET",
-    "launch": "LAUNCH SCENARIO →"
+    "step1": "1 · TAKIM BAŞINA KAÇ OYUNCU?",
+    "step2": "2 · HANGİ OYUN FAZI?",
+    "step3": "3 · HANGİ ÖZEL BAĞLAM?",
+    "noMatch": "Bu kombinasyon için henüz senaryo yok.",
+    "reset": "SIFIRLA",
+    "launch": "SENARYOYU BAŞLAT →"
   },
   "compactBar": {
     "format": "FORMAT",
-    "phase": "PHASE",
-    "scenario": "SCENARIO",
-    "reset": "RESET",
-    "resetTitle": "Reset everything"
+    "phase": "FAZ",
+    "scenario": "SENARYO",
+    "reset": "SIFIRLA",
+    "resetTitle": "Her şeyi sıfırla"
   },
   "placeholder": {
-    "title": "PICK A SCENARIO",
-    "selectFormatAndPhase": "Select a format and a phase above.",
-    "noScenarios": "No scenario available for this combination.",
-    "clickInList": "Click a scenario in the list above."
+    "title": "BİR SENARYO SEÇ",
+    "selectFormatAndPhase": "Yukarıdan bir format ve faz seçin.",
+    "noScenarios": "Bu kombinasyon için senaryo yok.",
+    "clickInList": "Yukarıdaki listeden bir senaryoya tıklayın."
   },
   "phase": {
-    "attack": "Attack",
-    "defense": "Defense",
-    "reception": "Reception"
+    "attack": "Saldırı",
+    "defense": "Savunma",
+    "reception": "Karşılama"
   },
   "player": {
     "controls": {
-      "play": "Play",
-      "pause": "Pause",
-      "replay": "Replay",
-      "previousStep": "Previous step",
-      "nextStep": "Next step",
-      "camera": "Camera",
-      "speed": "Speed",
-      "auto": "Auto",
-      "stepMode": "Step",
-      "playbackModeLabel": "Playback mode"
+      "play": "Oynat",
+      "pause": "Duraklat",
+      "replay": "Yeniden oynat",
+      "previousStep": "Önceki adım",
+      "nextStep": "Sonraki adım",
+      "camera": "Kamera",
+      "speed": "Hız",
+      "auto": "Otomatik",
+      "stepMode": "Adım",
+      "playbackModeLabel": "Oynatma modu"
     },
     "toggles": {
-      "trail": "Trail",
-      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
-      "zones": "Zones",
-      "zonesTitle": "Show the 6 FIVB zones on the court"
+      "trail": "İz",
+      "trailTitle": "Yörüngeyi görselleştirmek için topun arkasında bir iz göster",
+      "zones": "Bölgeler",
+      "zonesTitle": "Sahada 6 FIVB bölgesini göster"
     },
     "timeline": {
-      "title": "Timeline",
-      "clickHint": "click to jump"
+      "title": "Zaman çizelgesi",
+      "clickHint": "atlamak için tıkla"
     },
     "cameras": {
-      "DEFAULT": "Wide",
-      "TOP_DOWN": "Top",
-      "BEHIND_SERVE": "Server",
-      "ATTACKER_VIEW": "Hitter"
+      "DEFAULT": "Geniş",
+      "TOP_DOWN": "Üst",
+      "BEHIND_SERVE": "Servis atan",
+      "ATTACKER_VIEW": "Vurucu"
     },
     "summary": {
-      "keyPoints": "KEY POINTS",
-      "commonMistakes": "COMMON MISTAKES",
-      "context": "Context"
+      "keyPoints": "ANAHTAR NOKTALAR",
+      "commonMistakes": "YAYGIN HATALAR",
+      "context": "Bağlam"
     },
     "step": {
-      "label": "Step {{current}} / {{total}}",
-      "defaultTitle": "Step {{index}}"
+      "label": "Adım {{current}} / {{total}}",
+      "defaultTitle": "Adım {{index}}"
     },
-    "loading": "LOADING…"
+    "loading": "YÜKLENİYOR…"
   }
 }

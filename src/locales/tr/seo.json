@@ -1,79 +1,79 @@
 {
-  "siteLocale": "en_US",
-  "ogLocale": "en_US",
-  "htmlLang": "en",
-  "structuredLang": "en-US",
-  "alternateLocale": "fr_FR",
+  "siteLocale": "tr_TR",
+  "ogLocale": "tr_TR",
+  "htmlLang": "tr",
+  "structuredLang": "tr-TR",
+  "alternateLocale": "en_US",
   "home": {
-    "title": "Volley-Wiki — Indoor volleyball guide for 6v6, 5v5 and 4v4",
-    "description": "Indoor volleyball wiki: positions, techniques, 3D scenarios, rules and glossary. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "Volley-Wiki — 6'ya 6, 5'e 5 ve 4'e 4 için salon voleybolu rehberi",
+    "description": "Salon voleybol wikisi: pozisyonlar, teknikler, 3D senaryolar, kurallar ve sözlük. 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmıştır."
   },
   "techniques": {
-    "title": "Volleyball techniques — Serve, pass, attack, defense | Volley-Wiki",
-    "description": "Learn the fundamental techniques of volleyball: serve, reception, attack, block, defense. Interactive 3D animations and tips by level."
+    "title": "Voleybol teknikleri — Servis, pas, saldırı, savunma | Volley-Wiki",
+    "description": "Voleybolun temel tekniklerini öğrenin: servis, karşılama, saldırı, blok, savunma. İnteraktif 3D animasyonlar ve seviyeye göre ipuçları."
   },
   "positionsHub": {
-    "title": "Volleyball positions — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "Discover indoor volleyball positions and roles for each game format: 6 vs 6, 5 vs 5 and 4 vs 4. Detailed tactical systems."
+    "title": "Voleybol pozisyonları — 6'ya 6, 5'e 5, 4'e 4 | Volley-Wiki",
+    "description": "Her oyun formatı için salon voleybolu pozisyonlarını ve rollerini keşfedin: 6'ya 6, 5'e 5 ve 4'e 4. Ayrıntılı taktik sistemler."
   },
   "positions": {
-    "title": "Volleyball positions {{size}} — {{config}} | Volley-Wiki",
-    "description": "Volleyball {{label}} positions and roles: {{configName}} system. {{descriptionExcerpt}}",
-    "articleHeadline": "Volleyball positions {{size}} — {{config}}"
+    "title": "Voleybol pozisyonları {{size}} — {{config}} | Volley-Wiki",
+    "description": "Voleybol {{label}} pozisyonları ve rolleri: {{configName}} sistemi. {{descriptionExcerpt}}",
+    "articleHeadline": "Voleybol pozisyonları {{size}} — {{config}}"
   },
   "scenariosHub": {
-    "title": "3D volleyball scenarios — Attack, defense, reception | Volley-Wiki",
-    "description": "Visualize concrete attack, defense and reception scenarios in 3D. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "3D voleybol senaryoları — Saldırı, savunma, karşılama | Volley-Wiki",
+    "description": "Somut saldırı, savunma ve karşılama senaryolarını 3D olarak görselleştirin. 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmıştır."
   },
   "scenarioDetail": {
-    "title": "{{title}} — {{teamSize}} scenario | Volley-Wiki",
-    "description": "{{shortDescription}} Watch this {{phase}} scenario in 3D with step-by-step narration."
+    "title": "{{title}} — {{teamSize}} senaryosu | Volley-Wiki",
+    "description": "{{shortDescription}} Bu {{phase}} senaryosunu adım adım anlatımla 3D olarak izleyin."
   },
   "rules": {
-    "title": "Volleyball rules — Simplified FIVB regulation | Volley-Wiki",
-    "description": "The official FIVB volleyball regulation explained simply: format, court, rotations, faults, contacts. The essentials to understand and play."
+    "title": "Voleybol kuralları — Sadeleştirilmiş FIVB kuralları | Volley-Wiki",
+    "description": "Resmi FIVB voleybol kuralları sade bir şekilde açıklandı: format, saha, rotasyonlar, hatalar, temaslar. Anlamak ve oynamak için temel bilgiler."
   },
   "glossary": {
-    "title": "Volleyball glossary — All terms explained | Volley-Wiki",
-    "description": "Complete dictionary of volleyball vocabulary: ace, bump, block, pipe, libero, side-out and more. Clear and precise definitions."
+    "title": "Voleybol sözlüğü — Tüm terimler açıklamalı | Volley-Wiki",
+    "description": "Voleybol terimlerinin eksiksiz sözlüğü: ace, manşet, blok, pipe, libero, servis kazanımı ve daha fazlası. Açık ve net tanımlar."
   },
   "guides": {
-    "title": "Volleyball technical and tactical guides | Volley-Wiki",
-    "description": "Complete guides on serving, reception, attack, blocking and defensive positioning. Diagrams, videos and tips by level."
+    "title": "Voleybol teknik ve taktik rehberleri | Volley-Wiki",
+    "description": "Servis, karşılama, saldırı, blok ve savunma konumlanması hakkında eksiksiz rehberler. Diyagramlar, videolar ve seviyeye göre ipuçları."
   },
   "guideDetail": {
     "title": "{{title}} | Volley-Wiki"
   },
   "defenseHub": {
-    "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "{{description}} Guide adapted to 6 vs 6, 5 vs 5 and 4 vs 4 formats."
+    "title": "{{title}} — 6'ya 6, 5'e 5, 4'e 4 | Volley-Wiki",
+    "description": "{{description}} 6'ya 6, 5'e 5 ve 4'e 4 formatlarına uyarlanmış rehber."
   },
   "defenseSized": {
-    "title": "Defensive positioning {{size}} — {{config}} | Volley-Wiki",
-    "description": "Complete defensive positioning guide for volleyball {{label}} in the {{configName}} system: zone responsibilities, defense by opponent attack zone.",
-    "articleHeadline": "Defensive positioning {{size}} — {{config}}"
+    "title": "Savunma konumlanması {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{configName}} sisteminde {{label}} voleybolu için eksiksiz savunma konumlanması rehberi: bölge sorumlulukları, rakip saldırı bölgesine göre savunma.",
+    "articleHeadline": "Savunma konumlanması {{size}} — {{config}}"
   },
   "notFound": {
-    "title": "Page not found | Volley-Wiki",
-    "description": "This page does not exist. Return to the homepage to explore the volleyball wiki."
+    "title": "Sayfa bulunamadı | Volley-Wiki",
+    "description": "Bu sayfa mevcut değil. Voleybol wikisini keşfetmek için ana sayfaya dönün."
   },
   "guideNotFound": {
-    "title": "Guide not found | Volley-Wiki",
-    "description": "This guide does not exist. Go back to the guides list."
+    "title": "Rehber bulunamadı | Volley-Wiki",
+    "description": "Bu rehber mevcut değil. Rehberler listesine geri dönün."
   },
   "breadcrumbs": {
-    "home": "Home",
-    "techniques": "Techniques",
-    "positions": "Positions",
-    "scenarios": "Scenarios",
-    "guides": "Guides",
-    "rules": "Rules",
-    "glossary": "Glossary",
-    "defense": "Defensive positioning"
+    "home": "Ana Sayfa",
+    "techniques": "Teknikler",
+    "positions": "Pozisyonlar",
+    "scenarios": "Senaryolar",
+    "guides": "Rehberler",
+    "rules": "Kurallar",
+    "glossary": "Sözlük",
+    "defense": "Savunma konumlanması"
   },
   "phase": {
-    "attack": "attack",
-    "defense": "defense",
-    "reception": "reception"
+    "attack": "saldırı",
+    "defense": "savunma",
+    "reception": "karşılama"
   }
 }

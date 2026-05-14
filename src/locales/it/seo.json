@@ -1,79 +1,79 @@
 {
-  "siteLocale": "en_US",
-  "ogLocale": "en_US",
-  "htmlLang": "en",
-  "structuredLang": "en-US",
-  "alternateLocale": "fr_FR",
+  "siteLocale": "it_IT",
+  "ogLocale": "it_IT",
+  "htmlLang": "it",
+  "structuredLang": "it-IT",
+  "alternateLocale": "en_US",
   "home": {
-    "title": "Volley-Wiki — Indoor volleyball guide for 6v6, 5v5 and 4v4",
-    "description": "Indoor volleyball wiki: positions, techniques, 3D scenarios, rules and glossary. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "Volley-Wiki — Guida alla pallavolo indoor per 6v6, 5v5 e 4v4",
+    "description": "Wiki di pallavolo indoor: posizioni, tecniche, scenari 3D, regole e glossario. Adattato ai formati 6v6, 5v5 e 4v4."
   },
   "techniques": {
-    "title": "Volleyball techniques — Serve, pass, attack, defense | Volley-Wiki",
-    "description": "Learn the fundamental techniques of volleyball: serve, reception, attack, block, defense. Interactive 3D animations and tips by level."
+    "title": "Tecniche di pallavolo — Servizio, ricezione, attacco, difesa | Volley-Wiki",
+    "description": "Impara le tecniche fondamentali della pallavolo: servizio, ricezione, attacco, muro, difesa. Animazioni 3D interattive e consigli per livello."
   },
   "positionsHub": {
-    "title": "Volleyball positions — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "Discover indoor volleyball positions and roles for each game format: 6 vs 6, 5 vs 5 and 4 vs 4. Detailed tactical systems."
+    "title": "Posizioni della pallavolo — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "Scopri le posizioni e i ruoli della pallavolo indoor per ogni formato di gioco: 6 vs 6, 5 vs 5 e 4 vs 4. Sistemi tattici dettagliati."
   },
   "positions": {
-    "title": "Volleyball positions {{size}} — {{config}} | Volley-Wiki",
-    "description": "Volleyball {{label}} positions and roles: {{configName}} system. {{descriptionExcerpt}}",
-    "articleHeadline": "Volleyball positions {{size}} — {{config}}"
+    "title": "Posizioni pallavolo {{size}} — {{config}} | Volley-Wiki",
+    "description": "Posizioni e ruoli della pallavolo {{label}}: sistema {{configName}}. {{descriptionExcerpt}}",
+    "articleHeadline": "Posizioni pallavolo {{size}} — {{config}}"
   },
   "scenariosHub": {
-    "title": "3D volleyball scenarios — Attack, defense, reception | Volley-Wiki",
-    "description": "Visualize concrete attack, defense and reception scenarios in 3D. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "Scenari 3D di pallavolo — Attacco, difesa, ricezione | Volley-Wiki",
+    "description": "Visualizza scenari concreti di attacco, difesa e ricezione in 3D. Adattati ai formati 6v6, 5v5 e 4v4."
   },
   "scenarioDetail": {
-    "title": "{{title}} — {{teamSize}} scenario | Volley-Wiki",
-    "description": "{{shortDescription}} Watch this {{phase}} scenario in 3D with step-by-step narration."
+    "title": "{{title}} — Scenario {{teamSize}} | Volley-Wiki",
+    "description": "{{shortDescription}} Guarda questo scenario di {{phase}} in 3D con narrazione passo dopo passo."
   },
   "rules": {
-    "title": "Volleyball rules — Simplified FIVB regulation | Volley-Wiki",
-    "description": "The official FIVB volleyball regulation explained simply: format, court, rotations, faults, contacts. The essentials to understand and play."
+    "title": "Regole della pallavolo — Regolamento FIVB semplificato | Volley-Wiki",
+    "description": "Il regolamento ufficiale FIVB della pallavolo spiegato in modo semplice: formato, campo, rotazioni, falli, contatti. L'essenziale per capire e giocare."
   },
   "glossary": {
-    "title": "Volleyball glossary — All terms explained | Volley-Wiki",
-    "description": "Complete dictionary of volleyball vocabulary: ace, bump, block, pipe, libero, side-out and more. Clear and precise definitions."
+    "title": "Glossario della pallavolo — Tutti i termini spiegati | Volley-Wiki",
+    "description": "Dizionario completo del vocabolario della pallavolo: ace, bagher, muro, pipe, libero, cambio palla e altro. Definizioni chiare e precise."
   },
   "guides": {
-    "title": "Volleyball technical and tactical guides | Volley-Wiki",
-    "description": "Complete guides on serving, reception, attack, blocking and defensive positioning. Diagrams, videos and tips by level."
+    "title": "Guide tecniche e tattiche di pallavolo | Volley-Wiki",
+    "description": "Guide complete su servizio, ricezione, attacco, muro e posizionamento difensivo. Diagrammi, video e consigli per livello."
   },
   "guideDetail": {
     "title": "{{title}} | Volley-Wiki"
   },
   "defenseHub": {
     "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "{{description}} Guide adapted to 6 vs 6, 5 vs 5 and 4 vs 4 formats."
+    "description": "{{description}} Guida adattata ai formati 6 vs 6, 5 vs 5 e 4 vs 4."
   },
   "defenseSized": {
-    "title": "Defensive positioning {{size}} — {{config}} | Volley-Wiki",
-    "description": "Complete defensive positioning guide for volleyball {{label}} in the {{configName}} system: zone responsibilities, defense by opponent attack zone.",
-    "articleHeadline": "Defensive positioning {{size}} — {{config}}"
+    "title": "Posizionamento difensivo {{size}} — {{config}} | Volley-Wiki",
+    "description": "Guida completa al posizionamento difensivo per la pallavolo {{label}} nel sistema {{configName}}: responsabilità di zona, difesa per zona d'attacco avversaria.",
+    "articleHeadline": "Posizionamento difensivo {{size}} — {{config}}"
   },
   "notFound": {
-    "title": "Page not found | Volley-Wiki",
-    "description": "This page does not exist. Return to the homepage to explore the volleyball wiki."
+    "title": "Pagina non trovata | Volley-Wiki",
+    "description": "Questa pagina non esiste. Torna alla homepage per esplorare il wiki della pallavolo."
   },
   "guideNotFound": {
-    "title": "Guide not found | Volley-Wiki",
-    "description": "This guide does not exist. Go back to the guides list."
+    "title": "Guida non trovata | Volley-Wiki",
+    "description": "Questa guida non esiste. Torna alla lista delle guide."
   },
   "breadcrumbs": {
     "home": "Home",
-    "techniques": "Techniques",
-    "positions": "Positions",
-    "scenarios": "Scenarios",
-    "guides": "Guides",
-    "rules": "Rules",
-    "glossary": "Glossary",
-    "defense": "Defensive positioning"
+    "techniques": "Tecniche",
+    "positions": "Posizioni",
+    "scenarios": "Scenari",
+    "guides": "Guide",
+    "rules": "Regole",
+    "glossary": "Glossario",
+    "defense": "Posizionamento difensivo"
   },
   "phase": {
-    "attack": "attack",
-    "defense": "defense",
-    "reception": "reception"
+    "attack": "attacco",
+    "defense": "difesa",
+    "reception": "ricezione"
   }
 }

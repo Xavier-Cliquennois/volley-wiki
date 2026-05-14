@@ -1,63 +1,63 @@
 {
   "header": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "GUIDES",
-    "subtitle": "Detailed technical and tactical guides to improve at volleyball."
+    "kicker": "★ DOKUMENTACJA",
+    "title": "PORADNIKI",
+    "subtitle": "Szczegółowe poradniki techniczne i taktyczne do doskonalenia w siatkówce."
   },
-  "ticketPrefix": "N°",
+  "ticketPrefix": "Nr ",
   "list": {
     "service": {
-      "title": "Serving guide",
-      "subtitle": "Underhand, float, jump float and jump topspin",
-      "category": "Technique",
-      "description": "The 4 serve types with biomechanics, steps, common mistakes, drills and tactical zones.",
+      "title": "Poradnik zagrywki",
+      "subtitle": "Dolna, float, jump float i jump topspin",
+      "category": "Technika",
+      "description": "4 typy zagrywek z biomechaniką, etapami, częstymi błędami, ćwiczeniami i strefami taktycznymi.",
       "readingTime": "~15 min",
-      "level": "Beginner"
+      "level": "Początkujący"
     },
     "reception": {
-      "title": "Reception guide",
-      "subtitle": "Bump, platform, systems and reading the serve",
-      "category": "Technique",
-      "description": "Platform technique, freeze on contact, movement, W/U systems and reading the server.",
+      "title": "Poradnik odbioru",
+      "subtitle": "Odbiór sposobem dolnym, platforma, systemy i czytanie zagrywki",
+      "category": "Technika",
+      "description": "Technika platformy, zastygnięcie w kontakcie, poruszanie się, systemy W/U i czytanie zagrywającego.",
       "readingTime": "~15 min",
-      "level": "Beginner"
+      "level": "Początkujący"
     },
     "attaque": {
-      "title": "Attack guide",
-      "subtitle": "Approach, timing, shots and positions",
-      "category": "Technique",
-      "description": "The 5 phases of the spike, 3-4 step approach, timing based on the set, special shots and errors.",
+      "title": "Poradnik ataku",
+      "subtitle": "Doskok, wyczucie czasu, uderzenia i pozycje",
+      "category": "Technika",
+      "description": "5 faz smeczu, doskok w 3-4 krokach, wyczucie czasu w zależności od wystawy, specjalne uderzenia i błędy.",
       "readingTime": "~15 min",
-      "level": "Intermediate"
+      "level": "Średniozaawansowany"
     },
     "contre": {
-      "title": "Blocking guide",
-      "subtitle": "Timing, block types and reading the game",
-      "category": "Technique",
-      "description": "Timing, block types, elite visual sequence, read vs commit blocking and drills.",
+      "title": "Poradnik bloku",
+      "subtitle": "Wyczucie czasu, rodzaje bloków i czytanie gry",
+      "category": "Technika",
+      "description": "Wyczucie czasu, rodzaje bloków, elitarna sekwencja wzrokowa, read vs commit blocking i ćwiczenia.",
       "readingTime": "~10 min",
-      "level": "Intermediate"
+      "level": "Średniozaawansowany"
     },
     "positionnement-defense": {
-      "title": "Defensive positioning",
-      "subtitle": "Place yourself based on position and situation",
-      "category": "Tactics",
-      "description": "Zone responsibilities, positioning by opposing attack zone, systems and communication.",
+      "title": "Ustawienie obronne",
+      "subtitle": "Ustaw się w zależności od pozycji i sytuacji",
+      "category": "Taktyka",
+      "description": "Odpowiedzialności w strefach, ustawienie według strefy ataku przeciwnika, systemy i komunikacja.",
       "readingTime": "~20 min",
-      "level": "Intermediate"
+      "level": "Średniozaawansowany"
     }
   },
   "detail": {
-    "backLink": "← GUIDES",
-    "sectionTitle": "★ GUIDE CONTENT ★",
-    "notFound": "Guide not found."
+    "backLink": "← PORADNIKI",
+    "sectionTitle": "★ TREŚĆ PORADNIKA ★",
+    "notFound": "Poradnik nie został znaleziony."
   },
   "defenseHub": {
-    "backLink": "← GUIDES",
-    "description": "Defensive positioning changes with the number of players on the court. Choose your format to access the full guide: zone responsibilities, systems (A/B, man-up, 1-2-2…) and adaptation by opposing attack zone.",
-    "cardDescription": "Defense adapted to the {{size}} format, zones, systems and detailed placements."
+    "backLink": "← PORADNIKI",
+    "description": "Ustawienie obronne zmienia się w zależności od liczby zawodników na boisku. Wybierz swój format, aby uzyskać dostęp do pełnego poradnika: odpowiedzialności w strefach, systemy (A/B, man-up, 1-2-2…) i adaptacja według strefy ataku przeciwnika.",
+    "cardDescription": "Obrona dostosowana do formatu {{size}}, strefy, systemy i szczegółowe ustawienia."
   },
   "defenseSized": {
-    "backLink": "← ALL FORMATS"
+    "backLink": "← WSZYSTKIE FORMATY"
   }
 }

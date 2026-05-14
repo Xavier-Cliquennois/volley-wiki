@@ -1,77 +1,77 @@
 {
   "header": {
-    "kicker": "★ TACTICS",
-    "title": "GAME SCENARIOS",
-    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+    "kicker": "★ TAKTYKA",
+    "title": "SCENARIUSZE GRY",
+    "subtitle": "Wizualizuj konkretne sytuacje w 3D z narracją krok po kroku."
   },
   "construction": {
-    "label": "PAGE UNDER CONSTRUCTION",
-    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+    "label": "STRONA W BUDOWIE",
+    "body": "Niektóre animacje 3D mogą wciąż zawierać błędy lub być niekompletne. Dziękujemy za cierpliwość — scenariusze są finalizowane."
   },
   "wizard": {
-    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
-    "step2": "2 · WHICH GAME PHASE?",
-    "step3": "3 · WHICH SPECIFIC CONTEXT?",
-    "noMatch": "No scenario available for this combination yet.",
-    "reset": "RESET",
-    "launch": "LAUNCH SCENARIO →"
+    "step1": "1 · ILU ZAWODNIKÓW W DRUŻYNIE?",
+    "step2": "2 · KTÓRA FAZA GRY?",
+    "step3": "3 · JAKI KONKRETNY KONTEKST?",
+    "noMatch": "Nie ma jeszcze scenariusza dla tej kombinacji.",
+    "reset": "RESETUJ",
+    "launch": "URUCHOM SCENARIUSZ →"
   },
   "compactBar": {
     "format": "FORMAT",
-    "phase": "PHASE",
-    "scenario": "SCENARIO",
-    "reset": "RESET",
-    "resetTitle": "Reset everything"
+    "phase": "FAZA",
+    "scenario": "SCENARIUSZ",
+    "reset": "RESETUJ",
+    "resetTitle": "Zresetuj wszystko"
   },
   "placeholder": {
-    "title": "PICK A SCENARIO",
-    "selectFormatAndPhase": "Select a format and a phase above.",
-    "noScenarios": "No scenario available for this combination.",
-    "clickInList": "Click a scenario in the list above."
+    "title": "WYBIERZ SCENARIUSZ",
+    "selectFormatAndPhase": "Wybierz format i fazę powyżej.",
+    "noScenarios": "Brak scenariusza dla tej kombinacji.",
+    "clickInList": "Kliknij scenariusz na liście powyżej."
   },
   "phase": {
-    "attack": "Attack",
-    "defense": "Defense",
-    "reception": "Reception"
+    "attack": "Atak",
+    "defense": "Obrona",
+    "reception": "Odbiór"
   },
   "player": {
     "controls": {
-      "play": "Play",
-      "pause": "Pause",
-      "replay": "Replay",
-      "previousStep": "Previous step",
-      "nextStep": "Next step",
-      "camera": "Camera",
-      "speed": "Speed",
+      "play": "Odtwórz",
+      "pause": "Pauza",
+      "replay": "Odtwórz ponownie",
+      "previousStep": "Poprzedni krok",
+      "nextStep": "Następny krok",
+      "camera": "Kamera",
+      "speed": "Prędkość",
       "auto": "Auto",
-      "stepMode": "Step",
-      "playbackModeLabel": "Playback mode"
+      "stepMode": "Krok",
+      "playbackModeLabel": "Tryb odtwarzania"
     },
     "toggles": {
-      "trail": "Trail",
-      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
-      "zones": "Zones",
-      "zonesTitle": "Show the 6 FIVB zones on the court"
+      "trail": "Ślad",
+      "trailTitle": "Pokaż ślad za piłką, by wizualizować jej trajektorię",
+      "zones": "Strefy",
+      "zonesTitle": "Pokaż 6 stref FIVB na boisku"
     },
     "timeline": {
-      "title": "Timeline",
-      "clickHint": "click to jump"
+      "title": "Oś czasu",
+      "clickHint": "kliknij, aby przejść"
     },
     "cameras": {
-      "DEFAULT": "Wide",
-      "TOP_DOWN": "Top",
-      "BEHIND_SERVE": "Server",
-      "ATTACKER_VIEW": "Hitter"
+      "DEFAULT": "Szeroka",
+      "TOP_DOWN": "Z góry",
+      "BEHIND_SERVE": "Zagrywający",
+      "ATTACKER_VIEW": "Atakujący"
     },
     "summary": {
-      "keyPoints": "KEY POINTS",
-      "commonMistakes": "COMMON MISTAKES",
-      "context": "Context"
+      "keyPoints": "KLUCZOWE PUNKTY",
+      "commonMistakes": "CZĘSTE BŁĘDY",
+      "context": "Kontekst"
     },
     "step": {
-      "label": "Step {{current}} / {{total}}",
-      "defaultTitle": "Step {{index}}"
+      "label": "Krok {{current}} / {{total}}",
+      "defaultTitle": "Krok {{index}}"
     },
-    "loading": "LOADING…"
+    "loading": "ŁADOWANIE…"
   }
 }

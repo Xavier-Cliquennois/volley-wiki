@@ -1,180 +1,180 @@
 {
   "hub": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "POSITIONS & ROLES",
-    "intro": "In indoor volleyball, positions are numbered <strong>P1 to P6</strong> counter-clockwise as seen from behind your own court. Rotation happens clockwise on every side-out. The number of players and tactical systems differ by format — pick the one that matches your practice.",
+    "kicker": "★ DOKÜMANTASYON",
+    "title": "POZİSYONLAR VE ROLLER",
+    "intro": "Salon voleybolunda pozisyonlar, kendi sahanızın arkasından bakıldığında saat yönünün tersine <strong>P1'den P6'ya</strong> numaralandırılır. Rotasyon her servis kazanımında saat yönünde gerçekleşir. Oyuncu sayısı ve taktik sistemler formata göre değişir — pratiğinize uygun olanı seçin.",
     "formats": {
       "6v6": {
-        "tagline": "Official FIVB / FFVolley format",
-        "description": "6 players + libero, 9×18 m court, 2.43 m net. Systems 5-1, 4-2, 6-2 with clockwise rotation."
+        "tagline": "Resmi FIVB / FFVolley formatı",
+        "description": "6 oyuncu + libero, 9×18 m saha, 2,43 m file. 5-1, 4-2, 6-2 sistemleri saat yönünde rotasyon ile."
       },
       "5v5": {
-        "tagline": "Educational hybrid format",
-        "description": "Transition between 4v4 and 6v6. No libero. Pentagon, 3F/2B, 2F/3B configurations depending on the chosen placement."
+        "tagline": "Eğitim amaçlı hibrit format",
+        "description": "4'e 4 ile 6'ya 6 arasında geçiş. Libero yok. Seçilen yerleşime göre Beşgen, 3F/2A, 2F/3A konfigürasyonları."
       },
       "4v4": {
-        "tagline": "Recreation, intramurals, transition",
-        "description": "Reduced court, 2 front + 2 back. Diamond, Box, 3-1 line formations with penetrating setter."
+        "tagline": "Rekreasyon, kurumsal lig, geçiş",
+        "description": "Küçültülmüş saha, 2 ön + 2 arka. Elmas, Kare, 3-1 hat dizilişleri penetre eden pasör ile."
       }
     }
   },
   "page": {
-    "kickerPrefix": "★ DOCUMENTATION ·",
-    "titlePrefix": "POSITIONS —",
-    "subtitle": "Positions and tactical systems for {{label}} volleyball.",
-    "step1": "1. GAME FORMAT",
-    "step2": "2. TACTICAL SETUP",
-    "courtTitle": "HALF-COURT —",
-    "showAll": "SHOW ALL",
-    "legendTitle": "LEGEND",
+    "kickerPrefix": "★ DOKÜMANTASYON ·",
+    "titlePrefix": "POZİSYONLAR —",
+    "subtitle": "{{label}} voleybolu için pozisyonlar ve taktik sistemler.",
+    "step1": "1. OYUN FORMATI",
+    "step2": "2. TAKTİK DİZİLİŞ",
+    "courtTitle": "YARIM SAHA —",
+    "showAll": "TÜMÜNÜ GÖSTER",
+    "legendTitle": "LEJANT",
     "legendItems": [
-      "<strong>Net</strong> — orange band",
-      "<strong>3 m</strong> — dotted line"
+      "<strong>File</strong> — turuncu bant",
+      "<strong>3 m</strong> — kesikli çizgi"
     ],
-    "legendHint": "Click a player for their card",
-    "liberoLabel": "LIBERO",
-    "liberoCardDescription": "Replaces back-row players (P1, P5, P6).",
-    "noLibero": "<strong>No libero</strong> in this configuration.",
-    "cardsTitle": "★ POSITION CARDS",
-    "skillsTitle": "SKILLS",
-    "traitsTitle": "TRAITS",
+    "legendHint": "Kart için bir oyuncuya tıklayın",
+    "liberoLabel": "LİBERO",
+    "liberoCardDescription": "Arka saha oyuncularının (P1, P5, P6) yerine geçer.",
+    "noLibero": "Bu konfigürasyonda <strong>libero yok</strong>.",
+    "cardsTitle": "★ POZİSYON KARTLARI",
+    "skillsTitle": "BECERİLER",
+    "traitsTitle": "ÖZELLİKLER",
     "crossLink": {
-      "kicker": "GO DEEPER",
-      "html": "Check the <link>Positioning and defense</link> guide to see how this configuration places itself depending on the opposing attack zone."
+      "kicker": "DAHA DERİNE İN",
+      "html": "Bu konfigürasyonun rakip saldırı bölgesine göre nasıl yerleştiğini görmek için <link>Konumlanma ve savunma</link> rehberini inceleyin."
     }
   },
   "teamIntros": {
     "6": {
-      "tagline": "Official FIVB / FFVolley format: 6 players + libero, 9×18 m court, 3 m attack line, 2.43 m net (M) / 2.24 m (W).",
-      "rules": "Zones numbered counter-clockwise from behind your own court (Z1 = server). Clockwise rotation on side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Rule 7.4: at the moment of serve contact, positions are controlled by the feet (Z2 closer to the net than Z1, etc.). Block of 1, 2 or 3. The libero replaces back-row players without counting as a substitution."
+      "tagline": "Resmi FIVB / FFVolley formatı: 6 oyuncu + libero, 9×18 m saha, 3 m hücum çizgisi, 2,43 m file (E) / 2,24 m (K).",
+      "rules": "Bölgeler kendi sahanızın arkasından saat yönünün tersine numaralanır (Z1 = servis atan). Servis kazanımında saat yönünde rotasyon (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Kural 7.4: servis teması anında pozisyonlar ayaklarla kontrol edilir (Z2 fileye Z1'den daha yakın, vb.). 1, 2 veya 3 kişilik blok. Libero, arka saha oyuncularının yerine oyuncu değişikliği sayılmadan geçer."
     },
     "5": {
-      "tagline": "Hybrid format, not officially FIVB/FFVb sanctioned. Used in schools, intramurals, fill-ins and as a transition between 4v4 and 6v6.",
-      "rules": "2+3 (penetrating setter recommended) or 3+2 (fixed front setter). No libero. Adapted overlap rule: Z4>Z5, Z3>Z6, Z2>Z1 (3-2 setup) or partial relations (2-3). Defensive recommendations are logical adaptations of 6v6, not a codified regulation."
+      "tagline": "Hibrit format, resmi olarak FIVB/FFVb onaylı değil. Okullarda, kurumsal liglerde, eksik oyuncu yerine ve 4'e 4 ile 6'ya 6 arasında geçiş olarak kullanılır.",
+      "rules": "2+3 (penetre eden pasör önerilir) veya 3+2 (sabit ön pasör). Libero yok. Uyarlanmış üst üste binme kuralı: Z4>Z5, Z3>Z6, Z2>Z1 (3-2 diziliş) veya kısmi ilişkiler (2-3). Savunma önerileri 6'ya 6'nın mantıksal uyarlamalarıdır, kodlanmış bir kural değildir."
     },
     "4": {
-      "tagline": "No official FIVB regulation. Played in US university intramurals, recreational tournaments, educational transition (FFVb, Volleyball Canada).",
-      "rules": "9×9 m court (sometimes reduced), 3 touches, blocking allowed, clockwise rotation. 2 front + 2 back at every rotation. Common formations: diamond (1-2-1 center setter), 3-1 line (penetrating setter), 2-2 box. Some organizers waive overlap faults (Texas A&M)."
+      "tagline": "Resmi FIVB kuralı yok. ABD üniversite kurumsal liglerinde, rekreasyon turnuvalarında, eğitim geçişinde (FFVb, Volleyball Canada) oynanır.",
+      "rules": "9×9 m saha (bazen küçültülmüş), 3 dokunuş, blok yapılabilir, saat yönünde rotasyon. Her rotasyonda 2 ön + 2 arka. Yaygın dizilişler: elmas (1-2-1 merkez pasör), 3-1 hat (penetre eden pasör), 2-2 kare. Bazı organizatörler üst üste binme hatalarından feragat eder (Texas A&M)."
     }
   },
   "commonZones": {
-    "P4": { "name": "Front left" },
-    "P3": { "name": "Front center" },
-    "P2": { "name": "Front right" },
-    "P5": { "name": "Back left" },
-    "P6": { "name": "Back center" },
-    "P1": { "name": "Back right (serve)" },
+    "P4": { "name": "Ön sol" },
+    "P3": { "name": "Ön orta" },
+    "P2": { "name": "Ön sağ" },
+    "P5": { "name": "Arka sol" },
+    "P6": { "name": "Arka orta" },
+    "P1": { "name": "Arka sağ (servis)" },
     "L":  { "name": "Libero" }
   },
   "configurations": {
     "5-1": {
-      "name": "5-1 System (standard)",
+      "name": "5-1 Sistemi (standart)",
       "shortName": "5-1",
-      "description": "1 sole setter distributing across all 6 rotations (3 back-row with penetration + 3 front) + 2 outsides + 2 middles + 1 opposite (diagonally opposite the setter) + 1 libero. The most-used system in elite competition.",
+      "description": "6 rotasyonun tamamında pas dağıtan 1 tek pasör (penetrasyonla 3 arka + 3 ön) + 2 smaçör + 2 orta + 1 pasör çaprazı (pasörün çapraz karşısında) + 1 libero. Elit seviyede en çok kullanılan sistem.",
       "positions": {
-        "P4": { "role": "Outside hitter", "description": "Main attack zone. The outside receives most high balls and must be versatile: attack, block, reception. Also the left-side off-blocker against an opponent's Z4 attack.", "skills": ["Attack", "Block", "Reception", "Serve"], "traits": ["Attack power and precision", "Long wingspan", "Versatility", "Endurance"] },
-        "P3": { "role": "Middle blocker", "description": "Net player in the center zone. Blocks opposing attacks and hits quick tempo. On an opposing wing attack, closes the cross-court with a 2-person block.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Tall stature required", "Dominant block", "Tempo 1 and 2", "Limited defensive role at the net"] },
-        "P2": { "role": "Setter", "description": "The conductor. Receives the 2nd touch and runs the offense. In 5-1 plays all rotations: penetrates from P1, P6 or P5 (back), distributes from P4, P3 or P2 (front). Target: between Z2 and Z3, ~1 m from the net.", "skills": ["Hand set", "Reading the block", "Communication", "Penetration"], "traits": ["Maximum technical precision", "360° vision", "Composure", "Leadership"] },
-        "P5": { "role": "Reception / defense", "description": "Reception and defense zone on the left. Often filled by the 2nd outside in the back-row rotation. The libero may replace them.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Reading attacks", "Front line of defense", "Left back coverage", "Often replaced by the libero"] },
-        "P6": { "role": "Center defense", "description": "Defensive pivot at the back. Covers long balls and supports teammates. Often the libero plays here.", "skills": ["Deep defense", "Coverage", "Support", "Forearm pass"], "traits": ["Game reading", "Maximum mobility", "Back communication", "Often replaced by the libero"] },
-        "P1": { "role": "Opposite", "description": "The opposite (\"point hitter\") sits diagonally opposite the setter. Does not participate in reception — the finisher. Spends 3 of 6 rotations in the back (attacks from the back — pipe).", "skills": ["Strong attack", "Serve", "Block", "Back-row attack"], "traits": ["Maximum power", "Back-row attack 3 rotations/6", "Freed from reception", "Aka \"point hitter\""] },
-        "L":  { "role": "Defensive specialist", "description": "Defensive specialist in a contrasting jersey. Replaces the back-row players (P1, P5, P6) without counting as a substitution. FIVB restrictions: no block, no attack above the net, no overhand set from the front zone to a teammate who then attacks above the net.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Maximum agility", "Cannot block / attack above the net", "No overhand set from front → attacker", "Unlimited substitutions", "Allowed to serve (FIVB 2021)"] }
+        "P4": { "role": "Smaçör", "description": "Ana saldırı bölgesi. Smaçör çoğu yüksek topu karşılar ve çok yönlü olmalı: saldırı, blok, karşılama. Ayrıca rakibin Z4 saldırısına karşı sol taraf off-blocker.", "skills": ["Saldırı", "Blok", "Karşılama", "Servis"], "traits": ["Saldırı gücü ve hassasiyet", "Uzun kol açıklığı", "Çok yönlülük", "Dayanıklılık"] },
+        "P3": { "role": "Orta oyuncu", "description": "Orta bölgede file oyuncusu. Rakip saldırıları bloklar ve hızlı tempo vurur. Rakip kanat saldırısında 2 kişilik blokla çaprazı kapatır.", "skills": ["Blok", "Hızlı saldırı", "File koruması"], "traits": ["Uzun boy gerekli", "Baskın blok", "Tempo 1 ve 2", "Filede sınırlı savunma rolü"] },
+        "P2": { "role": "Pasör", "description": "Orkestra şefi. 2. dokunuşu alır ve hücumu yönetir. 5-1'de tüm rotasyonları oynar: P1, P6 veya P5'ten (arka) penetre eder, P4, P3 veya P2'den (ön) dağıtım yapar. Hedef: Z2 ile Z3 arası, fileden ~1 m.", "skills": ["El pası", "Blok okuma", "İletişim", "Penetrasyon"], "traits": ["Maksimum teknik hassasiyet", "360° görüş", "Soğukkanlılık", "Liderlik"] },
+        "P5": { "role": "Karşılama / savunma", "description": "Solda karşılama ve savunma bölgesi. Genellikle 2. smaçör tarafından arka saha rotasyonunda doldurulur. Libero yerine geçebilir.", "skills": ["Manşet", "Karşılama", "Savunma", "Okuma"], "traits": ["Saldırı okuma", "İlk savunma hattı", "Sol arka koruması", "Genellikle libero ile değiştirilir"] },
+        "P6": { "role": "Orta savunma", "description": "Arkada savunma ekseni. Uzun topları kapatır ve takım arkadaşlarını destekler. Genellikle libero burada oynar.", "skills": ["Derin savunma", "Koruma", "Destek", "Manşet"], "traits": ["Oyun okuma", "Maksimum mobilite", "Arka iletişim", "Genellikle libero ile değiştirilir"] },
+        "P1": { "role": "Pasör çaprazı", "description": "Pasör çaprazı (\"sayı vurucu\") pasörün çapraz karşısında konumlanır. Karşılamada yer almaz — bitirici. 6 rotasyondan 3'ünü arkada geçirir (arkadan saldırır — pipe).", "skills": ["Güçlü saldırı", "Servis", "Blok", "Arka saha saldırısı"], "traits": ["Maksimum güç", "3 rotasyon/6 arka saha saldırısı", "Karşılamadan muaf", "\"Sayı vurucu\" olarak bilinir"] },
+        "L":  { "role": "Savunma uzmanı", "description": "Kontrast formalı savunma uzmanı. Arka saha oyuncularının (P1, P5, P6) yerine oyuncu değişikliği sayılmadan geçer. FIVB kısıtlamaları: blok yok, file üstünde saldırı yok, ön bölgeden file üstünde saldıracak takım arkadaşına parmak pası yok.", "skills": ["Manşet", "Karşılama", "Savunma", "Okuma"], "traits": ["Maksimum çeviklik", "File üstünde blok / saldırı yapamaz", "Önden parmak pas → saldıran yok", "Sınırsız oyuncu değişikliği", "Servise izin veriliyor (FIVB 2021)"] }
       }
     },
     "4-2": {
-      "name": "4-2 System (beginner)",
+      "name": "4-2 Sistemi (başlangıç)",
       "shortName": "4-2",
-      "description": "2 setters diagonally opposite (P2 and P5) + 2 middles + 2 outsides. The FRONT setter always takes the 2nd touch. No penetration: the simplest system to learn.",
+      "description": "Çapraz konumda 2 pasör (P2 ve P5) + 2 orta + 2 smaçör. ÖN pasör her zaman 2. dokunuşu alır. Penetrasyon yok: öğrenmesi en kolay sistem.",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing. Setter's main target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "Setter's #1 target", "W reception"] },
-        "P3": { "role": "Middle", "description": "Front-row middle: block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Central W reception"] },
-        "P2": { "role": "Front setter", "description": "Front setter: takes the 2nd touch. No penetration, no reception. Distributes from the position.", "skills": ["Hand set", "Distribution", "Communication"], "traits": ["Always front when setting", "Out of reception", "No penetration"] },
-        "P5": { "role": "Back setter (off-duty)", "description": "Second setter, diagonally opposite. Plays only as back-row, does NOT take the 2nd touch while back. Receives and defends.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Becomes front setter after rotation", "No setting when back", "Pairs in reception"] },
-        "P6": { "role": "Back middle", "description": "Middle going through back-row positions. Center reception + defense.", "skills": ["Defense", "Forearm pass", "Reception"], "traits": ["Defensive pivot", "Covers the back center"] },
-        "P1": { "role": "Outside / server", "description": "Outside in back-row rotation, serves from P1 then plays reception/defense.", "skills": ["Serve", "Reception", "Defense"], "traits": ["Main server", "W reception"] }
+        "P4": { "role": "Smaçör", "description": "Sol kanat. Pasörün 4. bölgedeki ana hedefi.", "skills": ["Saldırı", "Blok", "Karşılama"], "traits": ["Çok yönlülük", "Pasörün 1 numaralı hedefi", "W karşılama"] },
+        "P3": { "role": "Orta", "description": "Ön sıra orta: karşılama izin verdiğinde blok + hızlı saldırı.", "skills": ["Blok", "Hızlı saldırı"], "traits": ["Baskın blok", "Merkezi W karşılama"] },
+        "P2": { "role": "Ön pasör", "description": "Ön pasör: 2. dokunuşu alır. Penetrasyon yok, karşılama yok. Pozisyondan dağıtım yapar.", "skills": ["El pası", "Dağıtım", "İletişim"], "traits": ["Pas verirken her zaman önde", "Karşılama dışında", "Penetrasyon yok"] },
+        "P5": { "role": "Arka pasör (görevde değil)", "description": "İkinci pasör, çapraz karşıda. Sadece arka saha olarak oynar, arkadayken 2. dokunuşu ALMAZ. Karşılar ve savunur.", "skills": ["Karşılama", "Savunma", "Manşet"], "traits": ["Rotasyondan sonra ön pasör olur", "Arkadayken pas yok", "Karşılamada eşleşir"] },
+        "P6": { "role": "Arka orta", "description": "Arka saha pozisyonlarından geçen orta. Merkez karşılama + savunma.", "skills": ["Savunma", "Manşet", "Karşılama"], "traits": ["Savunma ekseni", "Arka merkezi kapsar"] },
+        "P1": { "role": "Smaçör / servis atan", "description": "Arka saha rotasyonunda smaçör, P1'den servis atar sonra karşılama/savunma oynar.", "skills": ["Servis", "Karşılama", "Savunma"], "traits": ["Ana servis atan", "W karşılama"] }
       }
     },
     "6-2": {
-      "name": "6-2 System (advanced)",
+      "name": "6-2 Sistemi (ileri)",
       "shortName": "6-2",
-      "description": "2 versatile setters: they ONLY set from the back row (with penetration), and become right-side attackers when rotating to the front. + 2 middles + 2 outsides + 1 libero. Pro: always 3 front-row attackers. Con: diluted setter-hitter chemistry, and in the double-sub variant rapidly burns through the 6 substitutions per set (FIVB Rule 15.6).",
+      "description": "2 çok yönlü pasör: SADECE arka sıradan pas verirler (penetrasyonla) ve öne döndüklerinde sağ kanat saldıran olurlar. + 2 orta + 2 smaçör + 1 libero. Artı: her zaman 3 ön sıra saldıran. Eksi: pasör-vurucu uyumu seyrelir ve double-sub varyantında 6 oyuncu değişikliği hızla biter (FIVB Kural 15.6).",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing, main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "3-person reception"] },
-        "P3": { "role": "Middle", "description": "Front middle: block + tempo 1.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Wing switching"] },
-        "P2": { "role": "Setter-attacker", "description": "In 6-2 the front-row player (setter or not) attacks. When the setter is front, they become a zone-2 attacker. The back setter distributes.", "skills": ["Zone 2 attack", "Block", "Serve"], "traits": ["Versatile set + attack", "Attacks zone 2", "3 hitters in front always"] },
-        "P5": { "role": "Outside (back)", "description": "Wing in back-row rotation. Reception and defense.", "skills": ["Reception", "Forearm pass", "Defense"], "traits": ["3-person reception", "Often replaced by the libero"] },
-        "P6": { "role": "Back middle", "description": "Middle in back-row rotation, often replaced by the libero for reception and defense.", "skills": ["Defense", "Forearm pass"], "traits": ["Often replaced by the libero", "Defensive pivot"] },
-        "P1": { "role": "Penetrating setter", "description": "Back-row setter who penetrates as soon as the serve is hit toward zone 2-3 to distribute. Facing them, the 2nd setter at P2 attacks.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1 → zone 2/3", "Distributes", "Rotation alternates with the 2nd setter"] },
-        "L":  { "role": "Libero", "description": "Standard libero, replaces middles in the back-row rotation.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Replaces P5/P6", "Contrasting jersey"] }
+        "P4": { "role": "Smaçör", "description": "Sol kanat, 4. bölgede ana saldıran.", "skills": ["Saldırı", "Blok", "Karşılama"], "traits": ["Çok yönlülük", "3 kişilik karşılama"] },
+        "P3": { "role": "Orta", "description": "Ön orta: blok + tempo 1.", "skills": ["Blok", "Hızlı saldırı"], "traits": ["Baskın blok", "Kanat değiştirme"] },
+        "P2": { "role": "Pasör-saldıran", "description": "6-2'de ön sıra oyuncusu (pasör olsun olmasın) saldırır. Pasör öndeyken 2. bölge saldıranı olur. Arka pasör dağıtım yapar.", "skills": ["Bölge 2 saldırı", "Blok", "Servis"], "traits": ["Çok yönlü pas + saldırı", "2. bölge saldırır", "Her zaman 3 önde vurucu"] },
+        "P5": { "role": "Smaçör (arka)", "description": "Arka saha rotasyonunda kanat. Karşılama ve savunma.", "skills": ["Karşılama", "Manşet", "Savunma"], "traits": ["3 kişilik karşılama", "Genellikle libero ile değiştirilir"] },
+        "P6": { "role": "Arka orta", "description": "Arka saha rotasyonunda orta, karşılama ve savunma için genellikle libero ile değiştirilir.", "skills": ["Savunma", "Manşet"], "traits": ["Genellikle libero ile değiştirilir", "Savunma ekseni"] },
+        "P1": { "role": "Penetre eden pasör", "description": "Servis vurulur vurulmaz 2-3 bölgesine penetre edip dağıtım yapan arka saha pasörü. Karşısında P2'deki 2. pasör saldırır.", "skills": ["Penetrasyon", "El pası", "Servis"], "traits": ["P1'den penetre eder → 2/3 bölgesi", "Dağıtım yapar", "Rotasyon 2. pasörle alternatif"] },
+        "L":  { "role": "Libero", "description": "Standart libero, arka saha rotasyonunda ortaların yerine geçer.", "skills": ["Manşet", "Karşılama", "Savunma"], "traits": ["P5/P6'nın yerine geçer", "Kontrast forma"] }
       }
     },
     "pentagon": {
-      "name": "Pentagon (1-2-2)",
-      "shortName": "Pentagon",
-      "description": "1 player at the center net, 2 wings mid-court, 2 back. Even court coverage — good in beginner and recreational play. Typical defense: 1-2-2 system (adapted man-up, 1 blocker + 2 coverers + 2 deep defenders).",
+      "name": "Beşgen (1-2-2)",
+      "shortName": "Beşgen",
+      "description": "1 oyuncu file merkezinde, 2 kanat orta sahada, 2 arkada. Eşit saha kapsamı — başlangıç ve rekreasyon oyununda iyi. Tipik savunma: 1-2-2 sistemi (uyarlanmış man-up, 1 blokçu + 2 örtmen + 2 derin savunmacı).",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the setter (if fixed); otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Game hub", "Central block", "Partial reception exemption"] },
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing mid-court: receives and attacks from zone 4.", "skills": ["Attack", "Reception", "Block"], "traits": ["Versatility", "Medium approach", "Short cross-court coverage"] },
-        "P2": { "name": "Right wing", "role": "Outside / opposite", "description": "Right wing. If the setter plays center, this is the zone-2 attacker.", "skills": ["Line attack", "Block", "Serve"], "traits": ["Long cross-court attack", "2-person block with middle", "Long cross-court coverage"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: covers the left defense, often the best passer.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "~30 m² to cover", "Reads the long cross"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: covers right defense + serves.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Main server", "Line coverage", "Zone-2 attack support"] }
+        "P3": { "name": "File merkezi", "role": "Pasör veya orta", "description": "File merkezinde. Genellikle pasör (sabitse); aksi takdirde birincil blokçu.", "skills": ["Pas", "Blok", "İletişim"], "traits": ["Oyun merkezi", "Merkez blok", "Kısmi karşılama muafiyeti"] },
+        "P4": { "name": "Sol kanat", "role": "Smaçör", "description": "Orta sahada sol kanat: karşılar ve 4. bölgeden saldırır.", "skills": ["Saldırı", "Karşılama", "Blok"], "traits": ["Çok yönlülük", "Orta yaklaşma", "Kısa çapraz koruması"] },
+        "P2": { "name": "Sağ kanat", "role": "Smaçör / pasör çaprazı", "description": "Sağ kanat. Pasör merkezde oynuyorsa, 2. bölge saldıranı budur.", "skills": ["Paralel saldırı", "Blok", "Servis"], "traits": ["Uzun çapraz saldırı", "Orta ile 2 kişilik blok", "Uzun çapraz koruması"] },
+        "P5": { "name": "Arka sol", "role": "Karşılama / savunma", "description": "Arka sol: sol savunmayı kapatır, genellikle en iyi karşılayıcı.", "skills": ["Manşet", "Karşılama", "Savunma"], "traits": ["Savunma direği", "~30 m² kapsama", "Uzun çaprazı okur"] },
+        "P1": { "name": "Arka sağ", "role": "Savunma / servis", "description": "Arka sağ: sağ savunmayı kapatır + servis atar.", "skills": ["Servis", "Savunma", "Manşet"], "traits": ["Ana servis atan", "Paralel koruması", "2. bölge saldırı desteği"] }
       }
     },
     "3F-2B": {
-      "name": "3 front / 2 back",
-      "shortName": "3F/2B",
-      "description": "3 attackers at the net (P4, P3, P2 with setter at P2) + 2 back (P5, P1). Offensive setup: 2- or 3-person block possible. Typical defense: 2-1-2 system (2 blockers + 1 off-blocker + 2 deep defenders). Downside: 30+ m² per back-row defender.",
+      "name": "3 ön / 2 arka",
+      "shortName": "3F/2A",
+      "description": "Filede 3 saldıran (P4, P3, P2 pasör P2'de) + 2 arka (P5, P1). Hücum dizilişi: 2 veya 3 kişilik blok mümkün. Tipik savunma: 2-1-2 sistemi (2 blokçu + 1 off-blocker + 2 derin savunmacı). Olumsuz yön: arka saha savunmacısı başına 30+ m².",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main setter target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "2-person block with middle", "Setter's favorite target"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 1 preserved", "Switching possible"] },
-        "P2": { "name": "Front setter", "role": "Setter", "description": "Fixed front setter. No penetration. Distributes from the net; can attack in 2 if the ball comes high on the right side.", "skills": ["Hand set", "Distribution", "Right-side block"], "traits": ["Fixed front", "No penetration", "Occasional zone-2 attack"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court defense.", "skills": ["Forearm pass", "Defense", "Reception"], "traits": ["Best passer ideally", "Long cross-court", "Coverage ~30 m²"] },
-        "P1": { "name": "Back right", "role": "Serve / defense", "description": "Back right: serves then defends the line and short cross.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + corridor", "Zone-2 attack support"] }
+        "P4": { "name": "Sol kanat", "role": "Smaçör", "description": "Filede sol kanat. Pasörün 4. bölgedeki ana hedefi.", "skills": ["Saldırı", "Blok", "Karşılama"], "traits": ["Çok yönlülük", "Orta ile 2 kişilik blok", "Pasörün favori hedefi"] },
+        "P3": { "name": "Orta", "role": "Orta", "description": "Filede orta. Karşılama izin verdiğinde blok + hızlı saldırı.", "skills": ["Blok", "Hızlı saldırı"], "traits": ["Merkez blok", "Tempo 1 korunur", "Değişim mümkün"] },
+        "P2": { "name": "Ön pasör", "role": "Pasör", "description": "Sabit ön pasör. Penetrasyon yok. Fileden dağıtım yapar; top sağ tarafa yüksek gelirse 2'de saldırabilir.", "skills": ["El pası", "Dağıtım", "Sağ taraf blok"], "traits": ["Sabit önde", "Penetrasyon yok", "Ara sıra 2. bölge saldırı"] },
+        "P5": { "name": "Arka sol", "role": "Karşılama / savunma", "description": "Arka sol: solda karşılama + uzun çapraz savunma.", "skills": ["Manşet", "Savunma", "Karşılama"], "traits": ["İdeal olarak en iyi karşılayıcı", "Uzun çapraz", "~30 m² kapsama"] },
+        "P1": { "name": "Arka sağ", "role": "Servis / savunma", "description": "Arka sağ: servis atar sonra paralel ve kısa çaprazı savunur.", "skills": ["Servis", "Savunma", "Manşet"], "traits": ["Servis atan", "Paralel + koridor", "2. bölge saldırı desteği"] }
       }
     },
     "2F-3B": {
-      "name": "2 front / 3 back",
-      "shortName": "2F/3B",
-      "description": "2 players at the net + 3 back including the penetrating setter (P1). The most defensively stable setup, closest to 6v6 5-1. Typical defense: 1-1-3 system (1 blocker + 1 off-blocker + 3 deep defenders). Recommended to prepare the transition to 6v6.",
+      "name": "2 ön / 3 arka",
+      "shortName": "2F/3A",
+      "description": "Filede 2 oyuncu + penetre eden pasör (P1) dahil 3 arka. En savunma açısından kararlı diziliş, 6'ya 6 5-1'e en yakın. Tipik savunma: 1-1-3 sistemi (1 blokçu + 1 off-blocker + 3 derin savunmacı). 6'ya 6'ya geçişi hazırlamak için önerilir.",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Setter's #1 target", "2-person block", "Versatility"] },
-        "P3": { "name": "Middle", "role": "Middle / opposite", "description": "Versatile middle: central block + attack in zone 3 or 2 depending on the set.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Central block", "Frequent switch to zone 2", "No pure P2 attacker"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "3-person reception with P6"] },
-        "P6": { "name": "Back center", "role": "Defensive pillar", "description": "Back center: covers the whole back middle, reads long balls.", "skills": ["Deep defense", "Forearm pass", "Coverage"], "traits": ["Maximum mobility", "Recovers pipes and long balls", "Central reception"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Back-row setter at P1 who penetrates to zone 2-3 as soon as the serve is hit. Serves then distributes.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1", "Distributes with 2 attackers in front", "Short cover after the set"] }
+        "P4": { "name": "Sol kanat", "role": "Smaçör", "description": "Filede sol kanat. 4. bölgede ana saldıran.", "skills": ["Saldırı", "Blok", "Karşılama"], "traits": ["Pasörün 1 numaralı hedefi", "2 kişilik blok", "Çok yönlülük"] },
+        "P3": { "name": "Orta", "role": "Orta / pasör çaprazı", "description": "Çok yönlü orta: merkez blok + pasa göre 3 veya 2. bölgeden saldırı.", "skills": ["Blok", "Hızlı saldırı", "File koruması"], "traits": ["Merkez blok", "Sık sık 2. bölgeye geçiş", "Saf P2 saldıranı yok"] },
+        "P5": { "name": "Arka sol", "role": "Karşılama / savunma", "description": "Arka sol: solda karşılama + uzun çapraz.", "skills": ["Manşet", "Karşılama", "Savunma"], "traits": ["Savunma direği", "P6 ile 3 kişilik karşılama"] },
+        "P6": { "name": "Arka orta", "role": "Savunma direği", "description": "Arka orta: tüm arka ortayı kapsar, uzun topları okur.", "skills": ["Derin savunma", "Manşet", "Koruma"], "traits": ["Maksimum mobilite", "Pipe ve uzun topları kurtarır", "Merkez karşılama"] },
+        "P1": { "name": "Penetre eden pasör", "role": "Pasör", "description": "Servis vurulur vurulmaz 2-3 bölgesine penetre eden P1'deki arka saha pasörü. Servis atar sonra dağıtım yapar.", "skills": ["Penetrasyon", "El pası", "Servis"], "traits": ["P1'den penetre eder", "Önde 2 saldıranla dağıtım", "Pas sonrası kısa örtme"] }
       }
     },
     "losange": {
-      "name": "Diamond (1-2-1)",
-      "shortName": "Diamond",
-      "description": "\"Diamond\" formation: the MOST USED in indoor 4v4. 1 player at the center net (P3, often the setter), 2 wings mid-court (P4 and P2 around the 3 m line), 1 back. Typical defense: A-system (1 blocker + 3 defenders). Most vulnerable zone: long cross-court (lack of bodies in the back).",
+      "name": "Elmas (1-2-1)",
+      "shortName": "Elmas",
+      "description": "\"Elmas\" dizilişi: salon 4'e 4'ün EN ÇOK kullanılan dizilişi. 1 oyuncu file merkezinde (P3, genellikle pasör), 2 kanat orta sahada (P4 ve P2, 3 m çizgisi çevresinde), 1 arka. Tipik savunma: A sistemi (1 blokçu + 3 savunmacı). En savunmasız bölge: uzun çapraz (arkada vücut eksikliği).",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the SETTER (\"center setter\" variant) distributing to either side. Otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Diamond's game hub", "Standard 1-person block", "Distributes without penetration"] },
-        "P4": { "name": "Left wing", "role": "Main attacker", "description": "Left wing, mid-court (around the 3 m line). Setter's preferred target.", "skills": ["Attack", "Reception", "Coverage"], "traits": ["Short approach", "Left-side reception", "Versatility (~35 m²)"] },
-        "P2": { "name": "Right wing", "role": "Secondary attacker", "description": "Right wing, mid-court. Attacks in zone 2 if the setter distributes right.", "skills": ["Line attack", "Reception", "Serve"], "traits": ["Long cross-court attack", "Right-side reception", "Short right coverage"] },
-        "P1": { "name": "Sole back", "role": "Main defender", "description": "No libero allowed: this is the team's best back defender. Covers the entire back alone.", "skills": ["Reception", "Deep defense", "Reading"], "traits": ["~40 m² alone", "Anticipation is the #1 skill", "Must know how to set the 2nd touch"] }
+        "P3": { "name": "File merkezi", "role": "Pasör veya orta", "description": "File merkezinde. Genellikle iki tarafa da dağıtım yapan PASÖR (\"merkez pasör\" varyantı). Aksi takdirde birincil blokçu.", "skills": ["Pas", "Blok", "İletişim"], "traits": ["Elmasın oyun merkezi", "Standart 1 kişilik blok", "Penetrasyonsuz dağıtım"] },
+        "P4": { "name": "Sol kanat", "role": "Ana saldıran", "description": "Orta sahada sol kanat (3 m çizgisi çevresinde). Pasörün tercih ettiği hedef.", "skills": ["Saldırı", "Karşılama", "Koruma"], "traits": ["Kısa yaklaşma", "Sol taraf karşılama", "Çok yönlülük (~35 m²)"] },
+        "P2": { "name": "Sağ kanat", "role": "İkincil saldıran", "description": "Orta sahada sağ kanat. Pasör sağa dağıtırsa 2. bölgeden saldırır.", "skills": ["Paralel saldırı", "Karşılama", "Servis"], "traits": ["Uzun çapraz saldırı", "Sağ taraf karşılama", "Kısa sağ koruma"] },
+        "P1": { "name": "Tek arka", "role": "Ana savunmacı", "description": "Liberoya izin verilmez: bu, takımın en iyi arka savunmacısıdır. Tüm arkayı tek başına kapsar.", "skills": ["Karşılama", "Derin savunma", "Okuma"], "traits": ["Tek başına ~40 m²", "Tahmin 1 numaralı beceri", "2. dokunuşu pas verebilmek zorunda"] }
       }
     },
     "carre": {
-      "name": "Box (2-2)",
-      "shortName": "Box",
-      "description": "\"Box\" 2-2 formation: 2 players at the net (P4 and P2) + 2 back (P5 and P1). Enables 2-person blocking (B system) — but only useful against very powerful hitters with no finesse, since it leaves only 2 deep defenders (tip uncovered). More often played in A system with a single blocker.",
+      "name": "Kare (2-2)",
+      "shortName": "Kare",
+      "description": "\"Kare\" 2-2 dizilişi: filede 2 oyuncu (P4 ve P2) + 2 arka (P5 ve P1). 2 kişilik blok yapmaya olanak verir (B sistemi) — ancak sadece 2 derin savunmacı bıraktığı için sadece çok güçlü ve incelikli olmayan vuruculara karşı yararlıdır (plase kapatılamaz). Daha sık tek blokçu ile A sisteminde oynanır.",
       "positions": {
-        "P4": { "name": "Left wing (net)", "role": "Blocker / attacker", "description": "At the net on the left. Block + attack in zone 4.", "skills": ["Block", "Attack", "Net coverage"], "traits": ["2-person block with right wing", "Possible switch with the setter", "No traditional tempo 1"] },
-        "P2": { "name": "Setter-attacker (net)", "role": "Front setter", "description": "Setter-attacker at the net on the right. Always takes the 2nd touch (no penetration in the box).", "skills": ["Set", "Block", "Zone 2 attack"], "traits": ["Always front", "No penetration", "2-person block with the left wing"] },
-        "P5": { "name": "Back left", "role": "Defense / reception", "description": "Back left: reception on the left + long cross-court.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Defensive pillar", "Coverage ~35 m²", "Zone-4 attack support"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: serves then defends the line and long cross-court.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + cross-court", "Zone-2 attack support"] }
+        "P4": { "name": "Sol kanat (file)", "role": "Blokçu / saldıran", "description": "Solda filede. Blok + 4. bölgede saldırı.", "skills": ["Blok", "Saldırı", "File koruması"], "traits": ["Sağ kanatla 2 kişilik blok", "Pasörle olası değişim", "Geleneksel tempo 1 yok"] },
+        "P2": { "name": "Pasör-saldıran (file)", "role": "Ön pasör", "description": "Sağda filede pasör-saldıran. Her zaman 2. dokunuşu alır (karede penetrasyon yok).", "skills": ["Pas", "Blok", "Bölge 2 saldırı"], "traits": ["Her zaman önde", "Penetrasyon yok", "Sol kanatla 2 kişilik blok"] },
+        "P5": { "name": "Arka sol", "role": "Savunma / karşılama", "description": "Arka sol: solda karşılama + uzun çapraz.", "skills": ["Karşılama", "Savunma", "Manşet"], "traits": ["Savunma direği", "~35 m² kapsama", "4. bölge saldırı desteği"] },
+        "P1": { "name": "Arka sağ", "role": "Savunma / servis", "description": "Arka sağ: servis atar sonra paralel ve uzun çaprazı savunur.", "skills": ["Servis", "Savunma", "Manşet"], "traits": ["Servis atan", "Paralel + çapraz", "2. bölge saldırı desteği"] }
       }
     },
     "3-1": {
-      "name": "3-1 line (penetrating setter)",
+      "name": "3-1 hat (penetre eden pasör)",
       "shortName": "3-1",
-      "description": "\"3-1 line\" formation: sole setter at P1 (back) who penetrates to zone 2 as soon as the ball is hit. Frees 3 attackers in front — a simplified equivalent of 6v6 5-1. Requires very clean reception and a fast setter. Defense: A system possible (1 central blocker + 3 defenders).",
+      "description": "\"3-1 hat\" dizilişi: top vurulur vurulmaz 2. bölgeye penetre eden P1'deki (arka) tek pasör. Önde 3 saldıran serbest kalır — 6'ya 6 5-1'in sadeleştirilmiş eşdeğeri. Çok temiz karşılama ve hızlı pasör gerektirir. Savunma: A sistemi mümkün (1 merkez blokçu + 3 savunmacı).",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4 + reception.", "skills": ["Attack", "Reception", "Block"], "traits": ["#1 target", "3-person reception", "Zone-4 approach"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + attack in zone 3 if the set is tight.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 2 possible", "No reception"] },
-        "P2": { "name": "Right wing", "role": "Outside", "description": "Right wing. Attacks in zone 2 when the setter distributes right.", "skills": ["Attack", "Block", "Reception"], "traits": ["Zone-2 attack", "3-person reception", "2-person block with middle"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Sole setter at P1. Serves then penetrates to zone 2 to distribute.", "skills": ["Penetration", "Set", "Serve"], "traits": ["Penetrates from P1", "3 attackers in front always", "Short cover after the set"] }
+        "P4": { "name": "Sol kanat", "role": "Smaçör", "description": "Filede sol kanat. 4. bölgede ana saldıran + karşılama.", "skills": ["Saldırı", "Karşılama", "Blok"], "traits": ["1 numaralı hedef", "3 kişilik karşılama", "4. bölge yaklaşma"] },
+        "P3": { "name": "Orta", "role": "Orta", "description": "Filede orta. Pas yakınsa blok + 3. bölgeden saldırı.", "skills": ["Blok", "Hızlı saldırı"], "traits": ["Merkez blok", "Tempo 2 mümkün", "Karşılama yok"] },
+        "P2": { "name": "Sağ kanat", "role": "Smaçör", "description": "Sağ kanat. Pasör sağa dağıtırsa 2. bölgeden saldırır.", "skills": ["Saldırı", "Blok", "Karşılama"], "traits": ["2. bölge saldırı", "3 kişilik karşılama", "Orta ile 2 kişilik blok"] },
+        "P1": { "name": "Penetre eden pasör", "role": "Pasör", "description": "P1'de tek pasör. Servis atar sonra dağıtım için 2. bölgeye penetre eder.", "skills": ["Penetrasyon", "Pas", "Servis"], "traits": ["P1'den penetre eder", "Her zaman önde 3 saldıran", "Pas sonrası kısa örtme"] }
       }
     }
   }

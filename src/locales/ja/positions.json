@@ -1,180 +1,180 @@
 {
   "hub": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "POSITIONS & ROLES",
-    "intro": "In indoor volleyball, positions are numbered <strong>P1 to P6</strong> counter-clockwise as seen from behind your own court. Rotation happens clockwise on every side-out. The number of players and tactical systems differ by format — pick the one that matches your practice.",
+    "kicker": "★ ドキュメント",
+    "title": "ポジションと役割",
+    "intro": "インドアバレーボールでは、自陣を背後から見て反時計回りに <strong>P1からP6</strong> の番号でポジションが振られます。サイドアウトのたびに時計回りにローテーションします。人数と戦術システムは形式によって異なります — 自分のプレースタイルに合うものを選んでください。",
     "formats": {
       "6v6": {
-        "tagline": "Official FIVB / FFVolley format",
-        "description": "6 players + libero, 9×18 m court, 2.43 m net. Systems 5-1, 4-2, 6-2 with clockwise rotation."
+        "tagline": "FIVB / FFVolley公式形式",
+        "description": "6人＋リベロ、9×18 mのコート、ネット高2.43 m。5-1、4-2、6-2システム、時計回りのローテーション。"
       },
       "5v5": {
-        "tagline": "Educational hybrid format",
-        "description": "Transition between 4v4 and 6v6. No libero. Pentagon, 3F/2B, 2F/3B configurations depending on the chosen placement."
+        "tagline": "教育的なハイブリッド形式",
+        "description": "4対4と6対6の橋渡し。リベロなし。配置に応じてペンタゴン、3F/2B、2F/3Bなどの構成。"
       },
       "4v4": {
-        "tagline": "Recreation, intramurals, transition",
-        "description": "Reduced court, 2 front + 2 back. Diamond, Box, 3-1 line formations with penetrating setter."
+        "tagline": "レクリエーション、校内大会、移行段階",
+        "description": "縮小コート、フロント2人＋バック2人。ダイヤモンド、ボックス、3-1（潜り込みセッター）など。"
       }
     }
   },
   "page": {
-    "kickerPrefix": "★ DOCUMENTATION ·",
-    "titlePrefix": "POSITIONS —",
-    "subtitle": "Positions and tactical systems for {{label}} volleyball.",
-    "step1": "1. GAME FORMAT",
-    "step2": "2. TACTICAL SETUP",
-    "courtTitle": "HALF-COURT —",
-    "showAll": "SHOW ALL",
-    "legendTitle": "LEGEND",
+    "kickerPrefix": "★ ドキュメント ·",
+    "titlePrefix": "ポジション —",
+    "subtitle": "{{label}}バレーボールのポジションと戦術システム。",
+    "step1": "1. ゲーム形式",
+    "step2": "2. 戦術構成",
+    "courtTitle": "ハーフコート —",
+    "showAll": "すべて表示",
+    "legendTitle": "凡例",
     "legendItems": [
-      "<strong>Net</strong> — orange band",
-      "<strong>3 m</strong> — dotted line"
+      "<strong>ネット</strong> — オレンジ色の帯",
+      "<strong>3 m</strong> — 点線"
     ],
-    "legendHint": "Click a player for their card",
-    "liberoLabel": "LIBERO",
-    "liberoCardDescription": "Replaces back-row players (P1, P5, P6).",
-    "noLibero": "<strong>No libero</strong> in this configuration.",
-    "cardsTitle": "★ POSITION CARDS",
-    "skillsTitle": "SKILLS",
-    "traitsTitle": "TRAITS",
+    "legendHint": "選手をクリックしてカードを表示",
+    "liberoLabel": "リベロ",
+    "liberoCardDescription": "バックロウの選手（P1、P5、P6）と交代します。",
+    "noLibero": "この構成では<strong>リベロなし</strong>です。",
+    "cardsTitle": "★ ポジションカード",
+    "skillsTitle": "スキル",
+    "traitsTitle": "特徴",
     "crossLink": {
-      "kicker": "GO DEEPER",
-      "html": "Check the <link>Positioning and defense</link> guide to see how this configuration places itself depending on the opposing attack zone."
+      "kicker": "さらに詳しく",
+      "html": "相手の攻撃ゾーンに応じてどのように配置するかについては<link>守備ポジショニング</link>ガイドをご覧ください。"
     }
   },
   "teamIntros": {
     "6": {
-      "tagline": "Official FIVB / FFVolley format: 6 players + libero, 9×18 m court, 3 m attack line, 2.43 m net (M) / 2.24 m (W).",
-      "rules": "Zones numbered counter-clockwise from behind your own court (Z1 = server). Clockwise rotation on side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Rule 7.4: at the moment of serve contact, positions are controlled by the feet (Z2 closer to the net than Z1, etc.). Block of 1, 2 or 3. The libero replaces back-row players without counting as a substitution."
+      "tagline": "FIVB / FFVolley公式形式: 6人＋リベロ、9×18 mのコート、3 mアタックライン、ネット高2.43 m（男子）/ 2.24 m（女子）。",
+      "rules": "自陣の後方から見て反時計回りにゾーン番号を振ります（Z1 = サーバー）。サイドアウトで時計回りにローテーション（Z2→Z1→Z6→Z5→Z4→Z3→Z2）。ルール7.4: サーブのミート時、足の位置で配置が判定されます（Z2はZ1よりネット側など）。ブロックは1人、2人、3人で行えます。リベロは選手交代としてカウントされずにバックロウの選手と交代できます。"
     },
     "5": {
-      "tagline": "Hybrid format, not officially FIVB/FFVb sanctioned. Used in schools, intramurals, fill-ins and as a transition between 4v4 and 6v6.",
-      "rules": "2+3 (penetrating setter recommended) or 3+2 (fixed front setter). No libero. Adapted overlap rule: Z4>Z5, Z3>Z6, Z2>Z1 (3-2 setup) or partial relations (2-3). Defensive recommendations are logical adaptations of 6v6, not a codified regulation."
+      "tagline": "ハイブリッド形式で、FIVB/FFVbの公式形式ではありません。学校、校内大会、人員不足、4対4と6対6の橋渡しなどに用いられます。",
+      "rules": "2+3（潜り込みセッター推奨）または3+2（固定の前衛セッター）。リベロなし。簡易なオーバーラップ規則: Z4>Z5、Z3>Z6、Z2>Z1（3-2構成）または部分的な関係（2-3）。守備の推奨は6対6の論理的な応用であり、明文化された規則ではありません。"
     },
     "4": {
-      "tagline": "No official FIVB regulation. Played in US university intramurals, recreational tournaments, educational transition (FFVb, Volleyball Canada).",
-      "rules": "9×9 m court (sometimes reduced), 3 touches, blocking allowed, clockwise rotation. 2 front + 2 back at every rotation. Common formations: diamond (1-2-1 center setter), 3-1 line (penetrating setter), 2-2 box. Some organizers waive overlap faults (Texas A&M)."
+      "tagline": "FIVB公式規則はありません。米国大学の校内大会、レクリエーション大会、教育的な移行段階（FFVb、Volleyball Canada）でプレーされます。",
+      "rules": "9×9 mのコート（縮小されることもあり）、3タッチ、ブロック可、時計回りのローテーション。常にフロント2人＋バック2人。よくあるフォーメーション: ダイヤモンド（1-2-1、センターセッター）、3-1ライン（潜り込みセッター）、2-2ボックス。一部の主催者はオーバーラップ反則を免除します（Texas A&M）。"
     }
   },
   "commonZones": {
-    "P4": { "name": "Front left" },
-    "P3": { "name": "Front center" },
-    "P2": { "name": "Front right" },
-    "P5": { "name": "Back left" },
-    "P6": { "name": "Back center" },
-    "P1": { "name": "Back right (serve)" },
-    "L":  { "name": "Libero" }
+    "P4": { "name": "前衛左" },
+    "P3": { "name": "前衛中央" },
+    "P2": { "name": "前衛右" },
+    "P5": { "name": "後衛左" },
+    "P6": { "name": "後衛中央" },
+    "P1": { "name": "後衛右（サーブ）" },
+    "L":  { "name": "リベロ" }
   },
   "configurations": {
     "5-1": {
-      "name": "5-1 System (standard)",
+      "name": "5-1システム（標準）",
       "shortName": "5-1",
-      "description": "1 sole setter distributing across all 6 rotations (3 back-row with penetration + 3 front) + 2 outsides + 2 middles + 1 opposite (diagonally opposite the setter) + 1 libero. The most-used system in elite competition.",
+      "description": "1人のセッターが6ローテーションすべてで配球（バックロウ3つは潜り込み＋フロント3つ）＋アウトサイド2人＋ミドル2人＋オポジット1人（セッターの対角）＋リベロ1人。トップレベルで最も用いられるシステムです。",
       "positions": {
-        "P4": { "role": "Outside hitter", "description": "Main attack zone. The outside receives most high balls and must be versatile: attack, block, reception. Also the left-side off-blocker against an opponent's Z4 attack.", "skills": ["Attack", "Block", "Reception", "Serve"], "traits": ["Attack power and precision", "Long wingspan", "Versatility", "Endurance"] },
-        "P3": { "role": "Middle blocker", "description": "Net player in the center zone. Blocks opposing attacks and hits quick tempo. On an opposing wing attack, closes the cross-court with a 2-person block.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Tall stature required", "Dominant block", "Tempo 1 and 2", "Limited defensive role at the net"] },
-        "P2": { "role": "Setter", "description": "The conductor. Receives the 2nd touch and runs the offense. In 5-1 plays all rotations: penetrates from P1, P6 or P5 (back), distributes from P4, P3 or P2 (front). Target: between Z2 and Z3, ~1 m from the net.", "skills": ["Hand set", "Reading the block", "Communication", "Penetration"], "traits": ["Maximum technical precision", "360° vision", "Composure", "Leadership"] },
-        "P5": { "role": "Reception / defense", "description": "Reception and defense zone on the left. Often filled by the 2nd outside in the back-row rotation. The libero may replace them.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Reading attacks", "Front line of defense", "Left back coverage", "Often replaced by the libero"] },
-        "P6": { "role": "Center defense", "description": "Defensive pivot at the back. Covers long balls and supports teammates. Often the libero plays here.", "skills": ["Deep defense", "Coverage", "Support", "Forearm pass"], "traits": ["Game reading", "Maximum mobility", "Back communication", "Often replaced by the libero"] },
-        "P1": { "role": "Opposite", "description": "The opposite (\"point hitter\") sits diagonally opposite the setter. Does not participate in reception — the finisher. Spends 3 of 6 rotations in the back (attacks from the back — pipe).", "skills": ["Strong attack", "Serve", "Block", "Back-row attack"], "traits": ["Maximum power", "Back-row attack 3 rotations/6", "Freed from reception", "Aka \"point hitter\""] },
-        "L":  { "role": "Defensive specialist", "description": "Defensive specialist in a contrasting jersey. Replaces the back-row players (P1, P5, P6) without counting as a substitution. FIVB restrictions: no block, no attack above the net, no overhand set from the front zone to a teammate who then attacks above the net.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Maximum agility", "Cannot block / attack above the net", "No overhand set from front → attacker", "Unlimited substitutions", "Allowed to serve (FIVB 2021)"] }
+        "P4": { "role": "アウトサイドヒッター", "description": "主要な攻撃ゾーン。高いボールを最も多く受け、アタック・ブロック・レセプションを兼ねる万能性が求められます。相手のZ4攻撃に対して左側のオフブロッカーも務めます。", "skills": ["アタック", "ブロック", "レセプション", "サーブ"], "traits": ["攻撃力と精度", "長いウィングスパン", "万能性", "持久力"] },
+        "P3": { "role": "ミドルブロッカー", "description": "ネット中央の選手。相手のアタックをブロックし、クイック攻撃を打ちます。相手のサイド攻撃には2枚ブロックでクロスを締めます。", "skills": ["ブロック", "クイック", "ネット周りの対応"], "traits": ["高身長が必須", "強力なブロック", "テンポ1と2", "ネット際の守備に限定"] },
+        "P2": { "role": "セッター", "description": "司令塔。2本目のタッチで攻撃を組み立てます。5-1ではすべてのローテーションでプレー: P1、P6、P5（バック）から潜り込み、P4、P3、P2（フロント）から配球。目標位置: Z2とZ3の間、ネットから約1 m。", "skills": ["オーバーハンドトス", "ブロックを読む", "コミュニケーション", "潜り込み"], "traits": ["最高の技術精度", "360度の視野", "冷静さ", "リーダーシップ"] },
+        "P5": { "role": "レセプション / ディフェンス", "description": "コート左側のレセプションとディフェンスを担当。バックローテーションの2人目のアウトサイドが入ることが多いです。リベロが代わることもあります。", "skills": ["アンダーパス", "レセプション", "ディフェンス", "読み"], "traits": ["アタックを読む", "守備の最前線", "左後方のフォロー", "リベロと交代することが多い"] },
+        "P6": { "role": "センターディフェンス", "description": "コート後方の守備の要。深いボールを処理し、味方をフォローします。リベロが入ることが多いポジションです。", "skills": ["深いディフェンス", "フォロー", "サポート", "アンダーパス"], "traits": ["ゲームの読み", "高い機動力", "後方の声出し", "リベロと交代することが多い"] },
+        "P1": { "role": "オポジット", "description": "オポジット（「ポイントヒッター」）はセッターの対角に位置します。レセプションには加わらず — フィニッシャーです。6ローテーションのうち3つはバックロウから攻撃（パイプ）。", "skills": ["強打", "サーブ", "ブロック", "バックアタック"], "traits": ["最大の決定力", "3/6ローテでバックアタック", "レセプション免除", "別名「ポイントヒッター」"] },
+        "L":  { "role": "守備のスペシャリスト", "description": "別色のユニフォームを着る守備のスペシャリスト。バックロウの選手（P1、P5、P6）と選手交代としてカウントされずに代わります。FIVB規制: ブロック禁止、ネット上での攻撃禁止、フロントゾーンからのオーバーハンドトスを経由した攻撃禁止。", "skills": ["アンダーパス", "レセプション", "ディフェンス", "読み"], "traits": ["最高の俊敏性", "ブロック / ネット上の攻撃禁止", "フロントからのトスでアタッカーに渡せない", "交代回数無制限", "サーブ可（2021年〜FIVB）"] }
       }
     },
     "4-2": {
-      "name": "4-2 System (beginner)",
+      "name": "4-2システム（初級）",
       "shortName": "4-2",
-      "description": "2 setters diagonally opposite (P2 and P5) + 2 middles + 2 outsides. The FRONT setter always takes the 2nd touch. No penetration: the simplest system to learn.",
+      "description": "対角に2人のセッター（P2とP5）＋ミドル2人＋アウトサイド2人。常に前衛セッターが2本目のタッチを取ります。潜り込みなし: 最も習得しやすいシステム。",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing. Setter's main target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "Setter's #1 target", "W reception"] },
-        "P3": { "role": "Middle", "description": "Front-row middle: block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Central W reception"] },
-        "P2": { "role": "Front setter", "description": "Front setter: takes the 2nd touch. No penetration, no reception. Distributes from the position.", "skills": ["Hand set", "Distribution", "Communication"], "traits": ["Always front when setting", "Out of reception", "No penetration"] },
-        "P5": { "role": "Back setter (off-duty)", "description": "Second setter, diagonally opposite. Plays only as back-row, does NOT take the 2nd touch while back. Receives and defends.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Becomes front setter after rotation", "No setting when back", "Pairs in reception"] },
-        "P6": { "role": "Back middle", "description": "Middle going through back-row positions. Center reception + defense.", "skills": ["Defense", "Forearm pass", "Reception"], "traits": ["Defensive pivot", "Covers the back center"] },
-        "P1": { "role": "Outside / server", "description": "Outside in back-row rotation, serves from P1 then plays reception/defense.", "skills": ["Serve", "Reception", "Defense"], "traits": ["Main server", "W reception"] }
+        "P4": { "role": "アウトサイド", "description": "左サイド。セッターの主なターゲットとなるゾーン4。", "skills": ["アタック", "ブロック", "レセプション"], "traits": ["万能性", "セッターの第一ターゲット", "Wレセプション"] },
+        "P3": { "role": "ミドル", "description": "前衛ミドル: レセプションが整えばブロック＋クイック。", "skills": ["ブロック", "クイック"], "traits": ["強力なブロック", "Wレセプションの中央"] },
+        "P2": { "role": "前衛セッター", "description": "前衛セッター: 2本目のタッチを取ります。潜り込みもレセプションもなし。その位置から配球。", "skills": ["オーバーハンドトス", "配球", "コミュニケーション"], "traits": ["トス時は常に前衛", "レセプション不参加", "潜り込みなし"] },
+        "P5": { "role": "バックセッター（休止）", "description": "もう1人のセッター、対角の位置。バックロウでのみプレーし、後衛中は2本目を取りません。レセプションとディフェンスを担当。", "skills": ["レセプション", "ディフェンス", "アンダーパス"], "traits": ["ローテ後に前衛セッターになる", "後衛中はトスしない", "レセプションでペアを組む"] },
+        "P6": { "role": "バックミドル", "description": "バックロウを経由するミドル。中央レセプション＋ディフェンス。", "skills": ["ディフェンス", "アンダーパス", "レセプション"], "traits": ["守備の要", "中央後方をカバー"] },
+        "P1": { "role": "アウトサイド / サーバー", "description": "バックローテのアウトサイド。P1からサーブし、その後レセプション/ディフェンス。", "skills": ["サーブ", "レセプション", "ディフェンス"], "traits": ["主要なサーバー", "Wレセプション"] }
       }
     },
     "6-2": {
-      "name": "6-2 System (advanced)",
+      "name": "6-2システム（上級）",
       "shortName": "6-2",
-      "description": "2 versatile setters: they ONLY set from the back row (with penetration), and become right-side attackers when rotating to the front. + 2 middles + 2 outsides + 1 libero. Pro: always 3 front-row attackers. Con: diluted setter-hitter chemistry, and in the double-sub variant rapidly burns through the 6 substitutions per set (FIVB Rule 15.6).",
+      "description": "万能型のセッター2人: バックロウからのみ配球（潜り込み）し、フロントロウに移ると右サイドアタッカーになります。＋ミドル2人＋アウトサイド2人＋リベロ1人。利点: 常に前衛に3人のアタッカー。欠点: セッターとアタッカーの相性が薄まり、ダブルサブ運用ではセットあたり6人の交代枠（FIVBルール15.6）をすぐ使い切る。",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing, main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "3-person reception"] },
-        "P3": { "role": "Middle", "description": "Front middle: block + tempo 1.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Wing switching"] },
-        "P2": { "role": "Setter-attacker", "description": "In 6-2 the front-row player (setter or not) attacks. When the setter is front, they become a zone-2 attacker. The back setter distributes.", "skills": ["Zone 2 attack", "Block", "Serve"], "traits": ["Versatile set + attack", "Attacks zone 2", "3 hitters in front always"] },
-        "P5": { "role": "Outside (back)", "description": "Wing in back-row rotation. Reception and defense.", "skills": ["Reception", "Forearm pass", "Defense"], "traits": ["3-person reception", "Often replaced by the libero"] },
-        "P6": { "role": "Back middle", "description": "Middle in back-row rotation, often replaced by the libero for reception and defense.", "skills": ["Defense", "Forearm pass"], "traits": ["Often replaced by the libero", "Defensive pivot"] },
-        "P1": { "role": "Penetrating setter", "description": "Back-row setter who penetrates as soon as the serve is hit toward zone 2-3 to distribute. Facing them, the 2nd setter at P2 attacks.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1 → zone 2/3", "Distributes", "Rotation alternates with the 2nd setter"] },
-        "L":  { "role": "Libero", "description": "Standard libero, replaces middles in the back-row rotation.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Replaces P5/P6", "Contrasting jersey"] }
+        "P4": { "role": "アウトサイド", "description": "左サイド、ゾーン4の主要アタッカー。", "skills": ["アタック", "ブロック", "レセプション"], "traits": ["万能性", "3人レセプション"] },
+        "P3": { "role": "ミドル", "description": "前衛ミドル: ブロック＋テンポ1。", "skills": ["ブロック", "クイック"], "traits": ["強力なブロック", "サイドスイッチ"] },
+        "P2": { "role": "セッター兼アタッカー", "description": "6-2では前衛の選手（セッターであるか否かに関わらず）が攻撃します。セッターが前衛にいる場合はゾーン2のアタッカーになります。バックロウのもう1人のセッターが配球。", "skills": ["ゾーン2アタック", "ブロック", "サーブ"], "traits": ["セッターとアタッカー兼任", "ゾーン2から攻撃", "常に前衛に3枚"] },
+        "P5": { "role": "アウトサイド（バック）", "description": "バックローテのサイド。レセプションとディフェンス。", "skills": ["レセプション", "アンダーパス", "ディフェンス"], "traits": ["3人レセプション", "リベロと交代されやすい"] },
+        "P6": { "role": "バックミドル", "description": "バックローテのミドル。レセプションとディフェンスのためリベロと交代されることが多い。", "skills": ["ディフェンス", "アンダーパス"], "traits": ["リベロと交代されることが多い", "守備の要"] },
+        "P1": { "role": "潜り込みセッター", "description": "バックロウのセッターで、サーブが打たれた瞬間にZ2-3へ潜り込み配球。これに対し、P2の2人目のセッターが攻撃を担当。", "skills": ["潜り込み", "オーバーハンドトス", "サーブ"], "traits": ["P1からZ2/3へ潜り込み", "配球", "2人目のセッターと交互にローテ"] },
+        "L":  { "role": "リベロ", "description": "標準的なリベロ、バックローテのミドルと交代します。", "skills": ["アンダーパス", "レセプション", "ディフェンス"], "traits": ["P5/P6と交代", "別色ユニフォーム"] }
       }
     },
     "pentagon": {
-      "name": "Pentagon (1-2-2)",
-      "shortName": "Pentagon",
-      "description": "1 player at the center net, 2 wings mid-court, 2 back. Even court coverage — good in beginner and recreational play. Typical defense: 1-2-2 system (adapted man-up, 1 blocker + 2 coverers + 2 deep defenders).",
+      "name": "ペンタゴン（1-2-2）",
+      "shortName": "ペンタゴン",
+      "description": "ネット中央に1人、ミッドコートにサイド2人、後方に2人。コートを均等にカバーでき — 初級・レクリエーションに適しています。代表的なディフェンス: 1-2-2システム（簡易マンナップ、ブロッカー1＋カバー2＋深部ディフェンダー2）。",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the setter (if fixed); otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Game hub", "Central block", "Partial reception exemption"] },
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing mid-court: receives and attacks from zone 4.", "skills": ["Attack", "Reception", "Block"], "traits": ["Versatility", "Medium approach", "Short cross-court coverage"] },
-        "P2": { "name": "Right wing", "role": "Outside / opposite", "description": "Right wing. If the setter plays center, this is the zone-2 attacker.", "skills": ["Line attack", "Block", "Serve"], "traits": ["Long cross-court attack", "2-person block with middle", "Long cross-court coverage"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: covers the left defense, often the best passer.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "~30 m² to cover", "Reads the long cross"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: covers right defense + serves.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Main server", "Line coverage", "Zone-2 attack support"] }
+        "P3": { "name": "ネット中央", "role": "セッターまたはミドル", "description": "ネット中央。固定セッターであれば多くの場合セッター、そうでなければ主要ブロッカー。", "skills": ["トス", "ブロック", "コミュニケーション"], "traits": ["プレーの中心", "中央ブロック", "レセプションを一部免除"] },
+        "P4": { "name": "左サイド", "role": "アウトサイド", "description": "ミッドコート左サイド: レセプションを受け、ゾーン4から攻撃。", "skills": ["アタック", "レセプション", "ブロック"], "traits": ["万能性", "中程度の助走", "ショートクロスをカバー"] },
+        "P2": { "name": "右サイド", "role": "アウトサイド / オポジット", "description": "右サイド。セッターが中央にいる場合、ここからゾーン2を攻撃。", "skills": ["ストレート攻撃", "ブロック", "サーブ"], "traits": ["ロングクロス攻撃", "ミドルとの2枚ブロック", "ロングクロスのカバー"] },
+        "P5": { "name": "後衛左", "role": "レセプション / ディフェンス", "description": "後衛左: 左側のディフェンスを担当、多くの場合チーム最良のパサー。", "skills": ["アンダーパス", "レセプション", "ディフェンス"], "traits": ["守備の柱", "約30 m²をカバー", "ロングクロスを読む"] },
+        "P1": { "name": "後衛右", "role": "ディフェンス / サーブ", "description": "後衛右: 右側のディフェンス＋サーブ。", "skills": ["サーブ", "ディフェンス", "アンダーパス"], "traits": ["主要なサーバー", "ライン側のカバー", "ゾーン2攻撃のサポート"] }
       }
     },
     "3F-2B": {
-      "name": "3 front / 2 back",
+      "name": "前衛3 / 後衛2",
       "shortName": "3F/2B",
-      "description": "3 attackers at the net (P4, P3, P2 with setter at P2) + 2 back (P5, P1). Offensive setup: 2- or 3-person block possible. Typical defense: 2-1-2 system (2 blockers + 1 off-blocker + 2 deep defenders). Downside: 30+ m² per back-row defender.",
+      "description": "ネットに3人のアタッカー（P4、P3、P2、セッターはP2）＋後衛2人（P5、P1）。攻撃寄りの構成: 2枚または3枚ブロックが可能。代表的なディフェンス: 2-1-2システム（ブロッカー2＋オフブロッカー1＋深部ディフェンダー2）。欠点: 後衛1人あたり30 m²以上を担当。",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main setter target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "2-person block with middle", "Setter's favorite target"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 1 preserved", "Switching possible"] },
-        "P2": { "name": "Front setter", "role": "Setter", "description": "Fixed front setter. No penetration. Distributes from the net; can attack in 2 if the ball comes high on the right side.", "skills": ["Hand set", "Distribution", "Right-side block"], "traits": ["Fixed front", "No penetration", "Occasional zone-2 attack"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court defense.", "skills": ["Forearm pass", "Defense", "Reception"], "traits": ["Best passer ideally", "Long cross-court", "Coverage ~30 m²"] },
-        "P1": { "name": "Back right", "role": "Serve / defense", "description": "Back right: serves then defends the line and short cross.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + corridor", "Zone-2 attack support"] }
+        "P4": { "name": "左サイド", "role": "アウトサイド", "description": "ネット左サイド。セッターの主要ターゲット（ゾーン4）。", "skills": ["アタック", "ブロック", "レセプション"], "traits": ["万能性", "ミドルとの2枚ブロック", "セッターのお気に入りターゲット"] },
+        "P3": { "name": "ミドル", "role": "ミドル", "description": "ネット中央のミドル。レセプションが整えばブロック＋クイック。", "skills": ["ブロック", "クイック"], "traits": ["中央ブロック", "テンポ1を維持", "スイッチ可能"] },
+        "P2": { "name": "前衛セッター", "role": "セッター", "description": "固定の前衛セッター。潜り込みなし。ネットから配球し、ボールが右側に高く来ればゾーン2から攻撃も可能。", "skills": ["オーバーハンドトス", "配球", "右側のブロック"], "traits": ["固定で前衛", "潜り込みなし", "稀にゾーン2攻撃"] },
+        "P5": { "name": "後衛左", "role": "レセプション / ディフェンス", "description": "後衛左: 左側のレセプション＋ロングクロスのディフェンス。", "skills": ["アンダーパス", "ディフェンス", "レセプション"], "traits": ["理想的には最良のパサー", "ロングクロス", "約30 m²をカバー"] },
+        "P1": { "name": "後衛右", "role": "サーブ / ディフェンス", "description": "後衛右: サーブを打ち、その後ラインとショートクロスをディフェンス。", "skills": ["サーブ", "ディフェンス", "アンダーパス"], "traits": ["サーバー", "ライン＋コリドー", "ゾーン2攻撃のサポート"] }
       }
     },
     "2F-3B": {
-      "name": "2 front / 3 back",
+      "name": "前衛2 / 後衛3",
       "shortName": "2F/3B",
-      "description": "2 players at the net + 3 back including the penetrating setter (P1). The most defensively stable setup, closest to 6v6 5-1. Typical defense: 1-1-3 system (1 blocker + 1 off-blocker + 3 deep defenders). Recommended to prepare the transition to 6v6.",
+      "description": "ネットに2人＋後衛3人で、後衛には潜り込みセッター（P1）を含む。守備が最も安定し、6対6の5-1に最も近い構成。代表的なディフェンス: 1-1-3システム（ブロッカー1＋オフブロッカー1＋深部ディフェンダー3）。6対6への移行準備に推奨されます。",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Setter's #1 target", "2-person block", "Versatility"] },
-        "P3": { "name": "Middle", "role": "Middle / opposite", "description": "Versatile middle: central block + attack in zone 3 or 2 depending on the set.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Central block", "Frequent switch to zone 2", "No pure P2 attacker"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "3-person reception with P6"] },
-        "P6": { "name": "Back center", "role": "Defensive pillar", "description": "Back center: covers the whole back middle, reads long balls.", "skills": ["Deep defense", "Forearm pass", "Coverage"], "traits": ["Maximum mobility", "Recovers pipes and long balls", "Central reception"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Back-row setter at P1 who penetrates to zone 2-3 as soon as the serve is hit. Serves then distributes.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1", "Distributes with 2 attackers in front", "Short cover after the set"] }
+        "P4": { "name": "左サイド", "role": "アウトサイド", "description": "ネット左サイド。ゾーン4の主要アタッカー。", "skills": ["アタック", "ブロック", "レセプション"], "traits": ["セッターの第一ターゲット", "2枚ブロック", "万能性"] },
+        "P3": { "name": "ミドル", "role": "ミドル / オポジット", "description": "万能ミドル: 中央ブロック＋トスに応じてゾーン3または2から攻撃。", "skills": ["ブロック", "クイック", "ネット周りの対応"], "traits": ["中央ブロック", "頻繁にゾーン2へスイッチ", "純粋なP2アタッカーなし"] },
+        "P5": { "name": "後衛左", "role": "レセプション / ディフェンス", "description": "後衛左: 左側のレセプション＋ロングクロス。", "skills": ["アンダーパス", "レセプション", "ディフェンス"], "traits": ["守備の柱", "P6との3人レセプション"] },
+        "P6": { "name": "後衛中央", "role": "守備の柱", "description": "後衛中央: 中央後方全体をカバーし、長いボールを読む。", "skills": ["深いディフェンス", "アンダーパス", "フォロー"], "traits": ["最高の機動力", "パイプや長いボールに対応", "中央レセプション"] },
+        "P1": { "name": "潜り込みセッター", "role": "セッター", "description": "P1のバックロウセッターで、サーブが打たれた瞬間にZ2-3へ潜り込みます。サーブを打ってから配球。", "skills": ["潜り込み", "オーバーハンドトス", "サーブ"], "traits": ["P1から潜り込み", "前衛2枚で配球", "トス後のショートカバー"] }
       }
     },
     "losange": {
-      "name": "Diamond (1-2-1)",
-      "shortName": "Diamond",
-      "description": "\"Diamond\" formation: the MOST USED in indoor 4v4. 1 player at the center net (P3, often the setter), 2 wings mid-court (P4 and P2 around the 3 m line), 1 back. Typical defense: A-system (1 blocker + 3 defenders). Most vulnerable zone: long cross-court (lack of bodies in the back).",
+      "name": "ダイヤモンド（1-2-1）",
+      "shortName": "ダイヤモンド",
+      "description": "「ダイヤモンド」フォーメーション: インドア4対4で最も用いられます。ネット中央に1人（P3、多くの場合セッター）、ミッドコートに2人のサイド（P4とP2、3 mライン付近）、後方に1人。代表的なディフェンス: Aシステム（ブロッカー1＋ディフェンダー3）。最も脆弱なゾーン: ロングクロス（後方の人手不足）。",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the SETTER (\"center setter\" variant) distributing to either side. Otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Diamond's game hub", "Standard 1-person block", "Distributes without penetration"] },
-        "P4": { "name": "Left wing", "role": "Main attacker", "description": "Left wing, mid-court (around the 3 m line). Setter's preferred target.", "skills": ["Attack", "Reception", "Coverage"], "traits": ["Short approach", "Left-side reception", "Versatility (~35 m²)"] },
-        "P2": { "name": "Right wing", "role": "Secondary attacker", "description": "Right wing, mid-court. Attacks in zone 2 if the setter distributes right.", "skills": ["Line attack", "Reception", "Serve"], "traits": ["Long cross-court attack", "Right-side reception", "Short right coverage"] },
-        "P1": { "name": "Sole back", "role": "Main defender", "description": "No libero allowed: this is the team's best back defender. Covers the entire back alone.", "skills": ["Reception", "Deep defense", "Reading"], "traits": ["~40 m² alone", "Anticipation is the #1 skill", "Must know how to set the 2nd touch"] }
+        "P3": { "name": "ネット中央", "role": "セッターまたはミドル", "description": "ネット中央。多くの場合セッター（「センターセッター」型）で左右どちらにも配球。そうでなければ主要ブロッカー。", "skills": ["トス", "ブロック", "コミュニケーション"], "traits": ["ダイヤモンドの中心", "標準的な1枚ブロック", "潜り込みなしの配球"] },
+        "P4": { "name": "左サイド", "role": "主要アタッカー", "description": "ミッドコート左サイド（3 mライン付近）。セッターのお気に入りターゲット。", "skills": ["アタック", "レセプション", "フォロー"], "traits": ["短い助走", "左側のレセプション", "万能性（約35 m²）"] },
+        "P2": { "name": "右サイド", "role": "セカンダリーアタッカー", "description": "ミッドコート右サイド。セッターが右に配球する場合のゾーン2アタッカー。", "skills": ["ストレート攻撃", "レセプション", "サーブ"], "traits": ["ロングクロス攻撃", "右側のレセプション", "右側のショートカバー"] },
+        "P1": { "name": "唯一の後衛", "role": "メインディフェンダー", "description": "リベロ不可: チーム最良の後衛ディフェンダーを置きます。一人で後方全体をカバー。", "skills": ["レセプション", "深いディフェンス", "読み"], "traits": ["一人で約40 m²", "予測能力が最重要", "2本目のトスもできる必要あり"] }
       }
     },
     "carre": {
-      "name": "Box (2-2)",
-      "shortName": "Box",
-      "description": "\"Box\" 2-2 formation: 2 players at the net (P4 and P2) + 2 back (P5 and P1). Enables 2-person blocking (B system) — but only useful against very powerful hitters with no finesse, since it leaves only 2 deep defenders (tip uncovered). More often played in A system with a single blocker.",
+      "name": "ボックス（2-2）",
+      "shortName": "ボックス",
+      "description": "「ボックス」2-2フォーメーション: ネットに2人（P4とP2）＋後衛に2人（P5とP1）。2枚ブロック（Bシステム）が可能 — ただし深部ディフェンダーが2人しかいないため、フェイントが空くので、技巧のない強打者にしか有効ではありません。実際にはブロッカー1人のAシステムで運用されることが多いです。",
       "positions": {
-        "P4": { "name": "Left wing (net)", "role": "Blocker / attacker", "description": "At the net on the left. Block + attack in zone 4.", "skills": ["Block", "Attack", "Net coverage"], "traits": ["2-person block with right wing", "Possible switch with the setter", "No traditional tempo 1"] },
-        "P2": { "name": "Setter-attacker (net)", "role": "Front setter", "description": "Setter-attacker at the net on the right. Always takes the 2nd touch (no penetration in the box).", "skills": ["Set", "Block", "Zone 2 attack"], "traits": ["Always front", "No penetration", "2-person block with the left wing"] },
-        "P5": { "name": "Back left", "role": "Defense / reception", "description": "Back left: reception on the left + long cross-court.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Defensive pillar", "Coverage ~35 m²", "Zone-4 attack support"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: serves then defends the line and long cross-court.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + cross-court", "Zone-2 attack support"] }
+        "P4": { "name": "左サイド（ネット）", "role": "ブロッカー / アタッカー", "description": "ネット左サイド。ブロック＋ゾーン4のアタック。", "skills": ["ブロック", "アタック", "ネット周りの対応"], "traits": ["右サイドとの2枚ブロック", "セッターとのスイッチ可", "従来のテンポ1なし"] },
+        "P2": { "name": "セッター兼アタッカー（ネット）", "role": "前衛セッター", "description": "ネット右側のセッター兼アタッカー。常に2本目を取ります（ボックスでは潜り込みなし）。", "skills": ["トス", "ブロック", "ゾーン2アタック"], "traits": ["常に前衛", "潜り込みなし", "左サイドとの2枚ブロック"] },
+        "P5": { "name": "後衛左", "role": "ディフェンス / レセプション", "description": "後衛左: 左側のレセプション＋ロングクロス。", "skills": ["レセプション", "ディフェンス", "アンダーパス"], "traits": ["守備の柱", "約35 m²をカバー", "ゾーン4攻撃のサポート"] },
+        "P1": { "name": "後衛右", "role": "ディフェンス / サーブ", "description": "後衛右: サーブを打ち、ラインとロングクロスをディフェンス。", "skills": ["サーブ", "ディフェンス", "アンダーパス"], "traits": ["サーバー", "ライン＋クロス", "ゾーン2攻撃のサポート"] }
       }
     },
     "3-1": {
-      "name": "3-1 line (penetrating setter)",
+      "name": "3-1ライン（潜り込みセッター）",
       "shortName": "3-1",
-      "description": "\"3-1 line\" formation: sole setter at P1 (back) who penetrates to zone 2 as soon as the ball is hit. Frees 3 attackers in front — a simplified equivalent of 6v6 5-1. Requires very clean reception and a fast setter. Defense: A system possible (1 central blocker + 3 defenders).",
+      "description": "「3-1ライン」フォーメーション: P1（後衛）の唯一のセッターがボール接触と同時にゾーン2へ潜り込みます。前衛3人のアタッカーを確保 — 6対6の5-1の簡易版。非常に正確なレセプションと俊敏なセッターが必要。ディフェンス: Aシステム可（中央ブロッカー1＋ディフェンダー3）。",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4 + reception.", "skills": ["Attack", "Reception", "Block"], "traits": ["#1 target", "3-person reception", "Zone-4 approach"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + attack in zone 3 if the set is tight.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 2 possible", "No reception"] },
-        "P2": { "name": "Right wing", "role": "Outside", "description": "Right wing. Attacks in zone 2 when the setter distributes right.", "skills": ["Attack", "Block", "Reception"], "traits": ["Zone-2 attack", "3-person reception", "2-person block with middle"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Sole setter at P1. Serves then penetrates to zone 2 to distribute.", "skills": ["Penetration", "Set", "Serve"], "traits": ["Penetrates from P1", "3 attackers in front always", "Short cover after the set"] }
+        "P4": { "name": "左サイド", "role": "アウトサイド", "description": "ネット左サイド。ゾーン4の主要アタッカー＋レセプション。", "skills": ["アタック", "レセプション", "ブロック"], "traits": ["第一ターゲット", "3人レセプション", "ゾーン4の助走"] },
+        "P3": { "name": "ミドル", "role": "ミドル", "description": "ネット中央のミドル。ブロック＋トスが詰まればゾーン3攻撃。", "skills": ["ブロック", "クイック"], "traits": ["中央ブロック", "テンポ2可能", "レセプションなし"] },
+        "P2": { "name": "右サイド", "role": "アウトサイド", "description": "右サイド。セッターが右に配球する場合のゾーン2攻撃。", "skills": ["アタック", "ブロック", "レセプション"], "traits": ["ゾーン2アタック", "3人レセプション", "ミドルとの2枚ブロック"] },
+        "P1": { "name": "潜り込みセッター", "role": "セッター", "description": "P1の唯一のセッター。サーブを打ち、ゾーン2へ潜り込み配球。", "skills": ["潜り込み", "トス", "サーブ"], "traits": ["P1から潜り込み", "常に前衛3枚", "トス後のショートカバー"] }
       }
     }
   }

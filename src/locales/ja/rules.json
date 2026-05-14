@@ -1,75 +1,75 @@
 {
   "header": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "VOLLEYBALL RULES",
-    "subtitle": "Simplified FIVB regulation — the essential rules to understand and play."
+    "kicker": "★ ドキュメント",
+    "title": "バレーボールのルール",
+    "subtitle": "FIVB公式規則をわかりやすく — プレーと観戦に必要な基本ルール。"
   },
-  "warning": "This page is an educational summary. For official competitions, refer to the <strong>official FIVB regulation</strong>.",
-  "quickFaultsTitle": "COMMON FAULTS",
+  "warning": "このページは学習用のまとめです。公式試合では<strong>FIVB公式規則</strong>を参照してください。",
+  "quickFaultsTitle": "代表的な反則",
   "quickFaults": [
-    "Touching the net during play",
-    "More than 3 team touches",
-    "Double contact by the same player",
-    "Held / carried ball",
-    "Back-row attack above the net from the front zone",
-    "Foot fault on the serve (stepping on the line)",
-    "Serving before the whistle",
-    "Position fault at rotation"
+    "プレー中のネットタッチ",
+    "チーム4タッチ以上",
+    "同じ選手による連続接触（ダブルコンタクト）",
+    "ホールディング（ボールを持つ）",
+    "フロントゾーンからのバックロウの選手のネット上攻撃",
+    "サーブ時のフットフォルト（ラインを踏む）",
+    "笛より前のサーブ",
+    "ローテーション時のポジショナルフォルト"
   ],
   "sections": [
     {
       "id": "basics",
-      "title": "The essentials",
+      "title": "基本ルール",
       "num": "01",
       "rules": [
-        { "title": "Match format", "content": "A match is played as best of 5 sets. Each set is played to 25 points with at least a 2-point lead. If a 5th set is needed, it is played to 15 points." },
-        { "title": "Teams", "content": "6 players per side on court. A team can have up to 6 substitutes and one libero. Maximum 6 regular substitutions per set (libero not counted)." },
-        { "title": "Serve", "content": "The serve is performed from the service zone behind the back line. The ball must cross the net into the opponent's court. The server has 8 seconds after the whistle to strike. A serve that touches the net and falls into the opponent's court is GOOD (let serve legal since 2001)." },
-        { "title": "Point on every rally", "content": "Since 1999 (rally point system), a point is scored on every rally, regardless of which team served. The scoring team gets the serve." }
+        { "title": "試合形式", "content": "試合は5セットマッチで行われます。各セットは25点先取、ただし2点差以上の差が必要です。第5セットが行われる場合は15点先取となります。" },
+        { "title": "チーム", "content": "コート上は各チーム6人。最大6人の控え選手とリベロ1人を登録できます。1セットあたり通常の選手交代は最大6回（リベロはカウントせず）。" },
+        { "title": "サーブ", "content": "サーブはエンドライン後方のサービスゾーンから行います。ボールはネットを越えて相手コートに入らなければなりません。サーバーは笛から8秒以内に打つ必要があります。ネットに触れて相手コートに落ちたサーブは有効です（2001年からネットインも認められています）。" },
+        { "title": "ラリーポイント制", "content": "1999年から（ラリーポイント制）、サーブ権の有無に関わらずすべてのラリーで得点が入ります。得点したチームがサーブ権を獲得します。" }
       ]
     },
     {
       "id": "touches",
-      "title": "Contacts and faults",
+      "title": "接触と反則",
       "num": "02",
       "rules": [
-        { "title": "Maximum 3 touches", "content": "A team has up to 3 touches to return the ball. The block does not count as a team touch — the team still has 3 touches after a block." },
-        { "title": "Double contact", "content": "A player cannot contact the ball twice in a row, except on the first team contact (reception/dig). Exception for the block. New 2025-2026 FIVB trial: double contact allowed on the set (2nd touch) as long as the ball stays on the same side." },
-        { "title": "Net fault", "content": "Touching the net during the action of playing the ball is a fault. Touching outside the action or outside the antennae is not a fault. Partially crossing under the net is allowed if it does not interfere with the opponent. FIVB 2025 goal: \"promote flowing play\"." },
-        { "title": "Ball on the lines", "content": "A ball that lands on the line is \"in\". A ball that crosses outside the antennae or outside the crossing space is out." }
+        { "title": "最大3タッチ", "content": "1チームはボールを返すまでに最大3タッチ。ブロックはチームタッチに含まれず、ブロック後もまだ3タッチ可能です。" },
+        { "title": "ダブルコンタクト", "content": "同じ選手が連続してボールに触れることはできません。ただしチームの第1接触（レセプション/ディグ）は例外です。ブロックも例外。FIVB 2025-2026の試験運用: ボールが同じサイドに残っている限り、トス（第2接触）でのダブルコンタクトは認められます。" },
+        { "title": "ネットの反則", "content": "ボールをプレーする動作中にネットに触れることは反則です。プレー動作外やアンテナの外側に触れることは反則になりません。妨害しなければネット下を部分的に越えることも認められます。FIVB 2025の目標: 「流れのあるプレーを促進する」。" },
+        { "title": "ライン上のボール", "content": "ラインに落ちたボールは「イン」。アンテナの外側を通過したり、有効空間外を越えたボールはアウトです。" }
       ]
     },
     {
       "id": "positions",
-      "title": "Rotation and positions",
+      "title": "ローテーションと配置",
       "num": "03",
       "rules": [
-        { "title": "Mandatory rotation", "content": "On every side-out, the team winning the serve rotates clockwise: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. The player going P2→P1 becomes the new server." },
-        { "title": "Position fault", "content": "At the moment the server strikes, players must respect their rotation order (no diagonal overlap). Fault = point + serve to the opponent. 2025 update: the overlap rule now only applies to the RECEIVING team — the serving team can position freely." },
-        { "title": "3-meter rule", "content": "Back-row players (P1, P5, P6) cannot attack above the net from the front zone. They can jump from behind the 3 m line and land in the front zone — this is legal." },
-        { "title": "Libero", "content": "The libero wears a contrasting jersey and only plays back-row (P1, P5, P6). Unlimited uncounted substitutions. Cannot block or attack above the net. May serve since 2021 in a single rotation per set. May be captain since 2021. Restriction: if the libero hand-sets from the front zone, a teammate cannot attack the ball above the net." }
+        { "title": "ローテーションの義務", "content": "サイドアウトのたびにサーブ権を得たチームは時計回りにローテーションします: P2→P1、P3→P2、P4→P3、P5→P4、P6→P5、P1→P6。P2→P1に移動した選手が新しいサーバーになります。" },
+        { "title": "ポジショナルフォルト", "content": "サーバーがボールを打つ瞬間、各選手はローテーション順を守らなければなりません（隣接選手とのオーバーラップ禁止）。反則 = 失点＋サーブ権を相手に渡す。2025年改定: オーバーラップ規則は<strong>レシーブ側</strong>のみに適用され、サーブ側は自由に配置できます。" },
+        { "title": "3メートルルール", "content": "バックロウの選手（P1、P5、P6）はフロントゾーンからネット上で攻撃できません。3 mラインの後ろからジャンプしてフロントゾーンに着地することは合法です。" },
+        { "title": "リベロ", "content": "リベロは別色のユニフォームを着用し、バックロウ（P1、P5、P6）でのみプレーします。回数無制限の交代を行え、選手交代としてカウントされません。ブロック、ネット上での攻撃は禁止。2021年からセットあたり1ローテーションのみサーブ可能。2021年からキャプテンにもなれます。制限事項: フロントゾーンからリベロがオーバーハンドでトスした場合、味方はネット上でアタックできません。" }
       ]
     },
     {
       "id": "special",
-      "title": "Special situations",
+      "title": "特別な状況",
       "num": "04",
       "rules": [
-        { "title": "Time-outs", "content": "Each team has 2 time-outs of 30 seconds per set. Automatic technical time-outs at the 8th and 16th points in sets 1-4 are used in some FIVB competitions." },
-        { "title": "Serve — key rules", "content": "8 seconds to strike after the whistle. Only one toss allowed, but the server can let the ball drop once without penalty. Foot fault: at the moment of contact (or jump take-off), the server must not touch the back line or court. Screen on serve: teammates must not raise their hands above their heads during the serve (2025 rule)." },
-        { "title": "Back-row attack", "content": "A back-row player can attack if their take-off is behind the 3 m line (both feet). They can also strike the ball if any part is below the net. Blocking or attacking the serve above the net from the front zone is a fault." },
-        { "title": "Held ball", "content": "Contact with the ball must be brief and clean. \"Ugly contact ≠ fault\": imperfect contact is not automatically a fault if the ball rebounds. More permissive standard for forearm passes than for hand sets." }
+        { "title": "タイムアウト", "content": "各チームはセットあたり30秒のタイムアウトを2回取れます。一部のFIVB大会では、第1-4セットの8点目と16点目に自動でテクニカルタイムアウトが入ります。" },
+        { "title": "サーブ — 主要ルール", "content": "笛から8秒以内に打つ必要があります。トスは1回のみ可能ですが、ボールを1度落としてもペナルティはありません。フットフォルト: 接触時（またはジャンプ離地時）にサーバーがエンドラインやコートを踏んではいけません。スクリーン: サーブ中、味方は頭の上に手を上げることが禁止されています（2025年ルール）。" },
+        { "title": "バックロウの攻撃", "content": "バックロウの選手は、両足が3 mラインの後ろから踏み切れば攻撃可能です。ボールが部分的にネットより下であれば打つこともできます。フロントゾーンからネット上でサーブを攻撃またはブロックすることは反則です。" },
+        { "title": "ホールディング", "content": "ボールへの接触は短くクリーンでなければなりません。「醜い接触＝反則ではない」: 不完全な接触でも、ボールが跳ね返れば必ずしも反則ではありません。アンダーパスはオーバーハンドトスより寛容に判定されます。" }
       ]
     },
     {
       "id": "nouveautes2025",
-      "title": "FIVB 2025-2028 updates",
+      "title": "FIVB 2025-2028 改定",
       "num": "05",
       "rules": [
-        { "title": "Overlap: only on reception", "content": "Since 2025, the overlap rule only applies to the receiving team. The serving team can occupy any position on the court at the moment of the serve." },
-        { "title": "No screen on serve", "content": "Players on the serving team are now forbidden from raising their hands above their heads during the serve until the ball crosses the net. Such a screen is sanctioned directly." },
-        { "title": "Double contact on the set — trial", "content": "FIVB 2025-2026 trial: double contact on the set (2nd touch) is allowed as long as the ball remains on the same side. If the trial succeeds, the rule could become permanent." },
-        { "title": "Libero can serve (since 2021)", "content": "The libero can serve since 2021 in a single rotation per set. Rule varies by federation (some USAV and NFHS tournaments do not allow it — check the competition regulation)." }
+        { "title": "オーバーラップ: レシーブ側のみ適用", "content": "2025年以降、オーバーラップ規則はレシーブ側にのみ適用されます。サーブ側はサーブの瞬間に自由に配置できます。" },
+        { "title": "サーブ時のスクリーン禁止", "content": "サーブ側の選手は、ボールがネットを越えるまでサーブ中に頭上に手を上げることが禁止されました。違反すると直接処罰の対象となります。" },
+        { "title": "トスのダブルコンタクト — 試験運用", "content": "FIVB 2025-2026の試験運用: トス（第2接触）でのダブルコンタクトは、ボールが同じサイドに残っている限り認められます。試験が成功すれば恒久ルールになる可能性があります。" },
+        { "title": "リベロのサーブ（2021年〜）", "content": "リベロは2021年からセットあたり1ローテーションのみサーブが可能です。連盟によって規則は異なります（USAVやNFHSの一部大会では認められていません — 大会規定を確認してください）。" }
       ]
     }
   ]

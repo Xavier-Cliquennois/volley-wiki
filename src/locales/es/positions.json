@@ -1,180 +1,180 @@
 {
   "hub": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "POSITIONS & ROLES",
-    "intro": "In indoor volleyball, positions are numbered <strong>P1 to P6</strong> counter-clockwise as seen from behind your own court. Rotation happens clockwise on every side-out. The number of players and tactical systems differ by format — pick the one that matches your practice.",
+    "kicker": "★ DOCUMENTACIÓN",
+    "title": "POSICIONES Y ROLES",
+    "intro": "En voleibol indoor, las posiciones se numeran de <strong>P1 a P6</strong> en sentido contrario a las agujas del reloj, vistas desde detrás de tu propio campo. La rotación se realiza en el sentido de las agujas del reloj en cada side-out. El número de jugadores y los sistemas tácticos varían según el formato — elige el que se ajuste a tu práctica.",
     "formats": {
       "6v6": {
-        "tagline": "Official FIVB / FFVolley format",
-        "description": "6 players + libero, 9×18 m court, 2.43 m net. Systems 5-1, 4-2, 6-2 with clockwise rotation."
+        "tagline": "Formato oficial FIVB / FFVolley",
+        "description": "6 jugadores + líbero, cancha 9×18 m, red de 2,43 m. Sistemas 5-1, 4-2, 6-2 con rotación en sentido horario."
       },
       "5v5": {
-        "tagline": "Educational hybrid format",
-        "description": "Transition between 4v4 and 6v6. No libero. Pentagon, 3F/2B, 2F/3B configurations depending on the chosen placement."
+        "tagline": "Formato híbrido pedagógico",
+        "description": "Transición entre 4v4 y 6v6. Sin líbero. Configuraciones pentágono, 3D/2Z, 2D/3Z según la colocación elegida."
       },
       "4v4": {
-        "tagline": "Recreation, intramurals, transition",
-        "description": "Reduced court, 2 front + 2 back. Diamond, Box, 3-1 line formations with penetrating setter."
+        "tagline": "Recreativo, intramuros, transición",
+        "description": "Cancha reducida, 2 delanteros + 2 zagueros. Formaciones rombo, cuadrado, línea 3-1 con colocador penetrante."
       }
     }
   },
   "page": {
-    "kickerPrefix": "★ DOCUMENTATION ·",
-    "titlePrefix": "POSITIONS —",
-    "subtitle": "Positions and tactical systems for {{label}} volleyball.",
-    "step1": "1. GAME FORMAT",
-    "step2": "2. TACTICAL SETUP",
-    "courtTitle": "HALF-COURT —",
-    "showAll": "SHOW ALL",
-    "legendTitle": "LEGEND",
+    "kickerPrefix": "★ DOCUMENTACIÓN ·",
+    "titlePrefix": "POSICIONES —",
+    "subtitle": "Posiciones y sistemas tácticos para el voleibol {{label}}.",
+    "step1": "1. FORMATO DE JUEGO",
+    "step2": "2. CONFIGURACIÓN TÁCTICA",
+    "courtTitle": "MEDIA CANCHA —",
+    "showAll": "MOSTRAR TODO",
+    "legendTitle": "LEYENDA",
     "legendItems": [
-      "<strong>Net</strong> — orange band",
-      "<strong>3 m</strong> — dotted line"
+      "<strong>Red</strong> — banda naranja",
+      "<strong>3 m</strong> — línea punteada"
     ],
-    "legendHint": "Click a player for their card",
-    "liberoLabel": "LIBERO",
-    "liberoCardDescription": "Replaces back-row players (P1, P5, P6).",
-    "noLibero": "<strong>No libero</strong> in this configuration.",
-    "cardsTitle": "★ POSITION CARDS",
-    "skillsTitle": "SKILLS",
-    "traitsTitle": "TRAITS",
+    "legendHint": "Haz clic en un jugador para ver su ficha",
+    "liberoLabel": "LÍBERO",
+    "liberoCardDescription": "Sustituye a los zagueros (P1, P5, P6).",
+    "noLibero": "<strong>Sin líbero</strong> en esta configuración.",
+    "cardsTitle": "★ FICHAS DE POSICIÓN",
+    "skillsTitle": "HABILIDADES",
+    "traitsTitle": "RASGOS",
     "crossLink": {
-      "kicker": "GO DEEPER",
-      "html": "Check the <link>Positioning and defense</link> guide to see how this configuration places itself depending on the opposing attack zone."
+      "kicker": "PROFUNDIZA",
+      "html": "Consulta la guía de <link>Colocación y defensa</link> para ver cómo se sitúa esta configuración según la zona de ataque rival."
     }
   },
   "teamIntros": {
     "6": {
-      "tagline": "Official FIVB / FFVolley format: 6 players + libero, 9×18 m court, 3 m attack line, 2.43 m net (M) / 2.24 m (W).",
-      "rules": "Zones numbered counter-clockwise from behind your own court (Z1 = server). Clockwise rotation on side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Rule 7.4: at the moment of serve contact, positions are controlled by the feet (Z2 closer to the net than Z1, etc.). Block of 1, 2 or 3. The libero replaces back-row players without counting as a substitution."
+      "tagline": "Formato oficial FIVB / FFVolley: 6 jugadores + líbero, cancha 9×18 m, línea de ataque a 3 m, red a 2,43 m (M) / 2,24 m (F).",
+      "rules": "Zonas numeradas en sentido contrario a las agujas del reloj desde detrás del propio campo (Z1 = sacador). Rotación horaria en el side-out (Z2→Z1→Z6→Z5→Z4→Z3→Z2). Regla 7.4: en el momento del contacto del saque, las posiciones se controlan por los pies (Z2 más cerca de la red que Z1, etc.). Bloqueo de 1, 2 o 3. El líbero sustituye a los zagueros sin contar como sustitución."
     },
     "5": {
-      "tagline": "Hybrid format, not officially FIVB/FFVb sanctioned. Used in schools, intramurals, fill-ins and as a transition between 4v4 and 6v6.",
-      "rules": "2+3 (penetrating setter recommended) or 3+2 (fixed front setter). No libero. Adapted overlap rule: Z4>Z5, Z3>Z6, Z2>Z1 (3-2 setup) or partial relations (2-3). Defensive recommendations are logical adaptations of 6v6, not a codified regulation."
+      "tagline": "Formato híbrido, no homologado oficialmente por FIVB/FFVb. Se usa en escuelas, intramuros, suplencias y como transición entre 4v4 y 6v6.",
+      "rules": "2+3 (colocador penetrante recomendado) o 3+2 (colocador delantero fijo). Sin líbero. Regla de overlap adaptada: Z4>Z5, Z3>Z6, Z2>Z1 (configuración 3-2) o relaciones parciales (2-3). Las recomendaciones defensivas son adaptaciones lógicas del 6v6, no un reglamento codificado."
     },
     "4": {
-      "tagline": "No official FIVB regulation. Played in US university intramurals, recreational tournaments, educational transition (FFVb, Volleyball Canada).",
-      "rules": "9×9 m court (sometimes reduced), 3 touches, blocking allowed, clockwise rotation. 2 front + 2 back at every rotation. Common formations: diamond (1-2-1 center setter), 3-1 line (penetrating setter), 2-2 box. Some organizers waive overlap faults (Texas A&M)."
+      "tagline": "Sin reglamento oficial FIVB. Se juega en intramuros universitarios de EE. UU., torneos recreativos, transición pedagógica (FFVb, Volleyball Canada).",
+      "rules": "Cancha 9×9 m (a veces reducida), 3 toques, bloqueo permitido, rotación horaria. 2 delanteros + 2 zagueros en cada rotación. Formaciones habituales: rombo (1-2-1 colocador central), línea 3-1 (colocador penetrante), cuadrado 2-2. Algunos organizadores eximen de la falta de overlap (Texas A&M)."
     }
   },
   "commonZones": {
-    "P4": { "name": "Front left" },
-    "P3": { "name": "Front center" },
-    "P2": { "name": "Front right" },
-    "P5": { "name": "Back left" },
-    "P6": { "name": "Back center" },
-    "P1": { "name": "Back right (serve)" },
-    "L":  { "name": "Libero" }
+    "P4": { "name": "Delantero izquierdo" },
+    "P3": { "name": "Delantero centro" },
+    "P2": { "name": "Delantero derecho" },
+    "P5": { "name": "Zaguero izquierdo" },
+    "P6": { "name": "Zaguero centro" },
+    "P1": { "name": "Zaguero derecho (saque)" },
+    "L":  { "name": "Líbero" }
   },
   "configurations": {
     "5-1": {
-      "name": "5-1 System (standard)",
+      "name": "Sistema 5-1 (estándar)",
       "shortName": "5-1",
-      "description": "1 sole setter distributing across all 6 rotations (3 back-row with penetration + 3 front) + 2 outsides + 2 middles + 1 opposite (diagonally opposite the setter) + 1 libero. The most-used system in elite competition.",
+      "description": "1 único colocador que distribuye en las 6 rotaciones (3 desde zaga con penetración + 3 delante) + 2 puntas + 2 centrales + 1 opuesto (en diagonal con el colocador) + 1 líbero. El sistema más utilizado en competición de élite.",
       "positions": {
-        "P4": { "role": "Outside hitter", "description": "Main attack zone. The outside receives most high balls and must be versatile: attack, block, reception. Also the left-side off-blocker against an opponent's Z4 attack.", "skills": ["Attack", "Block", "Reception", "Serve"], "traits": ["Attack power and precision", "Long wingspan", "Versatility", "Endurance"] },
-        "P3": { "role": "Middle blocker", "description": "Net player in the center zone. Blocks opposing attacks and hits quick tempo. On an opposing wing attack, closes the cross-court with a 2-person block.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Tall stature required", "Dominant block", "Tempo 1 and 2", "Limited defensive role at the net"] },
-        "P2": { "role": "Setter", "description": "The conductor. Receives the 2nd touch and runs the offense. In 5-1 plays all rotations: penetrates from P1, P6 or P5 (back), distributes from P4, P3 or P2 (front). Target: between Z2 and Z3, ~1 m from the net.", "skills": ["Hand set", "Reading the block", "Communication", "Penetration"], "traits": ["Maximum technical precision", "360° vision", "Composure", "Leadership"] },
-        "P5": { "role": "Reception / defense", "description": "Reception and defense zone on the left. Often filled by the 2nd outside in the back-row rotation. The libero may replace them.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Reading attacks", "Front line of defense", "Left back coverage", "Often replaced by the libero"] },
-        "P6": { "role": "Center defense", "description": "Defensive pivot at the back. Covers long balls and supports teammates. Often the libero plays here.", "skills": ["Deep defense", "Coverage", "Support", "Forearm pass"], "traits": ["Game reading", "Maximum mobility", "Back communication", "Often replaced by the libero"] },
-        "P1": { "role": "Opposite", "description": "The opposite (\"point hitter\") sits diagonally opposite the setter. Does not participate in reception — the finisher. Spends 3 of 6 rotations in the back (attacks from the back — pipe).", "skills": ["Strong attack", "Serve", "Block", "Back-row attack"], "traits": ["Maximum power", "Back-row attack 3 rotations/6", "Freed from reception", "Aka \"point hitter\""] },
-        "L":  { "role": "Defensive specialist", "description": "Defensive specialist in a contrasting jersey. Replaces the back-row players (P1, P5, P6) without counting as a substitution. FIVB restrictions: no block, no attack above the net, no overhand set from the front zone to a teammate who then attacks above the net.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Maximum agility", "Cannot block / attack above the net", "No overhand set from front → attacker", "Unlimited substitutions", "Allowed to serve (FIVB 2021)"] }
+        "P4": { "role": "Punta", "description": "Zona principal de ataque. La punta recibe la mayoría de los balones altos y debe ser polivalente: ataque, bloqueo, recepción. También es la off-blocker del lado izquierdo ante un ataque rival en Z4.", "skills": ["Ataque", "Bloqueo", "Recepción", "Saque"], "traits": ["Potencia y precisión en el ataque", "Gran envergadura", "Polivalencia", "Resistencia"] },
+        "P3": { "role": "Central", "description": "Jugador de red en la zona central. Bloquea los ataques rivales y golpea en tempo rápido. Ante un ataque rival por la banda, cierra la diagonal con un bloqueo de 2.", "skills": ["Bloqueo", "Ataque rápido", "Cobertura de red"], "traits": ["Se requiere altura", "Bloqueo dominante", "Tempo 1 y 2", "Rol defensivo limitado en la red"] },
+        "P2": { "role": "Colocador", "description": "El director. Recibe el 2º toque y dirige el juego ofensivo. En 5-1 juega todas las rotaciones: penetra desde P1, P6 o P5 (zaga), distribuye desde P4, P3 o P2 (delante). Objetivo: entre Z2 y Z3, a ~1 m de la red.", "skills": ["Colocación de dedos", "Lectura del bloqueo", "Comunicación", "Penetración"], "traits": ["Máxima precisión técnica", "Visión 360°", "Calma", "Liderazgo"] },
+        "P5": { "role": "Recepción / defensa", "description": "Zona de recepción y defensa por la izquierda. A menudo ocupada por la 2ª punta en la rotación de zaga. El líbero puede sustituirla.", "skills": ["Antebrazos", "Recepción", "Defensa", "Lectura"], "traits": ["Lectura de los ataques", "Primera línea de defensa", "Cobertura zaguero izquierdo", "A menudo sustituida por el líbero"] },
+        "P6": { "role": "Defensa central", "description": "Pivote defensivo en la zaga. Cubre los balones largos y apoya a los compañeros. A menudo el líbero juega aquí.", "skills": ["Defensa al fondo", "Cobertura", "Apoyo", "Antebrazos"], "traits": ["Lectura del juego", "Máxima movilidad", "Comunicación trasera", "A menudo sustituido por el líbero"] },
+        "P1": { "role": "Opuesto", "description": "El opuesto (\"pointu\") se sitúa en diagonal con el colocador. No participa en la recepción — es el finalizador. Pasa 3 de 6 rotaciones en zaga (ataca desde la zaga — pipe).", "skills": ["Ataque potente", "Saque", "Bloqueo", "Ataque desde zaga"], "traits": ["Máxima potencia", "Ataque desde zaga 3 rotaciones/6", "Liberado de la recepción", "Llamado también \"pointu\""] },
+        "L":  { "role": "Especialista defensivo", "description": "Especialista defensivo con camiseta contrastada. Sustituye a los zagueros (P1, P5, P6) sin contar como sustitución. Restricciones FIVB: sin bloqueo, sin ataque por encima de la red, sin colocación de dedos desde la zona delantera a un compañero que luego ataque por encima de la red.", "skills": ["Antebrazos", "Recepción", "Defensa", "Lectura"], "traits": ["Máxima agilidad", "No puede bloquear / atacar por encima de la red", "Sin colocación de dedos desde delante → atacante", "Sustituciones ilimitadas", "Autorizado a sacar (FIVB 2021)"] }
       }
     },
     "4-2": {
-      "name": "4-2 System (beginner)",
+      "name": "Sistema 4-2 (principiante)",
       "shortName": "4-2",
-      "description": "2 setters diagonally opposite (P2 and P5) + 2 middles + 2 outsides. The FRONT setter always takes the 2nd touch. No penetration: the simplest system to learn.",
+      "description": "2 colocadores en diagonal opuesta (P2 y P5) + 2 centrales + 2 puntas. El colocador DELANTERO siempre realiza el 2º toque. Sin penetración: el sistema más sencillo de aprender.",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing. Setter's main target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "Setter's #1 target", "W reception"] },
-        "P3": { "role": "Middle", "description": "Front-row middle: block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Central W reception"] },
-        "P2": { "role": "Front setter", "description": "Front setter: takes the 2nd touch. No penetration, no reception. Distributes from the position.", "skills": ["Hand set", "Distribution", "Communication"], "traits": ["Always front when setting", "Out of reception", "No penetration"] },
-        "P5": { "role": "Back setter (off-duty)", "description": "Second setter, diagonally opposite. Plays only as back-row, does NOT take the 2nd touch while back. Receives and defends.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Becomes front setter after rotation", "No setting when back", "Pairs in reception"] },
-        "P6": { "role": "Back middle", "description": "Middle going through back-row positions. Center reception + defense.", "skills": ["Defense", "Forearm pass", "Reception"], "traits": ["Defensive pivot", "Covers the back center"] },
-        "P1": { "role": "Outside / server", "description": "Outside in back-row rotation, serves from P1 then plays reception/defense.", "skills": ["Serve", "Reception", "Defense"], "traits": ["Main server", "W reception"] }
+        "P4": { "role": "Punta", "description": "Banda izquierda. Objetivo principal del colocador en zona 4.", "skills": ["Ataque", "Bloqueo", "Recepción"], "traits": ["Polivalencia", "Objetivo nº1 del colocador", "Recepción en W"] },
+        "P3": { "role": "Central", "description": "Central delantero: bloqueo + ataque rápido cuando la recepción lo permite.", "skills": ["Bloqueo", "Ataque rápido"], "traits": ["Bloqueo dominante", "Recepción central en W"] },
+        "P2": { "role": "Colocador delantero", "description": "Colocador delantero: realiza el 2º toque. Sin penetración, sin recepción. Distribuye desde su posición.", "skills": ["Colocación de dedos", "Distribución", "Comunicación"], "traits": ["Siempre delante al colocar", "Fuera de recepción", "Sin penetración"] },
+        "P5": { "role": "Colocador trasero (en reposo)", "description": "Segundo colocador, en diagonal opuesta. Juega solo como zaguero, NO realiza el 2º toque mientras está en zaga. Recibe y defiende.", "skills": ["Recepción", "Defensa", "Antebrazos"], "traits": ["Se convierte en colocador delantero tras la rotación", "Sin colocación cuando está en zaga", "Pareja en la recepción"] },
+        "P6": { "role": "Central zaguero", "description": "Central que pasa por las posiciones traseras. Recepción central + defensa.", "skills": ["Defensa", "Antebrazos", "Recepción"], "traits": ["Pivote defensivo", "Cubre el centro de la zaga"] },
+        "P1": { "role": "Punta / sacador", "description": "Punta en la rotación zaguera, saca desde P1 y luego juega recepción/defensa.", "skills": ["Saque", "Recepción", "Defensa"], "traits": ["Sacador principal", "Recepción en W"] }
       }
     },
     "6-2": {
-      "name": "6-2 System (advanced)",
+      "name": "Sistema 6-2 (avanzado)",
       "shortName": "6-2",
-      "description": "2 versatile setters: they ONLY set from the back row (with penetration), and become right-side attackers when rotating to the front. + 2 middles + 2 outsides + 1 libero. Pro: always 3 front-row attackers. Con: diluted setter-hitter chemistry, and in the double-sub variant rapidly burns through the 6 substitutions per set (FIVB Rule 15.6).",
+      "description": "2 colocadores polivalentes: solo colocan desde la zaga (con penetración) y se convierten en atacantes por la derecha cuando rotan al frente. + 2 centrales + 2 puntas + 1 líbero. Ventaja: siempre 3 atacantes delante. Desventaja: química colocador-atacante diluida y, en la variante doble cambio, agota rápido las 6 sustituciones por set (Regla 15.6 FIVB).",
       "positions": {
-        "P4": { "role": "Outside", "description": "Left wing, main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "3-person reception"] },
-        "P3": { "role": "Middle", "description": "Front middle: block + tempo 1.", "skills": ["Block", "Quick attack"], "traits": ["Dominant block", "Wing switching"] },
-        "P2": { "role": "Setter-attacker", "description": "In 6-2 the front-row player (setter or not) attacks. When the setter is front, they become a zone-2 attacker. The back setter distributes.", "skills": ["Zone 2 attack", "Block", "Serve"], "traits": ["Versatile set + attack", "Attacks zone 2", "3 hitters in front always"] },
-        "P5": { "role": "Outside (back)", "description": "Wing in back-row rotation. Reception and defense.", "skills": ["Reception", "Forearm pass", "Defense"], "traits": ["3-person reception", "Often replaced by the libero"] },
-        "P6": { "role": "Back middle", "description": "Middle in back-row rotation, often replaced by the libero for reception and defense.", "skills": ["Defense", "Forearm pass"], "traits": ["Often replaced by the libero", "Defensive pivot"] },
-        "P1": { "role": "Penetrating setter", "description": "Back-row setter who penetrates as soon as the serve is hit toward zone 2-3 to distribute. Facing them, the 2nd setter at P2 attacks.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1 → zone 2/3", "Distributes", "Rotation alternates with the 2nd setter"] },
-        "L":  { "role": "Libero", "description": "Standard libero, replaces middles in the back-row rotation.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Replaces P5/P6", "Contrasting jersey"] }
+        "P4": { "role": "Punta", "description": "Banda izquierda, atacante principal en zona 4.", "skills": ["Ataque", "Bloqueo", "Recepción"], "traits": ["Polivalencia", "Recepción a 3"] },
+        "P3": { "role": "Central", "description": "Central delantero: bloqueo + tempo 1.", "skills": ["Bloqueo", "Ataque rápido"], "traits": ["Bloqueo dominante", "Switching de bandas"] },
+        "P2": { "role": "Colocador-atacante", "description": "En 6-2 el jugador delantero (colocador o no) ataca. Cuando el colocador está delante, se convierte en atacante de zona 2. El colocador trasero distribuye.", "skills": ["Ataque en zona 2", "Bloqueo", "Saque"], "traits": ["Polivalencia colocación + ataque", "Ataca en zona 2", "Siempre 3 atacantes delante"] },
+        "P5": { "role": "Punta (zaga)", "description": "Banda en la rotación zaguera. Recepción y defensa.", "skills": ["Recepción", "Antebrazos", "Defensa"], "traits": ["Recepción a 3", "A menudo sustituida por el líbero"] },
+        "P6": { "role": "Central zaguero", "description": "Central en la rotación zaguera, a menudo sustituido por el líbero para la recepción y la defensa.", "skills": ["Defensa", "Antebrazos"], "traits": ["A menudo sustituido por el líbero", "Pivote defensivo"] },
+        "P1": { "role": "Colocador penetrante", "description": "Colocador zaguero que penetra en cuanto el saque se golpea hacia la zona 2-3 para distribuir. Frente a él, el 2º colocador en P2 ataca.", "skills": ["Penetración", "Colocación de dedos", "Saque"], "traits": ["Penetra desde P1 → zona 2/3", "Distribuye", "La rotación alterna con el 2º colocador"] },
+        "L":  { "role": "Líbero", "description": "Líbero estándar, sustituye a los centrales en la rotación zaguera.", "skills": ["Antebrazos", "Recepción", "Defensa"], "traits": ["Sustituye a P5/P6", "Camiseta contrastada"] }
       }
     },
     "pentagon": {
-      "name": "Pentagon (1-2-2)",
-      "shortName": "Pentagon",
-      "description": "1 player at the center net, 2 wings mid-court, 2 back. Even court coverage — good in beginner and recreational play. Typical defense: 1-2-2 system (adapted man-up, 1 blocker + 2 coverers + 2 deep defenders).",
+      "name": "Pentágono (1-2-2)",
+      "shortName": "Pentágono",
+      "description": "1 jugador en el centro de la red, 2 alas a media cancha, 2 zagueros. Cobertura uniforme de la cancha — buena en juego principiante y recreativo. Defensa típica: sistema 1-2-2 (man-up adaptado, 1 bloqueador + 2 cubridores + 2 defensores al fondo).",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the setter (if fixed); otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Game hub", "Central block", "Partial reception exemption"] },
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing mid-court: receives and attacks from zone 4.", "skills": ["Attack", "Reception", "Block"], "traits": ["Versatility", "Medium approach", "Short cross-court coverage"] },
-        "P2": { "name": "Right wing", "role": "Outside / opposite", "description": "Right wing. If the setter plays center, this is the zone-2 attacker.", "skills": ["Line attack", "Block", "Serve"], "traits": ["Long cross-court attack", "2-person block with middle", "Long cross-court coverage"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: covers the left defense, often the best passer.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "~30 m² to cover", "Reads the long cross"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: covers right defense + serves.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Main server", "Line coverage", "Zone-2 attack support"] }
+        "P3": { "name": "Centro de red", "role": "Colocador o central", "description": "En el centro de la red. A menudo el colocador (si es fijo); si no, el bloqueador principal.", "skills": ["Colocación", "Bloqueo", "Comunicación"], "traits": ["Eje del juego", "Bloqueo central", "Exención parcial de recepción"] },
+        "P4": { "name": "Ala izquierda", "role": "Punta", "description": "Ala izquierda a media cancha: recibe y ataca desde zona 4.", "skills": ["Ataque", "Recepción", "Bloqueo"], "traits": ["Polivalencia", "Aproximación media", "Cobertura diagonal corta"] },
+        "P2": { "name": "Ala derecha", "role": "Punta / opuesto", "description": "Ala derecha. Si el colocador juega en el centro, es el atacante de zona 2.", "skills": ["Ataque en paralela", "Bloqueo", "Saque"], "traits": ["Ataque en diagonal larga", "Bloqueo de 2 con el central", "Cobertura diagonal larga"] },
+        "P5": { "name": "Zaguero izquierdo", "role": "Recepción / defensa", "description": "Zaguero izquierdo: cubre la defensa por la izquierda, a menudo el mejor receptor.", "skills": ["Antebrazos", "Recepción", "Defensa"], "traits": ["Pilar defensivo", "~30 m² que cubrir", "Lee la diagonal larga"] },
+        "P1": { "name": "Zaguero derecho", "role": "Defensa / saque", "description": "Zaguero derecho: cubre la defensa derecha + saca.", "skills": ["Saque", "Defensa", "Antebrazos"], "traits": ["Sacador principal", "Cobertura paralela", "Apoyo al ataque de zona 2"] }
       }
     },
     "3F-2B": {
-      "name": "3 front / 2 back",
-      "shortName": "3F/2B",
-      "description": "3 attackers at the net (P4, P3, P2 with setter at P2) + 2 back (P5, P1). Offensive setup: 2- or 3-person block possible. Typical defense: 2-1-2 system (2 blockers + 1 off-blocker + 2 deep defenders). Downside: 30+ m² per back-row defender.",
+      "name": "3 delante / 2 zaga",
+      "shortName": "3D/2Z",
+      "description": "3 atacantes en la red (P4, P3, P2 con colocador en P2) + 2 zagueros (P5, P1). Configuración ofensiva: bloqueo de 2 o 3 posible. Defensa típica: sistema 2-1-2 (2 bloqueadores + 1 off-blocker + 2 defensores al fondo). Inconveniente: más de 30 m² por zaguero defensor.",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main setter target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "2-person block with middle", "Setter's favorite target"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 1 preserved", "Switching possible"] },
-        "P2": { "name": "Front setter", "role": "Setter", "description": "Fixed front setter. No penetration. Distributes from the net; can attack in 2 if the ball comes high on the right side.", "skills": ["Hand set", "Distribution", "Right-side block"], "traits": ["Fixed front", "No penetration", "Occasional zone-2 attack"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court defense.", "skills": ["Forearm pass", "Defense", "Reception"], "traits": ["Best passer ideally", "Long cross-court", "Coverage ~30 m²"] },
-        "P1": { "name": "Back right", "role": "Serve / defense", "description": "Back right: serves then defends the line and short cross.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + corridor", "Zone-2 attack support"] }
+        "P4": { "name": "Ala izquierda", "role": "Punta", "description": "Ala izquierda en la red. Objetivo principal del colocador en zona 4.", "skills": ["Ataque", "Bloqueo", "Recepción"], "traits": ["Polivalencia", "Bloqueo de 2 con el central", "Objetivo predilecto del colocador"] },
+        "P3": { "name": "Central", "role": "Central", "description": "Central en la red. Bloqueo + ataque rápido cuando la recepción lo permite.", "skills": ["Bloqueo", "Ataque rápido"], "traits": ["Bloqueo central", "Tempo 1 conservado", "Switching posible"] },
+        "P2": { "name": "Colocador delantero", "role": "Colocador", "description": "Colocador delantero fijo. Sin penetración. Distribuye desde la red; puede atacar en 2 si el balón llega alto por el lado derecho.", "skills": ["Colocación de dedos", "Distribución", "Bloqueo lado derecho"], "traits": ["Delantero fijo", "Sin penetración", "Ataque ocasional en zona 2"] },
+        "P5": { "name": "Zaguero izquierdo", "role": "Recepción / defensa", "description": "Zaguero izquierdo: recepción por la izquierda + defensa de diagonal larga.", "skills": ["Antebrazos", "Defensa", "Recepción"], "traits": ["Idealmente el mejor receptor", "Diagonal larga", "Cobertura ~30 m²"] },
+        "P1": { "name": "Zaguero derecho", "role": "Saque / defensa", "description": "Zaguero derecho: saca y luego defiende la paralela y la diagonal corta.", "skills": ["Saque", "Defensa", "Antebrazos"], "traits": ["Sacador", "Paralela + pasillo", "Apoyo al ataque de zona 2"] }
       }
     },
     "2F-3B": {
-      "name": "2 front / 3 back",
-      "shortName": "2F/3B",
-      "description": "2 players at the net + 3 back including the penetrating setter (P1). The most defensively stable setup, closest to 6v6 5-1. Typical defense: 1-1-3 system (1 blocker + 1 off-blocker + 3 deep defenders). Recommended to prepare the transition to 6v6.",
+      "name": "2 delante / 3 zaga",
+      "shortName": "2D/3Z",
+      "description": "2 jugadores en la red + 3 zagueros incluido el colocador penetrante (P1). La configuración más estable defensivamente, cercana al 5-1 de 6v6. Defensa típica: sistema 1-1-3 (1 bloqueador + 1 off-blocker + 3 defensores al fondo). Recomendada para preparar la transición al 6v6.",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Setter's #1 target", "2-person block", "Versatility"] },
-        "P3": { "name": "Middle", "role": "Middle / opposite", "description": "Versatile middle: central block + attack in zone 3 or 2 depending on the set.", "skills": ["Block", "Quick attack", "Net coverage"], "traits": ["Central block", "Frequent switch to zone 2", "No pure P2 attacker"] },
-        "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "3-person reception with P6"] },
-        "P6": { "name": "Back center", "role": "Defensive pillar", "description": "Back center: covers the whole back middle, reads long balls.", "skills": ["Deep defense", "Forearm pass", "Coverage"], "traits": ["Maximum mobility", "Recovers pipes and long balls", "Central reception"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Back-row setter at P1 who penetrates to zone 2-3 as soon as the serve is hit. Serves then distributes.", "skills": ["Penetration", "Hand set", "Serve"], "traits": ["Penetrates from P1", "Distributes with 2 attackers in front", "Short cover after the set"] }
+        "P4": { "name": "Ala izquierda", "role": "Punta", "description": "Ala izquierda en la red. Atacante principal en zona 4.", "skills": ["Ataque", "Bloqueo", "Recepción"], "traits": ["Objetivo nº1 del colocador", "Bloqueo de 2", "Polivalencia"] },
+        "P3": { "name": "Central", "role": "Central / opuesto", "description": "Central polivalente: bloqueo central + ataque en zona 3 o 2 según la colocación.", "skills": ["Bloqueo", "Ataque rápido", "Cobertura de red"], "traits": ["Bloqueo central", "Switch frecuente a zona 2", "Sin atacante puro en P2"] },
+        "P5": { "name": "Zaguero izquierdo", "role": "Recepción / defensa", "description": "Zaguero izquierdo: recepción por la izquierda + diagonal larga.", "skills": ["Antebrazos", "Recepción", "Defensa"], "traits": ["Pilar defensivo", "Recepción a 3 con P6"] },
+        "P6": { "name": "Zaguero centro", "role": "Pilar defensivo", "description": "Zaguero centro: cubre todo el centro trasero, lee los balones largos.", "skills": ["Defensa al fondo", "Antebrazos", "Cobertura"], "traits": ["Máxima movilidad", "Recupera pipes y balones largos", "Recepción central"] },
+        "P1": { "name": "Colocador penetrante", "role": "Colocador", "description": "Colocador zaguero en P1 que penetra a la zona 2-3 en cuanto el saque se golpea. Saca y luego distribuye.", "skills": ["Penetración", "Colocación de dedos", "Saque"], "traits": ["Penetra desde P1", "Distribuye con 2 atacantes delante", "Cobertura corta tras la colocación"] }
       }
     },
     "losange": {
-      "name": "Diamond (1-2-1)",
-      "shortName": "Diamond",
-      "description": "\"Diamond\" formation: the MOST USED in indoor 4v4. 1 player at the center net (P3, often the setter), 2 wings mid-court (P4 and P2 around the 3 m line), 1 back. Typical defense: A-system (1 blocker + 3 defenders). Most vulnerable zone: long cross-court (lack of bodies in the back).",
+      "name": "Rombo (1-2-1)",
+      "shortName": "Rombo",
+      "description": "Formación \"rombo\": la MÁS USADA en 4v4 indoor. 1 jugador en el centro de la red (P3, a menudo el colocador), 2 alas a media cancha (P4 y P2 en torno a la línea de 3 m), 1 zaguero. Defensa típica: sistema A (1 bloqueador + 3 defensores). Zona más vulnerable: diagonal larga (falta de gente en la zaga).",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the SETTER (\"center setter\" variant) distributing to either side. Otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Diamond's game hub", "Standard 1-person block", "Distributes without penetration"] },
-        "P4": { "name": "Left wing", "role": "Main attacker", "description": "Left wing, mid-court (around the 3 m line). Setter's preferred target.", "skills": ["Attack", "Reception", "Coverage"], "traits": ["Short approach", "Left-side reception", "Versatility (~35 m²)"] },
-        "P2": { "name": "Right wing", "role": "Secondary attacker", "description": "Right wing, mid-court. Attacks in zone 2 if the setter distributes right.", "skills": ["Line attack", "Reception", "Serve"], "traits": ["Long cross-court attack", "Right-side reception", "Short right coverage"] },
-        "P1": { "name": "Sole back", "role": "Main defender", "description": "No libero allowed: this is the team's best back defender. Covers the entire back alone.", "skills": ["Reception", "Deep defense", "Reading"], "traits": ["~40 m² alone", "Anticipation is the #1 skill", "Must know how to set the 2nd touch"] }
+        "P3": { "name": "Centro de red", "role": "Colocador o central", "description": "En el centro de la red. A menudo el COLOCADOR (variante \"colocador central\") que distribuye a uno u otro lado. Si no, el bloqueador principal.", "skills": ["Colocación", "Bloqueo", "Comunicación"], "traits": ["Eje de juego del rombo", "Bloqueo a 1 estándar", "Distribuye sin penetración"] },
+        "P4": { "name": "Ala izquierda", "role": "Atacante principal", "description": "Ala izquierda, media cancha (en torno a la línea de 3 m). Objetivo preferido del colocador.", "skills": ["Ataque", "Recepción", "Cobertura"], "traits": ["Aproximación corta", "Recepción lado izquierdo", "Polivalencia (~35 m²)"] },
+        "P2": { "name": "Ala derecha", "role": "Atacante secundario", "description": "Ala derecha, media cancha. Ataca en zona 2 si el colocador distribuye a la derecha.", "skills": ["Ataque en paralela", "Recepción", "Saque"], "traits": ["Ataque en diagonal larga", "Recepción lado derecho", "Cobertura derecha corta"] },
+        "P1": { "name": "Zaguero único", "role": "Defensor principal", "description": "Sin líbero permitido: es el mejor defensor zaguero del equipo. Cubre toda la zaga él solo.", "skills": ["Recepción", "Defensa al fondo", "Lectura"], "traits": ["~40 m² él solo", "La anticipación es la habilidad nº1", "Debe saber colocar el 2º toque"] }
       }
     },
     "carre": {
-      "name": "Box (2-2)",
-      "shortName": "Box",
-      "description": "\"Box\" 2-2 formation: 2 players at the net (P4 and P2) + 2 back (P5 and P1). Enables 2-person blocking (B system) — but only useful against very powerful hitters with no finesse, since it leaves only 2 deep defenders (tip uncovered). More often played in A system with a single blocker.",
+      "name": "Cuadrado (2-2)",
+      "shortName": "Cuadrado",
+      "description": "Formación \"cuadrado\" 2-2: 2 jugadores en la red (P4 y P2) + 2 zagueros (P5 y P1). Permite un bloqueo de 2 (sistema B) — pero solo útil ante atacantes muy potentes y sin sutileza, ya que deja solo 2 defensores al fondo (finta descubierta). Se juega más a menudo en sistema A con un solo bloqueador.",
       "positions": {
-        "P4": { "name": "Left wing (net)", "role": "Blocker / attacker", "description": "At the net on the left. Block + attack in zone 4.", "skills": ["Block", "Attack", "Net coverage"], "traits": ["2-person block with right wing", "Possible switch with the setter", "No traditional tempo 1"] },
-        "P2": { "name": "Setter-attacker (net)", "role": "Front setter", "description": "Setter-attacker at the net on the right. Always takes the 2nd touch (no penetration in the box).", "skills": ["Set", "Block", "Zone 2 attack"], "traits": ["Always front", "No penetration", "2-person block with the left wing"] },
-        "P5": { "name": "Back left", "role": "Defense / reception", "description": "Back left: reception on the left + long cross-court.", "skills": ["Reception", "Defense", "Forearm pass"], "traits": ["Defensive pillar", "Coverage ~35 m²", "Zone-4 attack support"] },
-        "P1": { "name": "Back right", "role": "Defense / serve", "description": "Back right: serves then defends the line and long cross-court.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + cross-court", "Zone-2 attack support"] }
+        "P4": { "name": "Ala izquierda (red)", "role": "Bloqueador / atacante", "description": "En la red por la izquierda. Bloqueo + ataque en zona 4.", "skills": ["Bloqueo", "Ataque", "Cobertura de red"], "traits": ["Bloqueo de 2 con el ala derecha", "Switch posible con el colocador", "Sin tempo 1 tradicional"] },
+        "P2": { "name": "Colocador-atacante (red)", "role": "Colocador delantero", "description": "Colocador-atacante en la red por la derecha. Siempre realiza el 2º toque (sin penetración en el cuadrado).", "skills": ["Colocación", "Bloqueo", "Ataque en zona 2"], "traits": ["Siempre delante", "Sin penetración", "Bloqueo de 2 con el ala izquierda"] },
+        "P5": { "name": "Zaguero izquierdo", "role": "Defensa / recepción", "description": "Zaguero izquierdo: recepción por la izquierda + diagonal larga.", "skills": ["Recepción", "Defensa", "Antebrazos"], "traits": ["Pilar defensivo", "Cobertura ~35 m²", "Apoyo al ataque de zona 4"] },
+        "P1": { "name": "Zaguero derecho", "role": "Defensa / saque", "description": "Zaguero derecho: saca y luego defiende la paralela y la diagonal larga.", "skills": ["Saque", "Defensa", "Antebrazos"], "traits": ["Sacador", "Paralela + diagonal", "Apoyo al ataque de zona 2"] }
       }
     },
     "3-1": {
-      "name": "3-1 line (penetrating setter)",
+      "name": "Línea 3-1 (colocador penetrante)",
       "shortName": "3-1",
-      "description": "\"3-1 line\" formation: sole setter at P1 (back) who penetrates to zone 2 as soon as the ball is hit. Frees 3 attackers in front — a simplified equivalent of 6v6 5-1. Requires very clean reception and a fast setter. Defense: A system possible (1 central blocker + 3 defenders).",
+      "description": "Formación \"línea 3-1\": colocador único en P1 (zaga) que penetra a la zona 2 en cuanto se golpea el balón. Libera 3 atacantes delante — equivalente simplificado del 5-1 de 6v6. Requiere una recepción muy limpia y un colocador rápido. Defensa: sistema A posible (1 bloqueador central + 3 defensores).",
       "positions": {
-        "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4 + reception.", "skills": ["Attack", "Reception", "Block"], "traits": ["#1 target", "3-person reception", "Zone-4 approach"] },
-        "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + attack in zone 3 if the set is tight.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 2 possible", "No reception"] },
-        "P2": { "name": "Right wing", "role": "Outside", "description": "Right wing. Attacks in zone 2 when the setter distributes right.", "skills": ["Attack", "Block", "Reception"], "traits": ["Zone-2 attack", "3-person reception", "2-person block with middle"] },
-        "P1": { "name": "Penetrating setter", "role": "Setter", "description": "Sole setter at P1. Serves then penetrates to zone 2 to distribute.", "skills": ["Penetration", "Set", "Serve"], "traits": ["Penetrates from P1", "3 attackers in front always", "Short cover after the set"] }
+        "P4": { "name": "Ala izquierda", "role": "Punta", "description": "Ala izquierda en la red. Atacante principal en zona 4 + recepción.", "skills": ["Ataque", "Recepción", "Bloqueo"], "traits": ["Objetivo nº1", "Recepción a 3", "Aproximación de zona 4"] },
+        "P3": { "name": "Central", "role": "Central", "description": "Central en la red. Bloqueo + ataque en zona 3 si la colocación está pegada.", "skills": ["Bloqueo", "Ataque rápido"], "traits": ["Bloqueo central", "Tempo 2 posible", "Sin recepción"] },
+        "P2": { "name": "Ala derecha", "role": "Punta", "description": "Ala derecha. Ataca en zona 2 cuando el colocador distribuye a la derecha.", "skills": ["Ataque", "Bloqueo", "Recepción"], "traits": ["Ataque en zona 2", "Recepción a 3", "Bloqueo de 2 con el central"] },
+        "P1": { "name": "Colocador penetrante", "role": "Colocador", "description": "Colocador único en P1. Saca y luego penetra a la zona 2 para distribuir.", "skills": ["Penetración", "Colocación", "Saque"], "traits": ["Penetra desde P1", "Siempre 3 atacantes delante", "Cobertura corta tras la colocación"] }
       }
     }
   }

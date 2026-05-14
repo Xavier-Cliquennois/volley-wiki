@@ -1,63 +1,63 @@
 {
   "header": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "GUIDES",
-    "subtitle": "Detailed technical and tactical guides to improve at volleyball."
+    "kicker": "★ ドキュメント",
+    "title": "ガイド",
+    "subtitle": "バレーボール上達のための詳細な技術・戦術ガイド。"
   },
   "ticketPrefix": "N°",
   "list": {
     "service": {
-      "title": "Serving guide",
-      "subtitle": "Underhand, float, jump float and jump topspin",
-      "category": "Technique",
-      "description": "The 4 serve types with biomechanics, steps, common mistakes, drills and tactical zones.",
-      "readingTime": "~15 min",
-      "level": "Beginner"
+      "title": "サーブガイド",
+      "subtitle": "アンダーハンド、フローター、ジャンプフローター、ジャンプサーブ",
+      "category": "技術",
+      "description": "4種類のサーブをバイオメカニクス、動作手順、よくあるミス、ドリル、戦術ゾーンの観点から解説します。",
+      "readingTime": "約15分",
+      "level": "初級"
     },
     "reception": {
-      "title": "Reception guide",
-      "subtitle": "Bump, platform, systems and reading the serve",
-      "category": "Technique",
-      "description": "Platform technique, freeze on contact, movement, W/U systems and reading the server.",
-      "readingTime": "~15 min",
-      "level": "Beginner"
+      "title": "レセプションガイド",
+      "subtitle": "アンダーパス、面、システム、サーブを読む",
+      "category": "技術",
+      "description": "面の技術、ミート時のフリーズ、移動、W/Uシステム、サーバーを読む方法を解説します。",
+      "readingTime": "約15分",
+      "level": "初級"
     },
     "attaque": {
-      "title": "Attack guide",
-      "subtitle": "Approach, timing, shots and positions",
-      "category": "Technique",
-      "description": "The 5 phases of the spike, 3-4 step approach, timing based on the set, special shots and errors.",
-      "readingTime": "~15 min",
-      "level": "Intermediate"
+      "title": "アタックガイド",
+      "subtitle": "助走、タイミング、ショット、ポジション",
+      "category": "技術",
+      "description": "スパイクの5段階、3〜4歩助走、トスに応じたタイミング、特殊ショット、ミスについて解説します。",
+      "readingTime": "約15分",
+      "level": "中級"
     },
     "contre": {
-      "title": "Blocking guide",
-      "subtitle": "Timing, block types and reading the game",
-      "category": "Technique",
-      "description": "Timing, block types, elite visual sequence, read vs commit blocking and drills.",
-      "readingTime": "~10 min",
-      "level": "Intermediate"
+      "title": "ブロックガイド",
+      "subtitle": "タイミング、ブロックの種類、ゲームを読む",
+      "category": "技術",
+      "description": "タイミング、ブロックの種類、トップ選手の視線の流れ、リード vs コミットブロック、ドリルを紹介。",
+      "readingTime": "約10分",
+      "level": "中級"
     },
     "positionnement-defense": {
-      "title": "Defensive positioning",
-      "subtitle": "Place yourself based on position and situation",
-      "category": "Tactics",
-      "description": "Zone responsibilities, positioning by opposing attack zone, systems and communication.",
-      "readingTime": "~20 min",
-      "level": "Intermediate"
+      "title": "守備ポジショニング",
+      "subtitle": "ポジションと状況に応じた配置",
+      "category": "戦術",
+      "description": "ゾーン別の責任、相手の攻撃ゾーンに応じた配置、システム、コミュニケーションを解説します。",
+      "readingTime": "約20分",
+      "level": "中級"
     }
   },
   "detail": {
-    "backLink": "← GUIDES",
-    "sectionTitle": "★ GUIDE CONTENT ★",
-    "notFound": "Guide not found."
+    "backLink": "← ガイド一覧",
+    "sectionTitle": "★ ガイドの内容 ★",
+    "notFound": "ガイドが見つかりません。"
   },
   "defenseHub": {
-    "backLink": "← GUIDES",
-    "description": "Defensive positioning changes with the number of players on the court. Choose your format to access the full guide: zone responsibilities, systems (A/B, man-up, 1-2-2…) and adaptation by opposing attack zone.",
-    "cardDescription": "Defense adapted to the {{size}} format, zones, systems and detailed placements."
+    "backLink": "← ガイド一覧",
+    "description": "守備ポジショニングはコート上の人数によって変化します。形式を選んで、ゾーン別の責任、システム（A/B、マンナップ、1-2-2など）、相手の攻撃ゾーンに応じた配置を確認しましょう。",
+    "cardDescription": "{{size}}形式に対応した守備、ゾーン、システム、詳細な配置を解説します。"
   },
   "defenseSized": {
-    "backLink": "← ALL FORMATS"
+    "backLink": "← すべての形式"
   }
 }

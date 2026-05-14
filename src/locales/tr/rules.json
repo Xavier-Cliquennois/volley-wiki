@@ -1,75 +1,75 @@
 {
   "header": {
-    "kicker": "★ DOCUMENTATION",
-    "title": "VOLLEYBALL RULES",
-    "subtitle": "Simplified FIVB regulation — the essential rules to understand and play."
+    "kicker": "★ DOKÜMANTASYON",
+    "title": "VOLEYBOL KURALLARI",
+    "subtitle": "Sadeleştirilmiş FIVB kuralları — anlamak ve oynamak için temel kurallar."
   },
-  "warning": "This page is an educational summary. For official competitions, refer to the <strong>official FIVB regulation</strong>.",
-  "quickFaultsTitle": "COMMON FAULTS",
+  "warning": "Bu sayfa eğitim amaçlı bir özettir. Resmi yarışmalar için <strong>resmi FIVB kurallarına</strong> başvurun.",
+  "quickFaultsTitle": "YAYGIN HATALAR",
   "quickFaults": [
-    "Touching the net during play",
-    "More than 3 team touches",
-    "Double contact by the same player",
-    "Held / carried ball",
-    "Back-row attack above the net from the front zone",
-    "Foot fault on the serve (stepping on the line)",
-    "Serving before the whistle",
-    "Position fault at rotation"
+    "Oyun sırasında fileye dokunmak",
+    "3'ten fazla takım dokunuşu",
+    "Aynı oyuncudan çift temas",
+    "Tutulan / taşınan top",
+    "Ön bölgeden file üstünde arka saha saldırısı",
+    "Serviste ayak hatası (çizgiye basmak)",
+    "Düdükten önce servis atmak",
+    "Rotasyonda pozisyon hatası"
   ],
   "sections": [
     {
       "id": "basics",
-      "title": "The essentials",
+      "title": "Temel bilgiler",
       "num": "01",
       "rules": [
-        { "title": "Match format", "content": "A match is played as best of 5 sets. Each set is played to 25 points with at least a 2-point lead. If a 5th set is needed, it is played to 15 points." },
-        { "title": "Teams", "content": "6 players per side on court. A team can have up to 6 substitutes and one libero. Maximum 6 regular substitutions per set (libero not counted)." },
-        { "title": "Serve", "content": "The serve is performed from the service zone behind the back line. The ball must cross the net into the opponent's court. The server has 8 seconds after the whistle to strike. A serve that touches the net and falls into the opponent's court is GOOD (let serve legal since 2001)." },
-        { "title": "Point on every rally", "content": "Since 1999 (rally point system), a point is scored on every rally, regardless of which team served. The scoring team gets the serve." }
+        { "title": "Maç formatı", "content": "Bir maç 5 setlik en iyi sistemiyle oynanır. Her set en az 2 sayı farkıyla 25 sayıya kadar oynanır. 5. set gerekirse 15 sayıya kadar oynanır." },
+        { "title": "Takımlar", "content": "Sahada her tarafta 6 oyuncu. Bir takım en fazla 6 yedek ve bir liberoya sahip olabilir. Set başına maksimum 6 normal oyuncu değişikliği (libero sayılmaz)." },
+        { "title": "Servis", "content": "Servis, dip çizginin arkasındaki servis bölgesinden atılır. Top fileyi geçerek rakip sahaya gitmelidir. Servis atan, düdükten sonra topa vurmak için 8 saniyeye sahiptir. Fileye değip rakip sahaya düşen servis İYİDİR (let servis 2001'den beri yasaldır)." },
+        { "title": "Her rallide sayı", "content": "1999'dan beri (rally point sistemi), hangi takım servis atmış olursa olsun her rallide sayı alınır. Sayıyı alan takım servisi kazanır." }
       ]
     },
     {
       "id": "touches",
-      "title": "Contacts and faults",
+      "title": "Temaslar ve hatalar",
       "num": "02",
       "rules": [
-        { "title": "Maximum 3 touches", "content": "A team has up to 3 touches to return the ball. The block does not count as a team touch — the team still has 3 touches after a block." },
-        { "title": "Double contact", "content": "A player cannot contact the ball twice in a row, except on the first team contact (reception/dig). Exception for the block. New 2025-2026 FIVB trial: double contact allowed on the set (2nd touch) as long as the ball stays on the same side." },
-        { "title": "Net fault", "content": "Touching the net during the action of playing the ball is a fault. Touching outside the action or outside the antennae is not a fault. Partially crossing under the net is allowed if it does not interfere with the opponent. FIVB 2025 goal: \"promote flowing play\"." },
-        { "title": "Ball on the lines", "content": "A ball that lands on the line is \"in\". A ball that crosses outside the antennae or outside the crossing space is out." }
+        { "title": "Maksimum 3 dokunuş", "content": "Bir takım topu geri göndermek için en fazla 3 dokunuşa sahiptir. Blok takım dokunuşu olarak sayılmaz — bloktan sonra takımın hâlâ 3 dokunuşu vardır." },
+        { "title": "Çift temas", "content": "Bir oyuncu üst üste iki kez topa temas edemez, ilk takım teması (karşılama/plonjon) hariç. Blok için istisna. Yeni 2025-2026 FIVB denemesi: pasta (2. dokunuş) top aynı tarafta kaldığı sürece çift temasa izin verilir." },
+        { "title": "File hatası", "content": "Top oynama aksiyonu sırasında fileye dokunmak hatadır. Aksiyon dışında veya antenlerin dışında dokunma hata değildir. Rakibe engel olmadığı sürece filenin altından kısmen geçmeye izin verilir. FIVB 2025 hedefi: \"akıcı oyunu teşvik etmek\"." },
+        { "title": "Çizgilerdeki top", "content": "Çizgiye düşen top \"içeri\"dir. Antenlerin dışından veya geçiş alanı dışından geçen top dışarıdır." }
       ]
     },
     {
       "id": "positions",
-      "title": "Rotation and positions",
+      "title": "Rotasyon ve pozisyonlar",
       "num": "03",
       "rules": [
-        { "title": "Mandatory rotation", "content": "On every side-out, the team winning the serve rotates clockwise: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. The player going P2→P1 becomes the new server." },
-        { "title": "Position fault", "content": "At the moment the server strikes, players must respect their rotation order (no diagonal overlap). Fault = point + serve to the opponent. 2025 update: the overlap rule now only applies to the RECEIVING team — the serving team can position freely." },
-        { "title": "3-meter rule", "content": "Back-row players (P1, P5, P6) cannot attack above the net from the front zone. They can jump from behind the 3 m line and land in the front zone — this is legal." },
-        { "title": "Libero", "content": "The libero wears a contrasting jersey and only plays back-row (P1, P5, P6). Unlimited uncounted substitutions. Cannot block or attack above the net. May serve since 2021 in a single rotation per set. May be captain since 2021. Restriction: if the libero hand-sets from the front zone, a teammate cannot attack the ball above the net." }
+        { "title": "Zorunlu rotasyon", "content": "Her servis kazanımında, servisi kazanan takım saat yönünde döner: P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. P2→P1'e geçen oyuncu yeni servis atan olur." },
+        { "title": "Pozisyon hatası", "content": "Servis atan topa vurduğu anda oyuncular rotasyon sıralarına uymalıdır (çapraz üst üste binme yok). Hata = sayı + rakibe servis. 2025 güncellemesi: üst üste binme kuralı artık sadece KARŞILAYAN takım için geçerlidir — servis atan takım serbestçe konumlanabilir." },
+        { "title": "3 metre kuralı", "content": "Arka saha oyuncuları (P1, P5, P6) ön bölgeden file üstünde saldıramaz. 3 m çizgisinin arkasından sıçrayıp ön bölgeye inebilirler — bu yasaldır." },
+        { "title": "Libero", "content": "Libero kontrast formalı giyer ve sadece arka sahada (P1, P5, P6) oynar. Sayılmayan sınırsız oyuncu değişikliği. Blok yapamaz veya file üstünde saldıramaz. 2021'den beri set başına tek rotasyonda servis atabilir. 2021'den beri kaptan olabilir. Kısıtlama: libero ön bölgeden parmak pası yaparsa, takım arkadaşı topa file üstünde saldıramaz." }
       ]
     },
     {
       "id": "special",
-      "title": "Special situations",
+      "title": "Özel durumlar",
       "num": "04",
       "rules": [
-        { "title": "Time-outs", "content": "Each team has 2 time-outs of 30 seconds per set. Automatic technical time-outs at the 8th and 16th points in sets 1-4 are used in some FIVB competitions." },
-        { "title": "Serve — key rules", "content": "8 seconds to strike after the whistle. Only one toss allowed, but the server can let the ball drop once without penalty. Foot fault: at the moment of contact (or jump take-off), the server must not touch the back line or court. Screen on serve: teammates must not raise their hands above their heads during the serve (2025 rule)." },
-        { "title": "Back-row attack", "content": "A back-row player can attack if their take-off is behind the 3 m line (both feet). They can also strike the ball if any part is below the net. Blocking or attacking the serve above the net from the front zone is a fault." },
-        { "title": "Held ball", "content": "Contact with the ball must be brief and clean. \"Ugly contact ≠ fault\": imperfect contact is not automatically a fault if the ball rebounds. More permissive standard for forearm passes than for hand sets." }
+        { "title": "Molalar", "content": "Her takımın set başına 30 saniyelik 2 molası vardır. 1-4 setlerinde 8. ve 16. sayılarda otomatik teknik molalar bazı FIVB yarışmalarında kullanılır." },
+        { "title": "Servis — temel kurallar", "content": "Düdükten sonra vurmak için 8 saniye. Yalnızca bir atışa izin verilir, ancak servis atan topu bir kez cezasız bırakabilir. Ayak hatası: temas anında (veya sıçrama anında) servis atan dip çizgiye veya sahaya basmamalıdır. Serviste perde: takım arkadaşları servis sırasında ellerini başlarının üstüne kaldırmamalıdır (2025 kuralı)." },
+        { "title": "Arka saha saldırısı", "content": "Bir arka saha oyuncusu, sıçraması 3 m çizgisinin arkasındaysa (iki ayak da) saldırabilir. Topun herhangi bir kısmı filenin altındaysa da topa vurabilirler. Ön bölgeden file üstünde servise blok yapmak veya saldırmak hatadır." },
+        { "title": "Tutulan top", "content": "Topla temas kısa ve temiz olmalıdır. \"Çirkin temas ≠ hata\": top sekiyorsa kusurlu temas otomatik hata değildir. Manşet için parmak pasından daha hoşgörülü standart." }
       ]
     },
     {
       "id": "nouveautes2025",
-      "title": "FIVB 2025-2028 updates",
+      "title": "FIVB 2025-2028 güncellemeleri",
       "num": "05",
       "rules": [
-        { "title": "Overlap: only on reception", "content": "Since 2025, the overlap rule only applies to the receiving team. The serving team can occupy any position on the court at the moment of the serve." },
-        { "title": "No screen on serve", "content": "Players on the serving team are now forbidden from raising their hands above their heads during the serve until the ball crosses the net. Such a screen is sanctioned directly." },
-        { "title": "Double contact on the set — trial", "content": "FIVB 2025-2026 trial: double contact on the set (2nd touch) is allowed as long as the ball remains on the same side. If the trial succeeds, the rule could become permanent." },
-        { "title": "Libero can serve (since 2021)", "content": "The libero can serve since 2021 in a single rotation per set. Rule varies by federation (some USAV and NFHS tournaments do not allow it — check the competition regulation)." }
+        { "title": "Üst üste binme: sadece karşılamada", "content": "2025'ten beri üst üste binme kuralı yalnızca karşılayan takım için geçerlidir. Servis atan takım servis anında sahada herhangi bir pozisyonu işgal edebilir." },
+        { "title": "Serviste perde yok", "content": "Servis atan takımdaki oyuncuların artık top fileyi geçene kadar servis sırasında ellerini başlarının üstüne kaldırmaları yasaktır. Böyle bir perde doğrudan cezalandırılır." },
+        { "title": "Pasta çift temas — deneme", "content": "FIVB 2025-2026 denemesi: top aynı tarafta kaldığı sürece pasta (2. dokunuş) çift temasa izin verilir. Deneme başarılı olursa kural kalıcı olabilir." },
+        { "title": "Libero servis atabilir (2021'den beri)", "content": "Libero 2021'den beri set başına tek rotasyonda servis atabilir. Kural federasyona göre değişir (bazı USAV ve NFHS turnuvaları izin vermez — yarışma kurallarını kontrol edin)." }
       ]
     }
   ]

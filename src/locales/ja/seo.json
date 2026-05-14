@@ -1,79 +1,79 @@
 {
-  "siteLocale": "en_US",
-  "ogLocale": "en_US",
-  "htmlLang": "en",
-  "structuredLang": "en-US",
-  "alternateLocale": "fr_FR",
+  "siteLocale": "ja_JP",
+  "ogLocale": "ja_JP",
+  "htmlLang": "ja",
+  "structuredLang": "ja-JP",
+  "alternateLocale": "en_US",
   "home": {
-    "title": "Volley-Wiki — Indoor volleyball guide for 6v6, 5v5 and 4v4",
-    "description": "Indoor volleyball wiki: positions, techniques, 3D scenarios, rules and glossary. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "Volley-Wiki — 6対6・5対5・4対4のインドアバレーボールガイド",
+    "description": "インドアバレーボールのウィキ: ポジション、技術、3Dシナリオ、ルール、用語集。6対6・5対5・4対4の形式に対応。"
   },
   "techniques": {
-    "title": "Volleyball techniques — Serve, pass, attack, defense | Volley-Wiki",
-    "description": "Learn the fundamental techniques of volleyball: serve, reception, attack, block, defense. Interactive 3D animations and tips by level."
+    "title": "バレーボールの技術 — サーブ、トス、アタック、ディフェンス | Volley-Wiki",
+    "description": "バレーボールの基礎技術を学びましょう: サーブ、レセプション、アタック、ブロック、ディフェンス。インタラクティブな3Dアニメーションとレベル別のアドバイス。"
   },
   "positionsHub": {
-    "title": "Volleyball positions — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "Discover indoor volleyball positions and roles for each game format: 6 vs 6, 5 vs 5 and 4 vs 4. Detailed tactical systems."
+    "title": "バレーボールのポジション — 6対6・5対5・4対4 | Volley-Wiki",
+    "description": "形式ごとのインドアバレーボールのポジションと役割を解説: 6対6、5対5、4対4。詳細な戦術システム。"
   },
   "positions": {
-    "title": "Volleyball positions {{size}} — {{config}} | Volley-Wiki",
-    "description": "Volleyball {{label}} positions and roles: {{configName}} system. {{descriptionExcerpt}}",
-    "articleHeadline": "Volleyball positions {{size}} — {{config}}"
+    "title": "バレーボールのポジション {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{label}}バレーボールのポジションと役割: {{configName}}システム。{{descriptionExcerpt}}",
+    "articleHeadline": "バレーボールのポジション {{size}} — {{config}}"
   },
   "scenariosHub": {
-    "title": "3D volleyball scenarios — Attack, defense, reception | Volley-Wiki",
-    "description": "Visualize concrete attack, defense and reception scenarios in 3D. Adapted to 6v6, 5v5 and 4v4 formats."
+    "title": "3Dバレーボールシナリオ — 攻撃、守備、レセプション | Volley-Wiki",
+    "description": "攻撃、守備、レセプションの具体的な場面を3Dで視覚化。6対6・5対5・4対4の形式に対応。"
   },
   "scenarioDetail": {
-    "title": "{{title}} — {{teamSize}} scenario | Volley-Wiki",
-    "description": "{{shortDescription}} Watch this {{phase}} scenario in 3D with step-by-step narration."
+    "title": "{{title}} — {{teamSize}} シナリオ | Volley-Wiki",
+    "description": "{{shortDescription}} この{{phase}}のシナリオを3Dとステップ解説で確認しましょう。"
   },
   "rules": {
-    "title": "Volleyball rules — Simplified FIVB regulation | Volley-Wiki",
-    "description": "The official FIVB volleyball regulation explained simply: format, court, rotations, faults, contacts. The essentials to understand and play."
+    "title": "バレーボールのルール — FIVB公式規則をわかりやすく | Volley-Wiki",
+    "description": "FIVB公式バレーボール規則をシンプルに解説: 形式、コート、ローテーション、反則、接触。プレーと観戦に必要な基本。"
   },
   "glossary": {
-    "title": "Volleyball glossary — All terms explained | Volley-Wiki",
-    "description": "Complete dictionary of volleyball vocabulary: ace, bump, block, pipe, libero, side-out and more. Clear and precise definitions."
+    "title": "バレーボール用語集 — 全用語解説 | Volley-Wiki",
+    "description": "バレーボール用語を網羅した辞典: エース、アンダーパス、ブロック、パイプ、リベロ、サイドアウトなど。明快で正確な定義。"
   },
   "guides": {
-    "title": "Volleyball technical and tactical guides | Volley-Wiki",
-    "description": "Complete guides on serving, reception, attack, blocking and defensive positioning. Diagrams, videos and tips by level."
+    "title": "バレーボールの技術・戦術ガイド | Volley-Wiki",
+    "description": "サーブ、レセプション、アタック、ブロック、守備ポジショニングの総合ガイド。図解、動画、レベル別のアドバイス。"
   },
   "guideDetail": {
     "title": "{{title}} | Volley-Wiki"
   },
   "defenseHub": {
-    "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
-    "description": "{{description}} Guide adapted to 6 vs 6, 5 vs 5 and 4 vs 4 formats."
+    "title": "{{title}} — 6対6・5対5・4対4 | Volley-Wiki",
+    "description": "{{description}} 6対6、5対5、4対4の形式に対応したガイド。"
   },
   "defenseSized": {
-    "title": "Defensive positioning {{size}} — {{config}} | Volley-Wiki",
-    "description": "Complete defensive positioning guide for volleyball {{label}} in the {{configName}} system: zone responsibilities, defense by opponent attack zone.",
-    "articleHeadline": "Defensive positioning {{size}} — {{config}}"
+    "title": "守備ポジショニング {{size}} — {{config}} | Volley-Wiki",
+    "description": "{{label}}バレーボールの守備ポジショニング完全ガイド（{{configName}}システム）: ゾーン別の責任、相手の攻撃ゾーン別のディフェンス。",
+    "articleHeadline": "守備ポジショニング {{size}} — {{config}}"
   },
   "notFound": {
-    "title": "Page not found | Volley-Wiki",
-    "description": "This page does not exist. Return to the homepage to explore the volleyball wiki."
+    "title": "ページが見つかりません | Volley-Wiki",
+    "description": "このページは存在しません。ホームに戻ってバレーボールウィキを見ましょう。"
   },
   "guideNotFound": {
-    "title": "Guide not found | Volley-Wiki",
-    "description": "This guide does not exist. Go back to the guides list."
+    "title": "ガイドが見つかりません | Volley-Wiki",
+    "description": "このガイドは存在しません。ガイド一覧に戻ってください。"
   },
   "breadcrumbs": {
-    "home": "Home",
-    "techniques": "Techniques",
-    "positions": "Positions",
-    "scenarios": "Scenarios",
-    "guides": "Guides",
-    "rules": "Rules",
-    "glossary": "Glossary",
-    "defense": "Defensive positioning"
+    "home": "ホーム",
+    "techniques": "技術",
+    "positions": "ポジション",
+    "scenarios": "シナリオ",
+    "guides": "ガイド",
+    "rules": "ルール",
+    "glossary": "用語集",
+    "defense": "守備ポジショニング"
   },
   "phase": {
-    "attack": "attack",
-    "defense": "defense",
-    "reception": "reception"
+    "attack": "攻撃",
+    "defense": "守備",
+    "reception": "レセプション"
   }
 }

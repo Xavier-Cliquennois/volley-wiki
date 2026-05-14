@@ -1,77 +1,77 @@
 {
   "header": {
-    "kicker": "★ TACTICS",
-    "title": "GAME SCENARIOS",
-    "subtitle": "Visualize concrete situations in 3D with step-by-step narration."
+    "kicker": "★ 戦術",
+    "title": "ゲームシナリオ",
+    "subtitle": "具体的な試合場面を3Dで視覚化し、ステップごとに解説します。"
   },
   "construction": {
-    "label": "PAGE UNDER CONSTRUCTION",
-    "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
+    "label": "ページ作成中",
+    "body": "一部の3Dアニメーションには誤りや未完成な箇所が残っている可能性があります。シナリオは順次完成させていきます — ご了承ください。"
   },
   "wizard": {
-    "step1": "1 · HOW MANY PLAYERS PER TEAM?",
-    "step2": "2 · WHICH GAME PHASE?",
-    "step3": "3 · WHICH SPECIFIC CONTEXT?",
-    "noMatch": "No scenario available for this combination yet.",
-    "reset": "RESET",
-    "launch": "LAUNCH SCENARIO →"
+    "step1": "1 · チームの人数は？",
+    "step2": "2 · どの局面か？",
+    "step3": "3 · どんな具体的状況か？",
+    "noMatch": "この組み合わせに該当するシナリオはまだありません。",
+    "reset": "リセット",
+    "launch": "シナリオを開始 →"
   },
   "compactBar": {
-    "format": "FORMAT",
-    "phase": "PHASE",
-    "scenario": "SCENARIO",
-    "reset": "RESET",
-    "resetTitle": "Reset everything"
+    "format": "形式",
+    "phase": "局面",
+    "scenario": "シナリオ",
+    "reset": "リセット",
+    "resetTitle": "すべてをリセット"
   },
   "placeholder": {
-    "title": "PICK A SCENARIO",
-    "selectFormatAndPhase": "Select a format and a phase above.",
-    "noScenarios": "No scenario available for this combination.",
-    "clickInList": "Click a scenario in the list above."
+    "title": "シナリオを選択",
+    "selectFormatAndPhase": "上で形式と局面を選択してください。",
+    "noScenarios": "この組み合わせに該当するシナリオはありません。",
+    "clickInList": "上のリストからシナリオをクリックしてください。"
   },
   "phase": {
-    "attack": "Attack",
-    "defense": "Defense",
-    "reception": "Reception"
+    "attack": "攻撃",
+    "defense": "守備",
+    "reception": "レセプション"
   },
   "player": {
     "controls": {
-      "play": "Play",
-      "pause": "Pause",
-      "replay": "Replay",
-      "previousStep": "Previous step",
-      "nextStep": "Next step",
-      "camera": "Camera",
-      "speed": "Speed",
-      "auto": "Auto",
-      "stepMode": "Step",
-      "playbackModeLabel": "Playback mode"
+      "play": "再生",
+      "pause": "一時停止",
+      "replay": "リプレイ",
+      "previousStep": "前のステップ",
+      "nextStep": "次のステップ",
+      "camera": "カメラ",
+      "speed": "速度",
+      "auto": "自動",
+      "stepMode": "ステップ",
+      "playbackModeLabel": "再生モード"
     },
     "toggles": {
-      "trail": "Trail",
-      "trailTitle": "Show a trail behind the ball to visualize its trajectory",
-      "zones": "Zones",
-      "zonesTitle": "Show the 6 FIVB zones on the court"
+      "trail": "軌跡",
+      "trailTitle": "ボールの軌道を確認するための軌跡を表示",
+      "zones": "ゾーン",
+      "zonesTitle": "コート上にFIVBの6つのゾーンを表示"
     },
     "timeline": {
-      "title": "Timeline",
-      "clickHint": "click to jump"
+      "title": "タイムライン",
+      "clickHint": "クリックで移動"
     },
     "cameras": {
-      "DEFAULT": "Wide",
-      "TOP_DOWN": "Top",
-      "BEHIND_SERVE": "Server",
-      "ATTACKER_VIEW": "Hitter"
+      "DEFAULT": "全景",
+      "TOP_DOWN": "上から",
+      "BEHIND_SERVE": "サーバー視点",
+      "ATTACKER_VIEW": "アタッカー視点"
     },
     "summary": {
-      "keyPoints": "KEY POINTS",
-      "commonMistakes": "COMMON MISTAKES",
-      "context": "Context"
+      "keyPoints": "ポイント",
+      "commonMistakes": "よくあるミス",
+      "context": "状況"
     },
     "step": {
-      "label": "Step {{current}} / {{total}}",
-      "defaultTitle": "Step {{index}}"
+      "label": "ステップ {{current}} / {{total}}",
+      "defaultTitle": "ステップ {{index}}"
     },
-    "loading": "LOADING…"
+    "loading": "読み込み中…"
   }
 }
