@@ -1,23 +1,14 @@
 import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { SCENARIOS, getScenarioById } from '../scenarios/data';
 import type { PhaseKind, TeamSize } from '../scenarios/types';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb, buildHowTo } from '../seo/structuredData';
+import { useCurrentLang } from '../i18n/paths';
+import { useLocalizedScenario, useLocalizedScenarios } from '../i18n/localizeScenario';
 
 const ScenarioPlayer = lazy(() => import('../scenarios/ScenarioPlayer'));
-
-const PHASE_LABEL_FR: Record<PhaseKind, string> = {
-  attack: 'Attaque',
-  defense: 'Défense',
-  reception: 'Réception',
-};
-
-const PHASE_LABELS: Record<PhaseKind, string> = {
-  attack: 'Attaque',
-  defense: 'Défense',
-  reception: 'Réception',
-};
 
 const PHASE_ICONS: Record<PhaseKind, string> = {
   attack: '🎯',
@@ -34,15 +25,18 @@ const PHASE_COLORS: Record<PhaseKind, string> = {
 export default function Scenarios() {
   const { id: routeId } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation('scenarios');
+  const { t: tSeo } = useTranslation('seo');
+  const lang = useCurrentLang();
 
-  const launchedScenario = routeId ? getScenarioById(routeId) : undefined;
+  const rawScenario = routeId ? getScenarioById(routeId) : undefined;
+  const launchedScenario = useLocalizedScenario(rawScenario);
   const launched = !!launchedScenario;
 
   const [teamSize, setTeamSize] = useState<TeamSize | null>(launchedScenario?.config.teamSize ?? null);
   const [phase, setPhase] = useState<PhaseKind | null>(launchedScenario?.config.phase ?? null);
   const [contextChoice, setContextChoice] = useState<string | null>(launchedScenario?.id ?? null);
 
-  // Sync wizard state when the URL changes (component stays mounted across /scenarios/:id navigations).
   useEffect(() => {
     if (launchedScenario) {
       setTeamSize(launchedScenario.config.teamSize);
@@ -51,20 +45,22 @@ export default function Scenarios() {
     }
   }, [launchedScenario?.id]);
 
+  const localizedScenarios = useLocalizedScenarios(SCENARIOS);
+
   const matchingScenarios = useMemo(() => {
     if (!teamSize || !phase) return [];
-    return SCENARIOS.filter(s => s.config.teamSize === teamSize && s.config.phase === phase);
-  }, [teamSize, phase]);
+    return localizedScenarios.filter(s => s.config.teamSize === teamSize && s.config.phase === phase);
+  }, [teamSize, phase, localizedScenarios]);
 
   const reset = () => {
     setTeamSize(null);
     setPhase(null);
     setContextChoice(null);
-    if (launched) navigate('/scenarios');
+    if (launched) navigate(`/${lang}/scenarios`);
   };
 
   const handleLaunch = () => {
-    if (contextChoice) navigate(`/scenarios/${contextChoice}`);
+    if (contextChoice) navigate(`/${lang}/scenarios/${contextChoice}`);
   };
 
   const handleTeamSizeChange = (n: TeamSize) => {
@@ -80,7 +76,7 @@ export default function Scenarios() {
   };
   const handleContextChange = (id: string) => {
     if (launched) {
-      navigate(`/scenarios/${id}`);
+      navigate(`/${lang}/scenarios/${id}`);
     } else {
       setContextChoice(id);
     }
@@ -98,32 +94,39 @@ export default function Scenarios() {
   };
 
   const seoTitle = launchedScenario
-    ? `${launchedScenario.title} — Scénario ${launchedScenario.config.teamSize}v${launchedScenario.config.teamSize} | Volley-Wiki`
-    : 'Scénarios 3D de volley-ball — Attaque, défense, réception | Volley-Wiki';
+    ? tSeo('scenarioDetail.title', {
+        title: launchedScenario.title,
+        teamSize: `${launchedScenario.config.teamSize}v${launchedScenario.config.teamSize}`,
+      })
+    : tSeo('scenariosHub.title');
   const seoDescription = launchedScenario
-    ? `${launchedScenario.shortDescription} Visualisez ce scénario ${PHASE_LABEL_FR[launchedScenario.config.phase].toLowerCase()} en 3D avec narration étape par étape.`
-    : "Visualisez en 3D des scénarios concrets d'attaque, défense et réception au volley-ball. Adapté aux formats 6v6, 5v5 et 4v4.";
+    ? tSeo('scenarioDetail.description', {
+        shortDescription: launchedScenario.shortDescription,
+        phase: tSeo(`phase.${launchedScenario.config.phase}`),
+      })
+    : tSeo('scenariosHub.description');
   const seoPath = launchedScenario ? `/scenarios/${launchedScenario.id}` : '/scenarios';
   const breadcrumbCrumbs = launchedScenario
     ? [
-        { name: 'Accueil', path: '/' },
-        { name: 'Scénarios', path: '/scenarios' },
+        { name: tSeo('breadcrumbs.home'), path: '/' },
+        { name: tSeo('breadcrumbs.scenarios'), path: '/scenarios' },
         { name: launchedScenario.title, path: seoPath },
       ]
     : [
-        { name: 'Accueil', path: '/' },
-        { name: 'Scénarios', path: '/scenarios' },
+        { name: tSeo('breadcrumbs.home'), path: '/' },
+        { name: tSeo('breadcrumbs.scenarios'), path: '/scenarios' },
       ];
-  const jsonLd: Record<string, unknown>[] = [buildBreadcrumb(breadcrumbCrumbs)];
+  const jsonLd: Record<string, unknown>[] = [buildBreadcrumb(breadcrumbCrumbs, lang)];
   if (launchedScenario && launchedScenario.steps.length) {
     jsonLd.push(
       buildHowTo({
         name: launchedScenario.title,
         description: launchedScenario.shortDescription,
         steps: launchedScenario.steps.map((step, idx) => ({
-          name: step.title || `Étape ${idx + 1}`,
-          text: step.description || step.title || `Étape ${idx + 1}`,
+          name: step.title || t('player.step.defaultTitle', { index: idx + 1 }),
+          text: step.description || step.title || t('player.step.defaultTitle', { index: idx + 1 }),
         })),
+        lang,
       }),
     );
   }
@@ -137,20 +140,18 @@ export default function Scenarios() {
         ogType={launchedScenario ? 'article' : 'website'}
         jsonLd={jsonLd}
       />
-      {/* Header */}
       <div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)', marginBottom: 10 }}>
-          ★ TACTIQUE
+          {t('header.kicker')}
         </div>
         <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
-          SCÉNARIOS DE JEU
+          {t('header.title')}
         </h1>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
-          Visualisez des situations concrètes en 3D avec narration étape par étape.
+          {t('header.subtitle')}
         </p>
       </div>
 
-      {/* Construction notice */}
       <div
         role="status"
         style={{
@@ -166,22 +167,19 @@ export default function Scenarios() {
         <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>🚧</span>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em' }}>
-            PAGE EN COURS DE CONSTRUCTION
+            {t('construction.label')}
           </div>
           <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, lineHeight: 1.5 }}>
-            Certaines animations 3D peuvent encore comporter des erreurs ou être incomplètes.
-            Merci de votre indulgence — les scénarios sont en cours de finalisation.
+            {t('construction.body')}
           </p>
         </div>
       </div>
 
-      {/* Wizard — full */}
       {!launched && (
         <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>
-          {/* Step 1: team size */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 24 }}>
             <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
-              1 · COMBIEN DE JOUEURS PAR ÉQUIPE ?
+              {t('wizard.step1')}
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
               {([4, 5, 6] as TeamSize[]).map(n => (
@@ -201,11 +199,10 @@ export default function Scenarios() {
             </div>
           </div>
 
-          {/* Step 2: phase */}
           {teamSize !== null && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, marginBottom: 24 }}>
               <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
-                2 · QUELLE PHASE DE JEU ?
+                {t('wizard.step2')}
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
                 {(['attack', 'defense', 'reception'] as PhaseKind[]).map(p => (
@@ -220,18 +217,17 @@ export default function Scenarios() {
                     }}
                   >
                     <span style={{ fontSize: 24 }}>{PHASE_ICONS[p]}</span>
-                    <span>{PHASE_LABELS[p].toUpperCase()}</span>
+                    <span>{t(`phase.${p}`).toUpperCase()}</span>
                   </button>
                 ))}
               </div>
             </div>
           )}
 
-          {/* Step 3: context */}
           {teamSize !== null && phase !== null && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, marginBottom: 24 }}>
               <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.06em' }}>
-                3 · QUEL CONTEXTE PRÉCIS ?
+                {t('wizard.step3')}
               </div>
               {matchingScenarios.length > 0 ? (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -257,20 +253,19 @@ export default function Scenarios() {
                 </div>
               ) : (
                 <div style={{ border: '3px dashed var(--ink)', padding: '16px', background: 'var(--paper)', fontFamily: '"DM Mono", monospace', fontSize: 12, opacity: 0.6 }}>
-                  Aucun scénario disponible pour cette combinaison pour l'instant.
+                  {t('wizard.noMatch')}
                 </div>
               )}
             </div>
           )}
 
-          {/* Actions */}
           {(teamSize !== null || phase !== null || contextChoice !== null) && (
             <div style={{ borderTop: '2px dashed rgba(26,24,18,0.18)', paddingTop: 20, display: 'flex', flexWrap: 'wrap', gap: 10, justifyContent: 'space-between', alignItems: 'center' }}>
               <button
                 onClick={reset}
                 style={{ ...btnBase, padding: '10px 18px', fontSize: 10 }}
               >
-                RÉINITIALISER
+                {t('wizard.reset')}
               </button>
               <button
                 onClick={handleLaunch}
@@ -285,19 +280,17 @@ export default function Scenarios() {
                   fontSize: 13,
                 }}
               >
-                LANCER LE SCÉNARIO →
+                {t('wizard.launch')}
               </button>
             </div>
           )}
         </div>
       )}
 
-      {/* Compact bar — shown once launched */}
       {launched && (
         <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {/* Row 1 — Format + Réinitialiser */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>FORMAT</span>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>{t('compactBar.format')}</span>
             {([4, 5, 6] as TeamSize[]).map(n => (
               <button
                 key={n}
@@ -315,15 +308,14 @@ export default function Scenarios() {
             <button
               onClick={reset}
               style={{ ...btnBase, padding: '5px 12px', fontSize: 9, marginLeft: 'auto' }}
-              title="Tout réinitialiser"
+              title={t('compactBar.resetTitle')}
             >
-              RÉINITIALISER
+              {t('compactBar.reset')}
             </button>
           </div>
 
-          {/* Row 2 — Phase */}
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, paddingTop: 8, borderTop: '2px dashed rgba(26,24,18,0.18)' }}>
-            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>PHASE</span>
+            <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>{t('compactBar.phase')}</span>
             {(['attack', 'defense', 'reception'] as PhaseKind[]).map(p => (
               <button
                 key={p}
@@ -335,15 +327,14 @@ export default function Scenarios() {
                   ...(phase === p ? { background: PHASE_COLORS[p], boxShadow: '2px 2px 0 var(--ink)', transform: 'translate(-1px,-1px)' } : {}),
                 }}
               >
-                <span aria-hidden="true">{PHASE_ICONS[p]}</span> {PHASE_LABELS[p].toUpperCase()}
+                <span aria-hidden="true">{PHASE_ICONS[p]}</span> {t(`phase.${p}`).toUpperCase()}
               </button>
             ))}
           </div>
 
-          {/* Row 3 — Scénario picker */}
           {matchingScenarios.length > 0 && (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, paddingTop: 8, borderTop: '2px dashed rgba(26,24,18,0.18)', alignItems: 'center' }}>
-              <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>SCÉNARIO</span>
+              <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 9, letterSpacing: '0.14em', opacity: 0.6, marginRight: 4 }}>{t('compactBar.scenario')}</span>
               {matchingScenarios.map(s => (
                 <button
                   key={s.id}
@@ -356,7 +347,7 @@ export default function Scenarios() {
                   }}
                   title={s.config.contextLabel}
                 >
-                  {s.title.replace(/^(\d+v\d+\s*·\s*)/, '').replace(/^(Attaque|Défense|Réception|Couverture)\s*·\s*/, '').toUpperCase()}
+                  {s.title.replace(/^(\d+v\d+\s*·\s*)/, '').replace(/^(Attaque|Défense|Réception|Couverture|Attack|Defense|Defence|Reception|Coverage)\s*·\s*/i, '').toUpperCase()}
                 </button>
               ))}
             </div>
@@ -364,21 +355,19 @@ export default function Scenarios() {
         </div>
       )}
 
-      {/* Placeholder */}
       {launched && !launchedScenario && (
         <div style={{ border: '3px dashed var(--ink)', padding: '48px 20px', textAlign: 'center', background: 'var(--paper)' }}>
-          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, opacity: 0.6, marginBottom: 8 }}>CHOISISSEZ UN SCÉNARIO</div>
+          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, opacity: 0.6, marginBottom: 8 }}>{t('placeholder.title')}</div>
           <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, opacity: 0.5 }}>
             {!teamSize || !phase
-              ? 'Sélectionnez un format et une phase au-dessus.'
+              ? t('placeholder.selectFormatAndPhase')
               : matchingScenarios.length === 0
-                ? 'Aucun scénario disponible pour cette combinaison.'
-                : 'Cliquez sur un scénario dans la liste au-dessus.'}
+                ? t('placeholder.noScenarios')
+                : t('placeholder.clickInList')}
           </p>
         </div>
       )}
 
-      {/* Player */}
       {launched && launchedScenario && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div>
@@ -390,7 +379,7 @@ export default function Scenarios() {
           <Suspense
             fallback={
               <div style={{ border: '3px solid var(--ink)', background: 'var(--paper)', height: 360, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.1em', opacity: 0.5 }}>CHARGEMENT…</span>
+                <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.1em', opacity: 0.5 }}>{t('player.loading')}</span>
               </div>
             }
           >

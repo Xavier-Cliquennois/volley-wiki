@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ INTERACTIVE DOCUMENTATION ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "The technical reference for volleyball — 3D animated techniques, rules, positions and glossary.",
+    "ctaPrimary": "VIEW TECHNIQUES",
+    "ctaSecondary": "READ THE RULES"
+  },
+  "sectionsLabel": "★ SECTIONS ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniques",
+      "desc": "Interactive 3D animations of fundamental volleyball skills.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Positions",
+      "desc": "Roles and responsibilities of each position on the court.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guides",
+      "desc": "Detailed technical and tactical guides with diagrams.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Rules",
+      "desc": "Official FIVB regulation simplified and explained.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossary",
+      "desc": "Complete volleyball technical vocabulary.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scenarios",
+      "desc": "3D animated game sequences: attack, defense, reception.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

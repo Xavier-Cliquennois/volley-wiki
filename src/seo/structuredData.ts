@@ -2,7 +2,13 @@ import { SITE_NAME, SITE_URL } from './constants';
 
 type Crumb = { name: string; path: string };
 
-export function buildBreadcrumb(crumbs: Crumb[]) {
+function localizedUrl(lang: string, path: string): string {
+  const clean = path.startsWith('/') ? path : `/${path}`;
+  if (clean === '/') return `${SITE_URL}/${lang}`;
+  return `${SITE_URL}/${lang}${clean}`;
+}
+
+export function buildBreadcrumb(crumbs: Crumb[], lang: string = 'en') {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -10,18 +16,19 @@ export function buildBreadcrumb(crumbs: Crumb[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: `${SITE_URL}${crumb.path.startsWith('/') ? crumb.path : `/${crumb.path}`}`,
+      item: localizedUrl(lang, crumb.path),
     })),
   };
 }
 
-export function buildWebSite() {
+export function buildWebSite(lang: string = 'en') {
+  const inLanguage = lang === 'fr' ? 'fr-FR' : 'en-US';
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
-    url: SITE_URL,
-    inLanguage: 'fr-FR',
+    url: `${SITE_URL}/${lang}`,
+    inLanguage,
   };
 }
 
@@ -32,6 +39,7 @@ type ArticleArgs = {
   image?: string;
   datePublished?: string;
   dateModified?: string;
+  lang?: string;
 };
 
 export function buildArticle({
@@ -41,14 +49,16 @@ export function buildArticle({
   image,
   datePublished,
   dateModified,
+  lang = 'en',
 }: ArticleArgs) {
+  const inLanguage = lang === 'fr' ? 'fr-FR' : 'en-US';
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
     description,
-    mainEntityOfPage: `${SITE_URL}${path}`,
-    inLanguage: 'fr-FR',
+    mainEntityOfPage: localizedUrl(lang, path),
+    inLanguage,
     image: image ?? `${SITE_URL}/og-image.png`,
     author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     publisher: {
@@ -68,13 +78,15 @@ export function buildHowTo(args: {
   name: string;
   description: string;
   steps: HowToStep[];
+  lang?: string;
 }) {
+  const inLanguage = args.lang === 'fr' ? 'fr-FR' : 'en-US';
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: args.name,
     description: args.description,
-    inLanguage: 'fr-FR',
+    inLanguage,
     step: args.steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: index + 1,

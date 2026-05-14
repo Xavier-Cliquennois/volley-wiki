@@ -1,0 +1,63 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTATION",
+    "title": "GUIDES",
+    "subtitle": "Detailed technical and tactical guides to improve at volleyball."
+  },
+  "ticketPrefix": "N°",
+  "list": {
+    "service": {
+      "title": "Serving guide",
+      "subtitle": "Underhand, float, jump float and jump topspin",
+      "category": "Technique",
+      "description": "The 4 serve types with biomechanics, steps, common mistakes, drills and tactical zones.",
+      "readingTime": "~15 min",
+      "level": "Beginner"
+    },
+    "reception": {
+      "title": "Reception guide",
+      "subtitle": "Bump, platform, systems and reading the serve",
+      "category": "Technique",
+      "description": "Platform technique, freeze on contact, movement, W/U systems and reading the server.",
+      "readingTime": "~15 min",
+      "level": "Beginner"
+    },
+    "attaque": {
+      "title": "Attack guide",
+      "subtitle": "Approach, timing, shots and positions",
+      "category": "Technique",
+      "description": "The 5 phases of the spike, 3-4 step approach, timing based on the set, special shots and errors.",
+      "readingTime": "~15 min",
+      "level": "Intermediate"
+    },
+    "contre": {
+      "title": "Blocking guide",
+      "subtitle": "Timing, block types and reading the game",
+      "category": "Technique",
+      "description": "Timing, block types, elite visual sequence, read vs commit blocking and drills.",
+      "readingTime": "~10 min",
+      "level": "Intermediate"
+    },
+    "positionnement-defense": {
+      "title": "Defensive positioning",
+      "subtitle": "Place yourself based on position and situation",
+      "category": "Tactics",
+      "description": "Zone responsibilities, positioning by opposing attack zone, systems and communication.",
+      "readingTime": "~20 min",
+      "level": "Intermediate"
+    }
+  },
+  "detail": {
+    "backLink": "← GUIDES",
+    "sectionTitle": "★ GUIDE CONTENT ★",
+    "notFound": "Guide not found."
+  },
+  "defenseHub": {
+    "backLink": "← GUIDES",
+    "description": "Defensive positioning changes with the number of players on the court. Choose your format to access the full guide: zone responsibilities, systems (A/B, man-up, 1-2-2…) and adaptation by opposing attack zone.",
+    "cardDescription": "Defense adapted to the {{size}} format, zones, systems and detailed placements."
+  },
+  "defenseSized": {
+    "backLink": "← ALL FORMATS"
+  }
+}

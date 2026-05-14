@@ -6,6 +6,9 @@ import { SCENARIOS } from './src/scenarios/data'
 import { GUIDES } from './src/guides/data'
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants'
 
+type Lang = 'fr' | 'en'
+const LANGS: readonly Lang[] = ['fr', 'en']
+
 type SitemapEntry = { path: string; changefreq: string; priority: string }
 
 const STATIC_ROUTES: SitemapEntry[] = [
@@ -18,45 +21,63 @@ const STATIC_ROUTES: SitemapEntry[] = [
   { path: '/glossary', changefreq: 'monthly', priority: '0.7' },
 ]
 
+function localizedHref(lang: Lang, path: string): string {
+  if (path === '/') return `${SITE_URL}/${lang}`
+  return `${SITE_URL}/${lang}${path}`
+}
+
 function buildSitemap(): string {
   const today = new Date().toISOString().slice(0, 10)
-  const urls: string[] = []
 
-  const push = (loc: string, changefreq: string, priority: string) => {
-    urls.push(
-      `  <url>\n` +
-        `    <loc>${SITE_URL}${loc}</loc>\n` +
-        `    <lastmod>${today}</lastmod>\n` +
-        `    <changefreq>${changefreq}</changefreq>\n` +
-        `    <priority>${priority}</priority>\n` +
-        `  </url>`,
-    )
-  }
-
-  for (const route of STATIC_ROUTES) {
-    push(route.path, route.changefreq, route.priority)
-  }
+  const paths: SitemapEntry[] = [...STATIC_ROUTES]
   for (const size of TEAM_SIZES) {
     for (const config of POSITION_CONFIGS_BY_SIZE[size]) {
-      push(`/positions/${size}/${config}`, 'monthly', '0.8')
+      paths.push({ path: `/positions/${size}/${config}`, changefreq: 'monthly', priority: '0.8' })
     }
   }
   for (const guide of GUIDES) {
     if (guide.slug === 'positionnement-defense') continue
-    push(`/guides/${guide.slug}`, 'monthly', '0.7')
+    paths.push({ path: `/guides/${guide.slug}`, changefreq: 'monthly', priority: '0.7' })
   }
   for (const size of TEAM_SIZES) {
     for (const config of POSITION_CONFIGS_BY_SIZE[size]) {
-      push(`/guides/positionnement-defense/${size}/${config}`, 'monthly', '0.7')
+      paths.push({
+        path: `/guides/positionnement-defense/${size}/${config}`,
+        changefreq: 'monthly',
+        priority: '0.7',
+      })
     }
   }
   for (const scenario of SCENARIOS) {
-    push(`/scenarios/${scenario.id}`, 'monthly', '0.6')
+    paths.push({ path: `/scenarios/${scenario.id}`, changefreq: 'monthly', priority: '0.6' })
+  }
+
+  const urls: string[] = []
+  for (const lang of LANGS) {
+    for (const entry of paths) {
+      const loc = localizedHref(lang, entry.path)
+      const alternates = LANGS.map(
+        (l) =>
+          `    <xhtml:link rel="alternate" hreflang="${l}" href="${localizedHref(l, entry.path)}"/>`,
+      )
+      alternates.push(
+        `    <xhtml:link rel="alternate" hreflang="x-default" href="${localizedHref('en', entry.path)}"/>`,
+      )
+      urls.push(
+        `  <url>\n` +
+          `    <loc>${loc}</loc>\n` +
+          `    <lastmod>${today}</lastmod>\n` +
+          `    <changefreq>${entry.changefreq}</changefreq>\n` +
+          `    <priority>${entry.priority}</priority>\n` +
+          `${alternates.join('\n')}\n` +
+          `  </url>`,
+      )
+    }
   }
 
   return (
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
     urls.join('\n') +
     `\n</urlset>\n`
   )

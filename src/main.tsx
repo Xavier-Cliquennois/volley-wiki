@@ -11,13 +11,14 @@ import '@fontsource/dm-sans/800.css';
 import '@fontsource/dm-mono/400.css';
 import '@fontsource/dm-mono/500.css';
 import './index.css';
+import './i18n';
 import { routes } from './routes';
 
 const head = createHead();
 const hydrationData = (window as unknown as { __staticRouterHydrationData?: unknown })
   .__staticRouterHydrationData;
 const router = createBrowserRouter(routes, hydrationData ? { hydrationData } : undefined);
-const rootElement = document.getElementById('root')!;
+const rootElement = document.getElementById('app')!;
 
 hydrateRoot(
   rootElement,

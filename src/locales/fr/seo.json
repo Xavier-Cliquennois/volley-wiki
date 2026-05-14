@@ -1,0 +1,79 @@
+{
+  "siteLocale": "fr_FR",
+  "ogLocale": "fr_FR",
+  "htmlLang": "fr",
+  "structuredLang": "fr-FR",
+  "alternateLocale": "en_US",
+  "home": {
+    "title": "Volley-Wiki — Guide du volley-ball indoor 6v6, 5v5 et 4v4",
+    "description": "Wiki francophone du volley-ball indoor : positions, techniques, scénarios 3D, règles et glossaire. Adapté aux formats 6v6, 5v5 et 4v4."
+  },
+  "techniques": {
+    "title": "Techniques de volley-ball — Service, réception, attaque, défense | Volley-Wiki",
+    "description": "Apprenez les techniques fondamentales du volley-ball : service, réception, attaque, contre, défense. Animations 3D interactives et conseils par niveau."
+  },
+  "positionsHub": {
+    "title": "Positions au volley-ball — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "Découvrez les positions et rôles au volley-ball indoor pour chaque format de jeu : 6 contre 6, 5 contre 5 et 4 contre 4. Systèmes tactiques détaillés."
+  },
+  "positions": {
+    "title": "Positions au volley-ball {{size}} — {{config}} | Volley-Wiki",
+    "description": "Postes et rôles au volley-ball {{label}} : système {{configName}}. {{descriptionExcerpt}}",
+    "articleHeadline": "Positions au volley-ball {{size}} — {{config}}"
+  },
+  "scenariosHub": {
+    "title": "Scénarios 3D de volley-ball — Attaque, défense, réception | Volley-Wiki",
+    "description": "Visualisez en 3D des scénarios concrets d'attaque, défense et réception au volley-ball. Adapté aux formats 6v6, 5v5 et 4v4."
+  },
+  "scenarioDetail": {
+    "title": "{{title}} — Scénario {{teamSize}} | Volley-Wiki",
+    "description": "{{shortDescription}} Visualisez ce scénario {{phase}} en 3D avec narration étape par étape."
+  },
+  "rules": {
+    "title": "Règles du volley-ball — Règlement FIVB simplifié | Volley-Wiki",
+    "description": "Le règlement officiel FIVB du volley-ball expliqué simplement : format, terrain, rotations, fautes, contacts. L'essentiel pour comprendre et jouer."
+  },
+  "glossary": {
+    "title": "Glossaire du volley-ball — Tous les termes expliqués | Volley-Wiki",
+    "description": "Dictionnaire complet du vocabulaire du volley-ball : ace, manchette, contre, pipe, libéro, side-out et plus. Définitions claires et précises."
+  },
+  "guides": {
+    "title": "Guides techniques et tactiques du volley-ball | Volley-Wiki",
+    "description": "Guides complets sur le service, la réception, l'attaque, le contre et le positionnement défensif au volley-ball. Diagrammes, vidéos et conseils par niveau."
+  },
+  "guideDetail": {
+    "title": "{{title}} | Volley-Wiki"
+  },
+  "defenseHub": {
+    "title": "{{title}} — 6v6, 5v5, 4v4 | Volley-Wiki",
+    "description": "{{description}} Guide adapté aux formats 6 contre 6, 5 contre 5 et 4 contre 4."
+  },
+  "defenseSized": {
+    "title": "Positionnement défensif {{size}} — {{config}} | Volley-Wiki",
+    "description": "Guide complet du positionnement défensif au volley {{label}} en système {{configName}} : zones de responsabilité, défense par zone d'attaque adverse.",
+    "articleHeadline": "Positionnement défensif {{size}} — {{config}}"
+  },
+  "notFound": {
+    "title": "Page introuvable | Volley-Wiki",
+    "description": "Cette page n'existe pas. Retournez à l'accueil pour explorer le wiki du volley-ball."
+  },
+  "guideNotFound": {
+    "title": "Guide introuvable | Volley-Wiki",
+    "description": "Ce guide n'existe pas. Revenez à la liste des guides."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "techniques": "Techniques",
+    "positions": "Positions",
+    "scenarios": "Scénarios",
+    "guides": "Guides",
+    "rules": "Règles",
+    "glossary": "Glossaire",
+    "defense": "Positionnement défensif"
+  },
+  "phase": {
+    "attack": "attaque",
+    "defense": "défense",
+    "reception": "réception"
+  }
+}

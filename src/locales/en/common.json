@@ -1,0 +1,57 @@
+{
+  "siteName": "Volley-Wiki",
+  "siteTagline": "TECHNIQUES · RULES · TACTICS",
+  "nav": {
+    "home": "Home",
+    "techniques": "Techniques",
+    "positions": "Positions",
+    "scenarios": "Scenarios",
+    "guides": "Guides",
+    "rules": "Rules",
+    "glossary": "Glossary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNavigation": "Main navigation"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English",
+    "switchTo": "Switch to {{lang}}"
+  },
+  "footer": {
+    "tagline": "VOLLEY·WIKI — TECHNIQUES · RULES · TACTICS"
+  },
+  "actions": {
+    "back": "Back",
+    "explore": "EXPLORE →",
+    "read": "READ →",
+    "readGuide": "READ THE GUIDE →",
+    "showAll": "SHOW ALL",
+    "reset": "RESET",
+    "loading": "LOADING…"
+  },
+  "labels": {
+    "documentation": "★ DOCUMENTATION",
+    "category": "CATEGORY",
+    "level": "LEVEL",
+    "duration": "Duration",
+    "level_beginner": "Beginner",
+    "level_intermediate": "Intermediate",
+    "level_advanced": "Advanced",
+    "category_technique": "Technique",
+    "category_tactique": "Tactics",
+    "goldenRule": "GOLDEN RULE"
+  },
+  "teamSize": {
+    "4v4": "4 vs 4",
+    "5v5": "5 vs 5",
+    "6v6": "6 vs 6"
+  },
+  "court": {
+    "net": "NET",
+    "backOfCourt": "BACK OF COURT",
+    "ourSide": "Our side",
+    "opponentSide": "Opponent side"
+  }
+}
