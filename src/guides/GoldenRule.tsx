@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type GoldenRuleProps = {
   /** Optional all-caps key phrase displayed between the label and the body */
@@ -41,9 +42,10 @@ const BODY: React.CSSProperties = {
 };
 
 export default function GoldenRule({ mantra, children }: GoldenRuleProps) {
+  const { t } = useTranslation('common');
   return (
     <div style={ALERT}>
-      <div style={LABEL}>★ RÈGLE D'OR</div>
+      <div style={LABEL}>★ {t('labels.goldenRule')}</div>
       {mantra && <p style={MANTRA}>{mantra}</p>}
       <p style={BODY}>{children}</p>
     </div>

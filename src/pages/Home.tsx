@@ -1,29 +1,36 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb, buildWebSite } from '../seo/structuredData';
+import { useCurrentLang } from '../i18n/paths';
 
-const FEATURES = [
-  { label: '01', title: 'Techniques', desc: 'Animations 3D interactives des gestes fondamentaux du volleyball.', to: '/techniques', accent: 'var(--orange)' },
-  { label: '02', title: 'Positions', desc: 'Rôles et responsabilités de chaque poste sur le terrain.', to: '/positions', accent: 'var(--teal)' },
-  { label: '03', title: 'Guides', desc: 'Guides techniques et tactiques détaillés avec diagrammes.', to: '/guides', accent: 'var(--pink)' },
-  { label: '04', title: 'Règles', desc: 'Règlement officiel FIVB simplifié et expliqué.', to: '/rules', accent: 'var(--yellow)' },
-  { label: '05', title: 'Glossaire', desc: 'Vocabulaire technique complet du volleyball.', to: '/glossary', accent: 'var(--mint)' },
-  { label: '06', title: 'Scénarios', desc: 'Séquences de jeu animées en 3D : attaque, défense, réception.', to: '/scenarios', accent: 'var(--plum)' },
-];
+type Feature = {
+  label: string;
+  title: string;
+  desc: string;
+  to: string;
+  accent: string;
+};
 
 export default function Home() {
+  const { t } = useTranslation();
+  const { t: tHome } = useTranslation('home');
+  const { t: tSeo } = useTranslation('seo');
+  const lang = useCurrentLang();
+
+  const features = tHome('features', { returnObjects: true }) as Feature[];
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 56 }}>
       <Head
-        title="Volley-Wiki — Guide du volley-ball indoor 6v6, 5v5 et 4v4"
-        description="Wiki francophone du volley-ball indoor : positions, techniques, scénarios 3D, règles et glossaire. Adapté aux formats 6v6, 5v5 et 4v4."
+        title={tSeo('home.title')}
+        description={tSeo('home.description')}
         path="/"
         jsonLd={[
-          buildWebSite(),
-          buildBreadcrumb([{ name: 'Accueil', path: '/' }]),
+          buildWebSite(lang),
+          buildBreadcrumb([{ name: tSeo('breadcrumbs.home'), path: '/' }], lang),
         ]}
       />
-      {/* Hero */}
       <section style={{ paddingTop: 24 }}>
         <div style={{
           display: 'inline-block',
@@ -37,7 +44,7 @@ export default function Home() {
           fontSize: 11,
           letterSpacing: '0.1em',
         }}>
-          ★ DOCUMENTATION INTERACTIVE ★
+          {tHome('ribbon')}
         </div>
         <h1 style={{
           fontFamily: '"Bungee", sans-serif',
@@ -46,15 +53,15 @@ export default function Home() {
           margin: '0 0 20px 0',
           letterSpacing: '-0.01em',
         }}>
-          <span style={{ color: 'var(--orange)', textShadow: '4px 4px 0 var(--ink)' }}>VOLLEY</span>
+          <span style={{ color: 'var(--orange)', textShadow: '4px 4px 0 var(--ink)' }}>{tHome('hero.logoTop')}</span>
           <br />
-          <span style={{ color: 'var(--teal)', textShadow: '4px 4px 0 var(--ink)' }}>WIKI</span>
+          <span style={{ color: 'var(--teal)', textShadow: '4px 4px 0 var(--ink)' }}>{tHome('hero.logoBottom')}</span>
         </h1>
         <p style={{ fontSize: 17, maxWidth: 480, margin: '0 0 28px 0', color: 'var(--ink)', opacity: 0.75 }}>
-          La référence technique du volleyball — techniques animées en 3D, règles, positions et glossaire.
+          {tHome('hero.subtitle')}
         </p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link to="/techniques" style={{
+          <Link to={`/${lang}/techniques`} style={{
             padding: '12px 24px',
             background: 'var(--orange)',
             border: '3px solid var(--ink)',
@@ -67,9 +74,9 @@ export default function Home() {
             display: 'inline-block',
             transition: 'transform 0.08s, box-shadow 0.08s',
           }}>
-            VOIR LES TECHNIQUES
+            {tHome('hero.ctaPrimary')}
           </Link>
-          <Link to="/rules" style={{
+          <Link to={`/${lang}/rules`} style={{
             padding: '12px 24px',
             background: 'var(--cream)',
             border: '3px solid var(--ink)',
@@ -81,24 +88,22 @@ export default function Home() {
             textDecoration: 'none',
             display: 'inline-block',
           }}>
-            LIRE LES RÈGLES
+            {tHome('hero.ctaSecondary')}
           </Link>
         </div>
       </section>
 
-      {/* Section divider */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
         <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
-        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.2em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>★ SECTIONS ★</span>
+        <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.2em', color: 'var(--orange)', whiteSpace: 'nowrap' }}>{tHome('sectionsLabel')}</span>
         <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
       </div>
 
-      {/* Feature cards */}
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 20 }}>
-        {FEATURES.map(f => (
+        {features.map(f => (
           <Link
             key={f.to}
-            to={f.to}
+            to={`/${lang}${f.to}`}
             style={{
               display: 'block',
               background: 'var(--cream)',
@@ -137,7 +142,7 @@ export default function Home() {
               letterSpacing: '0.12em',
               color: 'var(--orange)',
             }}>
-              EXPLORER →
+              {t('actions.explore')}
             </div>
           </Link>
         ))}

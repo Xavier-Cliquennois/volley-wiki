@@ -1,3 +1,4 @@
+import { useTranslation as useT } from 'react-i18next';
 import { ROLE_COLORS, type RoleColorKey } from '../../constants/positions';
 import { Arrows } from './Arrow';
 import type {
@@ -256,6 +257,9 @@ export function Court({
 }: CourtProps) {
   const geometry = VIEW_GEOMETRY[view];
   const sideLabels = showSideLabels ?? (view === 'full');
+  const { t } = useT('common');
+  const opponentLabel = t('court.opponentSide').toUpperCase();
+  const ourSideLabel = t('court.ourSide').toUpperCase();
 
   const players = layout.players ?? [];
   const zones = layout.zones ?? [];
@@ -329,7 +333,7 @@ export function Court({
                 whiteSpace: 'nowrap',
               }}
             >
-              ADVERSAIRES
+              {opponentLabel}
             </div>
           )}
           <div
@@ -347,7 +351,7 @@ export function Court({
               whiteSpace: 'nowrap',
             }}
           >
-            NOTRE CÔTÉ
+            {ourSideLabel}
           </div>
         </>
       )}

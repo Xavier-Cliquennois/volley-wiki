@@ -1,27 +1,34 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Head } from '../seo/Head';
+import { useCurrentLang } from '../i18n/paths';
 
 export default function NotFound() {
+  const { t } = useTranslation('common');
+  const { t: tSeo } = useTranslation('seo');
+  const lang = useCurrentLang();
+  const heading = tSeo('notFound.title').replace(' | Volley-Wiki', '').toUpperCase();
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingTop: 32 }}>
       <Head
-        title="Page introuvable | Volley-Wiki"
-        description="Cette page n'existe pas. Retournez à l'accueil pour explorer le wiki du volley-ball."
+        title={tSeo('notFound.title')}
+        description={tSeo('notFound.description')}
         path="/404"
         noindex
       />
       <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--teal)' }}>
-        ★ ERREUR 404
+        ★ 404
       </div>
       <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(36px, 6vw, 64px)', margin: 0, letterSpacing: '0.03em' }}>
-        PAGE INTROUVABLE
+        {heading}
       </h1>
       <p style={{ margin: 0, fontSize: 16, opacity: 0.7, maxWidth: 600 }}>
-        La page que vous cherchez n'existe pas ou a été déplacée. Revenez à l'accueil pour explorer le wiki.
+        {tSeo('notFound.description')}
       </p>
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 8 }}>
         <Link
-          to="/"
+          to={`/${lang}`}
           style={{
             padding: '12px 24px',
             border: '3px solid var(--ink)',
@@ -34,10 +41,10 @@ export default function NotFound() {
             textDecoration: 'none',
           }}
         >
-          ← ACCUEIL
+          ← {t('nav.home').toUpperCase()}
         </Link>
         <Link
-          to="/guides"
+          to={`/${lang}/guides`}
           style={{
             padding: '12px 24px',
             border: '3px solid var(--ink)',
@@ -49,7 +56,7 @@ export default function NotFound() {
             textDecoration: 'none',
           }}
         >
-          GUIDES
+          {t('nav.guides').toUpperCase()}
         </Link>
       </div>
     </div>

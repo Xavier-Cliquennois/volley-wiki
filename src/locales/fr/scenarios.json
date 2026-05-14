@@ -1,0 +1,77 @@
+{
+  "header": {
+    "kicker": "★ TACTIQUE",
+    "title": "SCÉNARIOS DE JEU",
+    "subtitle": "Visualisez des situations concrètes en 3D avec narration étape par étape."
+  },
+  "construction": {
+    "label": "PAGE EN COURS DE CONSTRUCTION",
+    "body": "Certaines animations 3D peuvent encore comporter des erreurs ou être incomplètes. Merci de votre indulgence — les scénarios sont en cours de finalisation."
+  },
+  "wizard": {
+    "step1": "1 · COMBIEN DE JOUEURS PAR ÉQUIPE ?",
+    "step2": "2 · QUELLE PHASE DE JEU ?",
+    "step3": "3 · QUEL CONTEXTE PRÉCIS ?",
+    "noMatch": "Aucun scénario disponible pour cette combinaison pour l'instant.",
+    "reset": "RÉINITIALISER",
+    "launch": "LANCER LE SCÉNARIO →"
+  },
+  "compactBar": {
+    "format": "FORMAT",
+    "phase": "PHASE",
+    "scenario": "SCÉNARIO",
+    "reset": "RÉINITIALISER",
+    "resetTitle": "Tout réinitialiser"
+  },
+  "placeholder": {
+    "title": "CHOISISSEZ UN SCÉNARIO",
+    "selectFormatAndPhase": "Sélectionnez un format et une phase au-dessus.",
+    "noScenarios": "Aucun scénario disponible pour cette combinaison.",
+    "clickInList": "Cliquez sur un scénario dans la liste au-dessus."
+  },
+  "phase": {
+    "attack": "Attaque",
+    "defense": "Défense",
+    "reception": "Réception"
+  },
+  "player": {
+    "controls": {
+      "play": "Lecture",
+      "pause": "Pause",
+      "replay": "Recommencer",
+      "previousStep": "Étape précédente",
+      "nextStep": "Étape suivante",
+      "camera": "Caméra",
+      "speed": "Vitesse",
+      "auto": "Auto",
+      "stepMode": "Étape",
+      "playbackModeLabel": "Mode de lecture"
+    },
+    "toggles": {
+      "trail": "Traînée",
+      "trailTitle": "Affiche une traînée derrière le ballon pour visualiser sa trajectoire",
+      "zones": "Zones",
+      "zonesTitle": "Affiche les 6 zones FIVB sur le terrain"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "clickHint": "cliquer pour sauter"
+    },
+    "cameras": {
+      "DEFAULT": "Large",
+      "TOP_DOWN": "Dessus",
+      "BEHIND_SERVE": "Serveur",
+      "ATTACKER_VIEW": "Attaquant"
+    },
+    "summary": {
+      "keyPoints": "POINTS CLÉS",
+      "commonMistakes": "ERREURS FRÉQUENTES",
+      "context": "Contexte"
+    },
+    "step": {
+      "label": "Étape {{current}} / {{total}}",
+      "defaultTitle": "Étape {{index}}"
+    },
+    "loading": "CHARGEMENT…"
+  }
+}

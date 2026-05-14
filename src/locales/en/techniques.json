@@ -1,0 +1,135 @@
+{
+  "header": {
+    "kicker": "★ DOCUMENTATION",
+    "title": "FUNDAMENTAL TECHNIQUES",
+    "subtitle": "Key volleyball skills — descriptions, key points, common mistakes and video resources."
+  },
+  "filters": {
+    "category": "CATEGORY",
+    "level": "LEVEL",
+    "countSingle": "{{count}} technique",
+    "countPlural": "{{count}} techniques",
+    "showAll": "SHOW ALL",
+    "noResults": "NO TECHNIQUE FOR THIS COMBINATION"
+  },
+  "sectionTitle": "★ TECHNIQUE CARDS",
+  "card": {
+    "when": "WHEN",
+    "keyPoints": "★ KEY POINTS",
+    "errors": "✗ COMMON MISTAKES"
+  },
+  "tags": {
+    "Service": "Serve",
+    "Réception": "Reception",
+    "Passe": "Set",
+    "Attaque": "Attack",
+    "Défense": "Defense",
+    "Débutant": "Beginner",
+    "Intermédiaire": "Intermediate",
+    "Avancé": "Advanced"
+  },
+  "items": {
+    "reception": {
+      "name": "Reception / Bump",
+      "description": "The forearm pass is the universal defensive skill. Joined forearms form a flat platform directing the ball to the setter. The platform is passive — the legs do the work of moving to the ball.",
+      "keyPoints": [
+        "Platform: forearms joined, thumbs parallel and pointing down",
+        "Sweet spot between wrists and elbows (not the wrists alone)",
+        "\"The ball goes where the platform points\" — the angle controls direction",
+        "FREEZE on contact: stop moving before the ball arrives",
+        "Never swing the arms — the platform is passive"
+      ],
+      "errors": [
+        "Swinging the arms on contact (cause #1 — unpredictable ball)",
+        "Joining the arms too early before moving",
+        "Broken platform (one forearm higher than the other)"
+      ],
+      "when": "Serve reception, deep court defense, low balls"
+    },
+    "set": {
+      "name": "Set",
+      "description": "The second touch that prepares the attack. Both hands form a triangle above the forehead. The setter is the conductor: their precision and reading of the opposing block define offensive efficiency.",
+      "keyPoints": [
+        "Thumb-index triangle: \"window\" to see the ball through",
+        "Contact: pulp and first phalanx of thumb, index and middle finger",
+        "Right foot slightly forward — \"sight\" pointing at the target",
+        "Feet, hips, shoulders \"squared up\" to the target BEFORE contact",
+        "Full extension of legs-hips-arms-wrists, \"Superman\" follow-through"
+      ],
+      "errors": [
+        "Visible double contact (hands not touching simultaneously)",
+        "Shoulders perpendicular to the net — ball too far",
+        "Lift (ball carried) — contact too slow"
+      ],
+      "when": "Second touch to prepare the attack"
+    },
+    "spike": {
+      "name": "Attack (Spike)",
+      "description": "The most complex ballistic action: kinetic chain in series feet → hips → trunk → shoulder → elbow → wrist. Any break in this chain destroys the energy transfer.",
+      "keyPoints": [
+        "3-4 step approach: finish with a left-right double plant",
+        "Golden rule: the last two steps are the fastest (slow → fast)",
+        "Contact slightly in front of the shoulder — never behind the head",
+        "Wrist snap: hand \"claws\" over the ball → topspin",
+        "Jump VERTICAL, not toward the net"
+      ],
+      "errors": [
+        "Incorrect approach timing (too early = re-jump with no power)",
+        "No wrist snap — flat ball without topspin",
+        "Landing on one foot (ACL risk)"
+      ],
+      "when": "Third touch to finish the rally"
+    },
+    "block": {
+      "name": "Block",
+      "description": "First line of defense against attacks. Block contact does not count as a team touch. The key: visual sequence BALL → SETTER → BALL → HITTER'S SHOULDER.",
+      "keyPoints": [
+        "Position: 45-60 cm from the net, hands high (palms facing the net)",
+        "Jump AFTER the hitter: 0.2-0.3s for a high ball",
+        "Penetrate as far OVER the net as possible, not just upward",
+        "Fingers spread, rigid wrists, no \"hole\" between the hands",
+        "\"Sealing the net\": shoulders, hands, arms in front of the ears"
+      ],
+      "errors": [
+        "Jumping too early (react to the hitter's plant)",
+        "Hands too soft — ball bounces back into own court",
+        "Jumping forward → net touch"
+      ],
+      "when": "In response to an opposing attack at the net"
+    },
+    "serve": {
+      "name": "Serve",
+      "description": "The only action without direct opponent pressure. Four types exist depending on the level. Golden rule: 80% of errors come from the toss — stabilize the toss before chasing power.",
+      "keyPoints": [
+        "Standing float: \"punch and freeze\" — stop the arm after contact for zero spin",
+        "Jump float: same mechanics as standing float + short approach",
+        "Jump topspin: full wrist snap, reserved for 1000+ reps",
+        "Stable toss = stable serve — rule #1",
+        "Aim for seams (gaps between passers) rather than players"
+      ],
+      "errors": [
+        "Float: extended follow-through that adds spin (kills the float effect)",
+        "Unstable or too-high toss",
+        "Foot fault on the back line"
+      ],
+      "when": "Start of every rally"
+    },
+    "defense": {
+      "name": "Defense (Dig)",
+      "description": "Post-block defense distinguishes intermediate teams from competitive ones. Three pillars: low position, freeze when the opponent hits, reading the hitter.",
+      "keyPoints": [
+        "Low position: feet wider than shoulders, knees at ~90°",
+        "\"Head in front of feet, shoulders in front of knees\"",
+        "Absolute FREEZE the moment the hitter strikes",
+        "Block shadow: if you can't see the hitter, you're behind the block — reposition",
+        "On a hard spike: don't arm (the spike's force is enough) — absorb"
+      ],
+      "errors": [
+        "Still moving at contact — impossible to control",
+        "Standing in the block's \"shadow\" (useless zone)",
+        "Diving too early when a lateral step would have done"
+      ],
+      "when": "Defense against opposing spikes, back-court coverage"
+    }
+  }
+}

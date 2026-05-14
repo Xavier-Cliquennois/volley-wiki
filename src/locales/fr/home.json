@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ DOCUMENTATION INTERACTIVE ★",
+  "hero": {
+    "logoTop": "VOLLEY",
+    "logoBottom": "WIKI",
+    "subtitle": "La référence technique du volleyball — techniques animées en 3D, règles, positions et glossaire.",
+    "ctaPrimary": "VOIR LES TECHNIQUES",
+    "ctaSecondary": "LIRE LES RÈGLES"
+  },
+  "sectionsLabel": "★ SECTIONS ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniques",
+      "desc": "Animations 3D interactives des gestes fondamentaux du volleyball.",
+      "to": "/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Positions",
+      "desc": "Rôles et responsabilités de chaque poste sur le terrain.",
+      "to": "/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guides",
+      "desc": "Guides techniques et tactiques détaillés avec diagrammes.",
+      "to": "/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Règles",
+      "desc": "Règlement officiel FIVB simplifié et expliqué.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossaire",
+      "desc": "Vocabulaire technique complet du volleyball.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scénarios",
+      "desc": "Séquences de jeu animées en 3D : attaque, défense, réception.",
+      "to": "/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

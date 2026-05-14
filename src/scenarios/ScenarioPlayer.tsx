@@ -1,21 +1,24 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
+import { useTranslation } from 'react-i18next';
 import { ScenarioScene } from './ScenarioScene';
 import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
 import type { PhaseKind, Scenario, ScenarioStep, TeamSize } from './types';
 import { resolvePlayerColor } from './data/_shared';
 import { CONFIGURATIONS } from '../pages/Positions';
+import { useCurrentLang } from '../i18n/paths';
 
 // Guide pointers used by the per-step deep-dive link. Slugs match the routes
-// registered in App.tsx (`/guides/:slug`).
-type GuideRef = { slug: string; label: string };
-const GUIDE_RECEPTION: GuideRef = { slug: 'reception', label: 'Guide de la réception' };
-const GUIDE_SERVICE: GuideRef = { slug: 'service', label: 'Guide du service' };
-const GUIDE_ATTAQUE: GuideRef = { slug: 'attaque', label: "Guide de l'attaque" };
-const GUIDE_CONTRE: GuideRef = { slug: 'contre', label: 'Guide du contre' };
-const GUIDE_DEFENSE: GuideRef = { slug: 'positionnement-defense', label: 'Guide du positionnement défensif' };
+// registered in routes.tsx (`/:lang/guides/:slug`). The visible label is
+// resolved via i18n at render time using the slug.
+type GuideRef = { slug: string };
+const GUIDE_RECEPTION: GuideRef = { slug: 'reception' };
+const GUIDE_SERVICE: GuideRef = { slug: 'service' };
+const GUIDE_ATTAQUE: GuideRef = { slug: 'attaque' };
+const GUIDE_CONTRE: GuideRef = { slug: 'contre' };
+const GUIDE_DEFENSE: GuideRef = { slug: 'positionnement-defense' };
 
 // In a defense scenario the reader's own role is defending — so opponent
 // actions ("réception adverse", "frappe adverse") point back to the defense
@@ -128,6 +131,9 @@ const btnSm: React.CSSProperties = {
 const btnActive: React.CSSProperties = { ...btnSm, background: 'var(--orange)', color: '#fff', borderColor: 'var(--orange)' };
 
 export default function ScenarioPlayer({ scenario, hideHeader = false, disableAutoFill = false }: ScenarioPlayerProps) {
+  const { t } = useTranslation('scenarios');
+  const { t: tGuides } = useTranslation('guides');
+  const lang = useCurrentLang();
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const playerRefs = useRef<Record<string, any>>({});
@@ -316,13 +322,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
     [scenario.timeline]
   );
 
-  const phaseLabel = useMemo(() => {
-    switch (scenario.config.phase) {
-      case 'attack': return 'Attaque';
-      case 'defense': return 'Défense';
-      case 'reception': return 'Réception';
-    }
-  }, [scenario.config.phase]);
+  const phaseLabel = t(`phase.${scenario.config.phase}`);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -357,7 +357,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   color: currentCameraPreset === key ? '#fff' : 'var(--ink)',
                 }}
               >
-                {CAMERA_PRESETS[key].label}
+                {t(`player.cameras.${key}`)}
               </button>
             ))}
           </div>
@@ -413,7 +413,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   <span style={{ fontSize: 36, marginLeft: 4, color: '#fff' }}>▶</span>
                 </div>
                 <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--cream)' }}>
-                  {mode === 'step' ? 'Lancer étape par étape' : 'Lancer la séquence'}
+                  {mode === 'step' ? t('player.controls.play') + ' · ' + t('player.controls.previousStep').toLowerCase() : t('player.controls.play')}
                 </span>
               </div>
             )}
@@ -457,8 +457,8 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   <button
                     key={step.id}
                     onClick={() => jumpToStep(idx)}
-                    title={`Étape ${idx + 1} — ${step.title.replace(/^\d+\.\s*/, '')}`}
-                    aria-label={`Étape ${idx + 1}`}
+                    title={`${t('player.step.defaultTitle', { index: idx + 1 })} — ${step.title.replace(/^\d+\.\s*/, '')}`}
+                    aria-label={t('player.step.defaultTitle', { index: idx + 1 })}
                     style={{ position: 'absolute', top: '50%', left, transform: 'translate(-50%, -50%)', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
                   >
                     <span style={{
@@ -482,22 +482,22 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
               </button>
               <button
                 onClick={() => setShowTrail(t => !t)}
-                title="Affiche une traînée derrière le ballon pour visualiser sa trajectoire"
+                title={t('player.toggles.trailTitle')}
                 style={showTrail ? { ...btnActive, padding: '4px 10px' } : { ...btnSm, padding: '4px 10px' }}
               >
-                Traînée
+                {t('player.toggles.trail')}
               </button>
               <button
                 onClick={() => setShowZones(z => !z)}
-                title="Affiche les 6 zones FIVB sur le terrain"
+                title={t('player.toggles.zonesTitle')}
                 style={showZones ? { ...btnActive, padding: '4px 10px' } : { ...btnSm, padding: '4px 10px' }}
               >
-                Zones
+                {t('player.toggles.zones')}
               </button>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center', border: '2px solid var(--ink)', background: 'var(--cream)' }} role="group" aria-label="Mode de lecture">
+              <div style={{ display: 'flex', alignItems: 'center', border: '2px solid var(--ink)', background: 'var(--cream)' }} role="group" aria-label={t('player.controls.playbackModeLabel')}>
                 <button
                   onClick={() => handleModeChange('auto')}
                   style={{
@@ -511,7 +511,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   }}
                   aria-pressed={mode === 'auto'}
                 >
-                  ▶ Auto
+                  ▶ {t('player.controls.auto')}
                 </button>
                 <button
                   onClick={() => handleModeChange('step')}
@@ -527,19 +527,19 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   }}
                   aria-pressed={mode === 'step'}
                 >
-                  ⏯ Étape
+                  ⏯ {t('player.controls.stepMode')}
                 </button>
               </div>
               <button
                 onClick={stepBackward}
                 disabled={activeStepIdx === 0}
                 style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === 0 ? 0.3 : 1 }}
-                aria-label="Étape précédente"
+                aria-label={t('player.controls.previousStep')}
               >⏮</button>
               <button
                 onClick={togglePlay}
                 style={{ width: 48, height: 48, background: 'var(--orange)', border: '2.5px solid var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, cursor: 'pointer', boxShadow: 'var(--shadow-sm)' }}
-                aria-label={isPlaying ? 'Pause' : isAtEnd ? 'Recommencer' : 'Lecture'}
+                aria-label={isPlaying ? t('player.controls.pause') : isAtEnd ? t('player.controls.replay') : t('player.controls.play')}
               >
                 {isPlaying ? '⏸' : isAtEnd ? '↺' : '▶'}
               </button>
@@ -547,7 +547,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                 onClick={stepForward}
                 disabled={activeStepIdx === scenario.steps.length - 1}
                 style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1 }}
-                aria-label="Étape suivante"
+                aria-label={t('player.controls.nextStep')}
               >⏭</button>
             </div>
           </div>
@@ -566,8 +566,8 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
       {/* Step timeline strip */}
       <div style={{ border: '2.5px solid var(--ink)', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)' }}>
         <div style={{ borderBottom: '2px solid var(--ink)', padding: '6px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--cream)' }}>
-          <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--ink)' }}>Timeline</span>
-          <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.4 }}>cliquer pour sauter</span>
+          <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.14em', color: 'var(--ink)' }}>{t('player.timeline.title')}</span>
+          <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, color: 'var(--ink)', opacity: 0.4 }}>{t('player.timeline.clickHint')}</span>
         </div>
         <div
           ref={stepStripRef}
@@ -608,7 +608,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                 </button>
                 {guide && (
                   <a
-                    href={guideHref(guide, scenario)}
+                    href={`/${lang}${guideHref(guide, scenario)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -620,7 +620,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                     }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <span>{guide.label}</span>
+                    <span>{tGuides(`list.${guide.slug}.title`)}</span>
                     <span aria-hidden="true" style={{ fontFamily: '"DM Mono", monospace' }}>↗</span>
                   </a>
                 )}
@@ -633,7 +633,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
       {/* Summary card */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 12 }}>
         <div style={{ border: '2.5px solid var(--ink)', padding: '18px 20px', background: 'var(--paper)', boxShadow: 'var(--shadow-sm)' }}>
-          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: 12 }}>Points clés</div>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--teal)', marginBottom: 12 }}>{t('player.summary.keyPoints')}</div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {scenario.summary.keyPoints.map((point, idx) => (
               <li key={idx} style={{ display: 'flex', gap: 10, fontSize: 13, color: 'var(--ink)', lineHeight: 1.5 }}>
@@ -644,7 +644,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
           </ul>
         </div>
         <div style={{ border: '2px solid var(--ink)', padding: '18px 20px', background: 'var(--cream)', opacity: 0.9 }}>
-          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 12 }}>Erreurs fréquentes</div>
+          <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: 12 }}>{t('player.summary.commonMistakes')}</div>
           <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             {scenario.summary.commonMistakes.map((mistake, idx) => (
               <li key={idx} style={{ display: 'flex', gap: 10, fontSize: 13, color: 'var(--ink)', opacity: 0.75, lineHeight: 1.5 }}>
