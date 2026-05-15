@@ -1,3 +1,1715 @@
 {
-  "_note": "Rehbere özel içerik çevirileri, t() çağrıları aracılığıyla rehber bileşenlerinde satır içi yaşar."
+  "attaque": {
+    "goldenRule": {
+      "mantra": "YAVAŞ YAKLAŞMA → HIZLI → POWER STEP → CLOSING → DİKEY SIÇRAMA → KOL ÖNDE GERGİN → BİLEK ŞAKLATMA",
+      "body": "Güç, yalnızca koldan değil tam kinetik zincirden gelir. Son iki adımı hızlı olan ritimli bir yaklaşma, nihai gücün %70'ini üretir."
+    },
+    "phases": {
+      "title": "Smacın 5 fazı",
+      "items": [
+        { "name": "Başlatma", "desc": "Pası okuma ve yaklaşma kararı" },
+        { "name": "Wind-up", "desc": "Yaklaşma koşusunun başlangıcı" },
+        { "name": "Cocking", "desc": "Dirsek omuzun üstünde, el kulağın arkasında — güç pozisyonu" },
+        { "name": "Hızlanma", "desc": "Sıralı rotasyon: kalçalar → gövde → omuz → dirsek → bilek" },
+        { "name": "Temas + takip", "desc": "Bilek şaklatma, el topu üstten \"pençeleyerek\" yakalar → topspin" }
+      ],
+      "footerLabel": "İdeal temas",
+      "footer": "Vuran omuzun hafifçe önünde, asla başın arkasında değil (güç kaybı + sakatlık riski). Sıçrama anında file mesafesi: minimum 30-50 cm."
+    },
+    "approach": {
+      "title": "Yaklaşma koşusu",
+      "three": {
+        "title": "3 adım — Başlangıç",
+        "sub": "Sol-sağ-sol (sağ elini kullananlar için)",
+        "items": [
+          { "label": "Adım 1 (sol)", "text": "Kısa yönlendirici adım, saldırı yönüne dönüş" },
+          { "label": "Adım 2 (sağ)", "text": "Power step — uzun ve alçak, önce topuk, ağırlık merkezini indirme" },
+          { "label": "Adım 3 (sol)", "text": "Closing step — kısa, yatay hareketi frenler ve dikeye dönüştürür" }
+        ]
+      },
+      "four": {
+        "title": "4 adım — Standart yarışma",
+        "sub": "Sağ-sol-sağ-sol (sağ elini kullananlar için)",
+        "items": [
+          { "label": "Adım 1 (sağ)", "text": "Gözlem adımı, yavaş ritim" },
+          { "label": "Adım 2 (sol)", "text": "Hızlanma" },
+          { "label": "Adım 3 (sağ)", "text": "Power step — en önemlisi, uzun ve alçak" },
+          { "label": "Adım 4 (sol)", "text": "Fileye paralel closing step" }
+        ],
+        "rule": "Altın kural: son iki adım en hızlı olanlardır — yavaş → hızlı."
+      }
+    },
+    "timing": {
+      "title": "Pas tipine göre zamanlama",
+      "headerType": "Pas tipi",
+      "headerWhen": "Yaklaşmaya ne zaman başlamalı",
+      "rows": [
+        { "type": "Yüksek top (3. tempo)", "timing": "GEÇ başla — top pasörün ellerinden ayrıldığında" },
+        { "type": "2. tempo (Hut/Go)", "timing": "Pas pasöre doğru gelirken başla" },
+        { "type": "1. tempo (Quick)", "timing": "ERKEN başla — pasör topa dokunduğunda zaten havada ol" },
+        { "type": "Slide", "timing": "Pasör pası aldığı anda başla" }
+      ]
+    },
+    "types": {
+      "title": "Mevkiye göre saldırı tipleri",
+      "keyPointsLabel": "Anahtar noktalar",
+      "shotsLabel": "Vuruş seçimleri",
+      "items": [
+        {
+          "id": "outside",
+          "name": "Bölge 4 saldırısı (Outside / OH / Smaçör)",
+          "position": "Sol kanat",
+          "description": "Saldırının öğrenme temeli. Smaçör (Outside Hitter) en yüksek top hacmini alır — pasörün \"güvenli\" seçeneğidir. Soldan 45° açıyla yaklaşma.",
+          "keyPoints": [
+            "Fileye göre ~45°'lik açıyla 4 adımlı yaklaşma",
+            "Fileye 30-50 cm mesafede sıçrama",
+            "\"Hut\" pası (yüksek 3. tempo) veya \"Go\" (hızlı 2. tempo)",
+            "DİKEY sıçrama yapın — fileye doğru değil",
+            "Temas vuran omuzun hafifçe önünde"
+          ],
+          "shots": ["Çapraz (diagonal)", "Paralel (yan çizgi)", "Cut shot (kısa açı <3 m)", "Plase (yumuşak vuruş)", "Roll shot (topspin'li yumuşak vuruş)"]
+        },
+        {
+          "id": "middle",
+          "name": "Orta saldırı (Quick / 1. tempo)",
+          "position": "Ön orta",
+          "description": "En hızlı saldırı. Orta oyuncu, pasör topa dokunmadan ÖNCE veya tam o anda havadadır. Çok alçak (30-50 cm) ve çok kısa pas.",
+          "keyPoints": [
+            "Yaklaşmayı ERKEN başlat — pasörün pasında zaten havada ol",
+            "2-3 adımlı yaklaşma, çıkarken kol zaten kurulu",
+            "\"Ghost Middle\" konsepti: top gelmese bile, quick'i tam koş, rakip bloku sabitle → smaçörleri serbest bırakır",
+            "File üstünde 30-50 cm yükseklikte temas",
+            "Hızlı geçiş: blok → yaklaşma 1-2 saniyede"
+          ],
+          "shots": ["Pasörün önünde quick (\"1\")", "Pasörün arkasında back-1", "Slide (file boyunca arkadan başlama)", "31/Gap (pasör ile anten arası kaydırılmış)"]
+        },
+        {
+          "id": "opposite",
+          "name": "Bölge 2 saldırısı (Pasör çaprazı / Opposite)",
+          "position": "Sağ kanat",
+          "description": "Pasör çaprazı (opposite) bölge 2'den saldırır. Sol elini kullananlar için ideal (vuran omuz sağ anten tarafında = maksimum pencere). Sağ elini kullananlar için: daha belirgin gövde rotasyonu, antenden daha uzakta konumlanma.",
+          "keyPoints": [
+            "Outside'a simetrik yaklaşma ama sağdan",
+            "Cut shot için baş parmak aşağıda bitir",
+            "Karşılama bozulduğunda pasörün \"release\" çözümü",
+            "Arka hatta iken P1'den (D bölgesi) arka hat saldırısı"
+          ],
+          "shots": ["Çapraz", "Paralel", "Arka hattan Pipe/D", "Bölge 5'e çapraz cut shot"]
+        },
+        {
+          "id": "backrow",
+          "name": "Arka hat saldırısı (Back-row / Pipe)",
+          "position": "Arka orta veya sağ",
+          "description": "Arka bölgeden saldırı. Sıçrama 3 m çizgisinin ARKASINDA yapılmalıdır. 3 blokçuya karşı 4 saldıran avantajı sağlar.",
+          "keyPoints": [
+            "Sıçrama zorunlu olarak 3 m çizgisinin arkasında (aksi halde faul)",
+            "Yasal sıçramadan sonra ön bölgeye iniş = OK",
+            "Pipe: P6'dan, quick'in arka pası (BIC = quick'in hemen üstünde)",
+            "D bölgesi: P1'den, genellikle pasör çaprazının sığınak saldırısı"
+          ],
+          "shots": ["Pipe (arka-orta)", "D bölgesi (arka-sağ)", "A bölgesi (arka-sol, nadir)", "Kötü pasta plase"]
+        }
+      ]
+    },
+    "special": {
+      "title": "Özel saldırılar",
+      "items": [
+        {
+          "name": "Plase / Tip",
+          "level": "beginner-intermediate",
+          "levelLabel": "Başlangıç → Orta",
+          "desc": "Smaçla AYNI yaklaşma (kamuflaj kritik), sonra temasta kolu yavaşlat ve topu parmak ucuyla yerleştir. Yön: sıçramadan ÖNCE belirlenmiş boş bölge."
+        },
+        {
+          "name": "Roll shot / Topspin yumuşak vuruşu",
+          "level": "intermediate",
+          "levelLabel": "Orta",
+          "desc": "Bloğun arkasında kısa düşen top için güçlü topspin'le düşük hızda (~%50-70) vuruş. Plaseden daha hızlı olduğu için okunması daha zor."
+        },
+        {
+          "name": "Cut shot / Kısa açı",
+          "level": "intermediate-plus",
+          "levelLabel": "Orta+",
+          "desc": "Bölge 1'e (4'ten) veya bölge 5'e (2'den) keskin açı. Baş parmak aşağıda bitir, el topu yanlamasına kesecek şekilde. Topun yan tarafına vur, üstüne değil."
+        },
+        {
+          "name": "Tooling / Wipe",
+          "level": "intermediate-plus",
+          "levelLabel": "Orta+",
+          "desc": "Topu kasıtlı olarak bloğun ellerinden dışarı çıkarmak. Fileye yakın pasta, dikey sıçra ve blokçunun dış elini \"ray\" gibi kullanarak topu yanlamasına it."
+        }
+      ]
+    },
+    "errors": {
+      "title": "Sık yapılan hatalar",
+      "subtitle": "Kaçınılması gerekenler",
+      "items": [
+        { "label": "Yaklaşma zamanlaması", "text": "Çok erken: güçsüz yeniden sıçrama. Çok geç: temasta kol geride gergin." },
+        { "label": "Hatalı ayak sıralaması", "text": "Her zaman sol-sağ ile bitir (sağ elini kullananlar) — iki ayak neredeyse eş zamanlı." },
+        { "label": "Topspin yok", "text": "Düz el = bilek şaklatma yok = top çok uzun. Topu üstten \"pençele\"." },
+        { "label": "File faulü", "text": "Yakın pasta öne doğru sıçrama. DİKEY sıçra, öne değil." },
+        { "label": "Arka hat faulü", "text": "Kalkış anında ayak 3 m çizgisi üstünde veya önünde." },
+        { "label": "Tek ayak iniş", "text": "Slide hariç: dizi korumak için iki ayak üstüne in (ACL riski)." }
+      ]
+    },
+    "videos": {
+      "title": "Video kaynakları",
+      "items": [
+        { "title": "Nasıl saldırılır — 3 adım (Sikana)", "url": "https://www.youtube.com/watch?v=3aQgfk0VtEA" },
+        { "title": "Voleybolda smaç (CEPSUM)", "url": "https://www.youtube.com/watch?v=Gn1Otje3beg" },
+        { "title": "Detaylı saldırı koşusu", "url": "https://www.youtube.com/watch?v=ub4XoCJMUzU" },
+        { "title": "Seb'in Dizisi — smaç hakkında her şey", "url": "https://www.youtube.com/watch?v=JvxZgViw_os" },
+        { "title": "Saldırmak için sıçramak (Sikana)", "url": "https://www.youtube.com/watch?v=6GOHF5cNIKs" },
+        { "title": "Plase saldırı (Sikana)", "url": "https://www.youtube.com/watch?v=sCiu8Mqm1d0" }
+      ]
+    }
+  },
+  "contre": {
+    "goldenRule": {
+      "mantra": "TOP → PASÖR → TOP → SALDIRGANIN OMZU → SIÇRAMA → FİLE GEÇİŞİ",
+      "body": "Düzenli pratik ve zamanlamaya özel dikkat ile bloklarınızı önemli ölçüde geliştirirsiniz. İyi zamanlanmış orta sıçrama yüksekliğinde bir blok, kötü zamanlanmış çok yüksek bir sıçramadan iyidir."
+    },
+    "fundamentals": {
+      "title": "Bloğun temelleri",
+      "html": "Blok, hücum silahına dönüşebilen kritik bir savunma hareketidir. Anahtar, <strong>mükemmel zamanlama</strong> ve oyunun iyi okunmasındadır."
+    },
+    "timingSteps": {
+      "title": "Zamanlama: başarının anahtarı",
+      "items": [
+        {
+          "title": "Topu değil saldırganı izleyin",
+          "desc": "Vuruşun zamanını ve yönünü öngörmek için saldırganın omuzlarına ve koluna bakın."
+        },
+        {
+          "title": "Saldırgandan SONRA sıçrayın",
+          "desc": "Saldırganın sıçrama fazına girmesini bekleyin. Aynı anda veya öncesinde sıçrarsanız çok erken inersiniz."
+        },
+        {
+          "title": "İdeal gecikme: 0,2 ile 0,3 saniye",
+          "desc": "Saldırgan sıçradığında zihninizden \"BİR\" sayın, sonra hemen sıçrayın. Bu saniyenin küsuratı kritiktir."
+        },
+        {
+          "title": "Filenin üstüne geçin",
+          "desc": "Sıçramanızın zirvesinde, ellerinizi ve kollarınızı yalnızca yukarı değil — öne ve aşağı doğru itin."
+        }
+      ]
+    },
+    "types": {
+      "title": "Farklı blok tipleri",
+      "objectiveLabel": "Hedef",
+      "items": [
+        {
+          "name": "Hücum bloğu",
+          "objective": "Topu doğrudan rakip sahaya geri göndermek",
+          "points": [
+            { "label": "Pozisyon", "text": "Eller açık, parmaklar gergin ve ayrık" },
+            { "label": "Aksiyon", "text": "Filenin üstüne maksimum geçiş, kollar öne gergin" },
+            { "label": "Hedef", "text": "Topu rakip yere indirmek için bileklerinizi sıkın" },
+            { "label": "Ne zaman", "text": "İyi yerleştiğinizde ve saldırıyı okuduğunuzda" }
+          ]
+        },
+        {
+          "name": "Çevreleme bloğu",
+          "objective": "Savunmanızın toparlanması için topu yavaşlatmak",
+          "points": [
+            { "label": "Pozisyon", "text": "Eller bitişik, avuçlar size dönük" },
+            { "label": "Aksiyon", "text": "İtmek yerine darbeyi emin" },
+            { "label": "Sonuç", "text": "Top kendi sahanıza yumuşakça düşer ve oynanabilir" },
+            { "label": "Ne zaman", "text": "Geç kaldığınızda veya kötü yerleştiğinizde" }
+          ]
+        },
+        {
+          "name": "Sabitleme bloğu",
+          "objective": "Bazı saldırı bölgelerini engellemek",
+          "points": [
+            { "label": "Pozisyon", "text": "Belirli bir bölgeyi kapatın (paralel veya çapraz)" },
+            { "label": "Aksiyon", "text": "Ellerinizi korunacak bölgeye yönlendirin" },
+            { "label": "Taktik", "text": "Saldırganı, savunmacılarınızın hazır olduğu bölgeye vurmaya zorlayın" },
+            { "label": "Ne zaman", "text": "Arka savunmanızla uyum içinde" }
+          ]
+        },
+        {
+          "name": "2 veya 3 kişilik blok (toplu blok)",
+          "objective": "Aşılmaz bir duvar oluşturmak",
+          "points": [
+            { "label": "Koordinasyon", "text": "Aynı anda birlikte sıçrayın" },
+            { "label": "Yerleşim", "text": "Dış blokçular, orta blokçuya göre konumlanır" },
+            { "label": "Eller", "text": "Ellerinizi takım arkadaşlarınızınkilerle birleştirin (boşluk yok)" },
+            { "label": "İletişim", "text": "Bir blokçu \"paralel\" veya \"çapraz\" diye seslenir, koordinasyon için" }
+          ]
+        }
+      ]
+    },
+    "timingTips": {
+      "title": "Zamanlamanızı geliştirme ipuçları",
+      "items": [
+        { "label": "\"Bir-iki\" alıştırması", "text": "Antrenmanda saldırgan sıçradığında \"BİR\", siz sıçradığınızda \"İKİ\" deyin. Gerekli gecikmeyi yaratır." },
+        { "label": "Omuzlara bakın", "text": "Saldırganın omuz yönelimi, vuruşun yönünü gösterir." },
+        { "label": "Pası analiz edin", "text": "Yüksek pas = daha fazla zaman. Gergin pas = hızlı tepki." },
+        { "label": "Erken konumlanın", "text": "Son anda koşmaktansa bekleme pozisyonunda olmak iyidir." },
+        { "label": "Sıçramanızı çalışın", "text": "Ne kadar yüksek sıçrarsanız, zamanlama hatasında o kadar marjınız olur." }
+      ]
+    },
+    "visualSequence": {
+      "title": "Elit görsel dizi",
+      "intro": "En iyi blokçular topa bakmaz — kesin bir dizi takip eder:",
+      "chips": ["TOP", "PASÖR", "TOP", "SALDIRGANIN OMZU"],
+      "items": [
+        { "label": "1. TOP", "text": "Topun pasöre doğru gittiğini görün" },
+        { "label": "2. PASÖR", "text": "Temas anında pasörün ellerini okuyun — pasın yönü" },
+        { "label": "3. TOP", "text": "Yönü doğrulamak için topu kısaca izleyin" },
+        { "label": "4. SALDIRGANIN OMZU", "text": "Saldırganın omzunu kilitleyin — temastan önce vuruş yönünü verir" }
+      ]
+    },
+    "timingByAttack": {
+      "title": "Saldırı tipine göre kesin zamanlama",
+      "headerType": "Saldırı tipi",
+      "headerWhen": "Blokçu sıçrama zamanlaması",
+      "rows": [
+        { "type": "Quick / 1. tempo (orta)", "timing": "Smaçörle BİRLİKTE veya biraz önce (commit block)" },
+        { "type": "Gergin / 2. tempo kanat", "timing": "Smaçörden ~0,1 sn sonra" },
+        { "type": "Yüksek top kanat (3. tempo)", "timing": "Smaçörden 0,2–0,3 sn sonra" },
+        { "type": "Fileye yakın pas", "timing": "Smaçörle BİRLİKTE" },
+        { "type": "Fileden uzak pas", "timing": "~0,5 sn sonra veya sıçramama" },
+        { "type": "Slide (orta)", "timing": "BİRLİKTE veya hemen sonra — yanal takip" }
+      ]
+    },
+    "blockStyles": {
+      "title": "Read blocking ile Commit blocking karşılaştırması",
+      "read": {
+        "label": "Read blocking — tavsiye edilen",
+        "body": "Blokçu pasörün kararını bekler, topu ve saldırganı okur, sonra hareket eder. \"Bunch read\" pozisyonu (hepsi merkeze yakın, sonra antene patlama).",
+        "points": [
+          "Pasların çoğunda istikrarlı ve mevcut",
+          "Kalçaları ve dizleri korur",
+          "Tüm amatör seviyelere uygun"
+        ]
+      },
+      "commit": {
+        "label": "Commit blocking — ileri/profesyonel",
+        "body": "Orta blokçu pasörün top bırakışından ÖNCE quick'le sıçramaya karar verir. Rakip hızlı saldırıyı iptal eder, ancak pasör başka tarafa pas verirse orta blokçu tamamen oyun dışı kalır.",
+        "points": [
+          "Baskın orta oyunculara karşı etkili",
+          "Pasör uyum sağlarsa yüksek risk",
+          "Mükemmel okumaya sahip oyunculara özel"
+        ]
+      }
+    },
+    "jumpTechnique": {
+      "title": "Blok için sıçrama tekniği",
+      "columns": [
+        {
+          "title": "Başlangıç pozisyonu",
+          "items": [
+            { "text": "Ayaklar omuz genişliğinde açık" },
+            { "text": "Ağırlık ayakların ön kısmında" },
+            { "text": "Dizler hafifçe bükülü" },
+            { "text": "Kollar vücudun yanında veya hafifçe önde" },
+            { "text": "Fileye yaklaşık 30–50 cm mesafede pozisyon" }
+          ]
+        },
+        {
+          "title": "Sıçrama",
+          "items": [
+            { "label": "Kayma adımı", "text": "Hareket etmeniz gerekiyorsa hızlı kayma adımı kullanın" },
+            { "label": "Bükün", "text": "Bacaklarınızı hızla bükün (çok aşağı inmeyin)" },
+            { "label": "Kol salınımı", "text": "Kollarınızı patlayıcı şekilde yukarı atın" },
+            { "label": "Tam uzama", "text": "Maksimum yükseklik için bacaklarınızı tamamen uzatın" }
+          ]
+        },
+        {
+          "title": "Havada",
+          "items": [
+            { "text": "Kollarınızı gergin ve sıkı tutun" },
+            { "text": "Eller açık, parmaklar gergin ve ayrık" },
+            { "text": "Filenin üstüne geçin (file teması yok!)" },
+            { "text": "Dengeyi korumak için gövdenizi sıkın" }
+          ]
+        }
+      ]
+    },
+    "errors": {
+      "title": "Kaçınılması gereken sık hatalar",
+      "subtitle": "Yaygın hatalar",
+      "items": [
+        { "label": "Çok erken sıçramak", "text": "Saldırgan vururken iniyorsunuz — daha uzun bekleyin!" },
+        { "label": "Topa bakmak", "text": "Saldırgan hakkında bilgi kaybediyorsunuz — oyuncuya bakın!" },
+        { "label": "Eller çok yumuşak", "text": "Top kendi sahanıza dönüyor — parmaklarınızı gerin ve sıkın!" },
+        { "label": "Öne sıçramak", "text": "Fileye değiyorsunuz — dikey sıçrayın!" },
+        { "label": "Kolları çok erken indirmek", "text": "Yere inene kadar kollarınızı yukarıda tutun." }
+      ]
+    },
+    "exercises": {
+      "title": "Antrenman alıştırmaları",
+      "items": [
+        {
+          "title": "Partnerle zamanlama",
+          "desc": "Partner topsuz saldırıyor gibi yapar. Sadece sıçrama zamanlamanızı çalışırsınız. 20 kez tekrarlayın."
+        },
+        {
+          "title": "Sabit saldırıya karşı blok",
+          "desc": "Saldırgan sabit bir pozisyondan vurur. Zamanlama ve tekniğe odaklanın. Hızı kademeli olarak artırın."
+        },
+        {
+          "title": "Omuz okuma",
+          "desc": "Saldırgan vuruşlarını çeşitlendirir (paralel/çapraz). Yönü öngörmek için omuzlarını okumaya çalışın."
+        },
+        {
+          "title": "Hareket + blok",
+          "desc": "Hızlı yanal hareketler ve ardından blok çalışın. Maç durumlarını simüle eder."
+        }
+      ]
+    },
+    "proTips": {
+      "title": "Profesyonel ipuçları",
+      "items": [
+        { "label": "Sabır", "text": "Blok en zor tekniklerden biridir. Kendinize sabırlı olun." },
+        { "label": "Tekrar", "text": "Kas hafızası yüzlerce tekrarla oluşur." },
+        { "label": "Video", "text": "Zamanlama ve tekniğinizi analiz etmek için kendinizi kaydedin." },
+        { "label": "Profesyonelleri izleyin", "text": "Profesyonel oyuncuların oyunu nasıl okuduğunu ve sıçramalarını nasıl zamanladığını izleyin." },
+        { "label": "Basit başlayın", "text": "Hızlı saldırılara geçmeden önce yavaş saldırılara karşı bloğu ustalaştırın." }
+      ]
+    },
+    "videos": {
+      "title": "Video kaynakları",
+      "items": [
+        { "title": "Blok öğrenmek (Sikana)", "url": "https://www.youtube.com/watch?v=hJKueZn-tNQ" },
+        { "title": "Voleybolda blok (CEPSUM)", "url": "https://www.youtube.com/watch?v=_MchJmDMn0E" },
+        { "title": "Alıştırma: blok için sıçrama", "url": "https://www.youtube.com/watch?v=GDS8PoWxO6Q" },
+        { "title": "Alıştırma: bir saldırıyı bloklamak", "url": "https://www.youtube.com/watch?v=S6TcodMWFz4" }
+      ]
+    }
+  },
+  "service": {
+    "goldenRule": {
+      "mantra": "",
+      "body": "Servis hatalarının %80'i atıştan (toss) kaynaklanır. Güç aramadan önce atışı sabitleyin."
+    },
+    "types": {
+      "title": "SERVİS TİPLERİ",
+      "biomechanicsLabel": "TEMEL BİYOMEKANİK",
+      "stepsLabel": "UYGULAMA ADIMLARI (SAĞ ELİNİ KULLANAN)",
+      "errorsLabel": "✗ SIK HATALAR",
+      "exercisesLabel": "★ ALIŞTIRMALAR",
+      "videosLabel": "VİDEOLAR",
+      "items": [
+        {
+          "id": "cuillere",
+          "name": "Alttan servis",
+          "level": "beginner",
+          "levelLabel": "Başlangıç",
+          "tagline": "underhand — bel altında sarkaç hareketi",
+          "description": "Bel altında vuran kolun sarkaç hareketi. Tüm seviyelerde yasal, başlangıç seviyesindekiler veya omuz sakatlığı olanlar için tavsiye edilir. Bölgesel yetişkin seviyenin üzerinde neredeyse hiç görülmez.",
+          "biomechanics": [
+            "Kısa kinetik zincir: kalça → omuz → kol → el",
+            "Gövde rotasyonu olmadan sarkaç hareketi",
+            "Ağırlık transferi: arka ayak → ön ayak",
+            "Temas: topun merkezinin altında elin topuğu veya kapalı yumruk"
+          ],
+          "steps": [
+            "Sol ayak önde, ağırlık arka bacakta",
+            "Sol el topu kolun ekseninde, kalça hizasında tutar",
+            "Sağ kol arkada kurulu, avuç açık veya yumruk kapalı",
+            "Temastan hemen önce topu bırakın — fırlatmayın",
+            "Öne sarkaç, topun merkezinin altına vuruş",
+            "Kol takip eder ve hedefi gösterir, ağırlık ön ayağa aktarılır"
+          ],
+          "errors": [
+            { "label": "Top çok aşağıda veya yana tutuluyor", "text": "Topu vuran kolun ekseninde, kalça hizasında tutun" },
+            { "label": "Parmaklarla vuruş", "text": "Elin topuğunu kullanın — daha geniş ve sabit yüzey" },
+            { "label": "Çok yüksek atış", "text": "Yüksekliğe fırlatmadan topu sadece bırakın" },
+            { "label": "Gevşek bilek", "text": "Net darbe için temasta kolu kilitleyin" }
+          ],
+          "exercises": [
+            "Bowling-çember: fileden 4 m uzaktaki bölgelere nişan alma",
+            "4 m'den 10 servis sonra her seride 1 m geri çekilerek son çizgiye kadar",
+            "Yerde 4×3 m hedefler — hedef %50 doğruluk"
+          ],
+          "videos": [
+            { "title": "Alttan servis + tenis servisi (Sikana)", "url": "https://www.youtube.com/watch?v=xl6twpn3Qs8" },
+            { "title": "Alttan nasıl servis atılır", "url": "https://www.youtube.com/watch?v=MWna318SrKo" }
+          ]
+        },
+        {
+          "id": "float",
+          "name": "Ayakta jump float servisi",
+          "level": "intermediate",
+          "levelLabel": "Orta",
+          "tagline": "standing float — amatörlerin %90'ının varsayılan servisi",
+          "description": "Dönüş olmadan öngörülemez yörünge üreten servis (\"knuckleball\" etkisi). Kritik bir hızda (~12-13 m/s), asimetrik girdaplar rastgele yanal kaldırma kuvvetleri yaratır. Önceliğe alınması gereken servis.",
+          "biomechanics": [
+            "Tam kinetik zincir: bacaklar → kalça → gövde → omuz → dirsek → el",
+            "\"Yay ve ok\" pozisyonu: dirsek omuzun üstünde yüksek, el kulağın arkasında",
+            "Bilek KİLİTLİ ve sağlam — float etkisi için mutlak koşul",
+            "Temas: topun merkezinde elin topuğu",
+            "\"Punch and freeze\": KISA takip — el temas sonrası hemen durur"
+          ],
+          "steps": [
+            "Vücut fileye 45°'de, ayaklar omuz genişliğinde açık",
+            "Sol kol omzun önünde uzanmış, top baş hizasında",
+            "Çok kısa atış: topu omzun 30-50 cm üstüne \"yerleştirin\" — top dönmez",
+            "Sol ayak topun yerleştirilmesinden hemen sonra hedefe doğru ilerler",
+            "Temasta kolun tam uzaması, el sağlam ve düz",
+            "FREEZE: temas sonrası hareketin hemen durması — kol takibi yok"
+          ],
+          "errors": [
+            { "label": "Uzun kol takibi", "text": "1 numaralı başarısızlık nedeni: takip float'ı öldüren spin ekler — anında freeze" },
+            { "label": "Çok yüksek atış", "text": "Top fileye düşer — kısa atış, sadece 30-50 cm" },
+            { "label": "Dönen atış", "text": "Topa spin verir — topu yerleştirin, fırlatmayın" },
+            { "label": "Sadece avuçla temas", "text": "Düz yüzey için elin topuğunu (avuç altı) kullanın" }
+          ],
+          "exercises": [
+            "Toss & Drop: yerde bir bölge işaretleyin, vurmadan 20 kez atış — hedef 20'de 18 işaret üstünde",
+            "Duvarda \"punch and freeze\" 3 m'den: hareketin hemen durmasını çalışın",
+            "Bir partner tarafından görsel olarak onaylanmış 5 ardışık döndürmesiz servis"
+          ],
+          "videos": [
+            { "title": "4 dakikada float servis", "url": "https://www.youtube.com/watch?v=0z2_R2cMU7g" },
+            { "title": "Float servisi geliştirme", "url": "https://www.youtube.com/watch?v=mdEXHKNjfQ8" },
+            { "title": "Servis: float + tenis (CEPSUM)", "url": "https://www.youtube.com/watch?v=_e00ogqoNZw" }
+          ]
+        },
+        {
+          "id": "jumpfloat",
+          "name": "Sıçramalı float servisi",
+          "level": "advanced",
+          "levelLabel": "İleri",
+          "tagline": "jump float — kadın elit standardı",
+          "description": "Kısa koşu ve sıçramayla float. Temas yüksekliği, hız ve iniş açısı kazandırır. Kadın elitlerin standardı haline geldi (son araştırmalara göre profesyonel kadınların %86'sı). Jump topspin'den daha az riskli ama ayakta float'tan daha rahatsız edici.",
+          "biomechanics": [
+            "Kısa yaklaşma koşusu (2 ila 4 adım)",
+            "Sıçrama sırasında kollar yay-ok pozisyonunda — kolların ittiği smaçtan farklı",
+            "Top hızını koşu sağlar, kol tek başına değil",
+            "Temas yüksek noktada başın hafifçe önünde",
+            "Bilek kilitli + freeze ayakta float ile aynı"
+          ],
+          "steps": [
+            "Çizginin 2-3 m arkasında pozisyon, top sol elde",
+            "Adım 1 (sağ) hazırlık, kollar gevşek",
+            "Adım 2 (sol): topu ~1,5 m yüksekliğe dönüşsüz at",
+            "Adım 3 + hop: çizginin arkasında iki ayak üstünde sıçrama — kollar yay-oka kalkar",
+            "Dikey ve hafifçe öne sıçrama, vücut sıkı",
+            "Kol gergin vuruş, topun merkezinde elin topuğu",
+            "Anında FREEZE — sahanın içine iniş"
+          ],
+          "errors": [
+            { "label": "Çok yüksek atış", "text": "Jump spin refleksi — atışı ayakta float gibi kısa tutun" },
+            { "label": "Saldırı gibi savrulan kollar", "text": "Spinli bir smaca dönüşür — yay-ok pozisyonunu koruyun" },
+            { "label": "Uzun takip", "text": "Ayakta float ile aynı: freeze zorunlu" },
+            { "label": "Kalkışta ayak faulü", "text": "Sıçramanın son çizginin arkasında yapıldığını doğrulayın" }
+          ],
+          "exercises": [
+            "Koşu eklemeden önce ayakta float'ı ustalaştırın (sağlam freeze)",
+            "Vurmadan sadece koşu: düşük yükseklikte sabit atışı çalışın",
+            "Kontrollü hızda jump float: güçten önce düzenlilik"
+          ],
+          "videos": [
+            { "title": "Sıçramalı float servisi — INF'AUX ENTRAÎNEURS (Bretagne)", "url": "https://www.youtube.com/watch?v=P5xCgV7nfO8" },
+            { "title": "Jump float + smaçlı (Volleyball Canada)", "url": "https://www.youtube.com/watch?v=X1Mq9K90FCk" }
+          ]
+        },
+        {
+          "id": "jumpspin",
+          "name": "Sıçramalı topspin servisi",
+          "level": "competition",
+          "levelLabel": "Yarışma",
+          "tagline": "jump serve — çizginin arkasından smaç",
+          "description": "\"Çizginin arkasından smaç\": tam hızla topspin'le vurulan top (güçlü kulüplerde 50-60 mph). En yüksek ace potansiyeli ama aynı zamanda en yüksek hata oranı. Antrenmanda 1000+ tekrar yatırımı yapanlara özel.",
+          "biomechanics": [
+            "Back-row smacına benzer 3-4 adımlı yaklaşma",
+            "Hafif ön spin ile yüksek atış (önünüze 1-1,5 m)",
+            "Sıralı rotasyon: kalça → gövde → omuz → dirsek → bilek",
+            "Temas topun 10-11 yönünde",
+            "Topspin için tam bilek şaklatma (elitte ~30 dönüş/sn)",
+            "Tam takip — float'ın tersi"
+          ],
+          "steps": [
+            "Çizginin 3-4 m arkasında pozisyon, top vuran elde",
+            "Adım 1 (sağ) + hafif topspin'le yüksek atış",
+            "Adım 2 (sol): hızlanma",
+            "Adım 3 (sağ): uzun power step, ağırlık merkezi alçalır",
+            "Adım 4 (sol): sıçrama, kollar yukarı atılır",
+            "Patlayıcı dikey-ön sıçrama",
+            "Zirvede vuruş: el topun üstünden geçer (10 yönü), avuç sonra parmaklar yuvarlanır",
+            "Tam bilek şaklatma + takip — sahanın içine 1-2 m iniş"
+          ],
+          "errors": [
+            { "label": "Çok alçak veya geride atış", "text": "1 numaralı fileye düşme nedeni — atış yüksek ve önde olmalı" },
+            { "label": "Çok öne atış", "text": "Ayak faulü — servis bölgesi sınırlarına uyun" },
+            { "label": "Bilek şaklatma eksikliği", "text": "Top inen spin olmadan uzun çıkar" },
+            { "label": "Hazırlıksız maçta kullanım", "text": "Önce antrenmanda 1000 tekrar — altın kural" }
+          ],
+          "exercises": [
+            "Altın kural: maçta kullanmadan önce antrenmanda 1000 tekrar",
+            "Kontrol jump spin'i: hassas bölgelere nişan için daha alçak atış, azaltılmış hız",
+            "Atışı kaydedin: hataların %80'i toss yerleştirmesinden gelir"
+          ],
+          "videos": [
+            { "title": "Güçlü smaçlı servis + float (Sikana)", "url": "https://www.youtube.com/watch?v=50TUVvPLKr8" }
+          ]
+        }
+      ]
+    },
+    "zones": {
+      "title": "HEDEF BÖLGELER & TAKTİK",
+      "headerZone": "RAKİP BÖLGESİ",
+      "headerEffect": "TAKTİK ETKİ",
+      "rows": [
+        { "zone": "Bölge 1 — arka sağ", "effect": "5-1 sisteminde pasör çıkışını engeller" },
+        { "zone": "Bölge 2 — ön sağ kısa", "effect": "Sağ taraftan kalkışı bozar, liberoyu dışlar" },
+        { "zone": "Bölge 3 — ön orta kısa", "effect": "Orta oyuncuyu engeller, hızlı saldırıları bozar" },
+        { "zone": "Bölge 4 — ön sol kısa", "effect": "Ana saldırganı hem pas hem saldırı yapmaya zorlar" },
+        { "zone": "Bölge 5 — arka sol derin", "effect": "Uzun çapraz, yüksek hata oranı" },
+        { "zone": "Bölge 6 — arka orta derin", "effect": "Küçük pasörlere karşı uzun servis" }
+      ],
+      "tips": [
+        { "label": "Seams (eklemler)", "text": "İki karşılayıcı arasındaki boşluğa nişan almak, bir oyuncuya nişan almaktan daha etkilidir — rakip iletişimi sınanır." },
+        { "label": "Kısa/uzun değişimi", "text": "Pasörün ne zaman geri çekileceğini bilmesini engeller. Hücum çizgisi arkasındaki kısa float (bölge 2-3-4) özellikle rahatsız edicidir." },
+        { "label": "FBSO% metriği", "text": "Rakip First Ball Side Out oranını %70'ten %45'e ace yapmadan düşüren servis çok etkili bir servistir." }
+      ]
+    },
+    "learningHierarchy": {
+      "label": "★ ÖĞRENME HİYERARŞİSİ",
+      "footer": "Bir sonrakine geçmeden önce her seviyeyi ustalaştırın. <strong>Düzenlilik güçten önce gelir.</strong>"
+    }
+  },
+  "reception": {
+    "goldenRule": {
+      "body": "Karşılama (manşet), bir takımın hücum başarısının %60'ını belirler. İyi karşılama olmadan hızlı saldırı olmaz. Platform pasiftir — bacaklar aktiftir."
+    },
+    "format": {
+      "title": "Oyun formatı",
+      "description": "Aşağıdaki <strong>karşılama sistemleri</strong>, <strong>pasörün rolü</strong> ve <strong>sık hatalar</strong> seçilen formata uyum sağlar."
+    },
+    "readyPosition": {
+      "title": "Temel pozisyon (ready position)",
+      "points": [
+        "Ayaklar omuzlardan biraz daha geniş, bir ayak hafifçe ileride",
+        "Dizler ayakların iç tarafına bükülü, kalçalar alçak, gövde 30-45° eğik",
+        "Sırt düz, ağırlık ayak tabanlarında (topuklar hafifçe hafiflemiş ama yerden ayrılmamış)",
+        "Kollar AYRI (birleştirilmemiş), 90-145°'ye bükülü, bel hizasında",
+        "Topun atılışından itibaren gözler servis atanda"
+      ],
+      "errorLabel": "Ana hata",
+      "errorText": "Top gelmeden önce kolları zaten platform halinde birleştirmiş olmak — bu hareketi yavaşlatır ve manşet/eller arasında geç seçim yapmayı engeller."
+    },
+    "platform": {
+      "title": "Platform",
+      "tips": [
+        { "title": "Sweet spot", "text": "İdeal temas yüzeyi bileklerin 2,5 ile 15 cm üstünde yer alır." },
+        { "title": "Cup and fold", "text": "Tavsiye edilen teknik: bir yumruk kapalı, diğer el üstten saran — baş parmaklar paralel ve aşağı dönük." },
+        { "title": "Baş parmaklar aşağıda", "text": "Baş parmakları yere doğrultmak ön kolları dışa döndürür ve platformu sıkılaştırır." },
+        { "title": "Asla iç içe geçirmeyin", "text": "Güçlü serviste parmakları ASLA iç içe geçirmeyin — kırık riski." },
+        { "title": "Açı yönetir", "text": "\"Top platformun baktığı yere gider\" — derin karşılama için: platform 45°'de; kısa karşılama: platform yere daha paralel." }
+      ]
+    },
+    "steps": {
+      "title": "Uygulama — anahtar adımlar",
+      "items": [
+        "Servis atanı okuyun: temas öncesi servis tipini belirleyin.",
+        "Ready position'da kollar ayrı (önceden birleştirilmemiş).",
+        "Rakip vuruştan itibaren yörüngeyi okuyun.",
+        "Hareket edin (kayma adımları), kollar birleşmeden topun ARKASINA varın.",
+        "Build the platform early: ellerinizi top geldiğinde birleştirin, çok erken değil.",
+        "FREEZE: temasta hemen önce donun, ağırlık ön ayakta — 1-2 saniye koruyun.",
+        "Sweet spot'ta temas, omuzlar hedef pasöre dönük.",
+        "Takip: kalça ve omuzlar hedefe ilerler — kol salınımı yok."
+      ],
+      "freezeLabel": "Freeze",
+      "freezeText": "\"Pose for a picture\" — temas sonrası 1-2 saniye tamamen donun. 50-90 km/s'de, hareket halindeki bir savunmacı açısını ayarlayamaz. Sabit ise herhangi bir yöne gidebilir."
+    },
+    "displacements": {
+      "title": "Hareketler",
+      "items": [
+        {
+          "name": "Yanal (kayma adımları)",
+          "desc": "Top tarafındaki ayak önce hareket eder. Çaprazlamadan kayma adımları, kalçalar alçak. Topun arkasına varın, hedefe yeniden yönelin, son anda freeze + platform. Uzun mesafeler için: çapraz adımlar sonra pivot."
+        },
+        {
+          "name": "İleri (kısa top)",
+          "desc": "Kısa servisler veya tipler için. Genellikle bir öne hamle (lunge) ile biter: diz yere doğru çöker, platform ön dizin önünde yerleştirilir."
+        },
+        {
+          "name": "Geri (drop step)",
+          "desc": "Ayağı çevirin sonra geriye kayma adımları. ASLA geri geri koşmayın (denge kaybı). Geri çekilmek için çok geçse: dönün ve yan tarafta platform oluşturun."
+        }
+      ],
+      "oneHand": {
+        "label": "Tek elli manşet — acil durum",
+        "text": "Top iki kol için çok uzak olduğunda son çare hareketi. Kol gergin, iç ön kolda düz platform, salınım yok — yukarı yönlendirmek için sadece bir pike (stab). Varyant: one-arm stab (güçlü smaçta yumruk), one-arm scoop (avuç yukarı açık, top alçak)."
+      }
+    },
+    "systems": {
+      "titlePrefix": "Karşılama sistemleri",
+      "nonOfficialLabel": "⚠ FIVB resmi olmayan format",
+      "alert5": "5v5 salon voleybolunun özel FIVB veya FFVb yönetmeliği yoktur. Aşağıdaki sistemler, VolleyballXL, The Art of Coaching Volleyball ve Volleyball Canada tarafından belgelenen 5-1 6v6'nın mantıksal uyarlamalarıdır.",
+      "alert4": "4v4 salon voleybolunun resmi FIVB yönetmeliği yoktur. Aşağıdaki formasyonlar üniversite intramural'larından (ABD), FFVb / Volleyball Canada pedagojik kılavuzlarından ve plaj voleybolu literatüründen (Brandon Joyner, Better at Beach) gelmektedir.",
+      "prosLabel": "Avantajlar",
+      "consLabel": "Dezavantajlar",
+      "byTeamSize": {
+        "6": [
+          {
+            "name": "W sistemi — 5 karşılayıcı",
+            "level": "Başlangıç",
+            "desc": "3 oyuncu birinci hatta, 2'si ikinci hatta — pasör hariç herkes katılır. Tarihsel olarak « W-formation » adının kaynağı olan form (FIVB, USAV IMPACT).",
+            "pros": ["Oyuncu başına azaltılmış bölgeler (~1,8 m koridor)", "Az iletişim gerekli", "Voleybol okulu ve U13-U15 için ideal"],
+            "cons": ["5 oyuncu arasında çok sayıda örtüşme bölgesi", "Kötü karşılayıcılar katılmaya zorlanır", "Saldırganları düzensizleştirir (3 ön karşılamada)"]
+          },
+          {
+            "name": "U sistemi — 3 karşılayıcı",
+            "level": "Modern standart",
+            "desc": "Libero bölge 6'da (servis atanların ana hedefi), kanatlar bölge 5 ve 1'de. En iyi 3 karşılayıcı tüm topları alır, tüm ön hat saldırganları çıkar.",
+            "pros": ["3 kişide basitleştirilmiş iletişim", "En iyi 3 karşılayıcı her şeyi kapsar", "Ön hat saldırganları yaklaşma koşusu için serbest"],
+            "cons": ["Kapsanacak daha geniş yanal bölgeler (oyuncu başına ~3 m)", "Performanslı bir libero gerektirir", "Açılardaki kısa servislere karşı savunmasız"],
+            "recommended": true
+          },
+          {
+            "name": "2'li karşılama — libero + R4",
+            "level": "Elit",
+            "desc": "Sadece 2 karşılayıcı (libero + seçilmiş bir R4) tüm genişliği kaplar. 2. R4'ü serbest bırakmak ve karşılama yorgunluğu olmadan saldırıya hazırlamak için yüksek seviyede kullanılır.",
+            "pros": ["Tüm saldırganlar hücum geçişi için müsait", "Saldırganlar karşılama ile yıpranmadığı için blok/saldırı daha performanslı", "Profesyonel takımların tercih ettiği sistem (Polonya, Fransa, İtalya)"],
+            "cons": ["Çok atletik 2 karşılayıcı gerektirir (her birine ~4,5 m koridor)", "Hata marjı yok — kötü okunmuş bir servis = rakip puanı", "Uluslararası seviyede libero olmadan kullanılamaz"]
+          }
+        ],
+        "5": [
+          {
+            "name": "3'lü karşılama — 2F-3B yapılandırma",
+            "level": "Tavsiye edilen",
+            "desc": "3 arka oyuncu (P5, P6, P1) karşılar. P1'deki pasör karşılamadan çıkar ve 6v6 5-1'deki gibi servis atanın temasından itibaren penetrasyon yapar. 2 ön oyuncu (P4, P3) yaklaşmaları için serbest.",
+            "pros": ["6v6 5-1'e en yakın yapılandırma (pedagojik olarak ideal)", "İyi karşılama → saldırı geçişi", "Önde 2 saldırgan + back-row pipe mümkün"],
+            "cons": ["9 m üzerinde 3 karşılayıcı (oyuncu başına ~3 m)", "Pasör hızlı okuyup < 1 saniyede penetrasyon kararı vermek zorunda", "Pasör çok erken giderse P1'de boşluk"],
+            "recommended": true
+          },
+          {
+            "name": "4'lü karşılama — 3F-2B yapılandırma",
+            "level": "Standart",
+            "desc": "2 arka oyuncu (P5, P1) + 2 ön oyuncu (tipik olarak P4 ve P3 — P2'deki pasör çıkar) karşılar. Pasör hedefte kalır: penetrasyon yok, hemen dağıtım.",
+            "pros": ["Azaltılmış bölgeler (oyuncu başına ~2,25 m)", "Karma veya başlangıç takımları için ideal", "Pasör zaten hedefte — geçiş yok"],
+            "cons": ["Önde sadece 2 saldırgan müsait (P4 + P3 veya P4 + orta)", "Karşılayan ön oyuncular sonra yaklaşma koşusu yapmak zorunda", "Pasör fileye çıktığı için 2'li blok zor"]
+          },
+          {
+            "name": "Beşgen karşılama — 4 veya 5 oyuncu",
+            "level": "Başlangıç / hobi",
+            "desc": "5 karşılayıcı (5 oyunculu W eşdeğeri). 1 oyuncu file ortasında (genellikle sabit pasör), 2 kanat ortada, 2 arka oyuncu dipte. Ortadaki oyuncu özel pasör değilse herkes katılır.",
+            "pros": ["Sahanın düzenli kapsanması", "Çok az teknik gereklilik", "Keşif pedagojik seansları için uygun"],
+            "cons": ["5 kişide çok sayıda örtüşme", "Hiçbir saldırgan serbest bırakılmaz", "Seviye yükseldikçe verimsiz"]
+          }
+        ],
+        "4": [
+          {
+            "name": "Elmas (3 karşılayıcı)",
+            "level": "4v4 standart",
+            "desc": "Pasör file ortasında (P3, karşılamadan çıkar). 2 kanat (P4, P2) saha ortasında + tek arka oyuncu (P1) dipte karşılar. 4v4 salonda en çok kullanılan formasyon (üniversite intramural'ları).",
+            "pros": ["Pasör zaten hedefte — penetrasyon yok", "3 net ve simetrik bölge", "İntramural'lar, hobi, plaj 4s için ideal"],
+            "cons": ["9 m genişliği 3 kişide kapsamak = oyuncu başına ~3 m", "Tek arka oyuncu karşılamadan sonra tüm dipi savunmak zorunda", "Önde sadece 2 saldırgan"],
+            "recommended": true
+          },
+          {
+            "name": "3-1 dizilişi (3 karşılayıcı)",
+            "level": "Orta",
+            "desc": "P1'de (arka) tek pasör, rakip servis temasından itibaren bölge 2'ye penetrasyon yapar. Öndeki 3 saldırgan (P4, P3, P2) karşılar. 6v6 5-1'in basitleştirilmiş eşdeğeri.",
+            "pros": ["Sürekli olarak önde 3 saldırgan", "6v6 5-1'i hazırlamak için pedagojik", "Pasör dağıtım sonrası saldırı da yapabilir"],
+            "cons": ["Çok temiz karşılama gerektirir (penetrasyon affetmez)", "Pasör top savunulmadan giderse P1'de boşluk", "Tüm saldırganlar karşılamayı bilmek zorunda"]
+          },
+          {
+            "name": "Box 2-2 (4 karşılayıcı)",
+            "level": "Başlangıç",
+            "desc": "2 ön (P4, P2) + 2 arka (P5, P1), filede özel pasör yok. En iyi konumdaki oyuncu 2. dokunuşu yapar. Keşif seansları veya U11-U13 için tipik.",
+            "pros": ["Tüm sahayı kapsar (4 bölge 2,25 m)", "Pasör üzerinde teknik gereklilik yok", "Herkes karşılar — çok pedagojik"],
+            "cons": ["Özel pasör yok — rastgele dağıtım", "Hiçbir saldırgan yaklaşması için serbest bırakılmaz", "Seviye yükseldikçe verimsiz"]
+          }
+        ]
+      }
+    },
+    "passeur": {
+      "titlePrefix": "Pasörün karşılama rolü",
+      "noteLabel": "Not",
+      "byTeamSize": {
+        "6": [
+          {
+            "title": "ARKA pasör (P1 / P6 / P5) — 5-1'in P1, P6, P5 rotasyonları",
+            "bullets": [
+              "Karşılamadan çıkar: ona hiç top yönelmez.",
+              "Özel pozisyonda başlar (örn. P1: fileden ~7,5 m, sağ çizgiden 1 m), başka bir oyuncunun arkasına gizlenmiş (stack).",
+              "Rakip servis TEMASINDAN itibaren hedefe (Z2 ile Z3 arası, fileden ~1 m, merkezin 3 m sağı) penetrasyon yapar — önce değil (örtüşme faulü).",
+              "P1: en kısa penetrasyon; P6: merkezi penetrasyon; P5: en uzun penetrasyon (çapraz).",
+              "Önde 3 saldırgan müsait (R4 + orta + pasör çaprazı) + back-row saldırıları."
+            ]
+          },
+          {
+            "title": "ÖN pasör (P2 / P3 / P4) — 5-1'in P2, P3, P4 rotasyonları",
+            "bullets": [
+              "Karşılamadan çıkar: zaten hedefe yakın.",
+              "P2'de: zaten hedefte — Z4'teki rakip R4'e karşı paralel blokçu da olur (çift savunma yükü).",
+              "P3'te: servis temasından hemen sonra hedefe yanal switch.",
+              "P4'te: hedefe ulaşmak için tüm fileyi geçer (en uzun ön hareket).",
+              "Sadece önde 2 saldırgan (P6'da pipe ve P1'deki pasör çaprazının back-row saldırısı ile telafi edilir)."
+            ]
+          }
+        ],
+        "5": [
+          {
+            "title": "PENETRE EDEN pasör (2F-3B yapılandırması, tavsiye edilen)",
+            "bullets": [
+              "P1 arkada başlar, karşılamadan çıkar.",
+              "Rakip servis temasından İTİBAREN hedefe (Z2/Z3, fileden ~1 m) penetrasyon — 6v6 5-1 ile aynı.",
+              "3 arka oyuncu (P5 + P6 + giden P1) 3'lü karşılamayı kaplar.",
+              "Gitmeden önce topun savunulmasını beklemek zorunda (sık hata: erken kalkış → P1'de boşluk)."
+            ],
+            "note": "6v6'ya en yakın yapılandırma — geçişe hazırlanmak için tavsiye edilir."
+          },
+          {
+            "title": "SABİT ÖN pasör (3F-2B yapılandırması veya beşgen)",
+            "bullets": [
+              "Hedefte kalır (yapılandırmaya göre P2 veya P3): penetrasyon yok.",
+              "Karşılamadan çıkar: ona hiç top yönelmez.",
+              "Pas ile birlikte hemen dağıtım — geçiş yok.",
+              "P2'de: rakip sol kanada karşı paralel blokçu da olur (6v6 5-1 gibi)."
+            ]
+          }
+        ],
+        "4": [
+          {
+            "title": "Elmasta ÖN pasör (P3 file ortası)",
+            "bullets": [
+              "Hedefte kalır (Z3, fileden ~1 m): penetrasyon yok.",
+              "Karşılamadan çıkar: diğer 3 oyuncu (2 kanat + 1 arka) karşılar.",
+              "Pasın kalitesine göre Z4 veya Z2'ye hızlı dağıtım.",
+              "Savunma → pas geçişi 2 saniyeden kısa sürede yapılmak zorunda (sadece 1 arka oyuncu = çok kapsama)."
+            ],
+            "note": "4v4 salonda en çok kullanılan formasyon."
+          },
+          {
+            "title": "3-1 dizilişinde PENETRE EDEN pasör (P1 arka)",
+            "bullets": [
+              "P1 arkada başlar, karşılamadan çıkar.",
+              "Rakip servis temasından itibaren bölge 2'ye penetrasyon.",
+              "Öndeki 3 saldırgan (P4, P3, P2) karşılar.",
+              "Çok temiz karşılama gerektirir — aksi halde pasör zamanında hedefe ulaşamaz."
+            ]
+          },
+          {
+            "title": "Özel pasör yok (box 2-2)",
+            "bullets": [
+              "1. dokunuş sonrası en iyi konumdaki oyuncu 2. dokunuşu yapar.",
+              "Herkes karşılar — ~2,25 m'lik 4 bölge.",
+              "Diğer 3 oyuncudan birine rastgele dağıtım.",
+              "Keşif seansları (U11-U13, okul) için ayrılmalıdır."
+            ]
+          }
+        ]
+      }
+    },
+    "libero": {
+      "title": "Libero — uzmanlaşmış karşılama",
+      "byTeamSize": {
+        "6": {
+          "title": "Libero — 6v6'da karşılamanın baş aktörü",
+          "text": "Zıt renkli formada savunma uzmanı. Arka rotasyona geçen orta oyuncuları sistematik olarak değiştirir (sınırsız değişiklikler, FIVB Kuralı 19 tarafından sayılmaz). Z5-Z6-Z1'de 3 ardışık rotasyon oynar. Tercih edilen karşılama pozisyonu: Z6 (servis atanların ana hedefi) veya Z5. FIVB kısıtlamaları: blok yok, file üstünde saldırı yok, 3 m çizgisinin önünden parmak pası yok (bir takım arkadaşı daha sonra file üstünde saldırırsa).",
+          "accent": "orange"
+        },
+        "5": {
+          "title": "5v5'te resmi libero yok",
+          "text": "5v5 salon voleybolunun FIVB yönetmeliği yoktur. Pratikte hiçbir federasyon bu formatta liberoyu yetkilendirmez. En iyi karşılayıcı P6 veya P5'e yerleştirilir ve sistematik olarak arka oynar — zıt renkli forma veya kısıtlamalar olmadan « fiili libero » olur. Dolayısıyla gerekirse bloklayabilir ve saldırabilir.",
+          "accent": "teal"
+        },
+        "4": {
+          "title": "4v4'te libero yok",
+          "text": "4v4 yönetmeliklerinde hiçbir libero yetkilendirilmez (üniversite intramural'ları, FFVb pedagojik, plaj 4s). Elmasta tek arka oyuncu — veya 3-1 dizilişindeki penetre eden pasör — en iyi karşılayıcı/savunmacı rolünü üstlenir. Elmasta karşılayıcı başına ~3 m koridorla, tahmin teknikten önce gelir.",
+          "accent": "plum"
+        }
+      }
+    },
+    "reading": {
+      "title": "Yerleşmek için servisi okuma",
+      "headerType": "Servis tipi",
+      "headerWhen": "Karşılayıcı uyumu",
+      "rows": [
+        { "type": "Alttan / underhand", "adapt": "Normal pozisyon, topu yüksek al" },
+        { "type": "Ayakta float", "adapt": "Yüksek pozisyon, sapma yapmadan önce erken almak için ilerle" },
+        { "type": "Topspin", "adapt": "Alçak pozisyon, geri çekilmeye hazır, açılı platform" },
+        { "type": "Jump float", "adapt": "Fileden 4 m'de yüksek pas (overhand) ile işlenebilir" },
+        { "type": "Jump topspin", "adapt": "Alçak pozisyon, öngörülen geri çekilme, sert pasif platform" },
+        { "type": "Hibrit servis", "adapt": "Her iki senaryo (float veya topspin) için hazır platform" }
+      ],
+      "cuesLabel": "Servis atanın temasından önce ipuçları",
+      "cues": [
+        "Servis atanın çizgi üzerindeki pozisyonu → tercih edilen açı",
+        "Atışın yüksekliği ve yerleşimi: yüksek+arkada → topspin; alçak+önde → float",
+        "Yaklaşma koşusunun uzunluğu: uzun → jump topspin; kısa → jump float",
+        "Servis atanın temasta omuzlarının yönü → topun yönü"
+      ]
+    },
+    "errors": {
+      "title": "Sık hatalar",
+      "commonLabel": "Teknik hatalar (tüm formatlar)",
+      "common": [
+        { "label": "Swinging arms (kol salınımı)", "text": "1 numaralı sebep — temasta süpüren kollar, öngörülemez top. Düzeltme: \"platform pasif, bacaklar aktif\"." },
+        { "label": "Bozuk platform", "text": "Bir ön kol diğerinden daha yüksek — dirsekleri kilitleyin ve baş parmakları aşağı itin." },
+        { "label": "Kollar çok erken birleşik", "text": "Hareketi yavaşlatır ve manşet/eller arasında geç seçim yapmayı engeller. Elleri sadece varışta birleştirin." },
+        { "label": "Gövde çok dik", "text": "Platform topun altına geçer → top fileden çok uzakta. 30-45° öne eğilin." },
+        { "label": "Göbek üstünde temas", "text": "Çok yüksek = azaltılmış kontrol. Temas bel hizasında veya daha alçakta hedefleyin." },
+        { "label": "Freeze yok", "text": "Temasta hâlâ hareket halinde = yönü kontrol etmek imkansız. Tamamen sabit kalın." }
+      ],
+      "sizeLabelPrefix": "Özel hatalar",
+      "byTeamSize": {
+        "6": [
+          { "label": "Libero kötü yerleştirilmiş", "text": "Çok merkezi ise açılardaki kısa servisleri kaçırır; çok yanal ise merkezi terk eder. Referans hedef: rakip servis atana yönelik Z6." },
+          { "label": "Pasör örtüşmesi", "text": "Pasör rakip servis temasından önce pozisyonunu terk eder — 5-1'de 1 numaralı faul (FIVB Kuralı 7.4). Ayakları temasa kadar ön/arka ilişkilerine uymalıdır." },
+          { "label": "Net rolsüz 5'li karşılama", "text": "W'de, 3 ön oyuncu merkezi bölgede birbirine engel olur. Eksen servislerinde P3 ile P6 arasında topu kimin alacağını açıkça belirleyin." }
+        ],
+        "5": [
+          { "label": "Çok erken giden pasör", "text": "Penetre eden pasörle 2F-3B yapılandırmada, top savunulmadan kalkış = P1'de boşluk. Onayı bekleyin." },
+          { "label": "Yan yana 2 karşılayıcı", "text": "3F-2B yapılandırmada, P5 ve P1 ayrı olmalıdır (her biri bir tarafta). Birlikte merkezi = kanat çizgileri açık." },
+          { "label": "Saldırmayı unutan ön karşılayıcı", "text": "3F-2B yapılandırmada, karşılayan ön oyuncu sonra saldırı yaklaşmasını koşmak zorundadır — özel olarak çalışılacak refleks." },
+          { "label": "Tanımlı fiili libero yok", "text": "Net rol olmadan, 3 arka oyuncu sorumluluğu birbirine atar. En iyi karşılayıcıyı merkez bölgede öncelikli olarak açıkça belirleyin." }
+        ],
+        "4": [
+          { "label": "Karşılayan elmas pasör", "text": "Elmasta, P3'teki pasör karşılamadan ÇIKMALIDIR — aksi halde hızlı dağıtım imkansız. Diğer 3'ü alır." },
+          { "label": "Aşırı yüklenmiş tek arka oyuncu", "text": "Elmasta, P1 arka oyuncu tek başına ~3,5 m dibi kapsar. Tahmin = 1 numaralı beceri; sürekli kayma adımları ve erken okuma." },
+          { "label": "2. dokunuş çağrısı olmayan box 2-2", "text": "Özel pasör olmadan, kim pas verir? Karşılamadan itibaren 2. dokunuşta \"BEN!\" demek müzakere edilemez." },
+          { "label": "Düz çizgide elmas kanatları", "text": "P4 ve P2 saha ortasında P1 ile aynı seviyede → kısa cut shot aralarına düşer. Pozisyonları kademeleştirin." }
+        ]
+      }
+    },
+    "videos": {
+      "title": "Video kaynakları",
+      "items": [
+        { "title": "Manşet yapmak (Sikana)", "url": "https://www.youtube.com/watch?v=aZkZwAFeye0" },
+        { "title": "Manşet (CEPSUM)", "url": "https://www.youtube.com/watch?v=qIPlthgJvHU" },
+        { "title": "Pasöre doğru kontrollü manşet", "url": "https://www.youtube.com/watch?v=eUDY6AGS1-A" },
+        { "title": "Yüksek ve alçak karşılamayı öğrenmek (Sikana)", "url": "https://www.youtube.com/watch?v=ZLRy_Gu9LVA" },
+        { "title": "Bireysel manşet ısınması", "url": "https://www.youtube.com/watch?v=nGiE_y09vTY" }
+      ]
+    }
+  },
+  "positionnement": {
+    "selectors": {
+      "title": "Takım yapılandırmanız",
+      "description": "Formatınızı ve taktik yapılandırmanızı seçin: <strong>kılavuzun tüm içeriği</strong> (mevkiler, bölgeler, saldırıya göre savunma) uyum sağlayacak.",
+      "formatLabel": "Oyun formatı",
+      "configLabel": "Taktik yapılandırma"
+    },
+    "principle": {
+      "label": "Savunmanın temel ilkesi",
+      "lead": "Savunma konumlanması 3 ana faktöre bağlıdır:",
+      "points": [
+        "Mevkiniz (ön veya arka)",
+        "Rakibin saldırı bölgesi (bölge 4, 3, 2)",
+        "Saldırı tipi (güçlü smaç, plase, vuruş)"
+      ]
+    },
+    "postes": {
+      "titlePrefix": "1. Mevkiler ve bölgeler",
+      "layoutCaptionPrefix": "Takımınızın dizilişi",
+      "detailCta": "Her mevkinin detayını /positions sayfasında görün →",
+      "ruleLabel": "Önemli kural",
+      "ruleByTeamSize": {
+        "6": "Arka oyuncular (5, 6, 1) filede bloklayamazlar. Sahanın dibinde savunma yaparlar.",
+        "5": "5 oyuncuyla, her savunmacı ~30 m² kapsar (6v6'da 20 m²'ye karşı). Okuma kritik hale gelir.",
+        "4": "Libero yok. Her oyuncu ~30-40 m² savunur. Tahmin 1 numaralı beceridir."
+      }
+    },
+    "zonePositioning": {
+      "title": "2. Rakip saldırı bölgesine göre konumlanma",
+      "tabLabels": {
+        "zone4": "Bölge 4 Saldırısı",
+        "zone3": "Bölge 3 Saldırısı",
+        "zone2": "Bölge 2 Saldırısı"
+      },
+      "captionsByZone": {
+        "zone4": "Bölge 4 saldırısına karşı savunma (rakip sol kanat)",
+        "zone3": "Bölge 3 saldırısına karşı savunma (orta)",
+        "zone2": "Bölge 2 saldırısına karşı savunma (rakip sağ kanat)"
+      },
+      "legend": {
+        "zone": "Sorumluluk bölgesi",
+        "blk": "BLK",
+        "blkDesc": "= blokta",
+        "off": "OFF",
+        "offDesc": "= off-blocker",
+        "def": "SVN",
+        "defDesc": "= savunma"
+      },
+      "unavailable": "Bu yapılandırma için diyagram mevcut değil."
+    },
+    "layoutLabels": {
+      "5-1": {
+        "zone4": ["Büyük çapraz", "Blok gölgesi", "Paralel", "Off-blocker"],
+        "zone3": ["Sol çapraz", "Eksen", "Sağ çapraz", "Çevrele.", "Çevrele."],
+        "zone2": ["Büyük çapraz", "Blok gölgesi", "Paralel", "Off-blocker"]
+      },
+      "pentagon": {
+        "zone4": ["Z1 kısa", "Büyük çapraz", "Off-blk"],
+        "zone3": ["Sol Çpr", "Sağ Çpr"],
+        "zone2": ["Z5 kısa", "Büyük çapraz", "Off-blk"]
+      },
+      "3F-2B": {
+        "zone4": ["Z1 kısa", "Büyük çapraz", "Off-blk"],
+        "zone3": ["Sol Çpr", "Sağ Çpr"],
+        "zone2": ["Z5 kısa", "Büyük çapraz", "Off-blk"]
+      },
+      "2F-3B": {
+        "zone4": ["Sağ paralel", "Eksen", "Sol çapraz", "Off-blk"],
+        "zone3": ["Sol çapraz", "Eksen", "Sağ çapraz"],
+        "zone2": ["Sol paralel", "Eksen", "Sağ çapraz", "Off-blk"]
+      },
+      "losange": {
+        "zone4": ["Kısa paralel", "Sol çapraz", "Dip"],
+        "zone3": ["Sol çapraz", "Sağ çapraz", "Dip"],
+        "zone2": ["Kısa paralel", "Sağ çapraz", "Dip"]
+      },
+      "carre": {
+        "zone4": ["Küçük çapraz", "Büyük çapraz", "Off-blk"],
+        "zone3": ["Sol çapraz", "Sağ çapraz"],
+        "zone2": ["Küçük çapraz", "Büyük çapraz", "Off-blk"]
+      }
+    },
+    "layoutNotes": {
+      "5-1": {
+        "zone4": [
+          { "label": "P2 (pasör çaprazı / OPP)", "text": "Paralel blokçu — bloklar, sağ taraftan fileye çıkar." },
+          { "label": "P3 (orta)", "text": "Pasör çaprazıyla 2'li blokta çaprazı kapatır." },
+          { "label": "P4 (R4 off-blocker)", "text": "Sol tarafta 3 m çizgisine geri çekilir — kısa cut shot (keskin çapraz) ve plaseleri kaplar." },
+          { "label": "P5 (Libero)", "text": "Uzun büyük çaprazı savunur, fileden ~7-8 m, orta blokçunun iç omzunda." },
+          { "label": "P6 (arka orta)", "text": "Bloğu geçen yüksek toplar, uzun blok dokunuşları, eksen ~8-8,5 m." },
+          { "label": "P1 (arka sağ)", "text": "Blok gölgesinde derin paraleli savunur, fileden ~7-7,5 m, sağ çizgiden 0,5 m." }
+        ],
+        "zone3": [
+          { "label": "P3 (orta)", "text": "Rakip izlemeye göre okuma (read) veya commitment ile 1'li blok." },
+          { "label": "P4 ve P2 (kanatlar)", "text": "Hücum çizgisinde (fileden ~2-2,5 m, çizgilerden 0,5 m): blok sapmalarını ve bloktan geçen topları kaplar." },
+          { "label": "P5 (Libero)", "text": "Orta saldırgana karşı, vuruş koridorunda (fileden ~7-8 m)." },
+          { "label": "P6 (arka orta)", "text": "Omuzlar saldırgana dönük; bloktan geçen güçlü topu savunur (eksen ~8-8,5 m)." },
+          { "label": "P1 (arka sağ)", "text": "Bir metre ilerler (fileden ~7,5 m, sağ çizgiden 1 m): quick'te daha kısa açılar." },
+          { "label": "Anahtar kural", "text": "« Stopped on contact »: vuruş anında herkes durmuş ve dengeli." }
+        ],
+        "zone2": [
+          { "label": "P4 (R4)", "text": "Paralel blokçu — sol tarafta filede bloklar." },
+          { "label": "P3 (orta)", "text": "R4 ile 2'li blokta çaprazı kapatır." },
+          { "label": "P2 (pasör çaprazı / OPP)", "text": "Sağ tarafta off-blocker olur — 3 m'ye geri çekilir, kısa cut shot ve plaseleri kaplar." },
+          { "label": "P5 (Libero)", "text": "Blok gölgesinde derin paraleli savunur, fileden ~7-7,5 m, sol çizgiden 0,5 m." },
+          { "label": "P6 (arka orta)", "text": "Blok üstünden yüksek toplar, eksen fileden ~8-8,5 m." },
+          { "label": "P1 (pasör veya OH/OPP)", "text": "Çapraz uzun büyük çaprazı savunur, fileden ~7-8 m." }
+        ]
+      },
+      "pentagon": {
+        "zone4": [
+          "Rakip Z4 saldırısı (rakip sol kanat) → top sağımıza gelir.",
+          "2-1-2 sistemi: 2'li blok (P2 pasör çaprazı paralel + P3 çapraz) + 2 derin savunmacı.",
+          "P4 (sol kanat) off-blocker olarak fileden 2-2,5 m, çizgiden 1 m — plase ve cut shot'u kaplar.",
+          "P5 (~7-7,5 m, sol çizgiden 0,5 m) çapraz uzun büyük çaprazı savunur.",
+          "P1 (~7-7,5 m, sağ çizgiden 0,5 m) blok gölgesinde derin paraleli savunur.",
+          "Ana savunulan vuruş: çapraz uzun büyük çapraz (istatistiksel olarak en sık yörünge)."
+        ],
+        "zone3": [
+          "Orta hızlı saldırı (Z3) — kısa açılar, az tepki süresi.",
+          "1'li blok: P3 (orta) okumada (read), commitment mümkün değil.",
+          "P4 ve P2 (off-blockers) hücum çizgisi üzerinde fileden 2 m — sapmaları kaplar.",
+          "P5 ve P1 1 m ilerlemiş (fileden ~7 m) — yüksek toptan daha kısa açılar.",
+          "Zayıflık: özel orta dip savunmacı yok (5v5'te sadece 2 arka oyuncu).",
+          "Anahtar kural: « stopped on contact » — temas anında herkes durmuş ve dengeli."
+        ],
+        "zone2": [
+          "Rakip Z2 saldırısı (rakip sağ kanat) → top solumuza gelir. Z4'ün kusursuz aynası.",
+          "2'li blok: P4 (R4 paralel) + P3 (orta çapraz).",
+          "P2 (pasör çaprazı / pasör) sağ tarafta fileden 2-2,5 m off-blocker.",
+          "P1 (~7-7,5 m, sağ çizgiden 1 m) uzun büyük çaprazı savunur.",
+          "P5 (~7-7,5 m, sol çizgiden 0,5 m) blok gölgesinde derin paraleli savunur."
+        ]
+      },
+      "3F-2B": {
+        "zone4": [
+          "Rakip Z4 saldırısı → top sağ tarafımıza gelir.",
+          "3F-2B yapılandırması: 3 ön oyuncu → uygun 2'li blok (P3 + P2 pasör-blokçu).",
+          "P4 (R4) sol tarafta hücum çizgisinde kısa off-blocker (fileden ~2-2,5 m).",
+          "P5 çapraz uzun büyük çaprazı savunur (~7 m, sol çizgiden 0,5 m).",
+          "P1 blok gölgesinde derin sağ paraleli savunur (~7 m, sağ çizgiden 0,5 m).",
+          "Dezavantaj: dipte sadece 2 savunmacı → savunmacı başına 30+ m² (6v6'da 20 m²'ye karşı)."
+        ],
+        "zone3": [
+          "Orta hızlı saldırı (Z3) — kısa açılar.",
+          "3 ön oyuncuyla 3'lü blok mümkün ama yerde sadece 2 savunmacı bırakır — önerilmez.",
+          "Tavsiye edilen: 2'li blok (P3 + vuruş koridoruna en yakın kanat).",
+          "P5 ve P1 1 m ilerlemiş (~7 m) çünkü quick'te açılar daha kısa.",
+          "Zayıflık: eksen derin top kapsanmıyor (5v5 3F-2B'de Z6 savunmacı yok)."
+        ],
+        "zone2": [
+          "Rakip Z2 saldırısı → top sol tarafımıza gelir. Z4'ün kusursuz aynası.",
+          "2'li blok: P4 (R4 paralel) + P3 (orta çapraz).",
+          "Pasör (P2) sağ tarafta fileden 2-2,5 m off-blocker (anti-plase + hedefe hızlı geçiş).",
+          "P1 uzun büyük çaprazı savunur (~7-7,5 m).",
+          "P5 blok gölgesinde derin sol paraleli savunur."
+        ]
+      },
+      "2F-3B": {
+        "zone4": [
+          "Rakip Z4 saldırısı → top sağımıza gelir.",
+          "2F-3B yapılandırması (P4+P3 ön, P5+P6+P1 arka, P1 penetre eden): 1'li blok.",
+          "P3 (orta) sağ tarafta tek başına bloklar — 2'li blok için P2 müsait değil.",
+          "P4 (R4) sol tarafta fileden 2-2,5 m off-blocker.",
+          "3 derin savunmacı: P5 büyük çapraz, P6 merkez eksen (~7-8 m), P1 sağ paralel.",
+          "1-1-3 sistemi (1 blokçu + 1 off-blocker + 3 savunmacı) 6v6 çevreseline en yakın savunmadır."
+        ],
+        "zone3": [
+          "Orta hızlı saldırı (Z3) — kısa açılar.",
+          "Okumada 1'li blok (P3) — quick 2F-3B'de en zor hedef.",
+          "Sapmalar için saha ortasında yanlamalaştırılmış P4 (fileden ~2 m).",
+          "Avantaj: 3 derin savunmacı (P5, P6, P1) 3 büyük dip bölgesini kaplar.",
+          "P6 orta saldırgana karşı vuruş koridorunda (~7,5-8 m, eksen)."
+        ],
+        "zone2": [
+          "Rakip Z2 saldırısı → top solumuza gelir. Z4 aynası.",
+          "1'li blok: P4 sol tarafta tek başına bloklar (2F-3B'de P2 yok).",
+          "P3 (orta) sağ tarafta fileden 2-2,5 m off-blocker olur.",
+          "P5 derin sol paraleli savunur, P6 ekseni, P1 uzun büyük çaprazı."
+        ]
+      },
+      "losange": {
+        "zone4": [
+          "Rakip Z4 saldırısı → top sağ tarafımıza gelir.",
+          "Elmas formasyonu (1-2-1) → A sistemi: 1 blokçu (P3) + 3 savunmacı.",
+          "P3 sağ tarafta solo bloka çıkar (rakip saldırgana karşı).",
+          "P2 (ön sağ) 3 m'ye geri çekilir, fileden 3,5-4 m — bloğun arkasında plase ve aldatmacaları kaplar.",
+          "P4 (ön sol) sol tarafta saha ortasına çekilir — kısa küçük çapraz kapsama.",
+          "P1 (tek arka oyuncu) çapraz uzun büyük çaprazı savunur (~7-7,5 m, sağ çizgiden 1 m).",
+          "Tahmin = 1 numaralı beceri: 1 tek arka oyuncu → kaplanacak ~40 m²."
+        ],
+        "zone3": [
+          "Orta hızlı saldırı (Z3) — 4v4'te en zor yapılandırma: az zaman, sadece 1 blokçu.",
+          "Sürekli OKUMADA 1'li blok (tek P3) (commitment mümkün değil).",
+          "P4 ve P2 saha ortasına çekilir (fileden ~3,5-4 m, iki kısa çaprazı kaplar).",
+          "Tek arka oyuncu P1 Z6 savunmacı görevini üstlenir (merkez eksen, fileden 7-8 m).",
+          "Ana vuruş: eksen güçlü top (P1'e doğru) çünkü 1'li blok sadece ortayı kaplar."
+        ],
+        "zone2": [
+          "Rakip Z2 saldırısı → top sol tarafımıza gelir. Z4'ün kusursuz aynası.",
+          "A sistemi: 1 blokçu (P3) + 3 savunmacı.",
+          "P4 (ön sol) 3 m'ye geri çekilir, 3,5-4 m'de — sol tarafta plase ve aldatmacaları kaplar.",
+          "P2 (ön sağ) sağ tarafta saha ortasına çekilir — küçük kısa çaprazı kaplar.",
+          "Tek arka oyuncu P1 çapraz uzun büyük çaprazı savunur (~7-7,5 m, sol çizgiden 1 m)."
+        ]
+      },
+      "carre": {
+        "zone4": [
+          "Rakip Z4 saldırısı → top sağ tarafımıza gelir.",
+          "Kare formasyonu (2-2 / box) → A sistemi: 1 blokçu (P2) + 3 savunmacı.",
+          "P2 (ön sağ) rakip saldırgana karşı solo blok, paraleli sabitler.",
+          "P4 (ön sol) fileden 2-2,5 m off-blocker — sol tarafta plase ve cut shot'u kaplar.",
+          "P5 uzun büyük çaprazı savunur (~7 m, sol çizgiden 0,5 m).",
+          "P1 derin paralel / küçük kısa çaprazı savunur (~7 m, blok gölgesinde).",
+          "B sistemi (P2+P4 2'li blok) mümkün ama sadece 2 savunmacı bırakır — büyük vurucular için ayrılmalıdır."
+        ],
+        "zone3": [
+          "Orta hızlı saldırı (Z3) — kısa açılar, az zaman.",
+          "2'li blok (P4 + P2) merkezi kapatır — arkasında 2 savunmacılı B sistemi.",
+          "P5 ve P1 kısa çaprazları alır (~7 m, çizgilerden 0,5-1 m).",
+          "Ana zayıflık: bloğun arkasında hiç kısa kapsama yok, karenin saha ortasında oyuncusu yok.",
+          "Alternatif: bir plase savunmacısı serbest bırakmak için 1'li blok (P3 benzeri rol, burada tek P4 veya P2)."
+        ],
+        "zone2": [
+          "Rakip Z2 saldırısı → top sol tarafımıza gelir. Z4'ün kusursuz aynası.",
+          "A sistemi: 1 blokçu (P4) + 3 savunmacı.",
+          "P4 (ön sol) rakip saldırgana karşı solo blok, paraleli sabitler.",
+          "P2 (ön sağ pasör-saldırgan) fileden 2-2,5 m off-blocker — anti-plase + hedefe hızlı geçiş.",
+          "P1 uzun büyük çaprazı savunur (~7 m, sağ çizgiden 0,5 m).",
+          "P5 kısa derin paraleli savunur (~7 m, blok gölgesinde)."
+        ]
+      }
+    },
+    "generalPrinciples": {
+      "title": "3. Genel konumlanma ilkeleri",
+      "responsibilityLabel": "Sorumluluk bölgeleri",
+      "cards": {
+        "front": {
+          "title": "Ön oyuncular",
+          "points": [
+            "Öncelik: Filede bloklamak",
+            "Blokta değilseniz: karşı paraleli savunun",
+            "Mesafe: filede veya sahanın dibinde"
+          ]
+        },
+        "pivotByTeamSize": {
+          "6": {
+            "title": "Savunma pivotu (Libero / P6)",
+            "points": [
+              "Pozisyon: orta, uyarlanabilir",
+              "Mesafe: fileden 5–6m",
+              "Rol: savunma temeli, merkezi kaplar"
+            ]
+          },
+          "5": {
+            "title": "Savunma pivotu (Libero / P6)",
+            "points": [
+              "Pozisyon: orta, uyarlanabilir",
+              "Mesafe: fileden 5–6m",
+              "Rol: savunma temeli, merkezi kaplar"
+            ]
+          },
+          "4": {
+            "title": "Tek arka oyuncu (P1)",
+            "points": [
+              "Pozisyon: orta, kaplanacak ~40 m²",
+              "Mesafe: fileden 5–6m",
+              "Rol: tek savunma temeli, maksimum tahmin"
+            ]
+          }
+        },
+        "back": {
+          "title": "Yanal arka oyuncular",
+          "points": [
+            "Değişken rol: ilerler veya geri çekilir",
+            "Saldırı tarafı: ilerler (3–4m)",
+            "Karşı taraf: geri çekilir (6–7m)"
+          ]
+        }
+      },
+      "universalsCard": {
+        "title": "★ Evrensel savunma ilkeleri (4v4 / 5v5 / 6v6)",
+        "intro": "Hebert, Liskevych ve Volleyball Canada'dan gelen bu ilkeler, sahadaki oyuncu sayısı ne olursa olsun geçerlidir.",
+        "items": [
+          ["Blok temeldir", "Arka savunmacılar bloğun gölgesi ve yönelimine göre konumlanır — bağımsız olarak değil."],
+          ["Temas anında durmuş ve dengeli", "Saldırgan vururken hâlâ hareket eden her savunmacının tepkiselliği çöker (« stopped on contact »)."],
+          ["Sıralı görsel okuma", "« Top → rakip pasör → top → rakip saldırgan ». 4v4 ve 5v5'te oyuncu eksikliği daha da erken okumayı dayatır."],
+          ["Sinyal iletişimi", "Hobi düzeyinde bile blokçu « paralel » veya « çapraz » sinyal vermek zorundadır — bu olmadan arka savunmacılar neyi kaplayacaklarını bilmez."],
+          ["Ön bölge kapsanır", "Birinin bloğun arkasındaki 3-5 m'yi kaplaması gerekir — küçültülmüş formatlarda (4v4 / 5v5) en ihmal edilen bölge budur."],
+          ["Hızlı geçiş", "Pasör topun savunulduğunu doğrulamadan asla hedefine doğru gitmemelidir (« release call »)."]
+        ]
+      }
+    },
+    "readingAttacker": {
+      "title": "4. Saldırganı okuma: görsel ipuçları",
+      "intro": "Konumlanman, gördüğüne göre ayarlanmalıdır. İşte anahtar ipuçları:",
+      "indicators": [
+        {
+          "title": "Fileden uzak saldırgan",
+          "action": "İLERLE",
+          "accentColor": "var(--orange)",
+          "points": [
+            "Fileden 2–3m'de pas",
+            "Sert smaç yapamaz",
+            "Yüksek plase veya yumuşak vuruş riski",
+            "1–2 metre ilerle"
+          ]
+        },
+        {
+          "title": "Fileye yakın saldırgan",
+          "action": "GERİ ÇEKİL",
+          "accentColor": "var(--plum)",
+          "points": [
+            "Fileden 1m'den az pas",
+            "Tam güçte smaç yapabilir",
+            "Hızlı inen yörünge",
+            "Maksimuma geri çekil"
+          ]
+        },
+        {
+          "title": "Saldırganın omzu",
+          "action": "Vuran omzuna bak",
+          "accentColor": "var(--teal)",
+          "points": [
+            "Yüksek ve geride omuz = güçlü smaç",
+            "Alçak omuz = muhtemel plase",
+            "Omuz rotasyonu = topun yönü",
+            "0,5sn'de ayarla"
+          ]
+        },
+        {
+          "title": "Saldırganın hızı",
+          "action": "Yaklaşma koşusunu gözlemle",
+          "accentColor": "var(--ink)",
+          "points": [
+            "Uzun ve hızlı koşu = güçlü smaç",
+            "Kısa hız veya duruş = plase",
+            "Yaklaşma açısı = hedef bölge",
+            "Gücü öngör"
+          ]
+        }
+      ],
+      "proTipLabel": "Profesyonel ipucu",
+      "proTipText": "Rakip servisten sonraki ilk 2 saniyede, bakışını rakip pasöre, ardından HEMEN vuracak saldırgana odakla."
+    },
+    "advanceRetreat": {
+      "title": "5. Ne zaman ilerlemeli veya geri çekilmeli?",
+      "label": "Hızlı karar ağacı",
+      "advance": {
+        "title": "İlerleme (fileden 3–4m) şu durumlarda:",
+        "items": [
+          "Saldırganla aynı taraftasınız",
+          "Saldırgan fileden uzak (kötü pas)",
+          "Plase veya yumuşak vuruş öngörüyorsunuz",
+          "Blok sağlam — daha az güçlü top geçer"
+        ]
+      },
+      "retreat": {
+        "title": "Geri çekilme (fileden 6–7m) şu durumlarda:",
+        "items": [
+          "Saldırganın karşı tarafındasınız",
+          "Saldırgan fileye yakın iyi pasa sahip",
+          "Saldırgan güçlü veya uzun boylu",
+          "Blok zayıf (sadece 1 blokçu)",
+          "Çaprazı savunuyorsunuz (en uzun yörünge)"
+        ]
+      }
+    },
+    "mistakes": {
+      "titlePrefix": "6.",
+      "byTeamSize": {
+        "6": {
+          "title": "Savunma konumlanmasında on sık yapılan hata",
+          "intro": "Mike Hebert (Thinking Volleyball), John Forman (CoachingVB), USA Volleyball ve FIVB Top Volley kılavuzundan tipoloji.",
+          "mistakes": [
+            ["1. Blok gölgesinde sürüklenme", "Savunmacılar içgüdüsel olarak blok gölgesi etrafında konumlanmak yerine blokçuların arkasına sığınır — çaprazları ve « off the block » yörüngelerini açık bırakır. Hebert: « creeping into the block shadow »."],
+            ["2. Hatalı okuma", "Savunmacı « top → pasör → top → saldırgan » dizisini takip etmek yerine topa odaklanır. Sonuç: okumak yerine tahmin eder ve temas anında ne durmuştur ne dengelidir (« stopped and balanced at the moment of contact »)."],
+            ["3. Derinlikte kötü yerleştirilmiş libero", "Fileye çok yakın, derin smaçları savunmaz; çok uzakta, plaseleri kaplamaz. Kural: dış omzunu orta blokçunun iç omzuna hizala, bloka göre fileden 6-8 m."],
+            ["4. Kötü hazırlanmış savunmacı pasör", "Çok alçak veya kötü yönlendirilmiş pozisyon, top + rakip sahayı görmeyi engeller; hedefe erken kalkış Z1'de boşluk yaratır; savunmadan ayrıldığını belirten « release call » eksikliği."],
+            ["5. Örtüşme faulleri", "En sıkları: Z6 Z3'ün önüne sürüklenir, Z5 Z6'dan daha sağda ve pasör penetrasyon yapmak için pozisyonunu çok erken bırakır (5-1'de 1 numaralı faul). Servis atanın temas anında, tüm ayaklar ön/arka ve sol/sağ ilişkilere uymalıdır (Kural 7.4)."],
+            ["6. Unutulmuş karşılama → savunma geçişi", "Oyuncular rakip pasör topa dokunduğunda temel savunma pozisyonuna geçmek yerine W karşılama formasyonlarında donmuş kalırlar. Hebert: « sluggish recovery after play on the ball »."],
+            ["7. Bölge 6'nın kötü yönetimi", "« 6-up » (rotasyon), « 6-back » (çevresel) ve « 6-deep » arasında karışıklık. Z6'daki oyuncu merkezde kalmak yerine rakibin saldırı tarafına göre yanlamasına kaymalıdır. Digger için geriye yaslanmak (« leaning back ») ağırlığı topuklara koyar ve tepkiselliği öldürür."],
+            ["8. Merkezi hızlı saldırıda başarısız savunma", "Rakip orta oyuncunun çok geç okunması; ileri olmayan arka oyuncular (quick'te Z1 ve Z5 fileye doğru bir metre kazanmalıdır çünkü açılar daha kısadır); mevcut zamanı kaybeden « false stepping » (geriye ilk destek)."],
+            ["9. Sahipsiz plase kapsaması", "Hiçbir savunmacı açıkça tipe atanmamış; « standing up on tips » — savunmacı smaç için alçak pozisyondadır, sonra doğrulup plasede ellerini uzatır, topun önüne düşmesine izin verir. Odak smaçta düşük pozisyonda kalmalı, tipte sıçrama sağlamalıdır."],
+            ["10. Kolektif sessizlik", "Çağrı eksikliği (« plase! », « paralel! », « out! », « ben! »); paralel veya çapraz yönelimini iletmeyen blokçular; servisten önce örtüşmeleri kontrol eden rotasyon kaptanı yok."]
+          ]
+        },
+        "5": {
+          "title": "5v5'te sık hatalar",
+          "intro": "5v5 formatına özgü hatalar (Volleyball Canada belgesi, VolleyballXL ve 6v6 doktrini uyarlamaları).",
+          "mistakes": [
+            ["1. 6v6'yı mekanik olarak çoğaltma", "3 derin bölgeyi 3 savunmacıyla kaplamak işe yarar (2F-3B yapılandırması), ancak geri çekilen off-blocker eksiktir — biri açıkça atanmadıysa 3 m bölgesi kapsanmaz."],
+            ["2. Off-blocker ön oyuncu filede yapışık kalır", "Blok vuruşundan sonra, off-blocker ön oyuncu plaseleri kaplamak için 2-2,5 m geri çekilmelidir. Filede kalırsa, bloğun arkası açıktır."],
+            ["3. Yan yana ayakta 2 savunmacı", "3F-2B yapılandırmasında, 2 derin savunmacı ayrı olmalıdır (bir sol, bir sağ) ve birlikte merkezi değil. Aksi halde yanal çizgiler açık kalır."],
+            ["4. Çok erken çıkan pasör (penetre eden yapılandırma)", "P1'den penetre eden pasörlü 2F-3B yapılandırmasında, hedefe koşmadan önce topun savunulmasını beklemek zorundadır — aksi halde Z1'de boşluk."],
+            ["5. Ön/arka karışıklığı", "5 oyuncuyla, ön oyuncuların 3 m çizgisinde kalarak kendi taraflarını savunma cazibesi güçlüdür — ama bu dibi açık bırakır. Ön oyuncular bloka çıkar, arka oyuncular derinden savunur."],
+            ["6. Hatalı okuma", "Bir oyuncu eksikliği 6v6'dan daha erken okumayı dayatır. « Top → pasör → top → saldırgan » dizisi + temas anında dengeli duruş."]
+          ]
+        },
+        "4": {
+          "title": "4v4'te sık hatalar",
+          "intro": "4v4 salona özgü hatalar (üniversite intramural'ları, FFVb / Volleyball Canada doktrini, plaj 4s).",
+          "mistakes": [
+            ["1. Plase kapsaması olmadan izole blokçu", "3 savunmacı hepsi derinliğe gider, 3-5 m bölgesini boş bırakır. Birinin her zaman fileden 3,5-4 m plase için atanmış olması gerekir."],
+            ["2. Düz çizgide 2 savunmacı", "Aynı derinlikte yan yana → cut shot aralarına düşer. 4v4'te savunmacılar her zaman kademeli (biri yakın, biri uzak) veya yanlamasına ayrı olmalıdır."],
+            ["3. Top savunulmadan pasa koşan pasör", "Savunmada boşluk bırakan erken geçiş. Pasör topun kurtarıldığının onayını bekler sonra hedefine gider."],
+            ["4. Blokçu ve savunmacılar arasında sinyal eksikliği", "Blokçu saldırı çıkmadan önce « paralel » veya « çapraz » sinyal vermek ZORUNDADIR. Bu olmadan 3 savunmacı neyi kaplayacaklarını bilmez — herkes doğaçlama yapar."],
+            ["5. Fileden çok uzak plase savunmacısı", "Diğer arka oyuncularla geri çekilir ve kısa plaseleri artık kaplayamaz. Pozisyonu fileden 3,5-4 m, eksen — 7 m değil."],
+            ["6. Yanlış oyuncuyla « rastgele » bloklama", "4v4'te, kötü konumlanmış bir oyuncuyla (saldırgandan uzak) bloklamak rakibi kötü hizalanmış 3 savunmacıyla karşı karşıya bırakır. Blokçu, ana saldırganın karşısındaki olmalıdır."],
+            ["7. Hatalı okuma", "Savunmacı başına ~40 m² ile (6v6'da 20 m²'ye karşı), okuma hatası telafi edilemez. Tahmin = 4v4'te 1 numaralı beceri."]
+          ]
+        }
+      }
+    },
+    "serviceTransition": {
+      "title": "7. Serviste konumlanma",
+      "intro": "<strong>Serviste yerleşmen savunma pozisyonundan FARKLIDIR. </strong>Servis çıkar çıkmaz yeniden konumlanmak zorundasın.",
+      "stepsLabel": "Servis → savunma geçişi",
+      "steps": [
+        ["Takımın servis atıyor", "Rotasyon pozisyonundasın"],
+        ["Servis atan vuruyor", "Rakip pasöre bakıyorsun"],
+        ["Pasör topa dokunuyor", "Savunma bölgene doğru hareket ediyorsun"],
+        ["Saldırgan sıçrıyor", "Son pozisyondasın, tepki vermeye hazırsın"]
+      ]
+    },
+    "communication": {
+      "title": "8. Savunma iletişimi",
+      "intro": "Sessiz bir savunma, etkisiz bir savunmadır.",
+      "groups": [
+        {
+          "moment": "Rakip saldırıdan önce",
+          "calls": [
+            ["\"4 numara!\"", "Saldırının geldiği bölgeyi duyurur"],
+            ["\"Blokta iki!\"", "Kaç blokçu olduğunu belirtir"],
+            ["\"Paralel açık!\"", "Blok paraleli kaplamıyorsa"],
+            ["\"İlerliyorum!\" / \"Geri çekiliyorum!\"", "Hareketini duyurur"]
+          ]
+        },
+        {
+          "moment": "Eylem sırasında",
+          "calls": [
+            ["\"Ben!\" / \"Aldım!\"", "Topu alıyorsun (EN önemlisi)"],
+            ["\"Sen!\" / \"Sana!\"", "Topu takım arkadaşına bırakıyorsun"],
+            ["\"Dışarı!\"", "Top çıkacak, dokunma"],
+            ["\"Bloklandı!\"", "Bloklarsan duyur"]
+          ]
+        },
+        {
+          "moment": "Eylemden sonra",
+          "calls": [
+            ["\"Çevreleyin!\"", "Saldırı çevrelemesi isteğinde bulunur"],
+            ["\"Serbest!\"", "Serbest top, yeniden konumlanın"],
+            ["\"Kalıyoruz!\"", "Savunmayı yerinde tutuyoruz"]
+          ]
+        }
+      ],
+      "ruleLabel": "Altın kural",
+      "ruleText": "İki oyuncu arasında şüphe durumunda, topu HER ZAMAN en ileride olan oyuncu alır."
+    },
+    "defenseSystems": {
+      "titlePrefix": "9.",
+      "warningLabel": "⚠ Terminolojik uyarı",
+      "warningLabelNonOfficial": "⚠ FIVB resmi olmayan format",
+      "forcesLabel": "Güçler",
+      "weaknessesLabel": "Zayıflıklar",
+      "indicationLabel": "Endikasyon",
+      "tableLabel": "Sentetik karşılaştırma tablosu",
+      "tableHeaderCriterion": "Kriter",
+      "byTeamSize": {
+        "6": {
+          "title": "Üç büyük savunma sistemi (FIVB / USAV)",
+          "warning": {
+            "label": "⚠ Terminolojik uyarı",
+            "text": "Fransa'da sık duyulan « W savunması » ifadesi hatalıdır. « W-formation » tarihsel olarak 5 oyunculu bir servis karşılama formasyonunu belirtir — bir savunma sistemi değil. Uluslararası doktrin (FIVB, USAV IMPACT, Liskevych, Stone) üç sistem ayırır: man-up (2-1-3), çevresel (2-0-4) ve rotasyonel (3-2-1)."
+          },
+          "systems": [
+            {
+              "name": "Man-up savunması (2-1-3)",
+              "tag": "Eskiden « W savunması » / red defense",
+              "principe": "Bir savunmacı plase ve yumuşak vuruşları kesmek için bloğun arkasında 3 m hizasına çıkar. Filede iki blokçu, off-blocker geri çekilir ve üç derin oyuncu uzun açıları kaplar.",
+              "forces": [
+                "Plaseler, roll shot'lar ve bloğun arkasındaki « bozuk » topların olağanüstü kapsanması",
+                "Çıkan oyuncu pasör ise saldırıya hızlı geçiş",
+                "Genç takımlara öğretmesi basit"
+              ],
+              "faiblesses": [
+                "Derinlikte sadece 3 savunmacı — sıkı çaprazda güçlü smaçlara karşı savunmasız",
+                "Blokçular arasında sert vuran bir saldırgan kolayca geçer"
+              ],
+              "indication": "Genç, okul takımları, çok plase veya off-speed oynayan taktik rakipler.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "Çevresel savunma (2-0-4)",
+              "tag": "White defense — erkek üst seviyede baskın sistem",
+              "principe": "Dört arka savunmacı fileye açık bir U oluşturur, neredeyse yan ve dip çizgileri üzerinde — « çizgi üzerinde bir ayak » (Liskevych). Sahanın ortası kasıtlı olarak terk edilir.",
+              "forces": [
+                "Güçlü smaçların, paralellerin ve derin köşelerin mükemmel kapsanması",
+                "Basit kolektif hareket",
+                "Modern uluslararası erkek voleybolda baskın sistem"
+              ],
+              "faiblesses": [
+                "Bloğun arkasındaki kısa plaselere çok savunmasız — 3 ile 5 m arasındaki merkez bölge boş",
+                "Öne dalış yapabilen atletik savunmacılar gerektirir"
+              ],
+              "indication": "Yetişkin, erkek, uluslararası seviye, güçlü rakipler.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "Rotasyon savunması (3-2-1)",
+              "tag": "Rotational / slide defense",
+              "principe": "Üç arka savunmacı rakip saldırı tarafına doğru kayar: karşı arka oyuncu bloğun arkasına çıkar (plase), orta saldırılan paralele kayar, saldırılan tarafın savunmacısı kısa açıya yerleşir.",
+              "forces": [
+                "Derin paralelin VE plasenin aynı anda mükemmel kapsanması",
+                "Çok uyarlanabilir sistem",
+                "Pasör P1'deyken hızlı pasör geçişi"
+              ],
+              "faiblesses": [
+                "Derinlikte bir savunmacı eksik (bir oyuncu plaseye adanmış)",
+                "Karşı çapraz köşesi savunmasız",
+                "Yüksek okuma kapasitesi ve koordinasyon gerektirir"
+              ],
+              "indication": "Güç ve paralel/plaseleri karıştıran rakipler; orta ile elit seviye.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["Man-up 2-1-3", "Çevr. 2-0-4", "Rotasyon 3-2-1"],
+          "tableRows": [
+            ["Blok arkasına çıkmış oyuncu", "Evet", "Hayır", "Evet"],
+            ["Derin savunmacılar", "3", "4", "2"],
+            ["Plase kapsaması", "★★★", "★", "★★"],
+            ["Güçlü smaç kapsaması", "★★", "★★★", "★★"],
+            ["Derin paralel kapsaması", "★★", "★★", "★★★"],
+            ["Sıkı çapraz kapsaması", "★", "★★★", "★★"],
+            ["Tipik libero pozisyonu", "Z5 veya Z6", "Z5 (çizgide)", "Z5 kayar"],
+            ["Karmaşıklık", "Düşük", "Orta", "Yüksek"]
+          ],
+          "footer": {
+            "strong": "Seçim bir ortodoksluk meselesi değildir: ",
+            "text": "rakibin hücum profiline ve savunmacılarınızın niteliklerine bağlıdır. Modern savunma kendisini formasyondan çok okumayla tanımlar — « top → pasör → top → saldırgan » görsel dizisi ve temas anında dengeli durma."
+          }
+        },
+        "5": {
+          "title": "5v5'te üç savunma sistemi",
+          "warning": {
+            "label": "⚠ FIVB resmi olmayan format",
+            "text": "5v5 salonun özel FIVB veya FFVb yönetmeliği yoktur. Bu üç sistem, VolleyballXL, The Art of Coaching Volleyball ve Volleyball Canada tarafından belgelenen 6v6'nın mantıksal uyarlamalarıdır. Resmi 5v5 teknik kılavuzu yoktur — sistemi takımınızın yapılandırmasına göre (2-3 veya 3-2) seçin."
+          },
+          "systems": [
+            {
+              "name": "1-1-3 sistemi",
+              "tag": "1 blokçu + 1 plase kapsayıcı + 3 derin savunmacı",
+              "principe": "2F-3B yapılandırmasına (2 ön, 3 arka) uyarlanmış. Blokçu tek başına sıçrar; 2. ön oyuncu off-blocker olarak plaseler için fileden 2-3 m geri çekilir; 3 derin savunmacı paralel, eksen ve büyük çaprazı kaplar.",
+              "forces": [
+                "6v6 çevreseli gibi 3 derin savunmacı — smaçların iyi kapsanması",
+                "6v6 5-1'e en yakın yapılandırma (6v6'ya geçiş hazırlığı)",
+                "Off-blocker tarafından plase kapsanmış"
+              ],
+              "faiblesses": [
+                "Sadece 1'li blok → büyük vurucular karşısında kırılgan",
+                "2-3 m'deki off-blocker çok tepkili olmalı"
+              ],
+              "indication": "2F-3B yapılandırması (penetre eden pasör), orta güçlü rakipler. 6v6'ya geçiş pedagojisi için tavsiye edilen sistem.",
+              "accent": "var(--teal)"
+            },
+            {
+              "name": "2-1-2 sistemi",
+              "tag": "2 blokçu + 1 plase + 2 derin savunmacı",
+              "principe": "3F-2B yapılandırmasına (3 ön, 2 arka) uyarlanmış. Filede 2'li blok, ön orta oyuncu fileden 2-3 m plaseyi kaplar, 2 derin savunmacı büyük çapraz ve paraleli alır.",
+              "forces": [
+                "6v6 gibi 2'li blok — güçlü smaçlara karşı belirgin şekilde daha etkili",
+                "Karşı saldırı için filede 3 saldırgan"
+              ],
+              "faiblesses": [
+                "Sadece 2 derin savunmacı → 9 m dip kaplamak çok zor",
+                "2 arka oyuncuda güçlü atletik gereklilik"
+              ],
+              "indication": "Çok güçlü takımlara karşı 3F-2B yapılandırması. Setin sonunda her puanın önemli olduğunda tercih edin.",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "1-2-2 sistemi",
+              "tag": "Uyarlanmış man-up (6v6 2-1-3 eşdeğeri)",
+              "principe": "Solo blokçu + 2 ön bölge kapsayıcı (plase + blok arkası) + 2 derin savunmacı. Rakip çok plase yaparken veya başlangıç takımlarında uyarlanmış.",
+              "forces": [
+                "Kısa plaselerin mükemmel kapsanması (2 ön bölge kapsayıcı)",
+                "Rakip için plasenin sömürülmesi zor"
+              ],
+              "faiblesses": [
+                "Sadece 2 derin savunmacı → güçlü smaçlar zor",
+                "2 ön bölge kapsayıcı arasında koordinasyon gerektirir"
+              ],
+              "indication": "Çok plase yapan rakipler; kadın voleybolu, genç kategoriler, teknik takımlar.",
+              "accent": "var(--plum)"
+            }
+          ],
+          "tableHeaders": ["1-1-3", "2-1-2", "1-2-2 (man-up)"],
+          "tableRows": [
+            ["Blokçular", "1", "2", "1"],
+            ["Ön bölge kapsayıcıları", "1 (off-blocker)", "1 (plase)", "2 (plase + blok arkası)"],
+            ["Derin savunmacılar", "3", "2", "2"],
+            ["Plase kapsaması", "★★", "★★", "★★★"],
+            ["Güçlü smaç kapsaması", "★★", "★★★", "★★"],
+            ["Dip kapsaması", "★★★", "★★", "★★"],
+            ["Uygun yapılandırma", "2F-3B", "3F-2B", "2F-3B / 3F-2B"],
+            ["Karmaşıklık", "Düşük", "Orta", "Yüksek"]
+          ],
+          "footer": {
+            "strong": "5v5 önerisi: ",
+            "text": "penetre eden pasörlü 2F-3B yapılandırmasındaki 1-1-3 sistemi 6v6'ya en yakın savunmadır — pedagojik geçiş olarak ideal. 2-1-2 yalnızca gerçekten güçlü vurucular karşısında haklı çıkar."
+          }
+        },
+        "4": {
+          "title": "4v4'te üç savunma sistemi",
+          "warning": {
+            "label": "⚠ FIVB resmi olmayan format",
+            "text": "4v4 salonun resmi FIVB yönetmeliği yoktur. Bu üç sistem üniversite intramural pratiğinden (ABD), FFVb / Volleyball Canada pedagojik geçiş kılavuzlarından ve plaj voleybolu literatüründen (Brandon Joyner, Better at Beach) gelmektedir. 4 oyuncuyla, her savunmacı ~30-40 m² kaplar (6v6'da 20 m²'ye karşı) — tahmin 1 numaralı beceridir."
+          },
+          "systems": [
+            {
+              "name": "A sistemi: 1 blokçu + 3 savunmacı",
+              "tag": "4v4 salonda en yaygın",
+              "principe": "Tek bir oyuncu ana saldırgana karşı bloka çıkar. Diğer 3'ü dağılır: plase savunmacısı (fileden 3-4 m, eksen), çapraz savunmacı (7-7,5 m, sağ paralel, uzun çapraz), paralel savunmacı (7-7,5 m, bloğun gölgesinde).",
+              "forces": [
+                "Plase, paralel ve büyük çaprazı aynı anda kaplar",
+                "4v4'te en dengeli",
+                "Çok etkili blokçu paralel/çapraz sinyali"
+              ],
+              "faiblesses": [
+                "1'li blok — büyük vurucular karşısında savunmasız",
+                "Geri çekilmeyen disiplinli plase savunmacısı gerektirir"
+              ],
+              "indication": "Eşdeğer veya orta seviyeli rakipler. 4v4'te en çok yönlü yapılandırma (elmas veya 3-1 dizilişi formasyonu).",
+              "accent": "var(--orange)"
+            },
+            {
+              "name": "B sistemi: 2 blokçu + 2 savunmacı",
+              "tag": "2'li blok (4v4'te nadir)",
+              "principe": "2 ön oyuncu ana saldırgana karşı birlikte çıkar. 2 arka oyuncu konumlanır: biri paralel taraf (7 m, çizgiden 1 m), biri eksen hafifçe çaprazlara doğru kaydırılmış. Plase kapsanmaz.",
+              "forces": [
+                "Güçlü smaçlara karşı belirgin şekilde daha etkili 2'li blok",
+                "Rakip saldırgan üzerinde maksimum baskı"
+              ],
+              "faiblesses": [
+                "Yerde sadece 2 savunmacı → her şeyi kaplamak imkansız",
+                "Bloğun arkasındaki plase tamamen açık",
+                "Bir seçim dayatır: paralel VEYA çapraz, ikisi değil"
+              ],
+              "indication": "Sadece incelik olmayan çok güçlü saldırganlara karşı kullanılmalı (plase yok). Box 2-2 veya 3-1 dizilişi yapılandırması.",
+              "accent": "var(--plum)"
+            },
+            {
+              "name": "C sistemi: 0 blokçu",
+              "tag": "Alçak savunma (smaç yapmayan rakipler)",
+              "principe": "Hiçbir oyuncu bloka çıkmaz. 4 oyuncu derinlikte savunma yapar: 2'si saha ortasında (3-4 m) plaseler için, 2'si dipte (7-8 m) daha derin toplar için. Pasör 4. savunmacı görevi yapar.",
+              "forces": [
+                "Sahanın tüm derinliğini kaplar",
+                "Yavaş raliler için iyi uyarlanmış"
+              ],
+              "faiblesses": [
+                "Bir rakip ciddi vurur vurmaz KARŞI-VERİMLİ (smaç engelsiz geçer)",
+                "Filede hiç baskı yok"
+              ],
+              "indication": "Okul seviyeleri, başlangıç hobi, smaç yapmayan rakipler. Rakip güç kazandığında kaçınılmalıdır.",
+              "accent": "var(--teal)"
+            }
+          ],
+          "tableHeaders": ["A Sistemi", "B Sistemi", "C Sistemi"],
+          "tableRows": [
+            ["Blokçular", "1", "2", "0"],
+            ["Derin savunmacılar", "3", "2", "4"],
+            ["Plase kapsaması", "★★", "★", "★★★"],
+            ["Güçlü smaç kapsaması", "★★", "★★★", "★ (∅ blok)"],
+            ["Derin paralel kapsaması", "★★", "★★", "★★"],
+            ["Büyük çapraz kapsaması", "★★★", "★★", "★★"],
+            ["Tavsiye edilen rakipler", "Tüm seviyeler", "Çok güçlü", "Smaçsızlar"],
+            ["Karmaşıklık", "Düşük", "Orta", "Düşük"]
+          ],
+          "footer": {
+            "strong": "4v4 önerisi: ",
+            "text": "A sistemi (1 blokçu + 3 savunmacı) neredeyse evrensel varsayılan. B sistemi yalnızca set sonunda gerçekten güçlü vurucular karşısında haklı çıkar. C sistemi yalnızca başlangıç hobi seviyesinde işe yarar — bir rakip smaç atar atmaz A sistemine dönüş."
+          }
+        }
+      }
+    },
+    "transitions": {
+      "title": "10. Geçişler saldırı ↔ savunma",
+      "intro": "Voleybol hızlı geçişler oyunudur. Sürekli saldırıdan savunmaya ve tersine geçersin.",
+      "groups": [
+        {
+          "label": "Saldırı → savunma geçişi",
+          "items": [
+            ["Takım arkadaşın saldırıyor", "Savunmaya zihinsel olarak hazırlan"],
+            ["Top geri gönderiliyor", "Kimin saldıracağını hemen belirle"],
+            ["Hızlı koşu", "Savunma bölgene git (max 2–3 saniye)"],
+            ["Alçak pozisyon", "Bacakları bük, dalmaya hazır"]
+          ]
+        },
+        {
+          "label": "Savunma → saldırı geçişi",
+          "items": [
+            ["Topu savunuyorsun", "Pasöre kesin pas"],
+            ["ÖN'desin", "Saldırmak veya bloklamak için fileye koş"],
+            ["ARKA'dasın", "Hafifçe geri çekil, saldırıyı çevrelemeye hazır"],
+            ["Saldırı çevrelemesi", "Saldırganını çevrele (2–3m yarım daire şeklinde)"]
+          ]
+        }
+      ]
+    },
+    "exercises": {
+      "title": "11. İlerlemek için alıştırmalar",
+      "durationLabel": "Süre",
+      "materialLabel": "Malzeme",
+      "objectiveLabel": "Hedef",
+      "items": [
+        {
+          "title": "Durum okuma",
+          "level": "Başlangıç",
+          "duration": "10 dk",
+          "materiel": "1 koç veya toplarla partner",
+          "objectif": "Saldırı bölgesini hızlıca belirlemeyi öğrenmek",
+          "steps": [
+            "Koç filenin diğer tarafında bölge 4, 3 veya 2'ye yerleşir",
+            "Sahanın merkezinden başlarsın",
+            "Koç bölgeyi duyurur ve topu atar",
+            "2–3 saniyede savunma bölgene yerleşmek zorundasın",
+            "Bölgeleri çeşitlendirerek 20 kez tekrarla"
+          ]
+        },
+        {
+          "title": "Pasa göre ilerle/geri çekil",
+          "level": "Orta",
+          "duration": "15 dk",
+          "materiel": "1 pasör, 1 saldırgan, birkaç savunmacı",
+          "objectif": "Pasın kalitesine göre pozisyonunu ayarlamak",
+          "steps": [
+            "Pasör saldırgana değişken kalitede paslar yapar",
+            "Fileye yakın pas → Geri çekiliyorsun (güçlü smaç bekleniyor)",
+            "Fileden uzak pas → İlerliyorsun (muhtemel plase)",
+            "Saldırgan vurur ve sen savunursun",
+            "Koç her toptan sonra pozisyonunu düzeltir"
+          ]
+        },
+        {
+          "title": "Savunma iletişimi",
+          "level": "Tüm seviyeler",
+          "duration": "10 dk",
+          "materiel": "Tam takım",
+          "objectif": "Otomatik iletişimi geliştirmek",
+          "steps": [
+            "Formatınızda maç (4v4, 5v5 veya 6v6) ama tüm çağrıları BAĞIRARAK",
+            "Ceza: Bir oyuncu kendi topunda \"Ben!\" demezse -1 puan",
+            "Bonus: Tüm takım bir raliyde iletişim kurarsa +1 puan",
+            "Her oyuncu rakip saldırı bölgesini duyurmak zorunda"
+          ]
+        },
+        {
+          "title": "Plaselere karşı savunma",
+          "level": "Orta",
+          "duration": "15 dk",
+          "materiel": "1 saldırgan, 3 arka savunmacı",
+          "objectif": "Kısa topların savunmasını geliştirmek",
+          "steps": [
+            "Saldırgan SADECE plase ve yumuşak vuruşlar yapar",
+            "Savunmacıların hepsi ilerlemek zorunda (3–4m)",
+            "Hedef: 10 topta 8 kurtarmak",
+            "Sonra değiştir: uyumu çalışmak için 5 plase, 5 smaç"
+          ]
+        },
+        {
+          "title": "Hızlı geçişler",
+          "level": "İleri",
+          "duration": "20 dk",
+          "materiel": "Tam takım",
+          "objectif": "Saldırı-savunma değişimlerini ustalaştırmak",
+          "steps": [
+            "Normal oyun ama koç geçişleri kronometre eder",
+            "Hedef: 3 saniyeden kısa sürede savunma pozisyonunda olmak",
+            "Çok yavaşsa, takım 5 şınav çeker ve yeniden başlar",
+            "Ralilerin ritmini kademeli olarak artır"
+          ]
+        },
+        {
+          "title": "Saldırganı oku",
+          "level": "İleri",
+          "duration": "15 dk",
+          "materiel": "1 saldırgan, savunmacılar",
+          "objectif": "Beden diline göre tahmin etmek",
+          "steps": [
+            "Saldırgan haber vermeden smaç, plase, vuruş arasında değiştirir",
+            "Vurmadan önce, savunmacı tahminini bağırır: \"Smaç!\" veya \"Plase!\"",
+            "Tahmin doğruysa VE top savunulursa puan",
+            "Odak: omuz, hız, fileye göre pozisyon"
+          ]
+        }
+      ]
+    },
+    "commandments": {
+      "title": "12. Savunmacının 10 emri",
+      "items": [
+        ["Pasöre bak", "Sonra saldırgana, topa değil"],
+        ["Aynı taraf = İlerle", "Karşı taraf = Geri çekil"],
+        ["Rakip kötü pas", "→ 1–2m ilerle (muhtemel plase)"],
+        ["Asla ortada değil", "Seç: ileride VEYA geride"],
+        ["HER ZAMAN iletişim kur", "Aldığın her topta \"Ben!\""],
+        ["Servisten sonra hareket et", "Servis pozisyonu ≠ Savunma pozisyonu"],
+        ["Omzu oku", "Yüksek omuz = smaç, alçak = plase"],
+        ["Alçak pozisyon", "Bacaklar bükülü, kollar hazır"],
+        ["Hızlı geçişler", "Yeniden konumlanmak için max 3 saniye"],
+        ["Bölgeni savun", "Her oyuncunun sorumluluğu var"]
+      ],
+      "sameSide": {
+        "title": "Saldırganla aynı taraf",
+        "action": "→ İLERLE (3–4m)",
+        "desc": "Plase ve yumuşak vuruşları savun"
+      },
+      "oppositeSide": {
+        "title": "Saldırganın karşı tarafı",
+        "action": "→ GERİ ÇEKİL (6–7m)",
+        "desc": "Uzun çaprazları savun"
+      }
+    },
+    "conclusion": {
+      "label": "Sonuç",
+      "body1": "Savunma konumlanması pratik ve deneyimle öğrenilir. Başlangıçta hata yapıyorsan cesaretini kaybetme — profesyoneller bile sürekli yerleşmelerini ayarlar.",
+      "body2": "Anahtar: temel kuralı uygula (aynı taraf = ilerle, karşı = geri çekil), saldırganı gözlemle, takım arkadaşlarınla iletişim kur ve asla bir top için dalmaktan korkma.",
+      "mantra": "Savunma maçları kazanır."
+    }
+  }
 }

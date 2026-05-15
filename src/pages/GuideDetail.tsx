@@ -5,50 +5,20 @@ import GuideService from '../guides/GuideService';
 import GuideReception from '../guides/GuideReception';
 import GuideAttaque from '../guides/GuideAttaque';
 import GuideContre from '../guides/GuideContre';
-import GuideServiceEn from '../guides/GuideServiceEn';
-import GuideReceptionEn from '../guides/GuideReceptionEn';
-import GuideAttaqueEn from '../guides/GuideAttaqueEn';
-import GuideContreEn from '../guides/GuideContreEn';
-import GuideServicePl from '../guides/GuideServicePl';
-import GuideReceptionPl from '../guides/GuideReceptionPl';
-import GuideAttaquePl from '../guides/GuideAttaquePl';
-import GuideContrePl from '../guides/GuideContrePl';
-import GuideServiceIt from '../guides/GuideServiceIt';
-import GuideReceptionIt from '../guides/GuideReceptionIt';
-import GuideAttaqueIt from '../guides/GuideAttaqueIt';
-import GuideContreIt from '../guides/GuideContreIt';
-import GuideServiceEs from '../guides/GuideServiceEs';
-import GuideReceptionEs from '../guides/GuideReceptionEs';
-import GuideAttaqueEs from '../guides/GuideAttaqueEs';
-import GuideContreEs from '../guides/GuideContreEs';
-import GuideServicePt from '../guides/GuideServicePt';
-import GuideReceptionPt from '../guides/GuideReceptionPt';
-import GuideAttaquePt from '../guides/GuideAttaquePt';
-import GuideContrePt from '../guides/GuideContrePt';
-import GuideServiceJa from '../guides/GuideServiceJa';
-import GuideReceptionJa from '../guides/GuideReceptionJa';
-import GuideAttaqueJa from '../guides/GuideAttaqueJa';
-import GuideContreJa from '../guides/GuideContreJa';
-import GuideServiceTr from '../guides/GuideServiceTr';
-import GuideReceptionTr from '../guides/GuideReceptionTr';
-import GuideAttaqueTr from '../guides/GuideAttaqueTr';
-import GuideContreTr from '../guides/GuideContreTr';
 import { Head } from '../seo/Head';
 import { TEAM_SIZES } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
-import type { Lang } from '../i18n';
 
-type SlugMap = Record<string, React.ComponentType>;
-const COMPONENTS_BY_LANG: Record<Lang, SlugMap> = {
-  fr: { service: GuideService, reception: GuideReception, attaque: GuideAttaque, contre: GuideContre },
-  en: { service: GuideServiceEn, reception: GuideReceptionEn, attaque: GuideAttaqueEn, contre: GuideContreEn },
-  pl: { service: GuideServicePl, reception: GuideReceptionPl, attaque: GuideAttaquePl, contre: GuideContrePl },
-  it: { service: GuideServiceIt, reception: GuideReceptionIt, attaque: GuideAttaqueIt, contre: GuideContreIt },
-  es: { service: GuideServiceEs, reception: GuideReceptionEs, attaque: GuideAttaqueEs, contre: GuideContreEs },
-  pt: { service: GuideServicePt, reception: GuideReceptionPt, attaque: GuideAttaquePt, contre: GuideContrePt },
-  ja: { service: GuideServiceJa, reception: GuideReceptionJa, attaque: GuideAttaqueJa, contre: GuideContreJa },
-  tr: { service: GuideServiceTr, reception: GuideReceptionTr, attaque: GuideAttaqueTr, contre: GuideContreTr },
+// Each guide is a single data-driven component that reads its content from
+// the `guideContent` i18n namespace, so we no longer need a per-language
+// component map. The defensive-positioning guide has its own page
+// (`GuideDefenseSized`) because of its team-size/configuration routing.
+const COMPONENTS: Record<string, React.ComponentType> = {
+  service: GuideService,
+  reception: GuideReception,
+  attaque: GuideAttaque,
+  contre: GuideContre,
 };
 
 const DEFENSE_SLUG = 'positionnement-defense';
@@ -169,7 +139,7 @@ export default function GuideDetail() {
     );
   }
 
-  const Component = (COMPONENTS_BY_LANG[lang] ?? COMPONENTS_BY_LANG.en)[guide.slug];
+  const Component = COMPONENTS[guide.slug];
   if (!Component) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>

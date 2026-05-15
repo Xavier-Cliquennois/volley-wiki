@@ -171,11 +171,18 @@ const INSTANCES: Record<Lang, I18nInstance> = {} as Record<Lang, I18nInstance>;
 
 for (const lng of SUPPORTED_LANGS) {
   const inst = createInstance();
+  // Each per-language instance carries its own bundle plus the canonical
+  // French bundle as a fallback, so a key missing in the target language
+  // (typically a guide section not yet translated) falls back to French
+  // instead of returning the raw key string. We never fall back to EN here
+  // because FR is the canonical source for guide content.
+  const resources: Record<string, unknown> =
+    lng === 'fr' ? { fr: RESOURCES.fr } : { [lng]: RESOURCES[lng], fr: RESOURCES.fr };
   inst.use(initReactI18next).init({
-    resources: { [lng]: RESOURCES[lng] },
+    resources,
     lng,
-    fallbackLng: lng,
-    supportedLngs: [lng],
+    fallbackLng: lng === 'fr' ? 'fr' : ['fr'],
+    supportedLngs: lng === 'fr' ? ['fr'] : [lng, 'fr'],
     ns: NAMESPACES,
     defaultNS: 'common',
     interpolation: { escapeValue: false },
