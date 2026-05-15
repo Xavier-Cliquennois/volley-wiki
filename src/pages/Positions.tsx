@@ -406,7 +406,9 @@ export default function Positions() {
           )}
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)', gap: 24, alignItems: 'start' }} className="md:grid-cols-[2fr_1fr] grid-cols-1">
+        <div
+          className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6 items-start"
+        >
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <div style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.18em', opacity: 0.55, marginBottom: 8 }}>
               ← {tCommon('court.net')} →
