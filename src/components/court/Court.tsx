@@ -192,7 +192,10 @@ function PlayerMarker({ player }: { player: CourtPlayer }) {
     </span>
   );
 
-  const captionBg = active ? bg : 'rgba(26,24,18,0.55)';
+  const captionColor = active ? bg : 'var(--ink)';
+  // Wrap captions in a cream pill so they stay legible on top of the dashed
+  // 3 m line and gridlines — without the pill the text and the line share
+  // the same dark hue and visually overlap.
   const captionEl = player.caption ? (
     <span
       style={{
@@ -200,8 +203,13 @@ function PlayerMarker({ player }: { player: CourtPlayer }) {
         fontSize: 9,
         letterSpacing: '0.06em',
         fontFamily: '"DM Mono", monospace',
-        color: captionBg,
+        color: captionColor,
         whiteSpace: 'nowrap',
+        background: 'var(--cream)',
+        padding: '1px 6px',
+        border: '1px solid rgba(26,24,18,0.18)',
+        borderRadius: 4,
+        lineHeight: 1.2,
       }}
     >
       {player.caption}
