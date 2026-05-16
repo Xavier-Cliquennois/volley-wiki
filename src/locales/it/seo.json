@@ -69,7 +69,35 @@
     "guides": "Guide",
     "rules": "Regole",
     "glossary": "Glossario",
-    "defense": "Posizionamento difensivo"
+    "defense": "Posizionamento difensivo",
+    "beach": "Beach",
+    "beachTechniques": "Tecniche beach",
+    "beachPositions": "Ruoli 2v2",
+    "beachScenarios": "Scenari beach",
+    "beachGuides": "Guide beach"
+  },
+  "homeBeach": {
+    "title": "Beach Volley 2v2 — Tecniche, hand signals e regole FIVB | Volley-Wiki",
+    "description": "Wiki di beach volley: poke, cobra, tomahawk, skyball, hand signals dietro la schiena, ruoli 2v2, regole FIVB 2025-2028."
+  },
+  "techniquesBeach": {
+    "title": "Tecniche beach volley — Poke, cobra, tomahawk, skyball | Volley-Wiki",
+    "description": "I gesti simbolo del beach volley 2v2: poke, cobra, tomahawk, skyball, beach dig, hand signals. Adattamenti alla sabbia e al vento."
+  },
+  "positionsBeach": {
+    "title": "Ruoli 2v2 e hand signals nel beach volley | Volley-Wiki",
+    "description": "Bloccatore e difensore nel beach 2v2: tabella completa degli hand signals dietro la schiena, line/angle/peel, comunicazione permanente."
+  },
+  "scenariosBeach": {
+    "title": "Scenari beach volley — In arrivo | Volley-Wiki",
+    "description": "Scenari animati 2v2 in costruzione. Intanto: guide beach e hand signals."
+  },
+  "guidesBeach": {
+    "title": "Guide beach volley — Principiante, transizione, torneo | Volley-Wiki",
+    "description": "Guide beach: principiante assoluto, transizione indoor → beach, organizzare un torneo amatoriale, lettura del gioco avversario 2v2."
+  },
+  "guideBeachDetail": {
+    "title": "{{title}} — Beach Volley | Volley-Wiki"
   },
   "phase": {
     "attack": "attacco",

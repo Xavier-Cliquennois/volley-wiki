@@ -53,5 +53,25 @@
     "backOfCourt": "コート後方",
     "ourSide": "自陣側",
     "opponentSide": "相手側"
+  },
+  "discipline": {
+    "indoor": "インドア",
+    "beach": "ビーチ",
+    "switcherLabel": "種目（インドアまたはビーチ）",
+    "switchToIndoor": "インドアモードに切り替える",
+    "switchToBeach": "ビーチモードに切り替える",
+    "badge": {
+      "indoor": "インドア",
+      "beach": "ビーチ",
+      "both": "両方"
+    },
+    "filter": {
+      "label": "種目で絞り込む",
+      "kicker": "★ 絞り込み",
+      "all": "すべて",
+      "indoor": "インドア",
+      "beach": "ビーチ",
+      "both": "共通"
+    }
   }
 }

@@ -1,0 +1,222 @@
+{
+  "debutant": {
+    "intro": "İlk kez kuma ayak basıyor musun? Hoş geldin. Plaj voleybolu salonun bir yan ürünü değil: kendi kuralları ve kendi kültürü olan başlı başına bir spor. İşte batmamak için hayati minimum.",
+    "sections": [
+      {
+        "id": "erreurs",
+        "title": "Mutlaka kaçınılacak 5 hata",
+        "items": [
+          {
+            "title": "1. Çok sert vurmak istemek",
+            "body": "Yerleşim >> güç. Yerleştirilmiş bir poke, dışarı uçan 10 smacı yener. Plajın hücum felsefesi tek cümleyle özetlenir: « eğer tek aracın angle'a çakmaksa, her seferinde bloklanacaksın » (AVP)."
+          },
+          {
+            "title": "2. 10 parmakla resepsiyon",
+            "body": "Plajda neredeyse sistematik faul (1. temasta parmak pası = çift düdük). Mutlak refleks: hard-driven olmayan her şeyde varsayılan MANŞET."
+          },
+          {
+            "title": "3. Açık el tip",
+            "body": "KESİNLİKLE YASAK (kural 13.2.3 — faul). Zorunlu olarak poke (orta falanjlar) veya cobra (sert gergin parmak uçları) ile değiştirilmeli."
+          },
+          {
+            "title": "4. İletişimi ihmal etmek",
+            "body": "HER topta konuş: « BENDE ! », « SENDE ! », « FREE », « OUT ». 2011 İsviçre Şampiyonası çalışması, call ile call'sızlığa kıyasla +26 puan etkinlik gösteriyor. Sessizlik öldürür."
+          },
+          {
+            "title": "5. Kötü hidrasyon / güneş kremi yok",
+            "body": "Bütün bir günü mahveder. Suya dayanıklı SPF 50+ (her 2 saatte bir yenile), seans başına 1-2 L su, 1 saati aşan seansta elektrolit, UV gözlük, şapka."
+          }
+        ]
+      },
+      {
+        "id": "regles-minimales",
+        "title": "Bilinmesi gereken minimum kurallar",
+        "items": [
+          { "title": "Maks. 3 temas — blok DAHİL", "body": "Salonla EN büyük fark. Blok 3 temasın 1.'si olarak sayılır. Dokunulan bir bloktan sonra, topu döndürmek için sadece 2 temas kalır." },
+          { "title": "Açık el tip yok", "body": "3 numaralı hataya bak. Poke veya cobra ile değiştir." },
+          { "title": "Omuzlara dik over-set", "body": "Topu 10 parmakla karşı tarafa gönderirsen, yörünge omuz eksenine KESİNLİKLE dik olmalı (dümdüz öne veya dümdüz arkaya). Her eğik yörünge = faul." },
+          { "title": "Pozisyon rotasyonu yok", "body": "İki oyuncunun sahada özgür yerleşimi. Pozisyon faulü yok." },
+          { "title": "1 set 21'e (2 fark), 3. set 15'e", "body": "3 setin en iyisi. Gerekirse tie-break 15'e." },
+          { "title": "Her 7 puanda değişim (tie-break'te 5)", "body": "Güneşi ve rüzgârı dengelemek için. Anında değişim, mola yok." }
+        ]
+      },
+      {
+        "id": "manchette",
+        "title": "İlk refleks: manşet",
+        "body": "Kumda varsayılan olarak HER ŞEY manşetle oynanır. En güvenli hareket, hakem tarafından en az cezalandırılan ve rüzgârda kusurlu yerleşime en uygun olanı. 10 parmakla resepsiyon pası, kusursuz topla yüksek seviye yarışmalara ayrılmıştır."
+      },
+      {
+        "id": "partenaire",
+        "title": "Partnerini seçmek",
+        "body": "Tamamlayıcılık (uzun boylu blokçu + hızlı defans), ilerleme isteğinin paylaşılması, kolay iletişim. 2'ye 2'de ikilinin mentali, teknik kadar önemlidir."
+      },
+      {
+        "id": "checklist",
+        "title": "Ekipman kontrol listesi",
+        "items": [
+          { "title": "✓ Plaj topu", "body": "Mikasa VLS300 veya eşdeğeri" },
+          { "title": "✓ Taşınabilir veya kulüp filesi", "body": "Yükseklik 2,43 m E / 2,24 m K" },
+          { "title": "✓ Hidrasyon", "body": "Seans başına 1,5 ila 2 L su, elektrolit" },
+          { "title": "✓ Güneş koruması", "body": "Suya dayanıklı SPF 50+, şapka, UV gözlük" },
+          { "title": "✓ İlk yardım çantası", "body": "Aloe vera, yara bandı, ağrı kesici" },
+          { "title": "✓ Sand socks (yazın opsiyonel)", "body": "Kum > 45 °C ise" },
+          { "title": "✓ Karbonhidrat atıştırması", "body": "Muz, jel, enerji barı" }
+        ]
+      }
+    ]
+  },
+  "transition": {
+    "intro": "Yıllardır salon oynuyorsun ve plaja geçmek istiyor musun? İyi haber: temellerin seninle geliyor. Kötü haber: derinden kazınmış üç refleksi unutman gerekecek. İşte yol haritası.",
+    "sections": [
+      {
+        "id": "change-radicalement",
+        "title": "Radikal olarak değişen şeyler",
+        "items": [
+          { "title": "Temaslar", "body": "Blok 1. temas olarak sayılır. Artık blok + dig + set + spike zincirleyemezsin. Dokunulan blok sonrası: maksimum 2 temas kalır." },
+          { "title": "Sıkı parmak set'i", "body": "Salondakinden çok daha sıkı hakemlik. Mutlak el senkronizasyonu. Gövde dönüşü yok. Omuzlara dik over-set." },
+          { "title": "Tip yok", "body": "Açık el amorti YASAK. Zorunlu değişim: poke veya cobra." },
+          { "title": "Parmakla resepsiyon = faul", "body": "Hard-driven top hariç. Refleks: varsayılan manşet." },
+          { "title": "Kum yüzeyi", "body": "Hareketler %30 daha yavaş, sıçramalar -5 ila -15 cm, enerji maliyeti × 1,5 ila × 2. Önceden tahmin hızdan daha önemli." },
+          { "title": "Tam yönlülük", "body": "Artık sabit pozisyon yok. Servis atarsın, resepsiyon yaparsın, set verirsin, atak yaparsın, blok yaparsın, savunma yaparsın. Sırayla, her ralide." },
+          { "title": "Azaltılmış kadro", "body": "2 oyuncu, yedek yok. Libero yok." },
+          { "title": "2v2 mental", "body": "Partnerler arasında tam görünürlük, sürekli iletişim, duygusal yönetim daha açık." }
+        ]
+      },
+      {
+        "id": "reste-pareil",
+        "title": "Aynı kalan şeyler",
+        "body": "Temel teknik hareketlerin: manşet, pas, smaç, servis. Blok ve atakçı okuma. Temiz temasın önemi. Line/angle, kısa/uzun kavramları. Salon birikimin kaybedilmiş DEĞİL — sadece ayarlamak gerekiyor."
+      },
+      {
+        "id": "desapprendre",
+        "title": "UNUTULMASI gereken 3 şey",
+        "items": [
+          { "title": "1. Açık el tip", "body": "Hemen POKE (orta falanjlar) veya COBRA (sert parmak uçları) ile değiştir." },
+          { "title": "2. Dönüşlü set", "body": "Omuzlar over-set yörüngesine dik kalmalı. Gövde dönüşü yok." },
+          { "title": "3. Sistematik yüksek pas resepsiyonu", "body": "Varsayılan MANŞET. 10 parmakla resepsiyon pası çok oturmuş setlere ve çok temiz oyunculara ayrılmıştır." }
+        ]
+      },
+      {
+        "id": "apprendre",
+        "title": "Önce ÖĞRENİLECEK 3 şey",
+        "items": [
+          { "title": "1. Tomahawk", "body": "Beach dig'in yasal olarak oynayamayacağı yumuşak topların yüksek savunması. Vazgeçilmez." },
+          { "title": "2. Poke / cobra", "body": "Tip'inin yerini alır. 1 numaralı yerleşim aracın." },
+          { "title": "3. Hand signals ve 2v2 iletişim", "body": "Opsiyonel değil. Kendi tarafının her servisinden önce, blokçu sırt arkasında sinyal verir. Defans pozisyonunu uyarlar." }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Önerilen ilerleme (8 hafta)",
+        "items": [
+          { "title": "H1-H2 — Adaptasyon", "body": "Kumda manşeti stabilize et, ilk servisler, sıcaklık ve hidrasyon yönetimi." },
+          { "title": "H3-H4 — Plaj araçları", "body": "Poke ve tomahawk, ayaklar kumda atak, azalmış sıçramanın yönetimi." },
+          { "title": "H5-H6 — Taktik", "body": "Filede blok, blok → savunma geçişleri, hand signals." },
+          { "title": "H7-H8 — Yarışma", "body": "Tam taktik, ilk amatör turnuvalar, rakibin oyununu okuma." }
+        ]
+      }
+    ]
+  },
+  "tournoi-loisir": {
+    "intro": "Amatör bir plaj turnuvası düzenlemek üç şeydir: takım sayısına göre doğru formatı seçmek, kurallara uygun bir kurulum sağlamak ve herkesin kabul ettiği basitleştirilmiş kurallar belirlemek. Geri kalan her şey lojistiktir.",
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Takım sayısına göre önerilen formatlar",
+        "items": [
+          { "title": "4 takım", "body": "Round robin + ilk 2 final. Süre ~2-3 sa. En basit format." },
+          { "title": "6 takım", "body": "3'lü 2 grup + yarı finaller + final. ~3-4 sa." },
+          { "title": "8 takım", "body": "4'lü 2 grup + çapraz yarı finaller + final. ~4-5 sa." },
+          { "title": "12 takım", "body": "4'lü 3 grup + tek eleme. Tam gün." },
+          { "title": "16 takım", "body": "4'lü 4 grup + tek eleme. Tam gün." },
+          { "title": "24+ takım", "body": "Gruplar + ana tablo + teselli tablosu. Hafta sonu." }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Kurulum",
+        "items": [
+          { "title": "Saha", "body": "16 × 8 m, serbest bölge minimum 3 m (FIVB'de 5-6 m). Minimum kum derinliği 40 cm." },
+          { "title": "Taşınabilir file", "body": "Yükseklik 2,43 m (E / karışık) veya 2,24 m (K / amatör). FFvolley karışık için 2,35 m." },
+          { "title": "Çizgiler", "body": "PVC bantlar + yumuşak kazıklar. Genişlik 5 cm." },
+          { "title": "Antenler", "body": "Amatörde opsiyonel, yarışmada zorunlu." }
+        ]
+      },
+      {
+        "id": "regles-simplifiees",
+        "title": "Basitleştirilmiş kurallar",
+        "body": "1 set 21'e (veya hızlı format için 15). 25'te tie-break veya « ani ölüm » yok. Sırayla servis. Öz hakemlik. Şüphe halinde: tekrar oynanır. Her şeyden önce plaj ruhu — spor şenliklidir."
+      },
+      {
+        "id": "materiel",
+        "title": "Hazırlanacak malzeme",
+        "items": [
+          { "title": "✓ Toplar", "body": "Saha başına 1 + yedekte 2" },
+          { "title": "✓ Fileler ve direkler", "body": "Kategoriye göre ayarlanabilir yükseklik" },
+          { "title": "✓ Çizgiler + kazıklar", "body": "Kontrastlı PVC bantlar" },
+          { "title": "✓ Su bidonları", "body": "Takım başına günlük birkaç litre" },
+          { "title": "✓ Skor tablosu", "body": "Saha başına en az bir" },
+          { "title": "✓ Eczane", "body": "Aloe vera, yara bandı, ağrı kesici, yedek güneş kremi" },
+          { "title": "✓ Tente / şemsiyeler", "body": "Maçlar arası dinlenme için gölge bölgesi" },
+          { "title": "✓ > 12 takımsa ses sistemi", "body": "Anonslar, atmosfer" },
+          { "title": "✓ Takım listesi + program", "body": "Basılı ve asılı" },
+          { "title": "✓ Ödüller / kupalar", "body": "Podyum ödülleri" },
+          { "title": "✓ Geri dönüşüm kutuları", "body": "Temiz turnuva, temiz imaj" }
+        ]
+      },
+      {
+        "id": "apps",
+        "title": "Yararlı uygulamalar",
+        "body": "BeachUp (beachup.app, dünya çapında 16 500+ saha referansı) · Beach Volleyball App (App Store) · Tournaments by SportEasy · Toornament.com · CHAMP'S (champs.fr, streaming)."
+      }
+    ]
+  },
+  "lecture-jeu": {
+    "intro": "Plajda rakibi okumak savunma işinin %50'sidir. 16 × 8 m'yi kapatmak için sadece 2 defansın var — direnmenin tek yolu önceden tahmin etmek. İşte ısınmadan vuruştan önce ayakları durdurmaya kadar tam yöntem.",
+    "sections": [
+      {
+        "id": "echauffement",
+        "title": "Isınma sırasında (kritik 5 dk)",
+        "intro": "Filede 5 dakikalık ısınma bir scouting altın madenidir. Zihinsel olarak not et:",
+        "items": [
+          { "title": "Kim daha iyi pas veriyor?", "body": "İkisinden biri diğerinden daha çok pas verecek. Kim olduğunu belirle." },
+          { "title": "Kim güçle vuruyor / kim shoot ediyor?", "body": "« Çakıcı » ve « yerleştirici » hızla ortaya çıkar." },
+          { "title": "« Line player » vs « angle player »", "body": "Doğal eğilim: line veya çapraz." },
+          { "title": "El kullanımı", "body": "Sağ el / sol el. Atak açılarını etkiler." },
+          { "title": "Bireysel tikler", "body": "Her zaman vurmadan önce hedefine bakan bir oyuncu, poke için aşağıdan yüklenen bir başkası vs." }
+        ]
+      },
+      {
+        "id": "indices-frappe",
+        "title": "Vuruştan önce okunacak ipuçları (sırayla)",
+        "items": [
+          { "title": "1. Set kalitesi", "body": "Fileye yakın gergin → açık açılar, muhtemelen hard hit. Fileden uzak → kapalı açılar, muhtemelen shot'lar. Atakçının arkasında → çok muhtemel poke." },
+          { "title": "2. Koşu", "body": "Düz hat agresif → güçlü swing. Frenli veya kısaltılmış → shot veya poke." },
+          { "title": "3. Yüklemede omuzlar", "body": "Line'a hizalı → line. Açık → angle / cross. Geç kapalı → cut veya tip." },
+          { "title": "4. Kol ve bilek", "body": "Düz gergin → swing. Düşen dirsek → cut veya poke." },
+          { "title": "5. Bireysel eğilimler (scouting)", "body": "Isınmada ve maçın başında not ettiklerin. Sürekli güncelleme." }
+        ]
+      },
+      {
+        "id": "methode",
+        "title": "Savunma yöntemi",
+        "items": [
+          { "title": "Arkanın ortasında temel pozisyon", "body": "Dip çizgisinden 1-1,5 m'de nötr başlangıç, ortalanmış." },
+          { "title": "Set anında bölgeye kayma", "body": "Set kalitesi okunabilir hale gelir gelmez, kapatılacak bölgeyi hazırlamak için kay." },
+          { "title": "Atak temasından ÖNCE ayakları durdurmak", "body": "Altın kural — hareket halindeysen tepki vermek imkânsız." },
+          { "title": "Mükemmel ilk adım", "body": "İlk itki topun gerçek yönünde, asla yaklaşıklık değil." }
+        ]
+      },
+      {
+        "id": "match",
+        "title": "Maçta: sürekli adaptasyon",
+        "body": "Zihinsel bir mini bilanço tut (bu oyuncu 4 kez line'a vurdu, 0 kez çapraza). Gerçek zamanlı uyum sağla. Dengesizlik kışkırt (zayıf alıcıyı 2. temas oynamaya zorlamak için kısa servis). Her saha değişiminde rüzgârı yeniden oku (normal sette her 7 puan, tie-break'te 5)."
+      },
+      {
+        "id": "exercice",
+        "title": "Önerilen antrenman alıştırması",
+        "body": "« Beş kör servis »: partnerin sana istediği bölgeye servis atar, top gelmeden ÖNCE okuduğunu sesli olarak call etmelisin (« line », « angle », « cut », « short »…). 5 üzerinden skor. Hedef: birkaç seanstan sonra minimum 4/5."
+      }
+    ]
+  }
+}

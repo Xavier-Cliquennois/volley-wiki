@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ BEACH · PRZEWODNIKI",
+    "title": "PRZEWODNIKI SIATKÓWKI PLAŻOWEJ",
+    "subtitle": "Pogłębione zagadnienia taktyczne i techniczne — od absolutnego początkującego do transition hala → beach."
+  },
+  "ticketPrefix": "PRZEWODNIK",
+  "detail": {
+    "backLink": "← Powrót do przewodników beach",
+    "sectionTitle": "★ PRZEWODNIK BEACH",
+    "notFound": "Nie znaleziono przewodnika."
+  },
+  "list": {
+    "debutant": {
+      "title": "Przewodnik absolutnego początkującego",
+      "subtitle": "Pierwsze odruchy: odbicie sposobem dolnym, komunikacja, nawodnienie",
+      "category": "Taktyka",
+      "description": "5 błędów, których należy unikać, minimum przepisów do poznania oraz lista sprzętu na pierwszy trening na piasku.",
+      "readingTime": "~10 min",
+      "level": "Początkujący"
+    },
+    "transition": {
+      "title": "Transition hala → beach",
+      "subtitle": "Co się zmienia, co zostaje, czego trzeba się oduczyć",
+      "category": "Taktyka",
+      "description": "Dla zawodnika z hali przechodzącego na plażę: 3 rzeczy do oduczenia (tip otwartą dłonią, set w rotacji, odbiór sposobem górnym) i 3 do priorytetowego nauczenia (tomahawk, poke, hand signals).",
+      "readingTime": "~12 min",
+      "level": "Średniozaawansowany"
+    },
+    "tournoi-loisir": {
+      "title": "Organizacja turnieju amatorskiego",
+      "subtitle": "Formaty, instalacja, uproszczone zasady, sprzęt",
+      "category": "Taktyka",
+      "description": "Wszystko, co potrzebne do zorganizowania turnieju na piasku od 4 do 24 drużyn: formaty (grupy, drabinka pucharowa), instalacja 16×8 m, lista sprzętu, uproszczone zasady i przydatne aplikacje.",
+      "readingTime": "~8 min",
+      "level": "Średniozaawansowany"
+    },
+    "lecture-jeu": {
+      "title": "Czytanie gry przeciwnika",
+      "subtitle": "Scouting podczas rozgrzewki + czytanie atakującego",
+      "category": "Taktyka",
+      "description": "Wskazówki do odczytania w kolejności — jakość setu, rozbieg, barki w naciągnięciu, ramię i nadgarstek — aby przewidzieć line/angle/cut/poke. Metoda na 5 minut rozgrzewki.",
+      "readingTime": "~10 min",
+      "level": "Zaawansowany"
+    }
+  }
+}

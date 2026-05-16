@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ BEACH VOLLEY · 2 CONTRE 2 ★",
+  "hero": {
+    "logoTop": "BEACH",
+    "logoBottom": "VOLLEY",
+    "subtitle": "Le sport jumeau de l'indoor — 2v2 sur sable, polyvalence totale, signaux derrière le dos. Olympique depuis 1996.",
+    "ctaPrimary": "VOIR LES TECHNIQUES",
+    "ctaSecondary": "LIRE LES RÈGLES BEACH"
+  },
+  "sectionsLabel": "★ SECTIONS BEACH ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniques",
+      "desc": "Poke, cobra, tomahawk, skyball, beach dig — les gestes phares du beach.",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Rôles 2v2",
+      "desc": "Bloqueur et défenseur. Tableau complet des signaux de mains derrière le dos.",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guides beach",
+      "desc": "Débutant absolu, transition indoor → beach, tournoi loisir, lecture du jeu.",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Règles beach",
+      "desc": "Règlement FIVB 2025-2028 — sections beach et différences vs indoor.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossaire",
+      "desc": "Glossaire commun avec stickers beach / indoor / 2 en 1.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scénarios beach",
+      "desc": "Séquences animées beach — bientôt disponibles. Voir les guides en attendant.",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

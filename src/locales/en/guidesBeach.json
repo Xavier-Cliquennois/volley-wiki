@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ BEACH · GUIDES",
+    "title": "BEACH VOLLEYBALL GUIDES",
+    "subtitle": "In-depth tactics and technique — from the absolute beginner to the indoor → beach transition."
+  },
+  "ticketPrefix": "GUIDE",
+  "detail": {
+    "backLink": "← Back to beach guides",
+    "sectionTitle": "★ BEACH GUIDE",
+    "notFound": "Guide not found."
+  },
+  "list": {
+    "debutant": {
+      "title": "Absolute beginner's guide",
+      "subtitle": "First reflexes: bump, communication, hydration",
+      "category": "Tactics",
+      "description": "The 5 mistakes to avoid, the minimum rules to know, and the equipment checklist for your first session on sand.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
+    },
+    "transition": {
+      "title": "Indoor → beach transition",
+      "subtitle": "What changes, what stays, what to unlearn",
+      "category": "Tactics",
+      "description": "For an indoor player switching to beach: 3 things to unlearn (open-hand tip, rotating set, overhead reception) and 3 to learn first (tomahawk, poke, hand signals).",
+      "readingTime": "~12 min",
+      "level": "Intermediate"
+    },
+    "tournoi-loisir": {
+      "title": "Running a recreational tournament",
+      "subtitle": "Formats, setup, simplified rules, gear",
+      "category": "Tactics",
+      "description": "Everything you need to run a sand tournament with 4 to 24 teams: formats (pools, single elim), 16×8 m setup, gear checklist, simplified rules and useful apps.",
+      "readingTime": "~8 min",
+      "level": "Intermediate"
+    },
+    "lecture-jeu": {
+      "title": "Reading the opponent's play",
+      "subtitle": "Warm-up scouting + reading the attacker",
+      "category": "Tactics",
+      "description": "Cues to read in order — set quality, approach, shoulders at the load, arm and wrist — to anticipate line/angle/cut/poke. Method during the 5-minute warm-up.",
+      "readingTime": "~10 min",
+      "level": "Advanced"
+    }
+  }
+}

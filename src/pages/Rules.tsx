@@ -1,20 +1,45 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useMemo, useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
+import DisciplineBadge from '../components/DisciplineBadge';
+import DisciplineFilter, { type DisciplineFilterValue } from '../components/DisciplineFilter';
+import type { Discipline } from '../discipline/useDiscipline';
 
-type Rule = { title: string; content: string };
-type Section = { id: string; title: string; num: string; rules: Rule[] };
+type Rule = { title: string; content: string; discipline?: Discipline[] };
+type Section = {
+  id: string;
+  title: string;
+  num: string;
+  rules: Rule[];
+  discipline?: Discipline[];
+};
+
+function resolveDiscipline(d?: Discipline[]): Discipline[] {
+  return d && d.length > 0 ? d : ['indoor'];
+}
+
+function matchesFilter(disc: Discipline[], filter: DisciplineFilterValue): boolean {
+  if (filter === 'all') return true;
+  if (filter === 'both') return disc.length >= 2;
+  return disc.includes(filter);
+}
 
 export default function Rules() {
   const [open, setOpen] = useState<string | null>('basics');
+  const [filter, setFilter] = useState<DisciplineFilterValue>('all');
   const { t } = useTranslation('rules');
   const { t: tSeo } = useTranslation('seo');
   const lang = useCurrentLang();
 
   const sections = t('sections', { returnObjects: true }) as Section[];
   const quickFaults = t('quickFaults', { returnObjects: true }) as string[];
+
+  const visibleSections = useMemo(() => {
+    if (filter === 'all') return sections;
+    return sections.filter(s => matchesFilter(resolveDiscipline(s.discipline), filter));
+  }, [sections, filter]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
@@ -48,16 +73,17 @@ export default function Rules() {
           background: 'var(--cream)', display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontFamily: '"Bungee", sans-serif', fontSize: 16, flexShrink: 0,
         }}>!</div>
-        <p
-          style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5 }}
-          // i18n bold tags are pre-validated keys, safe to inject.
-          dangerouslySetInnerHTML={{ __html: t('warning') }}
-        />
+        <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5 }}>
+          <Trans i18nKey="warning" t={t} components={{ strong: <strong /> }} />
+        </p>
       </div>
 
+      <DisciplineFilter value={filter} onChange={setFilter} />
+
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-        {sections.map(section => {
+        {visibleSections.map(section => {
           const isOpen = open === section.id;
+          const sectionDisc = resolveDiscipline(section.discipline);
           return (
             <div
               key={section.id}
@@ -95,6 +121,7 @@ export default function Rules() {
                 <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 15, letterSpacing: '0.03em', flex: 1 }}>
                   {section.title}
                 </span>
+                <DisciplineBadge on={sectionDisc} size="sm" />
                 <div style={{
                   width: 32, height: 32, border: '3px solid var(--ink)',
                   background: 'var(--yellow)',
@@ -108,20 +135,32 @@ export default function Rules() {
 
               {isOpen && (
                 <div>
-                  {section.rules.map((rule, idx) => (
-                    <div
-                      key={rule.title}
-                      style={{
-                        padding: '14px 20px',
-                        borderBottom: idx < section.rules.length - 1 ? '2px dashed rgba(26,24,18,0.18)' : 'none',
-                      }}
-                    >
-                      <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em', color: 'var(--orange)', marginBottom: 6 }}>
-                        {rule.title}
+                  {section.rules.map((rule, idx) => {
+                    const ruleHasOwnDisc = rule.discipline && rule.discipline.length > 0;
+                    const ruleDisc = resolveDiscipline(rule.discipline ?? section.discipline);
+                    return (
+                      <div
+                        key={rule.title}
+                        style={{
+                          padding: '14px 20px',
+                          borderBottom: idx < section.rules.length - 1 ? '2px dashed rgba(26,24,18,0.18)' : 'none',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: 6,
+                        }}
+                      >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 10 }}>
+                          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em', color: 'var(--orange)' }}>
+                            {rule.title}
+                          </div>
+                          {ruleHasOwnDisc && (
+                            <DisciplineBadge on={ruleDisc} size="sm" />
+                          )}
+                        </div>
+                        <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.55, opacity: 0.8 }}>{rule.content}</p>
                       </div>
-                      <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.55, opacity: 0.8 }}>{rule.content}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

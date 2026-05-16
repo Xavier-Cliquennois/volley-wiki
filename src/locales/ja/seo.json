@@ -69,7 +69,35 @@
     "guides": "ガイド",
     "rules": "ルール",
     "glossary": "用語集",
-    "defense": "守備ポジショニング"
+    "defense": "守備ポジショニング",
+    "beach": "ビーチ",
+    "beachTechniques": "ビーチテクニック",
+    "beachPositions": "2対2の役割",
+    "beachScenarios": "ビーチシナリオ",
+    "beachGuides": "ビーチガイド"
+  },
+  "homeBeach": {
+    "title": "ビーチバレー 2対2 — テクニック、ハンドシグナル、FIVBルール | Volley-Wiki",
+    "description": "ビーチバレーのウィキ：ポーク、コブラ、トマホーク、スカイボール、背中越しのハンドシグナル、2対2の役割、FIVB 2025-2028ルール。"
+  },
+  "techniquesBeach": {
+    "title": "ビーチバレーのテクニック — ポーク、コブラ、トマホーク、スカイボール | Volley-Wiki",
+    "description": "2対2ビーチを象徴する技：ポーク、コブラ、トマホーク、スカイボール、ビーチディグ、ハンドシグナル。砂と風への適応。"
+  },
+  "positionsBeach": {
+    "title": "ビーチバレーの2対2の役割とハンドシグナル | Volley-Wiki",
+    "description": "2対2ビーチのブロッカーとディフェンダー：背中越しのハンドシグナル完全表、ライン／アングル／ピール、絶え間ないコミュニケーション。"
+  },
+  "scenariosBeach": {
+    "title": "ビーチバレーのシナリオ — 近日公開 | Volley-Wiki",
+    "description": "2対2のアニメーションシナリオを製作中。それまではビーチガイドとハンドシグナルをご覧ください。"
+  },
+  "guidesBeach": {
+    "title": "ビーチバレーのガイド — 初心者、移行、大会 | Volley-Wiki",
+    "description": "ビーチガイド：完全初心者、インドア→ビーチ移行、レクリエーション大会の運営、2対2の相手の読み方。"
+  },
+  "guideBeachDetail": {
+    "title": "{{title}} — ビーチバレー | Volley-Wiki"
   },
   "phase": {
     "attack": "攻撃",

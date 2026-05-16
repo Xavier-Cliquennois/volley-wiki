@@ -53,5 +53,25 @@
     "backOfCourt": "FONDO CAMPO",
     "ourSide": "Nostro lato",
     "opponentSide": "Lato avversario"
+  },
+  "discipline": {
+    "indoor": "Indoor",
+    "beach": "Beach",
+    "switcherLabel": "Disciplina (Indoor o Beach)",
+    "switchToIndoor": "Passa alla modalità Indoor",
+    "switchToBeach": "Passa alla modalità Beach",
+    "badge": {
+      "indoor": "INDOOR",
+      "beach": "BEACH",
+      "both": "2 IN 1"
+    },
+    "filter": {
+      "label": "Filtra per disciplina",
+      "kicker": "★ FILTRA",
+      "all": "Tutte",
+      "indoor": "Indoor",
+      "beach": "Beach",
+      "both": "Comuni"
+    }
   }
 }

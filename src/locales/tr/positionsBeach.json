@@ -1,0 +1,171 @@
+{
+  "header": {
+    "kicker": "★ PLAJ · 2'YE 2",
+    "title": "PLAJDA ROLLER VE SİNYALLER",
+    "subtitle": "Rotasyon yok, sabit pozisyon yok. Yer değiştiren iki işlevsel rol (blokçu · defans) ve blok + savunmayı koordine etmek için sırt arkasında hand signals."
+  },
+  "court": {
+    "kicker": "★ 16 × 8 M SAHA",
+    "title": "Plaj sahası",
+    "facts": {
+      "size": "16 × 8 m (salonda 18 × 9'a karşı)",
+      "net": "File 2,43 m E · 2,24 m K · 2,35 m karışık",
+      "noLines": "Orta çizgi yok, atak çizgisi yok",
+      "service": "Servis bölgesi: arka tarafın tüm genişliği"
+    },
+    "labels": {
+      "blocker": "BLOKÇU",
+      "defender": "DEFANS",
+      "net": "FİLE",
+      "endLine": "Dip çizgisi"
+    }
+  },
+  "roles": {
+    "kicker": "★ İKİ ROL, SIFIR POZİSYON",
+    "title": "İki işlevsel rol",
+    "intro": "2'ye 2'de kurallar tarafından dayatılan sabit pozisyonlar yoktur. Ama iki tamamlayıcı işlev ortaya çıkar — kimin servis attığına ve hangi rakibi hedeflediğine göre servis sonrası yer değiştirir.",
+    "items": [
+      {
+        "id": "blocker",
+        "label": "BLOKÇU",
+        "subtitle": "Filede",
+        "profile": "Uzun boylu, patlayıcı sıçrayan, fileyi okur",
+        "mission": "Blok yap, sonra peel yaparak savunmaya geç. Servisten önce hand signals.",
+        "tips": [
+          "Fileden 30 cm, eller alın hizasında",
+          "Sealing: rakip sahaya öne ve aşağı doğru girme",
+          "Eller atak teması SONRASINDA itilir (salondan daha geç)",
+          "Açık, sert parmaklar, başparmaklar paralel olarak yukarı"
+        ]
+      },
+      {
+        "id": "defender",
+        "label": "DEFANS",
+        "subtitle": "Arkada",
+        "profile": "Hızlı, çevik, oyunu okur",
+        "mission": "Blokun karşı bölgesini kapat, savunmayı oku. Dip çizgisinden 1-1,5 m'de başlar.",
+        "tips": [
+          "Temel pozisyon arkanın ortasında",
+          "Set anında bölgeye kayma",
+          "Ayaklar atak temasından ÖNCE durdurulur",
+          "Son okuma: atakçının omuzları + kolu + bileği"
+        ]
+      }
+    ],
+    "switchingTitle": "Switching",
+    "switchingBody": "Roller kimin servis attığına / kimin resepsiyonda olduğuna / hangi rakibin hedeflendiğine göre değişir. Blokçu çok kısaysa: bloksuz 2'li savunma seçeneği (sistematik peel/drop).",
+    "labels": {
+      "profile": "PROFİL",
+      "mission": "GÖREV"
+    }
+  },
+  "signals": {
+    "kicker": "★ HAND SIGNALS",
+    "title": "Sırt arkasında sinyaller",
+    "intro": "Blokçu, kendi takımının servisinden ÖNCE niyetini partnerine iletir. Sinyaller sırt arkasında (bel altı), rakibe görünmez şekilde gösterilir. Her rakibe bir el: sağ el sağdaki rakibi, sol el soldaki rakibi konuşur.",
+    "warning": "\"Kapalı yumruk\" ve \"açık el\" konvansiyonları takımdan takıma değişir. Her maçtan önce partnerinle konvansiyonu belirlemek şarttır.",
+    "headers": {
+      "signal": "Sinyal",
+      "meaning": "Anlamı (blok)",
+      "defender": "Defansın pozisyonu",
+      "level": "Seviye"
+    },
+    "items": [
+      {
+        "icon": "☝️",
+        "signal": "1 parmak",
+        "meaning": "Line block",
+        "defender": "Angle'ı kapatır",
+        "level": "Débutant"
+      },
+      {
+        "icon": "✌️",
+        "signal": "2 parmak",
+        "meaning": "Angle block (cross)",
+        "defender": "Line'ı kapatır",
+        "level": "Débutant"
+      },
+      {
+        "icon": "🤟",
+        "signal": "3 parmak",
+        "meaning": "Show angle → dive line (fake)",
+        "defender": "Nötr başlar, angle'a çıkar",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🖖",
+        "signal": "4 parmak",
+        "meaning": "Show line → dive angle (fake)",
+        "defender": "Angle'da başlar, line'a kayar",
+        "level": "Avancé"
+      },
+      {
+        "icon": "✊",
+        "signal": "Kapalı yumruk",
+        "meaning": "No block / Drop / Peel",
+        "defender": "2'li paylaşılan savunma",
+        "level": "Intermédiaire"
+      },
+      {
+        "icon": "🖐️",
+        "signal": "Açık el (5)",
+        "meaning": "Read block",
+        "defender": "Read defans",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🤙",
+        "signal": "Shaka",
+        "meaning": "Spread block",
+        "defender": "Geçen her şeyi kovalar",
+        "level": "Avancé"
+      }
+    ],
+    "logicTitle": "Savunma mantığı",
+    "logicBody": "Defans, blokçunun ALMADIĞI bölgeyi kapatır. Line block → angle savunma. Angle block → line savunma. Kapalı yumruk (pull) → 2'li savunma, saha yarılara bölünür. Açık el (read) → gerçek zamanlı okuma."
+  },
+  "calls": {
+    "kicker": "★ RALİ SIRASINDA CALLS",
+    "title": "2v2 iletişim",
+    "intro": "Bir çalışma (Effectiveness of the Call in Beach Volleyball, 2011 İsviçre Şampiyonası) call İLE yapılan atakların %61,5'inin sayı olduğunu, call OLMADAN %35'in (p<0,0005) sayı olduğunu gösteriyor. Kısa · yüksek sesli · erken · paylaşılan konvansiyonlar · asla sessiz değil.",
+    "groupsTitle": "Üç call grubu",
+    "groups": [
+      {
+        "title": "Rakibin vuruşundan önce calls (okumalar)",
+        "items": [
+          "« Line ! » — line boyunca atak",
+          "« Angle ! » / « Cross ! » — çapraz",
+          "« Cut ! » — kısa çapraz",
+          "« Tip ! » / « Short ! » — kısa feint",
+          "« High ! » / « Shot ! » — bloğun üstünden yüksek shot",
+          "« Swing ! » — beklenen sert vuruş",
+          "« Tight ! » — fileye yakın gergin set",
+          "« Off ! » — fileden uzak set"
+        ]
+      },
+      {
+        "title": "Rali sırasında calls",
+        "items": [
+          "« Mine ! » / « Bende ! » — topu ben oynuyorum",
+          "« Yours ! » / « Sende ! »",
+          "« Out ! » — bırak, top dışarı gidiyor",
+          "« In ! » / « İçeride ! » — iyi top, oyna",
+          "« Free ! » — kolay top geliyor",
+          "« Up ! » — kaldırıyorum / kaldır",
+          "« Cover ! » — atakçıyı koru",
+          "« Touch ! » — blok değdi",
+          "« Net ! » — fileye değdi"
+        ]
+      },
+      {
+        "title": "Defansif calls (defans → blokçu)",
+        "items": [
+          "« Stay ! » — kal, söylediğin gibi blok yap",
+          "« Pull ! » — geri çekil, 2'li savunma",
+          "« Block ! » — başlangıçta fake'ten sonra gerçekten blok yap",
+          "« Tight ! » / « Off ! » — rakip setin kalitesi"
+        ]
+      }
+    ]
+  }
+}

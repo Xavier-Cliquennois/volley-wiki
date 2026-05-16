@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ VOLEIBOL DE PRAIA · 2 CONTRA 2 ★",
+  "hero": {
+    "logoTop": "BEACH",
+    "logoBottom": "VOLLEY",
+    "subtitle": "O desporto irmão do pavilhão — 2v2 na areia, polivalência total, sinais por trás das costas. Olímpico desde 1996.",
+    "ctaPrimary": "VER AS TÉCNICAS",
+    "ctaSecondary": "LER AS REGRAS BEACH"
+  },
+  "sectionsLabel": "★ SECÇÕES BEACH ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Técnicas",
+      "desc": "Poke, cobra, tomahawk, skyball, beach dig — os gestos emblemáticos do beach.",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Funções 2v2",
+      "desc": "Bloqueador e defensor. Tabela completa dos hand signals por trás das costas.",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Guias beach",
+      "desc": "Iniciante absoluto, transição pavilhão → praia, torneio amador, leitura do jogo.",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Regras beach",
+      "desc": "Regulamento FIVB 2025-2028 — secções beach e diferenças vs pavilhão.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossário",
+      "desc": "Glossário comum com etiquetas beach / pavilhão / 2 em 1.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Cenários beach",
+      "desc": "Sequências animadas beach — em breve. Consulta os guias entretanto.",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

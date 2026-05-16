@@ -1,0 +1,222 @@
+{
+  "debutant": {
+    "intro": "¿Pones los pies en la arena por primera vez? Bienvenido. El beach no es un subproducto del indoor: es un deporte por derecho propio, con sus propias reglas y su propia cultura. Aquí tienes el mínimo vital para no hundirte.",
+    "sections": [
+      {
+        "id": "erreurs",
+        "title": "Los 5 errores a evitar a toda costa",
+        "items": [
+          {
+            "title": "1. Querer golpear demasiado fuerte",
+            "body": "Colocación >> potencia. Un poke colocado vale más que 10 remates que se van fuera. La filosofía ofensiva del beach se resume en una frase: «si tu única herramienta es pegar al ángulo, te bloquearán todas las veces» (AVP)."
+          },
+          {
+            "title": "2. Recibir con dedos",
+            "body": "Falta casi sistemática en beach (set de dedos en 1er toque = doble silbato). Reflejo absoluto: ANTEBRAZOS por defecto en todo lo que no sea hard-driven."
+          },
+          {
+            "title": "3. Tip con mano abierta",
+            "body": "ESTRICTAMENTE PROHIBIDO (regla 13.2.3 — falta). Hay que sustituirlo obligatoriamente por un poke (falanges medias) o un cobra (yemas extendidas rígidas)."
+          },
+          {
+            "title": "4. Descuidar la comunicación",
+            "body": "Hablar en CADA pelota: «¡MÍA!», «¡TUYA!», «LIBRE», «FUERA». El estudio de los Campeonatos Suizos 2011 muestra +26 puntos de eficacia con call vs sin call. El silencio mata."
+          },
+          {
+            "title": "5. Mala hidratación / sin crema solar",
+            "body": "Arruina un día entero. SPF 50+ resistente al agua (renovar cada 2 h), 1 a 2 L de agua por sesión, electrolitos a partir de 1 h, gafas UV, gorra."
+          }
+        ]
+      },
+      {
+        "id": "regles-minimales",
+        "title": "Las reglas mínimas que hay que conocer",
+        "items": [
+          { "title": "3 toques máximo — bloqueo INCLUIDO", "body": "ESTA es LA diferencia mayor con el indoor. El bloqueo cuenta como el 1º de los 3 toques. Después de un bloqueo tocado solo quedan 2 toques para devolver." },
+          { "title": "Sin tip con mano abierta", "body": "Ver error nº3. Sustituir por poke o cobra." },
+          { "title": "Over-set perpendicular a los hombros", "body": "Si mandas la pelota al otro lado en set de dedos, la trayectoria DEBE ser estrictamente perpendicular al eje de tus hombros (recto adelante o recto atrás). Cualquier trayectoria oblicua = falta." },
+          { "title": "Sin rotación de posiciones", "body": "Colocación libre de los dos jugadores en la cancha. Sin falta de posición." },
+          { "title": "1 set a 21 (diferencia 2), 3er set a 15", "body": "Al mejor de 3 sets. Tie-break a 15 si es necesario." },
+          { "title": "Cambio cada 7 puntos (5 en tie-break)", "body": "Para reequilibrar sol y viento. Cambio inmediato, sin pausa." }
+        ]
+      },
+      {
+        "id": "manchette",
+        "title": "Primer reflejo: los antebrazos",
+        "body": "En arena, por defecto, se juega TODO con antebrazos. Es el gesto más seguro, el menos sancionado por el árbitro y el mejor adaptado a una colocación imperfecta con viento. El set de dedos en recepción está reservado a competiciones de alto nivel con pelota perfecta."
+      },
+      {
+        "id": "partenaire",
+        "title": "Elegir a tu compañero",
+        "body": "Complementariedad (bloqueador alto + defensor rápido), ganas comunes de progresar, comunicación fácil. En 2 contra 2, la mentalidad del dúo cuenta tanto como la técnica."
+      },
+      {
+        "id": "checklist",
+        "title": "Checklist de equipamiento",
+        "items": [
+          { "title": "✓ Pelota beach", "body": "Mikasa VLS300 o equivalente" },
+          { "title": "✓ Red portátil o de club", "body": "Altura 2,43 m H / 2,24 m M" },
+          { "title": "✓ Hidratación", "body": "1,5 a 2 L de agua por sesión, electrolitos" },
+          { "title": "✓ Protección solar", "body": "SPF 50+ resistente al agua, gorra, gafas UV" },
+          { "title": "✓ Botiquín", "body": "Aloe vera, tiritas, analgésicos" },
+          { "title": "✓ Sand socks (opcional en verano)", "body": "Si arena > 45 °C" },
+          { "title": "✓ Snack glucídico", "body": "Plátano, gel, barrita energética" }
+        ]
+      }
+    ]
+  },
+  "transition": {
+    "intro": "¿Llevas años jugando indoor y quieres lanzarte al beach? Buena noticia: tus fundamentos te acompañan. Mala noticia: tendrás que desaprender tres reflejos profundamente arraigados. Aquí tienes la hoja de ruta.",
+    "sections": [
+      {
+        "id": "change-radicalement",
+        "title": "Lo que cambia radicalmente",
+        "items": [
+          { "title": "Toques", "body": "El bloqueo cuenta como el 1er toque. Ya no puedes encadenar bloqueo + dig + set + remate. Después de un bloqueo tocado: 2 toques restantes máximo." },
+          { "title": "Set de dedos estricto", "body": "Arbitraje mucho más severo que en pabellón. Sincronización de las dos manos absoluta. Sin pivote del cuerpo. Over-set perpendicular a los hombros." },
+          { "title": "Sin tip", "body": "El tip con mano abierta está PROHIBIDO. Sustitución obligatoria: poke o cobra." },
+          { "title": "Recepción con dedos = falta", "body": "Salvo en pelota hard-driven. Reflejo: antebrazos por defecto." },
+          { "title": "Superficie arena", "body": "Desplazamientos 30 % más lentos, saltos -5 a -15 cm, coste energético × 1,5 a × 2. La anticipación prima sobre la velocidad." },
+          { "title": "Polivalencia total", "body": "Sin puesto fijo. Sacas, recibes, colocas, atacas, bloqueas, defiendes. Por turnos, en cada jugada." },
+          { "title": "Plantilla reducida", "body": "2 jugadores, sin suplente. Sin líbero." },
+          { "title": "Mentalidad 2v2", "body": "Visibilidad total entre compañeros, comunicación permanente, gestión emocional más expuesta." }
+        ]
+      },
+      {
+        "id": "reste-pareil",
+        "title": "Lo que se mantiene igual",
+        "body": "Tus gestos técnicos fundamentales: antebrazos, set, remate, saque. Tu lectura del bloqueo y del atacante. La importancia de un contacto limpio. Las nociones line/angle, court/long. Tu bagaje indoor NO se ha perdido — solo hay que ajustarlo."
+      },
+      {
+        "id": "desapprendre",
+        "title": "Las 3 cosas que hay que DESAPRENDER",
+        "items": [
+          { "title": "1. El tip con mano abierta", "body": "Sustituye inmediatamente por POKE (falanges medias) o COBRA (yemas rígidas)." },
+          { "title": "2. El set en rotación", "body": "Los hombros deben quedar perpendiculares a la trayectoria del over-set. Sin pivote del cuerpo." },
+          { "title": "3. El set de dedos en recepción sistemático", "body": "ANTEBRAZOS por defecto. El set de dedos en recepción está reservado a sets muy tranquilos y jugadores muy limpios." }
+        ]
+      },
+      {
+        "id": "apprendre",
+        "title": "Las 3 cosas que hay que APRENDER como prioridad",
+        "items": [
+          { "title": "1. El tomahawk", "body": "Defensa alta de las pelotas blandas que tu beach dig no puede jugar legalmente. Imprescindible." },
+          { "title": "2. El poke / cobra", "body": "Sustituye tu tip. Tu herramienta de colocación nº1." },
+          { "title": "3. Hand signals y comunicación 2v2", "body": "No es opcional. Antes de cada saque de tu campo, el bloqueador señala a la espalda. El defensor adapta su posición." }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Progresión recomendada (8 semanas)",
+        "items": [
+          { "title": "S1-S2 — Adaptación", "body": "Estabilizar los antebrazos en arena, primeros saques, gestión del calor y la hidratación." },
+          { "title": "S3-S4 — Herramientas beach", "body": "Poke y tomahawk, ataque con los pies en la arena, gestión del salto reducido." },
+          { "title": "S5-S6 — Táctica", "body": "Bloqueo en la red, transiciones bloqueo → defensa, hand signals." },
+          { "title": "S7-S8 — Competición", "body": "Táctica completa, primeros torneos amateurs, lectura del juego rival." }
+        ]
+      }
+    ]
+  },
+  "tournoi-loisir": {
+    "intro": "Organizar un torneo de playa amateur son tres cosas: elegir el formato adecuado según el número de equipos, asegurar un montaje conforme y fijar reglas simplificadas que todo el mundo acepte. Todo lo demás es logística.",
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Formatos recomendados según el número de equipos",
+        "items": [
+          { "title": "4 equipos", "body": "Round robin + final top 2. Duración ~2-3 h. El formato más simple." },
+          { "title": "6 equipos", "body": "2 grupos de 3 + semifinales + final. ~3-4 h." },
+          { "title": "8 equipos", "body": "2 grupos de 4 + semifinales cruzadas + final. ~4-5 h." },
+          { "title": "12 equipos", "body": "3 grupos de 4 + eliminación directa. Jornada completa." },
+          { "title": "16 equipos", "body": "4 grupos de 4 + eliminación directa. Jornada completa." },
+          { "title": "24 equipos o más", "body": "Grupos + cuadro principal + consolación. Fin de semana." }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Montaje",
+        "items": [
+          { "title": "Cancha", "body": "16 × 8 m, zona libre 3 m mínimo (5-6 m en FIVB). Profundidad de arena 40 cm mínimo." },
+          { "title": "Red portátil", "body": "Altura 2,43 m (H / mixto) o 2,24 m (M / amateur). 2,35 m para mixto FFvolley." },
+          { "title": "Líneas", "body": "Cintas PVC + estacas flexibles. Anchura 5 cm." },
+          { "title": "Antenas", "body": "Opcionales en amateur, obligatorias en competición." }
+        ]
+      },
+      {
+        "id": "regles-simplifiees",
+        "title": "Reglas simplificadas",
+        "body": "1 set a 21 (o 15 para formato rápido). Sin tie-break o «muerte súbita» a 25. Saque por turnos. Auto-arbitraje. En caso de duda: se rejuega. Espíritu beach ante todo — el deporte es festivo."
+      },
+      {
+        "id": "materiel",
+        "title": "Material a prever",
+        "items": [
+          { "title": "✓ Pelotas", "body": "1 por cancha + 2 de reserva" },
+          { "title": "✓ Redes y postes", "body": "Altura ajustable según categoría" },
+          { "title": "✓ Líneas + estacas", "body": "Cintas PVC contrastadas" },
+          { "title": "✓ Garrafas de agua", "body": "Varios litros por equipo y por día" },
+          { "title": "✓ Marcador", "body": "Al menos uno por cancha" },
+          { "title": "✓ Botiquín", "body": "Aloe vera, tiritas, analgésicos, crema solar de repuesto" },
+          { "title": "✓ Carpa / parasoles", "body": "Zona de sombra para descanso entre partidos" },
+          { "title": "✓ Sonido si > 12 equipos", "body": "Anuncios, ambiente" },
+          { "title": "✓ Lista de equipos + planning", "body": "Impresa y expuesta" },
+          { "title": "✓ Trofeos / premios", "body": "Recompensas para el podio" },
+          { "title": "✓ Cubos de reciclaje", "body": "Torneo limpio, imagen limpia" }
+        ]
+      },
+      {
+        "id": "apps",
+        "title": "Apps útiles",
+        "body": "BeachUp (beachup.app, 16 500+ canchas referenciadas mundialmente) · Beach Volleyball App (App Store) · Tournaments by SportEasy · Toornament.com · CHAMP'S (champs.fr, streaming)."
+      }
+    ]
+  },
+  "lecture-jeu": {
+    "intro": "Leer al rival en beach es el 50 % del trabajo defensivo. Solo tienes 2 defensores para cubrir 16 × 8 m — la única forma de aguantar es anticipar. Aquí tienes el método completo, desde el calentamiento hasta el stop de pies antes del golpe.",
+    "sections": [
+      {
+        "id": "echauffement",
+        "title": "Durante el calentamiento (5 min crucial)",
+        "intro": "Los 5 minutos de calentamiento en la red son una mina de oro de scouting. Anota mentalmente:",
+        "items": [
+          { "title": "¿Quién coloca mejor?", "body": "Uno de los dos colocará más que el otro. Identifica a cuál." },
+          { "title": "¿Quién ataca con fuerza / quién shootea?", "body": "El «cogneur» y el «colocador» se revelan rápido." },
+          { "title": "«Line player» vs «angle player»", "body": "Tendencia natural: la línea o la diagonal." },
+          { "title": "Lateralidad", "body": "Diestro / zurdo. Influye en los ángulos de ataque." },
+          { "title": "Tics individuales", "body": "Un jugador que siempre mira su objetivo antes de golpear, otro que se arma bajo para el poke, etc." }
+        ]
+      },
+      {
+        "id": "indices-frappe",
+        "title": "Indicios a leer antes del golpe (en orden)",
+        "items": [
+          { "title": "1. Calidad del set", "body": "Tenso cerca de la red → ángulos abiertos, hard hit probable. Despegado de la red → ángulos cerrados, shots probables. Detrás del atacante → poke muy probable." },
+          { "title": "2. Carrera", "body": "Rectilínea agresiva → swing potente. Frenada o acortada → shot o poke." },
+          { "title": "3. Hombros al armar", "body": "Alineados con la línea → line. Abiertos → angle / cross. Cerrados tarde → cut o tip." },
+          { "title": "4. Brazo y muñeca", "body": "Extendido recto → swing. Codo que cae → cut o poke." },
+          { "title": "5. Tendencias individuales (scouting)", "body": "Lo que anotaste en el calentamiento y al inicio del partido. Actualización permanente." }
+        ]
+      },
+      {
+        "id": "methode",
+        "title": "Método defensivo",
+        "items": [
+          { "title": "Posición base en medio del fondo", "body": "Arranque neutro a 1-1,5 m de la línea de fondo, centrado." },
+          { "title": "Deslizamiento hacia la zona en el set", "body": "En cuanto la calidad del set es legible, desliza para preparar la zona a cubrir." },
+          { "title": "Stop de pies ANTES del contacto del atacante", "body": "Regla de oro — imposible reaccionar si estás en movimiento." },
+          { "title": "Primer paso perfecto", "body": "Primer impulso en la dirección real de la pelota, nunca una aproximación." }
+        ]
+      },
+      {
+        "id": "match",
+        "title": "En partido: adaptación permanente",
+        "body": "Llevar un mini balance mental (este jugador ha golpeado 4 veces por la línea, 0 en diagonal). Adaptarse en tiempo real. Provocar desequilibrio (saque corto al receptor débil para forzarle a jugar el 2º toque). Releer el viento en cada cambio de lado (cada 7 puntos en set normal, 5 en tie-break)."
+      },
+      {
+        "id": "exercice",
+        "title": "Ejercicio de entrenamiento recomendado",
+        "body": "«Cinco saques a ciegas»: tu compañero te saca en la zona que quiere, debes call en voz alta lo que lees («line», «angle», «cut», «short»…) ANTES de que llegue la pelota. Marcador sobre 5. Objetivo: 4/5 mínimo tras unas sesiones."
+      }
+    ]
+  }
+}

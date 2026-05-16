@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ BEACH · GUÍAS",
+    "title": "GUÍAS DE VOLEY PLAYA",
+    "subtitle": "Profundizaciones tácticas y técnicas — desde el principiante absoluto hasta la transición indoor → playa."
+  },
+  "ticketPrefix": "GUÍA",
+  "detail": {
+    "backLink": "← Volver a las guías beach",
+    "sectionTitle": "★ GUÍA BEACH",
+    "notFound": "Guía no encontrada."
+  },
+  "list": {
+    "debutant": {
+      "title": "Guía del principiante absoluto",
+      "subtitle": "Primeros reflejos: antebrazos, comunicación, hidratación",
+      "category": "Táctica",
+      "description": "Los 5 errores a evitar, las reglas mínimas que hay que conocer y el checklist de equipamiento para tu primera sesión en arena.",
+      "readingTime": "~10 min",
+      "level": "Débutant"
+    },
+    "transition": {
+      "title": "Transición indoor → playa",
+      "subtitle": "Qué cambia, qué se mantiene, qué hay que desaprender",
+      "category": "Táctica",
+      "description": "Para un jugador indoor que quiere pasarse al beach: 3 cosas que desaprender (tip con la mano abierta, colocación en rotación, recepción de dedos altos) y 3 a aprender como prioridad (tomahawk, poke, hand signals).",
+      "readingTime": "~12 min",
+      "level": "Intermédiaire"
+    },
+    "tournoi-loisir": {
+      "title": "Organizar un torneo amateur",
+      "subtitle": "Formatos, montaje, reglas simplificadas, material",
+      "category": "Táctica",
+      "description": "Todo lo necesario para montar un torneo en arena de 4 a 24 equipos: formatos (grupos, eliminación directa), montaje 16×8 m, material a prever, reglas simplificadas y apps útiles.",
+      "readingTime": "~8 min",
+      "level": "Intermédiaire"
+    },
+    "lecture-jeu": {
+      "title": "Lectura del juego rival",
+      "subtitle": "Scouting en el calentamiento + lectura del atacante",
+      "category": "Táctica",
+      "description": "Los indicios a leer en orden — calidad del set, carrera, hombros al armado, brazo y muñeca — para anticipar line/angle/cut/poke. Método durante los 5 minutos de calentamiento.",
+      "readingTime": "~10 min",
+      "level": "Avancé"
+    }
+  }
+}

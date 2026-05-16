@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ PRAIA · GUIAS",
+    "title": "GUIAS DE VOLEIBOL DE PRAIA",
+    "subtitle": "Aprofundamentos tácticos e técnicos — do iniciante absoluto à transição pavilhão → praia."
+  },
+  "ticketPrefix": "GUIA",
+  "detail": {
+    "backLink": "← Voltar aos guias de praia",
+    "sectionTitle": "★ GUIA DE PRAIA",
+    "notFound": "Guia não encontrado."
+  },
+  "list": {
+    "debutant": {
+      "title": "Guia do iniciante absoluto",
+      "subtitle": "Primeiros reflexos: manchete, comunicação, hidratação",
+      "category": "Táctica",
+      "description": "Os 5 erros a evitar, as regras mínimas a conhecer e a checklist de equipamento para a primeira sessão na areia.",
+      "readingTime": "~10 min",
+      "level": "Iniciante"
+    },
+    "transition": {
+      "title": "Transição pavilhão → praia",
+      "subtitle": "O que muda, o que fica, o que tens de desaprender",
+      "category": "Táctica",
+      "description": "Para um jogador de pavilhão que quer passar à praia: 3 coisas a desaprender (tip de mão aberta, set em rotação, recepção alta) e 3 a aprender prioritariamente (tomahawk, poke, hand signals).",
+      "readingTime": "~12 min",
+      "level": "Intermédio"
+    },
+    "tournoi-loisir": {
+      "title": "Organizar um torneio amador",
+      "subtitle": "Formatos, montagem, regras simplificadas, material",
+      "category": "Táctica",
+      "description": "Tudo para montar um torneio na areia de 4 a 24 equipas: formatos (grupos, eliminação directa), montagem 16×8 m, material a prever, regras simplificadas e apps úteis.",
+      "readingTime": "~8 min",
+      "level": "Intermédio"
+    },
+    "lecture-jeu": {
+      "title": "Leitura do jogo adversário",
+      "subtitle": "Scouting no aquecimento + leitura do atacante",
+      "category": "Táctica",
+      "description": "Os indícios a ler por ordem — qualidade do set, corrida de balanço, ombros no armar, braço e pulso — para antecipar line/angle/cut/poke. Método durante os 5 minutos de aquecimento.",
+      "readingTime": "~10 min",
+      "level": "Avançado"
+    }
+  }
+}

@@ -1,13 +1,31 @@
 import { useState, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
+import DisciplineBadge from '../components/DisciplineBadge';
+import DisciplineFilter, { type DisciplineFilterValue } from '../components/DisciplineFilter';
+import type { Discipline } from '../discipline/useDiscipline';
 
-type Term = { term: string; def: string };
+type Term = {
+  term: string;
+  def: string;
+  discipline?: Discipline[];
+};
+
+function resolveDiscipline(t: Term): Discipline[] {
+  return t.discipline && t.discipline.length > 0 ? t.discipline : ['indoor'];
+}
+
+function matchesFilter(disc: Discipline[], filter: DisciplineFilterValue): boolean {
+  if (filter === 'all') return true;
+  if (filter === 'both') return disc.length >= 2;
+  return disc.includes(filter);
+}
 
 export default function Glossary() {
   const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState<DisciplineFilterValue>('all');
   const { t } = useTranslation('glossary');
   const { t: tSeo } = useTranslation('seo');
   const lang = useCurrentLang();
@@ -19,20 +37,21 @@ export default function Glossary() {
   );
 
   const filtered = useMemo(() => {
-    if (!search) return terms;
-    const q = search.toLowerCase();
-    return terms.filter(t => t.term.toLowerCase().includes(q) || t.def.toLowerCase().includes(q));
-  }, [search, terms]);
+    let out = terms;
+    if (filter !== 'all') {
+      out = out.filter(item => matchesFilter(resolveDiscipline(item), filter));
+    }
+    if (search) {
+      const q = search.toLowerCase();
+      out = out.filter(item => item.term.toLowerCase().includes(q) || item.def.toLowerCase().includes(q));
+    }
+    return out;
+  }, [search, filter, terms]);
 
   const letters = useMemo(() => {
-    const set = new Set(filtered.map(t => t.term[0]?.toUpperCase()));
+    const set = new Set(filtered.map(item => item.term[0]?.toUpperCase()));
     return Array.from(set).filter(Boolean).sort();
   }, [filtered]);
-
-  const subtitleHtml = t('header.subtitleTemplate', { count: terms.length }).replace(
-    /<count>(.*?)<\/count>/,
-    '<span style=\'font-family:"DM Mono",monospace;font-weight:500\'>$1</span>',
-  );
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
@@ -55,11 +74,19 @@ export default function Glossary() {
         <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
           {t('header.title')}
         </h1>
-        <p
-          style={{ margin: 0, fontSize: 15, opacity: 0.7 }}
-          dangerouslySetInnerHTML={{ __html: subtitleHtml }}
-        />
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
+          <Trans
+            i18nKey="header.subtitleTemplate"
+            t={t}
+            values={{ count: terms.length }}
+            components={{
+              mono: <span style={{ fontFamily: '"DM Mono", monospace', fontWeight: 500 }} />,
+            }}
+          />
+        </p>
       </div>
+
+      <DisciplineFilter value={filter} onChange={setFilter} />
 
       <div style={{ position: 'relative' }}>
         <span style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', fontSize: 16, opacity: 0.5 }}>🔍</span>
@@ -92,7 +119,7 @@ export default function Glossary() {
         )}
       </div>
 
-      {!search && (
+      {!search && letters.length > 1 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
           {letters.map(l => (
             <a
@@ -133,7 +160,7 @@ export default function Glossary() {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
           {letters.map(letter => {
-            const items = filtered.filter(t => t.term[0]?.toUpperCase() === letter);
+            const items = filtered.filter(item => item.term[0]?.toUpperCase() === letter);
             if (items.length === 0) return null;
             return (
               <div key={letter} id={`letter-${letter}`}>
@@ -146,15 +173,20 @@ export default function Glossary() {
                     <div
                       key={item.term}
                       style={{
+                        position: 'relative',
                         borderLeft: '5px solid var(--orange)',
                         paddingLeft: 16,
                         paddingTop: 4,
                         paddingBottom: 4,
+                        paddingRight: 80,
                         background: 'linear-gradient(90deg, rgba(226,84,46,0.06), transparent 40%)',
                       }}
                     >
                       <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 13, letterSpacing: '0.03em', marginBottom: 4 }}>{item.term}</div>
                       <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.5, opacity: 0.8 }}>{item.def}</p>
+                      <span style={{ position: 'absolute', top: 6, right: 6 }}>
+                        <DisciplineBadge on={resolveDiscipline(item)} size="sm" />
+                      </span>
                     </div>
                   ))}
                 </div>

@@ -1,0 +1,222 @@
+{
+  "debutant": {
+    "intro": "Stawiasz stopy na piasku po raz pierwszy? Witaj. Beach nie jest produktem ubocznym hali: to pełnoprawny sport, z własnymi przepisami i własną kulturą. Oto niezbędne minimum, byś nie poszedł na dno.",
+    "sections": [
+      {
+        "id": "erreurs",
+        "title": "5 błędów, których trzeba bezwzględnie unikać",
+        "items": [
+          {
+            "title": "1. Chęć uderzania zbyt mocno",
+            "body": "Placement >> siła. Umiejscowiony poke jest wart 10 smashy lecących w aut. Filozofia ofensywna beach mieści się w jednym zdaniu: „jeśli twoim jedynym narzędziem jest walenie w kąt, będziesz blokowany za każdym razem” (AVP)."
+          },
+          {
+            "title": "2. Odbieranie palcami",
+            "body": "Niemal systematyczny błąd w beach (set palcami w 1. kontakcie = podwójny gwizdek). Absolutny odruch: ODBICIE SPOSOBEM DOLNYM domyślnie, na wszystko, co nie jest hard-driven."
+          },
+          {
+            "title": "3. Tip otwartą dłonią",
+            "body": "ŚCIŚLE ZABRONIONY (przepis 13.2.3 — błąd). Należy bezwzględnie zastąpić poke (środkowe człony palców) lub cobrą (sztywne wyprostowane opuszki palców)."
+          },
+          {
+            "title": "4. Zaniedbanie komunikacji",
+            "body": "Mówić przy KAŻDEJ piłce: „MOJA!”, „TWOJA!”, „WOLNA”, „AUT”. Badanie z Mistrzostw Szwajcarii 2011 pokazuje +26 punktów skuteczności ataku z callem vs bez calla. Cisza zabija."
+          },
+          {
+            "title": "5. Złe nawodnienie / brak kremu z filtrem",
+            "body": "Rujnuje cały dzień. SPF 50+ wodoodporny (odnawiać co 2 h), 1 do 2 L wody na trening, elektrolity powyżej 1 h, okulary UV, czapka."
+          }
+        ]
+      },
+      {
+        "id": "regles-minimales",
+        "title": "Minimum przepisów do poznania",
+        "items": [
+          { "title": "Maks. 3 dotknięcia — blok WLICZONY", "body": "TO główna różnica względem hali. Blok liczy się jako 1. z 3 dotknięć. Po dotkniętym bloku pozostają tylko 2 dotknięcia, by odesłać piłkę." },
+          { "title": "Brak tip otwartą dłonią", "body": "Patrz błąd nr 3. Zastąpić przez poke lub cobrę." },
+          { "title": "Over-set prostopadły do barków", "body": "Jeśli przerzucasz piłkę na drugą stronę palcami, tor lotu MUSI być ściśle prostopadły do osi twoich barków (prosto do przodu lub prosto do tyłu). Każdy tor lotu ukośny = błąd." },
+          { "title": "Brak rotacji pozycji", "body": "Dowolne ustawienie obu zawodników na boisku. Brak błędu ustawienia." },
+          { "title": "1 set do 21 (różnica 2), 3. set do 15", "body": "Najlepszy z 3 setów. Tie-break do 15 w razie potrzeby." },
+          { "title": "Zmiana stron co 7 punktów (5 w tie-breaku)", "body": "By zrównoważyć słońce i wiatr. Zmiana natychmiastowa, bez przerwy." }
+        ]
+      },
+      {
+        "id": "manchette",
+        "title": "Pierwszy odruch: odbicie sposobem dolnym",
+        "body": "Na piasku, domyślnie, grasz WSZYSTKO sposobem dolnym. To najpewniejsze zagranie, najmniej karane przez sędziego i najlepiej dostosowane do niedoskonałego ustawienia w wietrze. Set palcami w przyjęciu jest zarezerwowany dla zawodów wysokiego poziomu z idealną piłką."
+      },
+      {
+        "id": "partenaire",
+        "title": "Wybór partnera",
+        "body": "Komplementarność (wysoki bloker + szybki obrońca), wspólna chęć rozwoju, łatwa komunikacja. W grze 2 na 2 mentalność duetu liczy się tak samo jak technika."
+      },
+      {
+        "id": "checklist",
+        "title": "Lista sprzętu",
+        "items": [
+          { "title": "✓ Piłka beach", "body": "Mikasa VLS300 lub odpowiednik" },
+          { "title": "✓ Siatka przenośna lub klubowa", "body": "Wysokość 2,43 m M / 2,24 m K" },
+          { "title": "✓ Nawodnienie", "body": "1,5 do 2 L wody na trening, elektrolity" },
+          { "title": "✓ Ochrona przed słońcem", "body": "SPF 50+ wodoodporny, czapka, okulary UV" },
+          { "title": "✓ Apteczka pierwszej pomocy", "body": "Aloes, plastry, środki przeciwbólowe" },
+          { "title": "✓ Sand socks (opcjonalnie latem)", "body": "Jeśli piasek > 45 °C" },
+          { "title": "✓ Przekąska węglowodanowa", "body": "Banan, żel, batonik energetyczny" }
+        ]
+      }
+    ]
+  },
+  "transition": {
+    "intro": "Grasz w hali od lat i chcesz zacząć grać w beach? Dobra wiadomość: twoje fundamenty idą z tobą. Zła wiadomość: będziesz musiał oduczyć się trzech głęboko zakorzenionych odruchów. Oto plan działania.",
+    "sections": [
+      {
+        "id": "change-radicalement",
+        "title": "Co się zmienia radykalnie",
+        "items": [
+          { "title": "Dotknięcia", "body": "Blok liczy się jako 1. dotknięcie. Nie możesz już połączyć blok + dig + set + spike. Po dotkniętym bloku: maksymalnie 2 pozostałe dotknięcia." },
+          { "title": "Set palcami strict", "body": "Sędziowanie znacznie surowsze niż w hali. Absolutna synchronizacja obu rąk. Brak obrotu ciała. Over-set prostopadły do barków." },
+          { "title": "Brak tip", "body": "Kiwka otwartą dłonią jest ZABRONIONA. Obowiązkowa zamiana: poke lub cobra." },
+          { "title": "Przyjęcie palcami = błąd", "body": "Z wyjątkiem piłki hard-driven. Odruch: odbicie sposobem dolnym domyślnie." },
+          { "title": "Powierzchnia z piasku", "body": "Przemieszczenia 30% wolniejsze, wyskoki -5 do -15 cm, koszt energetyczny × 1,5 do × 2. Anticipation góruje nad prędkością." },
+          { "title": "Totalna wszechstronność", "body": "Brak stałej pozycji. Serwujesz, przyjmujesz, wystawiasz, atakujesz, blokujesz, bronisz. Po kolei, w każdej wymianie." },
+          { "title": "Ograniczona kadra", "body": "2 zawodników, bez rezerwowego. Brak libero." },
+          { "title": "Mentalność 2v2", "body": "Pełna widoczność między partnerami, stała komunikacja, bardziej eksponowane zarządzanie emocjami." }
+        ]
+      },
+      {
+        "id": "reste-pareil",
+        "title": "Co pozostaje takie samo",
+        "body": "Twoje fundamentalne gesty techniczne: odbicie sposobem dolnym, set, smash, zagrywka. Twoje czytanie bloku i atakującego. Znaczenie czystego kontaktu. Pojęcia line/angle, krótko/długo. Twoje halowe doświadczenie NIE jest stracone — trzeba je tylko dostosować."
+      },
+      {
+        "id": "desapprendre",
+        "title": "3 rzeczy do ODUCZENIA",
+        "items": [
+          { "title": "1. Tip otwartą dłonią", "body": "Zamień natychmiast na POKE (środkowe człony palców) lub COBRĘ (sztywne opuszki palców)." },
+          { "title": "2. Set w rotacji", "body": "Barki muszą pozostać prostopadłe do toru lotu over-setu. Brak obrotu ciała." },
+          { "title": "3. Systematyczny set palcami w przyjęciu", "body": "ODBICIE SPOSOBEM DOLNYM domyślnie. Set palcami w przyjęciu jest zarezerwowany dla bardzo spokojnych setów i bardzo czystych zawodników." }
+        ]
+      },
+      {
+        "id": "apprendre",
+        "title": "3 rzeczy do PRIORYTETOWEGO nauczenia",
+        "items": [
+          { "title": "1. Tomahawk", "body": "Obrona wysoka miękkich piłek, których twój beach dig nie może legalnie zagrać. Niezbędny." },
+          { "title": "2. Poke / cobra", "body": "Zastępują twojego tip. Twoje narzędzie placement nr 1." },
+          { "title": "3. Hand signals i komunikacja 2v2", "body": "Nie opcjonalne. Przed każdą zagrywką twojej strony bloker sygnalizuje za plecami. Obrońca dostosowuje swoją pozycję." }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Zalecana progresja (8 tygodni)",
+        "items": [
+          { "title": "T1-T2 — Adaptacja", "body": "Ustabilizowanie odbicia sposobem dolnym na piasku, pierwsze zagrywki, zarządzanie upałem i nawodnieniem." },
+          { "title": "T3-T4 — Narzędzia beach", "body": "Poke i tomahawk, atak ze stopami w piasku, zarządzanie obniżonym wyskokiem." },
+          { "title": "T5-T6 — Taktyka", "body": "Blok przy siatce, transitions blok → obrona, hand signals." },
+          { "title": "T7-T8 — Zawody", "body": "Kompletna taktyka, pierwsze turnieje amatorskie, czytanie gry przeciwnika." }
+        ]
+      }
+    ]
+  },
+  "tournoi-loisir": {
+    "intro": "Organizacja amatorskiego turnieju plażowego to trzy rzeczy: wybór odpowiedniego formatu dla liczby drużyn, zapewnienie zgodnej instalacji i ustalenie uproszczonych zasad akceptowanych przez wszystkich. Reszta to logistyka.",
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Zalecane formaty według liczby drużyn",
+        "items": [
+          { "title": "4 drużyny", "body": "Round robin + finał top 2. Czas ~2-3 h. Najprostszy format." },
+          { "title": "6 drużyn", "body": "2 grupy po 3 + półfinały + finał. ~3-4 h." },
+          { "title": "8 drużyn", "body": "2 grupy po 4 + półfinały krzyżowe + finał. ~4-5 h." },
+          { "title": "12 drużyn", "body": "3 grupy po 4 + drabinka pucharowa. Cały dzień." },
+          { "title": "16 drużyn", "body": "4 grupy po 4 + drabinka pucharowa. Cały dzień." },
+          { "title": "24 drużyny i więcej", "body": "Grupy + drabinka główna + drabinka pocieszenia. Weekend." }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Instalacja",
+        "items": [
+          { "title": "Boisko", "body": "16 × 8 m, strefa wolna min. 3 m (5-6 m w FIVB). Głębokość piasku min. 40 cm." },
+          { "title": "Siatka przenośna", "body": "Wysokość 2,43 m (M / mix) lub 2,24 m (K / amator). 2,35 m dla miksta FFvolley." },
+          { "title": "Linie", "body": "Taśmy PVC + miękkie kołki. Szerokość 5 cm." },
+          { "title": "Anteny", "body": "Opcjonalne w grze amatorskiej, obowiązkowe w zawodach." }
+        ]
+      },
+      {
+        "id": "regles-simplifiees",
+        "title": "Uproszczone zasady",
+        "body": "1 set do 21 (lub 15 dla formatu szybkiego). Brak tie-break lub „nagła śmierć” w 25. Zagrywka po kolei. Samosędziowanie. W razie wątpliwości: powtarzamy. Duch beach przede wszystkim — sport jest świąteczny."
+      },
+      {
+        "id": "materiel",
+        "title": "Sprzęt do przewidzenia",
+        "items": [
+          { "title": "✓ Piłki", "body": "1 na boisko + 2 w rezerwie" },
+          { "title": "✓ Siatki i słupki", "body": "Wysokość regulowana według kategorii" },
+          { "title": "✓ Linie + kołki", "body": "Taśmy PVC w kontrastowych kolorach" },
+          { "title": "✓ Pojemniki na wodę", "body": "Kilka litrów na drużynę dziennie" },
+          { "title": "✓ Tablice wyników", "body": "Przynajmniej jedna na boisko" },
+          { "title": "✓ Apteczka", "body": "Aloes, plastry, środki przeciwbólowe, krem z filtrem na zapas" },
+          { "title": "✓ Namiot / parasole", "body": "Strefa cienia do odpoczynku między meczami" },
+          { "title": "✓ Nagłośnienie jeśli > 12 drużyn", "body": "Ogłoszenia, atmosfera" },
+          { "title": "✓ Lista drużyn + plan", "body": "Wydrukowana i wywieszona" },
+          { "title": "✓ Nagrody / puchary", "body": "Nagrody dla podium" },
+          { "title": "✓ Pojemniki do segregacji", "body": "Czysty turniej, czysty wizerunek" }
+        ]
+      },
+      {
+        "id": "apps",
+        "title": "Przydatne aplikacje",
+        "body": "BeachUp (beachup.app, ponad 16 500 boisk na całym świecie) · Beach Volleyball App (App Store) · Tournaments by SportEasy · Toornament.com · CHAMP'S (champs.fr, streaming)."
+      }
+    ]
+  },
+  "lecture-jeu": {
+    "intro": "Czytanie przeciwnika w beach to 50% pracy defensywnej. Masz tylko 2 obrońców na pokrycie 16 × 8 m — jedyny sposób na utrzymanie się to anticipation. Oto kompletna metoda, od rozgrzewki po zatrzymanie stóp przed uderzeniem.",
+    "sections": [
+      {
+        "id": "echauffement",
+        "title": "Podczas rozgrzewki (kluczowe 5 min)",
+        "intro": "5 minut rozgrzewki przy siatce to kopalnia złota dla scoutingu. Zanotuj mentalnie:",
+        "items": [
+          { "title": "Kto lepiej wystawia?", "body": "Jeden z dwóch będzie wystawiał częściej niż drugi. Zidentyfikuj który." },
+          { "title": "Kto atakuje siłą / kto shootuje?", "body": "„Walący” i „plaserujący” szybko się ujawnią." },
+          { "title": "„Line player” vs „angle player”", "body": "Naturalna tendencja: line czy cross-court." },
+          { "title": "Lateralizacja", "body": "Praworęczny / leworęczny. Wpływa na kąty ataku." },
+          { "title": "Indywidualne tiki", "body": "Zawodnik, który zawsze patrzy na swój cel przed uderzeniem, inny, który nisko się naciąga do poke itp." }
+        ]
+      },
+      {
+        "id": "indices-frappe",
+        "title": "Wskazówki do odczytania przed uderzeniem (w kolejności)",
+        "items": [
+          { "title": "1. Jakość setu", "body": "Napięty blisko siatki → otwarte kąty, prawdopodobny hard hit. Odsunięty od siatki → zamknięte kąty, prawdopodobne shoty. Za atakującym → bardzo prawdopodobny poke." },
+          { "title": "2. Rozbieg", "body": "Prosty agresywny → mocny swing. Hamowany lub skrócony → shot lub poke." },
+          { "title": "3. Barki w naciągnięciu", "body": "Ustawione na line → line. Otwarte → angle / cross. Późno zamknięte → cut lub tip." },
+          { "title": "4. Ramię i nadgarstek", "body": "Wyprostowane prosto → swing. Opadający łokieć → cut lub poke." },
+          { "title": "5. Tendencje indywidualne (scouting)", "body": "To, co zanotowałeś na rozgrzewce i na początku meczu. Stała aktualizacja." }
+        ]
+      },
+      {
+        "id": "methode",
+        "title": "Metoda defensywna",
+        "items": [
+          { "title": "Pozycja bazowa pośrodku tyłu boiska", "body": "Neutralny start 1-1,5 m od linii końcowej, wycentrowany." },
+          { "title": "Ślizg do strefy w momencie setu", "body": "Gdy jakość setu jest czytelna, ślizgaj się, by przygotować strefę do pokrycia." },
+          { "title": "Zatrzymanie stóp PRZED kontaktem atakującego", "body": "Złota zasada — nie da się zareagować, jeśli jesteś w ruchu." },
+          { "title": "Idealny pierwszy krok", "body": "Pierwszy impuls w rzeczywistym kierunku piłki, nigdy przybliżenie." }
+        ]
+      },
+      {
+        "id": "match",
+        "title": "W meczu: stała adaptacja",
+        "body": "Prowadź mentalny mini-bilans (ten zawodnik 4 razy trafił w line, 0 razy w cross-court). Adaptuj się w czasie rzeczywistym. Wywołuj nierównowagę (krótka zagrywka na słabego odbiorcę, by zmusić go do gry 2. kontaktu). Odczytuj wiatr przy każdej zmianie stron (co 7 punktów w normalnym secie, 5 w tie-breaku)."
+      },
+      {
+        "id": "exercice",
+        "title": "Zalecane ćwiczenie treningowe",
+        "body": "„Pięć ślepych zagrywek”: partner serwuje cię w strefę, którą chce, ty musisz głośno callować to, co odczytujesz („line”, „angle”, „cut”, „short”…) ZANIM piłka dotrze. Wynik na 5. Cel: minimum 4/5 po kilku treningach."
+      }
+    ]
+  }
+}

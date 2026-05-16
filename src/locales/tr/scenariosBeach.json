@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ PLAJ · SENARYOLAR",
+    "title": "PLAJ SENARYOLARI",
+    "subtitle": "Animasyonlu 2v2 dizileri — yakında geliyor. Bu arada rehberlere ve hand signals'a göz at."
+  },
+  "placeholder": {
+    "label": "★ YAPIM AŞAMASINDA ★",
+    "title": "Plaj senaryoları — yakında geliyor",
+    "body": "Animasyonlu 2v2 senaryoları (blok + dig, peel/drop, durumsal hand signals, line vs angle savunma) 3D sahanın 16×8 m'ye uyarlanmasını gerektiriyor. Bir sonraki iterasyonda öncelikli olarak ele alınacak.",
+    "meanwhileTitle": "Bu arada, mutlaka göz at:",
+    "links": {
+      "signals": "Hand signals ve 2v2 rolleri",
+      "guides": "Plaj rehberleri (başlangıç, geçiş…)",
+      "techniques": "Plaj teknikleri (poke, tomahawk, skyball…)"
+    }
+  }
+}

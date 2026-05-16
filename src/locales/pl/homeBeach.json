@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ SIATKÓWKA PLAŻOWA · 2 NA 2 ★",
+  "hero": {
+    "logoTop": "BEACH",
+    "logoBottom": "VOLLEY",
+    "subtitle": "Bliźniaczy sport halowej — 2v2 na piasku, totalna wszechstronność, hand signals za plecami. W programie olimpijskim od 1996.",
+    "ctaPrimary": "ZOBACZ TECHNIKI",
+    "ctaSecondary": "PRZECZYTAJ ZASADY BEACH"
+  },
+  "sectionsLabel": "★ SEKCJE BEACH ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniki",
+      "desc": "Poke, cobra, tomahawk, skyball, beach dig — flagowe zagrania beach.",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "Role 2v2",
+      "desc": "Bloker i obrońca. Kompletna tabela hand signals za plecami.",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Przewodniki beach",
+      "desc": "Absolutny początkujący, transition hala → beach, turniej amatorski, czytanie gry.",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Zasady beach",
+      "desc": "Przepisy FIVB 2025-2028 — sekcje beach i różnice względem hali.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Słowniczek",
+      "desc": "Wspólny słowniczek z naklejkami beach / hala / 2-w-1.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Scenariusze beach",
+      "desc": "Animowane sekwencje beach — wkrótce dostępne. W międzyczasie zobacz przewodniki.",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

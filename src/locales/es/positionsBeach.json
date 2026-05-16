@@ -1,0 +1,171 @@
+{
+  "header": {
+    "kicker": "★ BEACH · 2 CONTRA 2",
+    "title": "ROLES Y SEÑALES EN BEACH",
+    "subtitle": "Sin rotación, sin puestos fijos. Dos roles funcionales (bloqueador · defensor) que se intercambian, y hand signals a la espalda para coordinar bloqueo + defensa."
+  },
+  "court": {
+    "kicker": "★ CANCHA 16 × 8 M",
+    "title": "La cancha de beach",
+    "facts": {
+      "size": "16 × 8 m (vs 18 × 9 en indoor)",
+      "net": "Red 2,43 m M · 2,24 m F · 2,35 m mixto",
+      "noLines": "Sin línea central ni línea de ataque",
+      "service": "Zona de saque: todo el ancho del fondo"
+    },
+    "labels": {
+      "blocker": "BLOQUEADOR",
+      "defender": "DEFENSOR",
+      "net": "RED",
+      "endLine": "Línea de fondo"
+    }
+  },
+  "roles": {
+    "kicker": "★ DOS ROLES, CERO PUESTOS",
+    "title": "Los dos roles funcionales",
+    "intro": "En 2 contra 2 las reglas no imponen puestos. Pero emergen dos funciones complementarias — que se intercambian saque tras saque, según quién saca y a qué rival se ataca.",
+    "items": [
+      {
+        "id": "blocker",
+        "label": "BLOQUEADOR",
+        "subtitle": "En la red",
+        "profile": "Alto, potente en el salto, lee la red",
+        "mission": "Bloquear y luego retirarse para defender. Hand signals antes del saque.",
+        "tips": [
+          "Posición a 30 cm de la red, manos a la altura de la frente",
+          "Sealing: penetración hacia delante y abajo en el campo rival",
+          "Push de las manos JUSTO DESPUÉS del contacto del atacante (más tarde que en indoor)",
+          "Dedos separados y rígidos, pulgares paralelos hacia arriba"
+        ]
+      },
+      {
+        "id": "defender",
+        "label": "DEFENSOR",
+        "subtitle": "En el fondo",
+        "profile": "Rápido, móvil, lee el juego",
+        "mission": "Cubrir la zona opuesta al bloqueo, leer la defensa. Arranca a 1-1,5 m de la línea de fondo.",
+        "tips": [
+          "Posición base en medio del fondo",
+          "Deslizamiento hacia la zona en el set",
+          "Parar los pies ANTES del contacto del atacante",
+          "Lectura final: hombros + brazo + muñeca del atacante"
+        ]
+      }
+    ],
+    "switchingTitle": "Switching",
+    "switchingBody": "Los roles se intercambian según quién saca / quién recibe / a qué rival se ataca. Si el bloqueador es demasiado bajo: opción de defender a 2 sin bloqueo (peel/drop sistemático).",
+    "labels": {
+      "profile": "PERFIL",
+      "mission": "MISIÓN"
+    }
+  },
+  "signals": {
+    "kicker": "★ HAND SIGNALS",
+    "title": "Señales a la espalda",
+    "intro": "El bloqueador informa a su compañero de su intención ANTES del saque de su propio equipo. Las señales se hacen a la espalda (parte baja), invisibles para el rival. Una mano por rival: la mano derecha habla del rival a la derecha, la izquierda del rival a la izquierda.",
+    "warning": "Las convenciones «puño cerrado» vs «mano abierta» varían entre equipos. Es esencial definir la convención con tu compañero antes de cada partido.",
+    "headers": {
+      "signal": "Señal",
+      "meaning": "Significado (bloqueo)",
+      "defender": "Posición del defensor",
+      "level": "Nivel"
+    },
+    "items": [
+      {
+        "icon": "☝️",
+        "signal": "1 dedo",
+        "meaning": "Line block (bloqueo línea)",
+        "defender": "Cubre la diagonal",
+        "level": "Débutant"
+      },
+      {
+        "icon": "✌️",
+        "signal": "2 dedos",
+        "meaning": "Angle block (bloqueo diagonal/cross)",
+        "defender": "Cubre la línea",
+        "level": "Débutant"
+      },
+      {
+        "icon": "🤟",
+        "signal": "3 dedos",
+        "meaning": "Show angle → dive line (fake)",
+        "defender": "Arranca neutral, sale en diagonal",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🖖",
+        "signal": "4 dedos",
+        "meaning": "Show line → dive angle (fake)",
+        "defender": "Arranca en angle, desliza hacia la line",
+        "level": "Avancé"
+      },
+      {
+        "icon": "✊",
+        "signal": "Puño cerrado",
+        "meaning": "No block / Drop / Peel",
+        "defender": "Defensa compartida a 2",
+        "level": "Intermédiaire"
+      },
+      {
+        "icon": "🖐️",
+        "signal": "Mano abierta (5)",
+        "meaning": "Read block (lectura)",
+        "defender": "Defensa en lectura",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🤙",
+        "signal": "Shaka",
+        "meaning": "Spread block",
+        "defender": "Cubre todo lo que pasa",
+        "level": "Avancé"
+      }
+    ],
+    "logicTitle": "Lógica defensiva",
+    "logicBody": "El defensor toma la zona que el bloqueador NO cubre. Bloqueo line → defensa diagonal. Bloqueo angle → defensa line. Puño cerrado (pull) → defensa a 2, campo dividido en mitades. Mano abierta (read) → lectura en tiempo real."
+  },
+  "calls": {
+    "kicker": "★ CALLS DURANTE EL RALLY",
+    "title": "Comunicación 2v2",
+    "intro": "Un estudio (Effectiveness of the Call in Beach Volleyball, Campeonatos Suizos 2011) muestra que el 61,5 % de los ataques CON call son ganadores, frente al 35 % SIN call. Corto · fuerte · pronto · convenciones compartidas · nunca en silencio.",
+    "groupsTitle": "Tres grupos de calls",
+    "groups": [
+      {
+        "title": "Calls antes del golpe rival (lectura)",
+        "items": [
+          "« Line! » — ataque por la línea",
+          "« Angle! » / « Cross! » — diagonal",
+          "« Cut! » — diagonal corta",
+          "« Tip! » / « Short! » — finta corta",
+          "« High! » / « Shot! » — shot alto por encima del bloqueo",
+          "« Swing! » — golpe potente esperado",
+          "« Tight! » — set pegado a la red",
+          "« Off! » — set despegado de la red"
+        ]
+      },
+      {
+        "title": "Calls durante la jugada",
+        "items": [
+          "« Mine! » / « ¡Mía! » — yo juego la pelota",
+          "« Yours! » / « ¡Tuya! »",
+          "« Out! » — déjala, sale fuera",
+          "« In! » / « ¡Dentro! » — pelota buena, juégala",
+          "« Free! » — pelota fácil entrando",
+          "« Up! » — yo la levanto / levántala",
+          "« Cover! » — cubre al atacante",
+          "« Touch! » — el bloqueo tocó",
+          "« Net! » — tocó la red"
+        ]
+      },
+      {
+        "title": "Calls defensivos (defensor → bloqueador)",
+        "items": [
+          "« Stay! » — quédate, bloquea como anunciado",
+          "« Pull! » — retírate, defensa a 2",
+          "« Block! » — bloquea de verdad sobre un fake inicial",
+          "« Tight! » / « Off! » — calidad del set rival"
+        ]
+      }
+    ]
+  }
+}

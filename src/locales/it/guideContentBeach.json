@@ -1,0 +1,222 @@
+{
+  "debutant": {
+    "intro": "Metti i piedi sulla sabbia per la prima volta? Benvenuto. Il beach non è un sottoprodotto dell'indoor: è uno sport a sé stante, con regole e cultura proprie. Ecco il minimo vitale per non andare a picco.",
+    "sections": [
+      {
+        "id": "erreurs",
+        "title": "I 5 errori da evitare assolutamente",
+        "items": [
+          {
+            "title": "1. Voler colpire troppo forte",
+            "body": "Piazzamento >> potenza. Un poke piazzato vale 10 schiacciate che vanno fuori. La filosofia offensiva del beach si riassume in una frase: «se l'unico strumento è colpire nell'angle, ti faranno il muro ogni volta» (AVP)."
+          },
+          {
+            "title": "2. Ricevere a 10 dita",
+            "body": "Fallo quasi sistematico nel beach (palleggio in 1° tocco = doppio fischiato). Riflesso assoluto: BAGHER di default, su tutto ciò che non è hard-driven."
+          },
+          {
+            "title": "3. Tip a mano aperta",
+            "body": "RIGOROSAMENTE VIETATO (regola 13.2.3 — fallo). Da sostituire obbligatoriamente con un poke (falangi mediane) o un cobra (polpastrelli tesi rigidi)."
+          },
+          {
+            "title": "4. Trascurare la comunicazione",
+            "body": "Parlare a OGNI palla: «MIA!», «TUA!», «LIBERA», «FUORI». Lo studio dei Campionati Svizzeri 2011 mostra +26 punti di efficacia con call vs senza call. Il silenzio uccide."
+          },
+          {
+            "title": "5. Cattiva idratazione / niente crema solare",
+            "body": "Rovina un'intera giornata. SPF 50+ resistente all'acqua (rinnovare ogni 2 h), 1-2 L di acqua per sessione, elettroliti oltre l'ora, occhiali UV, cappellino."
+          }
+        ]
+      },
+      {
+        "id": "regles-minimales",
+        "title": "Le regole minime da conoscere",
+        "items": [
+          { "title": "3 tocchi max — muro INCLUSO", "body": "È LA differenza principale con l'indoor. Il muro conta come il 1° dei 3 tocchi. Dopo un muro toccato, restano solo 2 tocchi per rinviare." },
+          { "title": "Niente tip a mano aperta", "body": "Vedi errore n°3. Sostituire con poke o cobra." },
+          { "title": "Over-set perpendicolare alle spalle", "body": "Se mandi la palla dall'altra parte in palleggio a 10 dita, la traiettoria DEVE essere rigorosamente perpendicolare all'asse delle spalle (dritta davanti o dritta dietro). Qualsiasi traiettoria obliqua = fallo." },
+          { "title": "Niente rotazioni di posizione", "body": "Posizionamento libero dei due giocatori in campo. Nessun fallo di posizione." },
+          { "title": "1 set ai 21 (scarto 2), 3° set ai 15", "body": "Al meglio dei 3 set. Tie-break ai 15 se necessario." },
+          { "title": "Cambio campo ogni 7 punti (5 nel tie-break)", "body": "Per riequilibrare sole e vento. Cambio immediato, senza pausa." }
+        ]
+      },
+      {
+        "id": "manchette",
+        "title": "Primo riflesso: il bagher",
+        "body": "Sulla sabbia, di default, si gioca TUTTO in bagher. È il gesto più sicuro, il meno sanzionato dall'arbitro e il più adatto a un posizionamento imperfetto nel vento. Il palleggio a 10 dita in ricezione è riservato alle competizioni di alto livello con palla perfetta."
+      },
+      {
+        "id": "partenaire",
+        "title": "Scegliere il proprio compagno",
+        "body": "Complementarità (bloccatore alto + difensore veloce), voglia comune di migliorare, comunicazione facile. Nel 2 contro 2, la mentalità della coppia conta quanto la tecnica."
+      },
+      {
+        "id": "checklist",
+        "title": "Checklist attrezzatura",
+        "items": [
+          { "title": "✓ Pallone beach", "body": "Mikasa VLS300 o equivalente" },
+          { "title": "✓ Rete portatile o di club", "body": "Altezza 2,43 m M / 2,24 m F" },
+          { "title": "✓ Idratazione", "body": "1,5-2 L di acqua per sessione, elettroliti" },
+          { "title": "✓ Protezione solare", "body": "SPF 50+ resistente all'acqua, cappellino, occhiali UV" },
+          { "title": "✓ Kit primo soccorso", "body": "Aloe vera, cerotti, antidolorifico" },
+          { "title": "✓ Sand socks (opzionale in estate)", "body": "Se sabbia > 45 °C" },
+          { "title": "✓ Snack a base di carboidrati", "body": "Banana, gel, barretta energetica" }
+        ]
+      }
+    ]
+  },
+  "transition": {
+    "intro": "Giochi indoor da anni e vuoi lanciarti nel beach? Buona notizia: i tuoi fondamentali ti seguono. Cattiva notizia: dovrai disimparare tre riflessi profondamente radicati. Ecco la tabella di marcia.",
+    "sections": [
+      {
+        "id": "change-radicalement",
+        "title": "Ciò che cambia radicalmente",
+        "items": [
+          { "title": "Tocchi", "body": "Il muro conta come 1° tocco. Non puoi più concatenare muro + dig + alzata + spike. Dopo un muro toccato: 2 tocchi rimanenti massimo." },
+          { "title": "Palleggio stretto", "body": "Arbitraggio molto più severo che in palestra. Sincronizzazione delle due mani assoluta. Nessuna rotazione del corpo. Over-set perpendicolare alle spalle." },
+          { "title": "Niente tip", "body": "Il tip a mano aperta è VIETATO. Sostituzione obbligatoria: poke o cobra." },
+          { "title": "Ricezione di palleggio = fallo", "body": "Tranne su palla hard-driven. Riflesso: bagher di default." },
+          { "title": "Superficie sabbia", "body": "Spostamenti 30% più lenti, salti -5 a -15 cm, costo energetico × 1,5 a × 2. L'anticipazione conta più della velocità." },
+          { "title": "Polivalenza totale", "body": "Niente più ruoli fissi. Servi, ricevi, alzi, attacchi, muri, difendi. A turno, ad ogni scambio." },
+          { "title": "Organico ridotto", "body": "2 giocatori, senza riserve. Niente libero." },
+          { "title": "Mentalità 2v2", "body": "Visibilità totale tra compagni, comunicazione permanente, gestione emotiva più esposta." }
+        ]
+      },
+      {
+        "id": "reste-pareil",
+        "title": "Ciò che resta uguale",
+        "body": "I tuoi gesti tecnici fondamentali: bagher, palleggio, schiacciata, servizio. La tua lettura del muro e dell'attaccante. L'importanza di un contatto pulito. Le nozioni line/angle, corto/lungo. Il tuo bagaglio indoor NON è perduto — va solo aggiustato."
+      },
+      {
+        "id": "desapprendre",
+        "title": "Le 3 cose da DISIMPARARE",
+        "items": [
+          { "title": "1. Il tip a mano aperta", "body": "Sostituisci immediatamente con POKE (falangi mediane) o COBRA (polpastrelli rigidi)." },
+          { "title": "2. L'alzata in rotazione", "body": "Le spalle devono restare perpendicolari alla traiettoria dell'over-set. Nessuna rotazione del corpo." },
+          { "title": "3. Il palleggio in ricezione sistematico", "body": "BAGHER di default. Il palleggio a 10 dita in ricezione è riservato ad alzate molto stabili e a giocatori molto puliti." }
+        ]
+      },
+      {
+        "id": "apprendre",
+        "title": "Le 3 cose da IMPARARE come priorità",
+        "items": [
+          { "title": "1. Il tomahawk", "body": "Difesa alta delle palle morbide che il beach dig non può giocare legalmente. Indispensabile." },
+          { "title": "2. Il poke / cobra", "body": "Sostituisce il tip. Il tuo strumento di piazzamento n°1." },
+          { "title": "3. Hand signals e comunicazione 2v2", "body": "Non opzionale. Prima di ogni servizio del proprio campo, il bloccatore segnala dietro la schiena. Il difensore adatta la sua posizione." }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Progressione consigliata (8 settimane)",
+        "items": [
+          { "title": "S1-S2 — Adattamento", "body": "Stabilizzare il bagher sulla sabbia, primi servizi, gestione caldo e idratazione." },
+          { "title": "S3-S4 — Strumenti beach", "body": "Poke e tomahawk, attacco coi piedi nella sabbia, gestione del salto ridotto." },
+          { "title": "S5-S6 — Tattica", "body": "Muro a rete, transizioni muro → difesa, hand signals." },
+          { "title": "S7-S8 — Competizione", "body": "Tattica completa, primi tornei amatoriali, lettura del gioco avversario." }
+        ]
+      }
+    ]
+  },
+  "tournoi-loisir": {
+    "intro": "Organizzare un torneo di beach amatoriale significa tre cose: scegliere la formula giusta in base al numero di squadre, garantire un allestimento conforme e fissare regole semplificate accettate da tutti. Il resto è logistica.",
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Formule consigliate in base al numero di squadre",
+        "items": [
+          { "title": "4 squadre", "body": "Girone all'italiana + finale tra le prime 2. Durata ~2-3 h. Formula più semplice." },
+          { "title": "6 squadre", "body": "2 gironi da 3 + semifinali + finale. ~3-4 h." },
+          { "title": "8 squadre", "body": "2 gironi da 4 + semifinali incrociate + finale. ~4-5 h." },
+          { "title": "12 squadre", "body": "3 gironi da 4 + eliminazione diretta. Giornata intera." },
+          { "title": "16 squadre", "body": "4 gironi da 4 + eliminazione diretta. Giornata intera." },
+          { "title": "24 squadre e più", "body": "Gironi + tabellone principale + consolazione. Weekend." }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Allestimento",
+        "items": [
+          { "title": "Campo", "body": "16 × 8 m, zona libera 3 m minimo (5-6 m in FIVB). Profondità sabbia 40 cm minimo." },
+          { "title": "Rete portatile", "body": "Altezza 2,43 m (M / mista) o 2,24 m (F / amatoriale). 2,35 m per mista FFvolley." },
+          { "title": "Linee", "body": "Nastri PVC + picchetti morbidi. Larghezza 5 cm." },
+          { "title": "Antenne", "body": "Opzionali in amatoriale, obbligatorie in competizione." }
+        ]
+      },
+      {
+        "id": "regles-simplifiees",
+        "title": "Regole semplificate",
+        "body": "1 set ai 21 (o 15 per formula rapida). Niente tie-break o «morte improvvisa» a 25. Servizio a rotazione. Auto-arbitraggio. In caso di dubbio: si rigioca. Spirito beach prima di tutto — lo sport è festoso."
+      },
+      {
+        "id": "materiel",
+        "title": "Materiale da prevedere",
+        "items": [
+          { "title": "✓ Palloni", "body": "1 per campo + 2 di riserva" },
+          { "title": "✓ Reti e pali", "body": "Altezza regolabile in base alla categoria" },
+          { "title": "✓ Linee + picchetti", "body": "Nastri PVC contrastati" },
+          { "title": "✓ Taniche d'acqua", "body": "Diversi litri per squadra al giorno" },
+          { "title": "✓ Tabelloni segnapunti", "body": "Almeno uno per campo" },
+          { "title": "✓ Cassetta del pronto soccorso", "body": "Aloe vera, cerotti, antidolorifico, crema solare di riserva" },
+          { "title": "✓ Tendone / ombrelloni", "body": "Zona d'ombra per il riposo tra le partite" },
+          { "title": "✓ Impianto audio se > 12 squadre", "body": "Annunci, atmosfera" },
+          { "title": "✓ Elenco squadre + calendario", "body": "Stampato e affisso" },
+          { "title": "✓ Premi / coppe", "body": "Premi per il podio" },
+          { "title": "✓ Bidoni per la raccolta differenziata", "body": "Torneo pulito, immagine pulita" }
+        ]
+      },
+      {
+        "id": "apps",
+        "title": "App utili",
+        "body": "BeachUp (beachup.app, 16 500+ campi censiti nel mondo) · Beach Volleyball App (App Store) · Tournaments by SportEasy · Toornament.com · CHAMP'S (champs.fr, streaming)."
+      }
+    ]
+  },
+  "lecture-jeu": {
+    "intro": "Leggere l'avversario nel beach è il 50% del lavoro difensivo. Hai solo 2 difensori per coprire 16 × 8 m — l'unico modo per reggere è anticipare. Ecco il metodo completo, dal riscaldamento allo stop dei piedi prima del colpo.",
+    "sections": [
+      {
+        "id": "echauffement",
+        "title": "Durante il riscaldamento (5 minuti cruciali)",
+        "intro": "I 5 minuti di riscaldamento a rete sono una miniera d'oro di scouting. Annota mentalmente:",
+        "items": [
+          { "title": "Chi alza meglio?", "body": "Uno dei due alzerà più dell'altro. Identificare chi." },
+          { "title": "Chi attacca in forza / chi piazza?", "body": "Il «picchiatore» e il «piazzatore» si rivelano in fretta." },
+          { "title": "«Line player» vs «angle player»", "body": "Tendenza naturale: la linea o la diagonale." },
+          { "title": "Lateralità", "body": "Destro / mancino. Influisce sugli angoli d'attacco." },
+          { "title": "Tic individuali", "body": "Un giocatore che guarda sempre il bersaglio prima di colpire, un altro che carica basso per il poke, ecc." }
+        ]
+      },
+      {
+        "id": "indices-frappe",
+        "title": "Indizi da leggere prima del colpo (in ordine)",
+        "items": [
+          { "title": "1. Qualità dell'alzata", "body": "Tesa vicino alla rete → angoli aperti, hard hit probabile. Staccata dalla rete → angoli chiusi, shots probabili. Dietro l'attaccante → poke molto probabile." },
+          { "title": "2. Rincorsa", "body": "Rettilinea aggressiva → swing potente. Frenata o accorciata → shot o poke." },
+          { "title": "3. Spalle in caricamento", "body": "Allineate sulla linea → line. Aperte → angle / cross. Chiuse tardi → cut o tip." },
+          { "title": "4. Braccio e polso", "body": "Teso dritto → swing. Gomito che scende → cut o poke." },
+          { "title": "5. Tendenze individuali (scouting)", "body": "Ciò che hai annotato nel riscaldamento e a inizio partita. Aggiornamento permanente." }
+        ]
+      },
+      {
+        "id": "methode",
+        "title": "Metodo difensivo",
+        "items": [
+          { "title": "Posizione base al centro del fondo", "body": "Partenza neutra a 1-1,5 m dalla linea di fondo, centrato." },
+          { "title": "Scivolata verso la zona sull'alzata", "body": "Appena la qualità dell'alzata è leggibile, scivolare per preparare la zona da coprire." },
+          { "title": "Stop dei piedi PRIMA del contatto dell'attaccante", "body": "Regola d'oro — impossibile reagire se sei in movimento." },
+          { "title": "Primo passo perfetto", "body": "Prima spinta nella direzione reale della palla, mai un'approssimazione." }
+        ]
+      },
+      {
+        "id": "match",
+        "title": "In partita: adattamento permanente",
+        "body": "Tenere un mini bilancio mentale (questo giocatore ha colpito 4 volte sulla linea, 0 volte in diagonale). Adattarsi in tempo reale. Provocare squilibrio (servizio corto sul ricevitore debole per costringerlo a giocare il 2° tocco). Rileggere il vento a ogni cambio campo (ogni 7 punti nel set normale, 5 nel tie-break)."
+      },
+      {
+        "id": "exercice",
+        "title": "Esercizio di allenamento consigliato",
+        "body": "«Cinque servizi al buio»: il tuo compagno ti serve nella zona che vuole, devi chiamare a voce alta ciò che leggi («line», «angle», «cut», «short»…) PRIMA che la palla arrivi. Punteggio su 5. Obiettivo: 4/5 minimo dopo qualche sessione."
+      }
+    ]
+  }
+}

@@ -53,5 +53,25 @@
     "backOfCourt": "SAHA ARKASI",
     "ourSide": "Bizim taraf",
     "opponentSide": "Rakip taraf"
+  },
+  "discipline": {
+    "indoor": "Salon",
+    "beach": "Plaj",
+    "switcherLabel": "Branş (Salon ya da Plaj)",
+    "switchToIndoor": "Salon moduna geç",
+    "switchToBeach": "Plaj moduna geç",
+    "badge": {
+      "indoor": "SALON",
+      "beach": "PLAJ",
+      "both": "ORTAK"
+    },
+    "filter": {
+      "label": "Branşa göre filtrele",
+      "kicker": "★ FİLTRELE",
+      "all": "Tümü",
+      "indoor": "Salon",
+      "beach": "Plaj",
+      "both": "Ortak"
+    }
   }
 }

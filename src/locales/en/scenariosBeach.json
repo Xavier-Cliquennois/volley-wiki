@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ BEACH · SCENARIOS",
+    "title": "BEACH SCENARIOS",
+    "subtitle": "Animated 2v2 sequences — coming soon. In the meantime, dive into the guides and the hand signals."
+  },
+  "placeholder": {
+    "label": "★ UNDER CONSTRUCTION ★",
+    "title": "Beach scenarios — coming soon",
+    "body": "Animated 2v2 scenarios (block + dig, peel/drop, hand signals in context, line vs angle defense) require adapting the 3D court to 16×8 m. It's on the burner for the next iteration.",
+    "meanwhileTitle": "In the meantime, must-see:",
+    "links": {
+      "signals": "Hand signals & 2v2 roles",
+      "guides": "Beach guides (beginner, transition…)",
+      "techniques": "Beach techniques (poke, tomahawk, skyball…)"
+    }
+  }
+}

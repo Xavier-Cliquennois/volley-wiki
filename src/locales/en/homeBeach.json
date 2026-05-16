@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ BEACH VOLLEYBALL · 2 vs 2 ★",
+  "hero": {
+    "logoTop": "BEACH",
+    "logoBottom": "VOLLEY",
+    "subtitle": "The twin sport of indoor — 2v2 on sand, total versatility, hand signals behind the back. Olympic since 1996.",
+    "ctaPrimary": "SEE THE TECHNIQUES",
+    "ctaSecondary": "READ THE BEACH RULES"
+  },
+  "sectionsLabel": "★ BEACH SECTIONS ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Techniques",
+      "desc": "Poke, cobra, tomahawk, skyball, beach dig — the flagship beach moves.",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "2v2 Roles",
+      "desc": "Blocker and defender. Complete table of hand signals behind the back.",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Beach guides",
+      "desc": "Absolute beginner, indoor → beach transition, recreational tournament, reading the play.",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Beach rules",
+      "desc": "FIVB 2025-2028 ruleset — beach sections and the differences vs indoor.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Glossary",
+      "desc": "Shared glossary with beach / indoor / 2-in-1 stickers.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Beach scenarios",
+      "desc": "Animated beach sequences — coming soon. Check the guides in the meantime.",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

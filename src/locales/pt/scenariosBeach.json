@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ PRAIA · CENÁRIOS",
+    "title": "CENÁRIOS DE PRAIA",
+    "subtitle": "Sequências animadas 2v2 — em breve. Entretanto, mergulha nos guias e nos hand signals."
+  },
+  "placeholder": {
+    "label": "★ EM CONSTRUÇÃO ★",
+    "title": "Cenários de praia — em breve",
+    "body": "Os cenários animados 2v2 (bloco + dig, peel/drop, hand signals em situação, defesa line vs angle) exigem a adaptação do campo 3D para 16×8 m. Está em cima da próxima iteração.",
+    "meanwhileTitle": "Entretanto, a não perder:",
+    "links": {
+      "signals": "Hand signals e papéis 2v2",
+      "guides": "Guias de praia (iniciante, transição…)",
+      "techniques": "Técnicas de praia (poke, tomahawk, skyball…)"
+    }
+  }
+}

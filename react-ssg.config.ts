@@ -2,6 +2,7 @@ import { defineReactSsgConfig } from 'vite-plugin-react-ssg';
 import { routes } from './src/routes';
 import { SCENARIOS } from './src/scenarios/data';
 import { GUIDES } from './src/guides/data';
+import { BEACH_GUIDES } from './src/guides/beach/data';
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants';
 
 const LANGS = ['fr', 'en', 'pl', 'it', 'es', 'pt', 'ja', 'tr'] as const;
@@ -23,6 +24,8 @@ for (const size of TEAM_SIZES) {
   }
 }
 
+const beachGuidePaths = BEACH_GUIDES.map((g) => `/beach/guides/${g.slug}`);
+
 // All language-agnostic content paths (excluding the index).
 const contentPaths: string[] = [
   '/techniques',
@@ -36,6 +39,13 @@ const contentPaths: string[] = [
   ...defenseHubPath,
   ...sizedDefensePaths,
   ...sizedPositionsPaths,
+  // Beach
+  '/beach',
+  '/beach/techniques',
+  '/beach/positions',
+  '/beach/scenarios',
+  '/beach/guides',
+  ...beachGuidePaths,
 ];
 
 // Prefix every content path with each supported language. The bare /:lang

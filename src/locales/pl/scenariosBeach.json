@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ BEACH · SCENARIUSZE",
+    "title": "SCENARIUSZE BEACH",
+    "subtitle": "Animowane sekwencje 2v2 — wkrótce dostępne. W międzyczasie zanurz się w przewodnikach i hand signals."
+  },
+  "placeholder": {
+    "label": "★ W BUDOWIE ★",
+    "title": "Scenariusze beach — wkrótce dostępne",
+    "body": "Animowane scenariusze 2v2 (blok + dig, peel/drop, hand signals w sytuacji, obrona line vs angle) wymagają adaptacji boiska 3D do wymiarów 16×8 m. Jest to zaplanowane na następną iterację.",
+    "meanwhileTitle": "W międzyczasie koniecznie zobacz:",
+    "links": {
+      "signals": "Hand signals i role 2v2",
+      "guides": "Przewodniki beach (początkujący, transition…)",
+      "techniques": "Techniki beach (poke, tomahawk, skyball…)"
+    }
+  }
+}

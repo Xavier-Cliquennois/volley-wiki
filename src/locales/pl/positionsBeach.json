@@ -1,0 +1,171 @@
+{
+  "header": {
+    "kicker": "★ BEACH · 2 NA 2",
+    "title": "ROLE I SIGNALS W BEACH",
+    "subtitle": "Brak rotacji, brak narzuconych pozycji. Dwie funkcyjne role (bloker · obrońca), które się wymieniają, oraz hand signals za plecami do koordynacji bloku i obrony."
+  },
+  "court": {
+    "kicker": "★ BOISKO 16 × 8 M",
+    "title": "Boisko beach",
+    "facts": {
+      "size": "16 × 8 m (vs 18 × 9 w hali)",
+      "net": "Siatka 2,43 m M · 2,24 m K · 2,35 m mix",
+      "noLines": "Brak linii środkowej i linii ataku",
+      "service": "Strefa zagrywki: cała szerokość linii końcowej"
+    },
+    "labels": {
+      "blocker": "BLOKER",
+      "defender": "OBROŃCA",
+      "net": "SIATKA",
+      "endLine": "Linia końcowa"
+    }
+  },
+  "roles": {
+    "kicker": "★ DWIE ROLE, ZERO POZYCJI",
+    "title": "Dwie funkcyjne role",
+    "intro": "W grze 2 na 2 przepisy nie narzucają pozycji. Wyłaniają się jednak dwie komplementarne funkcje — które wymieniają się serwis po serwisie, zależnie od tego, kto serwuje i którego rywala atakujemy.",
+    "items": [
+      {
+        "id": "blocker",
+        "label": "BLOKER",
+        "subtitle": "Przy siatce",
+        "profile": "Wysoki, eksplozywny w wyskoku, czyta siatkę",
+        "mission": "Blokować, a następnie wycofać się do obrony. Hand signals przed serwisem.",
+        "tips": [
+          "Pozycja 30 cm od siatki, ręce na wysokości czoła",
+          "Sealing: penetracja do przodu i w dół na połowę przeciwnika",
+          "Push rąk TUŻ PO kontakcie atakującego (później niż w hali)",
+          "Palce rozcapierzone i sztywne, kciuki równolegle skierowane w górę"
+        ]
+      },
+      {
+        "id": "defender",
+        "label": "OBROŃCA",
+        "subtitle": "W głębi pola",
+        "profile": "Szybki, mobilny, czyta grę",
+        "mission": "Pokryć strefę przeciwną do bloku, czytać obronę. Startuje 1-1,5 m od linii końcowej.",
+        "tips": [
+          "Pozycja bazowa pośrodku tyłu boiska",
+          "Ślizg do strefy w momencie setu",
+          "Zatrzymanie stóp PRZED kontaktem atakującego",
+          "Końcowy odczyt: barki + ramię + nadgarstek atakującego"
+        ]
+      }
+    ],
+    "switchingTitle": "Switching",
+    "switchingBody": "Role wymieniają się w zależności od tego, kto serwuje / kto przyjmuje / którego rywala atakujemy. Jeśli bloker jest zbyt niski: opcja obrony we dwóch bez bloku (systematyczny peel/drop).",
+    "labels": {
+      "profile": "PROFIL",
+      "mission": "MISJA"
+    }
+  },
+  "signals": {
+    "kicker": "★ HAND SIGNALS",
+    "title": "Signals za plecami",
+    "intro": "Bloker informuje partnera o swoim zamiarze PRZED serwisem własnej drużyny. Sygnały pokazywane są za plecami (dolna część pleców), niewidoczne dla przeciwnika. Jedna ręka na rywala: prawa ręka mówi o rywalu po prawej, lewa o tym po lewej.",
+    "warning": "Konwencje „zaciśnięta pięść” vs „otwarta dłoń” różnią się między drużynami. Konieczne jest ustalenie konwencji z partnerem przed każdym meczem.",
+    "headers": {
+      "signal": "Sygnał",
+      "meaning": "Znaczenie (blok)",
+      "defender": "Pozycja obrońcy",
+      "level": "Poziom"
+    },
+    "items": [
+      {
+        "icon": "☝️",
+        "signal": "1 palec",
+        "meaning": "Line block (blok na linię)",
+        "defender": "Pokrywa angle",
+        "level": "Débutant"
+      },
+      {
+        "icon": "✌️",
+        "signal": "2 palce",
+        "meaning": "Angle block (blok cross-court)",
+        "defender": "Pokrywa line",
+        "level": "Débutant"
+      },
+      {
+        "icon": "🤟",
+        "signal": "3 palce",
+        "meaning": "Show angle → dive line (fake)",
+        "defender": "Startuje neutralnie, wychodzi w angle",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🖖",
+        "signal": "4 palce",
+        "meaning": "Show line → dive angle (fake)",
+        "defender": "Startuje na angle, ślizga do line",
+        "level": "Avancé"
+      },
+      {
+        "icon": "✊",
+        "signal": "Zaciśnięta pięść",
+        "meaning": "No block / Drop / Peel",
+        "defender": "Obrona dzielona we dwóch",
+        "level": "Intermédiaire"
+      },
+      {
+        "icon": "🖐️",
+        "signal": "Otwarta dłoń (5)",
+        "meaning": "Read block (czytanie)",
+        "defender": "Obrona w czytaniu",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🤙",
+        "signal": "Shaka",
+        "meaning": "Spread block",
+        "defender": "Lata po wszystkim, co przejdzie",
+        "level": "Avancé"
+      }
+    ],
+    "logicTitle": "Logika defensywna",
+    "logicBody": "Obrońca obejmuje strefę, której bloker NIE pokrywa. Line block → obrona angle. Angle block → obrona line. Zaciśnięta pięść (pull) → obrona we dwóch, boisko podzielone na połowy. Otwarta dłoń (read) → odczyt w czasie rzeczywistym."
+  },
+  "calls": {
+    "kicker": "★ CALLS PODCZAS WYMIANY",
+    "title": "Komunikacja 2v2",
+    "intro": "Badanie (Effectiveness of the Call in Beach Volleyball, Mistrzostwa Szwajcarii 2011) pokazuje, że 61,5% ataków Z callem to ataki wygrywające, w porównaniu do 35% BEZ calla (p<0,0005). Krótko · głośno · wcześnie · wspólne konwencje · nigdy w ciszy.",
+    "groupsTitle": "Trzy grupy callów",
+    "groups": [
+      {
+        "title": "Calls przed uderzeniem przeciwnika (odczyt)",
+        "items": [
+          "« Line! » — atak wzdłuż linii",
+          "« Angle! » / « Cross! » — cross-court",
+          "« Cut! » — krótki cross-court",
+          "« Tip! » / « Short! » — krótka kiwka",
+          "« High! » / « Shot! » — wysoki shot ponad blok",
+          "« Swing! » — spodziewane mocne uderzenie",
+          "« Tight! » — set napięty blisko siatki",
+          "« Off! » — set odsunięty od siatki"
+        ]
+      },
+      {
+        "title": "Calls podczas piłki",
+        "items": [
+          "« Mine! » / « Moja! » — gram piłkę",
+          "« Yours! » / « Twoja! »",
+          "« Out! » — zostaw, piłka wychodzi",
+          "« In! » / « Dobra! » — piłka dobra, graj",
+          "« Free! » — łatwa piłka nadlatuje",
+          "« Up! » — odbijam / odbij ją",
+          "« Cover! » — asekuruj atakującego",
+          "« Touch! » — blok dotknął",
+          "« Net! » — dotknięcie siatki"
+        ]
+      },
+      {
+        "title": "Calls defensywne (obrońca → bloker)",
+        "items": [
+          "« Stay! » — zostań, blokuj jak zapowiedziane",
+          "« Pull! » — cofnij się, obrona we dwóch",
+          "« Block! » — naprawdę blokuj na początkowy fake",
+          "« Tight! » / « Off! » — jakość setu przeciwnika"
+        ]
+      }
+    ]
+  }
+}

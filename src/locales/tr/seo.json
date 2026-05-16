@@ -69,7 +69,35 @@
     "guides": "Rehberler",
     "rules": "Kurallar",
     "glossary": "Sözlük",
-    "defense": "Savunma konumlanması"
+    "defense": "Savunma konumlanması",
+    "beach": "Plaj",
+    "beachTechniques": "Plaj teknikleri",
+    "beachPositions": "2v2 Rolleri",
+    "beachScenarios": "Plaj senaryoları",
+    "beachGuides": "Plaj rehberleri"
+  },
+  "homeBeach": {
+    "title": "Plaj Voleybolu 2v2 — Teknikler, hand signals ve FIVB kuralları | Volley-Wiki",
+    "description": "Plaj voleybolu wikisi: poke, cobra, tomahawk, skyball, sırt arkasında hand signals, 2v2 rolleri, FIVB 2025-2028 kuralları."
+  },
+  "techniquesBeach": {
+    "title": "Plaj voleybolu teknikleri — Poke, cobra, tomahawk, skyball | Volley-Wiki",
+    "description": "2v2 plaj voleybolunun amiral hareketleri: poke, cobra, tomahawk, skyball, beach dig, hand signals. Kuma ve rüzgâra adaptasyonlar."
+  },
+  "positionsBeach": {
+    "title": "Plaj voleybolunda 2v2 rolleri ve hand signals | Volley-Wiki",
+    "description": "2v2 plajda blokçu ve defans: sırt arkasında hand signals'ın tam tablosu, line/angle/peel, sürekli iletişim."
+  },
+  "scenariosBeach": {
+    "title": "Plaj voleybolu senaryoları — Yakında geliyor | Volley-Wiki",
+    "description": "Yapım aşamasında animasyonlu 2v2 senaryoları. Bu arada: plaj rehberleri ve hand signals."
+  },
+  "guidesBeach": {
+    "title": "Plaj voleybolu rehberleri — Başlangıç, geçiş, turnuva | Volley-Wiki",
+    "description": "Plaj rehberleri: mutlak başlangıç, salon → plaj geçişi, amatör turnuva düzenleme, 2v2 rakip okuma."
+  },
+  "guideBeachDetail": {
+    "title": "{{title}} — Plaj Voleybolu | Volley-Wiki"
   },
   "phase": {
     "attack": "saldırı",

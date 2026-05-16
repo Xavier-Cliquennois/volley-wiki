@@ -52,3 +52,35 @@ a:visited {
   border-color: transparent;
   outline-color: transparent;
 }
+
+/* Header responsive switch — explicit media queries to avoid any tooling drift
+   on Tailwind responsive utilities. We bump the desktop breakpoint to xl
+   (1280px) since the discipline switcher widens the nav. */
+.vw-nav-desktop {
+  display: none;
+}
+.vw-nav-mobile {
+  display: flex;
+}
+.vw-mobile-only {
+  display: block;
+}
+@media (min-width: 1280px) {
+  .vw-nav-desktop {
+    display: flex;
+  }
+  .vw-nav-mobile,
+  .vw-mobile-only {
+    display: none;
+  }
+}
+
+/* Tagline shown next to the wordmark — hidden on very narrow screens. */
+.vw-tagline {
+  display: none;
+}
+@media (min-width: 640px) {
+  .vw-tagline {
+    display: block;
+  }
+}

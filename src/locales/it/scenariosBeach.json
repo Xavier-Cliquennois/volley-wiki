@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ BEACH · SCENARI",
+    "title": "SCENARI BEACH",
+    "subtitle": "Sequenze animate 2v2 — in arrivo. Nel frattempo, immergiti nelle guide e nei segnali di mano."
+  },
+  "placeholder": {
+    "label": "★ IN COSTRUZIONE ★",
+    "title": "Scenari beach — in arrivo",
+    "body": "Gli scenari animati 2v2 (muro + dig, peel/drop, hand signals in situazione, difesa line vs angle) richiedono l'adattamento del campo 3D al 16×8 m. È in cantiere per la prossima iterazione.",
+    "meanwhileTitle": "Nel frattempo, da vedere assolutamente:",
+    "links": {
+      "signals": "Hand signals e ruoli 2v2",
+      "guides": "Guide beach (principiante, transizione…)",
+      "techniques": "Tecniche beach (poke, tomahawk, skyball…)"
+    }
+  }
+}

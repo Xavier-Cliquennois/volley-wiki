@@ -69,7 +69,35 @@
     "guides": "Poradniki",
     "rules": "Przepisy",
     "glossary": "Słownik",
-    "defense": "Ustawienie obronne"
+    "defense": "Ustawienie obronne",
+    "beach": "Beach",
+    "beachTechniques": "Techniki beach",
+    "beachPositions": "Role 2v2",
+    "beachScenarios": "Scenariusze beach",
+    "beachGuides": "Przewodniki beach"
+  },
+  "homeBeach": {
+    "title": "Siatkówka plażowa 2v2 — Techniki, hand signals i przepisy FIVB | Volley-Wiki",
+    "description": "Wiki siatkówki plażowej: poke, cobra, tomahawk, skyball, hand signals za plecami, role 2v2, przepisy FIVB 2025-2028."
+  },
+  "techniquesBeach": {
+    "title": "Techniki siatkówki plażowej — Poke, cobra, tomahawk, skyball | Volley-Wiki",
+    "description": "Flagowe zagrania beach 2v2: poke, cobra, tomahawk, skyball, beach dig, hand signals. Adaptacje do piasku i wiatru."
+  },
+  "positionsBeach": {
+    "title": "Role 2v2 i hand signals w siatkówce plażowej | Volley-Wiki",
+    "description": "Bloker i obrońca w beach 2v2: kompletna tabela hand signals za plecami, line/angle/peel, stała komunikacja."
+  },
+  "scenariosBeach": {
+    "title": "Scenariusze siatkówki plażowej — Wkrótce dostępne | Volley-Wiki",
+    "description": "Animowane scenariusze 2v2 w budowie. W międzyczasie: przewodniki beach i hand signals."
+  },
+  "guidesBeach": {
+    "title": "Przewodniki siatkówki plażowej — Początkujący, transition, turniej | Volley-Wiki",
+    "description": "Przewodniki beach: absolutny początkujący, transition hala → beach, organizacja turnieju amatorskiego, czytanie gry przeciwnika 2v2."
+  },
+  "guideBeachDetail": {
+    "title": "{{title}} — Siatkówka plażowa | Volley-Wiki"
   },
   "phase": {
     "attack": "ataku",

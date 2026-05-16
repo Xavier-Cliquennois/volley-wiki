@@ -1,0 +1,303 @@
+{
+  "header": {
+    "kicker": "★ BEACH · DOKUMENTACJA",
+    "title": "TECHNIKI SIATKÓWKI PLAŻOWEJ",
+    "subtitle": "Flagowe zagrania 2v2 na piasku — poke, cobra, tomahawk, skyball, signals. Adaptacje do piasku i wiatru."
+  },
+  "filters": {
+    "category": "KATEGORIA",
+    "level": "POZIOM",
+    "countSingle": "{{count}} technika",
+    "countPlural": "{{count}} technik",
+    "showAll": "POKAŻ WSZYSTKIE",
+    "noResults": "BRAK TECHNIK DLA TEJ KOMBINACJI"
+  },
+  "sectionTitle": "★ KARTY TECHNICZNE BEACH",
+  "card": {
+    "when": "KIEDY",
+    "keyPoints": "★ KLUCZOWE PUNKTY",
+    "errors": "✗ BŁĘDY DO UNIKNIĘCIA"
+  },
+  "tags": {
+    "Service": "Zagrywka",
+    "Réception": "Przyjęcie",
+    "Passe": "Wystawa",
+    "Attaque": "Atak",
+    "Défense": "Obrona",
+    "Communication": "Komunikacja",
+    "Débutant": "Początkujący",
+    "Intermédiaire": "Średniozaawansowany",
+    "Avancé": "Zaawansowany"
+  },
+  "items": {
+    "manchette-beach": {
+      "name": "Odbicie sposobem dolnym na piasku",
+      "description": "Uniwersalny gest defensywny zaadaptowany do piasku: spowolnione przemieszczenia, mocniejsze ukorzenienie. Na piasku systematycznie wybiera się odbicie sposobem dolnym przy przyjęciu, ponieważ sand-set jest sędziowany bardzo surowo.",
+      "keyPoints": [
+        "Stopy na szerokość barków, jedna lekko wysunięta, kolana ugięte",
+        "Platforma: ręce złączone, kciuki równoległe, łokcie zablokowane",
+        "Kontakt na mięsistej części przedramion, w osi barków",
+        "Krótkie dostawne kroki, bardziej zakotwiczone (\"wpychasz\" piasek)",
+        "Wcześniejsza anticipation — piasek wszystko spowalnia"
+      ],
+      "errors": [
+        "Złamana platforma w momencie kontaktu (jedno przedramię wyżej)",
+        "Zbyt mocne machanie ramionami — wiatr odchyla piłkę",
+        "Piłka grana poza osią barków",
+        "Przyjęcie za bardzo przed stopami",
+        "Zbyt późny start"
+      ],
+      "when": "Przyjęcie zagrywki, obrona, domyślny pierwszy kontakt"
+    },
+    "passe-haute-beach": {
+      "name": "Wystawa górna beach (set)",
+      "description": "Odbicie palcami w trybie STRICT — sędziowanie znacznie surowsze niż w hali. Tor lotu w osi barków obowiązkowy, jeśli piłka przekracza siatkę (over-set, przepis 13.2.5).",
+      "keyPoints": [
+        "Ręce w trójkąt nad czołem, 8 palców dotyka piłki (nigdy dłonie)",
+        "Kontakt obu rąk ściśle jednoczesny",
+        "Brak obrotu ciała podczas kontaktu",
+        "Tor lotu w osi barków przy over-secie",
+        "Im mniejsza rotacja piłki, tym mniejsze ryzyko gwizdka"
+      ],
+      "errors": [
+        "Rotacja tułowia podczas kontaktu",
+        "Niezsynchronizowane ręce",
+        "Nadmierny spin piłki",
+        "Ręce zbyt nisko (\"deep dish\" na wysokości klatki)",
+        "Over-set poza osią barków"
+      ],
+      "when": "Drugi kontakt w korzystnych warunkach (mało wiatru, spokojny set)"
+    },
+    "poke": {
+      "name": "Poke / Pokey ★",
+      "description": "TA emblematyczna technika beach. Uderzenie środkowymi kostkami (knuckles) lub pierwszym członem palców zgiętym. Zastępuje tip otwartą dłonią, który jest ZABRONIONY (błąd, przepis 13.2.3).",
+      "keyPoints": [
+        "Normalny rozbieg jak do hard spike (symulować atak)",
+        "W naciągnięciu zacisnąć pięść lub zgiąć palce tuż przed kontaktem",
+        "Nadgarstek twardy i zablokowany, kontakt bardzo krótki",
+        "Warianty: two-finger poke, bear paw / full pokey, steino (3 człony)",
+        "Mało widoczne przygotowanie — efekt zaskoczenia się liczy"
+      ],
+      "errors": [
+        "Zbyt miękkie palce → odgwizdane trzymanie",
+        "Opuszki palców (fingertips) przy kontakcie = open hand tip = BŁĄD",
+        "Kontakt kciukiem → błąd",
+        "Zbyt mocne uderzenie → niekontrolowana piłka jak strzała",
+        "Zbyt widoczne przygotowanie (rywal czyta poke przed uderzeniem)"
+      ],
+      "when": "Wystawa zbyt blisko siatki, dobrze ustawiony blok, długie placement w głąb pola, trudna piłka"
+    },
+    "cobra": {
+      "name": "Cobra shot",
+      "description": "Wariant poke z opuszkami palców wyprostowanymi, złączonymi i SZTYWNYMI (\"głowa kobry\"). Legalne tylko jeśli sztywność jest absolutna. Chirurgiczna precyzja, ale ryzykowne.",
+      "keyPoints": [
+        "Palce wyprostowane w szpic, złączone (uchwyt kobry)",
+        "Palce absolutnie sztywne w momencie kontaktu — ani milimetra luzu",
+        "Piłka blisko siatki, przed blokiem",
+        "Bardzo krótkie placement za blokiem",
+        "Ryzyko opanowane: ćwiczyć dopiero po poke"
+      ],
+      "errors": [
+        "Palce zginające się pod uderzeniem = odgwizdane trzymanie",
+        "Mylenie cobra z tip — sędzia decyduje rygorystycznie",
+        "Stosowanie cobry na piłkę zbyt daleko",
+        "Widoczne przygotowanie"
+      ],
+      "when": "Piłka przyklejona do siatki, przed ustawionym blokiem, bardzo krótkie placement"
+    },
+    "tomahawk": {
+      "name": "Tomahawk ★",
+      "description": "NIEZBĘDNA obrona wysoka w beach. Ręce złączone dłoń do dłoni nad głową, uderzenie zewnętrznymi krawędziami nadgarstków / małymi palcami. Legalne na miękką piłkę, gdzie beach dig byłby odgwizdany.",
+      "keyPoints": [
+        "Ręce złączone dłoń do dłoni nad głową (czasem skrzyżowane kciuki)",
+        "Nadgarstki i łokcie zablokowane",
+        "Uderzenie zewnętrznymi krawędziami nadgarstków i małymi palcami",
+        "Wariant „Hammer”: złączone zaciśnięte pięści — na bardzo wysoką piłkę",
+        "Pozycja wysoka — nad czołem, nigdy na wysokości klatki"
+      ],
+      "errors": [
+        "Niewystarczająco złączone ręce → piłka przechodzi pomiędzy",
+        "Miękkie nadgarstki → platforma się załamuje",
+        "Kontakt dłońmi zamiast krawędziami → brak „pop”",
+        "Zgięte łokcie w momencie kontaktu",
+        "Tomahawk zbyt nisko (czoło/klatka) zamiast nad głową"
+      ],
+      "when": "Wysoka piłka nad czołem, free ball w wietrze, jump float schodzący w dół, miękka piłka, gdzie beach dig byłby odgwizdany"
+    },
+    "beach-dig": {
+      "name": "Beach dig / open hand dig",
+      "description": "Obrona otwartymi dłońmi dozwolona TYLKO na mocną piłkę (\"hard-driven\", przepis 9.2.2.4). Na miękką piłkę ten sam gest zostałby odgwizdany jako „trzymanie”. Sędzia decyduje na podstawie prędkości smasha.",
+      "keyPoints": [
+        "Ręce wysoko nad czołem, palce otwarte w kształt miseczki",
+        "Dłonie do góry, twarde nadgarstki",
+        "Jednoczesny kontakt obu rąk",
+        "Zarezerwowane wyłącznie na naprawdę mocne piłki (hard-driven)",
+        "Na miękką piłkę: przechodzić w tomahawk"
+      ],
+      "errors": [
+        "Stosowanie na miękką piłkę = systematycznie odgwizdane trzymanie",
+        "Niejednoczesny kontakt = podwójne dotknięcie",
+        "Ręce się rozsuwają → piłka przechodzi",
+        "Miękkie palce zginające się pod uderzeniem"
+      ],
+      "when": "Mocny smash przeciwnika przychodzący wysoko, wyłącznie piłka hard-driven"
+    },
+    "sprawl": {
+      "name": "Sprawl (rzut beach)",
+      "description": "Kontrolowany rzut w przód. Start z niskiej pozycji, długi krok, wyciągnąć ręce, lądować na BIODRZE lub boku (nigdy na napiętym brzuchu), ślizgać się po piasku, natychmiast wstać.",
+      "keyPoints": [
+        "Niska pozycja startowa, gotowa do wyciągnięcia",
+        "Duży długi krok do przodu, biodra schodzą w dół",
+        "Lądowanie na biodrze lub boku (nigdy na napiętym brzuchu)",
+        "Ślizg po piasku — piasek jest twoim przyjacielem",
+        "Natychmiast wstać po kontakcie"
+      ],
+      "errors": [
+        "Lądowanie na napiętym brzuchu — uderzenie w splot",
+        "Pozostawanie na ziemi po kontakcie — punkt stracony",
+        "Rzut bez jasnej intencji defensywnej",
+        "Ręce się rozsuwają w momencie kontaktu"
+      ],
+      "when": "Krótka piłka przed sobą, boczna piłka nieosiągalna krokami dostawnymi"
+    },
+    "topspin-drive": {
+      "name": "Topspin drive",
+      "description": "Atak bardzo używany w beach. Piłka uderzona lekko i umieszczona z rotacją do przodu generowaną nadgarstkiem. Charakterystyczny dźwięk: „Platsch!”. Idealny kompromis siła/placement.",
+      "keyPoints": [
+        "Normalny rozbieg ataku",
+        "Lekkie uderzenie z rotacją do przodu nadgarstkiem",
+        "Piłka „toczy się” po ręce, nie suche uderzenie",
+        "Cel: strefa za blokiem, przed obrońcą",
+        "Niezbędne przy wymuszonym over-secie, by zachować oś barków"
+      ],
+      "errors": [
+        "Zbyt mocne uderzenie → niekontrolowana piłka jak strzała",
+        "Brak rotacji nadgarstkiem → płaski strzał bez kontroli",
+        "Źle odczytany cel (trzymanie się kąta bloku)"
+      ],
+      "when": "Standardowe sety, alternatywa dla hard spike, wymuszony over-set"
+    },
+    "cut-shot": {
+      "name": "Cut shot (krótki cross-court)",
+      "description": "Atak off-speed bardzo ostry kątowo. Rozbieg IDENTYCZNY jak przy hard spike (nie zwalniać ramienia), barki zwrócone na ostry kąt, łamać nadgarstek na zewnątrz (\"pinky down\" dla praworęcznego w strefie 4).",
+      "keyPoints": [
+        "Rozbieg identyczny jak przy hard spike — bez zwalniania",
+        "Barki zwrócone na ostry kąt",
+        "Łamać nadgarstek na zewnątrz (\"pinky down\")",
+        "Piłka musi przejść siatkę POŚRODKU, by zostać na boisku",
+        "Wiarygodna prędkość ramienia, by sprzedać zwód"
+      ],
+      "errors": [
+        "Zwalnianie rozbiegu → rywal czyta shot",
+        "Zbyt późne uderzenie → piłka w siatkę",
+        "Zbyt wczesne złamanie nadgarstka — utrata mocy"
+      ],
+      "when": "Blok na linię, otwarty cross-court, obrońca daleko"
+    },
+    "line-shot": {
+      "name": "Line shot / High line",
+      "description": "Atak umieszczony wzdłuż linii ponad blokiem. Pełny rozbieg, barki zwrócone na kąt (by ukryć), kontakt pod piłką, snap nadgarstka do góry. Prędkość ramienia identyczna jak przy hard hit.",
+      "keyPoints": [
+        "Pełny rozbieg jak przy hard spike",
+        "Barki zwrócone na kąt, by ukryć intencję",
+        "Kontakt pod piłką",
+        "Snap nadgarstka do góry — tor lotu w łuk",
+        "Prędkość ramienia identyczna jak przy hard hit — to czyni shot wiarygodnym"
+      ],
+      "errors": [
+        "Wolne ramię → rywal czyta shot",
+        "Niewystarczająca wysokość → piłka zablokowana",
+        "Zbyt długi → błąd"
+      ],
+      "when": "Blok na cross-court, otwarta line, obrońca po cross-courcie"
+    },
+    "skyball": {
+      "name": "Skyball ★",
+      "description": "Flagowa zagrywka. Tor lotu na wysokości 15-25 m, piłka spada niemal pionowo. Pochodzenie brazylijskie, zmodernizowana przez Adriana \"Mr. Skyball\" Carambulę. Skuteczna przy słońcu i wietrze.",
+      "keyPoints": [
+        "Wariant underhand spin (Carambula): pozycja boczna, uderzenie z dołu do góry piętą dłoni lub zaciśniętą pięścią",
+        "Wariant float (Sinjin Smith): uderzenie piętą dłoni, bez rotacji",
+        "Rotacja nadgarstka, by nadać wyraźny spin (wariant spin)",
+        "Pionowe prowadzenie ramienia po uderzeniu",
+        "Taktyka: stosować, gdy słońce + wiatr działają na twoją korzyść"
+      ],
+      "errors": [
+        "Tor lotu niewystarczająco wysoki → piłka staje się czytelna",
+        "Brak spinu (wariant spin) → przewidywalny tor lotu",
+        "Zagrywanie pod słońce dla własnego partnera-odbiorcy"
+      ],
+      "when": "Słońce w oczy przeciwnika, wiatr w plecy, łamanie ofensywnego rytmu rywala"
+    },
+    "float-serve-beach": {
+      "name": "Jump float w pozycji stojącej",
+      "description": "Najczęściej używana zagrywka w beach. Niski rzut dwiema rękami (stabilność w wietrze), uderzenie w dokładny środek piłki płaską i twardą dłonią, BEZ towarzyszenia (zatrzymać ramię w momencie uderzenia).",
+      "keyPoints": [
+        "Niski rzut dwiema rękami dla stabilności w wietrze",
+        "Uderzenie w dokładny środek piłki",
+        "Płaska i twarda dłoń",
+        "Bez towarzyszenia — zatrzymać ramię w momencie uderzenia",
+        "Niski tor lotu (30-60 cm nad siatką)"
+      ],
+      "errors": [
+        "Zbyt wysoki rzut → niestabilność w wietrze",
+        "Przedłużone towarzyszenie, które dodaje spin (zabija efekt floatu)",
+        "Uderzenie poza środkiem → przewidywalny tor lotu"
+      ],
+      "when": "Standardowa zagrywka, wiatr mogący sprawić, że piłka „tańczy”"
+    },
+    "jump-float-beach": {
+      "name": "Jump float beach",
+      "description": "Standard w zawodach. Toss dwiema rękami jednocześnie z krokiem, uderzenie w pełnym wyproście, płaska dłoń na równiku piłki, ograniczony follow-through.",
+      "keyPoints": [
+        "Toss dwiema rękami jednocześnie podczas kroku",
+        "Uderzenie w pełnym wyproście",
+        "Płaska dłoń na równiku piłki",
+        "Ograniczony follow-through",
+        "Bonus: agresywność toru lotu + efekt floatu"
+      ],
+      "errors": [
+        "Toss niezsynchronizowany z krokiem",
+        "Uderzenie z towarzyszeniem → niepożądany spin",
+        "Wyskok zbyt daleko do przodu → błąd nogi"
+      ],
+      "when": "Zawody, średniozaawansowany+ zawodnik, który opanował float stojący"
+    },
+    "signaux-mains": {
+      "name": "Hand signals ★",
+      "description": "Centralna sekcja beach — nie istnieje w hali. Bloker informuje partnera o swoim zamiarze przed serwisem własnej drużyny, sygnały robione ZA plecami, niewidoczne dla przeciwnika.",
+      "keyPoints": [
+        "Kiedy: przed serwisem własnej drużyny",
+        "Gdzie: za plecami (dolna część pleców), niewidoczne dla przeciwnika",
+        "Kto: bloker (zawodnik przy siatce)",
+        "Dwie ręce, jedna na rywala (prawa = rywal po prawej; lewa = po lewej)",
+        "Signals: 1 palec = line · 2 palce = angle · pięść = no block / drop · otwarta dłoń = read · shaka 🤙 = spread"
+      ],
+      "errors": [
+        "Sygnały robione z przodu zamiast z tyłu",
+        "Konwencje nieustalone między partnerami",
+        "Sygnalizowanie zbyt wcześnie lub zbyt późno",
+        "Brak potwierdzenia werbalnego („widzę”)",
+        "Blokowanie 2 po zasygnalizowaniu 1 (zdrada partnera)"
+      ],
+      "when": "Przed każdym serwisem własnej drużyny"
+    },
+    "peel-drop": {
+      "name": "Peel off / Drop",
+      "description": "Bloker opuszcza siatkę, by bronić we dwóch w głębi pola. Przygotować skok normalnie, w momencie gdy atakujący zaczyna rozbieg, obrócić się i cofać krokami krzyżowymi, ręce na wysokości barków.",
+      "keyPoints": [
+        "Przygotować skok normalnie (sprzedać blok)",
+        "W momencie rozbiegu przeciwnika obrócić się i cofać krokami krzyżowymi",
+        "Ręce na wysokości barków do obrony",
+        "Opuścić platformę 4-5 m od siatki",
+        "Zatrzymać stopy przed kontaktem atakującego"
+      ],
+      "errors": [
+        "Cofanie zbyt wczesne → rywal smashuje w łuk",
+        "Cofanie krokami dostawnymi zamiast krzyżowymi → za wolno",
+        "Platforma niegotowa w momencie kontaktu",
+        "Brak komunikacji „pull” z partnerem"
+      ],
+      "when": "Słaby atakujący przeciwnika, niedoskonały set, silny wiatr, strategia obrony we dwóch przeciwko shooterom"
+    }
+  }
+}

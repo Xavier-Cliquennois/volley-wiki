@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ BEACH · GUIDE",
+    "title": "GUIDE BEACH VOLLEY",
+    "subtitle": "Approfondimenti tattici e tecnici — dal principiante assoluto alla transizione indoor → beach."
+  },
+  "ticketPrefix": "GUIDA",
+  "detail": {
+    "backLink": "← Torna alle guide beach",
+    "sectionTitle": "★ GUIDA BEACH",
+    "notFound": "Guida non trovata."
+  },
+  "list": {
+    "debutant": {
+      "title": "Guida del principiante assoluto",
+      "subtitle": "Primi riflessi: bagher, comunicazione, idratazione",
+      "category": "Tattica",
+      "description": "I 5 errori da evitare, le regole minime da conoscere e la checklist dell'attrezzatura per la tua prima sessione sulla sabbia.",
+      "readingTime": "~10 min",
+      "level": "Principiante"
+    },
+    "transition": {
+      "title": "Transizione indoor → beach",
+      "subtitle": "Cosa cambia, cosa resta, cosa disimparare",
+      "category": "Tattica",
+      "description": "Per un giocatore indoor che vuole passare al beach: 3 cose da disimparare (tip a mano aperta, alzata in rotazione, ricezione di palleggio) e 3 da imparare per prime (tomahawk, poke, hand signals).",
+      "readingTime": "~12 min",
+      "level": "Intermedio"
+    },
+    "tournoi-loisir": {
+      "title": "Organizzare un torneo amatoriale",
+      "subtitle": "Formule, allestimento, regole semplificate, materiale",
+      "category": "Tattica",
+      "description": "Tutto per organizzare un torneo sulla sabbia da 4 a 24 squadre: formule (gironi, eliminazione diretta), allestimento 16×8 m, materiale da prevedere, regole semplificate e app utili.",
+      "readingTime": "~8 min",
+      "level": "Intermedio"
+    },
+    "lecture-jeu": {
+      "title": "Lettura del gioco avversario",
+      "subtitle": "Scouting nel riscaldamento + lettura dell'attaccante",
+      "category": "Tattica",
+      "description": "Gli indizi da leggere nell'ordine — qualità dell'alzata, rincorsa, spalle in caricamento, braccio e polso — per anticipare line/angle/cut/poke. Metodo durante i 5 minuti di riscaldamento.",
+      "readingTime": "~10 min",
+      "level": "Avanzato"
+    }
+  }
+}

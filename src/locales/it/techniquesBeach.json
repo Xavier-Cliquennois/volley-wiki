@@ -1,0 +1,303 @@
+{
+  "header": {
+    "kicker": "★ BEACH · DOCUMENTAZIONE",
+    "title": "TECNICHE BEACH VOLLEY",
+    "subtitle": "I gesti simbolo del 2v2 sulla sabbia — poke, cobra, tomahawk, skyball, hand signals. Adattamenti alla sabbia e al vento."
+  },
+  "filters": {
+    "category": "CATEGORIA",
+    "level": "LIVELLO",
+    "countSingle": "{{count}} tecnica",
+    "countPlural": "{{count}} tecniche",
+    "showAll": "MOSTRA TUTTE",
+    "noResults": "NESSUNA TECNICA PER QUESTA COMBINAZIONE"
+  },
+  "sectionTitle": "★ SCHEDE TECNICHE BEACH",
+  "card": {
+    "when": "QUANDO",
+    "keyPoints": "★ PUNTI CHIAVE",
+    "errors": "✗ ERRORI DA EVITARE"
+  },
+  "tags": {
+    "Service": "Servizio",
+    "Réception": "Ricezione",
+    "Passe": "Alzata",
+    "Attaque": "Attacco",
+    "Défense": "Difesa",
+    "Communication": "Comunicazione",
+    "Débutant": "Principiante",
+    "Intermédiaire": "Intermedio",
+    "Avancé": "Avanzato"
+  },
+  "items": {
+    "manchette-beach": {
+      "name": "Bagher sulla sabbia",
+      "description": "Il gesto difensivo universale adattato alla sabbia: spostamenti rallentati, ancoraggio più marcato. Sulla sabbia, in ricezione si privilegia sistematicamente il bagher perché il sand-set viene fischiato severamente.",
+      "keyPoints": [
+        "Piedi larghezza spalle, uno leggermente avanti, ginocchia flesse",
+        "Piattaforma: mani unite, pollici paralleli, gomiti bloccati",
+        "Contatto sulla parte carnosa degli avambracci, sull'asse delle spalle",
+        "Passi corti, più radicati (si «spinge» la sabbia)",
+        "Anticipazione più precoce — la sabbia rallenta tutto"
+      ],
+      "errors": [
+        "Piattaforma spezzata al contatto (un avambraccio più alto)",
+        "Bracci troppo in swing — il vento devia la palla",
+        "Palla giocata fuori asse rispetto alle spalle",
+        "Ricezione troppo davanti ai piedi",
+        "Partenza troppo tardiva"
+      ],
+      "when": "Ricezione del servizio, difesa, primo tocco per impostazione"
+    },
+    "passe-haute-beach": {
+      "name": "Alzata di palleggio beach (set)",
+      "description": "Tocco di dita in modalità STRETTA — arbitraggio molto più severo rispetto all'indoor. Traiettoria sull'asse delle spalle obbligatoria se la palla supera la rete (over-set regola 13.2.5).",
+      "keyPoints": [
+        "Mani a triangolo sopra la fronte, 8 dita a contatto (mai i palmi)",
+        "Contatto delle due mani rigorosamente simultaneo",
+        "Nessuna rotazione del corpo durante il contatto",
+        "Traiettoria sull'asse delle spalle se over-set",
+        "Meno la palla gira, meno si rischia il fischio"
+      ],
+      "errors": [
+        "Rotazione del busto durante il contatto",
+        "Mani desincronizzate",
+        "Spin eccessivo della palla",
+        "Mani troppo basse («deep dish» al petto)",
+        "Over-set fuori asse rispetto alle spalle"
+      ],
+      "when": "Secondo tocco in condizioni favorevoli (poco vento, alzata stabile)"
+    },
+    "poke": {
+      "name": "Poke / Pokey ★",
+      "description": "LA tecnica simbolo del beach. Colpo con le falangi mediane (knuckles) o con la prima falange piegata. Sostituisce il tip a mano aperta che è VIETATO (fallo, regola 13.2.3).",
+      "keyPoints": [
+        "Rincorsa normale come per un hard spike (simulare l'attacco)",
+        "In caricamento, chiudere il pugno o piegare le dita appena prima del contatto",
+        "Polso fermo e bloccato, contatto molto breve",
+        "Varianti: two-finger poke, bear paw / full pokey, steino (3 falangi)",
+        "Preparazione poco visibile — conta l'effetto sorpresa"
+      ],
+      "errors": [
+        "Dita troppo morbide → trattenuta fischiata",
+        "Polpastrelli (fingertips) al contatto = open hand tip = FALLO",
+        "Pollice che tocca → fallo",
+        "Colpire troppo → palla a freccia incontrollabile",
+        "Preparazione troppo visibile (l'avversario legge il poke prima del colpo)"
+      ],
+      "when": "Alzata troppo vicina alla rete, muro ben piazzato, piazzamento lungo in fondo, palla difficile"
+    },
+    "cobra": {
+      "name": "Cobra shot",
+      "description": "Variante del poke con i polpastrelli tesi, uniti e RIGIDI («testa di cobra»). Legale solo se la rigidità è assoluta. Precisione chirurgica, ma rischioso.",
+      "keyPoints": [
+        "Dita tese a punta, unite (presa di cobra)",
+        "Dita assolutamente rigide al contatto — non un millimetro di gioco",
+        "Palla vicina alla rete, davanti al muro",
+        "Piazzamento molto corto dietro il muro",
+        "Rischio controllato: da praticare solo dopo il poke"
+      ],
+      "errors": [
+        "Dita che si piegano all'impatto = trattenuta fischiata",
+        "Confondere cobra e tip — l'arbitro decide in modo stretto",
+        "Usare il cobra su palla troppo lontana",
+        "Preparazione visibile"
+      ],
+      "when": "Palla incollata alla rete, davanti a un muro piazzato, piazzamento molto corto"
+    },
+    "tomahawk": {
+      "name": "Tomahawk ★",
+      "description": "Difesa alta INDISPENSABILE nel beach. Mani unite palmo contro palmo sopra la testa, colpo con i bordi esterni dei polsi / mignoli. Legale su palla morbida dove il beach dig sarebbe fischiato.",
+      "keyPoints": [
+        "Mani unite palmo contro palmo sopra la testa (talvolta pollici incrociati)",
+        "Polsi e gomiti bloccati",
+        "Colpo con i bordi esterni dei polsi e dei mignoli",
+        "Variante «Hammer»: pugni chiusi uniti — per palla molto alta",
+        "Posizione alta — sopra la fronte, mai al petto"
+      ],
+      "errors": [
+        "Mani non abbastanza unite → la palla passa in mezzo",
+        "Polsi morbidi → la piattaforma si schiaccia",
+        "Contatto con i palmi anziché con i bordi → niente «pop»",
+        "Gomiti piegati al contatto",
+        "Tomahawk troppo basso (fronte/petto) anziché sopra la testa"
+      ],
+      "when": "Palla alta sopra la fronte, free ball nel vento, servizio float che cala, palla morbida dove il beach dig sarebbe fischiato"
+    },
+    "beach-dig": {
+      "name": "Beach dig / open hand dig",
+      "description": "Difesa a palmi aperti consentita SOLO su palla potente («hard-driven», regola 9.2.2.4). Su palla morbida, lo stesso gesto sarebbe fischiato come «trattenuta». L'arbitro decide in base alla velocità dello schiacciata.",
+      "keyPoints": [
+        "Mani alte sopra la fronte, dita aperte a coppa",
+        "Palmi verso l'alto, polsi fermi",
+        "Contatto simultaneo delle due mani",
+        "Riservato a palle davvero potenti (hard-driven)",
+        "Su palla morbida: passare al tomahawk"
+      ],
+      "errors": [
+        "Usarlo su palla morbida = trattenuta fischiata sistematicamente",
+        "Contatto non simultaneo = doppio tocco",
+        "Mani che si separano → la palla attraversa",
+        "Dita morbide che si piegano all'impatto"
+      ],
+      "when": "Schiacciata avversaria potente in arrivo alta, palla hard-driven soltanto"
+    },
+    "sprawl": {
+      "name": "Sprawl (tuffo beach)",
+      "description": "Tuffo in avanti controllato. Partire da posizione bassa, grande passo lungo, distendere le braccia, atterrare sull'ANCA o sul fianco (mai sulla pancia tesa), scivolare nella sabbia, rialzarsi immediatamente.",
+      "keyPoints": [
+        "Posizione bassa di partenza, pronti a distendersi",
+        "Grande passo lungo in avanti, anche che scendono",
+        "Atterrare sull'anca o sul fianco (mai pancia tesa)",
+        "Scivolare nella sabbia — la sabbia è tua amica",
+        "Rialzarsi immediatamente dopo il contatto"
+      ],
+      "errors": [
+        "Atterrare a pancia tesa — colpo al plesso",
+        "Restare a terra dopo il contatto — punto perso",
+        "Tuffarsi senza una chiara intenzione difensiva",
+        "Mani che si separano al momento del contatto"
+      ],
+      "when": "Palla corta davanti, palla laterale irraggiungibile coi passi"
+    },
+    "topspin-drive": {
+      "name": "Topspin drive",
+      "description": "Attacco molto usato nel beach. Palla colpita leggermente e piazzata con rotazione in avanti generata dal polso. Suono caratteristico: «Platsch!». Compromesso ideale potenza/piazzamento.",
+      "keyPoints": [
+        "Rincorsa normale di attacco",
+        "Colpire leggermente con rotazione in avanti del polso",
+        "La palla «rotola» sulla mano, non è un colpo secco",
+        "Bersaglio: zona dietro il muro, davanti al difensore",
+        "Indispensabile su over-set forzato per rispettare l'asse delle spalle"
+      ],
+      "errors": [
+        "Colpire troppo forte → palla a freccia incontrollabile",
+        "Niente rotazione di polso → tiro piatto senza controllo",
+        "Bersaglio mal letto (restare sull'angolo del muro)"
+      ],
+      "when": "Alzate standard, alternativa all'hard spike, over-set forzato"
+    },
+    "cut-shot": {
+      "name": "Cut shot (diagonale corta)",
+      "description": "Attacco off-speed molto angolato. Rincorsa IDENTICA all'hard spike (non rallentare il braccio), spalle rivolte all'angolo duro, rompere il polso verso l'esterno («pinky down» per un destro in zona 4).",
+      "keyPoints": [
+        "Rincorsa identica all'hard spike — niente rallentamenti",
+        "Spalle rivolte all'angolo duro",
+        "Rompere il polso verso l'esterno («pinky down»)",
+        "La palla deve superare la rete al CENTRO per restare in campo",
+        "Velocità di braccio credibile per vendere la finta"
+      ],
+      "errors": [
+        "Rallentare la rincorsa → l'avversario legge il colpo",
+        "Colpire troppo tardi → palla in rete",
+        "Rompere il polso troppo presto — perdita di potenza"
+      ],
+      "when": "Muro line, diagonale aperta, difensore lontano"
+    },
+    "line-shot": {
+      "name": "Line shot / High line",
+      "description": "Attacco piazzato lungo la linea sopra il muro. Rincorsa completa, spalle rivolte all'angle (per nascondere), contatto sotto la palla, snap del polso verso l'alto. Velocità di braccio identica a un hard hit.",
+      "keyPoints": [
+        "Rincorsa completa come un hard spike",
+        "Spalle rivolte all'angle per nascondere l'intenzione",
+        "Contatto sotto la palla",
+        "Snap del polso verso l'alto — traiettoria a campana",
+        "Velocità di braccio identica all'hard hit — è ciò che rende credibile il colpo"
+      ],
+      "errors": [
+        "Braccio lento → l'avversario legge il colpo",
+        "Non abbastanza altezza → palla murata",
+        "Troppo lungo → fallo"
+      ],
+      "when": "Muro angle, line aperta, difensore sulla diagonale"
+    },
+    "skyball": {
+      "name": "Skyball ★",
+      "description": "Servizio iconico. Traiettoria a 15-25 m di altezza, la palla ridiscende quasi verticalmente. Origine brasiliana, modernizzato da Adrian «Mr. Skyball» Carambula 🇮🇹. Efficace con sole e vento.",
+      "keyPoints": [
+        "Variante underhand spin (Carambula): posizione laterale, colpo dal basso verso l'alto con tallone della mano o pugno chiuso",
+        "Variante float (Sinjin Smith): colpo col tallone del palmo, senza rotazione",
+        "Rotazione del polso per imprimere uno spin marcato (variante spin)",
+        "Accompagnamento verticale del braccio",
+        "Tattica: usarlo quando sole + vento giocano a tuo favore"
+      ],
+      "errors": [
+        "Traiettoria non abbastanza alta → la palla diventa leggibile",
+        "Niente spin (variante spin) → traiettoria prevedibile",
+        "Servire controsole per il proprio ricevitore compagno"
+      ],
+      "when": "Sole negli occhi avversari, vento a favore, spezzare il ritmo offensivo avversario"
+    },
+    "float-serve-beach": {
+      "name": "Float serve da fermo",
+      "description": "Il servizio più usato nel beach. Lancio basso a 2 mani (stabilità al vento), colpo al centro esatto della palla con mano piatta e ferma, NIENTE accompagnamento (fermare il braccio all'impatto).",
+      "keyPoints": [
+        "Lancio basso a 2 mani per stabilità al vento",
+        "Colpo al centro esatto della palla",
+        "Mano piatta e ferma",
+        "Nessun accompagnamento — fermare il braccio all'impatto",
+        "Traiettoria bassa (30-60 cm sopra la rete)"
+      ],
+      "errors": [
+        "Lancio troppo alto → instabile al vento",
+        "Accompagnamento prolungato che aggiunge spin (uccide l'effetto float)",
+        "Colpo decentrato → traiettoria prevedibile"
+      ],
+      "when": "Servizio standard, vento che può far «danzare» la palla"
+    },
+    "jump-float-beach": {
+      "name": "Jump float beach",
+      "description": "Standard in competizione. Toss a 2 mani simultaneo al passo, colpo in piena estensione, mano piatta sull'equatore della palla, follow-through limitato.",
+      "keyPoints": [
+        "Toss a 2 mani simultaneo al passo",
+        "Colpo in piena estensione",
+        "Mano piatta sull'equatore della palla",
+        "Follow-through limitato",
+        "Bonus: aggressività della traiettoria + effetto float"
+      ],
+      "errors": [
+        "Toss desincronizzato dal passo",
+        "Colpo con accompagnamento → spin indesiderato",
+        "Saltare troppo in avanti → fallo di piede"
+      ],
+      "when": "Competizione, giocatore intermedio+ che padroneggia il float da fermo"
+    },
+    "signaux-mains": {
+      "name": "Hand signals ★",
+      "description": "Sezione centrale del beach — non esiste in indoor. Il bloccatore informa il compagno della propria intenzione prima del servizio del proprio campo, segnali fatti DIETRO la schiena, invisibili all'avversario.",
+      "keyPoints": [
+        "Quando: prima del servizio del proprio campo",
+        "Dove: dietro la schiena (parte bassa), invisibili all'avversario",
+        "Chi: il bloccatore (giocatore a rete)",
+        "Due mani, una per avversario (destra = avversario a destra; sinistra = a sinistra)",
+        "Segnali: 1 dito = line · 2 dita = angle · pugno = no block / drop · mano aperta = read · shaka 🤙 = spread"
+      ],
+      "errors": [
+        "Segnali fatti davanti invece che dietro",
+        "Convenzioni non definite tra compagni",
+        "Segnalare troppo presto o troppo tardi",
+        "Niente conferma verbale («visto»)",
+        "Murare 2 dopo aver segnalato 1 (tradimento del compagno)"
+      ],
+      "when": "Prima di ogni servizio del proprio campo"
+    },
+    "peel-drop": {
+      "name": "Peel off / Drop",
+      "description": "Il bloccatore lascia la rete per difendere a 2 in fondo. Preparare il salto normalmente, nel momento in cui l'attaccante prende la rincorsa, ruotare e arretrare a passi incrociati, mani all'altezza delle spalle.",
+      "keyPoints": [
+        "Preparare il salto normalmente (vendere il muro)",
+        "Al momento della rincorsa avversaria, ruotare e arretrare a passi incrociati",
+        "Mani all'altezza delle spalle per la difesa",
+        "Abbassare la piattaforma a 4-5 m dalla rete",
+        "Fermare i piedi prima del contatto dell'attaccante"
+      ],
+      "errors": [
+        "Arretrare troppo presto → l'avversario schiaccia a campana",
+        "Arretrare a passi laterali invece che incrociati → troppo lento",
+        "Piattaforma non pronta al momento del contatto",
+        "Nessuna comunicazione «pull» con il compagno"
+      ],
+      "when": "Attaccante avversario debole, alzata imperfetta, vento forte, strategia difesa a 2 contro shooters"
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "header": {
+    "kicker": "★ PLAJ · DOKÜMANTASYON",
+    "title": "PLAJ VOLEYBOLU TEKNİKLERİ",
+    "subtitle": "Kumda 2v2'nin amiral hareketleri — poke, cobra, tomahawk, skyball, sinyaller. Kuma ve rüzgâra adaptasyonlar."
+  },
+  "filters": {
+    "category": "KATEGORİ",
+    "level": "SEVİYE",
+    "countSingle": "{{count}} teknik",
+    "countPlural": "{{count}} teknik",
+    "showAll": "TÜMÜNÜ GÖSTER",
+    "noResults": "BU KOMBİNASYON İÇİN TEKNİK YOK"
+  },
+  "sectionTitle": "★ PLAJ TEKNİK KARTLARI",
+  "card": {
+    "when": "NE ZAMAN",
+    "keyPoints": "★ ANAHTAR NOKTALAR",
+    "errors": "✗ KAÇINILACAK HATALAR"
+  },
+  "tags": {
+    "Service": "Servis",
+    "Réception": "Resepsiyon",
+    "Passe": "Pas",
+    "Attaque": "Atak",
+    "Défense": "Savunma",
+    "Communication": "İletişim",
+    "Débutant": "Başlangıç",
+    "Intermédiaire": "Orta",
+    "Avancé": "İleri"
+  },
+  "items": {
+    "manchette-beach": {
+      "name": "Kumda manşet",
+      "description": "Kuma uyarlanmış evrensel savunma hareketi: yavaşlamış hareketler, daha belirgin köklenme. Kumda, resepsiyonda her zaman manşet tercih edilir çünkü sand-set sert şekilde düdüklenir.",
+      "keyPoints": [
+        "Ayaklar omuz genişliğinde, bir ayak hafif önde, dizler bükük",
+        "Platform: eller birleşik, başparmaklar paralel, dirsekler kilitli",
+        "Önkolların etli kısmına, omuz ekseninde temas",
+        "Kısa, daha köklü kayma adımları (kumu \"itersin\")",
+        "Daha erken okuma — kum her şeyi yavaşlatır"
+      ],
+      "errors": [
+        "Temasta kırık platform (bir önkol diğerinden yüksek)",
+        "Kolları aşırı sallamak — rüzgâr topu saptırır",
+        "Top omuz ekseni dışında oynanır",
+        "Resepsiyon ayaklardan çok önde",
+        "Geç başlangıç"
+      ],
+      "when": "Servis resepsiyonu, savunma, varsayılan ilk temas"
+    },
+    "passe-haute-beach": {
+      "name": "Plaj parmak pası (set)",
+      "description": "SIKI modda parmak teması — hakemlik salondan çok daha sıkı. Top fileyi geçerse omuz ekseninde yörünge zorunludur (over-set kural 13.2.5).",
+      "keyPoints": [
+        "Eller alın üzerinde üçgen şeklinde, 8 parmak temas eder (asla avuçlar değil)",
+        "İki elin teması kesin olarak eş zamanlı olmalı",
+        "Temas sırasında gövde dönüşü yok",
+        "Over-set durumunda omuz ekseninde yörünge",
+        "Top ne kadar az dönerse düdük riski o kadar azalır"
+      ],
+      "errors": [
+        "Temas sırasında gövde rotasyonu",
+        "Senkronize olmayan eller",
+        "Aşırı top spin'i",
+        "Eller çok aşağıda (\"deep dish\" göğüste)",
+        "Omuz ekseni dışında over-set"
+      ],
+      "when": "Uygun koşullarda ikinci temas (az rüzgâr, yerleşik set)"
+    },
+    "poke": {
+      "name": "Poke / Pokey ★",
+      "description": "Plajın AMBLEMİ olan teknik. Orta falanjlarla (knuckles) veya katlanmış 1. falanjla vuruş. YASAK olan açık el tip'in yerine geçer (faul, kural 13.2.3).",
+      "keyPoints": [
+        "Hard spike gibi normal yaklaşım (atağı simüle et)",
+        "Yüklemede, temastan hemen önce yumruğu kapat veya parmakları kıvır",
+        "Sert ve kilitli bilek, çok kısa temas",
+        "Varyantlar: two-finger poke, bear paw / full pokey, steino (3 falanj)",
+        "Az görünür hazırlık — sürpriz etkisi önemlidir"
+      ],
+      "errors": [
+        "Parmaklar çok yumuşak → tutma düdüğü",
+        "Temasta parmak uçları (fingertips) = open hand tip = FAUL",
+        "Başparmak teması → faul",
+        "Çok sert vuruş → kontrol edilemez ok gibi top",
+        "Hazırlık çok görünür (rakip vuruştan önce poke'u okur)"
+      ],
+      "when": "Fileye çok yakın set, iyi yerleşmiş blok, derin uzun yerleşim, zor top"
+    },
+    "cobra": {
+      "name": "Cobra shot",
+      "description": "Poke'un parmak uçları gergin, birleşik ve SERT (\"kobra başı\") şeklinde varyantı. Sadece sertlik mutlaksa yasal. Cerrahi hassasiyet, ama riskli.",
+      "keyPoints": [
+        "Parmaklar uçları noktada gergin, sıkışık (kobra kavraması)",
+        "Parmaklar temasta kesinlikle sert — bir milimetre bile esneklik yok",
+        "Top fileye yakın, blokun önünde",
+        "Bloğun arkasında çok kısa yerleşim",
+        "Kontrollü risk: yalnızca poke sonrası uygulanmalı"
+      ],
+      "errors": [
+        "Darbe altında bükülen parmaklar = tutma düdüğü",
+        "Cobra ile tip'i karıştırmak — hakem sıkı karar verir",
+        "Çok uzak topta cobra kullanmak",
+        "Görünür hazırlık"
+      ],
+      "when": "Fileye yapışık top, yerleşik blok önünde, çok kısa yerleşim"
+    },
+    "tomahawk": {
+      "name": "Tomahawk ★",
+      "description": "Plajda VAZGEÇİLMEZ yüksek savunma. Eller başın üzerinde avuç içi avuç içine birleşik, bileklerin dış kenarları / serçe parmaklarla vuruş. Beach dig'in faul olacağı yumuşak topta yasal.",
+      "keyPoints": [
+        "Başın üzerinde avuç içi avuç içine birleşik eller (bazen başparmaklar çapraz)",
+        "Bilekler ve dirsekler kilitli",
+        "Bileklerin dış kenarları ve serçe parmaklarla vuruş",
+        "\"Hammer\" varyantı: birleşik kapalı yumruklar — çok yüksek top için",
+        "Yüksek pozisyon — alnın üstünde, asla göğüste değil"
+      ],
+      "errors": [
+        "Eller yeterince birleşik değil → top arasından geçer",
+        "Yumuşak bilekler → platform çöker",
+        "Kenarlar yerine avuç içi teması → \"pop\" yok",
+        "Temasta bükülmüş dirsekler",
+        "Başın üstü yerine çok aşağıda (alın/göğüs) tomahawk"
+      ],
+      "when": "Alın üstünde yüksek top, rüzgârda free ball, dalan jump float servis, beach dig'in düdükleneceği yumuşak top"
+    },
+    "beach-dig": {
+      "name": "Beach dig / open hand dig",
+      "description": "Açık avuç savunma SADECE güçlü topta (\"hard-driven\", kural 9.2.2.4) izinli. Yumuşak topta aynı hareket \"tutma\" olarak düdüklenir. Hakem smaş hızına göre karar verir.",
+      "keyPoints": [
+        "Eller alnın üzerinde yüksek, parmaklar fincan şeklinde açık",
+        "Avuçlar yukarı, bilekler sert",
+        "İki elin eş zamanlı teması",
+        "Sadece gerçekten güçlü toplara ayrılmış (hard-driven)",
+        "Yumuşak topta: tomahawk'a geç"
+      ],
+      "errors": [
+        "Yumuşak topta kullanmak = sistematik tutma düdüğü",
+        "Eş zamanlı olmayan temas = çift temas",
+        "Ayrılan eller → top arasından geçer",
+        "Darbe altında bükülen yumuşak parmaklar"
+      ],
+      "when": "Yüksek gelen güçlü rakip smaşı, sadece hard-driven toplar"
+    },
+    "sprawl": {
+      "name": "Sprawl (plaj dalışı)",
+      "description": "Kontrollü öne dalış. Alçak pozisyondan başla, büyük uzun adım, kolları uzat, KALÇAYA veya yana iniş yap (asla gergin karna değil), kuma kay, hemen kalk.",
+      "keyPoints": [
+        "Alçak başlangıç pozisyonu, uzanmaya hazır",
+        "Öne büyük uzun adım, kalçalar aşağı iner",
+        "Kalçaya veya yana iniş (asla gergin karna değil)",
+        "Kumda kay — kum senin dostun",
+        "Temas sonrası hemen kalk"
+      ],
+      "errors": [
+        "Gergin karna iniş — pleksusa darbe",
+        "Temas sonrası yerde kalmak — sayı kaybı",
+        "Net savunma niyeti olmadan dalış",
+        "Temas anında ayrılan eller"
+      ],
+      "when": "Önde kısa top, kayma adımlarıyla ulaşılamayan yan top"
+    },
+    "topspin-drive": {
+      "name": "Topspin drive",
+      "description": "Plajda çok kullanılan atak. Top hafifçe vurulur ve bilekle üretilen ön dönüşle yerleştirilir. Karakteristik ses: « Platsch ! ». İdeal güç/yerleşim dengesi.",
+      "keyPoints": [
+        "Normal atak yaklaşımı",
+        "Bilekte ön rotasyonla hafifçe vur",
+        "Top el üzerinde « yuvarlanır », sert bir vuruş değil",
+        "Hedef: bloğun arkasındaki bölge, defansın önü",
+        "Omuz eksenine uymak için zorunlu over-set'te vazgeçilmez"
+      ],
+      "errors": [
+        "Çok sert vuruş → kontrol edilemez ok gibi top",
+        "Bilekte rotasyon yok → kontrolsüz düz atış",
+        "Kötü okunan hedef (blok angle'ında kalmak)"
+      ],
+      "when": "Standart setler, hard spike alternatifi, zorunlu over-set"
+    },
+    "cut-shot": {
+      "name": "Cut shot (kısa çapraz)",
+      "description": "Çok açılı off-speed atak. Hard spike ile AYNI yaklaşım (kolu yavaşlatma), omuzlar sert açıya dönük, bileği dışa kır (sağ elini kullanan için 4 bölgede \"pinky down\").",
+      "keyPoints": [
+        "Hard spike ile aynı yaklaşım — yavaşlama yok",
+        "Sert açıya dönük omuzlar",
+        "Bileği dışa kır (\"pinky down\")",
+        "Top sahada kalmak için fileyi ORTA'dan geçmeli",
+        "Feinti satmak için inandırıcı kol hızı"
+      ],
+      "errors": [
+        "Yaklaşımı yavaşlatmak → rakip shot'u okur",
+        "Çok geç vuruş → top filede",
+        "Bileği çok erken kırmak — güç kaybı"
+      ],
+      "when": "Line blok, açık çapraz, defans uzakta"
+    },
+    "line-shot": {
+      "name": "Line shot / High line",
+      "description": "Bloğun üstünden line boyunca yerleştirilmiş atak. Tam yaklaşım, omuzlar açıya dönük (gizlemek için), top altında temas, bilek yukarı snap. Hard hit ile aynı kol hızı.",
+      "keyPoints": [
+        "Hard spike gibi tam yaklaşım",
+        "Niyeti gizlemek için açıya dönük omuzlar",
+        "Top altında temas",
+        "Yukarı bilek snap'i — çan yörüngesi",
+        "Hard hit ile aynı kol hızı — shot'ı inandırıcı yapan budur"
+      ],
+      "errors": [
+        "Yavaş kol → rakip shot'u okur",
+        "Yeterli yükseklik yok → top bloklanır",
+        "Çok uzun → faul"
+      ],
+      "when": "Angle blok, açık line, çaprazda defans"
+    },
+    "skyball": {
+      "name": "Skyball ★",
+      "description": "Amiral servis. 15-25 m yüksek yörünge, top neredeyse dik aşağı düşer. Brezilya kökenli, Adrian \"Mr. Skyball\" Carambula tarafından modernleştirildi. Güneş ve rüzgârda etkili.",
+      "keyPoints": [
+        "Underhand spin varyantı (Carambula): yan pozisyon, el topuğu veya kapalı yumrukla aşağıdan yukarı vuruş",
+        "Float varyantı (Sinjin Smith): avuç topuğuyla vuruş, rotasyonsuz",
+        "Belirgin spin vermek için bilek rotasyonu (spin varyantı)",
+        "Dik kol takibi",
+        "Taktik: güneş + rüzgâr lehine olduğunda kullan"
+      ],
+      "errors": [
+        "Yörünge yeterince yüksek değil → top okunabilir hale gelir",
+        "Spin yok (spin varyantı) → öngörülebilir yörünge",
+        "Kendi partner alıcın için güneşe karşı servis atmak"
+      ],
+      "when": "Güneş rakibin gözünde, lehte rüzgâr, rakibin hücum ritmini bozmak"
+    },
+    "float-serve-beach": {
+      "name": "Ayakta float servis",
+      "description": "Plajda en çok kullanılan servis. İki elle alçak atış (rüzgârda stabilite), düz ve sert elle topun tam merkezine vuruş, takip YOK (darbede kolu durdur).",
+      "keyPoints": [
+        "Rüzgârda stabilite için iki elle alçak atış",
+        "Topun tam merkezine vuruş",
+        "Düz ve sert el",
+        "Takip yok — darbede kolu durdur",
+        "Alçak yörünge (file üzerinde 30-60 cm)"
+      ],
+      "errors": [
+        "Çok yüksek atış → rüzgârda dengesiz",
+        "Spin ekleyen uzun takip (float etkisini öldürür)",
+        "Merkez dışı vuruş → öngörülebilir yörünge"
+      ],
+      "when": "Standart servis, topu \"dans ettirebilen\" rüzgâr"
+    },
+    "jump-float-beach": {
+      "name": "Plaj jump float",
+      "description": "Yarışmada standart. Adımla eş zamanlı iki elle toss, tam uzanmada vuruş, topun ekvatorunda düz el, sınırlı follow-through.",
+      "keyPoints": [
+        "Adımla eş zamanlı iki elle toss",
+        "Tam uzanmada vuruş",
+        "Topun ekvatorunda düz el",
+        "Sınırlı follow-through",
+        "Bonus: yörünge agresifliği + float etkisi"
+      ],
+      "errors": [
+        "Adımla senkron olmayan toss",
+        "Takiple vuruş → parazit spin",
+        "Öne çok uzun sıçramak → ayak faulü"
+      ],
+      "when": "Yarışma, ayakta float'ı iyi bilen orta+ seviye oyuncu"
+    },
+    "signaux-mains": {
+      "name": "Hand signals ★",
+      "description": "Plajın merkezi bölümü — salonda yoktur. Blokçu, kendi takımının servisinden önce partnerine niyetini bildirir, sinyaller sırt ARKASINDA, rakibe görünmez şekilde yapılır.",
+      "keyPoints": [
+        "Ne zaman: kendi takımının servisinden önce",
+        "Nerede: sırt arkasında (bel altı), rakibe görünmez",
+        "Kim: blokçu (filedeki oyuncu)",
+        "İki el, rakip başına bir el (sağ = sağdaki rakip ; sol = soldaki)",
+        "Sinyaller: 1 parmak = line · 2 parmak = angle · yumruk = no block / drop · açık el = read · shaka 🤙 = spread"
+      ],
+      "errors": [
+        "Sinyallerin arkada değil önde yapılması",
+        "Partnerler arasında konvansiyonların belirlenmemesi",
+        "Çok erken veya çok geç sinyal vermek",
+        "Sözlü onay yok (« görüldü »)",
+        "1 sinyali sonrası 2 ile blok yapmak (partner ihaneti)"
+      ],
+      "when": "Kendi takımının her servisinden önce"
+    },
+    "peel-drop": {
+      "name": "Peel off / Drop",
+      "description": "Blokçu, arkada 2'li savunma yapmak için fileyi terk eder. Sıçramayı normal hazırla, atakçı elan'ını alırken pivot yap ve çapraz adımlarla geri çekil, eller omuz hizasında.",
+      "keyPoints": [
+        "Sıçramayı normal hazırla (bloğu sat)",
+        "Rakibin elan anında pivot yap ve çapraz adımlarla geri çekil",
+        "Savunma için eller omuz hizasında",
+        "Platformu fileden 4-5 m mesafede indir",
+        "Atak temasından önce ayakları durdur"
+      ],
+      "errors": [
+        "Çok erken geri çekilme → rakip çan şeklinde smaç atar",
+        "Çapraz adım yerine kayma adımlarıyla geri çekilme → çok yavaş",
+        "Temas anında platform hazır değil",
+        "Partnerle \"pull\" iletişimi yok"
+      ],
+      "when": "Zayıf rakip atakçı, kusurlu set, güçlü rüzgâr, shooter'lara karşı 2'li savunma stratejisi"
+    }
+  }
+}

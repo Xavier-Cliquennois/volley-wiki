@@ -53,5 +53,25 @@
     "backOfCourt": "BACK OF COURT",
     "ourSide": "Our side",
     "opponentSide": "Opponent side"
+  },
+  "discipline": {
+    "indoor": "Indoor",
+    "beach": "Beach",
+    "switcherLabel": "Discipline (Indoor or Beach)",
+    "switchToIndoor": "Switch to Indoor mode",
+    "switchToBeach": "Switch to Beach mode",
+    "badge": {
+      "indoor": "INDOOR",
+      "beach": "BEACH",
+      "both": "2 IN 1"
+    },
+    "filter": {
+      "label": "Filter by discipline",
+      "kicker": "★ FILTER",
+      "all": "All",
+      "indoor": "Indoor",
+      "beach": "Beach",
+      "both": "Shared"
+    }
   }
 }

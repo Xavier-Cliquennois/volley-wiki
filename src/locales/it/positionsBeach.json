@@ -1,0 +1,171 @@
+{
+  "header": {
+    "kicker": "★ BEACH · 2 CONTRO 2",
+    "title": "RUOLI E SEGNALI NEL BEACH",
+    "subtitle": "Niente rotazione, niente ruoli fissi. Due ruoli funzionali (bloccatore · difensore) che si invertono, e hand signals dietro la schiena per coordinare muro + difesa."
+  },
+  "court": {
+    "kicker": "★ CAMPO 16 × 8 M",
+    "title": "Il campo beach",
+    "facts": {
+      "size": "16 × 8 m (vs 18 × 9 in indoor)",
+      "net": "Rete 2,43 m M · 2,24 m F · 2,35 m mista",
+      "noLines": "Nessuna linea centrale né linea di attacco",
+      "service": "Zona di servizio: tutta la larghezza del fondo"
+    },
+    "labels": {
+      "blocker": "BLOCCATORE",
+      "defender": "DIFENSORE",
+      "net": "RETE",
+      "endLine": "Linea di fondo"
+    }
+  },
+  "roles": {
+    "kicker": "★ DUE RUOLI, ZERO POSTI",
+    "title": "I due ruoli funzionali",
+    "intro": "Nel 2 contro 2, le regole non impongono ruoli fissi. Ma emergono due funzioni complementari — che si invertono servizio dopo servizio, in base a chi serve e quale avversario si prende di mira.",
+    "items": [
+      {
+        "id": "blocker",
+        "label": "BLOCCATORE",
+        "subtitle": "A rete",
+        "profile": "Alto, esplosivo nel salto, legge la rete",
+        "mission": "Murare, poi staccarsi per difendere. Hand signals prima del servizio.",
+        "tips": [
+          "Posizione a 30 cm dalla rete, mani all'altezza della fronte",
+          "Sealing: penetrazione in avanti e verso il basso nel campo avversario",
+          "Push delle mani SUBITO DOPO il contatto dell'attaccante (più tardi che in indoor)",
+          "Dita aperte e rigide, pollici paralleli verso l'alto"
+        ]
+      },
+      {
+        "id": "defender",
+        "label": "DIFENSORE",
+        "subtitle": "In fondo",
+        "profile": "Veloce, mobile, legge il gioco",
+        "mission": "Coprire la zona opposta al muro, leggere la difesa. Parte a 1-1,5 m dalla linea di fondo.",
+        "tips": [
+          "Posizione base al centro del fondo",
+          "Scivolata verso la zona sull'alzata",
+          "Stop dei piedi PRIMA del contatto dell'attaccante",
+          "Lettura finale: spalle + braccio + polso dell'attaccante"
+        ]
+      }
+    ],
+    "switchingTitle": "Switching",
+    "switchingBody": "I ruoli si invertono in base a chi serve / chi riceve / quale avversario si prende di mira. Se il bloccatore è troppo basso: opzione difesa a 2 senza muro (peel/drop sistematico).",
+    "labels": {
+      "profile": "PROFILO",
+      "mission": "MISSIONE"
+    }
+  },
+  "signals": {
+    "kicker": "★ HAND SIGNALS",
+    "title": "Segnali dietro la schiena",
+    "intro": "Il bloccatore informa il compagno della propria intenzione PRIMA del servizio del proprio campo. Segnali fatti dietro la schiena (parte bassa), invisibili all'avversario. Una mano per avversario: la destra parla dell'avversario a destra, la sinistra di quello a sinistra.",
+    "warning": "Le convenzioni «pugno chiuso» vs «mano aperta» variano da squadra a squadra. È essenziale definire la convenzione con il proprio compagno prima di ogni partita.",
+    "headers": {
+      "signal": "Segnale",
+      "meaning": "Significato (muro)",
+      "defender": "Posizione del difensore",
+      "level": "Livello"
+    },
+    "items": [
+      {
+        "icon": "☝️",
+        "signal": "1 dito",
+        "meaning": "Line block (muro sulla linea)",
+        "defender": "Copre l'angle",
+        "level": "Débutant"
+      },
+      {
+        "icon": "✌️",
+        "signal": "2 dita",
+        "meaning": "Angle block (muro diagonale/cross)",
+        "defender": "Copre la line",
+        "level": "Débutant"
+      },
+      {
+        "icon": "🤟",
+        "signal": "3 dita",
+        "meaning": "Show angle → dive line (fake)",
+        "defender": "Parte neutro, esce in angle",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🖖",
+        "signal": "4 dita",
+        "meaning": "Show line → dive angle (fake)",
+        "defender": "Parte sull'angle, scivola sulla line",
+        "level": "Avancé"
+      },
+      {
+        "icon": "✊",
+        "signal": "Pugno chiuso",
+        "meaning": "No block / Drop / Peel",
+        "defender": "Difesa condivisa a 2",
+        "level": "Intermédiaire"
+      },
+      {
+        "icon": "🖐️",
+        "signal": "Mano aperta (5)",
+        "meaning": "Read block (lettura)",
+        "defender": "Difesa in lettura",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🤙",
+        "signal": "Shaka",
+        "meaning": "Spread block",
+        "defender": "Corre dietro a tutto ciò che passa",
+        "level": "Avancé"
+      }
+    ],
+    "logicTitle": "Logica difensiva",
+    "logicBody": "Il difensore prende la zona che il bloccatore NON copre. Line block → difesa angle. Angle block → difesa line. Pugno chiuso (pull) → difesa a 2, campo diviso a metà. Mano aperta (read) → lettura in tempo reale."
+  },
+  "calls": {
+    "kicker": "★ CALLS DURANTE LO SCAMBIO",
+    "title": "Comunicazione 2v2",
+    "intro": "Uno studio (Effectiveness of the Call in Beach Volleyball, Campionati Svizzeri 2011) mostra che il 61,5% degli attacchi CON call sono vincenti, contro il 35% SENZA call. Corti · forti · presto · convenzioni condivise · mai in silenzio.",
+    "groupsTitle": "Tre gruppi di calls",
+    "groups": [
+      {
+        "title": "Calls prima del colpo avversario (lettura)",
+        "items": [
+          "«Line!» — attacco lungo la linea",
+          "«Angle!» / «Cross!» — diagonale",
+          "«Cut!» — diagonale corta",
+          "«Tip!» / «Short!» — finta corta",
+          "«High!» / «Shot!» — shot alto sopra il muro",
+          "«Swing!» — colpo potente atteso",
+          "«Tight!» — alzata tesa vicino alla rete",
+          "«Off!» — alzata staccata dalla rete"
+        ]
+      },
+      {
+        "title": "Calls durante l'azione",
+        "items": [
+          "«Mine!» / «Mia!» — gioco io la palla",
+          "«Yours!» / «Tua!»",
+          "«Out!» — lascia, la palla esce",
+          "«In!» / «Dentro!» — palla buona, giocala",
+          "«Free!» — palla facile in arrivo",
+          "«Up!» — la rialzo / rialzala",
+          "«Cover!» — copri l'attaccante",
+          "«Touch!» — il muro ha toccato",
+          "«Net!» — rete toccata"
+        ]
+      },
+      {
+        "title": "Calls difensivi (difensore → bloccatore)",
+        "items": [
+          "«Stay!» — resta, mura come annunciato",
+          "«Pull!» — arretra, difesa a 2",
+          "«Block!» — mura davvero su un fake iniziale",
+          "«Tight!» / «Off!» — qualità dell'alzata avversaria"
+        ]
+      }
+    ]
+  }
+}

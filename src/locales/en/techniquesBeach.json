@@ -1,0 +1,303 @@
+{
+  "header": {
+    "kicker": "★ BEACH · DOCUMENTATION",
+    "title": "BEACH VOLLEYBALL TECHNIQUES",
+    "subtitle": "The flagship 2v2 sand moves — poke, cobra, tomahawk, skyball, signals. Adaptations to sand and wind."
+  },
+  "filters": {
+    "category": "CATEGORY",
+    "level": "LEVEL",
+    "countSingle": "{{count}} technique",
+    "countPlural": "{{count}} techniques",
+    "showAll": "SHOW ALL",
+    "noResults": "NO TECHNIQUE FOR THIS COMBINATION"
+  },
+  "sectionTitle": "★ BEACH TECHNIQUE SHEETS",
+  "card": {
+    "when": "WHEN",
+    "keyPoints": "★ KEY POINTS",
+    "errors": "✗ COMMON MISTAKES"
+  },
+  "tags": {
+    "Service": "Serve",
+    "Réception": "Reception",
+    "Passe": "Set",
+    "Attaque": "Attack",
+    "Défense": "Defense",
+    "Communication": "Communication",
+    "Débutant": "Beginner",
+    "Intermédiaire": "Intermediate",
+    "Avancé": "Advanced"
+  },
+  "items": {
+    "manchette-beach": {
+      "name": "Sand bump (forearm pass)",
+      "description": "The universal defensive move adapted to sand: slower footwork, deeper anchoring. On sand, bumping is always preferred for reception because the sand-set is whistled strictly.",
+      "keyPoints": [
+        "Feet shoulder-width, one slightly forward, knees bent",
+        "Platform: hands joined, thumbs parallel, elbows locked",
+        "Contact on the meaty part of the forearms, in the shoulder line",
+        "Short, deeper shuffles (you \"push\" the sand)",
+        "Earlier read — sand slows everything down"
+      ],
+      "errors": [
+        "Broken platform at contact (one forearm higher than the other)",
+        "Over-swinging the arms — wind deflects the ball",
+        "Ball played outside the shoulder line",
+        "Reception too far in front of the feet",
+        "Late start"
+      ],
+      "when": "Serve reception, defense, default first contact"
+    },
+    "passe-haute-beach": {
+      "name": "Beach hand set",
+      "description": "Finger-touch in STRICT mode — refereeing is far stricter than indoor. Trajectory in the shoulder line is mandatory if the ball crosses the net (over-set, rule 13.2.5).",
+      "keyPoints": [
+        "Hands in a triangle above the forehead, 8 fingers contact (never the palms)",
+        "Both hands contact must be strictly simultaneous",
+        "No body pivot during contact",
+        "Trajectory in the shoulder line if over-set",
+        "Less ball spin = less risk of a whistle"
+      ],
+      "errors": [
+        "Torso rotation during contact",
+        "Desynchronized hands",
+        "Excessive ball spin",
+        "Hands too low (\"deep dish\" at the chest)",
+        "Over-set outside the shoulder line"
+      ],
+      "when": "Second contact in favorable conditions (low wind, settled set)"
+    },
+    "poke": {
+      "name": "Poke / Pokey ★",
+      "description": "THE iconic beach technique. Strike with the middle knuckles or the first phalanx folded. Replaces the open-hand tip which is FORBIDDEN (fault, rule 13.2.3).",
+      "keyPoints": [
+        "Normal hard-spike approach (sell the attack)",
+        "At the load, make a fist or fold the fingers just before contact",
+        "Firm, locked wrist, very brief contact",
+        "Variants: two-finger poke, bear paw / full pokey, steino (3 phalanges)",
+        "Subtle preparation — surprise is everything"
+      ],
+      "errors": [
+        "Fingers too soft → lift called",
+        "Fingertips at contact = open-hand tip = FAULT",
+        "Thumb contact → fault",
+        "Hitting too hard → uncontrollable line drive",
+        "Visible preparation (opponent reads the poke before contact)"
+      ],
+      "when": "Set too tight to the net, well-positioned block, deep placement, tough ball"
+    },
+    "cobra": {
+      "name": "Cobra shot",
+      "description": "A poke variant with the fingertips extended, joined and RIGID (\"cobra head\"). Legal only if rigidity is absolute. Surgical precision, but risky.",
+      "keyPoints": [
+        "Fingers extended into a point, tight together (cobra grip)",
+        "Absolutely rigid fingers at contact — not a millimeter of give",
+        "Ball close to the net, in front of the block",
+        "Very short placement behind the block",
+        "Controlled risk: practice only after mastering the poke"
+      ],
+      "errors": [
+        "Fingers bending under impact = lift called",
+        "Confusing cobra and tip — refs call it tight",
+        "Using the cobra on a ball too far from the net",
+        "Visible preparation"
+      ],
+      "when": "Ball glued to the net, in front of a set block, very short placement"
+    },
+    "tomahawk": {
+      "name": "Tomahawk ★",
+      "description": "ESSENTIAL high defense in beach. Hands joined palm-to-palm above the head, strike with the outer edges of the wrists / pinkies. Legal on soft balls where the beach dig would be faulted.",
+      "keyPoints": [
+        "Hands joined palm-to-palm above the head (sometimes with crossed thumbs)",
+        "Wrists and elbows locked",
+        "Strike with the outer edges of the wrists and pinkies",
+        "Variant \"Hammer\": closed fists joined — for very high balls",
+        "High position — above the forehead, never at the chest"
+      ],
+      "errors": [
+        "Hands not joined enough → ball goes through",
+        "Soft wrists → platform collapses",
+        "Palm contact instead of edges → no \"pop\"",
+        "Bent elbows at contact",
+        "Tomahawk too low (forehead/chest) instead of above the head"
+      ],
+      "when": "High ball above the forehead, free ball in the wind, float serve diving down, soft ball where the beach dig would be whistled"
+    },
+    "beach-dig": {
+      "name": "Beach dig / open hand dig",
+      "description": "Open-palm defense allowed ONLY on hard-driven balls (rule 9.2.2.4). On a soft ball, the same move would be called a lift. The ref decides based on smash speed.",
+      "keyPoints": [
+        "Hands high above the forehead, fingers open in a cup",
+        "Palms up, firm wrists",
+        "Simultaneous contact with both hands",
+        "Reserved for truly powerful balls (hard-driven)",
+        "On soft balls: switch to tomahawk"
+      ],
+      "errors": [
+        "Using on a soft ball = lift called every time",
+        "Non-simultaneous contact = double touch",
+        "Hands spreading apart → ball goes through",
+        "Soft fingers bending under impact"
+      ],
+      "when": "Powerful opponent smash arriving high, hard-driven balls only"
+    },
+    "sprawl": {
+      "name": "Sprawl (beach dive)",
+      "description": "Controlled forward dive. Start low, big long step, extend the arms, land on the HIP or side (never on a tense belly), slide through the sand, get up immediately.",
+      "keyPoints": [
+        "Low starting position, ready to extend",
+        "Big long step forward, hips dropping",
+        "Land on the hip or side (never a tense belly)",
+        "Slide in the sand — the sand is your friend",
+        "Get up immediately after contact"
+      ],
+      "errors": [
+        "Landing on a tense belly — punch to the plexus",
+        "Staying on the ground after contact — point lost",
+        "Diving without clear defensive intent",
+        "Hands spreading apart at contact"
+      ],
+      "when": "Short ball in front, lateral ball unreachable with shuffles"
+    },
+    "topspin-drive": {
+      "name": "Topspin drive",
+      "description": "A very common beach attack. Ball struck lightly and placed with topspin generated by the wrist. Characteristic sound: \"Platsch!\". The ideal power/placement compromise.",
+      "keyPoints": [
+        "Normal attack approach",
+        "Strike lightly with forward wrist rotation",
+        "The ball \"rolls\" off the hand, not a clean hit",
+        "Target: zone behind the block, in front of the defender",
+        "Essential on a forced over-set to respect the shoulder line"
+      ],
+      "errors": [
+        "Hitting too hard → uncontrollable line drive",
+        "No wrist rotation → flat shot, no control",
+        "Misreading the target (staying on the block's angle)"
+      ],
+      "when": "Standard sets, alternative to the hard spike, forced over-set"
+    },
+    "cut-shot": {
+      "name": "Cut shot (sharp diagonal)",
+      "description": "A sharply angled off-speed attack. IDENTICAL approach to the hard spike (don't slow the arm), shoulders facing the hard angle, snap the wrist outward (\"pinky down\" for a right-hander in zone 4).",
+      "keyPoints": [
+        "Identical approach to the hard spike — no slowing down",
+        "Shoulders facing the hard angle",
+        "Snap the wrist outward (\"pinky down\")",
+        "The ball must cross the net at the MIDDLE to stay in the court",
+        "Credible arm speed to sell the disguise"
+      ],
+      "errors": [
+        "Slowing the approach → opponent reads the shot",
+        "Hitting too late → ball into the net",
+        "Snapping the wrist too early — loss of power"
+      ],
+      "when": "Line block, open angle, defender far away"
+    },
+    "line-shot": {
+      "name": "Line shot / High line",
+      "description": "A shot placed down the line over the block. Full approach, shoulders facing the angle (to disguise), contact under the ball, wrist snap upward. Arm speed identical to a hard hit.",
+      "keyPoints": [
+        "Full approach like a hard spike",
+        "Shoulders facing the angle to hide intent",
+        "Contact under the ball",
+        "Upward wrist snap — lofted trajectory",
+        "Arm speed identical to a hard hit — that's what sells the shot"
+      ],
+      "errors": [
+        "Slow arm → opponent reads the shot",
+        "Not enough height → ball blocked",
+        "Too long → fault"
+      ],
+      "when": "Angle block, open line, defender on the diagonal"
+    },
+    "skyball": {
+      "name": "Skyball ★",
+      "description": "Flagship serve. Trajectory 15-25 m high, the ball comes down almost vertically. Brazilian origin, modernized by Adrian \"Mr. Skyball\" Carambula. Effective in sun and wind.",
+      "keyPoints": [
+        "Underhand spin variant (Carambula): lateral stance, strike upward with the heel of the hand or a closed fist",
+        "Float variant (Sinjin Smith): strike with the heel of the palm, no rotation",
+        "Wrist rotation to impart marked spin (spin variant)",
+        "Vertical follow-through",
+        "Tactics: use it when sun + wind play in your favor"
+      ],
+      "errors": [
+        "Trajectory not high enough → ball becomes readable",
+        "No spin (spin variant) → predictable trajectory",
+        "Serving facing the sun for your own partner-receiver"
+      ],
+      "when": "Sun in opponent's eyes, tailwind, breaking their offensive rhythm"
+    },
+    "float-serve-beach": {
+      "name": "Standing float serve",
+      "description": "The most used serve in beach. Low two-handed toss (stability in the wind), strike on the exact center of the ball with a flat, firm hand, NO follow-through (stop the arm on impact).",
+      "keyPoints": [
+        "Low two-handed toss for wind stability",
+        "Strike on the exact center of the ball",
+        "Flat, firm hand",
+        "No follow-through — stop the arm on impact",
+        "Low trajectory (30-60 cm above the net)"
+      ],
+      "errors": [
+        "Toss too high → unstable in the wind",
+        "Extended follow-through adds spin (kills the float effect)",
+        "Off-center strike → predictable trajectory"
+      ],
+      "when": "Standard serve, wind that can make the ball \"dance\""
+    },
+    "jump-float-beach": {
+      "name": "Beach jump float",
+      "description": "Standard in competition. Two-handed toss synced with the step, strike at full extension, flat hand on the equator of the ball, limited follow-through.",
+      "keyPoints": [
+        "Two-handed toss synced with the step",
+        "Strike at full extension",
+        "Flat hand on the equator of the ball",
+        "Limited follow-through",
+        "Bonus: trajectory aggressiveness + float effect"
+      ],
+      "errors": [
+        "Toss out of sync with the step",
+        "Strike with follow-through → unwanted spin",
+        "Jumping too far forward → foot fault"
+      ],
+      "when": "Competition, intermediate+ player who masters the standing float"
+    },
+    "signaux-mains": {
+      "name": "Hand signals ★",
+      "description": "A central beach feature — does not exist in indoor. The blocker informs their partner of their intent before their own team's serve. Signals are flashed BEHIND the back, invisible to the opponent.",
+      "keyPoints": [
+        "When: before your own team's serve",
+        "Where: behind the back (lower back), invisible to the opponent",
+        "Who: the blocker (player at the net)",
+        "Two hands, one per opponent (right = opponent on the right; left = opponent on the left)",
+        "Signals: 1 finger = line · 2 fingers = angle · fist = no block / drop · open hand = read · shaka 🤙 = spread"
+      ],
+      "errors": [
+        "Signals flashed in front instead of behind",
+        "Conventions not agreed on between partners",
+        "Signaling too early or too late",
+        "No verbal confirmation (\"got it\")",
+        "Blocking 2 after signaling 1 (betraying your partner)"
+      ],
+      "when": "Before every serve from your own team"
+    },
+    "peel-drop": {
+      "name": "Peel off / Drop",
+      "description": "The blocker leaves the net to defend at 2 in the back. Prepare the jump normally; when the attacker loads, pivot and retreat with crossover steps, hands at shoulder height.",
+      "keyPoints": [
+        "Prepare the jump normally (sell the block)",
+        "On the opponent's load, pivot and retreat with crossover steps",
+        "Hands at shoulder height for the defense",
+        "Drop the platform 4-5 m from the net",
+        "Stop the feet before the attacker's contact"
+      ],
+      "errors": [
+        "Retreating too early → opponent lofts the spike",
+        "Retreating with shuffles instead of crossovers → too slow",
+        "Platform not ready at contact",
+        "No \"pull\" communication with the partner"
+      ],
+      "when": "Weak opposing attacker, imperfect set, strong wind, defense-at-2 strategy vs shooters"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "header": {
+    "kicker": "★ BEACH · 2 vs 2",
+    "title": "ROLES & SIGNALS IN BEACH",
+    "subtitle": "No rotation, no fixed positions. Two functional roles (blocker · defender) that switch, and hand signals behind the back to coordinate block + defense."
+  },
+  "court": {
+    "kicker": "★ 16 × 8 M COURT",
+    "title": "The beach court",
+    "facts": {
+      "size": "16 × 8 m (vs 18 × 9 indoor)",
+      "net": "Net 2.43 m M · 2.24 m W · 2.35 m mixed",
+      "noLines": "No centerline, no attack line",
+      "service": "Service zone: full width of the back"
+    },
+    "labels": {
+      "blocker": "BLOCKER",
+      "defender": "DEFENDER",
+      "net": "NET",
+      "endLine": "End line"
+    }
+  },
+  "roles": {
+    "kicker": "★ TWO ROLES, ZERO POSITIONS",
+    "title": "The two functional roles",
+    "intro": "In 2v2, no fixed positions are imposed by the rules. But two complementary functions emerge — switching service after service, depending on who serves and which opponent you target.",
+    "items": [
+      {
+        "id": "blocker",
+        "label": "BLOCKER",
+        "subtitle": "At the net",
+        "profile": "Tall, explosive jumper, reads the net",
+        "mission": "Block, then peel back to defend. Hand signals before the serve.",
+        "tips": [
+          "30 cm from the net, hands at forehead height",
+          "Sealing: penetrate forward and downward into the opponent's court",
+          "Push the hands JUST AFTER the attacker's contact (later than indoor)",
+          "Spread, stiff fingers, thumbs parallel pointing up"
+        ]
+      },
+      {
+        "id": "defender",
+        "label": "DEFENDER",
+        "subtitle": "In the back",
+        "profile": "Fast, mobile, reads the play",
+        "mission": "Cover the zone opposite the block, read the defense. Starts 1-1.5 m from the end line.",
+        "tips": [
+          "Base position in the middle of the back",
+          "Slide toward the zone on the set",
+          "Stop your feet BEFORE the attacker's contact",
+          "Final read: shoulders + arm + wrist of the attacker"
+        ]
+      }
+    ],
+    "switchingTitle": "Switching",
+    "switchingBody": "Roles flip based on who serves / who receives / which opponent is targeted. If the blocker is too short: option to defend at 2 with no block (systematic peel/drop).",
+    "labels": {
+      "profile": "PROFILE",
+      "mission": "MISSION"
+    }
+  },
+  "signals": {
+    "kicker": "★ HAND SIGNALS",
+    "title": "Signals behind the back",
+    "intro": "The blocker informs their partner of their intent BEFORE their own team's serve. Signals are flashed behind the back (lower back), invisible to the opponent. One hand per opponent: right hand speaks for the opponent on the right, left hand for the one on the left.",
+    "warning": "The \"closed fist\" vs \"open hand\" conventions vary between teams. You must define the convention with your partner before every match.",
+    "headers": {
+      "signal": "Signal",
+      "meaning": "Meaning (block)",
+      "defender": "Defender's position",
+      "level": "Level"
+    },
+    "items": [
+      {
+        "icon": "☝️",
+        "signal": "1 finger",
+        "meaning": "Line block",
+        "defender": "Covers the angle",
+        "level": "Débutant"
+      },
+      {
+        "icon": "✌️",
+        "signal": "2 fingers",
+        "meaning": "Angle block (cross)",
+        "defender": "Covers the line",
+        "level": "Débutant"
+      },
+      {
+        "icon": "🤟",
+        "signal": "3 fingers",
+        "meaning": "Show angle → dive line (fake)",
+        "defender": "Starts neutral, breaks to the angle",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🖖",
+        "signal": "4 fingers",
+        "meaning": "Show line → dive angle (fake)",
+        "defender": "Starts on angle, slides to the line",
+        "level": "Avancé"
+      },
+      {
+        "icon": "✊",
+        "signal": "Closed fist",
+        "meaning": "No block / Drop / Peel",
+        "defender": "Shared defense at 2",
+        "level": "Intermédiaire"
+      },
+      {
+        "icon": "🖐️",
+        "signal": "Open hand (5)",
+        "meaning": "Read block",
+        "defender": "Read defense",
+        "level": "Avancé"
+      },
+      {
+        "icon": "🤙",
+        "signal": "Shaka",
+        "meaning": "Spread block",
+        "defender": "Runs down everything that gets by",
+        "level": "Avancé"
+      }
+    ],
+    "logicTitle": "Defensive logic",
+    "logicBody": "The defender covers the zone the blocker does NOT take. Line block → angle defense. Angle block → line defense. Closed fist (pull) → defense at 2, court split in halves. Open hand (read) → real-time read."
+  },
+  "calls": {
+    "kicker": "★ CALLS DURING THE RALLY",
+    "title": "2v2 communication",
+    "intro": "A study (Effectiveness of the Call in Beach Volleyball, 2011 Swiss Championships) shows that 61.5% of attacks WITH a call are winners vs 35% WITHOUT (p<0.0005). Short · loud · early · shared conventions · never silent.",
+    "groupsTitle": "Three groups of calls",
+    "groups": [
+      {
+        "title": "Calls before the opponent's hit (reads)",
+        "items": [
+          "\"Line!\" — attack along the line",
+          "\"Angle!\" / \"Cross!\" — diagonal",
+          "\"Cut!\" — short diagonal",
+          "\"Tip!\" / \"Short!\" — short feint",
+          "\"High!\" / \"Shot!\" — high shot over the block",
+          "\"Swing!\" — hard hit expected",
+          "\"Tight!\" — set tight to the net",
+          "\"Off!\" — set off the net"
+        ]
+      },
+      {
+        "title": "Calls during the rally",
+        "items": [
+          "\"Mine!\" — I play the ball",
+          "\"Yours!\" — it's yours",
+          "\"Out!\" — leave it, it's going out",
+          "\"In!\" — good ball, play it",
+          "\"Free!\" — easy ball coming",
+          "\"Up!\" — I'll dig it / dig it up",
+          "\"Cover!\" — cover the attacker",
+          "\"Touch!\" — the block touched it",
+          "\"Net!\" — net touched"
+        ]
+      },
+      {
+        "title": "Defensive calls (defender → blocker)",
+        "items": [
+          "\"Stay!\" — stay, block as called",
+          "\"Pull!\" — back off, defense at 2",
+          "\"Block!\" — actually block, not a fake",
+          "\"Tight!\" / \"Off!\" — quality of the opponent's set"
+        ]
+      }
+    ]
+  }
+}

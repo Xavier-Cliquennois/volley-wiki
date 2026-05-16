@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ PLAJ VOLEYBOLU · 2'YE 2 ★",
+  "hero": {
+    "logoTop": "PLAJ",
+    "logoBottom": "VOLEYBOLU",
+    "subtitle": "Salon voleybolunun ikiz sporu — kumda 2v2, tam yönlülük, sırt arkasında hand signals. 1996'dan beri olimpik.",
+    "ctaPrimary": "TEKNİKLERİ GÖR",
+    "ctaSecondary": "PLAJ KURALLARINI OKU"
+  },
+  "sectionsLabel": "★ PLAJ BÖLÜMLERİ ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "Teknikler",
+      "desc": "Poke, cobra, tomahawk, skyball, beach dig — plaj voleybolunun amiral hareketleri.",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "2v2 Rolleri",
+      "desc": "Blokçu ve defans. Sırt arkasında hand signals'ın tam tablosu.",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "Plaj rehberleri",
+      "desc": "Mutlak başlangıç, salon → plaj geçişi, amatör turnuva, oyun okuma.",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "Plaj kuralları",
+      "desc": "FIVB 2025-2028 kural seti — plaj bölümleri ve salon ile farklar.",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "Sözlük",
+      "desc": "Plaj / salon / 2'si 1 arada etiketleriyle ortak sözlük.",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "Plaj senaryoları",
+      "desc": "Animasyonlu plaj dizileri — yakında geliyor. Bu arada rehberlere göz at.",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

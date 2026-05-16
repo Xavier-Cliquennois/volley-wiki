@@ -1,0 +1,18 @@
+{
+  "header": {
+    "kicker": "★ BEACH · ESCENARIOS",
+    "title": "ESCENARIOS BEACH",
+    "subtitle": "Secuencias animadas 2v2 — próximamente. Mientras tanto, sumérgete en las guías y los hand signals."
+  },
+  "placeholder": {
+    "label": "★ EN CONSTRUCCIÓN ★",
+    "title": "Escenarios beach — próximamente",
+    "body": "Los escenarios animados 2v2 (bloqueo + dig, peel/drop, hand signals en situación, defensa line vs cross-court) requieren adaptar la cancha 3D al 16×8 m. Está en marcha para la próxima iteración.",
+    "meanwhileTitle": "Mientras tanto, imprescindible ver:",
+    "links": {
+      "signals": "Hand signals y roles 2v2",
+      "guides": "Guías beach (principiante, transición…)",
+      "techniques": "Técnicas beach (poke, tomahawk, skyball…)"
+    }
+  }
+}

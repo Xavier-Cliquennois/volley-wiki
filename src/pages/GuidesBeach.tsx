@@ -1,0 +1,118 @@
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { BEACH_GUIDES } from '../guides/beach/data';
+import { Head } from '../seo/Head';
+import { buildBreadcrumb } from '../seo/structuredData';
+import { useCurrentLang } from '../i18n/paths';
+
+export default function GuidesBeach() {
+  const { t } = useTranslation('guidesBeach');
+  const { t: tCommon } = useTranslation('common');
+  const { t: tSeo } = useTranslation('seo');
+  const lang = useCurrentLang();
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      <Head
+        title={tSeo('guidesBeach.title')}
+        description={tSeo('guidesBeach.description')}
+        path="/beach/guides"
+        jsonLd={buildBreadcrumb(
+          [
+            { name: tSeo('breadcrumbs.home'), path: '/' },
+            { name: tSeo('breadcrumbs.beach'), path: '/beach' },
+            { name: tSeo('breadcrumbs.beachGuides'), path: '/beach/guides' },
+          ],
+          lang,
+        )}
+      />
+      <div>
+        <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.18em', color: 'var(--orange)', marginBottom: 10 }}>
+          {t('header.kicker')}
+        </div>
+        <h1 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 'clamp(28px, 4vw, 40px)', margin: '0 0 10px 0', letterSpacing: '0.03em' }}>
+          {t('header.title')}
+        </h1>
+        <p style={{ margin: 0, fontSize: 15, opacity: 0.7 }}>
+          {t('header.subtitle')}
+        </p>
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {BEACH_GUIDES.map((guide, idx) => {
+          const title = t(`list.${guide.slug}.title`);
+          const subtitle = t(`list.${guide.slug}.subtitle`);
+          const description = t(`list.${guide.slug}.description`);
+          const category = t(`list.${guide.slug}.category`);
+          const level = t(`list.${guide.slug}.level`);
+          const readingTime = t(`list.${guide.slug}.readingTime`);
+          return (
+            <Link
+              key={guide.slug}
+              to={`/${lang}/beach/guides/${guide.slug}`}
+              style={{
+                display: 'block',
+                border: '3px solid var(--ink)',
+                background: 'var(--cream)',
+                boxShadow: 'var(--shadow)',
+                padding: '20px 24px',
+                textDecoration: 'none',
+                color: 'var(--ink)',
+                transition: 'transform 0.08s, box-shadow 0.08s',
+                position: 'relative',
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.transform = 'translate(-2px, -2px)';
+                (e.currentTarget as HTMLElement).style.boxShadow = '7px 7px 0 var(--ink)';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.transform = '';
+                (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow)';
+              }}
+            >
+              <div style={{
+                position: 'absolute', top: -10, right: 14,
+                padding: '2px 10px',
+                background: 'var(--cream)',
+                border: '2.5px solid var(--ink)',
+                fontFamily: '"Bungee", sans-serif',
+                fontSize: 10,
+                letterSpacing: '0.1em',
+              }}>
+                {t('ticketPrefix')} {String(idx + 1).padStart(2, '0')}
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                  <span style={{
+                    padding: '2px 10px',
+                    border: '2.5px solid var(--ink)',
+                    background: 'var(--orange)',
+                    fontFamily: '"Bungee", sans-serif',
+                    fontSize: 9,
+                    letterSpacing: '0.1em',
+                  }}>
+                    {category.toUpperCase()}
+                  </span>
+                  <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>{level}</span>
+                  <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.4 }}>·</span>
+                  <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>{readingTime}</span>
+                </div>
+
+                <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 18, margin: 0, letterSpacing: '0.03em' }}>
+                  {title}
+                </h2>
+                <p style={{ margin: 0, fontSize: 14, opacity: 0.7, lineHeight: 1.5 }}>{subtitle}</p>
+                <p style={{ margin: 0, fontSize: 13, opacity: 0.55, lineHeight: 1.4 }}>{description}</p>
+
+                <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 10, letterSpacing: '0.12em', color: 'var(--orange)', marginTop: 4 }}>
+                  {tCommon('actions.read')}
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

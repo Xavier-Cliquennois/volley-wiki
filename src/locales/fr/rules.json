@@ -2,7 +2,7 @@
   "header": {
     "kicker": "★ DOCUMENTATION",
     "title": "RÈGLES DU VOLLEYBALL",
-    "subtitle": "Règlement FIVB simplifié — les règles essentielles pour comprendre et jouer."
+    "subtitle": "Règlement FIVB simplifié — indoor 6v6 + beach 2v2. Filtre par discipline en haut de page."
   },
   "warning": "Cette page est un résumé pédagogique. Pour les compétitions officielles, référez-vous au <strong>règlement FIVB officiel</strong>.",
   "quickFaultsTitle": "FAUTES COURANTES",
@@ -11,16 +11,19 @@
     "Plus de 3 touches par équipe",
     "Double touche d'un même joueur",
     "Ballon tenu / porté",
-    "Attaque de la zone arrière au-dessus du filet",
+    "Attaque de la zone arrière au-dessus du filet (indoor)",
     "Faute de pied au service (marcher sur la ligne)",
     "Service avant le coup de sifflet",
-    "Faute de position à la rotation"
+    "Faute de position à la rotation (indoor)",
+    "Tip à main ouverte (beach uniquement)",
+    "Over-set hors axe des épaules (beach)"
   ],
   "sections": [
     {
       "id": "basics",
-      "title": "L'essentiel",
+      "title": "L'essentiel (indoor)",
       "num": "01",
+      "discipline": ["indoor"],
       "rules": [
         { "title": "Format de jeu", "content": "Un match se joue en 3 sets gagnants (best of 5). Chaque set se joue à 25 points, avec au moins 2 points d'écart. En cas de 5ème set, on joue à 15 points." },
         { "title": "Équipes", "content": "6 joueurs de chaque côté sur le terrain. Une équipe peut avoir jusqu'à 6 remplaçants et un libero. Maximum 6 remplacements réguliers par set (libero non compté)." },
@@ -30,19 +33,21 @@
     },
     {
       "id": "touches",
-      "title": "Contacts et fautes",
+      "title": "Contacts et fautes (indoor)",
       "num": "02",
+      "discipline": ["indoor"],
       "rules": [
-        { "title": "Maximum 3 touches", "content": "Une équipe a droit à 3 touches pour renvoyer le ballon. Le contre (block) ne compte pas comme une touche d'équipe — l'équipe a toujours 3 touches après un contre." },
+        { "title": "Maximum 3 touches", "content": "Une équipe a droit à 3 touches pour renvoyer le ballon. Le contre (block) ne compte PAS comme une touche d'équipe — l'équipe a toujours 3 touches après un contre." },
         { "title": "Double touche", "content": "Un joueur ne peut pas toucher le ballon deux fois consécutivement, sauf lors du premier contact d'équipe (réception/défense). Exception au contre. Nouveauté test FIVB 2025-2026 : double-contact autorisé lors de l'action de passe (2e touche) tant que le ballon reste du même côté." },
-        { "title": "Faute au filet", "content": "Toucher le filet pendant l'action de jouer le ballon est une faute. Toucher hors action ou hors antennes n'est pas une faute. Passer partiellement sous le filet est autorisé si cela ne gêne pas l'adversaire. Objectif FIVB 2025 : \"promouvoir le jeu fluide\"." },
-        { "title": "Ballon sur les limites", "content": "Un ballon qui tombe sur la ligne est considéré \"dans\". Un ballon qui sort des antennes ou passe hors de l'espace de passage est hors." }
+        { "title": "Faute au filet", "content": "Toucher le filet pendant l'action de jouer le ballon est une faute. Toucher hors action ou hors antennes n'est pas une faute. Passer partiellement sous le filet est autorisé si cela ne gêne pas l'adversaire. Objectif FIVB 2025 : « promouvoir le jeu fluide »." },
+        { "title": "Ballon sur les limites", "content": "Un ballon qui tombe sur la ligne est considéré « dans ». Un ballon qui sort des antennes ou passe hors de l'espace de passage est hors." }
       ]
     },
     {
       "id": "positions",
-      "title": "Rotation et positions",
+      "title": "Rotation et positions (indoor)",
       "num": "03",
+      "discipline": ["indoor"],
       "rules": [
         { "title": "Rotation obligatoire", "content": "À chaque récupération de service, l'équipe gagnante tourne dans le sens des aiguilles d'une montre : P2→P1, P3→P2, P4→P3, P5→P4, P6→P5, P1→P6. Le joueur en P2→P1 devient le nouveau serveur." },
         { "title": "Faute de position", "content": "Au moment de la frappe du serveur, les joueurs doivent respecter leur ordre de rotation (pas de chevauchement diagonal). Faute = point + service à l'adversaire. Nouveauté 2025 : la règle d'overlap ne s'applique plus qu'à l'équipe en RÉCEPTION — l'équipe au service peut se positionner librement." },
@@ -52,24 +57,131 @@
     },
     {
       "id": "special",
-      "title": "Situations spéciales",
+      "title": "Situations spéciales (indoor)",
       "num": "04",
+      "discipline": ["indoor"],
       "rules": [
         { "title": "Time-outs", "content": "Chaque équipe a droit à 2 time-outs de 30 secondes par set. Des time-outs techniques automatiques aux 8e et 16e points dans les sets 1-4 sont prévus dans certaines compétitions FIVB." },
         { "title": "Service — règles clés", "content": "8 secondes pour frapper après le sifflet. Un seul lancer autorisé, mais le serveur peut laisser tomber le ballon une fois sans pénalité. Faute de pied : au moment de la frappe (ou l'impulsion en saut), le serveur ne doit pas toucher la ligne de fond ni le terrain. Service masqué : les coéquipiers ne doivent pas lever les mains au-dessus de la tête pendant le service (règle 2025)." },
         { "title": "Attaque arrière", "content": "Un joueur arrière peut attaquer si son appel est derrière la ligne des 3 m (les 2 pieds). Il peut aussi frapper le ballon si une partie est sous le niveau du filet. Bloquer ou attaquer le service au-dessus du filet en zone avant est une faute." },
-        { "title": "Ballon tenu", "content": "Le contact avec le ballon doit être bref et net. \"Ugly contact ≠ fault\" : un contact imparfait n'est pas automatiquement une faute si le ballon rebondit. Standard plus permissif pour la manchette que pour la passe haute." }
+        { "title": "Ballon tenu", "content": "Le contact avec le ballon doit être bref et net. « Ugly contact ≠ fault » : un contact imparfait n'est pas automatiquement une faute si le ballon rebondit. Standard plus permissif pour la manchette que pour la passe haute." }
       ]
     },
     {
       "id": "nouveautes2025",
-      "title": "Nouveautés FIVB 2025-2028",
+      "title": "Nouveautés FIVB 2025-2028 (indoor)",
       "num": "05",
+      "discipline": ["indoor"],
       "rules": [
         { "title": "Overlap : seulement en réception", "content": "Depuis 2025, la règle d'overlap (chevauchement) ne s'applique plus qu'à l'équipe en réception. L'équipe au service peut occuper n'importe quelle position sur le terrain au moment du service." },
         { "title": "Anti-écran au service", "content": "Il est désormais interdit pour les joueurs de l'équipe au service de lever les mains au-dessus de la tête pendant le service jusqu'au franchissement du filet. Un écran de ce type est directement sanctionné." },
         { "title": "Double-contact en passe — test", "content": "Test FIVB 2025-2026 : le double-contact lors de l'action de passe (2e touche) est autorisé tant que le ballon reste du même côté du terrain. Si le test est concluant, la règle pourrait être permanente." },
         { "title": "Libero peut servir (depuis 2021)", "content": "Le libero peut servir depuis 2021 dans une seule rotation par set. Règle variable selon les fédérations (certains tournois USAV et NFHS ne l'autorisent pas — vérifier le règlement de la compétition)." }
+      ]
+    },
+    {
+      "id": "beach-format",
+      "title": "Format & terrain beach",
+      "num": "06",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Composition", "content": "2 joueurs par équipe, strictement, sans remplaçant. Pas de libero." },
+        { "title": "Terrain", "content": "16 × 8 m sur sable (vs 18 × 9 en indoor). Zone libre 3 m mini (5-6 m en FIVB). Profondeur sable 40 cm minimum. Aucune ligne centrale, aucune ligne d'attaque." },
+        { "title": "Filet", "content": "Hauteur : 2,43 m hommes / 2,24 m femmes / 2,35 m mixte (FFvolley) / 2,24 m juniors mixtes. Antennes flexibles de 1,80 m dépassant 80 cm au-dessus du filet." },
+        { "title": "Format du match", "content": "Au meilleur de 3 sets : sets 1 et 2 à 21 points (écart 2), tie-break à 15 points (écart 2). Rally point system." },
+        { "title": "Changement de camp", "content": "Sets 1-2 : tous les 7 points cumulés (7, 14, 21…). Tie-break : tous les 5 points (5, 10). Objectif : rééquilibrer soleil et vent." },
+        { "title": "Pas de positions imposées", "content": "Règle 7.4.1 : placement libre des deux joueurs sur le terrain, pas de faute de position. Pas de rotation." }
+      ]
+    },
+    {
+      "id": "beach-touches",
+      "title": "Touches beach — contre INCLUS",
+      "num": "07",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "3 touches max — contre INCLUS", "content": "Différence majeure avec l'indoor. En beach (règle 14.4.1), le contact au contre compte comme la 1ère des 3 touches d'équipe. Après un bloc touché, l'équipe ne dispose plus que de 2 touches pour renvoyer." },
+        { "title": "Bloqueur peut enchaîner", "content": "Le bloqueur peut effectuer la touche suivante (règle 14.4.2) : deux contacts consécutifs du même joueur (bloc + 1ère touche défensive) sont autorisés." },
+        { "title": "Première touche aux doigts", "content": "Si le ballon est joué en touche haute aux doigts, il NE PEUT PAS y avoir de contacts consécutifs (règle 9.2.2.2) — double touche sifflée. En manchette : plusieurs contacts du corps en une action sont autorisés. Conclusion : manchette par défaut en réception." },
+        { "title": "Beach dig / open hand dig", "content": "Sur balle puissante (hard-driven), le contact peut être prolongé même en touche haute aux doigts (règle 9.2.2.4). Sur balle molle = tenu sifflé." }
+      ]
+    },
+    {
+      "id": "beach-set",
+      "title": "Passe haute & over-set (beach)",
+      "num": "08",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Passe haute — règles strictes", "content": "Le double contact en passe à 10 doigts est très strictement sifflé : contacts des deux mains strictement simultanés, aucune rotation visible du ballon, pas de pivot du corps pendant le contact." },
+        { "title": "Over-set perpendiculaire (règle 13.2.5)", "content": "Si on envoie le ballon dans le camp adverse en touche haute, la trajectoire DOIT être perpendiculaire à l'axe des épaules (droit devant ou droit derrière). Toute trajectoire oblique = faute d'attack-hit." },
+        { "title": "Exception accidentelle", "content": "Si l'arbitre juge que le joueur tentait une passe à son partenaire et que le ballon a accidentellement franchi le filet, l'over-set hors axe peut être toléré." }
+      ]
+    },
+    {
+      "id": "beach-attack",
+      "title": "Attaque & feintes (beach)",
+      "num": "09",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Tip à main ouverte — INTERDIT (règle 13.2.3)", "content": "Faute : attaque main ouverte avec doigts souples, ou frappe du bout des doigts non joints et non rigides. Tip / dink classique : INTERDIT. Poke (frappe avec phalanges repliées) : LÉGAL. Cobra (bouts des doigts tendus, joints et rigides) : LÉGAL." },
+        { "title": "Attaque sur service adverse — INTERDIT", "content": "Règle 13.2.4 : interdit d'attaquer (smasher) le service adverse lorsque le ballon est entièrement au-dessus du bord supérieur du filet. Contrer le service est aussi interdit (règle 14.6.3)." }
+      ]
+    },
+    {
+      "id": "beach-service",
+      "title": "Service beach (règle 12)",
+      "num": "10",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Zone & délai", "content": "Zone : 8 m derrière la ligne de fond (toute la largeur du terrain). Délai pour servir : 5 secondes après coup de sifflet (changement FIVB 2025-2028, avant : 8 s)." },
+        { "title": "Lancer & faute de pied", "content": "Lancer obligatoire (un seul, pas de seconde tentative). Faute de pied : toucher la ligne de fond ou hors zone au moment de la frappe ou de l'impulsion." },
+        { "title": "Let serve & service masqué", "content": "Let serve (ballon touchant le filet) : LÉGAL s'il passe dans le camp adverse. Service masqué (screen) : INTERDIT — interdiction de lever les bras au-dessus de la tête pendant le service par tout joueur de l'équipe au service (règle 12.5.3)." },
+        { "title": "Skyball", "content": "Service très haut (15-25 m) : LÉGAL, pas de limite de hauteur. Origine brésilienne, modernisé par Adrian Carambula." }
+      ]
+    },
+    {
+      "id": "beach-block",
+      "title": "Le contre beach (règle 14)",
+      "num": "11",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Conditions du contre", "content": "Une partie du corps doit être au-dessus du sommet du filet au moment du contact. Pas de zone avant : tous les joueurs peuvent bloquer." },
+        { "title": "Touches consécutives au bloc", "content": "Autorisées pendant l'action de bloc (même joueur), comptées comme 1 touche d'équipe." },
+        { "title": "Pénétration", "content": "Pénétration au-dessus du filet autorisée tant qu'elle ne gêne pas l'adversaire avant sa frappe." },
+        { "title": "Contre du service — INTERDIT", "content": "Contrer le service adverse est interdit (règle 14.6.3)." }
+      ]
+    },
+    {
+      "id": "beach-divers",
+      "title": "Autres règles beach essentielles",
+      "num": "12",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Faute au filet (règle 11.3.1)", "content": "Faute UNIQUEMENT si contact entre les antennes ET pendant l'action de jouer le ballon. Un effleurement involontaire hors action n'est plus systématiquement sanctionné." },
+        { "title": "Franchissement sous le filet", "content": "Autorisé tant que cela ne gêne pas l'adversaire (pas de ligne centrale)." },
+        { "title": "Retard de jeu", "content": "12 secondes maximum entre la fin d'un échange et le coup de sifflet de service." },
+        { "title": "Blessure & météo", "content": "Blessure : 5 minutes maximum de récupération ; au-delà, équipe incomplète = perte du match. Interruption météo : < 4 h = reprise avec scores acquis ; ≥ 4 h = match rejoué." },
+        { "title": "Sanctions", "content": "Carton jaune (avertissement), rouge (pénalisation), jaune+rouge ensemble (expulsion), jaune+rouge séparés (disqualification)." },
+        { "title": "Temps-mort technique", "content": "Automatique à 21 points cumulés dans les sets 1 et 2 (compétitions FIVB officielles), pas en tie-break. Temps-mort équipe : 1 par équipe par set, 30 secondes." }
+      ]
+    },
+    {
+      "id": "beach-differences",
+      "title": "★ Les 12 différences beach vs indoor",
+      "num": "✦",
+      "discipline": ["beach"],
+      "rules": [
+        { "title": "Terrain", "content": "Beach : 16 × 8 m (sable). Indoor : 18 × 9 m (parquet)." },
+        { "title": "Joueurs", "content": "Beach : 2 sans remplaçant. Indoor : 6 + remplaçants + libero." },
+        { "title": "Sets", "content": "Beach : 2 sets gagnants à 21 pts, tie-break à 15. Indoor : 3 sets gagnants à 25 pts, tie-break à 15." },
+        { "title": "Le contre compte", "content": "Beach : OUI (sur les 3 touches). Indoor : NON." },
+        { "title": "Tip à main ouverte", "content": "Beach : INTERDIT. Indoor : autorisé." },
+        { "title": "Passe haute", "content": "Beach : très restrictive (axe des épaules). Indoor : tolérée." },
+        { "title": "Rotations", "content": "Beach : aucune (positions libres). Indoor : horaires à chaque side-out." },
+        { "title": "Spécialisation", "content": "Beach : polyvalence totale. Indoor : postes (passeur, central, libéro…)." },
+        { "title": "Délai service", "content": "Beach : 5 s (FIVB 2025-2028). Indoor : 8 s." },
+        { "title": "Conditions", "content": "Beach : vent, soleil, chaleur. Indoor : salle contrôlée." },
+        { "title": "Communication", "content": "Beach : signaux de mains derrière le dos + calls permanents. Indoor : signaux passeur/contre uniquement." },
+        { "title": "Ligne d'attaque & centrale", "content": "Beach : aucune (n'existent pas). Indoor : ligne des 3 m + ligne centrale." }
       ]
     }
   ]

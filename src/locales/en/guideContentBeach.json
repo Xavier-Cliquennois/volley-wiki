@@ -1,0 +1,222 @@
+{
+  "debutant": {
+    "intro": "Setting foot on the sand for the first time? Welcome. Beach is not a by-product of indoor: it's a sport in its own right, with its own rules and its own culture. Here's the vital minimum so you don't sink.",
+    "sections": [
+      {
+        "id": "erreurs",
+        "title": "The 5 mistakes to avoid at all costs",
+        "items": [
+          {
+            "title": "1. Trying to hit too hard",
+            "body": "Placement >> power. A placed poke beats 10 spikes that fly out of bounds. The offensive philosophy of beach sums up in one line: \"if your only tool is pounding the angle, you'll get blocked every time\" (AVP)."
+          },
+          {
+            "title": "2. Receiving with finger sets",
+            "body": "Almost always a fault in beach (hand set on 1st contact = double whistle). Absolute reflex: BUMP by default on anything that isn't hard-driven."
+          },
+          {
+            "title": "3. Open-hand tip",
+            "body": "STRICTLY FORBIDDEN (rule 13.2.3 — fault). Must be replaced by a poke (middle knuckles) or a cobra (rigid extended fingertips)."
+          },
+          {
+            "title": "4. Neglecting communication",
+            "body": "Talk on EVERY ball: \"MINE!\", \"YOURS!\", \"FREE\", \"OUT\". The 2011 Swiss Championships study shows +26 points of attack efficiency with calls vs without. Silence kills."
+          },
+          {
+            "title": "5. Bad hydration / no sunscreen",
+            "body": "Ruins a whole day. Water-resistant SPF 50+ (renew every 2 h), 1-2 L of water per session, electrolytes past 1 h, UV glasses, cap."
+          }
+        ]
+      },
+      {
+        "id": "regles-minimales",
+        "title": "Minimum rules to know",
+        "items": [
+          { "title": "3 touches max — block INCLUDED", "body": "THE major difference vs indoor. The block counts as the 1st of the 3 touches. After a touched block, only 2 touches remain to return the ball." },
+          { "title": "No open-hand tip", "body": "See mistake #3. Replace with poke or cobra." },
+          { "title": "Over-set perpendicular to the shoulders", "body": "If you send the ball over with a hand set, the trajectory MUST be strictly perpendicular to your shoulder line (straight forward or straight backward). Any oblique trajectory = fault." },
+          { "title": "No rotations", "body": "Free placement of both players on the court. No position fault." },
+          { "title": "1 set to 21 (2-point gap), 3rd set to 15", "body": "Best of 3 sets. Tie-break to 15 if needed." },
+          { "title": "Side change every 7 points (5 in tie-break)", "body": "To balance sun and wind. Immediate change, no break." }
+        ]
+      },
+      {
+        "id": "manchette",
+        "title": "First reflex: the bump",
+        "body": "On sand, by default, you play EVERYTHING with the bump. It's the safest move, the one least called by the ref, and the best suited to imperfect positioning in the wind. The hand set on reception is reserved for high-level competition with a perfect ball."
+      },
+      {
+        "id": "partenaire",
+        "title": "Choosing your partner",
+        "body": "Complementarity (tall blocker + fast defender), shared drive to improve, easy communication. In 2v2, the duo's mindset matters as much as technique."
+      },
+      {
+        "id": "checklist",
+        "title": "Equipment checklist",
+        "items": [
+          { "title": "✓ Beach ball", "body": "Mikasa VLS300 or equivalent" },
+          { "title": "✓ Portable or club net", "body": "Height 2.43 m M / 2.24 m W" },
+          { "title": "✓ Hydration", "body": "1.5 to 2 L of water per session, electrolytes" },
+          { "title": "✓ Sun protection", "body": "Water-resistant SPF 50+, cap, UV glasses" },
+          { "title": "✓ First aid kit", "body": "Aloe vera, band-aids, painkillers" },
+          { "title": "✓ Sand socks (optional in summer)", "body": "If sand > 45 °C" },
+          { "title": "✓ Carb snack", "body": "Banana, gel, energy bar" }
+        ]
+      }
+    ]
+  },
+  "transition": {
+    "intro": "You've been playing indoor for years and want to switch to beach? Good news: your fundamentals come with you. Bad news: you'll have to unlearn three deeply ingrained reflexes. Here's the roadmap.",
+    "sections": [
+      {
+        "id": "change-radicalement",
+        "title": "What changes radically",
+        "items": [
+          { "title": "Touches", "body": "The block counts as the 1st touch. You can no longer chain block + dig + set + spike. After a touched block: 2 remaining touches max." },
+          { "title": "Strict finger setting", "body": "Refereeing far stricter than in the gym. Absolute hand synchronization. No body pivot. Over-set perpendicular to the shoulders." },
+          { "title": "No tip", "body": "The open-hand tip is FORBIDDEN. Mandatory replacement: poke or cobra." },
+          { "title": "Finger reception = fault", "body": "Except on hard-driven balls. Reflex: bump by default." },
+          { "title": "Sand surface", "body": "Movement 30% slower, jumps -5 to -15 cm, energy cost × 1.5 to × 2. Anticipation matters more than raw speed." },
+          { "title": "Total versatility", "body": "No more fixed position. You serve, receive, set, attack, block, defend. In turn, every rally." },
+          { "title": "Reduced roster", "body": "2 players, no substitute. No libero." },
+          { "title": "2v2 mindset", "body": "Total visibility between partners, constant communication, emotional management more exposed." }
+        ]
+      },
+      {
+        "id": "reste-pareil",
+        "title": "What stays the same",
+        "body": "Your fundamental technical moves: bump, set, spike, serve. Your reading of the block and attacker. The importance of a clean contact. Line/angle, short/long concepts. Your indoor background is NOT lost — it just needs adjusting."
+      },
+      {
+        "id": "desapprendre",
+        "title": "The 3 things to UNLEARN",
+        "items": [
+          { "title": "1. The open-hand tip", "body": "Replace immediately with POKE (middle knuckles) or COBRA (rigid fingertips)." },
+          { "title": "2. The rotating set", "body": "Shoulders must stay perpendicular to the over-set trajectory. No body pivot." },
+          { "title": "3. Systematic hand set on reception", "body": "BUMP by default. The hand set on reception is reserved for very settled sets and very clean players." }
+        ]
+      },
+      {
+        "id": "apprendre",
+        "title": "The 3 things to LEARN first",
+        "items": [
+          { "title": "1. The tomahawk", "body": "High defense for soft balls that your beach dig cannot legally play. Essential." },
+          { "title": "2. The poke / cobra", "body": "Replaces your tip. Your #1 placement tool." },
+          { "title": "3. Hand signals and 2v2 communication", "body": "Not optional. Before every serve from your side, the blocker signals behind the back. The defender adapts position." }
+        ]
+      },
+      {
+        "id": "progression",
+        "title": "Recommended progression (8 weeks)",
+        "items": [
+          { "title": "W1-W2 — Adaptation", "body": "Stabilize the bump on sand, first serves, heat and hydration management." },
+          { "title": "W3-W4 — Beach tools", "body": "Poke and tomahawk, attacking with feet in the sand, managing the diminished jump." },
+          { "title": "W5-W6 — Tactics", "body": "Blocking at the net, block → defense transitions, hand signals." },
+          { "title": "W7-W8 — Competition", "body": "Complete tactics, first recreational tournaments, reading the opponent's play." }
+        ]
+      }
+    ]
+  },
+  "tournoi-loisir": {
+    "intro": "Running a recreational beach tournament is three things: choosing the right format for the number of teams, securing a compliant setup, and setting simplified rules everyone agrees on. The rest is logistics.",
+    "sections": [
+      {
+        "id": "formats",
+        "title": "Recommended formats by number of teams",
+        "items": [
+          { "title": "4 teams", "body": "Round robin + top 2 final. Duration ~2-3 h. Simplest format." },
+          { "title": "6 teams", "body": "2 pools of 3 + semi-finals + final. ~3-4 h." },
+          { "title": "8 teams", "body": "2 pools of 4 + crossover semis + final. ~4-5 h." },
+          { "title": "12 teams", "body": "3 pools of 4 + single elimination. Full day." },
+          { "title": "16 teams", "body": "4 pools of 4 + single elimination. Full day." },
+          { "title": "24+ teams", "body": "Pools + main bracket + consolation bracket. Weekend." }
+        ]
+      },
+      {
+        "id": "installation",
+        "title": "Setup",
+        "items": [
+          { "title": "Court", "body": "16 × 8 m, free zone 3 m min (5-6 m at FIVB level). Sand depth 40 cm minimum." },
+          { "title": "Portable net", "body": "Height 2.43 m (M / mixed) or 2.24 m (W / recreational). 2.35 m for FFvolley mixed." },
+          { "title": "Lines", "body": "PVC tape + soft stakes. Width 5 cm." },
+          { "title": "Antennas", "body": "Optional in recreational, mandatory in competition." }
+        ]
+      },
+      {
+        "id": "regles-simplifiees",
+        "title": "Simplified rules",
+        "body": "1 set to 21 (or 15 for a quick format). No tie-break or \"sudden death\" at 25. Rotating serve. Self-refereeing. In doubt: replay. Beach spirit first — the sport is festive."
+      },
+      {
+        "id": "materiel",
+        "title": "Gear to bring",
+        "items": [
+          { "title": "✓ Balls", "body": "1 per court + 2 spares" },
+          { "title": "✓ Nets and posts", "body": "Adjustable height by category" },
+          { "title": "✓ Lines + stakes", "body": "Contrasted PVC tape" },
+          { "title": "✓ Water jugs", "body": "Several liters per team per day" },
+          { "title": "✓ Scoreboards", "body": "At least one per court" },
+          { "title": "✓ First aid kit", "body": "Aloe vera, band-aids, painkillers, backup sunscreen" },
+          { "title": "✓ Tent / parasols", "body": "Shade zone for rest between matches" },
+          { "title": "✓ Sound system if > 12 teams", "body": "Announcements, vibe" },
+          { "title": "✓ Team list + schedule", "body": "Printed and posted" },
+          { "title": "✓ Prizes / trophies", "body": "Podium rewards" },
+          { "title": "✓ Recycling bins", "body": "Clean tournament, clean image" }
+        ]
+      },
+      {
+        "id": "apps",
+        "title": "Useful apps",
+        "body": "BeachUp (beachup.app, 16,500+ courts referenced worldwide) · Beach Volleyball App (App Store) · Tournaments by SportEasy · Toornament.com · CHAMP'S (champs.fr, streaming)."
+      }
+    ]
+  },
+  "lecture-jeu": {
+    "intro": "Reading the opponent in beach is 50% of the defensive work. You have only 2 defenders to cover 16 × 8 m — the only way to hold is to anticipate. Here's the full method, from warm-up to stopping your feet before the hit.",
+    "sections": [
+      {
+        "id": "echauffement",
+        "title": "During warm-up (the crucial 5 min)",
+        "intro": "The 5 minutes of warm-up at the net are a scouting goldmine. Note mentally:",
+        "items": [
+          { "title": "Who sets better?", "body": "One of the two will set more than the other. Identify who." },
+          { "title": "Who hits hard / who shoots?", "body": "The \"hammer\" and the \"placer\" reveal themselves fast." },
+          { "title": "\"Line player\" vs \"angle player\"", "body": "Natural tendency: the line or the diagonal." },
+          { "title": "Handedness", "body": "Righty / lefty. Affects attack angles." },
+          { "title": "Individual tics", "body": "One player who always looks at the target before hitting, another who loads low for the poke, etc." }
+        ]
+      },
+      {
+        "id": "indices-frappe",
+        "title": "Cues to read before the hit (in order)",
+        "items": [
+          { "title": "1. Set quality", "body": "Tight to the net → open angles, hard hit likely. Off the net → closed angles, shots likely. Behind the attacker → poke very likely." },
+          { "title": "2. Approach", "body": "Aggressive straight line → hard swing. Braked or shortened → shot or poke." },
+          { "title": "3. Shoulders at the load", "body": "Aligned to the line → line. Open → angle / cross. Closed late → cut or tip." },
+          { "title": "4. Arm and wrist", "body": "Straight extended → swing. Dropping elbow → cut or poke." },
+          { "title": "5. Individual tendencies (scouting)", "body": "What you noted in warm-up and early in the match. Constant update." }
+        ]
+      },
+      {
+        "id": "methode",
+        "title": "Defensive method",
+        "items": [
+          { "title": "Base position in the middle of the back", "body": "Neutral start at 1-1.5 m from the end line, centered." },
+          { "title": "Slide toward the zone on the set", "body": "As soon as the set quality is readable, slide to prepare the zone to cover." },
+          { "title": "Stop the feet BEFORE the attacker's contact", "body": "Golden rule — impossible to react if you're still moving." },
+          { "title": "Perfect first step", "body": "First impulse in the actual ball direction, never an approximation." }
+        ]
+      },
+      {
+        "id": "match",
+        "title": "In the match: constant adaptation",
+        "body": "Keep a mental mini-log (that player has hit 4 times on the line, 0 times on the diagonal). Adapt in real time. Provoke imbalance (short serve on the weak receiver to force them to play the 2nd touch). Re-read the wind on every side change (every 7 points in a normal set, 5 in the tie-break)."
+      },
+      {
+        "id": "exercice",
+        "title": "Recommended drill",
+        "body": "\"Five blind serves\": your partner serves you into whichever zone they choose; you must call out loud what you read (\"line\", \"angle\", \"cut\", \"short\"…) BEFORE the ball arrives. Score out of 5. Target: 4/5 minimum after a few sessions."
+      }
+    ]
+  }
+}

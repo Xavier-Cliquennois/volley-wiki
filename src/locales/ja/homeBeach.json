@@ -1,0 +1,55 @@
+{
+  "ribbon": "★ ビーチバレー · 2対2 ★",
+  "hero": {
+    "logoTop": "ビーチ",
+    "logoBottom": "バレー",
+    "subtitle": "インドアの双子のスポーツ — 砂上の2対2、完全なオールラウンド性、背中越しのハンドシグナル。1996年からオリンピック種目です。",
+    "ctaPrimary": "テクニックを見る",
+    "ctaSecondary": "ビーチのルールを読む"
+  },
+  "sectionsLabel": "★ ビーチセクション ★",
+  "features": [
+    {
+      "label": "01",
+      "title": "テクニック",
+      "desc": "ポーク、コブラ、トマホーク、スカイボール、ビーチディグ — ビーチを象徴する技。",
+      "to": "/beach/techniques",
+      "accent": "var(--orange)"
+    },
+    {
+      "label": "02",
+      "title": "2対2の役割",
+      "desc": "ブロッカーとディフェンダー。背中越しのハンドシグナル完全表。",
+      "to": "/beach/positions",
+      "accent": "var(--teal)"
+    },
+    {
+      "label": "03",
+      "title": "ビーチガイド",
+      "desc": "完全初心者、インドア→ビーチ移行、レクリエーション大会、プレーの読み方。",
+      "to": "/beach/guides",
+      "accent": "var(--pink)"
+    },
+    {
+      "label": "04",
+      "title": "ビーチのルール",
+      "desc": "FIVB 2025-2028規則 — ビーチセクションとインドアとの違い。",
+      "to": "/rules",
+      "accent": "var(--yellow)"
+    },
+    {
+      "label": "05",
+      "title": "用語集",
+      "desc": "ビーチ／インドア／2 in 1のステッカー付き共通用語集。",
+      "to": "/glossary",
+      "accent": "var(--mint)"
+    },
+    {
+      "label": "06",
+      "title": "ビーチシナリオ",
+      "desc": "ビーチのアニメーションシーケンス — 近日公開。それまではガイドをご覧ください。",
+      "to": "/beach/scenarios",
+      "accent": "var(--plum)"
+    }
+  ]
+}

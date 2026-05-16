@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ BEACH · GUIDES",
+    "title": "GUIDES BEACH VOLLEY",
+    "subtitle": "Approfondissements tactiques et techniques — du débutant absolu à la transition indoor → beach."
+  },
+  "ticketPrefix": "GUIDE",
+  "detail": {
+    "backLink": "← Retour aux guides beach",
+    "sectionTitle": "★ GUIDE BEACH",
+    "notFound": "Guide introuvable."
+  },
+  "list": {
+    "debutant": {
+      "title": "Guide du débutant absolu",
+      "subtitle": "Premiers réflexes : manchette, communication, hydratation",
+      "category": "Tactique",
+      "description": "Les 5 erreurs à éviter, les règles minimales à connaître, et la checklist équipement pour ta première séance sur sable.",
+      "readingTime": "~10 min",
+      "level": "Débutant"
+    },
+    "transition": {
+      "title": "Transition indoor → beach",
+      "subtitle": "Ce qui change, ce qui reste, ce qu'il faut désapprendre",
+      "category": "Tactique",
+      "description": "Pour un joueur indoor qui veut passer au beach : 3 choses à désapprendre (tip main ouverte, set en rotation, passe haute en réception) et 3 à apprendre en priorité (tomahawk, poke, signaux).",
+      "readingTime": "~12 min",
+      "level": "Intermédiaire"
+    },
+    "tournoi-loisir": {
+      "title": "Organiser un tournoi loisir",
+      "subtitle": "Formats, installation, règles simplifiées, matériel",
+      "category": "Tactique",
+      "description": "Tout pour monter un tournoi sur sable de 4 à 24 équipes : formats (poules, élim. directe), installation 16×8 m, matériel à prévoir, règles simplifiées et apps utiles.",
+      "readingTime": "~8 min",
+      "level": "Intermédiaire"
+    },
+    "lecture-jeu": {
+      "title": "Lecture du jeu adverse",
+      "subtitle": "Scouting échauffement + lecture de l'attaquant",
+      "category": "Tactique",
+      "description": "Les indices à lire dans l'ordre — qualité du set, course d'élan, épaules à l'armé, bras et poignet — pour anticiper line/angle/cut/poke. Méthode pendant les 5 minutes d'échauffement.",
+      "readingTime": "~10 min",
+      "level": "Avancé"
+    }
+  }
+}

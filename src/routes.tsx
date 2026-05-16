@@ -14,6 +14,12 @@ import GuideDetail from './pages/GuideDetail';
 import GuideDefenseSized from './pages/GuideDefenseSized';
 import ScenarioEditor from './pages/ScenarioEditor';
 import NotFound from './pages/NotFound';
+import HomeBeach from './pages/HomeBeach';
+import TechniquesBeach from './pages/TechniquesBeach';
+import PositionsBeach from './pages/PositionsBeach';
+import ScenariosBeach from './pages/ScenariosBeach';
+import GuidesBeach from './pages/GuidesBeach';
+import GuideBeachDetail from './pages/GuideBeachDetail';
 
 export const routes: RouteObject[] = [
   {
@@ -40,6 +46,13 @@ export const routes: RouteObject[] = [
               { path: 'guides/positionnement-defense/:size', Component: GuideDefenseSized },
               { path: 'guides/positionnement-defense/:size/:config', Component: GuideDefenseSized },
               { path: 'guides/:slug', Component: GuideDetail },
+              // Beach branch
+              { path: 'beach', Component: HomeBeach },
+              { path: 'beach/techniques', Component: TechniquesBeach },
+              { path: 'beach/positions', Component: PositionsBeach },
+              { path: 'beach/scenarios', Component: ScenariosBeach },
+              { path: 'beach/guides', Component: GuidesBeach },
+              { path: 'beach/guides/:slug', Component: GuideBeachDetail },
               // Internal authoring tool — intentionally not listed in the nav and not in the sitemap.
               { path: 'editor', Component: ScenarioEditor },
               { path: '*', Component: NotFound },

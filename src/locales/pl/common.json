@@ -53,5 +53,25 @@
     "backOfCourt": "TYŁ BOISKA",
     "ourSide": "Nasza strona",
     "opponentSide": "Strona przeciwnika"
+  },
+  "discipline": {
+    "indoor": "Hala",
+    "beach": "Plażowa",
+    "switcherLabel": "Dyscyplina (hala lub plaża)",
+    "switchToIndoor": "Przełącz na halę",
+    "switchToBeach": "Przełącz na plażówkę",
+    "badge": {
+      "indoor": "HALA",
+      "beach": "PLAŻA",
+      "both": "2 W 1"
+    },
+    "filter": {
+      "label": "Filtruj wg dyscypliny",
+      "kicker": "★ FILTR",
+      "all": "Wszystkie",
+      "indoor": "Hala",
+      "beach": "Plaża",
+      "both": "Wspólne"
+    }
   }
 }

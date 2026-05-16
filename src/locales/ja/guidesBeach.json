@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ ビーチ · ガイド",
+    "title": "ビーチバレー ガイド",
+    "subtitle": "戦術と技術の深掘り — 完全初心者からインドア→ビーチ移行まで。"
+  },
+  "ticketPrefix": "ガイド",
+  "detail": {
+    "backLink": "← ビーチガイドに戻る",
+    "sectionTitle": "★ ビーチガイド",
+    "notFound": "ガイドが見つかりません。"
+  },
+  "list": {
+    "debutant": {
+      "title": "完全初心者ガイド",
+      "subtitle": "最初の反射：アンダーハンドパス、コミュニケーション、水分補給",
+      "category": "Tactique",
+      "description": "避けるべき5つの過ち、知っておくべき最低限のルール、初めての砂上セッションのための装備チェックリスト。",
+      "readingTime": "約10分",
+      "level": "Débutant"
+    },
+    "transition": {
+      "title": "インドア→ビーチ移行",
+      "subtitle": "何が変わり、何が残り、何を捨てるべきか",
+      "category": "Tactique",
+      "description": "ビーチに転向したいインドア選手向け：捨てるべき3つ（オープンハンドのチップ、回転トス、レセプションでのオーバーハンドパス）と最優先で学ぶべき3つ（トマホーク、ポーク、ハンドシグナル）。",
+      "readingTime": "約12分",
+      "level": "Intermédiaire"
+    },
+    "tournoi-loisir": {
+      "title": "レクリエーション大会の運営",
+      "subtitle": "フォーマット、設営、簡略ルール、用具",
+      "category": "Tactique",
+      "description": "4〜24チームの砂上大会を運営するためのすべて：フォーマット（プール戦、シングルエリミネーション）、16×8mの設営、用具リスト、簡略ルール、便利なアプリ。",
+      "readingTime": "約8分",
+      "level": "Intermédiaire"
+    },
+    "lecture-jeu": {
+      "title": "相手のプレーを読む",
+      "subtitle": "ウォームアップ時のスカウティング + アタッカーの読み",
+      "category": "Tactique",
+      "description": "順に読むべき手がかり — トスの質、助走、テイクバック時の肩、腕と手首 — ライン／アングル／カット／ポークを予測するために。5分間のウォームアップ中に行う方法。",
+      "readingTime": "約10分",
+      "level": "Avancé"
+    }
+  }
+}

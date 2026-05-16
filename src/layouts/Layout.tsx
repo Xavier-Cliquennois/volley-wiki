@@ -3,6 +3,8 @@ import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SUPPORTED_LANGS, LANG_LABELS, LANG_SHORT } from '../i18n';
 import { useCurrentLang, swapLangInPath } from '../i18n/paths';
+import DisciplineSwitcher from '../components/DisciplineSwitcher';
+import { useDiscipline } from '../discipline/useDiscipline';
 
 const STRIPE_STYLE: React.CSSProperties = {
   height: 10,
@@ -146,14 +148,19 @@ export default function Layout() {
   const location = useLocation();
   const { t } = useTranslation('common');
   const lang = useCurrentLang();
+  const discipline = useDiscipline();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Nav links are discipline-aware: the same labels but pointing to either the
+  // indoor or beach branch. /rules and /glossary stay on the unified URLs since
+  // those pages mix both disciplines via stickers + filter.
+  const beachPrefix = discipline === 'beach' ? '/beach' : '';
   const NAV_LINKS = [
-    { to: `/${lang}`, label: t('nav.home') },
-    { to: `/${lang}/techniques`, label: t('nav.techniques') },
-    { to: `/${lang}/positions`, label: t('nav.positions') },
-    { to: `/${lang}/scenarios`, label: t('nav.scenarios') },
-    { to: `/${lang}/guides`, label: t('nav.guides') },
+    { to: `/${lang}${beachPrefix}`, label: t('nav.home') },
+    { to: `/${lang}${beachPrefix}/techniques`, label: t('nav.techniques') },
+    { to: `/${lang}${beachPrefix}/positions`, label: t('nav.positions') },
+    { to: `/${lang}${beachPrefix}/scenarios`, label: t('nav.scenarios') },
+    { to: `/${lang}${beachPrefix}/guides`, label: t('nav.guides') },
     { to: `/${lang}/rules`, label: t('nav.rules') },
     { to: `/${lang}/glossary`, label: t('nav.glossary') },
   ];
@@ -180,7 +187,21 @@ export default function Layout() {
     }
   }, [menuOpen]);
 
-  const homePath = `/${lang}`;
+  const homePath = `/${lang}${beachPrefix}`;
+  const homePathRaw = `/${lang}`;
+  const homePathBeach = `/${lang}/beach`;
+
+  // Active matcher: on the home links we must avoid /:lang matching /:lang/beach
+  // (and vice-versa), so we treat them as exact + trailing slash.
+  const isActiveLink = (to: string) => {
+    if (to === homePathRaw) {
+      return location.pathname === homePathRaw || location.pathname === `${homePathRaw}/`;
+    }
+    if (to === homePathBeach) {
+      return location.pathname === homePathBeach || location.pathname === `${homePathBeach}/`;
+    }
+    return location.pathname === to || location.pathname.startsWith(`${to}/`);
+  };
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -188,53 +209,59 @@ export default function Layout() {
 
       <header style={{ background: 'var(--paper)', borderBottom: '3px solid var(--ink)', position: 'relative', zIndex: 40 }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64, gap: 16 }}>
-          <Link to={homePath} style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', minWidth: 0 }}>
-            <div style={{
-              width: 44, height: 44, borderRadius: '50%',
-              background: 'var(--orange)', border: '3px solid var(--ink)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              transform: 'rotate(-6deg)', boxShadow: 'var(--shadow-sm)', flexShrink: 0,
-            }}>
-              <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, color: 'var(--ink)' }}>V</span>
-            </div>
-            <div style={{ minWidth: 0 }}>
-              <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 16, letterSpacing: '0.06em', color: 'var(--ink)', lineHeight: 1, whiteSpace: 'nowrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+            <Link to={homePath} style={{ flexShrink: 0, textDecoration: 'none' }} aria-label={t('nav.home')}>
+              <div style={{
+                width: 44, height: 44, borderRadius: '50%',
+                background: 'var(--orange)', border: '3px solid var(--ink)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                transform: 'rotate(-6deg)', boxShadow: 'var(--shadow-sm)',
+              }}>
+                <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, color: 'var(--ink)' }}>V</span>
+              </div>
+            </Link>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 }}>
+              <Link
+                to={homePath}
+                style={{
+                  fontFamily: '"Bungee", sans-serif',
+                  fontSize: 16,
+                  letterSpacing: '0.06em',
+                  color: 'var(--ink)',
+                  lineHeight: 1,
+                  whiteSpace: 'nowrap',
+                  textDecoration: 'none',
+                }}
+              >
                 VOLLEY·WIKI
-              </div>
-              <div className="hidden sm:block" style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.16em', color: 'var(--teal)', marginTop: 2, whiteSpace: 'nowrap' }}>
-                {t('siteTagline')}
-              </div>
+              </Link>
+              <DisciplineSwitcher size="sm" />
             </div>
-          </Link>
+          </div>
 
-          <nav className="hidden lg:flex" style={{ gap: 4, alignItems: 'center' }}>
-            {NAV_LINKS.map(link => {
-              const isActive = link.to === homePath
-                ? location.pathname === homePath || location.pathname === `${homePath}/`
-                : location.pathname === link.to || location.pathname.startsWith(`${link.to}/`);
-              return (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  style={{
-                    fontFamily: '"Bungee", sans-serif',
-                    fontSize: 11,
-                    letterSpacing: '0.06em',
-                    textDecoration: 'none',
-                    transition: 'transform 0.08s, box-shadow 0.08s',
-                    ...(isActive ? NAV_ACTIVE : NAV_IDLE),
-                  }}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+          <nav className="vw-nav-desktop" style={{ gap: 4, alignItems: 'center' }}>
+            {NAV_LINKS.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                style={{
+                  fontFamily: '"Bungee", sans-serif',
+                  fontSize: 11,
+                  letterSpacing: '0.06em',
+                  textDecoration: 'none',
+                  transition: 'transform 0.08s, box-shadow 0.08s',
+                  ...(isActiveLink(link.to) ? NAV_ACTIVE : NAV_IDLE),
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
             <div style={{ marginLeft: 8 }}>
               <LangSwitcher label={t("language.label")} />
             </div>
           </nav>
 
-          <div className="lg:hidden" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <div className="vw-nav-mobile" style={{ alignItems: 'center', gap: 10 }}>
             <LangSwitcher label={t("language.label")} />
             <button
               type="button"
@@ -277,7 +304,7 @@ export default function Layout() {
           <button
             type="button"
             aria-label={t('nav.closeMenu')}
-            className="lg:hidden"
+            className="vw-mobile-only"
             onClick={() => setMenuOpen(false)}
             style={{
               position: 'fixed',
@@ -290,7 +317,7 @@ export default function Layout() {
             }}
           />
           <nav
-            className="lg:hidden"
+            className="vw-mobile-only"
             aria-label={t('nav.mainNavigation')}
             style={{
               position: 'fixed',
@@ -301,35 +328,33 @@ export default function Layout() {
               borderTop: '3px solid var(--ink)',
               borderBottom: '3px solid var(--ink)',
               zIndex: 30,
-              padding: 8,
+              padding: 12,
               boxShadow: '0 4px 0 var(--ink)',
             }}
           >
-            {NAV_LINKS.map(link => {
-              const isActive = link.to === homePath
-                ? location.pathname === homePath || location.pathname === `${homePath}/`
-                : location.pathname === link.to || location.pathname.startsWith(`${link.to}/`);
-              return (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setMenuOpen(false)}
-                  style={{
-                    display: 'block',
-                    fontFamily: '"Bungee", sans-serif',
-                    fontSize: 13,
-                    letterSpacing: '0.06em',
-                    textDecoration: 'none',
-                    marginBottom: 6,
-                    ...(isActive
-                      ? { background: 'var(--orange)', border: '2px solid var(--ink)', color: 'var(--ink)', padding: '12px 14px', boxShadow: '2px 2px 0 var(--ink)' }
-                      : { color: 'var(--ink)', border: '2px solid transparent', padding: '12px 14px' }),
-                  }}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+            <div style={{ display: 'flex', justifyContent: 'center', paddingBottom: 12, marginBottom: 8, borderBottom: '2px dashed rgba(26,24,18,0.18)' }}>
+              <DisciplineSwitcher />
+            </div>
+            {NAV_LINKS.map(link => (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  display: 'block',
+                  fontFamily: '"Bungee", sans-serif',
+                  fontSize: 13,
+                  letterSpacing: '0.06em',
+                  textDecoration: 'none',
+                  marginBottom: 6,
+                  ...(isActiveLink(link.to)
+                    ? { background: 'var(--orange)', border: '2px solid var(--ink)', color: 'var(--ink)', padding: '12px 14px', boxShadow: '2px 2px 0 var(--ink)' }
+                    : { color: 'var(--ink)', border: '2px solid transparent', padding: '12px 14px' }),
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </>
       )}

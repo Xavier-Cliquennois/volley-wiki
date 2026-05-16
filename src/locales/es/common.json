@@ -53,5 +53,25 @@
     "backOfCourt": "FONDO DE LA CANCHA",
     "ourSide": "Nuestro lado",
     "opponentSide": "Lado del rival"
+  },
+  "discipline": {
+    "indoor": "Indoor",
+    "beach": "Playa",
+    "switcherLabel": "Disciplina (Indoor o Playa)",
+    "switchToIndoor": "Cambiar a modo Indoor",
+    "switchToBeach": "Cambiar a modo Playa",
+    "badge": {
+      "indoor": "INDOOR",
+      "beach": "PLAYA",
+      "both": "2 EN 1"
+    },
+    "filter": {
+      "label": "Filtrar por disciplina",
+      "kicker": "★ FILTRAR",
+      "all": "Todas",
+      "indoor": "Indoor",
+      "beach": "Playa",
+      "both": "Comunes"
+    }
   }
 }

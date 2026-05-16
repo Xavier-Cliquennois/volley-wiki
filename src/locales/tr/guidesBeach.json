@@ -1,0 +1,47 @@
+{
+  "header": {
+    "kicker": "★ PLAJ · REHBERLER",
+    "title": "PLAJ VOLEYBOLU REHBERLERİ",
+    "subtitle": "Derinlemesine taktik ve teknik — mutlak başlangıçtan salon → plaj geçişine kadar."
+  },
+  "ticketPrefix": "REHBER",
+  "detail": {
+    "backLink": "← Plaj rehberlerine dön",
+    "sectionTitle": "★ PLAJ REHBERİ",
+    "notFound": "Rehber bulunamadı."
+  },
+  "list": {
+    "debutant": {
+      "title": "Mutlak başlangıç rehberi",
+      "subtitle": "İlk refleksler: manşet, iletişim, hidrasyon",
+      "category": "Taktik",
+      "description": "Kaçınılması gereken 5 hata, bilinmesi gereken minimum kurallar ve kumdaki ilk seansın için ekipman kontrol listesi.",
+      "readingTime": "~10 dk",
+      "level": "Başlangıç"
+    },
+    "transition": {
+      "title": "Salon → plaj geçişi",
+      "subtitle": "Ne değişir, ne kalır, neyi unutmak gerekir",
+      "category": "Taktik",
+      "description": "Plaja geçen salon oyuncusu için: unutulması gereken 3 şey (açık el tip, dönüşlü set, resepsiyonda yüksek pas) ve önce öğrenilmesi gereken 3 şey (tomahawk, poke, hand signals).",
+      "readingTime": "~12 dk",
+      "level": "Orta"
+    },
+    "tournoi-loisir": {
+      "title": "Amatör turnuva düzenleme",
+      "subtitle": "Formatlar, kurulum, basitleştirilmiş kurallar, ekipman",
+      "category": "Taktik",
+      "description": "4 ila 24 takımlık bir kum turnuvası düzenlemek için her şey: formatlar (gruplar, tek eleme), 16×8 m kurulum, ekipman listesi, basitleştirilmiş kurallar ve yararlı uygulamalar.",
+      "readingTime": "~8 dk",
+      "level": "Orta"
+    },
+    "lecture-jeu": {
+      "title": "Rakibin oyununu okuma",
+      "subtitle": "Isınmada scouting + atağı okuma",
+      "category": "Taktik",
+      "description": "Sırayla okunacak ipuçları — set kalitesi, koşu, yüklemede omuzlar, kol ve bilek — line/angle/cut/poke'u önceden tahmin etmek için. 5 dakikalık ısınma süresince yöntem.",
+      "readingTime": "~10 dk",
+      "level": "İleri"
+    }
+  }
+}

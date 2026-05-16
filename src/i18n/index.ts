@@ -12,6 +12,12 @@ import frGuideContent from '../locales/fr/guideContent.json';
 import frScenarios from '../locales/fr/scenarios.json';
 import frScenarioContent from '../locales/fr/scenarioContent.json';
 import frSeo from '../locales/fr/seo.json';
+import frHomeBeach from '../locales/fr/homeBeach.json';
+import frTechniquesBeach from '../locales/fr/techniquesBeach.json';
+import frPositionsBeach from '../locales/fr/positionsBeach.json';
+import frScenariosBeach from '../locales/fr/scenariosBeach.json';
+import frGuidesBeach from '../locales/fr/guidesBeach.json';
+import frGuideContentBeach from '../locales/fr/guideContentBeach.json';
 
 import enCommon from '../locales/en/common.json';
 import enHome from '../locales/en/home.json';
@@ -24,6 +30,12 @@ import enGuideContent from '../locales/en/guideContent.json';
 import enScenarios from '../locales/en/scenarios.json';
 import enScenarioContent from '../locales/en/scenarioContent.json';
 import enSeo from '../locales/en/seo.json';
+import enHomeBeach from '../locales/en/homeBeach.json';
+import enTechniquesBeach from '../locales/en/techniquesBeach.json';
+import enPositionsBeach from '../locales/en/positionsBeach.json';
+import enScenariosBeach from '../locales/en/scenariosBeach.json';
+import enGuidesBeach from '../locales/en/guidesBeach.json';
+import enGuideContentBeach from '../locales/en/guideContentBeach.json';
 
 import plCommon from '../locales/pl/common.json';
 import plHome from '../locales/pl/home.json';
@@ -36,6 +48,12 @@ import plGuideContent from '../locales/pl/guideContent.json';
 import plScenarios from '../locales/pl/scenarios.json';
 import plScenarioContent from '../locales/pl/scenarioContent.json';
 import plSeo from '../locales/pl/seo.json';
+import plHomeBeach from '../locales/pl/homeBeach.json';
+import plTechniquesBeach from '../locales/pl/techniquesBeach.json';
+import plPositionsBeach from '../locales/pl/positionsBeach.json';
+import plScenariosBeach from '../locales/pl/scenariosBeach.json';
+import plGuidesBeach from '../locales/pl/guidesBeach.json';
+import plGuideContentBeach from '../locales/pl/guideContentBeach.json';
 
 import itCommon from '../locales/it/common.json';
 import itHome from '../locales/it/home.json';
@@ -48,6 +66,12 @@ import itGuideContent from '../locales/it/guideContent.json';
 import itScenarios from '../locales/it/scenarios.json';
 import itScenarioContent from '../locales/it/scenarioContent.json';
 import itSeo from '../locales/it/seo.json';
+import itHomeBeach from '../locales/it/homeBeach.json';
+import itTechniquesBeach from '../locales/it/techniquesBeach.json';
+import itPositionsBeach from '../locales/it/positionsBeach.json';
+import itScenariosBeach from '../locales/it/scenariosBeach.json';
+import itGuidesBeach from '../locales/it/guidesBeach.json';
+import itGuideContentBeach from '../locales/it/guideContentBeach.json';
 
 import esCommon from '../locales/es/common.json';
 import esHome from '../locales/es/home.json';
@@ -60,6 +84,12 @@ import esGuideContent from '../locales/es/guideContent.json';
 import esScenarios from '../locales/es/scenarios.json';
 import esScenarioContent from '../locales/es/scenarioContent.json';
 import esSeo from '../locales/es/seo.json';
+import esHomeBeach from '../locales/es/homeBeach.json';
+import esTechniquesBeach from '../locales/es/techniquesBeach.json';
+import esPositionsBeach from '../locales/es/positionsBeach.json';
+import esScenariosBeach from '../locales/es/scenariosBeach.json';
+import esGuidesBeach from '../locales/es/guidesBeach.json';
+import esGuideContentBeach from '../locales/es/guideContentBeach.json';
 
 import ptCommon from '../locales/pt/common.json';
 import ptHome from '../locales/pt/home.json';
@@ -72,6 +102,12 @@ import ptGuideContent from '../locales/pt/guideContent.json';
 import ptScenarios from '../locales/pt/scenarios.json';
 import ptScenarioContent from '../locales/pt/scenarioContent.json';
 import ptSeo from '../locales/pt/seo.json';
+import ptHomeBeach from '../locales/pt/homeBeach.json';
+import ptTechniquesBeach from '../locales/pt/techniquesBeach.json';
+import ptPositionsBeach from '../locales/pt/positionsBeach.json';
+import ptScenariosBeach from '../locales/pt/scenariosBeach.json';
+import ptGuidesBeach from '../locales/pt/guidesBeach.json';
+import ptGuideContentBeach from '../locales/pt/guideContentBeach.json';
 
 import jaCommon from '../locales/ja/common.json';
 import jaHome from '../locales/ja/home.json';
@@ -84,6 +120,12 @@ import jaGuideContent from '../locales/ja/guideContent.json';
 import jaScenarios from '../locales/ja/scenarios.json';
 import jaScenarioContent from '../locales/ja/scenarioContent.json';
 import jaSeo from '../locales/ja/seo.json';
+import jaHomeBeach from '../locales/ja/homeBeach.json';
+import jaTechniquesBeach from '../locales/ja/techniquesBeach.json';
+import jaPositionsBeach from '../locales/ja/positionsBeach.json';
+import jaScenariosBeach from '../locales/ja/scenariosBeach.json';
+import jaGuidesBeach from '../locales/ja/guidesBeach.json';
+import jaGuideContentBeach from '../locales/ja/guideContentBeach.json';
 
 import trCommon from '../locales/tr/common.json';
 import trHome from '../locales/tr/home.json';
@@ -96,6 +138,12 @@ import trGuideContent from '../locales/tr/guideContent.json';
 import trScenarios from '../locales/tr/scenarios.json';
 import trScenarioContent from '../locales/tr/scenarioContent.json';
 import trSeo from '../locales/tr/seo.json';
+import trHomeBeach from '../locales/tr/homeBeach.json';
+import trTechniquesBeach from '../locales/tr/techniquesBeach.json';
+import trPositionsBeach from '../locales/tr/positionsBeach.json';
+import trScenariosBeach from '../locales/tr/scenariosBeach.json';
+import trGuidesBeach from '../locales/tr/guidesBeach.json';
+import trGuideContentBeach from '../locales/tr/guideContentBeach.json';
 
 export const SUPPORTED_LANGS = ['fr', 'en', 'pl', 'it', 'es', 'pt', 'ja', 'tr'] as const;
 export type Lang = (typeof SUPPORTED_LANGS)[number];
@@ -139,17 +187,41 @@ const bundle = (
   scenarios: unknown,
   scenarioContent: unknown,
   seo: unknown,
-): Record<string, unknown> => ({ common, home, techniques, positions, rules, glossary, guides, guideContent, scenarios, scenarioContent, seo });
+  homeBeach: unknown,
+  techniquesBeach: unknown,
+  positionsBeach: unknown,
+  scenariosBeach: unknown,
+  guidesBeach: unknown,
+  guideContentBeach: unknown,
+): Record<string, unknown> => ({
+  common,
+  home,
+  techniques,
+  positions,
+  rules,
+  glossary,
+  guides,
+  guideContent,
+  scenarios,
+  scenarioContent,
+  seo,
+  homeBeach,
+  techniquesBeach,
+  positionsBeach,
+  scenariosBeach,
+  guidesBeach,
+  guideContentBeach,
+});
 
 const RESOURCES = {
-  fr: bundle(frCommon, frHome, frTechniques, frPositions, frRules, frGlossary, frGuides, frGuideContent, frScenarios, frScenarioContent, frSeo),
-  en: bundle(enCommon, enHome, enTechniques, enPositions, enRules, enGlossary, enGuides, enGuideContent, enScenarios, enScenarioContent, enSeo),
-  pl: bundle(plCommon, plHome, plTechniques, plPositions, plRules, plGlossary, plGuides, plGuideContent, plScenarios, plScenarioContent, plSeo),
-  it: bundle(itCommon, itHome, itTechniques, itPositions, itRules, itGlossary, itGuides, itGuideContent, itScenarios, itScenarioContent, itSeo),
-  es: bundle(esCommon, esHome, esTechniques, esPositions, esRules, esGlossary, esGuides, esGuideContent, esScenarios, esScenarioContent, esSeo),
-  pt: bundle(ptCommon, ptHome, ptTechniques, ptPositions, ptRules, ptGlossary, ptGuides, ptGuideContent, ptScenarios, ptScenarioContent, ptSeo),
-  ja: bundle(jaCommon, jaHome, jaTechniques, jaPositions, jaRules, jaGlossary, jaGuides, jaGuideContent, jaScenarios, jaScenarioContent, jaSeo),
-  tr: bundle(trCommon, trHome, trTechniques, trPositions, trRules, trGlossary, trGuides, trGuideContent, trScenarios, trScenarioContent, trSeo),
+  fr: bundle(frCommon, frHome, frTechniques, frPositions, frRules, frGlossary, frGuides, frGuideContent, frScenarios, frScenarioContent, frSeo, frHomeBeach, frTechniquesBeach, frPositionsBeach, frScenariosBeach, frGuidesBeach, frGuideContentBeach),
+  en: bundle(enCommon, enHome, enTechniques, enPositions, enRules, enGlossary, enGuides, enGuideContent, enScenarios, enScenarioContent, enSeo, enHomeBeach, enTechniquesBeach, enPositionsBeach, enScenariosBeach, enGuidesBeach, enGuideContentBeach),
+  pl: bundle(plCommon, plHome, plTechniques, plPositions, plRules, plGlossary, plGuides, plGuideContent, plScenarios, plScenarioContent, plSeo, plHomeBeach, plTechniquesBeach, plPositionsBeach, plScenariosBeach, plGuidesBeach, plGuideContentBeach),
+  it: bundle(itCommon, itHome, itTechniques, itPositions, itRules, itGlossary, itGuides, itGuideContent, itScenarios, itScenarioContent, itSeo, itHomeBeach, itTechniquesBeach, itPositionsBeach, itScenariosBeach, itGuidesBeach, itGuideContentBeach),
+  es: bundle(esCommon, esHome, esTechniques, esPositions, esRules, esGlossary, esGuides, esGuideContent, esScenarios, esScenarioContent, esSeo, esHomeBeach, esTechniquesBeach, esPositionsBeach, esScenariosBeach, esGuidesBeach, esGuideContentBeach),
+  pt: bundle(ptCommon, ptHome, ptTechniques, ptPositions, ptRules, ptGlossary, ptGuides, ptGuideContent, ptScenarios, ptScenarioContent, ptSeo, ptHomeBeach, ptTechniquesBeach, ptPositionsBeach, ptScenariosBeach, ptGuidesBeach, ptGuideContentBeach),
+  ja: bundle(jaCommon, jaHome, jaTechniques, jaPositions, jaRules, jaGlossary, jaGuides, jaGuideContent, jaScenarios, jaScenarioContent, jaSeo, jaHomeBeach, jaTechniquesBeach, jaPositionsBeach, jaScenariosBeach, jaGuidesBeach, jaGuideContentBeach),
+  tr: bundle(trCommon, trHome, trTechniques, trPositions, trRules, trGlossary, trGuides, trGuideContent, trScenarios, trScenarioContent, trSeo, trHomeBeach, trTechniquesBeach, trPositionsBeach, trScenariosBeach, trGuidesBeach, trGuideContentBeach),
 } as const;
 
 const NAMESPACES = Object.keys(RESOURCES.fr);
