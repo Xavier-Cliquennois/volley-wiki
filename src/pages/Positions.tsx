@@ -566,21 +566,27 @@ export default function Positions() {
 // shim that mirrors the legacy shape using a fake `t` (caller may inject the
 // real translations).
 function makeConfiguration(layout: ConfigLayout, getText: (key: string) => string): Configuration {
+  // i18next returns the raw key when a translation is missing, so falsy-coalescing
+  // with `||` never triggers a fallback. Use an explicit "did it resolve?" check.
+  const resolve = (key: string): string => {
+    const value = getText(key);
+    return value !== key ? value : '';
+  };
   const positions = layout.positions.map(p => ({
     zoneId: p.zoneId,
     number: NUMBER_BY_ZONE[p.zoneId],
-    name: getText(`configurations.${layout.id}.positions.${p.zoneId}.name`) || getText(`commonZones.${p.zoneId}.name`) || '',
-    role: getText(`configurations.${layout.id}.positions.${p.zoneId}.role`) || '',
-    description: getText(`configurations.${layout.id}.positions.${p.zoneId}.description`) || '',
+    name: resolve(`configurations.${layout.id}.positions.${p.zoneId}.name`) || resolve(`commonZones.${p.zoneId}.name`),
+    role: resolve(`configurations.${layout.id}.positions.${p.zoneId}.role`),
+    description: resolve(`configurations.${layout.id}.positions.${p.zoneId}.description`),
     skills: [] as string[],
     traits: [] as string[],
     court: p.court,
   }));
   return {
     id: layout.id,
-    name: getText(`configurations.${layout.id}.name`),
-    shortName: getText(`configurations.${layout.id}.shortName`),
-    description: getText(`configurations.${layout.id}.description`),
+    name: resolve(`configurations.${layout.id}.name`),
+    shortName: resolve(`configurations.${layout.id}.shortName`),
+    description: resolve(`configurations.${layout.id}.description`),
     hasLibero: layout.hasLibero,
     positions,
   };
