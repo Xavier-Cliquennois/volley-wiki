@@ -36,6 +36,11 @@ export type CourtArrow = {
   from: CourtPoint;
   to: CourtPoint;
   kind?: 'main' | 'alt';
+  // Optional override for the endpoint backoff (SVG user units). The default
+  // backoff is generous so the arrowhead doesn't overlap a player at the
+  // target. Override with a small value when the target is in empty space
+  // (e.g. attack trajectories pointing at the net).
+  backoff?: number;
 };
 
 export type CourtBall = CourtPoint;

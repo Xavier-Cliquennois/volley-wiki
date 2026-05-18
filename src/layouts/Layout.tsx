@@ -159,6 +159,7 @@ export default function Layout() {
     { to: `/${lang}${beachPrefix}`, label: t('nav.home') },
     { to: `/${lang}${beachPrefix}/techniques`, label: t('nav.techniques') },
     { to: `/${lang}${beachPrefix}/positions`, label: t('nav.positions') },
+    { to: `/${lang}${beachPrefix}/systems`, label: t('nav.systems') },
     { to: `/${lang}${beachPrefix}/scenarios`, label: t('nav.scenarios') },
     { to: `/${lang}${beachPrefix}/guides`, label: t('nav.guides') },
     { to: `/${lang}/rules`, label: t('nav.rules') },
