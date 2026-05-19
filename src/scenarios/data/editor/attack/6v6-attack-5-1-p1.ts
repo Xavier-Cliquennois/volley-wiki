@@ -12,6 +12,8 @@ const STATE: EditorState = {
     teamSize: 6,
     phase: 'attack',
     contextLabel: '5-1 · Rotation P1 · Service adverse',
+    system: '5-1',
+    rotation: 'R1',
     defaultCamera: 'DEFAULT',
   },
   players: [

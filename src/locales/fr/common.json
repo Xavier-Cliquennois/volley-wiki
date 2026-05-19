@@ -30,7 +30,9 @@
     "readGuide": "LIRE LE GUIDE →",
     "showAll": "TOUT AFFICHER",
     "reset": "RÉINITIALISER",
-    "loading": "CHARGEMENT…"
+    "loading": "CHARGEMENT…",
+    "viewSystem": "VOIR LE SYSTÈME →",
+    "viewPositions": "VOIR LES POSTES →"
   },
   "labels": {
     "documentation": "★ DOCUMENTATION",
@@ -94,6 +96,14 @@
     "showDetails_one": "Voir le détail ({{count}})",
     "showDetails_other": "Voir tous les détails ({{count}})",
     "hideDetails": "Masquer les détails",
+    "toggleMovements": "Voir tous les mouvements",
+    "viewScenarios_one": "→ {{count}} scénario lié",
+    "viewScenarios_other": "→ {{count}} scénarios liés",
+    "legend": {
+      "tempo1": "1er tempo (quick)",
+      "tempo2": "2e tempo / arrière",
+      "movement": "Mouvement joueur"
+    },
     "backToHub": "Retour aux systèmes",
     "comingSoon": "Bientôt disponible",
     "formationTitle": "Formation",

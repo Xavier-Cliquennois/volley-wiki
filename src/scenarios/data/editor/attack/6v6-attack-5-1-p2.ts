@@ -13,6 +13,8 @@ const STATE: EditorState = {
     phase: 'attack',
     contextLabel: '5-1 · Rotation P2 · Passeur avant',
     defaultCamera: 'DEFAULT',
+    system: '5-1',
+    rotation: 'R6',
   },
   players: [
     { id: 'R4a',     label: 'R4 (P5)',        role: 'outside',  color: COLORS.outside_back },

@@ -4,6 +4,8 @@ import type {
   PhaseKind,
   PlayerRole,
   Scenario,
+  ScenarioRotationTag,
+  ScenarioSystemTag,
   TeamSize,
 } from '../scenarios/types';
 import type { BrickAction } from './bricks';
@@ -104,6 +106,9 @@ export type EditorState = {
     phase: PhaseKind;
     contextLabel: string;
     defaultCamera?: CameraPreset;
+    // Tactical tags propagated to the compiled scenario's config.
+    system?: ScenarioSystemTag;
+    rotation?: ScenarioRotationTag;
   };
   players: EditorPlayer[];
   steps: EditorStep[];

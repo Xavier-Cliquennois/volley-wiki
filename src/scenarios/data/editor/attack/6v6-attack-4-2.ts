@@ -12,6 +12,7 @@ const STATE: EditorState = {
     phase: 'attack',
     contextLabel: '4-2 · 2 passeurs en opposition · M13/M15',
     defaultCamera: 'DEFAULT',
+    system: '4-2',
   },
   players: [
     { id: 'R4a',     label: 'R4 (P4)',        role: 'outside',  color: COLORS.outside },

@@ -54,19 +54,55 @@ const ROLE_COLOR: Record<RoleCode, RoleColorKey> = {
 };
 
 // Target points where each attack is struck on our half. y=0 is the net,
-// so front-row strike points are kept just above the net (y~6).
+// so front-row strike points are kept just above the net (y~6). Back-row
+// strike points sit just behind the 3 m line (y~26).
 const ATTACK_TARGET = {
   outsideLeft: { x: 8, y: 6 },    // aile gauche du filet (P4 attack)
   centre: { x: 50, y: 6 },        // 1er tempo central (P3 attack)
   outsideRight: { x: 92, y: 6 },  // aile droite du filet (P2 attack)
-  pipe: { x: 50, y: 20 },         // pipe (centre, légèrement en retrait)
+  pipe: { x: 50, y: 26 },         // pipe (back-centre, behind 3 m line)
+  bicRight: { x: 80, y: 26 },     // bic D — back-right (OPP behind 3 m line)
+  bicLeft: { x: 20, y: 26 },      // bic A — back-left (rare in 5-1)
 };
 
 const FRONT_ZONES: ReadonlySet<ZoneKey> = new Set(['P2', 'P3', 'P4']);
 
+// Where the setter is heading once the ball is released. Sits ~1 m off the
+// net, between zones 2 and 3 — the canonical setting target in 5-1.
+const SETTER_TARGET = { x: 65, y: 14 };
+
+// Where each role attacks from when occupying a given front-row zone.
+// OHs always finish on the left antenna (their natural side); they swap
+// across the net with the OPP after the serve when needed. OPP always
+// finishes on the right antenna for the same reason. MBs hit a quick
+// in the centre regardless of where they entered the zone.
+function frontAttackTarget(role: RoleCode): { target: typeof ATTACK_TARGET.outsideLeft; zone: 'A' | 'B' | 'C'; label: string } | null {
+  if (role === 'MB1' || role === 'MB2') {
+    return { target: ATTACK_TARGET.centre, zone: 'C', label: 'Quick centre (1er tempo)' };
+  }
+  if (role === 'OH1' || role === 'OH2') {
+    return { target: ATTACK_TARGET.outsideLeft, zone: 'A', label: 'Aile gauche (P4)' };
+  }
+  if (role === 'OPP') {
+    return { target: ATTACK_TARGET.outsideRight, zone: 'B', label: 'Aile droite (Pointu)' };
+  }
+  return null;
+}
+
+// Back-row attack target for the OPP (bic) based on the zone they occupy.
+// P1 (back-right) is the canonical bic D zone. P6 (back-centre) overlaps
+// with the OH pipe lane — we label it as a centre bic. P5 (back-left) is
+// rare but legal.
+function oppBicTarget(zone: ZoneKey): { target: typeof ATTACK_TARGET.bicRight; zone: 'D' | 'pipe' | 'A'; label: string } | null {
+  if (zone === 'P1') return { target: ATTACK_TARGET.bicRight, zone: 'D', label: 'Bic D (P1 arrière droit)' };
+  if (zone === 'P6') return { target: ATTACK_TARGET.pipe, zone: 'pipe', label: 'Bic centre (P6 arrière)' };
+  if (zone === 'P5') return { target: ATTACK_TARGET.bicLeft, zone: 'A', label: 'Bic A (P5 arrière gauche)' };
+  return null;
+}
+
 // Build the attack options available in a rotation, based on who occupies
-// each front-row zone (and whether an OH is in P6 for pipe). Each attacker
-// gets a target on the net so the diagram can draw their attack trajectory.
+// each front-row zone, plus the OH pipe and the OPP back-row attack. Each
+// attacker gets a strike target so the diagram can draw their trajectory.
 function buildAttacks(id: RotationId): AttackOption[] {
   const mapping = ROTATION_MAP[id];
   const attacks: AttackOption[] = [];
@@ -74,38 +110,17 @@ function buildAttacks(id: RotationId): AttackOption[] {
   for (const [zone, role] of Object.entries(mapping) as [ZoneKey, RoleCode][]) {
     if (!FRONT_ZONES.has(zone)) continue;
     if (role === 'S' || role === 'L') continue; // setter and libero do not attack
-
-    if (role === 'MB1' || role === 'MB2') {
-      attacks.push({
-        id: `${id}-quick`,
-        attacker: role,
-        zone: 'C',
-        label: 'Quick centre (1er tempo)',
-        risk: 'low',
-        tempo: 1,
-        target: ATTACK_TARGET.centre,
-      });
-    } else if (role === 'OH1' || role === 'OH2') {
-      attacks.push({
-        id: `${id}-outside-left`,
-        attacker: role,
-        zone: 'A',
-        label: 'Aile gauche (P4)',
-        risk: 'medium',
-        tempo: 2,
-        target: ATTACK_TARGET.outsideLeft,
-      });
-    } else if (role === 'OPP') {
-      attacks.push({
-        id: `${id}-opp`,
-        attacker: role,
-        zone: 'B',
-        label: 'Aile droite (Pointu)',
-        risk: 'medium',
-        tempo: 2,
-        target: ATTACK_TARGET.outsideRight,
-      });
-    }
+    const spec = frontAttackTarget(role);
+    if (!spec) continue;
+    attacks.push({
+      id: `${id}-${role.toLowerCase()}-front`,
+      attacker: role,
+      zone: spec.zone,
+      label: spec.label,
+      risk: role === 'MB1' || role === 'MB2' ? 'low' : 'medium',
+      tempo: role === 'MB1' || role === 'MB2' ? 1 : 2,
+      target: spec.target,
+    });
   }
 
   // Pipe: an OH in P6 (back-centre) is the canonical pipe attacker in 5-1.
@@ -118,6 +133,23 @@ function buildAttacks(id: RotationId): AttackOption[] {
       risk: 'medium',
       tempo: 2,
       target: ATTACK_TARGET.pipe,
+    });
+  }
+
+  // Back-row OPP attack (bic). Adds an option whenever OPP is in the back row.
+  for (const [zone, role] of Object.entries(mapping) as [ZoneKey, RoleCode][]) {
+    if (role !== 'OPP') continue;
+    if (FRONT_ZONES.has(zone)) continue;
+    const bic = oppBicTarget(zone);
+    if (!bic) continue;
+    attacks.push({
+      id: `${id}-opp-bic`,
+      attacker: 'OPP',
+      zone: bic.zone,
+      label: bic.label,
+      risk: 'high',
+      tempo: 2,
+      target: bic.target,
     });
   }
 
@@ -169,14 +201,24 @@ const R1: Rotation = {
 };
 
 // Build the players in their service-whistle positions for a given rotation.
+// A `releasePosition` is filled in for movements we can derive from the
+// rotation alone: today, the setter's penetration target when they start
+// in the back row. Other release positions (W reception, attacker approach,
+// coverage descent) will be authored per-rotation in future iterations.
 function buildSlots(id: RotationId): PlayerSlot[] {
   const mapping = ROTATION_MAP[id];
-  return (Object.entries(mapping) as [ZoneKey, RoleCode][]).map(([zone, role]) => ({
-    role,
-    color: ROLE_COLOR[role],
-    servePosition: ZONES[zone],
-    receives: false,
-  }));
+  return (Object.entries(mapping) as [ZoneKey, RoleCode][]).map(([zone, role]) => {
+    const slot: PlayerSlot = {
+      role,
+      color: ROLE_COLOR[role],
+      servePosition: ZONES[zone],
+      receives: false,
+    };
+    if (role === 'S' && !FRONT_ZONES.has(zone)) {
+      slot.releasePosition = SETTER_TARGET;
+    }
+    return slot;
+  });
 }
 
 type RotationCopy = {

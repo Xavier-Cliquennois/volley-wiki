@@ -8,6 +8,10 @@
     "label": "PAGE UNDER CONSTRUCTION",
     "body": "Some 3D animations may still contain errors or be incomplete. Thanks for your patience — the scenarios are being finalized."
   },
+  "filters": {
+    "tacticalKicker": "TACTICAL FILTER",
+    "clear": "CLEAR ✕"
+  },
   "wizard": {
     "step1": "1 · HOW MANY PLAYERS PER TEAM?",
     "step2": "2 · WHICH GAME PHASE?",

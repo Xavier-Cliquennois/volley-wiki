@@ -12,6 +12,8 @@ const STATE: EditorState = {
     phase: 'attack',
     contextLabel: '5-1 · Rotation P5 · Pénétration longue',
     defaultCamera: 'TOP_DOWN',
+    system: '5-1',
+    rotation: 'R3',
   },
   players: [
     { id: 'P',       label: 'Passeur (P5)',   role: 'setter',   color: COLORS.setter },

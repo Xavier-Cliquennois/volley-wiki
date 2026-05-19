@@ -8,6 +8,10 @@
     "label": "PAGE EN COURS DE CONSTRUCTION",
     "body": "Certaines animations 3D peuvent encore comporter des erreurs ou être incomplètes. Merci de votre indulgence — les scénarios sont en cours de finalisation."
   },
+  "filters": {
+    "tacticalKicker": "FILTRE TACTIQUE",
+    "clear": "EFFACER ✕"
+  },
   "wizard": {
     "step1": "1 · COMBIEN DE JOUEURS PAR ÉQUIPE ?",
     "step2": "2 · QUELLE PHASE DE JEU ?",

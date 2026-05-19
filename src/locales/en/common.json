@@ -30,7 +30,9 @@
     "readGuide": "READ THE GUIDE →",
     "showAll": "SHOW ALL",
     "reset": "RESET",
-    "loading": "LOADING…"
+    "loading": "LOADING…",
+    "viewSystem": "VIEW TEAM SYSTEM →",
+    "viewPositions": "VIEW POSITIONS →"
   },
   "labels": {
     "documentation": "★ DOCUMENTATION",
@@ -94,6 +96,14 @@
     "showDetails_one": "Show detail ({{count}})",
     "showDetails_other": "Show all details ({{count}})",
     "hideDetails": "Hide details",
+    "toggleMovements": "Show all movements",
+    "viewScenarios_one": "→ {{count}} linked scenario",
+    "viewScenarios_other": "→ {{count}} linked scenarios",
+    "legend": {
+      "tempo1": "1st tempo (quick)",
+      "tempo2": "2nd tempo / back-row",
+      "movement": "Player movement"
+    },
     "backToHub": "Back to systems",
     "comingSoon": "Coming soon",
     "formationTitle": "Formation",

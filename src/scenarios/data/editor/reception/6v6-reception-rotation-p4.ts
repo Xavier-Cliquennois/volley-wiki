@@ -13,6 +13,8 @@ const STATE: EditorState = {
     phase: 'reception',
     contextLabel: '5-1 · Réception à 3 · Rotation P4 (passeur avant)',
     defaultCamera: 'BEHIND_SERVE',
+    system: '5-1',
+    rotation: 'R4',
   },
   players: [
     { id: 'P',       label: 'Passeur (P4)',  role: 'setter',   color: COLORS.setter },

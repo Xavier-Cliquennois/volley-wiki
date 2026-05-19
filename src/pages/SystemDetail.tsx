@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCurrentLang } from '../i18n/paths';
@@ -8,6 +9,22 @@ import LevelFilterPanel from '../components/LevelFilterPanel';
 import { meetsLevel, useUserLevel } from '../userLevel/useUserLevel';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
+import { SCENARIOS } from '../scenarios/data';
+import type { ScenarioRotationTag, ScenarioSystemTag } from '../scenarios/types';
+
+// Tactical systems whose scenarios live under /scenarios with tags. Used to
+// link a rotation back to the matching scenario list.
+const TAGGABLE_SYSTEMS: readonly string[] = ['5-1', '6-2', '4-2'];
+
+// Count scenarios tagged with a specific system + rotation pair. Rotation
+// is optional: callers can request the total for a system.
+function countTaggedScenarios(system: ScenarioSystemTag, rotation?: ScenarioRotationTag): number {
+  return SCENARIOS.filter(s => {
+    if (s.config.system !== system) return false;
+    if (rotation && s.config.rotation !== rotation) return false;
+    return true;
+  }).length;
+}
 
 const ROTATION_ORDER: RotationId[] = ['R1', 'R2', 'R3', 'R4', 'R5', 'R6'];
 
@@ -15,6 +32,7 @@ export default function SystemDetail() {
   const { slug } = useParams<{ slug: string }>();
   const lang = useCurrentLang();
   const { t } = useTranslation('common');
+  const [showMovements, setShowMovements] = useState(false);
 
   const system = slug ? getSystemById(slug) : undefined;
   const hubPath = system?.discipline === 'beach' ? '/beach/systems' : '/systems';
@@ -88,25 +106,34 @@ export default function SystemDetail() {
       </section>
 
       <section style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, margin: 0 }}>
-          {t(system.teamSize === 6 || system.teamSize === 5 ? 'systems.rotationsTitle' : 'systems.formationTitle')}
-        </h2>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' }}>
+          <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, margin: 0 }}>
+            {t(system.teamSize === 6 || system.teamSize === 5 ? 'systems.rotationsTitle' : 'systems.formationTitle')}
+          </h2>
+          <MovementsToggle value={showMovements} onChange={setShowMovements} />
+        </div>
         {ROTATION_ORDER.map(rid => {
           const rotation = system.rotations[rid];
           if (!rotation) return null;
           const isSingleFormation =
             (system.teamSize !== 6 && system.teamSize !== 5);
+          const systemTag = TAGGABLE_SYSTEMS.includes(system.id)
+            ? (system.id as ScenarioSystemTag)
+            : undefined;
           return (
             <RotationCard
               key={rid}
               rotation={rotation}
               hideHeader={isSingleFormation}
+              showMovements={showMovements}
+              positionsHref={systemIdToPositionsLink(system.id) ?? undefined}
+              systemTag={systemTag}
             />
           );
         })}
       </section>
 
-      <div>
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
         <Link
           to={`/${lang}${hubPath}`}
           style={{
@@ -124,9 +151,56 @@ export default function SystemDetail() {
         >
           ← {t('systems.backToHub')}
         </Link>
+        {(() => {
+          const positionsLink = systemIdToPositionsLink(system.id);
+          if (!positionsLink) return null;
+          return (
+            <Link
+              to={`/${lang}${positionsLink}`}
+              style={{
+                display: 'inline-block',
+                padding: '10px 18px',
+                border: '3px solid var(--ink)',
+                background: 'var(--paper)',
+                fontFamily: '"Bungee", sans-serif',
+                fontSize: 12,
+                letterSpacing: '0.08em',
+                textDecoration: 'none',
+                color: 'var(--ink)',
+                boxShadow: '3px 3px 0 var(--ink)',
+              }}
+            >
+              {t('actions.viewPositions')}
+            </Link>
+          );
+        })()}
       </div>
     </div>
   );
+}
+
+// Map a SystemId to a /positions/<size>/<config> path. Mirrors the inverse
+// table in Positions.tsx — kept here so SystemDetail can offer a back-link
+// to the position guide for systems with a matching layout.
+function systemIdToPositionsLink(id: string): string | null {
+  switch (id) {
+    case '5-1':
+    case '6-2':
+    case '4-2':
+      return `/positions/6v6/${id}`;
+    case '5v5-5-1':
+      return '/positions/5v5/3F-2B';
+    case '5v5-4-2':
+      return '/positions/5v5/2F-3B';
+    case '4v4-diamant':
+      return '/positions/4v4/losange';
+    case '4v4-box':
+      return '/positions/4v4/carre';
+    case '4v4-ligne':
+      return '/positions/4v4/3-1';
+    default:
+      return null;
+  }
 }
 
 function ProsCons({ title, items, accent }: { title: string; items: string[]; accent: string }) {
@@ -159,11 +233,68 @@ function ProsCons({ title, items, accent }: { title: string; items: string[]; ac
   );
 }
 
-function RotationCard({ rotation, hideHeader }: { rotation: Rotation; hideHeader?: boolean }) {
+function MovementsToggle({ value, onChange }: { value: boolean; onChange: (next: boolean) => void }) {
   const { t } = useTranslation('common');
+  return (
+    <button
+      type="button"
+      onClick={() => onChange(!value)}
+      aria-pressed={value}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 8,
+        padding: '6px 12px',
+        border: '2.5px solid var(--ink)',
+        background: value ? 'var(--teal)' : 'var(--cream)',
+        color: value ? 'var(--cream)' : 'var(--ink)',
+        fontFamily: '"Bungee", sans-serif',
+        fontSize: 11,
+        letterSpacing: '0.08em',
+        boxShadow: '2px 2px 0 var(--ink)',
+        cursor: 'pointer',
+      }}
+    >
+      <span
+        aria-hidden="true"
+        style={{
+          display: 'inline-block',
+          width: 10,
+          height: 10,
+          border: '2px solid currentColor',
+          background: value ? 'currentColor' : 'transparent',
+        }}
+      />
+      {t('systems.toggleMovements')}
+    </button>
+  );
+}
+
+function RotationCard({
+  rotation,
+  hideHeader,
+  showMovements,
+  positionsHref,
+  systemTag,
+}: {
+  rotation: Rotation;
+  hideHeader?: boolean;
+  showMovements: boolean;
+  positionsHref?: string;
+  systemTag?: ScenarioSystemTag;
+}) {
+  const { t } = useTranslation('common');
+  const lang = useCurrentLang();
   const [userLevel] = useUserLevel();
 
   const visibleDetails = rotation.details.filter(d => meetsLevel(userLevel, d.requires));
+
+  const scenarioCount = systemTag
+    ? countTaggedScenarios(systemTag, rotation.id as ScenarioRotationTag)
+    : 0;
+  const scenariosHref = systemTag
+    ? `/${lang}/scenarios?system=${systemTag}&rotation=${rotation.id}`
+    : null;
 
   return (
     <article
@@ -209,7 +340,7 @@ function RotationCard({ rotation, hideHeader }: { rotation: Rotation; hideHeader
         {rotation.summary}
       </p>
 
-      <RotationDiagram rotation={rotation} />
+      <RotationDiagram rotation={rotation} showMovements={showMovements} positionsHref={positionsHref} />
 
       {visibleDetails.length > 0 && (
         <div style={{ marginTop: 4, display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -239,6 +370,29 @@ function RotationCard({ rotation, hideHeader }: { rotation: Rotation; hideHeader
             </div>
           ))}
         </div>
+      )}
+
+      {scenariosHref && scenarioCount > 0 && (
+        <Link
+          to={scenariosHref}
+          style={{
+            alignSelf: 'flex-start',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 8,
+            padding: '8px 14px',
+            border: '2.5px solid var(--ink)',
+            background: 'var(--yellow)',
+            color: 'var(--ink)',
+            textDecoration: 'none',
+            fontFamily: '"Bungee", sans-serif',
+            fontSize: 11,
+            letterSpacing: '0.06em',
+            boxShadow: '2px 2px 0 var(--ink)',
+          }}
+        >
+          {t('systems.viewScenarios', { count: scenarioCount })}
+        </Link>
       )}
     </article>
   );

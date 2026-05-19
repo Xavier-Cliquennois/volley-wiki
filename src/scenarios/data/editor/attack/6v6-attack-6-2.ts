@@ -12,6 +12,7 @@ const STATE: EditorState = {
     phase: 'attack',
     contextLabel: '6-2 · Passeur pénétrant · Intermédiaire',
     defaultCamera: 'DEFAULT',
+    system: '6-2',
   },
   players: [
     { id: 'R4a',     label: 'R4 (P4)',          role: 'outside',  color: COLORS.outside },

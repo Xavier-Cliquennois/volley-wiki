@@ -12,6 +12,7 @@ const STATE: EditorState = {
     phase: 'reception',
     contextLabel: '5-1 · Réception à 3 · Service adverse',
     defaultCamera: 'BEHIND_SERVE',
+    system: '5-1',
   },
   players: [
     { id: 'R4a',     label: 'R4 gauche',       role: 'outside',  color: COLORS.outside },

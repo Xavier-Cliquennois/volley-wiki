@@ -11,6 +11,12 @@
 export type TeamSize = 4 | 5 | 6;
 export type PhaseKind = 'attack' | 'defense' | 'reception';
 
+// Optional tactical tags so a scenario can be linked back to a specific
+// team system + rotation. Used by the /scenarios filter and by the
+// SystemDetail page to show "see related scenarios" links.
+export type ScenarioSystemTag = '5-1' | '6-2' | '4-2';
+export type ScenarioRotationTag = 'R1' | 'R2' | 'R3' | 'R4' | 'R5' | 'R6';
+
 export type PlayerRole =
   | 'setter'
   | 'opposite'
@@ -84,6 +90,10 @@ export type ScenarioConfig = {
   teamSize: TeamSize;
   phase: PhaseKind;
   contextLabel: string;
+  // Tactical tags — present only on scenarios that demonstrate a specific
+  // system (and optionally a specific rotation within that system).
+  system?: ScenarioSystemTag;
+  rotation?: ScenarioRotationTag;
 };
 
 export type ScenarioSummary = {

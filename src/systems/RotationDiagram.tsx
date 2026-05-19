@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Court, type CourtArrow, type CourtLayout, type CourtPlayer } from '../components/court';
 import { useCurrentLang } from '../i18n/paths';
@@ -52,7 +54,12 @@ function roleCaption(role: RoleCode, lang: string): string {
   return I18N_CODES[role];
 }
 
-function slotToPlayer(slot: PlayerSlot, lang: string): CourtPlayer {
+function slotToPlayer(
+  slot: PlayerSlot,
+  lang: string,
+  onActivate?: (role: RoleCode) => void,
+  tooltip?: string,
+): CourtPlayer {
   const pastille = PASTILLE_LABEL[slot.role];
   return {
     id: slot.role,
@@ -62,18 +69,20 @@ function slotToPlayer(slot: PlayerSlot, lang: string): CourtPlayer {
     sub: pastille.sub,
     role: slot.color,
     caption: roleCaption(slot.role, lang),
+    onClick: onActivate ? () => onActivate(slot.role) : undefined,
+    title: tooltip,
   };
 }
 
 // Build one arrow per attack option: trajectory from the attacker's serve
-// position to the strike point on the net. The line starts at the player's
-// center; the player circle (z-index 2) sits on top so the arrow visually
-// emerges from the player. Backoff is tiny because the target is empty
-// space (no player at the net) — the default 24-unit backoff would consume
-// short trajectories like MB quick from P3.
+// position to the strike point. The line starts at the player's center; the
+// player circle (z-index 2) sits on top so the arrow visually emerges from
+// the player. Backoff is tiny because the target is empty space (no player
+// at the net) — the default 24-unit backoff would consume short trajectories
+// like MB quick from P3.
 const ATTACK_BACKOFF = 4;
 
-function attackArrows(rotation: Rotation): CourtArrow[] {
+function attackArrows(rotation: Rotation, hoveredId: string | null): CourtArrow[] {
   return rotation.attacks
     .map(attack => {
       const attacker = rotation.slots.find(s => s.role === attack.attacker);
@@ -84,21 +93,57 @@ function attackArrows(rotation: Rotation): CourtArrow[] {
         to: attack.target,
         kind: attack.risk === 'low' ? 'main' : 'alt',
         backoff: ATTACK_BACKOFF,
+        dimmed: hoveredId !== null && hoveredId !== attack.id,
       } as CourtArrow;
     })
     .filter((a): a is CourtArrow => a !== null);
 }
 
+// Player movement arrows (penetration, approach, coverage…). One arrow per
+// slot that has a `releasePosition`. Drawn under attack arrows so the ball
+// trajectory stays the primary signal.
+function movementArrows(rotation: Rotation): CourtArrow[] {
+  return rotation.slots
+    .filter(s => !!s.releasePosition)
+    .map(slot => ({
+      id: `movement-${slot.role}`,
+      from: slot.servePosition,
+      to: slot.releasePosition!,
+      kind: 'movement' as const,
+    }));
+}
+
 type Props = {
   rotation: Rotation;
+  // When true, render the secondary movement arrows (penetration, approach…).
+  showMovements?: boolean;
+  // Optional positions-page link target so clicking a pastille jumps to the
+  // matching position guide. Omitted when no positions page exists.
+  positionsHref?: string;
 };
 
-export default function RotationDiagram({ rotation }: Props) {
+export default function RotationDiagram({ rotation, showMovements = false, positionsHref }: Props) {
   const { t } = useTranslation('common');
   const lang = useCurrentLang();
+  const navigate = useNavigate();
+  const [hoveredAttackId, setHoveredAttackId] = useState<string | null>(null);
 
-  const players = rotation.slots.map(s => slotToPlayer(s, lang));
-  const arrows: CourtArrow[] = attackArrows(rotation);
+  const tooltipFor = (role: RoleCode) => {
+    const caption = roleCaption(role, lang);
+    return positionsHref ? `${caption} — ${t('actions.viewPositions')}` : caption;
+  };
+
+  const onActivate = positionsHref
+    ? () => navigate(`/${lang}${positionsHref}`)
+    : undefined;
+
+  const players = rotation.slots.map(s =>
+    slotToPlayer(s, lang, onActivate, tooltipFor(s.role)),
+  );
+  const arrows: CourtArrow[] = [
+    ...(showMovements ? movementArrows(rotation) : []),
+    ...attackArrows(rotation, hoveredAttackId),
+  ];
 
   const layout: CourtLayout = { players, arrows };
 
@@ -112,6 +157,8 @@ export default function RotationDiagram({ rotation }: Props) {
           idSuffix={`rotation-${rotation.id}`}
         />
       </div>
+
+      <DiagramLegend showMovements={showMovements} />
 
       {rotation.attacks.length > 0 && (
         <div>
@@ -134,7 +181,12 @@ export default function RotationDiagram({ rotation }: Props) {
             }}
           >
             {rotation.attacks.map(attack => (
-              <AttackCard key={attack.id} attack={attack} />
+              <AttackCard
+                key={attack.id}
+                attack={attack}
+                hovered={hoveredAttackId === attack.id}
+                onHover={setHoveredAttackId}
+              />
             ))}
           </div>
         </div>
@@ -143,19 +195,36 @@ export default function RotationDiagram({ rotation }: Props) {
   );
 }
 
-function AttackCard({ attack }: { attack: AttackOption }) {
+function AttackCard({
+  attack,
+  hovered,
+  onHover,
+}: {
+  attack: AttackOption;
+  hovered: boolean;
+  onHover: (id: string | null) => void;
+}) {
   const { t } = useTranslation('common');
   const riskColor = RISK_COLORS[attack.risk];
   return (
     <div
+      onMouseEnter={() => onHover(attack.id)}
+      onMouseLeave={() => onHover(null)}
+      onFocus={() => onHover(attack.id)}
+      onBlur={() => onHover(null)}
+      tabIndex={0}
       style={{
         border: '2.5px solid var(--ink)',
-        background: 'var(--cream)',
+        background: hovered ? 'var(--paper)' : 'var(--cream)',
         padding: '10px 12px',
-        boxShadow: '2px 2px 0 var(--ink)',
+        boxShadow: hovered ? '4px 4px 0 var(--ink)' : '2px 2px 0 var(--ink)',
+        transform: hovered ? 'translate(-2px, -2px)' : 'translate(0, 0)',
+        transition: 'transform 0.12s ease-out, box-shadow 0.12s ease-out, background 0.12s ease-out',
+        cursor: 'pointer',
         display: 'flex',
         flexDirection: 'column',
         gap: 6,
+        outline: 'none',
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
@@ -195,5 +264,64 @@ function AttackCard({ attack }: { attack: AttackOption }) {
         {t('systems.attackerLabel', { role: attack.attacker })} · {t('systems.tempoLabel', { tempo: attack.tempo })}
       </span>
     </div>
+  );
+}
+
+function DiagramLegend({ showMovements }: { showMovements: boolean }) {
+  const { t } = useTranslation('common');
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '8px 16px',
+        padding: '8px 12px',
+        border: '1.5px dashed rgba(26,24,18,0.35)',
+        fontFamily: '"DM Mono", monospace',
+        fontSize: 10,
+        letterSpacing: '0.06em',
+        color: 'var(--ink)',
+        opacity: 0.85,
+      }}
+    >
+      <LegendItem
+        color="#e2542e"
+        kind="solid"
+        label={t('systems.legend.tempo1')}
+      />
+      <LegendItem
+        color="#8a7a62"
+        kind="dashed"
+        label={t('systems.legend.tempo2')}
+      />
+      {showMovements && (
+        <LegendItem
+          color="#1f7a8c"
+          kind="dotted"
+          label={t('systems.legend.movement')}
+        />
+      )}
+    </div>
+  );
+}
+
+function LegendItem({ color, kind, label }: { color: string; kind: 'solid' | 'dashed' | 'dotted'; label: string }) {
+  const dash = kind === 'dashed' ? '6 5' : kind === 'dotted' ? '2 4' : undefined;
+  const strokeWidth = kind === 'solid' ? 3 : 2;
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+      <svg width={28} height={10} aria-hidden="true">
+        <line
+          x1={2}
+          y1={5}
+          x2={26}
+          y2={5}
+          stroke={color}
+          strokeWidth={strokeWidth}
+          strokeDasharray={dash}
+        />
+      </svg>
+      {label}
+    </span>
   );
 }

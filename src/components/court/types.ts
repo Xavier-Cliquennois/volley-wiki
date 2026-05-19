@@ -35,12 +35,17 @@ export type CourtArrow = {
   id: string;
   from: CourtPoint;
   to: CourtPoint;
-  kind?: 'main' | 'alt';
+  // Visual variant. 'main' = thick orange ball trajectory (quick attacks).
+  // 'alt' = dashed grey ball trajectory (other tempos). 'movement' = thin
+  // teal dotted line showing a player movement (penetration, approach…).
+  kind?: 'main' | 'alt' | 'movement';
   // Optional override for the endpoint backoff (SVG user units). The default
   // backoff is generous so the arrowhead doesn't overlap a player at the
   // target. Override with a small value when the target is in empty space
   // (e.g. attack trajectories pointing at the net).
   backoff?: number;
+  // Render the arrow faded (used to highlight a hovered companion arrow).
+  dimmed?: boolean;
 };
 
 export type CourtBall = CourtPoint;

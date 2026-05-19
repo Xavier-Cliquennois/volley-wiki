@@ -75,13 +75,28 @@ type ArrowsProps = {
   view: CourtView;
 };
 
+// Arrow visual styles. Each kind has its own stroke, width, dash pattern,
+// marker, and default backoff distance.
+const ARROW_STYLE = {
+  main:     { stroke: '#e2542e', strokeWidth: 4, dash: undefined,   defaultBackoff: 24 },
+  alt:      { stroke: '#8a7a62', strokeWidth: 2, dash: '6,5',       defaultBackoff: 18 },
+  movement: { stroke: '#1f7a8c', strokeWidth: 2, dash: '2,4',       defaultBackoff: 14 },
+} as const;
+
 export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
   if (arrows.length === 0) return null;
   const mainMarkerId = `arrow-main-${idSuffix}`;
   const altMarkerId = `arrow-alt-${idSuffix}`;
+  const movementMarkerId = `arrow-movement-${idSuffix}`;
   const vbH = VB_H_BY_VIEW[view];
   const sx = (x: number) => (x / 100) * VB_W;
   const sy = (y: number) => (y / 100) * vbH;
+
+  const markerForKind: Record<'main' | 'alt' | 'movement', string> = {
+    main: mainMarkerId,
+    alt: altMarkerId,
+    movement: movementMarkerId,
+  };
 
   return (
     <svg
@@ -106,7 +121,7 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
           refY="5.5"
           orient="auto"
         >
-          <polygon points="0 0, 14 5.5, 0 11" fill="#e2542e" />
+          <polygon points="0 0, 14 5.5, 0 11" fill={ARROW_STYLE.main.stroke} />
         </marker>
         <marker
           id={altMarkerId}
@@ -117,17 +132,25 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
           refY="4"
           orient="auto"
         >
-          <polygon points="0 0, 11 4, 0 8" fill="#8a7a62" />
+          <polygon points="0 0, 11 4, 0 8" fill={ARROW_STYLE.alt.stroke} />
+        </marker>
+        <marker
+          id={movementMarkerId}
+          markerUnits="userSpaceOnUse"
+          markerWidth="9"
+          markerHeight="7"
+          refX="8"
+          refY="3.5"
+          orient="auto"
+        >
+          <polygon points="0 0, 9 3.5, 0 7" fill={ARROW_STYLE.movement.stroke} />
         </marker>
       </defs>
       {arrows.map(arrow => {
-        const isMain = arrow.kind !== 'alt';
-        const backoff = arrow.backoff ?? (isMain ? 24 : 18);
+        const kind = arrow.kind ?? 'main';
+        const style = ARROW_STYLE[kind];
+        const backoff = arrow.backoff ?? style.defaultBackoff;
         const end = shortenAvoidingPlayers(arrow.from, arrow.to, players, backoff, sx, sy);
-        const stroke = isMain ? '#e2542e' : '#8a7a62';
-        const strokeWidth = isMain ? 4 : 2;
-        const dash = isMain ? undefined : '6,5';
-        const markerId = isMain ? mainMarkerId : altMarkerId;
         return (
           <line
             key={arrow.id}
@@ -135,10 +158,12 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
             y1={sy(arrow.from.y)}
             x2={sx(end.x)}
             y2={sy(end.y)}
-            stroke={stroke}
-            strokeWidth={strokeWidth}
-            strokeDasharray={dash}
-            markerEnd={`url(#${markerId})`}
+            stroke={style.stroke}
+            strokeWidth={style.strokeWidth}
+            strokeDasharray={style.dash}
+            markerEnd={`url(#${markerForKind[kind]})`}
+            opacity={arrow.dimmed ? 0.25 : 1}
+            style={{ transition: 'opacity 0.12s ease-out' }}
           />
         );
       })}

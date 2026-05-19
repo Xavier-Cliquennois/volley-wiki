@@ -7,6 +7,30 @@ import { Head } from '../seo/Head';
 import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
+import { getSystemById } from '../systems/data';
+import type { SystemId } from '../systems/types';
+
+// Map a (teamSize, configId) pair to the matching SystemId so the position
+// page can link out to /systems/<id>. 6v6 config slugs already match system
+// IDs; the smaller formats use different slugs and need an explicit table.
+function configToSystemId(teamSize: TeamSize, configId: string): SystemId | null {
+  if (teamSize === 6) {
+    if (configId === '5-1' || configId === '6-2' || configId === '4-2') return configId;
+    return null;
+  }
+  if (teamSize === 5) {
+    if (configId === 'pentagon' || configId === '3F-2B') return '5v5-5-1';
+    if (configId === '2F-3B') return '5v5-4-2';
+    return null;
+  }
+  if (teamSize === 4) {
+    if (configId === 'losange') return '4v4-diamant';
+    if (configId === 'carre') return '4v4-box';
+    if (configId === '3-1') return '4v4-ligne';
+    return null;
+  }
+  return null;
+}
 
 const SLUG_TO_SIZE: Record<TeamSizeSlug, 4 | 5 | 6> = { '4v4': 4, '5v5': 5, '6v6': 6 };
 
@@ -389,6 +413,33 @@ export default function Positions() {
         </div>
         <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 14, marginBottom: 8 }}>{configName}</div>
         <p style={{ margin: 0, fontSize: 14, opacity: 0.7, lineHeight: 1.5 }}>{configDescription}</p>
+        {(() => {
+          const systemId = configToSystemId(teamSize, configId);
+          const system = systemId ? getSystemById(systemId) : undefined;
+          if (!system) return null;
+          return (
+            <Link
+              to={`/${lang}/systems/${systemId}`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                marginTop: 12,
+                padding: '6px 12px',
+                border: '2.5px solid var(--ink)',
+                background: 'var(--cream)',
+                fontFamily: '"Bungee", sans-serif',
+                fontSize: 11,
+                letterSpacing: '0.08em',
+                color: 'var(--ink)',
+                textDecoration: 'none',
+                boxShadow: '2px 2px 0 var(--ink)',
+              }}
+            >
+              {tCommon('actions.viewSystem')}
+            </Link>
+          );
+        })()}
       </div>
 
       <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>

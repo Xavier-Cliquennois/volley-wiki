@@ -12,6 +12,8 @@ const STATE: EditorState = {
     phase: 'attack',
     contextLabel: '5-1 · Rotation P4 · Passeur avant',
     defaultCamera: 'DEFAULT',
+    system: '5-1',
+    rotation: 'R4',
   },
   players: [
     { id: 'L',       label: 'Libéro (P5)',    role: 'libero',   color: COLORS.libero },
