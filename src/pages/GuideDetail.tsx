@@ -9,6 +9,8 @@ import GuideLectureDuJeu from '../guides/GuideLectureDuJeu';
 import GuideIndoorBeach from '../guides/GuideIndoorBeach';
 import GuideSignauxArbitre from '../guides/GuideSignauxArbitre';
 import GuideErreursTypiques from '../guides/GuideErreursTypiques';
+import GuidePasseSetter from '../guides/GuidePasseSetter';
+import GuideJeuCollectif from '../guides/GuideJeuCollectif';
 import { Head } from '../seo/Head';
 import { TEAM_SIZES } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
@@ -27,6 +29,8 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   'indoor-vs-beach': GuideIndoorBeach,
   'signaux-arbitre': GuideSignauxArbitre,
   'erreurs-typiques': GuideErreursTypiques,
+  'passe-setter': GuidePasseSetter,
+  'jeu-collectif': GuideJeuCollectif,
 };
 
 const DEFENSE_SLUG = 'positionnement-defense';

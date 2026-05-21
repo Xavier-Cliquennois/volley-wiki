@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
+import DrillList from '../drills/DrillList';
 
 type TimingStep = { title: string; desc: string };
 type TypePoint = { label: string; text: string };
@@ -17,6 +18,7 @@ type VideoItem = { title: string; url: string };
 
 export default function GuideContre() {
   const { t } = useTranslation('guideContent');
+  const { t: tD } = useTranslation('drills');
 
   const timingSteps = t('contre.timingSteps.items', { returnObjects: true }) as TimingStep[];
   const contreTypes = t('contre.types.items', { returnObjects: true }) as ContreType[];
@@ -252,6 +254,12 @@ export default function GuideContre() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Drills */}
+      <section>
+        <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.block') })}</h2>
+        <DrillList skill="block" />
       </section>
 
       {/* Vidéos */}

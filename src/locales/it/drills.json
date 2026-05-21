@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Esercizi · {{skill}}",
+  "skills": {
+    "reception": "Ricezione",
+    "set": "Alzata",
+    "attack": "Attacco",
+    "defense": "Difesa",
+    "serve": "Servizio",
+    "block": "Muro",
+    "team-play": "Gioco di squadra"
+  },
+  "levels": {
+    "all": "Tutti",
+    "beginner": "Principiante",
+    "intermediate": "Intermedio",
+    "advanced": "Avanzato"
+  },
+  "levelShort": {
+    "beginner": "PRI",
+    "intermediate": "INT",
+    "advanced": "AVA"
+  },
+  "teamSize": {
+    "all": "Tutti i formati"
+  },
+  "filters": {
+    "level": "Livello",
+    "format": "Formato"
+  },
+  "count": "{{visible}} / {{total}} esercizi",
+  "empty": "Nessun esercizio corrisponde a questi filtri. Allarga il livello o il formato.",
+  "card": {
+    "goal": "Obiettivo",
+    "variants": "Varianti per livello",
+    "criteria": "Criteri di successo",
+    "cues": "Suggerimenti del coach",
+    "source": "Fonte"
+  }
+}

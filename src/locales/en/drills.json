@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Drills · {{skill}}",
+  "skills": {
+    "reception": "Reception",
+    "set": "Setting",
+    "attack": "Attack",
+    "defense": "Defense",
+    "serve": "Serve",
+    "block": "Block",
+    "team-play": "Team play"
+  },
+  "levels": {
+    "all": "All",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "levelShort": {
+    "beginner": "BEG",
+    "intermediate": "INT",
+    "advanced": "ADV"
+  },
+  "teamSize": {
+    "all": "All formats"
+  },
+  "filters": {
+    "level": "Level",
+    "format": "Format"
+  },
+  "count": "{{visible}} / {{total}} drills",
+  "empty": "No drill matches these filters. Broaden the level or format.",
+  "card": {
+    "goal": "Goal",
+    "variants": "Level variants",
+    "criteria": "Success criteria",
+    "cues": "Coaching cues",
+    "source": "Source"
+  }
+}

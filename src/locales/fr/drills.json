@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Drills · {{skill}}",
+  "skills": {
+    "reception": "Réception",
+    "set": "Passe (passeur)",
+    "attack": "Attaque",
+    "defense": "Défense",
+    "serve": "Service",
+    "block": "Contre",
+    "team-play": "Jeu collectif"
+  },
+  "levels": {
+    "all": "Tous",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé"
+  },
+  "levelShort": {
+    "beginner": "DÉB",
+    "intermediate": "INT",
+    "advanced": "AVA"
+  },
+  "teamSize": {
+    "all": "Tous formats"
+  },
+  "filters": {
+    "level": "Niveau",
+    "format": "Format"
+  },
+  "count": "{{visible}} / {{total}} drills",
+  "empty": "Aucun drill ne correspond à ces filtres. Élargissez le niveau ou le format.",
+  "card": {
+    "goal": "Objectif",
+    "variants": "Variantes par niveau",
+    "criteria": "Critères de réussite",
+    "cues": "Cues coach",
+    "source": "Source"
+  }
+}

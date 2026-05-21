@@ -63,13 +63,14 @@ Tests interactifs courts pour valider la compréhension.
 - Choix de l'option d'attaque selon la qualité de la réception.
 - Capitalise sur le moteur 3D et le composant `Court`. ~1-2 semaines de dev.
 
-### 3.3 — Exercices / drills (Coachs et capitaines)
-Pour chaque skill (passe, attaque, défense, service, contre) :
-- Objectif technique
-- Mise en place (matos, joueurs, durée)
-- Variantes débutant / intermédiaire / avancé
-- Critères de réussite
-- ~30 drills à rédiger → gros volume de contenu, peu de tech.
+### 3.3 — Exercices / drills (Coachs et capitaines) ✅
+- [x] **30 drills rédigés** couvrant 7 skills : réception (4), passeur (4), attaque (5), défense (5), service (4), contre (4), jeu collectif (4).
+- [x] Format roadmap respecté pour chaque drill : objectif technique, setup (durée / nb joueurs / matériel / tailles d'équipe), variantes Débutant–Intermédiaire–Avancé, critères de réussite, cues coach (optionnels), sources.
+- [x] **Source de vérité unique** dans `src/drills/data.ts` (TS typé), composants `<DrillCard>` et `<DrillList>` avec filtres niveau + format d'équipe et pré-sélection sur le niveau utilisateur global.
+- [x] **Intégration dans les 5 guides skills existants** : `service`, `reception` (filtré par teamSize courant), `attaque`, `contre`, `positionnement-defense` — chaque guide affiche son lot de drills filtrables.
+- [x] **2 nouveaux guides courts** : `/guides/passe-setter` (mains/footwork/distribution + 4 drills) et `/guides/jeu-collectif` (3 phases / couverture / communication + 4 drills).
+- [x] i18n : FR (contenu drills + sections guides) + EN (titres + listing hub).
+- Sources d'inspiration : JVA, The Art of Coaching Volleyball, Mark Lebedew, Sask Volleyball, Volleyball XL, Coaching Volleyball, Better at Beach.
 
 ### 3.4 — Comparatif indoor ↔ beach ✅
 - [x] Guide livré à `/guides/indoor-vs-beach` (Tactique, ~15 min, Intermédiaire) en 7 sections.
@@ -119,7 +120,7 @@ Pour chaque skill (passe, attaque, défense, service, contre) :
 | ✅ P2 | Comparatif indoor ↔ beach | Livré — tableau 16 lignes + 7 sections |
 | 🟢 P3 | Quiz interactif | Engageant mais demande du temps de dev |
 | ✅ P3 | Erreurs typiques + signaux arbitre | Livré — 2 guides + 15 signaux SVG + 20 erreurs |
-| 🟢 P3 | Exercices / drills | Beaucoup de rédaction, peu de tech — bon contenu de fond |
+| ✅ P3 | Exercices / drills | Livré — 30 drills, 7 skills, intégrés dans 5 guides + 2 nouveaux guides |
 
 ---
 

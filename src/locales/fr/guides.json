@@ -14,6 +14,22 @@
       "readingTime": "~15 min",
       "level": "Débutant"
     },
+    "passe-setter": {
+      "title": "Guide du passeur",
+      "subtitle": "Triangle des mains, footwork et décisions de distribution",
+      "category": "Technique",
+      "description": "Forme des mains, transferts de poids, lecture du bloc et choix de distribution selon la qualité de réception. Drills inclus.",
+      "readingTime": "~10 min",
+      "level": "Intermédiaire"
+    },
+    "jeu-collectif": {
+      "title": "Jeu collectif et transitions",
+      "subtitle": "Side-out, couverture, transitions et communication",
+      "category": "Tactique",
+      "description": "Les 3 phases du jeu, triangle de couverture, vocabulaire et drills collectifs (pepper, wash, queen of the court).",
+      "readingTime": "~10 min",
+      "level": "Intermédiaire"
+    },
     "reception": {
       "title": "Guide de la réception",
       "subtitle": "Manchette, plateforme, systèmes et lecture du service",

@@ -14,6 +14,22 @@
       "readingTime": "~15 min",
       "level": "Beginner"
     },
+    "passe-setter": {
+      "title": "Setter guide",
+      "subtitle": "Hand triangle, footwork and distribution decisions",
+      "category": "Technique",
+      "description": "Hand shape, weight transfer, reading the block and choosing distribution based on pass quality. Drills included.",
+      "readingTime": "~10 min",
+      "level": "Intermediate"
+    },
+    "jeu-collectif": {
+      "title": "Team play and transitions",
+      "subtitle": "Side-out, coverage, transitions and communication",
+      "category": "Tactics",
+      "description": "The 3 phases of play, coverage triangle, vocabulary and team drills (pepper, wash, queen of the court).",
+      "readingTime": "~10 min",
+      "level": "Intermediate"
+    },
     "reception": {
       "title": "Reception guide",
       "subtitle": "Bump, platform, systems and reading the serve",

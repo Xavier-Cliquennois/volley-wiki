@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Ćwiczenia · {{skill}}",
+  "skills": {
+    "reception": "Przyjęcie",
+    "set": "Rozegranie",
+    "attack": "Atak",
+    "defense": "Obrona",
+    "serve": "Zagrywka",
+    "block": "Blok",
+    "team-play": "Gra zespołowa"
+  },
+  "levels": {
+    "all": "Wszystkie",
+    "beginner": "Początkujący",
+    "intermediate": "Średniozaawansowany",
+    "advanced": "Zaawansowany"
+  },
+  "levelShort": {
+    "beginner": "POC",
+    "intermediate": "ŚR",
+    "advanced": "ZAA"
+  },
+  "teamSize": {
+    "all": "Wszystkie formaty"
+  },
+  "filters": {
+    "level": "Poziom",
+    "format": "Format"
+  },
+  "count": "{{visible}} / {{total}} ćwiczeń",
+  "empty": "Żadne ćwiczenie nie pasuje do tych filtrów. Rozszerz poziom lub format.",
+  "card": {
+    "goal": "Cel",
+    "variants": "Warianty według poziomu",
+    "criteria": "Kryteria sukcesu",
+    "cues": "Wskazówki trenera",
+    "source": "Źródło"
+  }
+}

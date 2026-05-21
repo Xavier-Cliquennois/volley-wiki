@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Antrenmanlar · {{skill}}",
+  "skills": {
+    "reception": "Karşılama",
+    "set": "Pas",
+    "attack": "Atak",
+    "defense": "Savunma",
+    "serve": "Servis",
+    "block": "Blok",
+    "team-play": "Takım oyunu"
+  },
+  "levels": {
+    "all": "Hepsi",
+    "beginner": "Başlangıç",
+    "intermediate": "Orta",
+    "advanced": "İleri"
+  },
+  "levelShort": {
+    "beginner": "BAŞ",
+    "intermediate": "ORT",
+    "advanced": "İLE"
+  },
+  "teamSize": {
+    "all": "Tüm formatlar"
+  },
+  "filters": {
+    "level": "Seviye",
+    "format": "Format"
+  },
+  "count": "{{visible}} / {{total}} antrenman",
+  "empty": "Bu filtrelere uyan antrenman yok. Seviye veya formatı genişletin.",
+  "card": {
+    "goal": "Hedef",
+    "variants": "Seviyeye göre varyantlar",
+    "criteria": "Başarı kriterleri",
+    "cues": "Antrenör ipuçları",
+    "source": "Kaynak"
+  }
+}

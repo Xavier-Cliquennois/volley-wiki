@@ -4,7 +4,6 @@ import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
 import DrillList from '../drills/DrillList';
-import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 const LEVEL_COLOR: Record<string, string> = {
   beginner: 'var(--mint)',
@@ -220,8 +219,6 @@ export default function GuideAttaque() {
           ))}
         </div>
       </section>
-
-      <QuizEmbed slug="options-attaque" />
     </div>
   );
 }

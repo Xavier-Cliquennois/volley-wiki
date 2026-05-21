@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "ドリル · {{skill}}",
+  "skills": {
+    "reception": "レセプション",
+    "set": "セット",
+    "attack": "アタック",
+    "defense": "ディフェンス",
+    "serve": "サーブ",
+    "block": "ブロック",
+    "team-play": "チームプレー"
+  },
+  "levels": {
+    "all": "すべて",
+    "beginner": "初級",
+    "intermediate": "中級",
+    "advanced": "上級"
+  },
+  "levelShort": {
+    "beginner": "初",
+    "intermediate": "中",
+    "advanced": "上"
+  },
+  "teamSize": {
+    "all": "全フォーマット"
+  },
+  "filters": {
+    "level": "レベル",
+    "format": "フォーマット"
+  },
+  "count": "{{visible}} / {{total}} ドリル",
+  "empty": "このフィルターに一致するドリルはありません。レベルまたはフォーマットを広げてください。",
+  "card": {
+    "goal": "目標",
+    "variants": "レベル別バリエーション",
+    "criteria": "成功基準",
+    "cues": "コーチング・キュー",
+    "source": "出典"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "sectionTitle": "Exercícios · {{skill}}",
+  "skills": {
+    "reception": "Recepção",
+    "set": "Levantamento",
+    "attack": "Ataque",
+    "defense": "Defesa",
+    "serve": "Saque",
+    "block": "Bloqueio",
+    "team-play": "Jogo coletivo"
+  },
+  "levels": {
+    "all": "Todos",
+    "beginner": "Iniciante",
+    "intermediate": "Intermediário",
+    "advanced": "Avançado"
+  },
+  "levelShort": {
+    "beginner": "INI",
+    "intermediate": "INT",
+    "advanced": "AVA"
+  },
+  "teamSize": {
+    "all": "Todos os formatos"
+  },
+  "filters": {
+    "level": "Nível",
+    "format": "Formato"
+  },
+  "count": "{{visible}} / {{total}} exercícios",
+  "empty": "Nenhum exercício corresponde a esses filtros. Amplie o nível ou o formato.",
+  "card": {
+    "goal": "Objetivo",
+    "variants": "Variantes por nível",
+    "criteria": "Critérios de sucesso",
+    "cues": "Dicas do treinador",
+    "source": "Fonte"
+  }
+}
