@@ -2027,5 +2027,201 @@
       "title": "Scénarios liés",
       "intro": "Mets cette lecture en pratique sur les scénarios 3D existants — chacun est une situation concrète à analyser."
     }
+  },
+  "indoorBeach": {
+    "goldenRule": {
+      "mantra": "Le beach n'est pas un volley indoor sur sable.",
+      "body": "80 % des fondamentaux sont partagés (frapper, défendre, lire le jeu). Mais les 20 % restants — règles, physique, tactique — changent tout. Ce guide te dit exactement ce qui transfère, ce qui s'adapte, et ce qui demande de réapprendre."
+    },
+    "overview": {
+      "title": "★ TABLEAU COMPARATIF",
+      "intro": "Les chiffres officiels FIVB. Les lignes en orange marquent un changement qui demande une adaptation technique ou tactique, pas juste numérique.",
+      "rows": [
+        { "category": "Joueurs / équipe", "indoor": "6 (+1 libéro)", "beach": "2", "impact": "high" },
+        { "category": "Dimensions du terrain", "indoor": "18 × 9 m", "beach": "16 × 8 m", "impact": "low" },
+        { "category": "Hauteur du filet H / F", "indoor": "2,43 m / 2,24 m", "beach": "2,43 m / 2,24 m", "impact": "low" },
+        { "category": "Ligne d'attaque (3 m)", "indoor": "Présente (limite back-row)", "beach": "Absente (tous attaquent partout)", "impact": "high" },
+        { "category": "Ballon", "indoor": "Cuir, ~260 g, dur", "beach": "Plus souple, légèrement plus gros, pression plus basse", "impact": "low" },
+        { "category": "Set / Match", "indoor": "25 pts · best of 5 sets", "beach": "21 pts · best of 3 sets", "impact": "low" },
+        { "category": "Tie-break", "indoor": "15 pts (5e set)", "beach": "15 pts (3e set)", "impact": "low" },
+        { "category": "Changements de côté", "indoor": "Pas pendant le set", "beach": "Tous les 7 points (5 pts en tie-break)", "impact": "high" },
+        { "category": "Délai pour servir", "indoor": "8 secondes", "beach": "5 secondes", "impact": "low" },
+        { "category": "Rotations / positions", "indoor": "Strictes (P1 → P6)", "beach": "Libres — pas de rotation", "impact": "high" },
+        { "category": "Substitutions", "indoor": "6 par set", "beach": "Aucune", "impact": "high" },
+        { "category": "Contre = touche ?", "indoor": "Non (il reste 3 touches)", "beach": "OUI — il ne reste que 2 touches", "impact": "high" },
+        { "category": "Passe à 10 doigts (set)", "indoor": "Tolérante", "beach": "Très stricte — double facilement sifflé", "impact": "high" },
+        { "category": "Tip / placette du bout des doigts", "indoor": "Autorisé", "beach": "INTERDIT (poing, paume, doigts verrouillés)", "impact": "high" },
+        { "category": "Réception manchette", "indoor": "Souvent à 10 doigts", "beach": "Manchette quasi obligatoire", "impact": "high" },
+        { "category": "Communication", "indoor": "Vocale + appels", "beach": "Signes derrière le dos (1 doigt = bloc ligne, 2 = diag, etc.)", "impact": "low" }
+      ]
+    },
+    "skillAdaptations": {
+      "title": "Adaptations techniques skill par skill",
+      "level": "Intermédiaire",
+      "intro": "Si tu viens de l'indoor, voici comment chaque geste change quand tu passes sur sable.",
+      "items": [
+        {
+          "skill": "Service",
+          "indoor": "Float / jump float / jump topspin. Cibles précises (P1, P5, passeur).",
+          "beach": "Le service est ARME #1 : float très flottant pour exploiter le vent, jump serve agressif pour pousser. Vent debout = service flottant ; vent dans le dos = jump topspin pour profondeur."
+        },
+        {
+          "skill": "Réception",
+          "indoor": "10 doigts toléré en haute réception. 3 ou 4 réceptionneurs.",
+          "beach": "MANCHETTE quasi obligatoire (passe à 10 doigts = double sifflé). 2 réceptionneurs qui se partagent le terrain en moitiés (ligne du milieu mentale). Le serveur a 5 s = moins de temps de prep."
+        },
+        {
+          "skill": "Passe (set)",
+          "indoor": "10 doigts standard, passe haute ou tendue.",
+          "beach": "Bump set (manchette en passe) très répandue car plus safe. Quand 10 doigts utilisé : arbitre TRÈS STRICT sur la double. Set en cloche pour éviter le jugement (« hand-set » avec rotation = double automatique)."
+        },
+        {
+          "skill": "Attaque",
+          "indoor": "Smash puissant + tip + roll. Approches 3-4 pas codifiées.",
+          "beach": "Approche raccourcie (1-2 pas dans le sable). Pas de tip aux doigts → cut shot (paume rotation poignet), poke (jointures), roll shot, hard ball. Diversifier les tirs essentiel : un attaquant ne peut compter sur la puissance seule."
+        },
+        {
+          "skill": "Contre",
+          "indoor": "Lecture passeur → set → attaquant. Souvent à 2 ou 3.",
+          "beach": "Toujours 1 bloqueur (à 2 = trop de terrain découvert). Soit BLOQUER (option ligne ou diag, jamais les deux), soit PEEL (descendre défendre, ne pas sauter). Le défenseur lit le bloc pour savoir où il défend."
+        },
+        {
+          "skill": "Défense",
+          "indoor": "5 défenseurs spécialisés (libéro + arrières + couvreurs).",
+          "beach": "1 SEUL défenseur. Doit lire l'attaquant en temps réel pour anticiper. Position basse, large ouverte. Souvent feinte sa position pour confondre le frappeur."
+        }
+      ]
+    },
+    "tacticAdaptations": {
+      "title": "Adaptations tactiques",
+      "level": "Intermédiaire",
+      "intro": "Le beach est essentiellement du 1 contre 1 répété. La tactique est radicalement différente.",
+      "items": [
+        {
+          "label": "Rôles dynamiques",
+          "text": "Pas de poste fixe : à chaque rally, l'un est blocker (au filet), l'autre est defender (au fond). Souvent on switch en cours d'échange (« crossing pattern »). Les deux joueurs doivent savoir TOUT FAIRE."
+        },
+        {
+          "label": "Signaux du bloqueur",
+          "text": "Avant chaque service, le bloqueur fait des signes derrière son dos au serveur : 1 doigt = bloc ligne, 2 doigts = bloc diagonale, poing = peel (pas de bloc). Le défenseur s'adapte en conséquence."
+        },
+        {
+          "label": "Pas de pénétration",
+          "text": "Le passeur prend la 2e touche sur place — il était au filet ou bien il y reste après réception. Pas de course longue. La passe doit être très précise pour économiser de l'énergie."
+        },
+        {
+          "label": "Coup de vent = stratégie",
+          "text": "Le vent influe énormément. Vent debout = serve flottant aggressif + sets bas. Vent dans le dos = jump serve + sets plus hauts. Changement de côté toutes les 7 points pour égaliser."
+        },
+        {
+          "label": "Pas d'overlap, pas de rotation",
+          "text": "Tu peux te placer où tu veux. Tu peux servir 10 fois de suite. Ça change la tactique du serveur (cibler le joueur faible toute la partie)."
+        }
+      ]
+    },
+    "physical": {
+      "title": "Préparation physique spécifique",
+      "level": "Intermédiaire",
+      "intro": "Le sable change tout. Tu sautes 20-30 % moins haut, tu cours 3 fois plus lentement. Voici ce qui se travaille différemment.",
+      "items": [
+        {
+          "label": "Force des jambes en sand",
+          "text": "Sprint sand, plyo dans le sable, fentes lestées. Le mollet et les ischios travaillent énormément (pas de push-off solide)."
+        },
+        {
+          "label": "Endurance / cardio",
+          "text": "Un échange beach dure 2-3× plus longtemps qu'en indoor (pas de pause). 1h de match = 1h de cardio continu sous le soleil."
+        },
+        {
+          "label": "Stabilité de la cheville",
+          "text": "Le sable cède sous le pied à chaque appui. Sans gainage cheville/pied solide, le risque d'entorse explose. Renfort proprio régulier."
+        },
+        {
+          "label": "Hydratation + nutrition",
+          "text": "1 L d'eau par heure de jeu, électrolytes obligatoires. Repas léger pré-match (digestion ralentie sous chaleur)."
+        },
+        {
+          "label": "Protection solaire",
+          "text": "Crème SPF 50 toutes les 1h30, lunettes de soleil polarisées, casquette / visière. Coup de soleil au mollet = match suivant compromis."
+        }
+      ]
+    },
+    "whenToTransition": {
+      "title": "Quand passer de l'un à l'autre ?",
+      "intro": "La plupart des joueurs élite combinent les deux. Voici quand le switch est pertinent.",
+      "cases": [
+        {
+          "label": "Saison indoor → été beach",
+          "text": "Très courant en Europe. La saison indoor finit en mai-juin, la saison beach démarre en juin. 6-8 semaines de transition = idéal pour récupérer + travailler la coordination différemment."
+        },
+        {
+          "label": "Joueur d'1m80 et moins",
+          "text": "Le beach valorise la lecture du jeu, la diversité technique, le toucher de balle. L'indoor élite demande de la taille. Le beach offre une seconde vie sportive aux gabarits moyens."
+        },
+        {
+          "label": "Joueur polyvalent (no specialization)",
+          "text": "Si tu touches à tout en indoor mais tu n'as pas un poste élite, le beach valorisera ta polyvalence. Tu y seras meilleur que dans un poste spécialisé."
+        },
+        {
+          "label": "Recovery from injury",
+          "text": "Le sable est moins traumatisant pour les articulations. Joueurs en récup post-blessure (genou, dos) reviennent souvent via le beach avant de retourner indoor."
+        },
+        {
+          "label": "Profil mental",
+          "text": "Beach = communication intense avec UN seul partenaire. Si tu carbures à la solitude tactique, c'est ton sport. Indoor = jeu collectif d'équipe. Si tu carbures à l'esprit d'équipe large, reste indoor."
+        }
+      ]
+    },
+    "commonMistakes": {
+      "title": "Pièges typiques de l'indoor → beach",
+      "items": [
+        {
+          "label": "Set à 10 doigts → double sifflé en série",
+          "text": "L'arbitre beach siffle 5× plus de doubles. Solution : bump set (manchette en passe) jusqu'à maîtriser le toucher beach."
+        },
+        {
+          "label": "Tip aux doigts → faute",
+          "text": "Le geste indoor automatique. En beach, utilise un cut shot ou un poke (jointures fermées). Réapprendre le geste prend 2-3 semaines."
+        },
+        {
+          "label": "Approche d'attaque trop longue",
+          "text": "Le sable absorbe l'élan. Course de 4 pas indoor → 1-2 pas beach. Sauter en hauteur, pas en distance."
+        },
+        {
+          "label": "Sous-estimer la fatigue",
+          "text": "Un joueur indoor s'effondre en 2e set beach. Pre-saison sand obligatoire avant compétition."
+        },
+        {
+          "label": "Oublier le vent",
+          "text": "Une balle indoor va où tu la frappes. Une balle beach peut dévier de 1-2 m selon le vent. Toujours regarder le drapeau ou les arbres avant de servir."
+        }
+      ]
+    },
+    "drills": {
+      "title": "Drills d'adaptation indoor → beach",
+      "level": "Intermédiaire",
+      "items": [
+        {
+          "level": "1 — Sprint + ramping",
+          "desc": "10 × 20 m sprint dans le sable + ramping (montée de jambes). Active les chaînes musculaires beach. 3-4 fois/semaine la 1re semaine."
+        },
+        {
+          "level": "2 — Cut shot / poke / roll",
+          "desc": "Sans bloqueur, attaquer 30 balles en n'utilisant QUE cut shot, puis 30 en poke, puis 30 en roll. Apprendre à se passer du tip aux doigts."
+        },
+        {
+          "level": "3 — Bump set sous pression",
+          "desc": "Le coach lance des balles imparfaites (manchette nécessaire). Le joueur doit set en manchette précise dans une zone de 1m². But : 8/10."
+        },
+        {
+          "level": "4 — Block + peel decision",
+          "desc": "À chaque service, le bloqueur annonce derrière son dos « bloc ligne » ou « peel ». Si peel : descendre pour défendre. Si bloc : sauter et fermer l'angle."
+        },
+        {
+          "level": "5 — Match au vent",
+          "desc": "Entraîner avec un ventilateur ou par jour venteux. Lire la trajectoire ballon altérée. Cible : ajuster la passe avec 2-3 m de vent."
+        }
+      ]
+    }
   }
 }

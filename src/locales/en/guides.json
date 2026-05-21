@@ -53,6 +53,14 @@
       "description": "Elite eye sequence, cues at serve / pass / attack, IF/THEN framework, pre-match scouting and drills.",
       "readingTime": "~20 min",
       "level": "Intermediate"
+    },
+    "indoor-vs-beach": {
+      "title": "Indoor ↔ Beach",
+      "subtitle": "Differences, technical and tactical adaptations between the two disciplines",
+      "category": "Tactics",
+      "description": "Comparison table of rules, skill-by-skill adaptations, physical preparation, when to switch, common pitfalls and drills.",
+      "readingTime": "~15 min",
+      "level": "Intermediate"
     }
   },
   "detail": {

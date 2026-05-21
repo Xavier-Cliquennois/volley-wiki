@@ -71,11 +71,17 @@ Pour chaque skill (passe, attaque, défense, service, contre) :
 - Critères de réussite
 - ~30 drills à rédiger → gros volume de contenu, peu de tech.
 
-### 3.4 — Comparatif indoor ↔ beach
-Maintenant qu'on a les deux branches.
-- Tableau des différences (taille du terrain, nombre de joueurs, hauteur du filet, règles spécifiques).
-- Adaptations techniques (manchette beach vs indoor, service flottant vs jump, set vs passe…).
-- Quand passer de l'un à l'autre (saisons, profil de joueur).
+### 3.4 — Comparatif indoor ↔ beach ✅
+- [x] Guide livré à `/guides/indoor-vs-beach` (Tactique, ~15 min, Intermédiaire) en 7 sections.
+- [x] Tableau comparatif 16 lignes (joueurs, terrain, règles, contre, set, etc.) avec marker ★ orange sur les différences à fort impact.
+- [x] Adaptations techniques skill par skill (service, réception, set, attaque, contre, défense) en cartes indoor/beach côte à côte.
+- [x] Adaptations tactiques (rôles dynamiques, signaux derrière le dos, pas de pénétration, vent, pas d'overlap).
+- [x] Préparation physique spécifique (force sand, endurance, cheville, hydratation, protection solaire).
+- [x] Quand passer de l'un à l'autre (5 profils-cas).
+- [x] Pièges typiques de l'indoor → beach (5 erreurs en cartes jaunes).
+- [x] 5 drills progressifs d'adaptation.
+- [x] i18n FR (contenu) + EN (listing hub).
+- Sources : AVP, VolleyballMag, Olympics.com, Pakmen, BetterAtBeach, JVA.
 
 ### 3.5 — Erreurs typiques par poste
 Format court, très pédagogique (Débutant) :
@@ -110,7 +116,7 @@ Geste par geste (fault, side-out, time-out, replay, etc.). Page courte mais util
 | ✅ P1 | Authoring 6-2 et 4-2 | Livré (en place + cartes hub actives) |
 | ✅ P1 | Tag scénarios par système/rotation | Livré (tags + filtre URL + lien depuis rotations) |
 | ✅ P2 | Lecture du jeu (guide) | Livré — 12 sections, IF/THEN, scouting, drills |
-| 🟡 P2 | Comparatif indoor ↔ beach | Peu de boulot, comble un vrai trou |
+| ✅ P2 | Comparatif indoor ↔ beach | Livré — tableau 16 lignes + 7 sections |
 | 🟢 P3 | Quiz interactif | Engageant mais demande du temps de dev |
 | 🟢 P3 | Erreurs typiques + signaux arbitre | Petites pages utiles à glisser quand l'envie passe |
 | 🟢 P3 | Exercices / drills | Beaucoup de rédaction, peu de tech — bon contenu de fond |

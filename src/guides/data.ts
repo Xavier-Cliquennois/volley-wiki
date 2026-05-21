@@ -63,4 +63,13 @@ export const GUIDES: Guide[] = [
     readingTime: '~20 min',
     level: 'Intermédiaire',
   },
+  {
+    slug: 'indoor-vs-beach',
+    title: 'Indoor ↔ Beach',
+    subtitle: 'Différences, adaptations techniques et tactiques entre les deux disciplines',
+    category: 'Tactique',
+    description: "Tableau comparatif des règles, adaptations skill par skill, préparation physique, quand passer de l'un à l'autre, pièges typiques et drills.",
+    readingTime: '~15 min',
+    level: 'Intermédiaire',
+  },
 ];
