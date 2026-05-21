@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "N°",
   "list": {
+    "techniques-de-base": {
+      "title": "Core techniques",
+      "subtitle": "Fundamental skill cards — key points, mistakes, videos",
+      "category": "Technique",
+      "description": "Catalogue of the fundamental volleyball skills: passing, setting, spiking, blocking, serving, defense. Filterable cards by category and level, with videos.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
+    },
     "service": {
       "title": "Serving guide",
       "subtitle": "Underhand, float, jump float and jump topspin",

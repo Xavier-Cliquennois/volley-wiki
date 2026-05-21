@@ -23,7 +23,6 @@ export function useDiscipline(): Discipline {
 // (e.g. /positions/6v6/5-1 has no beach analogue).
 const INDOOR_TO_BEACH: Record<string, string> = {
   '/': '/beach',
-  '/techniques': '/beach/techniques',
   '/positions': '/beach/positions',
   '/scenarios': '/beach/scenarios',
   '/guides': '/beach/guides',

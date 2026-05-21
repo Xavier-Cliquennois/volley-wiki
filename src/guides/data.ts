@@ -10,6 +10,15 @@ export type Guide = {
 
 export const GUIDES: Guide[] = [
   {
+    slug: 'techniques-de-base',
+    title: 'Techniques de base',
+    subtitle: 'Fiches techniques fondamentales — points clés, erreurs, vidéos',
+    category: 'Technique',
+    description: "Catalogue des gestes fondamentaux du volleyball : manchette, passe, smash, contre, service, défense. Fiches filtrables par catégorie et niveau, avec vidéos.",
+    readingTime: '~10 min',
+    level: 'Débutant',
+  },
+  {
     slug: 'service',
     title: 'Guide du service',
     subtitle: 'Cuillère, float, jump float et jump topspin',

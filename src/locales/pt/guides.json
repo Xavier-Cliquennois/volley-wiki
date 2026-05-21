@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "Nº",
   "list": {
+    "techniques-de-base": {
+      "title": "Técnicas básicas",
+      "subtitle": "Fichas das técnicas fundamentais — pontos-chave, erros, vídeos",
+      "category": "Técnica",
+      "description": "Catálogo dos gestos fundamentais do voleibol: manchete, levantamento, ataque, bloqueio, serviço, defesa. Fichas filtráveis por categoria e nível, com vídeos.",
+      "readingTime": "~10 min",
+      "level": "Iniciante"
+    },
     "service": {
       "title": "Guia do serviço",
       "subtitle": "Por baixo, float, jump float e jump topspin",

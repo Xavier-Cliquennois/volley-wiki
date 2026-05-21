@@ -13,7 +13,7 @@
       "label": "01",
       "title": "Técnicas",
       "desc": "Poke, cobra, tomahawk, skyball, beach dig — os gestos emblemáticos do beach.",
-      "to": "/beach/techniques",
+      "to": "/beach/guides/techniques-beach",
       "accent": "var(--orange)"
     },
     {

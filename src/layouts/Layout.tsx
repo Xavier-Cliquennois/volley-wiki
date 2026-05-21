@@ -157,7 +157,6 @@ export default function Layout() {
   const beachPrefix = discipline === 'beach' ? '/beach' : '';
   const NAV_LINKS = [
     { to: `/${lang}${beachPrefix}`, label: t('nav.home') },
-    { to: `/${lang}${beachPrefix}/techniques`, label: t('nav.techniques') },
     { to: `/${lang}${beachPrefix}/positions`, label: t('nav.positions') },
     { to: `/${lang}${beachPrefix}/systems`, label: t('nav.systems') },
     { to: `/${lang}${beachPrefix}/scenarios`, label: t('nav.scenarios') },

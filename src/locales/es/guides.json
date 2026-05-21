@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "Nº",
   "list": {
+    "techniques-de-base": {
+      "title": "Técnicas básicas",
+      "subtitle": "Fichas de técnicas fundamentales — puntos clave, errores, vídeos",
+      "category": "Técnica",
+      "description": "Catálogo de los gestos fundamentales del voleibol: antebrazos, colocación, remate, bloqueo, saque, defensa. Fichas filtrables por categoría y nivel, con vídeos.",
+      "readingTime": "~10 min",
+      "level": "Principiante"
+    },
     "service": {
       "title": "Guía del saque",
       "subtitle": "Saque bajo, flotante, jump float y jump topspin",

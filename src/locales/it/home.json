@@ -13,7 +13,7 @@
       "label": "01",
       "title": "Tecniche",
       "desc": "Animazioni 3D interattive dei fondamentali della pallavolo.",
-      "to": "/techniques",
+      "to": "/guides/techniques-de-base",
       "accent": "var(--orange)"
     },
     {

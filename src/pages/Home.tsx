@@ -61,7 +61,7 @@ export default function Home() {
           {tHome('hero.subtitle')}
         </p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link to={`/${lang}/techniques`} style={{
+          <Link to={`/${lang}/guides/techniques-de-base`} style={{
             padding: '12px 24px',
             background: 'var(--orange)',
             border: '3px solid var(--ink)',

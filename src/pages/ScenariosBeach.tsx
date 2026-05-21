@@ -97,7 +97,7 @@ export default function ScenariosBeach() {
           {[
             { to: `/${lang}/beach/positions`, accent: 'var(--teal)', key: 'signals' },
             { to: `/${lang}/beach/guides`, accent: 'var(--pink)', key: 'guides' },
-            { to: `/${lang}/beach/techniques`, accent: 'var(--orange)', key: 'techniques' },
+            { to: `/${lang}/beach/guides/techniques-beach`, accent: 'var(--orange)', key: 'techniques' },
           ].map(card => (
             <Link
               key={card.to}

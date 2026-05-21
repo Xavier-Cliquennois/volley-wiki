@@ -13,7 +13,6 @@ type SitemapEntry = { path: string; changefreq: string; priority: string }
 
 const STATIC_ROUTES: SitemapEntry[] = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/techniques', changefreq: 'monthly', priority: '0.8' },
   { path: '/positions', changefreq: 'monthly', priority: '0.7' },
   { path: '/scenarios', changefreq: 'monthly', priority: '0.8' },
   { path: '/guides', changefreq: 'monthly', priority: '0.8' },

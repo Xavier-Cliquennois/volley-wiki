@@ -11,6 +11,14 @@
     "notFound": "Nie znaleziono przewodnika."
   },
   "list": {
+    "techniques-beach": {
+      "title": "Techniki beach",
+      "subtitle": "Karty technik beach — poke, cobra, tomahawk, skyball",
+      "category": "Technika",
+      "description": "Katalog charakterystycznych technik beach: poke, cobra, cut, line, tomahawk, skyball, sygnały. Karty filtrowane według kategorii i poziomu, z filmami.",
+      "readingTime": "~10 min",
+      "level": "Początkujący"
+    },
     "debutant": {
       "title": "Przewodnik absolutnego początkującego",
       "subtitle": "Pierwsze odruchy: odbicie sposobem dolnym, komunikacja, nawodnienie",

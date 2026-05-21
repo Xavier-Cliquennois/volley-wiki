@@ -11,6 +11,7 @@ import GuideSignauxArbitre from '../guides/GuideSignauxArbitre';
 import GuideErreursTypiques from '../guides/GuideErreursTypiques';
 import GuidePasseSetter from '../guides/GuidePasseSetter';
 import GuideJeuCollectif from '../guides/GuideJeuCollectif';
+import GuideTechniquesDeBase from '../guides/GuideTechniquesDeBase';
 import { Head } from '../seo/Head';
 import { TEAM_SIZES } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
@@ -21,6 +22,7 @@ import { useCurrentLang } from '../i18n/paths';
 // component map. The defensive-positioning guide has its own page
 // (`GuideDefenseSized`) because of its team-size/configuration routing.
 const COMPONENTS: Record<string, React.ComponentType> = {
+  'techniques-de-base': GuideTechniquesDeBase,
   service: GuideService,
   reception: GuideReception,
   attaque: GuideAttaque,

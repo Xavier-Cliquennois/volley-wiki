@@ -11,6 +11,14 @@
     "notFound": "Rehber bulunamadı."
   },
   "list": {
+    "techniques-beach": {
+      "title": "Beach teknikleri",
+      "subtitle": "Beach teknik kartları — poke, cobra, tomahawk, skyball",
+      "category": "Teknik",
+      "description": "Beach voleybolunun simgesel hareketleri kataloğu: poke, cobra, cut, line, tomahawk, sky-ball, işaretler. Kategoriye ve seviyeye göre filtrelenebilen kartlar, videolu.",
+      "readingTime": "~10 dk",
+      "level": "Başlangıç"
+    },
     "debutant": {
       "title": "Mutlak başlangıç rehberi",
       "subtitle": "İlk refleksler: manşet, iletişim, hidrasyon",

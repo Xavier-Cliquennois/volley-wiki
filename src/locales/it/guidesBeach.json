@@ -11,6 +11,14 @@
     "notFound": "Guida non trovata."
   },
   "list": {
+    "techniques-beach": {
+      "title": "Tecniche beach",
+      "subtitle": "Schede tecniche beach — poke, cobra, tomahawk, skyball",
+      "category": "Tecnica",
+      "description": "Catalogo dei gesti caratteristici del beach: poke, cobra, cut, line, tomahawk, sky-ball, segnali. Schede filtrabili per categoria e livello, con video.",
+      "readingTime": "~10 min",
+      "level": "Principiante"
+    },
     "debutant": {
       "title": "Guida del principiante assoluto",
       "subtitle": "Primi riflessi: bagher, comunicazione, idratazione",

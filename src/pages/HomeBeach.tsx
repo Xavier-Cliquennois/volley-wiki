@@ -67,7 +67,7 @@ export default function HomeBeach() {
           {tHome('hero.subtitle')}
         </p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <Link to={`/${lang}/beach/techniques`} style={{
+          <Link to={`/${lang}/beach/guides/techniques-beach`} style={{
             padding: '12px 24px',
             background: 'var(--orange)',
             border: '3px solid var(--ink)',
