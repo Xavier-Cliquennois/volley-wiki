@@ -84,7 +84,7 @@ export function QuizResult({ score, total, previousBest, onReplay, onBackToHub }
           REJOUER →
         </button>
         <button type="button" onClick={onBackToHub} style={Q.ctaSecondary}>
-          ← TOUS LES QUIZZES
+          ← FERMER LE QUIZ
         </button>
       </div>
     </div>

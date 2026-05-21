@@ -8,6 +8,7 @@ import { useCurrentLang } from '../i18n/paths';
 import { SCENARIOS } from '../scenarios/data';
 import { useLocalizedScenarios } from '../i18n/localizeScenario';
 import type { Level } from '../userLevel/useUserLevel';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type LabelText = { label: string; text: string };
 type PhaseBlock = { phase: string; items: string[] };
@@ -258,6 +259,8 @@ export default function GuideLectureDuJeu() {
           </div>
         </section>
       )}
+
+      <QuizEmbed slug="lecture-jeu" />
     </div>
   );
 }

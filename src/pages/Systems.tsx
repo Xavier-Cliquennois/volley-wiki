@@ -6,6 +6,7 @@ import type { SystemId } from '../systems/types';
 import { useDiscipline } from '../discipline/useDiscipline';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 // Groups of systems, displayed as sections on the hub. The list is filtered
 // at render time based on the active discipline (indoor / beach).
@@ -99,6 +100,8 @@ export default function Systems() {
           </div>
         </section>
       ))}
+
+      {discipline === 'indoor' && <QuizEmbed slug="systemes" />}
     </div>
   );
 }

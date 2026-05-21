@@ -66,39 +66,3 @@ export const QUIZZES: Quiz[] = [
 export function getQuizBySlug(slug: string): Quiz | undefined {
   return QUIZZES.find(q => q.slug === slug);
 }
-
-// Special slug for the "draw N random questions from all quizzes" mode.
-// Routing: /quiz/random.
-export const RANDOM_QUIZ_SLUG = 'random';
-export const RANDOM_QUIZ_SIZE = 10;
-
-export function buildRandomQuiz(seed?: number): Quiz {
-  const allQuestions = QUIZZES.flatMap(q => q.questions);
-  const shuffled = shuffleWithSeed(allQuestions, seed);
-  const picked = shuffled.slice(0, Math.min(RANDOM_QUIZ_SIZE, shuffled.length));
-  return {
-    slug: RANDOM_QUIZ_SLUG,
-    title: 'Quiz aléatoire',
-    subtitle: `${picked.length} questions tirées au hasard parmi les ${allQuestions.length} disponibles`,
-    description:
-      'Un mélange de toutes les catégories : rotations, options offensives, placement, systèmes et lecture du jeu. Bonne chance.',
-    category: 'Tactique',
-    level: 'Avancé',
-    estimatedTime: '~6 min',
-    questions: picked,
-  };
-}
-
-// Deterministic shuffle when a seed is provided (useful for reproducible
-// random-mode replays). Without seed, uses Math.random().
-function shuffleWithSeed<T>(input: T[], seed?: number): T[] {
-  const arr = [...input];
-  let state = seed ?? Math.floor(Math.random() * 2 ** 31);
-  for (let i = arr.length - 1; i > 0; i--) {
-    state = (state * 1664525 + 1013904223) >>> 0;
-    const j = state % (i + 1);
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-

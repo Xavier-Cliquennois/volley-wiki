@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
+import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 const LEVEL_COLOR: Record<string, string> = {
   beginner: 'var(--mint)',
@@ -30,6 +32,7 @@ type VideoItem = { title: string; url: string };
 
 export default function GuideAttaque() {
   const { t } = useTranslation('guideContent');
+  const { t: tD } = useTranslation('drills');
 
   const phases = t('attaque.phases.items', { returnObjects: true }) as Phase[];
   const approachThree = t('attaque.approach.three', { returnObjects: true }) as ApproachVariant;
@@ -205,6 +208,11 @@ export default function GuideAttaque() {
       </section>
 
       <section>
+        <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.attack') })}</h2>
+        <DrillList skill="attack" />
+      </section>
+
+      <section>
         <h2 style={S.section}>{t('attaque.videos.title')}</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {videos.map((v, i) => (
@@ -212,6 +220,8 @@ export default function GuideAttaque() {
           ))}
         </div>
       </section>
+
+      <QuizEmbed slug="options-attaque" />
     </div>
   );
 }

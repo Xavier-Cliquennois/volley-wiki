@@ -11,6 +11,12 @@ import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
 import { SCENARIOS } from '../scenarios/data';
 import type { ScenarioRotationTag, ScenarioSystemTag } from '../scenarios/types';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
+
+// Map a SystemId to a quiz slug. Only systems with an authored quiz appear here.
+const SYSTEM_QUIZ_SLUG: Record<string, string> = {
+  '5-1': 'rotations-5-1',
+};
 
 // Tactical systems whose scenarios live under /scenarios with tags. Used to
 // link a rotation back to the matching scenario list.
@@ -175,6 +181,10 @@ export default function SystemDetail() {
           );
         })()}
       </div>
+
+      {SYSTEM_QUIZ_SLUG[system.id] && (
+        <QuizEmbed slug={SYSTEM_QUIZ_SLUG[system.id]} />
+      )}
     </div>
   );
 }
