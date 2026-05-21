@@ -44,12 +44,17 @@
 
 ## 3. Autres directions discutées au départ
 
-### 3.1 — Lecture du jeu / scouting (Intermédiaire+)
-Comment **lire l'adversaire** avant et pendant un échange.
-- Indices au service : pied d'appel, position relative au filet, regard du serveur.
-- Lecture de la passe adverse : qui va attaquer ? Quel tempo ? Comment le contre se positionne.
-- Lecture du frappeur : épaules, course d'approche, bras armé.
-- Idéal en format `/guides/lecture-du-jeu` avec animations sur le terrain 3D existant.
+### 3.1 — Lecture du jeu / scouting (Intermédiaire+) ✅
+- [x] Guide livré à `/guides/lecture-du-jeu` (Intermédiaire, ~20 min) en 12 sections.
+- [x] Règle d'or « Tu ne bloques pas le ballon — tu bloques l'attaquant ».
+- [x] Séquence visuelle (eye work) en 3 phases : service, réception, bloc/défense.
+- [x] Indices détaillés par moment : lire serveur (Débutant), lire passe adverse 1er contact (Inter.), lire passeur distributeur (Inter.), lire attaquant (Avancé), timing du bloc (Avancé).
+- [x] Cadre IF/THEN avec table de 12 scénarios concrets.
+- [x] Scouting pré-match : 4 axes (attaquants/passeur/serveurs/défense) + format feuille d'avant-match.
+- [x] Erreurs classiques (cards jaunes) + drills progressifs niveaux 1-5.
+- [x] Section "Scénarios liés" avec 6 scénarios tagués cliquables.
+- [x] i18n FR (contenu) + EN (titres + listing dans hub).
+- Sources : USA Volleyball, Coaching Volleyball, Athletes Untapped, Get The Pancake, Impact Volleyball Club, JVA, Mark Lebedew, HowToCoachVolleyball, ConsultaDeTodos, VolleyballOverview.
 
 ### 3.2 — Mode quiz interactif (toutes catégories)
 Tests interactifs courts pour valider la compréhension.
@@ -104,7 +109,7 @@ Geste par geste (fault, side-out, time-out, replay, etc.). Page courte mais util
 | ✅ P0 | Compléter 5-1 (flèches secondaires + cards interactives) | Livré |
 | ✅ P1 | Authoring 6-2 et 4-2 | Livré (en place + cartes hub actives) |
 | ✅ P1 | Tag scénarios par système/rotation | Livré (tags + filtre URL + lien depuis rotations) |
-| 🟡 P2 | Lecture du jeu (guide) | Gros impact pédagogique pour intermédiaires |
+| ✅ P2 | Lecture du jeu (guide) | Livré — 12 sections, IF/THEN, scouting, drills |
 | 🟡 P2 | Comparatif indoor ↔ beach | Peu de boulot, comble un vrai trou |
 | 🟢 P3 | Quiz interactif | Engageant mais demande du temps de dev |
 | 🟢 P3 | Erreurs typiques + signaux arbitre | Petites pages utiles à glisser quand l'envie passe |

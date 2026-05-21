@@ -5,6 +5,7 @@ import GuideService from '../guides/GuideService';
 import GuideReception from '../guides/GuideReception';
 import GuideAttaque from '../guides/GuideAttaque';
 import GuideContre from '../guides/GuideContre';
+import GuideLectureDuJeu from '../guides/GuideLectureDuJeu';
 import { Head } from '../seo/Head';
 import { TEAM_SIZES } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
@@ -19,6 +20,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   reception: GuideReception,
   attaque: GuideAttaque,
   contre: GuideContre,
+  'lecture-du-jeu': GuideLectureDuJeu,
 };
 
 const DEFENSE_SLUG = 'positionnement-defense';

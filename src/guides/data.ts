@@ -54,4 +54,13 @@ export const GUIDES: Guide[] = [
     readingTime: '~20 min',
     level: 'Intermédiaire',
   },
+  {
+    slug: 'lecture-du-jeu',
+    title: 'Lecture du jeu / scouting',
+    subtitle: 'Lire serveur, passeur, attaquant — et scouter l\'adversaire',
+    category: 'Tactique',
+    description: "Séquence visuelle élite, indices au service / à la passe / à l'attaque, cadre IF/THEN, scouting pré-match et drills.",
+    readingTime: '~20 min',
+    level: 'Intermédiaire',
+  },
 ];
