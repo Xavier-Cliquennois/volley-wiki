@@ -14,6 +14,8 @@ import GuideDetail from './pages/GuideDetail';
 import GuideDefenseSized from './pages/GuideDefenseSized';
 import Systems from './pages/Systems';
 import SystemDetail from './pages/SystemDetail';
+import Quiz from './pages/Quiz';
+import QuizDetail from './pages/QuizDetail';
 import ScenarioEditor from './pages/ScenarioEditor';
 import NotFound from './pages/NotFound';
 import HomeBeach from './pages/HomeBeach';
@@ -50,6 +52,8 @@ export const routes: RouteObject[] = [
               { path: 'guides/:slug', Component: GuideDetail },
               { path: 'systems', Component: Systems },
               { path: 'systems/:slug', Component: SystemDetail },
+              { path: 'quiz', Component: Quiz },
+              { path: 'quiz/:slug', Component: QuizDetail },
               // Beach branch
               { path: 'beach', Component: HomeBeach },
               { path: 'beach/techniques', Component: TechniquesBeach },
