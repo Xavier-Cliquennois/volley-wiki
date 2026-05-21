@@ -72,4 +72,22 @@ export const GUIDES: Guide[] = [
     readingTime: '~15 min',
     level: 'Intermédiaire',
   },
+  {
+    slug: 'signaux-arbitre',
+    title: "Signaux d'arbitre",
+    subtitle: 'Les 15 signaux FIVB à connaître pour comprendre les décisions',
+    category: 'Technique',
+    description: "Pictogrammes + descriptions des 15 signaux les plus fréquents : point, ball in/out, faute filet, double, balle tenue, rotation, attaque arrière, etc.",
+    readingTime: '~5 min',
+    level: 'Débutant',
+  },
+  {
+    slug: 'erreurs-typiques',
+    title: 'Erreurs typiques par poste',
+    subtitle: 'Les 4 pièges les plus fréquents pour chaque rôle — et comment les corriger',
+    category: 'Technique',
+    description: "Passeur, pointu, central, aile, libéro : pour chaque poste, 4 erreurs récurrentes avec la solution corrective à drillder.",
+    readingTime: '~10 min',
+    level: 'Débutant',
+  },
 ];

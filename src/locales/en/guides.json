@@ -61,6 +61,22 @@
       "description": "Comparison table of rules, skill-by-skill adaptations, physical preparation, when to switch, common pitfalls and drills.",
       "readingTime": "~15 min",
       "level": "Intermediate"
+    },
+    "signaux-arbitre": {
+      "title": "Referee signals",
+      "subtitle": "The 15 FIVB hand signals to understand on-court decisions",
+      "category": "Technique",
+      "description": "Pictograms + descriptions of the 15 most common signals: point, ball in/out, net touch, double, ball held, rotation, back-row attack, etc.",
+      "readingTime": "~5 min",
+      "level": "Beginner"
+    },
+    "erreurs-typiques": {
+      "title": "Common mistakes by position",
+      "subtitle": "The 4 most frequent traps for each role — and how to fix them",
+      "category": "Technique",
+      "description": "Setter, opposite, middle, outside, libero: 4 recurring mistakes per role with the corrective drill.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
     }
   },
   "detail": {

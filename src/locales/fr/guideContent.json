@@ -2223,5 +2223,206 @@
         }
       ]
     }
+  },
+  "signauxArbitre": {
+    "intro": {
+      "title": "★ POURQUOI APPRENDRE LES SIGNAUX",
+      "body": "Connaître les signaux de l'arbitre, c'est savoir EXACTEMENT pourquoi tu perds (ou gagnes) un point. Ça évite la frustration, accélère ta progression, et te permet d'arbitrer en interne quand l'équipe joue sans arbitre officiel. Voici les 15 signaux les plus utilisés en FIVB, dans l'ordre de fréquence d'apparition en match."
+    },
+    "signals": [
+      {
+        "name": "Point / Side-out",
+        "gesture": "Bras tendu horizontalement vers le camp gagnant.",
+        "context": "Signalé après chaque rally gagnant. C'est le signal le plus fréquent — repère vers QUI le bras pointe avant de fêter."
+      },
+      {
+        "name": "Ballon dedans",
+        "gesture": "Bras et main pointés vers le sol, à l'endroit du contact.",
+        "context": "Arbitre OU juge de ligne. Confirme qu'une balle litigieuse a touché la ligne / l'intérieur."
+      },
+      {
+        "name": "Ballon dehors",
+        "gesture": "Deux bras levés à 90°, avant-bras verticaux, paumes vers l'arbitre.",
+        "context": "La balle est tombée hors du terrain. Le geste se confond parfois avec une joie d'équipe — toujours regarder l'arbitre principal."
+      },
+      {
+        "name": "Faute de filet",
+        "gesture": "Arbitre touche le filet du côté du joueur fautif avec la main correspondante.",
+        "context": "Contact illégal avec le filet pendant l'action. Souvent contesté : le contact doit être pendant ou en lien avec l'action de jeu."
+      },
+      {
+        "name": "4 touches (équipe)",
+        "gesture": "Quatre doigts levés.",
+        "context": "L'équipe a effectué plus de 3 contacts avant de renvoyer. Le contre adverse ne compte pas dans les 3 touches en indoor."
+      },
+      {
+        "name": "Double touche",
+        "gesture": "Index + majeur levés (deux doigts).",
+        "context": "Un joueur a touché 2 fois consécutivement (souvent en passe à 10 doigts mal exécutée). Très subjectif — l'arbitre a le dernier mot."
+      },
+      {
+        "name": "Balle tenue / accompagnée",
+        "gesture": "Avant-bras levé, paume vers le haut, mouvement lent de soulèvement.",
+        "context": "La balle a été tenue / accompagnée au lieu d'être frappée nettement. Très fréquent sur les attaques en \"bidouille\" mal contrôlées."
+      },
+      {
+        "name": "Faute de pied au service",
+        "gesture": "Bras pointé vers la ligne de fond.",
+        "context": "Le serveur a marché sur ou franchi la ligne avant ou au moment du contact. Souvent signalé par le juge de ligne."
+      },
+      {
+        "name": "Faute de rotation",
+        "gesture": "Index qui dessine un cercle devant le corps.",
+        "context": "Une équipe n'était pas dans le bon ordre de rotation au moment du service. Conséquence : point ET service à l'adversaire."
+      },
+      {
+        "name": "Faute de position (overlap)",
+        "gesture": "Bras tendu horizontal indiquant les deux zones concernées.",
+        "context": "Au moment du contact serveur, un joueur n'était pas dans sa zone (overlap). C'est la faute la plus pointilleuse — voir notre guide systèmes 5-1."
+      },
+      {
+        "name": "Attaque arrière interdite",
+        "gesture": "Avant-bras qui descend en mouvement de fouet vers le sol.",
+        "context": "Un joueur arrière a attaqué (sauté + frappé) la balle au-dessus du filet en étant devant la ligne des 3 m. Pipe et bic doivent décoller depuis derrière la ligne."
+      },
+      {
+        "name": "Touche au contre",
+        "gesture": "Main passée sur les doigts levés de l'autre main.",
+        "context": "Le contre adverse a touché la balle avant qu'elle ne sorte. Important : la balle est donc OUT mais NOTRE équipe perd le point."
+      },
+      {
+        "name": "Temps-mort",
+        "gesture": "Une main paume vers le bas posée sur les doigts verticaux de l'autre (forme T).",
+        "context": "Demandé par un coach ou un capitaine. Durée : 30 secondes. Chaque équipe en a 2 par set."
+      },
+      {
+        "name": "Changement de joueur",
+        "gesture": "Avant-bras qui tournent l'un autour de l'autre (rotation devant la poitrine).",
+        "context": "Substitution autorisée. En indoor : 6 par set ; en beach : aucune."
+      },
+      {
+        "name": "Challenge / vidéo",
+        "gesture": "Deux mains qui dessinent un rectangle (forme d'écran).",
+        "context": "Demande de revue vidéo. Présent uniquement en compétition équipée. Le coach signale, l'arbitre confirme par ce geste."
+      }
+    ]
+  },
+  "erreursTypiques": {
+    "intro": {
+      "title": "★ APPRENDRE EN ÉVITANT LES PIÈGES",
+      "body": "Chaque poste a ses propres tentations et automatismes ratés. Voici 4 erreurs typiques par poste — celles que les coachs corrigent en boucle. Connaître ces erreurs te permet de les éviter ou de les remarquer chez les autres pour ajuster ton jeu."
+    },
+    "positions": [
+      {
+        "role": "Passeur",
+        "color": "P2",
+        "errors": [
+          {
+            "label": "Se précipiter sur la 2e touche",
+            "text": "Tu arrives sous la balle, plateforme tordue, set raté. Solution : ralentir d'1 demi-pas, prendre la balle haute devant le front, et CHOISIR sa passe avant le contact."
+          },
+          {
+            "label": "Ne pas regarder sa cible",
+            "text": "Si tu set sans regarder ton attaquant, tu passes en aveugle. Solution : 1/10e de seconde de coup d'œil VERS l'aile gauche AVANT le contact. Habitude essentielle."
+          },
+          {
+            "label": "Mauvaise pénétration (trop tard)",
+            "text": "Tu déclenches au coup de sifflet au lieu du contact serveur. Tu arrives en retard, un coéquipier prend la 2e touche. Solution : œil sur le serveur, pas sur l'arbitre."
+          },
+          {
+            "label": "Set toujours vers l'aile gauche (prévisible)",
+            "text": "L'aile gauche, c'est l'option safe — utilisée à outrance, elle devient prévisible. Solution : forcer 30% de quick + 20% de pipe en entraînement pour habituer la lecture."
+          }
+        ]
+      },
+      {
+        "role": "Pointu",
+        "color": "P1",
+        "errors": [
+          {
+            "label": "Attaquer en force sans lire le bloc",
+            "text": "Tu smashes dans le bloc à 3. Solution : 1/10e de seconde sur les bras du bloqueur avant le contact. Si fermé → ralentir et placer en zone 6. Si écarté → smasher dans la seam."
+          },
+          {
+            "label": "Oublier la pipe / la bic",
+            "text": "Tu restes 100% sur l'aile droite, le bloc adverse t'attend. Solution : 1 pipe ou 1 bic toutes les 5 attaques pour ouvrir le jeu central."
+          },
+          {
+            "label": "Ne pas couvrir après son attaque",
+            "text": "Tu admires ton smash, le contre adverse renvoie la balle, tu n'es pas en couverture. Solution : « j'attaque PUIS je descends à la 3 m couvrir » — réflexe à drillder."
+          },
+          {
+            "label": "Attaque en arrière sans s'engager",
+            "text": "Tu pars en bic mais tu hésites à 3 m. Solution : commit total dès la passe — soit tu y vas franc, soit tu deviens couverture, jamais entre les deux."
+          }
+        ]
+      },
+      {
+        "role": "Central",
+        "color": "P3",
+        "errors": [
+          {
+            "label": "Suivre la balle au lieu de lire le passeur",
+            "text": "Tu regardes la passe monter — trop tard pour bouger. Solution : œil sur les MAINS du passeur adverse, pas sur la balle. Décide ton contre AVANT la sortie."
+          },
+          {
+            "label": "Lâcher trop tôt en quick",
+            "text": "Tu décolles avant que le passeur ait engagé ses mains → tu redescends quand la balle est frappée. Solution : attendre l'engagement des mains du passeur pour sauter."
+          },
+          {
+            "label": "Ne pas se libérer après le contre",
+            "text": "Tu restes au filet alors que le central doit reculer pour l'attaque suivante. Solution : « contre → 2 pas en arrière → prêt à attaquer » comme séquence automatique."
+          },
+          {
+            "label": "Quick toujours en zone C (centre)",
+            "text": "Si tu fais toujours ton 1er tempo au centre, le central adverse t'anticipe. Solution : alterner zone A (gauche centre), C (centre), B (droite centre) — 1 sur 3 minimum hors centre."
+          }
+        ]
+      },
+      {
+        "role": "Aile (R4 / OH)",
+        "color": "P4",
+        "errors": [
+          {
+            "label": "Ne pas alterner les tirs",
+            "text": "Tu smashes toujours la même zone. Le défenseur t'anticipe. Solution : 40% diagonale + 30% ligne + 20% tip + 10% feinte = répartition idéale."
+          },
+          {
+            "label": "Course d'approche trop longue / trop loin du filet",
+            "text": "Tu arrives sous la balle, l'élan vertical est gâché. Solution : court d'approche = 2,5 à 3 m depuis le filet, dernier pas large, plant en ligne avec ton épaule frappante."
+          },
+          {
+            "label": "Lever le bras trop tard",
+            "text": "Tu armes au dernier moment → pas de puissance + contact bas. Solution : bras armé DÈS le décollage, coude haut au sommet du saut."
+          },
+          {
+            "label": "Mauvaise réception en R4 sur service court",
+            "text": "Service court derrière la 3 m, tu cours en avant en panique. Solution : position d'attente à 6 m du filet (PAS à 3 m), épaules face au serveur, freeze au contact."
+          }
+        ]
+      },
+      {
+        "role": "Libéro",
+        "color": "L",
+        "errors": [
+          {
+            "label": "Sortir de sa zone autorisée",
+            "text": "Tu attaques en suspension OU tu fais une passe à 10 doigts depuis la zone avant. Solution : libéro reste TOUJOURS en arrière de la ligne 3 m pour les passes en suspension, et ne peut PAS attaquer."
+          },
+          {
+            "label": "Geste sur la 2e touche au filet",
+            "text": "Tu fais une passe à 10 doigts depuis la zone avant — l'attaquant qui frappe au-dessus du filet est en faute. Solution : si tu passes à 10 doigts en avant, l'attaque doit être hors du filet (passe).Conséquence : nul, faute, point adverse."
+          },
+          {
+            "label": "Ne pas communiquer en réception",
+            "text": "Deux joueurs vers la même balle = collision. Le libéro a la priorité — il doit APPELER fort « libéro », « moi », « à toi » pour clarifier."
+          },
+          {
+            "label": "Manchette plate (pas d'orientation)",
+            "text": "Tu reçois mais la balle part au filet ou hors zone. Solution : orienter la plateforme vers la cible — angle des poignets contrôle la direction."
+          }
+        ]
+      }
+    ]
   }
 }

@@ -151,6 +151,10 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
         const style = ARROW_STYLE[kind];
         const backoff = arrow.backoff ?? style.defaultBackoff;
         const end = shortenAvoidingPlayers(arrow.from, arrow.to, players, backoff, sx, sy);
+        // Movement arrows animate with a "marching ants" effect to convey
+        // the trajectory the player walks/runs along. Other arrows stay
+        // static so the ball trajectory remains the visual anchor.
+        const isMovement = kind === 'movement';
         return (
           <line
             key={arrow.id}
@@ -164,7 +168,17 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
             markerEnd={`url(#${markerForKind[kind]})`}
             opacity={arrow.dimmed ? 0.25 : 1}
             style={{ transition: 'opacity 0.12s ease-out' }}
-          />
+          >
+            {isMovement && (
+              <animate
+                attributeName="stroke-dashoffset"
+                from="0"
+                to="-12"
+                dur="1.4s"
+                repeatCount="indefinite"
+              />
+            )}
+          </line>
         );
       })}
     </svg>

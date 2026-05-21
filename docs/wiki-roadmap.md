@@ -83,28 +83,28 @@ Pour chaque skill (passe, attaque, défense, service, contre) :
 - [x] i18n FR (contenu) + EN (listing hub).
 - Sources : AVP, VolleyballMag, Olympics.com, Pakmen, BetterAtBeach, JVA.
 
-### 3.5 — Erreurs typiques par poste
-Format court, très pédagogique (Débutant) :
-- Passeur : se précipiter, ne pas regarder la cible, mauvaise pénétration.
-- Pointu : attaquer en force sans regarder le bloc, oublier la pipe.
-- Central : suivre la balle au lieu de lire le passeur, lâcher trop tôt en quick.
-- Aile : ne pas alterner les tirs, course d'approche trop longue.
-- Libéro : sortir de sa zone autorisée, geste sur la 2ᵉ touche au filet.
+### 3.5 — Erreurs typiques par poste ✅
+- [x] Guide livré à `/guides/erreurs-typiques` (Technique, ~10 min, Débutant).
+- [x] 5 postes (Passeur, Pointu, Central, Aile, Libéro) × 4 erreurs chacun = 20 erreurs avec solution corrective pour chacune.
+- [x] Cards colorées par poste (palette ROLE_COLORS partagée avec /positions).
+- [x] i18n FR (contenu) + EN (listing hub).
 
-### 3.6 — Signaux d'arbitre
-Geste par geste (fault, side-out, time-out, replay, etc.). Page courte mais utile pour les joueurs qui apprennent à arbitrer en interne.
+### 3.6 — Signaux d'arbitre ✅
+- [x] Guide livré à `/guides/signaux-arbitre` (Technique, ~5 min, Débutant).
+- [x] 15 signaux FIVB avec pictogramme SVG inline + nom + description du geste + contexte d'utilisation.
+- [x] i18n FR (contenu) + EN (listing hub).
+- Sources : Judgemate, documentation officielle FIVB hand signals.
 
 ---
 
 ## 4. Petits ajouts à faible coût
 
-- [ ] **Pénétration animée** sur le 5-1 : le passeur a un mouvement, le central dégage. Pas que des flèches statiques. (~1 jour) — flèche statique livrée, animation à ajouter.
+- [x] **Pénétration animée** sur le 5-1 : flèche du passeur en pénétration animée via `<animate>` SVG (stroke-dashoffset → effet « fourmis qui marchent ») sur la flèche `movement` quand le toggle « Voir tous les mouvements » est actif. Anim seulement sur kind=movement, les flèches d'attaque restent statiques.
 - [x] **Hover sur les pastilles joueurs** : tooltip avec rôle (FR : Passeur / Pointu / …) + clic = navigation vers `/positions/<size>/<system>` quand un mapping existe.
 - [x] **Légende du diagramme** : cartouche affiché sous chaque diagramme (1er tempo orange plein, 2e tempo gris pointillé, mouvement teal pointillé fin quand le toggle est actif).
 - [x] **Lien depuis `/positions/6/5-1`** vers `/systems/5-1` (et inversement) — bouton « VOIR LE SYSTÈME → » côté Positions, bouton « VOIR LES POSTES → » côté Systems, étendu à tous les couples (6v6/5v5/4v4).
 - [ ] **Bouton « test rapide »** sur chaque page de guide : 3 questions à choix multiples sans persistance.
 - [ ] **i18n des contenus de rotation** (FR seulement aujourd'hui — extraire vers les locales).
-- [ ] **Mode sombre** : le design system retro est en cream/ink, un mode sombre demanderait une variante du palette mais reste faisable.
 
 ---
 
@@ -118,7 +118,7 @@ Geste par geste (fault, side-out, time-out, replay, etc.). Page courte mais util
 | ✅ P2 | Lecture du jeu (guide) | Livré — 12 sections, IF/THEN, scouting, drills |
 | ✅ P2 | Comparatif indoor ↔ beach | Livré — tableau 16 lignes + 7 sections |
 | 🟢 P3 | Quiz interactif | Engageant mais demande du temps de dev |
-| 🟢 P3 | Erreurs typiques + signaux arbitre | Petites pages utiles à glisser quand l'envie passe |
+| ✅ P3 | Erreurs typiques + signaux arbitre | Livré — 2 guides + 15 signaux SVG + 20 erreurs |
 | 🟢 P3 | Exercices / drills | Beaucoup de rédaction, peu de tech — bon contenu de fond |
 
 ---
