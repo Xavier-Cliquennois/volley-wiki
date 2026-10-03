@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Court, type CourtArrow, type CourtLayout, type CourtPlayer } from '../components/court';
 import { useCurrentLang } from '../i18n/paths';
-import type { PlayerSlot, RoleCode, Rotation, AttackOption } from './types';
+import type { PlayerSlot, RoleCode, Rotation, AttackOption, CourtCoord, MovementKind } from './types';
 import { RISK_COLORS } from './types';
 
 // Compact label shown inside the player circle. Same in every language —
@@ -82,14 +82,23 @@ function slotToPlayer(
 // like MB quick from P3.
 const ATTACK_BACKOFF = 4;
 
-function attackArrows(rotation: Rotation, hoveredId: string | null): CourtArrow[] {
+// When movements are shown, the run to the strike point starts where the
+// attacker's approach leg ended rather than at the serve position.
+function attackStart(slot: PlayerSlot, withMovements: boolean) {
+  const approach = withMovements
+    ? slot.movements?.find(m => m.kind === 'approach')
+    : undefined;
+  return approach?.to ?? slot.servePosition;
+}
+
+function attackArrows(rotation: Rotation, hoveredId: string | null, withMovements: boolean): CourtArrow[] {
   return rotation.attacks
     .map(attack => {
       const attacker = rotation.slots.find(s => s.role === attack.attacker);
       if (!attacker) return null;
       return {
         id: `attack-${attack.id}`,
-        from: attacker.servePosition,
+        from: attackStart(attacker, withMovements),
         to: attack.target,
         kind: attack.risk === 'low' ? 'main' : 'alt',
         backoff: ATTACK_BACKOFF,
@@ -99,18 +108,53 @@ function attackArrows(rotation: Rotation, hoveredId: string | null): CourtArrow[
     .filter((a): a is CourtArrow => a !== null);
 }
 
-// Player movement arrows (penetration, approach, coverage…). One arrow per
-// slot that has a `releasePosition`. Drawn under attack arrows so the ball
-// trajectory stays the primary signal.
-function movementArrows(rotation: Rotation): CourtArrow[] {
-  return rotation.slots
-    .filter(s => !!s.releasePosition)
-    .map(slot => ({
-      id: `movement-${slot.role}`,
-      from: slot.servePosition,
-      to: slot.releasePosition!,
+// One colour (and dash pattern, for colour-blind readers) per movement
+// family. Dash periods divide 12 so the marching-ants animation loops cleanly.
+const MOVEMENT_STYLE: Record<MovementKind, { color: string; dash: string }> = {
+  setter: { color: '#1f7a8c', dash: '2,4' },
+  reception: { color: '#6b2c5c', dash: '8,4' },
+  approach: { color: '#2f7a3a', dash: '4,2' },
+  coverage: { color: '#3b4fa8', dash: '6,2,2,2' },
+};
+const MOVEMENT_ORDER: MovementKind[] = ['setter', 'reception', 'approach', 'coverage'];
+// Movement targets are empty spots, so the arrowhead can land close to them.
+const MOVEMENT_BACKOFF = 4;
+
+// Movement legs of every slot: a legacy `releasePosition` counts as a single
+// setter leg; `movements` legs are chained from the serve position.
+function movementLegs(slot: PlayerSlot) {
+  const legs: { kind: MovementKind; from: CourtCoord; to: CourtCoord }[] = [];
+  if (slot.releasePosition) {
+    legs.push({ kind: 'setter', from: slot.servePosition, to: slot.releasePosition });
+  }
+  let from = slot.servePosition;
+  for (const leg of slot.movements ?? []) {
+    legs.push({ kind: leg.kind, from, to: leg.to });
+    from = leg.to;
+  }
+  return legs;
+}
+
+// Player movement arrows (penetration, W reception, approach, coverage).
+// Drawn under attack arrows so the ball trajectory stays the primary signal.
+// When one family is focused, the others fade out.
+function movementArrows(rotation: Rotation, focused: MovementKind | null): CourtArrow[] {
+  return rotation.slots.flatMap(slot =>
+    movementLegs(slot).map((leg, i) => ({
+      id: `movement-${slot.role}-${i}`,
+      from: leg.from,
+      to: leg.to,
       kind: 'movement' as const,
-    }));
+      ...(slot.movements?.length ? MOVEMENT_STYLE[leg.kind] : {}),
+      backoff: slot.movements?.length ? MOVEMENT_BACKOFF : undefined,
+      dimmed: focused !== null && focused !== leg.kind,
+    })),
+  );
+}
+
+function movementKindsOf(rotation: Rotation): MovementKind[] {
+  const kinds = new Set(rotation.slots.flatMap(s => movementLegs(s).map(l => l.kind)));
+  return MOVEMENT_ORDER.filter(k => kinds.has(k));
 }
 
 type Props = {
@@ -130,6 +174,7 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
   // Setter focus: only offered when the rotation has two setters (6-2, 4-2).
   const [setterFocus, setSetterFocus] = useState<'S' | 'S2' | null>(null);
   const hasTwoSetters = rotation.slots.some(s => s.role === 'S2');
+  const [focusedMovement, setFocusedMovement] = useState<MovementKind | null>(null);
 
   const tooltipFor = (role: RoleCode) => {
     const caption = roleCaption(role, lang);
@@ -145,8 +190,8 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
     active: hasTwoSetters && setterFocus === s.role,
   }));
   const arrows: CourtArrow[] = [
-    ...(showMovements ? movementArrows(rotation) : []),
-    ...attackArrows(rotation, hoveredAttackId),
+    ...(showMovements ? movementArrows(rotation, focusedMovement) : []),
+    ...attackArrows(rotation, hoveredAttackId, showMovements),
   ];
 
   const layout: CourtLayout = { players, arrows };
@@ -162,7 +207,11 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
         />
       </div>
 
-      <DiagramLegend showMovements={showMovements} />
+      <DiagramLegend
+        movementKinds={showMovements ? movementKindsOf(rotation) : []}
+        focused={focusedMovement}
+        onFocus={setFocusedMovement}
+      />
 
       {hasTwoSetters && (
         <SetterFocusToggle value={setterFocus} onChange={setSetterFocus} />
@@ -321,7 +370,17 @@ function SetterFocusToggle({
   );
 }
 
-function DiagramLegend({ showMovements }: { showMovements: boolean }) {
+// Movement entries are buttons: clicking one isolates that family on the
+// court (the others fade), clicking it again shows every family.
+function DiagramLegend({
+  movementKinds,
+  focused,
+  onFocus,
+}: {
+  movementKinds: MovementKind[];
+  focused: MovementKind | null;
+  onFocus: (kind: MovementKind | null) => void;
+}) {
   const { t } = useTranslation('common');
   return (
     <div
@@ -348,19 +407,51 @@ function DiagramLegend({ showMovements }: { showMovements: boolean }) {
         kind="dashed"
         label={t('systems.legend.tempo2')}
       />
-      {showMovements && (
-        <LegendItem
-          color="#1f7a8c"
-          kind="dotted"
-          label={t('systems.legend.movement')}
-        />
-      )}
+      {movementKinds.map(kind => {
+        const active = focused === kind;
+        return (
+          <button
+            key={kind}
+            type="button"
+            aria-pressed={active}
+            title={t('systems.legend.isolate')}
+            onClick={() => onFocus(active ? null : kind)}
+            style={{
+              font: 'inherit',
+              color: 'inherit',
+              letterSpacing: 'inherit',
+              background: active ? 'var(--paper)' : 'none',
+              border: active ? '1.5px solid var(--ink)' : '1.5px solid transparent',
+              padding: '1px 4px',
+              margin: '-2px -5px',
+              cursor: 'pointer',
+              opacity: focused === null || active ? 1 : 0.45,
+            }}
+          >
+            <LegendItem
+              color={MOVEMENT_STYLE[kind].color}
+              dash={MOVEMENT_STYLE[kind].dash}
+              label={t(`systems.legend.${kind}`)}
+            />
+          </button>
+        );
+      })}
     </div>
   );
 }
 
-function LegendItem({ color, kind, label }: { color: string; kind: 'solid' | 'dashed' | 'dotted'; label: string }) {
-  const dash = kind === 'dashed' ? '6 5' : kind === 'dotted' ? '2 4' : undefined;
+function LegendItem({
+  color,
+  kind,
+  dash: dashOverride,
+  label,
+}: {
+  color: string;
+  kind?: 'solid' | 'dashed' | 'dotted';
+  dash?: string;
+  label: string;
+}) {
+  const dash = dashOverride ?? (kind === 'dashed' ? '6 5' : kind === 'dotted' ? '2 4' : undefined);
   const strokeWidth = kind === 'solid' ? 3 : 2;
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>

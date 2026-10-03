@@ -97,6 +97,12 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
     alt: altMarkerId,
     movement: movementMarkerId,
   };
+  // Arrows with a colour override get a matching arrowhead (movement size).
+  const customColors = Array.from(
+    new Set(arrows.map(a => a.color).filter((c): c is string => !!c)),
+  );
+  const customMarkerId = (color: string) =>
+    `arrow-custom-${customColors.indexOf(color)}-${idSuffix}`;
 
   return (
     <svg
@@ -145,6 +151,20 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
         >
           <polygon points="0 0, 9 3.5, 0 7" fill={ARROW_STYLE.movement.stroke} />
         </marker>
+        {customColors.map(color => (
+          <marker
+            key={color}
+            id={customMarkerId(color)}
+            markerUnits="userSpaceOnUse"
+            markerWidth="9"
+            markerHeight="7"
+            refX="8"
+            refY="3.5"
+            orient="auto"
+          >
+            <polygon points="0 0, 9 3.5, 0 7" fill={color} />
+          </marker>
+        ))}
       </defs>
       {arrows.map(arrow => {
         const kind = arrow.kind ?? 'main';
@@ -162,10 +182,10 @@ export function Arrows({ arrows, players, idSuffix, view }: ArrowsProps) {
             y1={sy(arrow.from.y)}
             x2={sx(end.x)}
             y2={sy(end.y)}
-            stroke={style.stroke}
+            stroke={arrow.color ?? style.stroke}
             strokeWidth={style.strokeWidth}
-            strokeDasharray={style.dash}
-            markerEnd={`url(#${markerForKind[kind]})`}
+            strokeDasharray={arrow.dash ?? style.dash}
+            markerEnd={`url(#${arrow.color ? customMarkerId(arrow.color) : markerForKind[kind]})`}
             opacity={arrow.dimmed ? 0.25 : 1}
             style={{ transition: 'opacity 0.12s ease-out' }}
           >
