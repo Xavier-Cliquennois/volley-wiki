@@ -17,9 +17,9 @@ const STATE: EditorState = {
   players: [
     { id: 'A1',      label: 'Avant G',      role: 'outside',  color: COLORS.outside },
     { id: 'C',       label: 'Centre',       role: 'middle',   color: COLORS.middle },
-    { id: 'A2',      label: 'Avant D',      role: 'outside',  color: COLORS.opposite },
+    { id: 'A2',      label: 'Avant D',      role: 'outside',  color: COLORS.setter },
     { id: 'A3',      label: 'Arrière G',    role: 'libero',   color: COLORS.libero },
-    { id: 'A4',      label: 'Arrière D',    role: 'opposite', color: COLORS.outside_back },
+    { id: 'A4',      label: 'Arrière D',    role: 'opposite', color: COLORS.opposite },
     { id: 'OPP_SRV', label: 'Serveur adv.', role: 'opponent', color: COLORS.opponent },
   ],
   steps: [
