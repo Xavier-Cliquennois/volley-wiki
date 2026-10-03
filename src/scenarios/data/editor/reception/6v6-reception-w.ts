@@ -17,7 +17,7 @@ const STATE: EditorState = {
   players: [
     { id: 'P',       label: 'Passeur (sorti)', role: 'setter',   color: COLORS.setter },
     { id: 'R4a',     label: 'Avant G',         role: 'outside',  color: COLORS.outside },
-    { id: 'R4b',     label: 'Avant D',         role: 'outside',  color: COLORS.opposite },
+    { id: 'R4b',     label: 'Avant D',         role: 'outside',  color: COLORS.outside },
     { id: 'C',       label: 'Médian',          role: 'middle',   color: COLORS.middle },
     { id: 'A1',      label: 'Arrière G',       role: 'outside',  color: COLORS.outside_back },
     { id: 'A2',      label: 'Arrière D',       role: 'libero',   color: COLORS.libero },
