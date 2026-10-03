@@ -115,7 +115,10 @@ function approachJumpLand(
 ): TimelineAction[] {
   const { windowStart, windowDuration, startPos, ballArrivalTime } = ctx;
   const jumpHeight = brick.jumpHeight ?? defaultJumpHeight;
-  const landing = brick.landing ?? [brick.impact[0], 0, brick.impact[2] + 0.4];
+  // Run-up and landing sit on the player's own side of the net: behind the
+  // impact for us (z > 0), in front of it for the opponents (z < 0).
+  const awayFromNet = brick.impact[2] < 0 ? -1 : 1;
+  const landing = brick.landing ?? [brick.impact[0], 0, brick.impact[2] + 0.4 * awayFromNet];
   const windowEnd = windowStart + windowDuration;
 
   // When contactAtRatio is set, the ball_move was split at the contact point —
@@ -151,7 +154,7 @@ function approachJumpLand(
   // 1. Approach run — only emit if the player actually has to move AND we have
   //    real time for it. When the window is tight, the approach is folded into
   //    the jump-up itself (the jump-up's `to` is the impact spot).
-  const approachTo: [number, number, number] = [brick.impact[0], 0, brick.impact[2] + 0.3];
+  const approachTo: [number, number, number] = [brick.impact[0], 0, brick.impact[2] + 0.3 * awayFromNet];
   const moved = Math.hypot(approachTo[0] - startPos[0], approachTo[2] - startPos[2]) > 0.05;
   if (moved && approachDur >= MIN_DUR) {
     const approach: PlayerMoveAction = {
