@@ -17,7 +17,7 @@ import type {
   JumpServeBrick,
   BlocBrick,
 } from './bricks';
-import { DEFAULT_JUMP } from './bricks/expand';
+import { DEFAULT_JUMP, HAND_REACH } from './bricks/expand';
 import type { EditorStep } from './types';
 
 export type JumpingBrick = SmashBrick | FeinteBrick | JumpServeBrick | BlocBrick;
@@ -113,7 +113,7 @@ export function computeSyncStatuses(
       prevBall[0] - brick.impact[0],
       prevBall[2] - brick.impact[2],
     );
-    const apexY = (brick.jumpHeight ?? jumpHeightFor(brick.kind)) + 0.5;
+    const apexY = (brick.jumpHeight ?? jumpHeightFor(brick.kind)) + HAND_REACH;
     out.push({
       brickId: brick.id,
       playerId: brick.playerId,
