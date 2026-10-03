@@ -18,6 +18,10 @@ import { SYNC_RADIUS, type JumpingBrick } from './smashSync';
 const EPSILON = 0.001;
 const CONTACT_DURATION = 0.2;
 
+// A jumping brick splits the ball flight when the ball leaves its hand for a
+// spot at least this far away (a spike into the block one metre away is a
+// real second flight, a ball merely drifting onto the hand is not).
+const SPLIT_MIN_TRAVEL = 0.6;
 // How far above the striking hand a set climbs before coming down onto it.
 const SET_LIFT = 0.8;
 // A grounded player holds the ball between these heights (hands at the hips
@@ -159,6 +163,8 @@ export function compileScenario(state: EditorState): Scenario {
     // ball_move, primary === sole action.
     let primaryBallAction: BallMoveAction | null = null;
     let contactArrivalTime: number | undefined;
+    // Second half of a split flight: the spike leaving the hitter's hand.
+    let spike: BallMoveAction | null = null;
 
     if (ballMoved) {
       // We only split the ball_move into two segments when the ball clearly
@@ -175,7 +181,7 @@ export function compileScenario(state: EditorState): Scenario {
         ? curr.snapshot.ballPosition[2] - interceptor.impact[2]
         : 0;
       const ballFliesPastImpact = interceptor
-        ? Math.hypot(dxImpact, dzImpact) > SYNC_RADIUS
+        ? Math.hypot(dxImpact, dzImpact) > SPLIT_MIN_TRAVEL
         : false;
 
       if (interceptor && interceptor.contactAtRatio !== undefined && ballFliesPastImpact) {
@@ -183,6 +189,7 @@ export function compileScenario(state: EditorState): Scenario {
         timeline.push(...segments);
         flights.push({ action: segments[0], arrivalStep: curr, isApproach: true });
         flights.push({ action: segments[1], arrivalStep: curr, isApproach: false });
+        spike = segments[1];
         primaryBallAction = segments[0];
         contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
       } else {
@@ -216,9 +223,13 @@ export function compileScenario(state: EditorState): Scenario {
     if (curr.actions?.length) {
       for (const brick of curr.actions) {
         const startPos = prev.snapshot.positions[brick.playerId] ?? [0, 0, 0];
-        const snapTime = contactTimeFor(
-          brick, primaryBallAction, prev.snapshot.ballPosition, transitionStart, contactArrivalTime,
-        );
+        // Blockers facing a spike peak when the ball passes them, not when
+        // the hitter strikes it.
+        const snapTime = brick.kind === 'BLOC' && spike && brick !== interceptor
+          ? passingTime(spike, brick.impact)
+          : contactTimeFor(
+            brick, primaryBallAction, prev.snapshot.ballPosition, transitionStart, contactArrivalTime,
+          );
         const ctx: ExpandContext = {
           windowStart: transitionStart,
           windowDuration: transitionDuration,
@@ -531,6 +542,17 @@ function settleAirborneBall(
       });
     }
   }
+}
+
+// Time at which a flight passes closest (in XZ) to a point.
+function passingTime(flight: BallMoveAction, point: [number, number, number]): number {
+  const dx = flight.to[0] - flight.from[0];
+  const dz = flight.to[2] - flight.from[2];
+  const len2 = dx * dx + dz * dz;
+  const along = len2 > 0
+    ? ((point[0] - flight.from[0]) * dx + (point[2] - flight.from[2]) * dz) / len2
+    : 0;
+  return roundTime(flight.time + flight.duration * clamp01(along));
 }
 
 function apexOf(action: BallMoveAction): number {
