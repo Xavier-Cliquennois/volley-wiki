@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import { S } from './styles';
 import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 // Short setter guide — content is embedded in FR for this iteration. The
 // long-form sections (philosophy, hand mechanics, footwork, distribution
@@ -90,6 +91,8 @@ export default function GuidePasseSetter() {
         <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.set') })}</h2>
         <DrillList skill="set" />
       </section>
+
+      <QuizEmbed slug="passe" persistProgress={false} />
     </div>
   );
 }

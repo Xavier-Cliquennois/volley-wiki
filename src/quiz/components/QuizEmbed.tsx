@@ -5,13 +5,16 @@ import { QuizPlayer } from './QuizPlayer';
 type Props = {
   // Slug of the quiz to embed (must match an entry in QUIZZES).
   slug: string;
+  // Save the score in localStorage. Defaults to true; the guide quick tests
+  // turn it off so they stay stateless.
+  persistProgress?: boolean;
 };
 
 // Drop-in quiz block intended for the bottom of a related page (guide,
 // system, etc.). Renders a sticker header + a "START" button on first
 // view, then unfurls the QuizPlayer once the user opts in. The opt-in
 // step keeps the parent page scannable for users who only want to read.
-export function QuizEmbed({ slug }: Props) {
+export function QuizEmbed({ slug, persistProgress = true }: Props) {
   const [started, setStarted] = useState(false);
   const quiz = getQuizBySlug(slug);
 
@@ -100,7 +103,7 @@ export function QuizEmbed({ slug }: Props) {
       ) : (
         <QuizPlayer
           quiz={quiz}
-          persistProgress
+          persistProgress={persistProgress}
           onBackToHub={() => setStarted(false)}
         />
       )}

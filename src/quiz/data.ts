@@ -4,6 +4,31 @@ import { QUESTIONS_OPTIONS_ATTAQUE } from './questions/options-attaque';
 import { QUESTIONS_PLACEMENT_DEFENSE } from './questions/placement-defense';
 import { QUESTIONS_SYSTEMES } from './questions/systemes';
 import { QUESTIONS_LECTURE_JEU } from './questions/lecture-jeu';
+import { QUESTIONS_SERVICE } from './questions/service';
+import { QUESTIONS_RECEPTION } from './questions/reception';
+import { QUESTIONS_CONTRE } from './questions/contre';
+import { QUESTIONS_PASSE } from './questions/passe';
+import { QUESTIONS_JEU_COLLECTIF } from './questions/jeu-collectif';
+import { QUESTIONS_ERREURS_TYPIQUES } from './questions/erreurs-typiques';
+import { QUESTIONS_INDOOR_BEACH } from './questions/indoor-beach';
+
+// Quick tests: 3 questions, embedded at the bottom of a guide, no persistence.
+const quick = (
+  slug: string,
+  title: string,
+  subtitle: string,
+  questions: Quiz['questions'],
+  level: Quiz['level'] = 'Intermédiaire',
+): Quiz => ({
+  slug,
+  title,
+  subtitle,
+  description: 'Trois questions pour vérifier que tu as retenu l\'essentiel de ce guide.',
+  category: 'Technique',
+  level,
+  estimatedTime: '~1 min',
+  questions,
+});
 
 export const QUIZZES: Quiz[] = [
   {
@@ -61,6 +86,13 @@ export const QUIZZES: Quiz[] = [
     estimatedTime: '~4 min',
     questions: QUESTIONS_LECTURE_JEU,
   },
+  quick('service', 'Test rapide : le service', 'Lancer, flottant et zones cibles', QUESTIONS_SERVICE),
+  quick('reception', 'Test rapide : la réception', 'Position, plateforme et déplacements', QUESTIONS_RECEPTION, 'Débutant'),
+  quick('contre', 'Test rapide : le contre', 'Timing, regard et choix du type de contre', QUESTIONS_CONTRE, 'Avancé'),
+  quick('passe', 'Test rapide : la passe', 'Mains, pieds et options de distribution', QUESTIONS_PASSE),
+  quick('jeu-collectif', 'Test rapide : le jeu collectif', 'Phases de jeu, couverture et communication', QUESTIONS_JEU_COLLECTIF),
+  quick('erreurs-typiques', 'Test rapide : erreurs typiques', 'Les pièges classiques de chaque poste', QUESTIONS_ERREURS_TYPIQUES, 'Débutant'),
+  quick('indoor-beach', 'Test rapide : indoor vs beach', 'Ce qui change quand on passe sur le sable', QUESTIONS_INDOOR_BEACH),
 ];
 
 export function getQuizBySlug(slug: string): Quiz | undefined {
