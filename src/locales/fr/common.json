@@ -113,6 +113,10 @@
     "backToHub": "Retour aux systèmes",
     "comingSoon": "Bientôt disponible",
     "formationTitle": "Formation",
+    "sizeFilter": {
+      "label": "Taille d’équipe",
+      "all": "Toutes"
+    },
     "group": {
       "6v6": "Indoor — 6 contre 6",
       "5v5": "Indoor — 5 contre 5",
