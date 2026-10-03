@@ -96,6 +96,12 @@
     "showDetails_one": "Voir le détail ({{count}})",
     "showDetails_other": "Voir tous les détails ({{count}})",
     "hideDetails": "Masquer les détails",
+    "setterFocus": {
+      "label": "Mettre en avant :",
+      "none": "Les deux",
+      "s": "Passeur 1 (S)",
+      "s2": "Passeur 2 (S2)"
+    },
     "toggleMovements": "Voir tous les mouvements",
     "viewScenarios_one": "→ {{count}} scénario lié",
     "viewScenarios_other": "→ {{count}} scénarios liés",

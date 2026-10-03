@@ -127,6 +127,9 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
   const lang = useCurrentLang();
   const navigate = useNavigate();
   const [hoveredAttackId, setHoveredAttackId] = useState<string | null>(null);
+  // Setter focus: only offered when the rotation has two setters (6-2, 4-2).
+  const [setterFocus, setSetterFocus] = useState<'S' | 'S2' | null>(null);
+  const hasTwoSetters = rotation.slots.some(s => s.role === 'S2');
 
   const tooltipFor = (role: RoleCode) => {
     const caption = roleCaption(role, lang);
@@ -137,9 +140,10 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
     ? () => navigate(`/${lang}${positionsHref}`)
     : undefined;
 
-  const players = rotation.slots.map(s =>
-    slotToPlayer(s, lang, onActivate, tooltipFor(s.role)),
-  );
+  const players = rotation.slots.map(s => ({
+    ...slotToPlayer(s, lang, onActivate, tooltipFor(s.role)),
+    active: hasTwoSetters && setterFocus === s.role,
+  }));
   const arrows: CourtArrow[] = [
     ...(showMovements ? movementArrows(rotation) : []),
     ...attackArrows(rotation, hoveredAttackId),
@@ -159,6 +163,10 @@ export default function RotationDiagram({ rotation, showMovements = false, posit
       </div>
 
       <DiagramLegend showMovements={showMovements} />
+
+      {hasTwoSetters && (
+        <SetterFocusToggle value={setterFocus} onChange={setSetterFocus} />
+      )}
 
       {rotation.attacks.length > 0 && (
         <div>
@@ -263,6 +271,52 @@ function AttackCard({
       >
         {t('systems.attackerLabel', { role: attack.attacker })} · {t('systems.tempoLabel', { tempo: attack.tempo })}
       </span>
+    </div>
+  );
+}
+
+function SetterFocusToggle({
+  value,
+  onChange,
+}: {
+  value: 'S' | 'S2' | null;
+  onChange: (value: 'S' | 'S2' | null) => void;
+}) {
+  const { t } = useTranslation('common');
+  const options: { id: 'S' | 'S2' | null; label: string }[] = [
+    { id: null, label: t('systems.setterFocus.none') },
+    { id: 'S', label: t('systems.setterFocus.s') },
+    { id: 'S2', label: t('systems.setterFocus.s2') },
+  ];
+  return (
+    <div
+      role="group"
+      aria-label={t('systems.setterFocus.label')}
+      style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}
+    >
+      <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.06em' }}>
+        {t('systems.setterFocus.label')}
+      </span>
+      {options.map(o => (
+        <button
+          key={o.id ?? 'none'}
+          type="button"
+          aria-pressed={value === o.id}
+          onClick={() => onChange(o.id)}
+          style={{
+            padding: '4px 10px',
+            border: '2px solid var(--ink)',
+            background: value === o.id ? 'var(--yellow)' : 'var(--cream)',
+            color: 'var(--ink)',
+            fontFamily: '"DM Mono", monospace',
+            fontSize: 10,
+            letterSpacing: '0.06em',
+            cursor: 'pointer',
+          }}
+        >
+          {o.label}
+        </button>
+      ))}
     </div>
   );
 }
