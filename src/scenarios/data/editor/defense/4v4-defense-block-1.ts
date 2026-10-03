@@ -47,7 +47,7 @@ const STATE: EditorState = {
       title: '2. Passe haute vers Z2 adverse',
       description: "Distribution vers leur ailier droit. L'attaque arrive sur notre coin avant-GAUCHE. Le central doit glisser côté gauche.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 0.6,
       snapshot: {
         positions: {
           C:     [0, 0, 0.4],
@@ -59,7 +59,7 @@ const STATE: EditorState = {
         },
         ballPosition: [-3.0, 3.0, -0.8],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 5 },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s2-set', playerId: 'OPP_S', impact: [1.5, 0, -0.8] },
       ],
@@ -69,10 +69,10 @@ const STATE: EditorState = {
       title: '3. Bloc solo central + signal ligne/diagonale',
       description: "Le central glisse à gauche et bloque seul. Signal obligatoire (ligne ou diagonale) pour orienter les 3 défenseurs. Sans signal, ils ne savent pas quoi couvrir.",
       tempo: 'standard',
-      durationOverride: 0.8,
+      durationOverride: 0.5,
       snapshot: {
         positions: {
-          C:     [-2.0, 0, 0.3],
+          C:     [-3.3, 0, 0.3],
           R4:    [-3.0, 0, 2.5],
           A2:    [3.0, 0, 4],
           A:     [1.5, 0, 7],
@@ -90,7 +90,7 @@ const STATE: EditorState = {
       durationOverride: 0.9,
       snapshot: {
         positions: {
-          C:     [-2.0, 0, 0.5],
+          C:     [-3.3, 0, 0.5],
           R4:    [-3.0, 0, 2.5],
           A2:    [3.0, 0, 4],
           A:     [1.5, 0, 7],
@@ -101,8 +101,8 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [-3, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-bloc',  playerId: 'C',     impact: [-2.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [-3, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-bloc',  playerId: 'C',     impact: [-3.3, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -110,7 +110,7 @@ const STATE: EditorState = {
       title: "5. Récupération par l'arrière unique",
       description: "L'arrière P1 défend dans son axe — sa lecture doit être parfaite, aucun autre arrière pour compenser. Manchette haute vers la cible.",
       tempo: 'rapide',
-      durationOverride: 0.7,
+      durationOverride: 1,
       snapshot: {
         positions: {
           C:     [-2.0, 0, 0.5],
@@ -120,9 +120,9 @@ const STATE: EditorState = {
           OPP_A: [-3, 0, -0.6],
           OPP_S: [1.5, 0, -0.8],
         },
-        ballPosition: [0, 2.5, 1.0],
+        ballPosition: [0, 2.5, 1.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
         { kind: 'MANCHETTE', id: 'b-s5-dig', playerId: 'A', impact: [1.5, 0, 7] },
       ],
@@ -142,7 +142,7 @@ const STATE: EditorState = {
           OPP_A: [-3, 0, -3],
           OPP_S: [1.5, 0, -2],
         },
-        ballPosition: [0, 2.5, 1.0],
+        ballPosition: [0, 2.5, 1.5],
       },
     },
   ],

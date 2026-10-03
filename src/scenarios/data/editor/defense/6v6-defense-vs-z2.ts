@@ -54,7 +54,7 @@ const STATE: EditorState = {
       title: '2. Passe haute adverse vers Z2',
       description: "Le passeur adverse distribue vers son ailier droit. L'attaque arrive sur notre coin avant-GAUCHE. Configuration miroir parfaite de Z4.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 0.6,
       snapshot: {
         positions: {
           P:     [3, 0, 5.5],
@@ -69,7 +69,7 @@ const STATE: EditorState = {
         },
         ballPosition: [-3.2, 3.0, -0.8],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 5 },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s2-set', playerId: 'OPP_S', impact: [1.8, 0, -0.8] },
       ],
@@ -79,7 +79,7 @@ const STATE: EditorState = {
       title: '3. Bloc à 2 miroir + glissement défensif',
       description: "R4 (P4) contreur ligne + central (P3) ferme la diagonale. Pointu (P2) off-blocker à droite sur les 3 m. Libéro défend la ligne profonde gauche. P1 part en grande diagonale cross-court.",
       tempo: 'standard',
-      durationOverride: 0.9,
+      durationOverride: 0.5,
       snapshot: {
         positions: {
           P:     [2.5, 0, 7.5],
@@ -117,9 +117,9 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [-3.2, 0, -0.6], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'R4',    impact: [-3.2, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-blocC', playerId: 'C',     impact: [-2.0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [-3.2, 0, -0.6], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'R4',    impact: [-3.2, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-blocC', playerId: 'C',     impact: [-2.0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -127,11 +127,11 @@ const STATE: EditorState = {
       title: '5. Défense du passeur sur la diagonale',
       description: "Le passeur (P1) est sur la trajectoire principale de la grande diagonale cross-court. Manchette défensive — question immédiate : qui fait la 2ᵉ touche ?",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 1,
       snapshot: {
         positions: {
           P:     [2.5, 0, 7.5],
-          Op:    [3.0, 0, 2.5],
+          Op:    [-1, 0, 1],
           C:     [-2.0, 0, 0.5],
           R4:    [-3.2, 0, 0.5],
           L:     [-4, 0, 7.5],
@@ -140,7 +140,7 @@ const STATE: EditorState = {
           OPP_S: [1, 0, -2],
           OPP_R: [0, 0, -3.2],
         },
-        ballPosition: [-1.0, 2.5, 1.0],
+        ballPosition: [-1, 1.9, 1],
       },
       ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
@@ -152,12 +152,12 @@ const STATE: EditorState = {
       title: '6. Relais du pointu + contre-attaque',
       description: "Le pointu sort de l'off-blocker pour faire la 2ᵉ touche. Distribution vers le R4 en zone 4 qui prépare la frappe.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 1.5,
       snapshot: {
         positions: {
           P:     [2.5, 0, 7.5],
           Op:    [-1.0, 0, 1.0],
-          C:     [0, 0, 1.0],
+          C:     [-2, 0, 1.2],
           R4:    [-3.5, 0, 1.2],
           L:     [-4, 0, 7.5],
           R4b:   [-0.8, 0, 8],
@@ -165,12 +165,12 @@ const STATE: EditorState = {
           OPP_S: [1, 0, -2],
           OPP_R: [0, 0, -3.2],
         },
-        ballPosition: [-3.0, 0, -6],
+        ballPosition: [-1.8, 0.22, -6.5],
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s6-set',   playerId: 'Op', impact: [-1.0, 0, 1.0] },
-        { kind: 'SMASH',       id: 'b-s6-smash', playerId: 'R4', impact: [-3.0, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.5 },
+        { kind: 'SMASH',       id: 'b-s6-smash', playerId: 'R4', impact: [-3.0, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.65 },
       ],
     },
     {
@@ -191,7 +191,7 @@ const STATE: EditorState = {
           OPP_S: [2.5, 0, -2],
           OPP_R: [0, 0, -3.2],
         },
-        ballPosition: [-3.0, 0, -6],
+        ballPosition: [-1.8, 0.22, -6.5],
       },
     },
   ],

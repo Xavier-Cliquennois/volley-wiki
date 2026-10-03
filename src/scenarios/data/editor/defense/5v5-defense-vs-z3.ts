@@ -49,7 +49,7 @@ const STATE: EditorState = {
       title: '2. Passe tendue + ailes off-blockers',
       description: "Le passeur adverse lance tendu vers le central. Nos ailiers reculent à 1,5 m du filet sur la ligne d'attaque pour couvrir les déviations latérales.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 0.3,
       snapshot: {
         positions: {
           C:     [0, 0, 0.4],
@@ -75,7 +75,7 @@ const STATE: EditorState = {
       durationOverride: 0.7,
       snapshot: {
         positions: {
-          C:     [0, 0, 0.4],
+          C:     [0.5, 0, 0.4],
           Op:    [3, 0, 1.5],
           R4:    [-3, 0, 1.5],
           L:     [-2.5, 0, 5],
@@ -87,8 +87,8 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0.5, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -96,7 +96,7 @@ const STATE: EditorState = {
       title: '4. Défense du libéro',
       description: "Le libéro (avancé à 5 m car angles courts) défend en manchette dans son couloir gauche. Trajectoire haute vers la cible — passeur reviendra au filet.",
       tempo: 'rapide',
-      durationOverride: 0.7,
+      durationOverride: 1,
       snapshot: {
         positions: {
           C:     [0, 0, 0.4],
@@ -107,7 +107,7 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -0.6],
           OPP_S: [-1.5, 0, -0.8],
         },
-        ballPosition: [1.5, 2.0, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
       ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
@@ -130,7 +130,7 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -0.5],
           OPP_S: [-1.5, 0, -2],
         },
-        ballPosition: [1.5, 2.0, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
     },
   ],

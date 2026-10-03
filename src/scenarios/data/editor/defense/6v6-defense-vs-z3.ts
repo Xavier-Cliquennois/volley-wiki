@@ -56,7 +56,7 @@ const STATE: EditorState = {
       title: '2. Passe tendue rapide + central en l\'air',
       description: "Le passeur adverse lance une passe tendue très basse vers le central qui a déjà décollé. Nos ailiers reculent sur les 3 m pour libérer les déviations de bloc.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 0.3,
       snapshot: {
         positions: {
           P:      [3, 0, 5],
@@ -87,7 +87,7 @@ const STATE: EditorState = {
         positions: {
           P:      [3, 0, 5],
           Op:     [3, 0, 2.2],
-          C:      [0, 0, 0.4],
+          C:      [-0.5, 0, 0.4],
           R4:     [-3, 0, 2.2],
           L:      [-2.5, 0, 5],
           R4b:    [0, 0, 6],
@@ -100,8 +100,8 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [-0.5, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -109,11 +109,11 @@ const STATE: EditorState = {
       title: '4. Défense du passeur sur la ligne droite',
       description: "Z1 (passeur) et Z5 (libéro) sont avancés à ~7 m car les angles sont courts sur rapide. Le passeur (Z1) récupère sur son couloir.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 1,
       snapshot: {
         positions: {
           P:      [3, 0, 5],
-          Op:     [3, 0, 2.2],
+          Op:     [2.5, 0, 1],
           C:      [0, 0, 0.4],
           R4:     [-3, 0, 2.2],
           L:      [-2.5, 0, 5],
@@ -123,7 +123,7 @@ const STATE: EditorState = {
           OPP_R4: [3, 0, -0.6],
           OPP_R:  [0, 0, -3.2],
         },
-        ballPosition: [1.5, 2.2, 1.0],
+        ballPosition: [2.5, 1.9, 1],
       },
       ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
@@ -133,15 +133,15 @@ const STATE: EditorState = {
     {
       id: 's5',
       title: "5. 2ᵉ touche par le pointu (contre-passeur)",
-      description: "Comme notre passeur a défendu, le pointu en P2 prend la 2ᵉ touche pour relayer. Notre R4 prépare une contre-attaque en zone 4.",
+      description: "Comme notre passeur a défendu, le pointu en P2 prend la 2ᵉ touche pour relayer. Notre R4 contre-attaque en zone 4.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 1.5,
       snapshot: {
         positions: {
           P:      [3, 0, 5],
           Op:     [2.5, 0, 1.0],
           C:      [0, 0, 1.0],
-          R4:     [-3, 0, 1.5],
+          R4:     [-3, 0, 1],
           L:      [-2.5, 0, 5],
           R4b:    [0, 0, 6],
           OPP_A:  [0, 0, -0.7],
@@ -149,11 +149,12 @@ const STATE: EditorState = {
           OPP_R4: [3, 0, -0.6],
           OPP_R:  [0, 0, -3.2],
         },
-        ballPosition: [-3.0, 3.0, 1.0],
+        ballPosition: [-1.8, 0.22, -6.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      ballTrajectory: { curve: 'flat' },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s5-set', playerId: 'Op', impact: [2.5, 0, 1.0] },
+        { kind: 'SMASH', id: 'b-s5-smash', playerId: 'R4', impact: [-3, 0, 0.6], jumpHeight: 1.6, contactAtRatio: 0.65 },
       ],
     },
     {
@@ -175,7 +176,7 @@ const STATE: EditorState = {
           OPP_R4: [3, 0, -0.6],
           OPP_R:  [0, 0, -3.2],
         },
-        ballPosition: [-3.0, 0, -6],
+        ballPosition: [-1.8, 0.22, -6.5],
       },
     },
   ],
