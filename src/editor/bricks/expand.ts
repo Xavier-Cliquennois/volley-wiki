@@ -48,6 +48,11 @@ export const DEFAULT_JUMP = {
   bloc: 1.4,
 };
 
+// Height of the raised hand above the player's feet, from the Player.tsx
+// geometry: shoulder pivot at 1.15 m plus a 0.5 m arm. A jumping player meets
+// the ball at `jumpHeight + HAND_REACH`; anything lower hits the torso.
+export const HAND_REACH = 1.65;
+
 // Minimum duration we'll allow for a sub-action — gsap is fine with very short
 // tweens but anything below ~0.05s reads as a teleport.
 const MIN_DUR = 0.1;
