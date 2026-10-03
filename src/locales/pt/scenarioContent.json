@@ -277,15 +277,15 @@
   },
   "6v6-attack-5-1-p1": {
     "title": "Ataque · Rotação P1 do 5-1",
-    "shortDescription": "Receção a 3 → distribuidor infiltra a partir de P1 → ataque pela zona 4 pela ponta.",
+    "shortDescription": "Recepção a 3 → o distribuidor infiltra a partir de P1 → a ponta da frente troca e ataca na zona 4.",
     "contextLabel": "5-1 · Rotação P1 · Serviço adversário",
     "players": {
-      "L": "Líbero (P5)",
-      "R4a": "Ponta (P4)",
-      "R4b": "Ponta (P6)",
-      "C": "Central (P3)",
-      "Op": "Oposto (P2)",
-      "P": "Distribuidor (P1)",
+      "L": "Líbero (zona 6)",
+      "R4a": "Ponta (zona 2)",
+      "R4b": "Ponta (zona 5)",
+      "C": "Central (zona 3)",
+      "Op": "Oposto (zona 4)",
+      "P": "Distribuidor (zona 1)",
       "OPP_SRV": "Servidor adversário",
       "OPP_BL": "Bloqueador esquerdo adversário",
       "OPP_BR": "Bloqueador direito adversário",
@@ -295,55 +295,55 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Formação de receção",
-        "description": "A nossa equipa está numa formação de receção a 3: líbero (P5), ponta em P6 e ponta em P4 recuadas sobre a linha dos 3 m. Central e oposto estão fora da receção junto à rede. O distribuidor espera em P1 para infiltrar assim que o serviço for batido."
+        "title": "1. Formação de recepção",
+        "description": "Recepção a 3: ponta da zona 5 à esquerda, líbero (zona 6) ao centro, ponta da zona 2 recuada à direita. O oposto (zona 4) e o central (zona 3) ficam na rede. O distribuidor, na zona 1, esconde-se atrás da ponta da zona 2, pronto para infiltrar."
       },
       "s2": {
-        "title": "2. Serviço + receção",
-        "description": "Serviço alto adversário para a ponta em P6 que faz a manchete. Em paralelo, o distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
+        "title": "2. Saque + recepção",
+        "description": "Saque adversário em balão para a zona 5: a ponta do fundo recebe em manchete. Desde o golpe do saque, o distribuidor infiltra a partir da zona 1, o oposto passa atrás do central para a direita e a ponta da zona 2 começa a deslizar para a esquerda."
       },
       "s3": {
-        "title": "3. Passe alto + corrida",
-        "description": "A bola sobe para o distribuidor que chegou à rede. Ele entrega um passe alto para a zona 4 onde a ponta já iniciou a sua corrida de balanço. A cobertura forma-se à volta dele."
+        "title": "3. Trocas + corrida de impulso",
+        "description": "A recepção sobe para o distribuidor já na rede. A ponta da zona 2 termina a travessia e inicia a corrida de impulso na zona 4; o oposto ocupa a zona 2 e o central fixa ao centro."
       },
       "s4": {
-        "title": "4. Remate + bloco a 2",
-        "description": "A ponta levanta voo e bate em diagonal longa em direção à zona 6 adversária. Os dois bloqueadores adversários saltam em paralelo para fechar a diagonal e a paralela."
+        "title": "4. Ataque + bloqueio duplo",
+        "description": "Passe alto para a zona 4: a ponta salta e bate em diagonal longa para o fundo da quadra adversária. Os dois bloqueadores fecham a paralela, o ataque passa pelo intervalo. O distribuidor, a ponta do fundo e o líbero cobrem o atacante."
       },
       "s5": {
         "title": "5. Defesa adversária",
-        "description": "O líbero adversário mergulha em direção à zona 6 para tentar uma manchete desesperada. O distribuidor adversário desloca-se para a zona 2 para fazer o passe se a defesa tocar na bola."
+        "description": "O líbero adversário mergulha na diagonal longa para tentar uma manchete desesperada. O distribuidor adversário sobe para a zona 2 para reconstruir se a defesa tocar na bola."
       },
       "s6": {
-        "title": "6. RESET — regresso à formação",
-        "description": "Toda a equipa retoma a sua posição de receção para o próximo serviço. Esta colocação determina a qualidade do próximo ataque."
+        "title": "6. RESET — volta à formação",
+        "description": "Toda a equipe retoma a posição de recepção para o saque seguinte: a ponta volta à zona 2, o oposto à zona 4. É esse posicionamento que determina a qualidade do próximo ataque."
       }
     },
     "summary": {
       "keyPoints": [
-        "Receção a 3: líbero + 2 pontas ocupam toda a largura do campo.",
-        "O distribuidor infiltra a partir de P1 para a zona 2-3 assim que o serviço é batido.",
-        "A ponta atacante desliza para a linha dos 3 m durante a receção para preparar a sua corrida.",
-        "Cobertura a 5 jogadores (3 perto + 2 longe) em posição baixa à volta do atacante."
+        "Ordem de rotação: distribuidor na zona 1, oposto em frente na zona 4, pontas nas zonas 2 e 5, central na 3, líbero na 6.",
+        "Recepção a 3: líbero + 2 pontas cobrem toda a largura da quadra.",
+        "O distribuidor infiltra da zona 1 para a zona 2-3 logo que o saque é batido.",
+        "Após a recepção, a ponta da frente atravessa para a zona 4 e o oposto ocupa a zona 2."
       ],
       "commonMistakes": [
-        "Distribuidor que infiltra demasiado tarde → passe em salto forçado por outro jogador.",
-        "Ponta atacante que dispara a corrida cedo demais → chega debaixo da bola em vez de se comprometer.",
-        "Cobertura esquecida → bloco adversário bem-sucedido = ponto perdido diretamente."
+        "Distribuidor que infiltra tarde demais → levantamento forçado em suspensão por outro jogador.",
+        "Distribuidor à frente da ponta da zona 2 no saque → falta de posição.",
+        "Cobertura esquecida → bloqueio adversário bem-sucedido = ponto perdido diretamente."
       ]
     }
   },
   "6v6-attack-5-1-p2": {
     "title": "Ataque · Rotação P2 do 5-1",
-    "shortDescription": "Distribuidor já junto à rede em P2: 2 atacantes à frente + oposto ataca na 4 excecionalmente.",
+    "shortDescription": "Distribuidor já na rede em P2: 2 atacantes à frente, a ponta e o central trocam, ataque na zona 4.",
     "contextLabel": "5-1 · Rotação P2 · Distribuidor da frente",
     "players": {
-      "R4a": "Ponta (P5)",
-      "L": "Líbero (P6)",
-      "R4b": "Ponta (P1)",
-      "C": "Central (P3)",
-      "Pt": "Oposto (P4)",
-      "P": "Distribuidor (P2)",
+      "R4a": "Ponta (zona 3)",
+      "L": "Líbero (zona 1)",
+      "R4b": "Ponta (zona 6)",
+      "C": "Central (zona 4)",
+      "Pt": "Oposto (zona 5)",
+      "P": "Distribuidor (zona 2)",
       "OPP_SRV": "Servidor adversário",
       "OPP_BL": "Bloqueador esquerdo adversário",
       "OPP_BR": "Bloqueador direito adversário",
@@ -351,41 +351,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Serviço adversário",
-        "description": "Serviço para a zona 5-6. O líbero chama e prepara a manchete. O distribuidor já espera junto à rede em P2."
+        "title": "1. Formação de recepção",
+        "description": "Recepção a 3: ponta da zona 3 recuada à esquerda, ponta da zona 6 ao centro, líbero (zona 1) à direita. O central (zona 4) fica na rede à esquerda, o distribuidor já espera na rede na zona 2. O oposto, no fundo na zona 5, esconde-se atrás à esquerda."
       },
       "s2": {
-        "title": "2. Serviço + receção do líbero",
-        "description": "Serviço alto para a zona 6. O líbero avança e faz uma manchete precisa para o alvo do distribuidor (zona 2)."
+        "title": "2. Saque + recepção do líbero",
+        "description": "Saque em balão para a zona 1. O líbero faz uma manchete precisa para o alvo do distribuidor. Desde o golpe do saque, o central desliza para o centro da rede e a ponta da zona 3 desloca-se para a zona 4."
       },
       "s3": {
-        "title": "3. Passe para o oposto + corrida",
-        "description": "O distribuidor, já em P2, distribui excecionalmente para a zona 4 onde o oposto inicia a sua corrida. O bloco adversário reagrupa-se no centro."
+        "title": "3. Passe para a zona 4 + corrida de impulso",
+        "description": "O distribuidor, já na zona 2, recebe a bola sem infiltrar. A ponta inicia a corrida de impulso na zona 4 enquanto o central fixa ao centro. O bloqueio adversário desliza para a ponta."
       },
       "s4": {
-        "title": "4. Remate + bloco a 2",
-        "description": "O oposto levanta voo à esquerda e bate em diagonal longa. Uma configuração rara mas inevitável em P2 — o distribuidor fica no sítio."
+        "title": "4. Ataque + bloqueio duplo",
+        "description": "Passe longo para a zona 4: a ponta salta e bate em diagonal longa, pelo intervalo do bloqueio a 2. O oposto e a ponta do fundo cobrem o atacante, o distribuidor fica na rede."
       },
       "s5": {
         "title": "5. Defesa adversária",
-        "description": "O defensor da diagonal adversário mergulha na diagonal longa para tentar uma manchete desesperada de recuperação."
+        "description": "O defensor da diagonal adversário mergulha na diagonal longa para tentar uma manchete de salvamento."
       },
       "s6": {
-        "title": "6. RESET — regresso à formação",
-        "description": "Todos retomam a sua posição de receção. A rotação P2 continua a ser a mais limitada ofensivamente: apenas 2 atacantes à frente."
+        "title": "6. RESET — volta à formação",
+        "description": "Todos retomam a posição de recepção: o central volta à zona 4, a ponta à zona 3. A rotação P2 continua a ser a mais pobre ofensivamente: apenas 2 atacantes à frente."
       }
     },
     "summary": {
       "keyPoints": [
-        "Rotação P2 = a mais limitada ofensivamente (apenas 2 atacantes à frente).",
-        "Distribuidor já em posição: zero infiltração, distribuição fácil.",
-        "O oposto ataca excecionalmente à esquerda (zona 4) para libertar o distribuidor.",
-        "Privilegiar as asas e os ataques da linha de trás da ponta como opções."
+        "Ordem de rotação: distribuidor na zona 2, oposto em frente na zona 5, pontas nas zonas 3 e 6, central na 4, líbero na 1.",
+        "Rotação P2 = a mais pobre ofensivamente: apenas 2 atacantes à frente (ponta + central).",
+        "Distribuidor já no lugar: zero infiltração, distribuição fácil.",
+        "A ponta e o central trocam no saque: a ponta ataca na 4, o central fixa na 3."
       ],
       "commonMistakes": [
-        "Distribuidor a tentar passe em salto em 2 quando já lá está → 2º toque difícil.",
-        "Oposto que hesita entre 2 e 4 → bloco adversário em posição.",
-        "Centrais que não se comprometem → bloco a 2 fácil para o adversário."
+        "Distribuidor que recua para buscar uma recepção curta → 2.º toque difícil.",
+        "Troca ponta ↔ central tardia → o central fica na zona 4, inútil no bloqueio.",
+        "Central que não fixa → bloqueio a 2 fácil para o adversário na ponta."
       ]
     }
   },
@@ -450,12 +450,12 @@
     "shortDescription": "Distribuidor da frente em P4 desloca-se para a direita; a ponta* ataca em 4, central em 3, oposto da linha de trás em 1.",
     "contextLabel": "5-1 · Rotação P4 · Distribuidor da frente",
     "players": {
-      "L": "Líbero (P5)",
-      "R4b": "Ponta (P6)",
-      "Pt": "Oposto (P1)",
-      "P": "Distribuidor (P4)",
-      "C": "Central (P3)",
-      "R4a": "Ponta (P2)",
+      "L": "Líbero (zona 6)",
+      "R4b": "Ponta (zona 5)",
+      "Pt": "Oposto (zona 1)",
+      "P": "Distribuidor (zona 4)",
+      "C": "Central (zona 3)",
+      "R4a": "Ponta* (zona 2)",
       "OPP_SRV": "Servidor adversário",
       "OPP_BL": "Bloqueador esquerdo adversário",
       "OPP_BR": "Bloqueador direito adversário",
@@ -463,41 +463,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Configuração P4 + offset",
-        "description": "Distribuidor na zona 4, ponta* na zona 2 — colocação cruzada. Distribuidor e central deslocam-se para a esquerda para libertar a zona de receção para o líbero."
+        "title": "1. Configuração P4 + deslocamento",
+        "description": "Distribuidor na zona 4, ponta* na zona 2: posicionamento cruzado. Distribuidor e central deslocam-se para a esquerda para que a ponta* possa recuar para receber à direita. Recepção a 3: ponta (zona 5), líbero (zona 6), ponta*. O oposto, na zona 1, esconde-se ao fundo à direita."
       },
       "s2": {
-        "title": "2. Serviço + receção do líbero",
-        "description": "O serviço aponta à zona 6. O líbero avança e faz manchete para o alvo clássico (entre P2 e P3)."
+        "title": "2. Saque + recepção do líbero",
+        "description": "O saque visa a zona 6. O líbero avança e faz manchete para o alvo clássico (entre as zonas 2 e 3). Desde o golpe do saque, o distribuidor deixa a zona 4 passando atrás do central e a ponta* inicia a travessia."
       },
       "s3": {
         "title": "3. Switch distribuidor↔ponta* + passe alto",
-        "description": "Cruzamento essencial: o distribuidor deixa P4 em direção a 2-3, a ponta* deixa P2 em direção a 4 para atacar. Passe alto para a asa esquerda."
+        "description": "Cruzamento essencial: o distribuidor chega a 2-3 enquanto a ponta* termina a travessia para a zona 4 e inicia a corrida de impulso. O central reposiciona-se na zona 3, o oposto avança para ameaçar o ataque de fundo."
       },
       "s4": {
-        "title": "4. Ataque pela asa + bloco a 2",
-        "description": "Remate em diagonal longa. Com um distribuidor à frente (pequeno no bloco), o ataque tem de terminar rapidamente. Bloco a 2 deslocado para a asa."
+        "title": "4. Ataque pela ponta + bloqueio duplo",
+        "description": "Passe alto para a zona 4: a ponta* bate em diagonal longa. Com um distribuidor da frente (portanto baixo no bloqueio), o ataque deve concluir depressa. Bloqueio a 2 deslocado para a ponta."
       },
       "s5": {
         "title": "5. Defesa adversária",
-        "description": "O defensor da diagonal adversário mergulha na trajetória longa para tentar uma manchete desesperada."
+        "description": "O defensor da diagonal adversário mergulha na trajetória longa para tentar uma manchete desesperada. O nosso atacante cai e já recua para defender."
       },
       "s6": {
-        "title": "6. RESET — regresso à formação",
-        "description": "Todos retomam a sua posição inicial. O offset distribuidor/central à esquerda mantém-se para o próximo serviço."
+        "title": "6. RESET — volta à formação",
+        "description": "Todos retomam a posição inicial: a ponta* volta à zona 2, o distribuidor à zona 4. O deslocamento distribuidor/central para a esquerda mantém-se para o saque seguinte."
       }
     },
     "summary": {
       "keyPoints": [
-        "Rotação P4 = distribuidor à frente. Switch distribuidor↔ponta* obrigatório.",
-        "2 atacantes à frente: ponta* em 4, central em 3. Pipe ou oposto da linha de trás como opções.",
-        "Distribuidor e central deslocam-se para a esquerda no serviço para libertar a zona 6.",
-        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
+        "Ordem de rotação: distribuidor na zona 4, oposto em frente na zona 1, pontas nas zonas 2 e 5, central na 3, líbero na 6.",
+        "Rotação P4 = distribuidor da frente. Switch distribuidor↔ponta* obrigatório.",
+        "2 atacantes à frente: ponta* na 4, central na 3. Pipe ou oposto de fundo como opção.",
+        "O oposto (na zona 1) não recebe e fica pronto para o ataque de fundo."
       ],
       "commonMistakes": [
-        "Switch esquecido → a ponta* fica à direita, atacante mal colocado.",
-        "Distribuidor e central demasiado à direita no serviço → conflito de receção na zona 6.",
-        "Bloco adversário não comprometido pelo central → bloco a 2 fácil pela asa esquerda."
+        "Switch esquecido → a ponta* fica à direita, atacante mal posicionado.",
+        "Distribuidor e central demasiado à direita no saque → a ponta* não consegue recuar para receber.",
+        "Bloqueio adversário não fixado pelo central → bloqueio a 2 fácil na ponta esquerda."
       ]
     }
   },
@@ -506,12 +506,12 @@
     "shortDescription": "Infiltração longa a partir de P5. Switch C/ponta. Passe ao oposto na zona 2.",
     "contextLabel": "5-1 · Rotação P5 · Infiltração longa",
     "players": {
-      "P": "Distribuidor (P5)",
-      "L": "Líbero (P6)",
-      "R4b": "Ponta (P1)",
-      "C": "Central (P4)",
-      "R4a": "Ponta (P3)",
-      "Pt": "Oposto (P2)",
+      "P": "Distribuidor (zona 5)",
+      "L": "Líbero (zona 1)",
+      "R4b": "Ponta (zona 6)",
+      "C": "Central (zona 4)",
+      "R4a": "Ponta (zona 3)",
+      "Pt": "Oposto (zona 2)",
       "OPP_SRV": "Servidor adversário",
       "OPP_BL": "Bloqueador esquerdo adversário",
       "OPP_BR": "Bloqueador direito adversário",
@@ -519,41 +519,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Formação de receção",
-        "description": "Distribuidor atrás à esquerda em P5, o mais afastado possível da rede. C em P4 e ponta em P3 vão fazer switch assim que o serviço for batido."
+        "title": "1. Formação de recepção",
+        "description": "Distribuidor na zona 5, fundo à esquerda, atrás do central (zona 4). Recepção a 3: ponta da zona 3 recuada à esquerda, ponta da zona 6 ao centro, líbero (zona 1) à direita. O oposto espera na rede na zona 2. O central e a ponta da zona 3 vão trocar desde o saque."
       },
       "s2": {
-        "title": "2. Serviço + receção + switch C↔ponta",
-        "description": "O serviço aponta à zona 1 onde a ponta recebe. Simultaneamente, o central desliza para o centro e a ponta atacante ocupa a zona 4."
+        "title": "2. Saque + recepção + troca C↔ponta",
+        "description": "O saque visa a zona 6, onde a ponta do fundo recebe. Em paralelo, o central desliza para o centro da rede, a ponta da zona 3 vai para a zona 4 e o distribuidor inicia a infiltração passando atrás dela."
       },
       "s3": {
-        "title": "3. Infiltração longa + passe para a zona 2",
-        "description": "O distribuidor atravessa todo o campo a partir de P5 — a infiltração mais longa. Distribui curto para o oposto na zona 2. O bloco adversário desliza para a direita para fechar."
+        "title": "3. Infiltração longa + passe na zona 2",
+        "description": "O distribuidor termina a travessia a partir da zona 5 — a infiltração mais longa — e recebe a bola entre as zonas 2 e 3. O oposto inicia a corrida de impulso na zona 2. O bloqueio adversário desliza para a direita para fechar."
       },
       "s4": {
-        "title": "4. Remate em diagonal + bloco a 2",
-        "description": "O oposto levanta voo na zona 2 e bate em diagonal longa. Uma combinação clássica nesta rotação. O bloco a 2 está em posição à direita."
+        "title": "4. Ataque na diagonal + bloqueio duplo",
+        "description": "Passe curto para a zona 2: o oposto salta e bate em diagonal longa. O bloqueio a 2 está montado do lado direito. O líbero, a ponta do fundo e o distribuidor cobrem o atacante."
       },
       "s5": {
         "title": "5. Defesa adversária",
-        "description": "O defensor da diagonal adversário mergulha para a zona 5 para tentar apanhar a bola longa."
+        "description": "O defensor da diagonal adversário mergulha na bola longa para tentar recuperá-la. O nosso distribuidor, no fundo, já regressa à sua zona de defesa."
       },
       "s6": {
-        "title": "6. RESET — regresso à formação",
-        "description": "Toda a equipa retoma a sua posição de receção. O central regressa a P4, a ponta a P3, o distribuidor a P5."
+        "title": "6. RESET — volta à formação",
+        "description": "Toda a equipe retoma a posição de recepção: o central volta à zona 4, a ponta à zona 3, o distribuidor à zona 5."
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = a infiltração mais longa. Exige receção perfeita.",
-        "O central e a ponta fazem switch assim que o serviço é batido para colocar C na zona 3.",
-        "O oposto na zona 2 é o alvo mais acessível para o distribuidor.",
-        "Pipe possível como opção se o passe for esticado e rápido."
+        "Ordem de rotação: distribuidor na zona 5, oposto em frente na zona 2, pontas nas zonas 3 e 6, central na 4, líbero na 1.",
+        "P5 = a infiltração mais longa. Exige uma recepção perfeita.",
+        "O central e a ponta trocam no saque para recolocar o central na zona 3.",
+        "O oposto na zona 2 é o alvo mais acessível para o distribuidor."
       ],
       "commonMistakes": [
-        "Passe demasiado esticado durante uma infiltração em curso → distribuidor debaixo da bola.",
-        "Switch C↔ponta tardio → central na zona 4 = inútil no bloco.",
-        "Receção curta → distribuidor chega longe da rede."
+        "Passe demasiado tenso com a infiltração em curso → distribuidor debaixo da bola.",
+        "Troca C↔ponta tardia → central na zona 4 = inútil no bloqueio.",
+        "Distribuidor à frente do central (zona 4) no saque → falta de posição."
       ]
     }
   },
@@ -618,12 +618,12 @@
     "shortDescription": "Sistema 6-2: distribuidor da linha de trás infiltra, 3 atacantes à frente em todos os momentos.",
     "contextLabel": "6-2 · Distribuidor a infiltrar · Intermédio",
     "players": {
-      "R4a": "Ponta (P4)",
-      "C": "Central (P3)",
-      "PA": "Distribuidor-atacante (P2)",
-      "P": "Distribuidor (P1)",
-      "C2": "Central (P6)",
-      "R4b": "Ponta (P5)",
+      "R4a": "Ponta (zona 2)",
+      "C": "Central (zona 3)",
+      "PA": "Distribuidor-atacante (zona 4)",
+      "P": "Distribuidor (zona 1)",
+      "C2": "Central (zona 6)",
+      "R4b": "Ponta (zona 5)",
       "OPP_SRV": "Servidor adversário",
       "OPP_BL": "Bloqueador esquerdo adversário",
       "OPP_BR": "Bloqueador direito adversário",
@@ -632,40 +632,40 @@
     "steps": {
       "s1": {
         "title": "1. Configuração 6-2",
-        "description": "2 distribuidores polivalentes: o da frente ataca (distribuidor-atacante), o de trás distribui (e infiltra). 3 atacantes à frente em todos os momentos."
+        "description": "2 distribuidores polivalentes na diagonal: o da zona 4 (frente) ataca, o da zona 1 (fundo) distribui e infiltra. Recebem a ponta da zona 5, o central da zona 6 e a ponta da zona 2 recuada à direita; o distribuidor do fundo esconde-se atrás dela."
       },
       "s2": {
-        "title": "2. Serviço + receção pelo central de trás",
-        "description": "Receção central clássica por C2. O distribuidor inicia a sua infiltração a partir de P1 em direção à zona 2-3."
+        "title": "2. Saque + recepção do central do fundo",
+        "description": "Recepção ao centro pelo central da zona 6. O distribuidor inicia a infiltração a partir da zona 1; o distribuidor-atacante passa atrás do central para a direita e a ponta da zona 2 desliza para a esquerda."
       },
       "s3": {
-        "title": "3. Passe na zona 2 + corrida",
-        "description": "Distribuição para o distribuidor-atacante na zona 2. Variedade máxima: 3 ameaças ofensivas à frente. Bloco a 2 deslocado para a direita."
+        "title": "3. Trocas + corrida de impulso na zona 2",
+        "description": "A recepção sobe para o distribuidor. O distribuidor-atacante inicia a corrida de impulso na zona 2, a ponta ocupa a zona 4 e o central fixa ao centro: 3 ameaças ofensivas à frente. O bloqueio adversário desliza para a direita."
       },
       "s4": {
-        "title": "4. Ataque em diagonal + bloco a 2",
-        "description": "O distribuidor-atacante bate em diagonal longa. O 6-2 garante sempre 3 ameaças ofensivas — o bloco adversário não consegue antecipar."
+        "title": "4. Ataque na diagonal + bloqueio duplo",
+        "description": "Passe curto para a zona 2: o distribuidor-atacante bate em diagonal longa. O 6-2 garante sempre 3 ameaças ofensivas — o bloqueio adversário não consegue antecipar. O distribuidor e o central do fundo cobrem o atacante."
       },
       "s5": {
         "title": "5. Defesa adversária",
-        "description": "O defensor da diagonal mergulha na trajetória longa do lado esquerdo do adversário — uma tentativa desesperada de recuperação."
+        "description": "O defensor da diagonal mergulha na trajetória longa do lado esquerdo adversário — tentativa de salvamento desesperada. O nosso distribuidor-atacante cai e volta ao centro."
       },
       "s6": {
-        "title": "6. RESET — regresso à formação",
-        "description": "Toda a equipa retoma a sua posição. O distribuidor-atacante fica à frente, o distribuidor regressa a P1."
+        "title": "6. RESET — volta à formação",
+        "description": "Toda a equipe retoma a sua posição: o distribuidor-atacante volta à zona 4, a ponta à zona 2 e o distribuidor regressa à zona 1."
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 distribuidores polivalentes em diagonal oposta.",
-        "Sempre 3 atacantes à frente (o distribuidor da frente ataca, o de trás distribui).",
+        "6-2: 2 distribuidores polivalentes em oposição diagonal (aqui zonas 1 e 4).",
+        "Sempre 3 atacantes à frente (o distribuidor da frente ataca, o do fundo distribui).",
         "Infiltração sistemática, como no 5-1, mas com 2 distribuidores alternados.",
-        "Excelente para desenvolver a polivalência antes de passar a um 5-1."
+        "Excelente para desenvolver a polivalência antes de passar ao 5-1."
       ],
       "commonMistakes": [
-        "Diferença de estilo entre os 2 distribuidores → distribuição inconsistente.",
-        "Distribuidor da frente que não se mostra para o ataque → apenas 2 opções.",
-        "Infiltração tardia → outro jogador tem de fazer o passe."
+        "Diferença de estilo entre os 2 distribuidores → distribuição incoerente.",
+        "Distribuidor da frente que não se apresenta ao ataque → apenas 2 opções.",
+        "Infiltração demasiado tardia → outro jogador tem de levantar."
       ]
     }
   },
@@ -1845,50 +1845,51 @@
   },
   "6v6-reception-rotation-p4": {
     "title": "Receção · Rotação P4 do 5-1",
-    "shortDescription": "Caso especial P4: distribuidor e central deslocam-se para a esquerda para libertar a ponta na zona 6.",
+    "shortDescription": "Caso especial P4: o distribuidor e o central deslocam-se para a esquerda para que a ponta* possa receber à direita.",
     "contextLabel": "5-1 · Receção a 3 · Rotação P4 (distribuidor da frente)",
     "players": {
-      "P": "Distribuidor (P4)",
-      "C": "Central (P3)",
-      "R4b": "Ponta* (P2)",
-      "L": "Líbero (P5)",
-      "R4a": "Ponta (P6)",
-      "Op": "Oposto (P1)",
+      "P": "Distribuidor (zona 4)",
+      "C": "Central (zona 3)",
+      "R4b": "Ponta* (zona 2)",
+      "L": "Líbero (zona 6)",
+      "R4a": "Ponta (zona 5)",
+      "Op": "Oposto (zona 1)",
       "OPP_SRV": "Servidor adversário"
     },
     "steps": {
       "s1": {
         "title": "1. Deslocamento para a esquerda",
-        "description": "ANTES da batida: o distribuidor (P4) e o central (P3) colocam-se O MAIS À ESQUERDA possível conforme as regras de alinhamento permitem. Este deslocamento liberta a zona 6 para a ponta recetora."
+        "description": "ANTES do saque: o distribuidor (zona 4) e o central (zona 3) colocam-se o MAIS À ESQUERDA possível dentro das regras de alinhamento. Este deslocamento permite à ponta* (zona 2), que tem de ficar à direita do central, recuar para receber à direita. Recepção a 3: ponta (zona 5), líbero (zona 6), ponta*. O oposto (zona 1) esconde-se ao fundo à direita."
       },
       "s2": {
-        "title": "2. Serviço + manchete pela ponta em P6",
-        "description": "Serviço para a zona central 6. A ponta em P6 chama e faz manchete na zona libertada pelo deslocamento do distribuidor. Três recetores: líbero, ponta e oposto (na borda)."
+        "title": "2. Saque + manchete da ponta na zona 5",
+        "description": "Saque para a zona 5. A ponta do fundo pede a bola e faz manchete para o alvo. Desde o golpe do saque, o distribuidor deixa a zona 4 passando atrás do central, e a ponta* inicia a travessia."
       },
       "s3": {
-        "title": "3. Infiltração + switch da ponta*",
-        "description": "O distribuidor desloca-se de P4 para a zona 2-3. Simultaneamente, a ponta* em P2 cruza para P4 para atacar. O central reposiciona-se na zona 3."
+        "title": "3. Infiltração + troca da ponta*",
+        "description": "O distribuidor chega a 2-3 e recebe a bola. Ao mesmo tempo, a ponta* termina a travessia para a zona 4 e inicia a corrida de impulso. O central reposiciona-se na zona 3, o oposto avança para ameaçar o ataque de fundo."
       },
       "s4": {
-        "title": "4. Bola disponível para a ponta* na zona 4",
-        "description": "O passe chega à ponta* que terminou o seu cruzamento. Com apenas 2 atacantes à frente (ponta* + central), a opção principal é a asa esquerda."
+        "title": "4. Ataque da ponta* na zona 4",
+        "description": "Passe alto para a ponta* que completou a travessia. Com apenas 2 atacantes à frente (ponta* + central), a opção principal é a ponta esquerda. O atacante salta e bate em diagonal para o fundo da quadra adversária."
       },
       "s5": {
-        "title": "5. RESET — regresso ao deslocamento",
-        "description": "Todos os jogadores retomam o deslocamento para a esquerda para o próximo serviço em rotação P4."
+        "title": "5. RESET — volta ao deslocamento",
+        "description": "Todos os jogadores retomam o deslocamento para a esquerda para o próximo saque em rotação P4: o distribuidor volta à zona 4 ao longo da rede, a ponta* regressa à zona 2 por trás."
       }
     },
     "summary": {
       "keyPoints": [
-        "Em P4, o distribuidor e o central DEVEM deslocar-se para a esquerda no serviço.",
-        "Este deslocamento abre a zona 6 para a receção da ponta em P6.",
-        "Switch distribuidor↔ponta* obrigatório durante o passe.",
-        "O oposto (em P1) não recebe e fica pronto para um ataque da linha de trás."
+        "Ordem de rotação: distribuidor na zona 4, oposto em frente na zona 1, pontas nas zonas 2 e 5, central na 3, líbero na 6.",
+        "Em P4, o distribuidor e o central TÊM de se deslocar para a esquerda no saque.",
+        "Este deslocamento dá à ponta* (zona 2) espaço para receber à direita, ao lado do líbero.",
+        "Switch distribuidor↔ponta* obrigatório durante a recepção.",
+        "O oposto (na zona 1) não recebe e fica pronto para o ataque de fundo."
       ],
       "commonMistakes": [
-        "Deslocamento esquecido → conflito de receção na zona 6.",
-        "Switch demasiado tardio → a ponta* ataca em P2 (lado errado).",
-        "Oposto que recebe → perde a opção de ataque da linha de trás."
+        "Deslocamento esquecido → a ponta* não consegue recuar para receber sem falta de posição.",
+        "Switch tardio → a ponta* ataca na zona 2 (lado errado).",
+        "Oposto que recebe → perde a opção de ataque de fundo."
       ]
     }
   },
