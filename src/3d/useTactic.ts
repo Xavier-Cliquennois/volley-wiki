@@ -110,9 +110,23 @@ export const useTactic = (
             tl.to(mesh.position, { y: apex, duration: action.duration * 0.7, ease: 'power1.out' }, action.time);
             tl.to(mesh.position, { y: action.to[1], duration: action.duration * 0.3, ease: 'power3.in' }, action.time + action.duration * 0.7);
           } else {
-            // Symmetric parabola.
-            tl.to(mesh.position, { y: apex, duration: action.duration / 2, ease: 'power1.out' }, action.time);
-            tl.to(mesh.position, { y: action.to[1], duration: action.duration / 2, ease: 'power1.in' }, action.time + action.duration / 2);
+            // Constant-gravity parabola. The horizontal motion is linear, so
+            // the ball reaches the apex at the fraction of the flight where
+            // rise and fall times match the heights climbed and dropped
+            // (t ∝ √h): a ball dropped from its apex falls straight away, a
+            // set climbing onto a high hand peaks late.
+            const peak = Math.max(apex, action.from[1], action.to[1]);
+            const rise = Math.sqrt(peak - action.from[1]);
+            const fall = Math.sqrt(peak - action.to[1]);
+            const apexAt = rise + fall > 0 ? rise / (rise + fall) : 0.5;
+            const riseDur = action.duration * apexAt;
+            const fallDur = action.duration - riseDur;
+            if (riseDur > 0) {
+              tl.to(mesh.position, { y: peak, duration: riseDur, ease: 'power1.out' }, action.time);
+            }
+            if (fallDur > 0) {
+              tl.to(mesh.position, { y: action.to[1], duration: fallDur, ease: 'power1.in' }, action.time + riseDur);
+            }
           }
 
           if (hasImpactHandler) {
