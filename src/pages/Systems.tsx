@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCurrentLang } from '../i18n/paths';
 import { SYSTEMS } from '../systems/data';
@@ -7,6 +7,7 @@ import { useDiscipline } from '../discipline/useDiscipline';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb } from '../seo/structuredData';
 import { QuizEmbed } from '../quiz/components/QuizEmbed';
+import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 
 // Groups of systems, displayed as sections on the hub. The list is filtered
 // at render time based on the active discipline (indoor / beach).
@@ -27,7 +28,22 @@ export default function Systems() {
   const { t } = useTranslation('common');
   const lang = useCurrentLang();
   const discipline = useDiscipline();
-  const visibleGroups = GROUPS.filter(g => g.discipline === discipline);
+  const [searchParams, setSearchParams] = useSearchParams();
+  // Team-size filter (indoor only), kept in ?size= so the view is shareable.
+  // Missing or unknown value means "all sizes".
+  const sizeParam = searchParams.get('size');
+  const sizeFilter = (TEAM_SIZES as readonly string[]).includes(sizeParam ?? '')
+    ? (sizeParam as TeamSizeSlug)
+    : null;
+  const visibleGroups = GROUPS.filter(
+    g => g.discipline === discipline && (discipline === 'beach' || !sizeFilter || g.key === sizeFilter),
+  );
+  const selectSize = (slug: TeamSizeSlug | null) => {
+    const next = new URLSearchParams(searchParams);
+    if (slug) next.set('size', slug);
+    else next.delete('size');
+    setSearchParams(next, { replace: true });
+  };
   const hubPath = discipline === 'beach' ? '/beach/systems' : '/systems';
   const titleKey = discipline === 'beach' ? 'systems.hubTitleBeach' : 'systems.hubTitle';
   const descKey = discipline === 'beach' ? 'systems.hubDescriptionBeach' : 'systems.hubDescription';
@@ -74,6 +90,10 @@ export default function Systems() {
         </p>
       </header>
 
+      {discipline === 'indoor' && (
+        <SizeToggle value={sizeFilter} onChange={selectSize} />
+      )}
+
       {visibleGroups.map(group => (
         <section key={group.key} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <h2
@@ -102,6 +122,68 @@ export default function Systems() {
       ))}
 
       {discipline === 'indoor' && <QuizEmbed slug="systemes" />}
+    </div>
+  );
+}
+
+function SizeToggle({
+  value,
+  onChange,
+}: {
+  value: TeamSizeSlug | null;
+  onChange: (slug: TeamSizeSlug | null) => void;
+}) {
+  const { t } = useTranslation('common');
+  const options: { slug: TeamSizeSlug | null; label: string }[] = [
+    { slug: null, label: t('systems.sizeFilter.all') },
+    ...TEAM_SIZES.map(slug => ({ slug, label: slug })),
+  ];
+  // Same chunky button look as the team-size toggle on /positions.
+  const btnBase: React.CSSProperties = {
+    padding: '10px 24px',
+    fontFamily: '"Bungee", sans-serif',
+    fontSize: 16,
+    letterSpacing: '0.06em',
+    border: '2.5px solid var(--ink)',
+    background: 'var(--cream)',
+    color: 'var(--ink)',
+    cursor: 'pointer',
+    transition: 'all 0.08s',
+  };
+  return (
+    <div role="group" aria-label={t('systems.sizeFilter.label')}>
+      <div
+        style={{
+          fontFamily: '"Bungee", sans-serif',
+          fontSize: 10,
+          letterSpacing: '0.14em',
+          opacity: 0.6,
+          marginBottom: 10,
+        }}
+      >
+        {t('systems.sizeFilter.label')}
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+        {options.map(({ slug, label }) => {
+          const active = slug === value;
+          return (
+            <button
+              key={slug ?? 'all'}
+              type="button"
+              aria-pressed={active}
+              onClick={() => onChange(slug)}
+              style={{
+                ...btnBase,
+                ...(active
+                  ? { background: 'var(--orange)', boxShadow: 'var(--shadow-sm)', transform: 'translate(-1px,-1px)' }
+                  : {}),
+              }}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
