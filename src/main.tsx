@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { hydrateRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { createHead, UnheadProvider } from '@unhead/react/client';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import '@fontsource/bungee/400.css';
@@ -20,11 +20,22 @@ const hydrationData = (window as unknown as { __staticRouterHydrationData?: unkn
 const router = createBrowserRouter(routes, hydrationData ? { hydrationData } : undefined);
 const rootElement = document.getElementById('app')!;
 
-hydrateRoot(
-  rootElement,
+const app = (
   <StrictMode>
     <UnheadProvider head={head}>
       <RouterProvider router={router} />
     </UnheadProvider>
-  </StrictMode>,
+  </StrictMode>
 );
+
+// Only hydrate when the page actually carries prerendered markup. The
+// container is empty in `vite dev` (the SSG plugin only runs at build time),
+// on routes that are not in the prerender list (e.g. /:lang/systems, served
+// through the SPA fallback) and on the root redirect page. Hydrating an empty
+// container makes React report a mismatch on <Layout> and throw the tree away,
+// so those pages are rendered from scratch instead.
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, app);
+} else {
+  createRoot(rootElement).render(app);
+}
