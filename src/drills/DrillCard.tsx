@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Drill } from './types';
 import type { Level } from '../userLevel/useUserLevel';
+import { useLocalizedDrill } from './localizeDrill';
 
 const LEVEL_COLOR: Record<Level, string> = {
   beginner: 'var(--mint)',
@@ -120,8 +121,9 @@ export type DrillCardProps = {
   index: number;
 };
 
-export default function DrillCard({ drill, index }: DrillCardProps) {
+export default function DrillCard({ drill: sourceDrill, index }: DrillCardProps) {
   const { t } = useTranslation('drills');
+  const drill = useLocalizedDrill(sourceDrill);
   const { setup, variants, successCriteria, coachingCues, sources } = drill;
 
   return (
@@ -174,13 +176,13 @@ export default function DrillCard({ drill, index }: DrillCardProps) {
         <div>
           <div style={S.sectionLabel}>{t('card.cues')}</div>
           {coachingCues.map((cue, i) => (
-            <p key={i} style={S.cueLine}>« {cue} »</p>
+            <p key={i} style={S.cueLine}>{t('card.cueQuote', { cue })}</p>
           ))}
         </div>
       )}
 
       {sources && sources.length > 0 && (
-        <p style={S.sourcesLine}>{t('card.source')} : {sources.join(' · ')}</p>
+        <p style={S.sourcesLine}>{t('card.sourceLine', { sources: sources.join(' · ') })}</p>
       )}
     </article>
   );

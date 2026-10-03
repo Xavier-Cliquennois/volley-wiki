@@ -34,6 +34,8 @@
     "variants": "Variantes por nivel",
     "criteria": "Criterios de éxito",
     "cues": "Indicaciones del entrenador",
-    "source": "Fuente"
+    "source": "Fuente",
+    "cueQuote": "« {{cue}} »",
+    "sourceLine": "Fuente : {{sources}}"
   }
 }

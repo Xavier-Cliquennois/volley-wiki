@@ -34,6 +34,8 @@
     "variants": "レベル別バリエーション",
     "criteria": "成功基準",
     "cues": "コーチング・キュー",
-    "source": "出典"
+    "source": "出典",
+    "cueQuote": "« {{cue}} »",
+    "sourceLine": "出典 : {{sources}}"
   }
 }
