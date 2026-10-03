@@ -53,6 +53,9 @@ export type BallMoveAction = {
   // Optional explicit trajectory. When provided, takes precedence over `arc`.
   curve?: BallCurve;
   apex?: number;
+  // The ball is held by a walking player: it follows his pace (same easing as
+  // a player_move) instead of flying at a constant speed.
+  carried?: boolean;
   description?: string;
 };
 
