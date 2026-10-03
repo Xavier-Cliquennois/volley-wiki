@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Court, type CourtArrow, type CourtLayout, type CourtPlayer } from '../components/court';
 import { useCurrentLang } from '../i18n/paths';
+import { useAttackLabel } from '../i18n/localizeSystem';
 import type { PlayerSlot, RoleCode, Rotation, AttackOption, CourtCoord, MovementKind } from './types';
 import { RISK_COLORS } from './types';
 
@@ -262,6 +263,7 @@ function AttackCard({
   onHover: (id: string | null) => void;
 }) {
   const { t } = useTranslation('common');
+  const attackLabel = useAttackLabel();
   const riskColor = RISK_COLORS[attack.risk];
   return (
     <div
@@ -293,7 +295,7 @@ function AttackCard({
             color: 'var(--ink)',
           }}
         >
-          {attack.label}
+          {attackLabel(attack.label)}
         </span>
         <span
           style={{
