@@ -75,13 +75,15 @@ function ballSourceCandidate(scenario: Scenario): { player: ScenarioPlayerConfig
       label: isServe ? 'Serveur adv.' : 'Réceptionneur adv.',
       role: 'opponent',
       color: COLORS.opponent,
-      position: [bx, 0, bz + 0.2],
+      // Opponents face our side (+z): the ball sits just in front of them.
+      position: [bx, 0, bz - 0.3],
     },
     pose: {
       type: 'player_pose',
       time: 0,
       id,
-      pose: isServe ? 'SPIKE' : 'BUMP',
+      // A server waits arm cocked: the strike itself is not scripted.
+      pose: isServe ? 'ARM_SPIKE' : 'BUMP',
       duration: 0.2,
     },
   };
