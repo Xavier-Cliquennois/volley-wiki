@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { AttackQuestion } from '../types';
 import { getSystemById } from '../../systems/data';
 import { Court, type CourtLayout, type CourtPlayer } from '../../components/court';
@@ -20,12 +21,6 @@ const BALL_POSITION = {
   poor: { x: 35, y: 55 },
 };
 
-const QUALITY_LABEL = {
-  perfect: 'Réception parfaite',
-  medium: 'Réception moyenne',
-  poor: 'Réception dégradée',
-};
-
 const QUALITY_COLOR = {
   perfect: 'var(--teal)',
   medium: 'var(--yellow)',
@@ -36,6 +31,7 @@ const QUALITY_COLOR = {
 // then a list of attack options. The user picks which call makes sense
 // given where the ball just landed.
 export function QuestionAttack({ question, selectedId, onSelect }: Props) {
+  const { t } = useTranslation();
   const layout = useMemo<CourtLayout>(() => {
     const system = getSystemById(question.systemId);
     const rotation = system?.rotations[question.rotationId];
@@ -81,7 +77,7 @@ export function QuestionAttack({ question, selectedId, onSelect }: Props) {
             letterSpacing: '0.1em',
           }}
         >
-          ● {QUALITY_LABEL[question.receptionQuality]}
+          ● {t(`quiz.receptionQuality.${question.receptionQuality}`)}
         </span>
       </div>
       <OptionList

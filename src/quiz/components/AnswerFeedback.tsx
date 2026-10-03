@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Q } from './styles';
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
 // correct, yellow (S.alert pattern) for incorrect. Includes the next-question
 // CTA so the player can advance from here without scrolling further.
 export function AnswerFeedback({ isCorrect, explanation, isLast, onNext }: Props) {
+  const { t } = useTranslation();
   return (
     <div style={isCorrect ? Q.feedbackCorrect : Q.feedbackIncorrect}>
       <div
@@ -21,7 +23,7 @@ export function AnswerFeedback({ isCorrect, explanation, isLast, onNext }: Props
           marginBottom: 8,
         }}
       >
-        {isCorrect ? '✓ BIEN VU' : '✗ PAS TOUT À FAIT'}
+        {isCorrect ? t('quiz.correct') : t('quiz.incorrect')}
       </div>
       <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55 }}>{explanation}</p>
       <div style={{ marginTop: 14 }}>
@@ -38,7 +40,7 @@ export function AnswerFeedback({ isCorrect, explanation, isLast, onNext }: Props
           }}
           style={Q.cta}
         >
-          {isLast ? 'VOIR LE RÉSULTAT →' : 'QUESTION SUIVANTE →'}
+          {isLast ? t('quiz.seeResult') : t('quiz.next')}
         </button>
       </div>
     </div>

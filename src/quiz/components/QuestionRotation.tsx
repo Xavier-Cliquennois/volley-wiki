@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { RotationQuestion } from '../types';
 import RotationDiagram from '../../systems/RotationDiagram';
 import { getSystemById } from '../../systems/data';
@@ -14,6 +15,7 @@ type Props = {
 // of the system it is. Reuses RotationDiagram as-is — the title is on the
 // page, not on the diagram, so nothing reveals the answer.
 export function QuestionRotation({ question, selectedId, onSelect }: Props) {
+  const { t } = useTranslation();
   const rotation = useMemo(() => {
     const system = getSystemById(question.systemId);
     return system?.rotations[question.rotationId];
@@ -22,12 +24,12 @@ export function QuestionRotation({ question, selectedId, onSelect }: Props) {
   if (!rotation) {
     return (
       <p style={{ color: 'var(--orange)' }}>
-        Rotation introuvable ({question.systemId} / {question.rotationId}).
+        {t('quiz.rotationNotFound', { system: question.systemId, rotation: question.rotationId })}
       </p>
     );
   }
 
-  const options = question.options.map(id => ({ id, label: `Rotation ${id}` }));
+  const options = question.options.map(id => ({ id, label: t('quiz.rotationOption', { id }) }));
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>

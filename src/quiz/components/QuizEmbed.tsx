@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useQuizLocalizer } from '../../i18n/localizeQuiz';
 import { getQuizBySlug } from '../data';
 import { QuizPlayer } from './QuizPlayer';
 
@@ -16,9 +18,12 @@ type Props = {
 // step keeps the parent page scannable for users who only want to read.
 export function QuizEmbed({ slug, persistProgress = true }: Props) {
   const [started, setStarted] = useState(false);
-  const quiz = getQuizBySlug(slug);
+  const { t } = useTranslation();
+  const localizer = useQuizLocalizer();
+  const source = getQuizBySlug(slug);
 
-  if (!quiz) return null;
+  if (!source) return null;
+  const quiz = localizer.quiz(source);
 
   return (
     <section style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
@@ -33,7 +38,7 @@ export function QuizEmbed({ slug, persistProgress = true }: Props) {
             whiteSpace: 'nowrap',
           }}
         >
-          ★ TESTE-TOI
+          {t('quiz.kicker')}
         </span>
         <div style={{ flex: 1, height: 3, background: 'var(--ink)' }} />
       </div>
@@ -62,14 +67,14 @@ export function QuizEmbed({ slug, persistProgress = true }: Props) {
                 color: 'var(--cream)',
               }}
             >
-              QUIZ
+              {t('quiz.badge')}
             </span>
             <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>
-              {quiz.level}
+              {t(`quiz.level.${quiz.level}`)}
             </span>
             <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.4 }}>·</span>
             <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 11, opacity: 0.6 }}>
-              {quiz.estimatedTime} · {quiz.questions.length} questions
+              {quiz.estimatedTime} · {t('quiz.questionCount', { count: quiz.questions.length })}
             </span>
           </div>
           <h2 style={{ fontFamily: '"Bungee", sans-serif', fontSize: 20, margin: 0, letterSpacing: '0.03em' }}>
@@ -97,12 +102,12 @@ export function QuizEmbed({ slug, persistProgress = true }: Props) {
               boxShadow: 'var(--shadow-sm)',
             }}
           >
-            COMMENCER LE QUIZ →
+            {t('quiz.start')}
           </button>
         </div>
       ) : (
         <QuizPlayer
-          quiz={quiz}
+          quiz={source}
           persistProgress={persistProgress}
           onBackToHub={() => setStarted(false)}
         />

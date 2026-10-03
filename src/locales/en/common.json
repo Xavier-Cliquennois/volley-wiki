@@ -159,5 +159,44 @@
       "beach": "Beach",
       "both": "Shared"
     }
+  },
+  "quiz": {
+    "kicker": "★ TEST YOURSELF",
+    "badge": "QUIZ",
+    "start": "START THE QUIZ →",
+    "questionCount": "{{count}} questions",
+    "progress": "QUESTION {{index}} / {{total}}",
+    "score": "SCORE: {{score}}",
+    "noQuestions": "No questions available in this quiz.",
+    "correct": "✓ WELL SPOTTED",
+    "incorrect": "✗ NOT QUITE",
+    "next": "NEXT QUESTION →",
+    "seeResult": "SEE THE RESULT →",
+    "flawless": "★ FLAWLESS",
+    "result": "★ RESULT",
+    "newBest": "★ NEW BEST SCORE ({{previous}} → {{score}})",
+    "replay": "PLAY AGAIN →",
+    "close": "← CLOSE THE QUIZ",
+    "verdict": {
+      "perfect": "Total mastery",
+      "high": "Well done",
+      "good": "Good start — review the explanations",
+      "mid": "Still some way to go — reread the linked guides",
+      "low": "Needs more work with the guides"
+    },
+    "level": {
+      "Débutant": "Beginner",
+      "Intermédiaire": "Intermediate",
+      "Avancé": "Advanced"
+    },
+    "rotationOption": "Rotation {{id}}",
+    "zoneOption": "Zone {{id}}",
+    "rotationNotFound": "Rotation not found ({{system}} / {{rotation}}).",
+    "placementHint": "★ The \"?\" markers are the candidate zones. Which one is right?",
+    "receptionQuality": {
+      "perfect": "Perfect reception",
+      "medium": "Average reception",
+      "poor": "Poor reception"
+    }
   }
 }

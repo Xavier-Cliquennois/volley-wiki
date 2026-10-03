@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useQuizLocalizer } from '../../i18n/localizeQuiz';
 import type { Quiz, Question, QuizScore } from '../types';
 import { readStoredProgress, useQuizProgress } from '../useQuizProgress';
 import { shuffleQuiz } from '../shuffle';
@@ -23,6 +25,8 @@ type Props = {
 // running score. When the user advances past the last question, we show
 // the result screen and (if persistProgress) save the score.
 export function QuizPlayer({ quiz, persistProgress, onBackToHub }: Props) {
+  const { t } = useTranslation();
+  const localizer = useQuizLocalizer();
   const [, recordScore] = useQuizProgress();
   // Per-session shuffle of both the question order and the options inside
   // each question. Replayed via `setQuestions(shuffleQuiz(...))` so a second
@@ -42,7 +46,10 @@ export function QuizPlayer({ quiz, persistProgress, onBackToHub }: Props) {
   });
 
   const total = questions.length;
-  const question = questions[index];
+  // The source question drives the state (ids, shuffle); only what is
+  // rendered is translated.
+  const sourceQuestion = questions[index];
+  const question = sourceQuestion ? localizer.question(quiz.slug, sourceQuestion) : undefined;
   const isLast = index === total - 1;
   const isAnswered = selectedId !== null;
   const correctId = question?.correctId;
@@ -68,7 +75,7 @@ export function QuizPlayer({ quiz, persistProgress, onBackToHub }: Props) {
   if (!question) {
     return (
       <p style={{ color: 'var(--orange)' }}>
-        Aucune question disponible dans ce quiz.
+        {t('quiz.noQuestions')}
       </p>
     );
   }
@@ -107,8 +114,8 @@ export function QuizPlayer({ quiz, persistProgress, onBackToHub }: Props) {
             opacity: 0.75,
           }}
         >
-          <span>QUESTION {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
-          <span>SCORE : {score}</span>
+          <span>{t('quiz.progress', { index: String(index + 1).padStart(2, '0'), total: String(total).padStart(2, '0') })}</span>
+          <span>{t('quiz.score', { score })}</span>
         </div>
         <div style={Q.progressTrack}>
           <div style={{ ...Q.progressFill, width: `${progressPercent}%` }} />

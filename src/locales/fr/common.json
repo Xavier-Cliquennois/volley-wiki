@@ -159,5 +159,44 @@
       "beach": "Beach",
       "both": "Communs"
     }
+  },
+  "quiz": {
+    "kicker": "★ TESTE-TOI",
+    "badge": "QUIZ",
+    "start": "COMMENCER LE QUIZ →",
+    "questionCount": "{{count}} questions",
+    "progress": "QUESTION {{index}} / {{total}}",
+    "score": "SCORE : {{score}}",
+    "noQuestions": "Aucune question disponible dans ce quiz.",
+    "correct": "✓ BIEN VU",
+    "incorrect": "✗ PAS TOUT À FAIT",
+    "next": "QUESTION SUIVANTE →",
+    "seeResult": "VOIR LE RÉSULTAT →",
+    "flawless": "★ SANS FAUTE",
+    "result": "★ RÉSULTAT",
+    "newBest": "★ NOUVEAU MEILLEUR SCORE ({{previous}} → {{score}})",
+    "replay": "REJOUER →",
+    "close": "← FERMER LE QUIZ",
+    "verdict": {
+      "perfect": "Maîtrise totale",
+      "high": "Bien dominé",
+      "good": "Bon départ — revois les justifications",
+      "mid": "Encore du chemin — relis les guides liés",
+      "low": "À retravailler avec les guides"
+    },
+    "level": {
+      "Débutant": "Débutant",
+      "Intermédiaire": "Intermédiaire",
+      "Avancé": "Avancé"
+    },
+    "rotationOption": "Rotation {{id}}",
+    "zoneOption": "Zone {{id}}",
+    "rotationNotFound": "Rotation introuvable ({{system}} / {{rotation}}).",
+    "placementHint": "★ Les pastilles « ? » sont les zones candidates. Quelle est la bonne ?",
+    "receptionQuality": {
+      "perfect": "Réception parfaite",
+      "medium": "Réception moyenne",
+      "poor": "Réception dégradée"
+    }
   }
 }
