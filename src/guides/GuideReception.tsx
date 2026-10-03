@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
-import type { TeamSize } from '../pages/Positions';
+import type { TeamSize } from '../positions/configurations';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';

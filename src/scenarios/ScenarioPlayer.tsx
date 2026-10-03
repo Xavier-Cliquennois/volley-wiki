@@ -7,7 +7,7 @@ import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
 import type { PhaseKind, Scenario, ScenarioStep, TeamSize } from './types';
 import { resolvePlayerColor } from './data/_shared';
-import { CONFIGURATIONS } from '../pages/Positions';
+import { CONFIGURATIONS } from '../positions/configurations';
 import { useCurrentLang } from '../i18n/paths';
 
 // Guide pointers used by the per-step deep-dive link. Slugs match the routes

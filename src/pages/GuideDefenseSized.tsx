@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import GuidePositionnement from '../guides/GuidePositionnement';
-import { useConfigurations } from './Positions';
+import { useConfigurations } from '../positions/configurations';
 import { Head } from '../seo/Head';
 import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
