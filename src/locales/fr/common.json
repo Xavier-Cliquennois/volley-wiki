@@ -108,7 +108,12 @@
     "legend": {
       "tempo1": "1er tempo (quick)",
       "tempo2": "2e tempo / arrière",
-      "movement": "Mouvement joueur"
+      "movement": "Mouvement joueur",
+      "setter": "Pénétration du passeur",
+      "reception": "Réception en W",
+      "approach": "Prise d'élan des attaquants",
+      "coverage": "Couverture (attaque à gauche)",
+      "isolate": "Cliquer pour isoler ce mouvement"
     },
     "backToHub": "Retour aux systèmes",
     "comingSoon": "Bientôt disponible",

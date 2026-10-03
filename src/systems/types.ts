@@ -36,6 +36,19 @@ export type Discipline = 'indoor' | 'beach';
 // is the back of our court.
 export type CourtCoord = { x: number; y: number };
 
+// Secondary player movements, in the order they happen during a side-out:
+// the setter penetrates (or slides along the net), the receivers spread into
+// the W, the attackers back off to start their approach, then everyone who
+// does not hit drops into coverage around the attacker.
+export type MovementKind = 'setter' | 'reception' | 'approach' | 'coverage';
+
+// One leg of a player's path. Legs are chained: the first one starts at the
+// serve position, each next one starts where the previous one ended.
+export type PlayerMovement = {
+  kind: MovementKind;
+  to: CourtCoord;
+};
+
 export type PlayerSlot = {
   role: RoleCode;
   // Color palette key (re-used from the positions palette).
@@ -45,7 +58,11 @@ export type PlayerSlot = {
   servePosition: CourtCoord;
   // Position after release: where the player goes once the serve is contacted.
   // Reception zone, attack zone, or setter penetration target.
+  // Drawn as a single 'setter' leg. Prefer `movements` for anything richer.
   releasePosition?: CourtCoord;
+  // Ordered release positions after the serve (see PlayerMovement). Drawn
+  // by the "show all movements" toggle, one colour per MovementKind.
+  movements?: PlayerMovement[];
   // True if this slot receives the serve.
   receives: boolean;
   // Per-rotation note (e.g. "stack behind OH to clear reception lane").

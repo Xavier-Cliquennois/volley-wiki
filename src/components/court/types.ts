@@ -39,6 +39,10 @@ export type CourtArrow = {
   // 'alt' = dashed grey ball trajectory (other tempos). 'movement' = thin
   // teal dotted line showing a player movement (penetration, approach…).
   kind?: 'main' | 'alt' | 'movement';
+  // Optional overrides of the kind's stroke colour and dash pattern, used to
+  // tell several families of movement apart on the same diagram.
+  color?: string;
+  dash?: string;
   // Optional override for the endpoint backoff (SVG user units). The default
   // backoff is generous so the arrowhead doesn't overlap a player at the
   // target. Override with a small value when the target is in empty space

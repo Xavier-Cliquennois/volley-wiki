@@ -5,6 +5,8 @@ import type {
   SystemDef,
   Rotation,
   PlayerSlot,
+  PlayerMovement,
+  CourtCoord,
 } from '../types';
 import type { RoleColorKey } from '../../constants/positions';
 
@@ -68,7 +70,8 @@ const ATTACK_TARGET = {
 const FRONT_ZONES: ReadonlySet<ZoneKey> = new Set(['P2', 'P3', 'P4']);
 
 // Where the setter is heading once the ball is released. Sits ~1 m off the
-// net, between zones 2 and 3 — the canonical setting target in 5-1.
+// net, between zones 2 and 3 — the canonical setting target in 5-1. A
+// back-row setter penetrates to it; a front-row setter slides along the net.
 const SETTER_TARGET = { x: 65, y: 14 };
 
 // Where each role attacks from when occupying a given front-row zone.
@@ -156,6 +159,114 @@ function buildAttacks(id: RotationId): AttackOption[] {
   return attacks;
 }
 
+// ── Release positions ───────────────────────────────────────────────────
+// Where players go once the opponent's server contacts the ball. The serve
+// positions above are the FIVB grid; these spots describe the side-out that
+// follows, in four legs drawn by the "show all movements" toggle.
+
+// W reception: five receivers (everyone but the setter), three on a line
+// ~4.5 m from the net and two deeper in the seams.
+type ReceptionSpot = 'WL' | 'WC' | 'WR' | 'BL' | 'BR';
+const RECEPTION_SPOT: Record<ReceptionSpot, CourtCoord> = {
+  WL: { x: 16, y: 44 },
+  WC: { x: 50, y: 46 },
+  WR: { x: 84, y: 44 },
+  BL: { x: 30, y: 74 },
+  BR: { x: 70, y: 74 },
+};
+
+// Approach start: where each attacker backs off to after the reception, so
+// the run up to the strike point (the attack arrow) has room. Keys match
+// the attack options built by buildAttacks.
+type ApproachSpot = 'left' | 'quick' | 'right' | 'pipe' | 'bicD' | 'bicA';
+const APPROACH_SPOT: Record<ApproachSpot, CourtCoord> = {
+  left: { x: 8, y: 36 },    // outside hitter, wide of the left antenna
+  quick: { x: 60, y: 30 },  // middle, just in front of the setter
+  right: { x: 92, y: 36 },  // opposite, wide of the right antenna
+  // Back-row centre, slightly left of the axis so the approach never runs
+  // back over a reception path coming up from P6.
+  pipe: { x: 40, y: 58 },
+  bicD: { x: 80, y: 58 },   // back-row right
+  bicA: { x: 20, y: 58 },   // back-row left
+};
+
+// Coverage of the left-side attack (the front-row outside hitter, present
+// in every rotation): three players close around the hitter, two deep.
+// Spots stay clear of the serve-position pastilles and their captions so
+// every arrowhead remains visible.
+type CoverageSpot = 'behind' | 'inside' | 'middle' | 'deepLeft' | 'deepMiddle';
+const COVERAGE_SPOT: Record<CoverageSpot, CourtCoord> = {
+  behind: { x: 6, y: 26 },
+  inside: { x: 34, y: 18 },
+  middle: { x: 40, y: 38 },
+  deepLeft: { x: 22, y: 60 },
+  deepMiddle: { x: 52, y: 62 },
+};
+
+type RoleRelease = {
+  reception?: ReceptionSpot;
+  approach?: ApproachSpot;
+  coverage?: CoverageSpot;
+};
+
+// Per-rotation release plan. Spots were assigned so that, within each leg,
+// no two paths cross (players keep their side, the shortest overall moves
+// win); the only crossings left are the real switches between legs, e.g.
+// the OPP in P4 who receives on the left then runs to the right antenna.
+// The setter is absent from the reception and always penetrates (or slides
+// along the net) to SETTER_TARGET first.
+const RELEASE_MAP: Record<RotationId, Partial<Record<RoleCode, RoleRelease>>> = {
+  R1: {
+    S: { coverage: 'inside' },
+    MB1: { reception: 'WR', approach: 'quick', coverage: 'middle' },
+    OH1: { reception: 'WC', approach: 'left' },
+    OPP: { reception: 'WL', approach: 'right', coverage: 'deepMiddle' },
+    L: { reception: 'BL', coverage: 'deepLeft' },
+    OH2: { reception: 'BR', approach: 'pipe', coverage: 'behind' },
+  },
+  R2: {
+    S: { coverage: 'inside' },
+    L: { reception: 'BR', coverage: 'deepMiddle' },
+    OH1: { reception: 'WR', approach: 'left' },
+    OPP: { reception: 'WC', approach: 'right', coverage: 'middle' },
+    MB2: { reception: 'WL', approach: 'quick', coverage: 'behind' },
+    OH2: { reception: 'BL', coverage: 'deepLeft' },
+  },
+  R3: {
+    S: { coverage: 'inside' },
+    OH1: { reception: 'BR', coverage: 'deepMiddle' },
+    OPP: { reception: 'WR', approach: 'right', coverage: 'middle' },
+    MB2: { reception: 'WC', approach: 'quick', coverage: 'behind' },
+    OH2: { reception: 'WL', approach: 'left' },
+    L: { reception: 'BL', coverage: 'deepLeft' },
+  },
+  R4: {
+    S: { coverage: 'inside' },
+    OPP: { reception: 'BR', approach: 'bicD', coverage: 'deepMiddle' },
+    MB2: { reception: 'WR', approach: 'quick', coverage: 'middle' },
+    OH2: { reception: 'WC', approach: 'left' },
+    L: { reception: 'WL', coverage: 'behind' },
+    OH1: { reception: 'BL', approach: 'pipe', coverage: 'deepLeft' },
+  },
+  R5: {
+    S: { coverage: 'inside' },
+    L: { reception: 'BR', coverage: 'deepMiddle' },
+    OH2: { reception: 'WR', approach: 'left' },
+    MB1: { reception: 'WL', approach: 'quick', coverage: 'middle' },
+    OH1: { reception: 'BL', coverage: 'deepLeft' },
+    OPP: { reception: 'WC', approach: 'pipe', coverage: 'behind' },
+  },
+  R6: {
+    S: { coverage: 'inside' },
+    OH2: { reception: 'WR', coverage: 'middle' },
+    MB1: { reception: 'WC', approach: 'quick', coverage: 'behind' },
+    OH1: { reception: 'WL', approach: 'left' },
+    // The bic A approach start already is the deep-left coverage spot.
+    OPP: { reception: 'BL', approach: 'bicA' },
+    L: { reception: 'BR', coverage: 'deepMiddle' },
+  },
+};
+
 // R1 shares the standard grid + auto-built attacks with R2-R6.
 // Only the rich pedagogical details (overlap, transitions, signals) stay
 // hand-authored here.
@@ -200,24 +311,30 @@ const R1: Rotation = {
   ],
 };
 
-// Build the players in their service-whistle positions for a given rotation.
-// A `releasePosition` is filled in for movements we can derive from the
-// rotation alone: today, the setter's penetration target when they start
-// in the back row. Other release positions (W reception, attacker approach,
-// coverage descent) will be authored per-rotation in future iterations.
+// Chain a role's release plan into movement legs, in play order.
+function buildMovements(role: RoleCode, plan: RoleRelease | undefined): PlayerMovement[] {
+  const legs: PlayerMovement[] = [];
+  if (role === 'S') legs.push({ kind: 'setter', to: SETTER_TARGET });
+  if (plan?.reception) legs.push({ kind: 'reception', to: RECEPTION_SPOT[plan.reception] });
+  if (plan?.approach) legs.push({ kind: 'approach', to: APPROACH_SPOT[plan.approach] });
+  if (plan?.coverage) legs.push({ kind: 'coverage', to: COVERAGE_SPOT[plan.coverage] });
+  return legs;
+}
+
+// Build the players in their service-whistle positions for a given rotation,
+// with their release movements attached.
 function buildSlots(id: RotationId): PlayerSlot[] {
   const mapping = ROTATION_MAP[id];
+  const plans = RELEASE_MAP[id];
   return (Object.entries(mapping) as [ZoneKey, RoleCode][]).map(([zone, role]) => {
-    const slot: PlayerSlot = {
+    const plan = plans[role];
+    return {
       role,
       color: ROLE_COLOR[role],
       servePosition: ZONES[zone],
-      receives: false,
+      receives: !!plan?.reception,
+      movements: buildMovements(role, plan),
     };
-    if (role === 'S' && !FRONT_ZONES.has(zone)) {
-      slot.releasePosition = SETTER_TARGET;
-    }
-    return slot;
   });
 }
 

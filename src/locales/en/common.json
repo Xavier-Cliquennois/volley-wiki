@@ -108,7 +108,12 @@
     "legend": {
       "tempo1": "1st tempo (quick)",
       "tempo2": "2nd tempo / back-row",
-      "movement": "Player movement"
+      "movement": "Player movement",
+      "setter": "Setter penetration",
+      "reception": "W reception",
+      "approach": "Attackers back off to approach",
+      "coverage": "Coverage (left-side attack)",
+      "isolate": "Click to isolate this movement"
     },
     "backToHub": "Back to systems",
     "comingSoon": "Coming soon",
