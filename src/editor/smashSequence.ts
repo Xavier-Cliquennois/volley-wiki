@@ -110,7 +110,7 @@ export function buildSmashSequence(
 
   const smashStep: EditorStep = {
     id: smashStepId,
-    title: `Smash ${zoneLabel(impactX, impactZ)}`,
+    title: `Smash ${zoneLabel(impactX)}`,
     description: `${attacker?.label ?? attackerId} saute et frappe au filet, la balle plonge côté adverse.`,
     tempo: 'rapide',
     snapshot: {
@@ -144,7 +144,7 @@ function pickDefaultSetter(
   return best;
 }
 
-function zoneLabel(x: number, _z: number): string {
+function zoneLabel(x: number): string {
   if (x < -1.5) return 'zone 4';
   if (x > 1.5) return 'zone 2';
   return 'zone 3';

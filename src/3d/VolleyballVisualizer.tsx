@@ -9,10 +9,11 @@ import type { BallWithTrailRef } from './BallWithTrail';
 import { ImpactEffect } from './ImpactEffect';
 import type { ImpactEffectRef } from './ImpactEffect';
 import { useTactic } from './useTactic';
+import type { PlayerRefMap, TacticScript } from './useTactic';
 import { CAMERA_PRESETS, useCameraControls } from './useCameraControls';
 import type { CameraPresetKey } from './useCameraControls';
 
-const BUMP_SET_SPIKE_SCRIPT = {
+const BUMP_SET_SPIKE_SCRIPT: TacticScript = {
   id: 'bump_set_spike',
   timeline: [
     { time: 0, type: 'ball_move', from: [0, 2.8, -9], to: [-1, 1.2, 3], duration: 1.0, arc: 3.0, description: 'Service adverse rapide vers le libéro' },
@@ -38,7 +39,7 @@ const PLAYERS_CONFIG = [
 ];
 
 type SceneProps = {
-  playerRefs: React.MutableRefObject<Record<string, any>>;
+  playerRefs: React.MutableRefObject<PlayerRefMap>;
   controllerRef: React.MutableRefObject<gsap.core.Timeline | null>;
   cameraRef: React.RefObject<THREE.PerspectiveCamera | null>;
   onUpdate: (progress: number, actionIndex: number) => void;
@@ -48,7 +49,7 @@ type SceneProps = {
 const CameraSetup: React.FC<{ cameraRef: React.RefObject<THREE.PerspectiveCamera | null> }> = ({ cameraRef }) => {
   const { camera } = useThree();
   useEffect(() => {
-    (cameraRef as React.MutableRefObject<THREE.PerspectiveCamera | null>).current = camera as THREE.PerspectiveCamera;
+    cameraRef.current = camera as THREE.PerspectiveCamera;
   }, [camera, cameraRef]);
   return null;
 };
@@ -102,7 +103,7 @@ const btnActiveStyle: React.CSSProperties = { ...btnBase, background: 'var(--ora
 export default function VolleyballVisualizer({ autoplay = true }: VolleyballVisualizerProps) {
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
-  const playerRefs = useRef<Record<string, any>>({});
+  const playerRefs = useRef<PlayerRefMap>({});
 
   const [isPlaying, setIsPlaying] = useState(autoplay);
   const [hasStarted, setHasStarted] = useState(autoplay);
