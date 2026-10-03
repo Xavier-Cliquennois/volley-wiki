@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useMemo, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SCENARIOS, getScenarioById } from '../scenarios/data';
@@ -53,13 +53,18 @@ export default function Scenarios() {
   const [phase, setPhase] = useState<PhaseKind | null>(launchedScenario?.config.phase ?? null);
   const [contextChoice, setContextChoice] = useState<string | null>(launchedScenario?.id ?? null);
 
-  useEffect(() => {
+  // Sync the wizard with the launched scenario whenever its id changes.
+  // Done during render rather than in an effect (no extra render pass).
+  const launchedId = launchedScenario?.id;
+  const [syncedLaunchedId, setSyncedLaunchedId] = useState(launchedId);
+  if (syncedLaunchedId !== launchedId) {
+    setSyncedLaunchedId(launchedId);
     if (launchedScenario) {
       setTeamSize(launchedScenario.config.teamSize);
       setPhase(launchedScenario.config.phase);
       setContextChoice(launchedScenario.id);
     }
-  }, [launchedScenario?.id]);
+  }
 
   const localizedScenarios = useLocalizedScenarios(SCENARIOS);
 
