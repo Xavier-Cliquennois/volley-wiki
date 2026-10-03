@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# volley-wiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Wiki français du volley-ball, en indoor (6v6, avec adaptations 5v5 et 4v4) et en beach. Positions, rotations, systèmes de jeu (5-1, 6-2, 4-2), guides techniques et tactiques, exercices, quiz et un lecteur de scénarios en 3D.
 
-Currently, two official plugins are available:
+Publié sur <https://volley-wiki.fr>.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+React, Vite et TypeScript, Tailwind pour le style, `@react-three/fiber` et `gsap` pour le lecteur 3D, `i18next` pour les 8 langues (fr, en, es, it, ja, pl, pt, tr ; le français sert de repli), rendu statique par `react-ssg`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Démarrer
 
-## Expanding the ESLint configuration
+Le gestionnaire de paquets est **pnpm**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+pnpm dev        # serveur de développement
+pnpm lint       # eslint
+pnpm build      # tsc -b puis vite build, sortie dans dist/
+pnpm preview    # sert dist/ en local
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Il n'y a pas de tests automatiques : `pnpm lint` et `pnpm build` font office de vérification, puis on regarde l'interface tourner.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Organisation du code
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Chemin | Contenu |
+|---|---|
+| `src/routes.tsx` | Routes, préfixées par la langue (`/:lang/…`), avec une branche `beach/` |
+| `src/pages/`, `src/guides/` | Pages et guides |
+| `src/systems/` | Systèmes de jeu et `RotationDiagram` (terrain 2D) |
+| `src/scenarios/`, `src/3d/`, `src/editor/` | Scénarios, lecteur 3D, éditeur de scénarios |
+| `src/drills/`, `src/quiz/` | Catalogue d'exercices et module de quiz |
+| `src/constants/positions.ts` | Palette des positions (voir `CLAUDE.md`) |
+| `src/locales/` | Traductions par langue |
+| `docs/` | Matériel de référence et contenu source, pas de plan de travail |
+
+## Déploiement
+
+`Dockerfile` construit le site et le sert avec nginx ; `docker-compose.prod.yml` le publie derrière Traefik.
+
+## Contribuer
+
+Tout travail part d'un ticket du dépôt, suivi dans le [projet Volley Wiki](https://github.com/users/Xavier-Cliquennois/projects/6). Les conventions (tickets, labels, vagues d'agents, commits, palette des positions, système de coordonnées 3D) sont dans [`CLAUDE.md`](./CLAUDE.md).
