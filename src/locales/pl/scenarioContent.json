@@ -277,15 +277,15 @@
   },
   "6v6-attack-5-1-p1": {
     "title": "Atak · rotacja 5-1 P1",
-    "shortDescription": "Odbiór w 3 przyjmujących → rozgrywający wbiega z P1 → atak ze strefy 4 przez przyjmującego.",
+    "shortDescription": "Przyjęcie w 3 → rozgrywający wchodzi z P1 → przyjmujący z przodu zmienia stronę i atakuje ze strefy 4.",
     "contextLabel": "5-1 · Rotacja P1 · Zagrywka przeciwnika",
     "players": {
-      "L": "Libero (P5)",
-      "R4a": "Przyjmujący (P4)",
-      "R4b": "Przyjmujący (P6)",
-      "C": "Środkowy (P3)",
-      "Op": "Atakujący (P2)",
-      "P": "Rozgrywający (P1)",
+      "L": "Libero (strefa 6)",
+      "R4a": "Przyjmujący (strefa 2)",
+      "R4b": "Przyjmujący (strefa 5)",
+      "C": "Środkowy (strefa 3)",
+      "Op": "Atakujący (strefa 4)",
+      "P": "Rozgrywający (strefa 1)",
       "OPP_SRV": "Zagrywający przeciwnika",
       "OPP_BL": "Lewy blokujący przeciwnika",
       "OPP_BR": "Prawy blokujący przeciwnika",
@@ -295,55 +295,55 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Formacja odbioru",
-        "description": "Nasza drużyna jest w formacji 3 przyjmujących: libero (P5), przyjmujący na P6 i przyjmujący na P4 cofnięci do linii 3 m. Środkowy i atakujący są poza odbiorem przy siatce. Rozgrywający czeka na P1, aby wbiec, gdy tylko zagrywka zostanie uderzona."
+        "title": "1. Ustawienie do przyjęcia",
+        "description": "Przyjęcie w 3: przyjmujący ze strefy 5 z lewej, libero (strefa 6) na środku, przyjmujący ze strefy 2 cofnięty z prawej. Atakujący (strefa 4) i środkowy (strefa 3) zostają przy siatce. Rozgrywający w strefie 1 chowa się za przyjmującym ze strefy 2, gotowy do wejścia."
       },
       "s2": {
-        "title": "2. Zagrywka + odbiór",
-        "description": "Wysoka zagrywka przeciwnika na przyjmującego na P6, który odbija. Równolegle rozgrywający rozpoczyna wbieganie z P1 w stronę strefy 2-3."
+        "title": "2. Zagrywka + przyjęcie",
+        "description": "Zagrywka przeciwnika po łuku w strefę 5: przyjmujący z tyłu przyjmuje dołem. Od momentu zagrywki rozgrywający wchodzi ze strefy 1, atakujący przebiega za środkowym w prawo, a przyjmujący ze strefy 2 zaczyna przesuwać się w lewo."
       },
       "s3": {
-        "title": "3. Wysoka wystawa + doskok",
-        "description": "Piłka wznosi się do rozgrywającego, który dotarł do siatki. Wystawia wysoką piłkę do strefy 4, gdzie przyjmujący już rozpoczął swój doskok. Wokół niego tworzy się asekuracja."
+        "title": "3. Zamiany + rozbieg",
+        "description": "Przyjęcie leci do rozgrywającego, który dotarł do siatki. Przyjmujący ze strefy 2 kończy przejście i zaczyna rozbieg w strefie 4; atakujący zajmuje strefę 2, a środkowy angażuje blok na środku."
       },
       "s4": {
-        "title": "4. Smecz + blok podwójny",
-        "description": "Przyjmujący wyskakuje i uderza długą krzyżową w stronę strefy 6 przeciwnika. Dwaj blokujący przeciwnika skaczą równolegle, aby zamknąć krzyżową i linię."
+        "title": "4. Atak + podwójny blok",
+        "description": "Wysoka wystawa do strefy 4: przyjmujący wyskakuje i uderza długą krzyżową w głąb boiska przeciwnika. Dwaj blokujący zamykają linię, atak przechodzi przez lukę. Rozgrywający, przyjmujący z tyłu i libero asekurują atakującego."
       },
       "s5": {
         "title": "5. Obrona przeciwnika",
-        "description": "Libero przeciwnika rzuca się w stronę strefy 6, próbując rozpaczliwego odbicia. Rozgrywający przeciwnika przesuwa się w stronę strefy 2, aby przekazać piłkę, jeśli obrona ją dotknie."
+        "description": "Libero przeciwnika rzuca się na długą przekątną, próbując rozpaczliwego przyjęcia. Rozgrywający przeciwnika podchodzi do strefy 2, by przejąć piłkę, jeśli obrona jej dotknie."
       },
       "s6": {
-        "title": "6. RESET — powrót do formacji",
-        "description": "Cała drużyna wraca na pozycję odbioru do kolejnej zagrywki. Ustawienie to decyduje o jakości kolejnego ataku."
+        "title": "6. RESET — powrót do ustawienia",
+        "description": "Cała drużyna wraca do ustawienia do przyjęcia przed kolejną zagrywką: przyjmujący wraca do strefy 2, atakujący do strefy 4. To ustawienie decyduje o jakości następnego ataku."
       }
     },
     "summary": {
       "keyPoints": [
-        "Odbiór w 3 przyjmujących: libero + 2 przyjmujących pokrywa całą szerokość boiska.",
-        "Rozgrywający wbiega z P1 w stronę strefy 2-3, gdy tylko zagrywka zostanie uderzona.",
-        "Atakujący przyjmujący przesuwa się po linii 3 m podczas odbioru, aby przygotować swój doskok.",
-        "Asekuracja w 5 osób (3 blisko + 2 daleko) w niskiej pozycji wokół atakującego."
+        "Kolejność rotacji: rozgrywający w strefie 1, atakujący naprzeciw w strefie 4, przyjmujący w strefach 2 i 5, środkowy w 3, libero w 6.",
+        "Przyjęcie w 3: libero + 2 przyjmujących pokrywa całą szerokość boiska.",
+        "Rozgrywający wchodzi ze strefy 1 do strefy 2-3, gdy tylko zagrywka zostanie wykonana.",
+        "Po przyjęciu przyjmujący z przodu przechodzi do strefy 4, a atakujący zajmuje strefę 2."
       ],
       "commonMistakes": [
-        "Rozgrywający wbiegający zbyt późno → wystawa w wyskoku wymuszona przez innego zawodnika.",
-        "Atakujący przyjmujący rozpoczynający doskok zbyt wcześnie → przybywa pod piłką zamiast się zaangażować.",
-        "Asekuracja zapomniana → udany blok przeciwnika = punkt stracony bezpośrednio."
+        "Rozgrywający wchodzi za późno → wymuszona wystawa w wyskoku przez innego zawodnika.",
+        "Rozgrywający przed przyjmującym ze strefy 2 w momencie zagrywki → błąd ustawienia.",
+        "Zapomniana asekuracja → udany blok przeciwnika = punkt stracony od razu."
       ]
     }
   },
   "6v6-attack-5-1-p2": {
     "title": "Atak · rotacja 5-1 P2",
-    "shortDescription": "Rozgrywający już przy siatce na P2: 2 atakujących z przodu + atakujący wyjątkowo atakuje w strefie 4.",
+    "shortDescription": "Rozgrywający już przy siatce w P2: 2 atakujących z przodu, przyjmujący i środkowy zamieniają się, atak ze strefy 4.",
     "contextLabel": "5-1 · Rotacja P2 · Rozgrywający z przodu",
     "players": {
-      "R4a": "Przyjmujący (P5)",
-      "L": "Libero (P6)",
-      "R4b": "Przyjmujący (P1)",
-      "C": "Środkowy (P3)",
-      "Pt": "Atakujący (P4)",
-      "P": "Rozgrywający (P2)",
+      "R4a": "Przyjmujący (strefa 3)",
+      "L": "Libero (strefa 1)",
+      "R4b": "Przyjmujący (strefa 6)",
+      "C": "Środkowy (strefa 4)",
+      "Pt": "Atakujący (strefa 5)",
+      "P": "Rozgrywający (strefa 2)",
       "OPP_SRV": "Zagrywający przeciwnika",
       "OPP_BL": "Lewy blokujący przeciwnika",
       "OPP_BR": "Prawy blokujący przeciwnika",
@@ -351,41 +351,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Zagrywka przeciwnika",
-        "description": "Zagrywka w stronę strefy 5-6. Libero zgłasza się i przygotowuje do odbicia. Rozgrywający już czeka przy siatce na P2."
+        "title": "1. Ustawienie do przyjęcia",
+        "description": "Przyjęcie w 3: przyjmujący ze strefy 3 cofnięty z lewej, przyjmujący ze strefy 6 na środku, libero (strefa 1) z prawej. Środkowy (strefa 4) zostaje przy siatce z lewej, rozgrywający czeka już przy siatce w strefie 2. Atakujący, z tyłu w strefie 5, chowa się w głębi z lewej."
       },
       "s2": {
-        "title": "2. Zagrywka + odbiór libero",
-        "description": "Wysoka zagrywka w stronę strefy 6. Libero wkracza i odbija precyzyjnie do celu rozgrywającego (strefa 2)."
+        "title": "2. Zagrywka + przyjęcie libero",
+        "description": "Zagrywka po łuku w strefę 1. Libero precyzyjnie przyjmuje dołem do rozgrywającego. Od momentu zagrywki środkowy przesuwa się na środek siatki, a przyjmujący ze strefy 3 idzie w stronę strefy 4."
       },
       "s3": {
-        "title": "3. Wystawa do atakującego + doskok",
-        "description": "Rozgrywający, już na P2, wyjątkowo rozprowadza do strefy 4, gdzie atakujący rozpoczyna swój doskok. Blok przeciwnika regroup w środku."
+        "title": "3. Wystawa do strefy 4 + rozbieg",
+        "description": "Rozgrywający, już w strefie 2, odbiera piłkę bez wchodzenia. Przyjmujący zaczyna rozbieg w strefie 4, a środkowy angażuje blok na środku. Blok przeciwnika przesuwa się na skrzydło."
       },
       "s4": {
-        "title": "4. Smecz + blok podwójny",
-        "description": "Atakujący wyskakuje po lewej i uderza długą krzyżową. Rzadka konfiguracja, ale nieunikniona na P2 — rozgrywający pozostaje na miejscu."
+        "title": "4. Atak + podwójny blok",
+        "description": "Długa wystawa do strefy 4: przyjmujący wyskakuje i uderza długą krzyżową, przez lukę w podwójnym bloku. Atakujący i przyjmujący z tyłu asekurują, rozgrywający zostaje przy siatce."
       },
       "s5": {
         "title": "5. Obrona przeciwnika",
-        "description": "Obrońca krzyżowej przeciwnika rzuca się na długą krzyżową, próbując rozpaczliwego odbicia."
+        "description": "Obrońca przekątnej przeciwnika rzuca się na długą przekątną, próbując ratunkowego przyjęcia."
       },
       "s6": {
-        "title": "6. RESET — powrót do formacji",
-        "description": "Wszyscy wracają na pozycję odbioru. Rotacja P2 pozostaje najbardziej ograniczona ofensywnie: tylko 2 atakujących z przodu."
+        "title": "6. RESET — powrót do ustawienia",
+        "description": "Wszyscy wracają do ustawienia do przyjęcia: środkowy do strefy 4, przyjmujący do strefy 3. Rotacja P2 pozostaje najuboższa w ataku: tylko 2 atakujących z przodu."
       }
     },
     "summary": {
       "keyPoints": [
-        "Rotacja P2 = najbardziej ograniczona ofensywnie (tylko 2 atakujących z przodu).",
-        "Rozgrywający już na miejscu: brak wbiegania, łatwe rozprowadzanie.",
-        "Atakujący wyjątkowo atakuje po lewej (strefa 4), aby uwolnić rozgrywającego.",
-        "Priorytetowo traktuj skrzydła i ataki z głębi przyjmujących jako opcje."
+        "Kolejność rotacji: rozgrywający w strefie 2, atakujący naprzeciw w strefie 5, przyjmujący w strefach 3 i 6, środkowy w 4, libero w 1.",
+        "Rotacja P2 = najuboższa w ataku: tylko 2 atakujących z przodu (przyjmujący + środkowy).",
+        "Rozgrywający już na miejscu: zero wejścia, łatwe rozegranie.",
+        "Przyjmujący i środkowy zamieniają się przy zagrywce: przyjmujący atakuje w 4, środkowy angażuje w 3."
       ],
       "commonMistakes": [
-        "Rozgrywający próbujący wystawić w wyskoku w strefie 2, gdy już tam jest → trudne 2. odbicie.",
-        "Atakujący wahający się między 2 a 4 → blok przeciwnika na miejscu.",
-        "Środkowi nie wykonujący commit → łatwy blok podwójny dla przeciwnika."
+        "Rozgrywający cofa się po krótkie przyjęcie → trudne 2. odbicie.",
+        "Spóźniona zamiana przyjmujący ↔ środkowy → środkowy zostaje w strefie 4, bezużyteczny w bloku.",
+        "Środkowy, który nie angażuje bloku → łatwy podwójny blok przeciwnika na skrzydle."
       ]
     }
   },
@@ -450,12 +450,12 @@
     "shortDescription": "Rozgrywający z przodu na P4 przesuwa się w prawo; przyjmujący* atakuje w strefie 4, środkowy w 3, atakujący z głębi w 1.",
     "contextLabel": "5-1 · Rotacja P4 · Rozgrywający z przodu",
     "players": {
-      "L": "Libero (P5)",
-      "R4b": "Przyjmujący (P6)",
-      "Pt": "Atakujący (P1)",
-      "P": "Rozgrywający (P4)",
-      "C": "Środkowy (P3)",
-      "R4a": "Przyjmujący (P2)",
+      "L": "Libero (strefa 6)",
+      "R4b": "Przyjmujący (strefa 5)",
+      "Pt": "Atakujący (strefa 1)",
+      "P": "Rozgrywający (strefa 4)",
+      "C": "Środkowy (strefa 3)",
+      "R4a": "Przyjmujący* (strefa 2)",
       "OPP_SRV": "Zagrywający przeciwnika",
       "OPP_BL": "Lewy blokujący przeciwnika",
       "OPP_BR": "Prawy blokujący przeciwnika",
@@ -463,41 +463,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Konfiguracja P4 + przesunięcie",
-        "description": "Rozgrywający w strefie 4, przyjmujący* w strefie 2 — skrzyżowane ustawienie. Rozgrywający i środkowy przesuwają się w lewo, aby uwolnić strefę odbioru dla libero."
+        "title": "1. Ustawienie P4 + przesunięcie",
+        "description": "Rozgrywający w strefie 4, przyjmujący* w strefie 2: ustawienie skrzyżowane. Rozgrywający i środkowy przesuwają się w lewo, aby przyjmujący* mógł cofnąć się do przyjęcia z prawej. Przyjęcie w 3: przyjmujący (strefa 5), libero (strefa 6), przyjmujący*. Atakujący w strefie 1 chowa się w głębi z prawej."
       },
       "s2": {
-        "title": "2. Zagrywka + odbiór libero",
-        "description": "Zagrywka celuje w strefę 6. Libero wkracza i odbija do klasycznego celu (między P2 a P3)."
+        "title": "2. Zagrywka + przyjęcie libero",
+        "description": "Zagrywka w strefę 6. Libero wychodzi do przodu i przyjmuje dołem do klasycznego celu (między strefami 2 i 3). Od momentu zagrywki rozgrywający opuszcza strefę 4, przebiegając za środkowym, a przyjmujący* zaczyna przejście."
       },
       "s3": {
         "title": "3. Zamiana rozgrywający↔przyjmujący* + wysoka wystawa",
-        "description": "Niezbędna krzyżówka: rozgrywający opuszcza P4 w stronę 2-3, przyjmujący* opuszcza P2 w stronę 4, aby atakować. Wysoka wystawa do lewego skrzydła."
+        "description": "Kluczowe skrzyżowanie: rozgrywający dociera do 2-3, a przyjmujący* kończy przejście do strefy 4 i zaczyna rozbieg. Środkowy wraca do strefy 3, atakujący podchodzi, grożąc atakiem z drugiej linii."
       },
       "s4": {
-        "title": "4. Atak ze skrzydła + blok podwójny",
-        "description": "Smecz długą krzyżową. Z rozgrywającym z przodu (mały przy bloku) atak musi szybko się zakończyć. Blok podwójny przesunięty w stronę skrzydła."
+        "title": "4. Atak ze skrzydła + podwójny blok",
+        "description": "Wysoka wystawa do strefy 4: przyjmujący* uderza długą krzyżową. Z rozgrywającym z przodu (więc niskim w bloku) atak musi szybko kończyć akcję. Podwójny blok przesunięty na skrzydło."
       },
       "s5": {
         "title": "5. Obrona przeciwnika",
-        "description": "Obrońca przekątnej przeciwnika rzuca się na długą trajektorię, próbując rozpaczliwego odbicia."
+        "description": "Obrońca przekątnej przeciwnika rzuca się na długą trajektorię, próbując rozpaczliwego przyjęcia. Nasz atakujący ląduje i już cofa się do obrony."
       },
       "s6": {
-        "title": "6. RESET — powrót do formacji",
-        "description": "Wszyscy wracają na początkowe pozycje. Przesunięcie rozgrywający/środkowy w lewo jest zachowane do kolejnej zagrywki."
+        "title": "6. RESET — powrót do ustawienia",
+        "description": "Wszyscy wracają do pozycji wyjściowej: przyjmujący* do strefy 2, rozgrywający do strefy 4. Przesunięcie rozgrywającego i środkowego w lewo zostaje zachowane przed kolejną zagrywką."
       }
     },
     "summary": {
       "keyPoints": [
+        "Kolejność rotacji: rozgrywający w strefie 4, atakujący naprzeciw w strefie 1, przyjmujący w strefach 2 i 5, środkowy w 3, libero w 6.",
         "Rotacja P4 = rozgrywający z przodu. Zamiana rozgrywający↔przyjmujący* obowiązkowa.",
-        "2 atakujących z przodu: przyjmujący* w 4, środkowy w 3. Pipe lub atakujący z głębi jako opcje.",
-        "Rozgrywający i środkowy przesuwają się w lewo przy zagrywce, aby uwolnić strefę 6.",
-        "Atakujący (na P1) nie odbiera i pozostaje gotowy do ataku z głębi."
+        "2 atakujących z przodu: przyjmujący* w 4, środkowy w 3. Pipe lub atakujący z drugiej linii jako opcja.",
+        "Atakujący (w strefie 1) nie przyjmuje i jest gotowy do ataku z drugiej linii."
       ],
       "commonMistakes": [
-        "Zamiana zapomniana → przyjmujący* zostaje po prawej, atakujący w słabej pozycji.",
-        "Rozgrywający i środkowy zbyt daleko po prawej przy zagrywce → konflikt odbioru w strefie 6.",
-        "Blok przeciwnika nieskommitowany przez środkowego → łatwy blok podwójny na lewym skrzydle."
+        "Zapomniana zamiana → przyjmujący* zostaje z prawej, atakujący w złym miejscu.",
+        "Rozgrywający i środkowy za bardzo w prawo przy zagrywce → przyjmujący* nie może cofnąć się do przyjęcia.",
+        "Blok przeciwnika niezaangażowany przez środkowego → łatwy podwójny blok na lewym skrzydle."
       ]
     }
   },
@@ -506,12 +506,12 @@
     "shortDescription": "Długie wbieganie z P5. Zamiana C/przyjmujący. Wystawa do atakującego w strefie 2.",
     "contextLabel": "5-1 · Rotacja P5 · Długie wbieganie",
     "players": {
-      "P": "Rozgrywający (P5)",
-      "L": "Libero (P6)",
-      "R4b": "Przyjmujący (P1)",
-      "C": "Środkowy (P4)",
-      "R4a": "Przyjmujący (P3)",
-      "Pt": "Atakujący (P2)",
+      "P": "Rozgrywający (strefa 5)",
+      "L": "Libero (strefa 1)",
+      "R4b": "Przyjmujący (strefa 6)",
+      "C": "Środkowy (strefa 4)",
+      "R4a": "Przyjmujący (strefa 3)",
+      "Pt": "Atakujący (strefa 2)",
       "OPP_SRV": "Zagrywający przeciwnika",
       "OPP_BL": "Lewy blokujący przeciwnika",
       "OPP_BR": "Prawy blokujący przeciwnika",
@@ -519,41 +519,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Formacja odbioru",
-        "description": "Rozgrywający w tylno-lewym P5, jak najdalej od siatki. C na P4 i przyjmujący na P3 zamienią się, gdy tylko zagrywka zostanie uderzona."
+        "title": "1. Ustawienie do przyjęcia",
+        "description": "Rozgrywający w strefie 5, z tyłu po lewej, za środkowym (strefa 4). Przyjęcie w 3: przyjmujący ze strefy 3 cofnięty z lewej, przyjmujący ze strefy 6 na środku, libero (strefa 1) z prawej. Atakujący czeka przy siatce w strefie 2. Środkowy i przyjmujący ze strefy 3 zamienią się od momentu zagrywki."
       },
       "s2": {
-        "title": "2. Zagrywka + odbiór + zamiana C↔przyjmujący",
-        "description": "Zagrywka celuje w strefę 1, gdzie odbiera przyjmujący. Jednocześnie środkowy przesuwa się do środka, a atakujący przyjmujący zajmuje strefę 4."
+        "title": "2. Zagrywka + przyjęcie + zamiana Ś↔P",
+        "description": "Zagrywka w strefę 6, gdzie przyjmuje przyjmujący z tyłu. Równocześnie środkowy przesuwa się na środek siatki, przyjmujący ze strefy 3 idzie do strefy 4, a rozgrywający zaczyna wejście, przebiegając za nim."
       },
       "s3": {
-        "title": "3. Długie wbieganie + wystawa w strefie 2",
-        "description": "Rozgrywający przebiega całe boisko z P5 — najdłuższe wbieganie. Krótko rozprowadza do atakującego w strefie 2. Blok przeciwnika przesuwa się w prawo, aby zamknąć."
+        "title": "3. Długie wejście + wystawa do strefy 2",
+        "description": "Rozgrywający kończy przejście ze strefy 5 — najdłuższe wejście — i odbiera piłkę między strefami 2 i 3. Atakujący zaczyna rozbieg w strefie 2. Blok przeciwnika przesuwa się w prawo, by zamknąć."
       },
       "s4": {
-        "title": "4. Smecz krzyżowy + blok podwójny",
-        "description": "Atakujący wyskakuje w strefie 2 i uderza długą krzyżową. Klasyczna kombinacja na tej rotacji. Blok podwójny na miejscu po prawej."
+        "title": "4. Atak po przekątnej + podwójny blok",
+        "description": "Krótka wystawa do strefy 2: atakujący wyskakuje i uderza długą krzyżową. Podwójny blok stoi po prawej stronie. Libero, przyjmujący z tyłu i rozgrywający asekurują atakującego."
       },
       "s5": {
         "title": "5. Obrona przeciwnika",
-        "description": "Obrońca przekątnej przeciwnika rzuca się w strefę 5, próbując złapać długą piłkę."
+        "description": "Obrońca przekątnej przeciwnika rzuca się na długą piłkę, próbując ją podbić. Nasz rozgrywający, z tyłu, już wraca do swojej strefy obrony."
       },
       "s6": {
-        "title": "6. RESET — powrót do formacji",
-        "description": "Cała drużyna wraca na pozycję odbioru. Środkowy wraca na P4, przyjmujący na P3, rozgrywający na P5."
+        "title": "6. RESET — powrót do ustawienia",
+        "description": "Cała drużyna wraca do ustawienia do przyjęcia: środkowy do strefy 4, przyjmujący do strefy 3, rozgrywający do strefy 5."
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = najdłuższe wbieganie. Wymaga doskonałego odbioru.",
-        "Środkowy i przyjmujący zamieniają się, gdy tylko zagrywka zostanie uderzona, aby umieścić C w strefie 3.",
-        "Atakujący w strefie 2 jest najbardziej dostępnym celem dla rozgrywającego.",
-        "Pipe możliwy jako opcja, jeśli wystawa jest płaska i szybka."
+        "Kolejność rotacji: rozgrywający w strefie 5, atakujący naprzeciw w strefie 2, przyjmujący w strefach 3 i 6, środkowy w 4, libero w 1.",
+        "P5 = najdłuższe wejście. Wymaga perfekcyjnego przyjęcia.",
+        "Środkowy i przyjmujący zamieniają się przy zagrywce, by środkowy wrócił do strefy 3.",
+        "Atakujący w strefie 2 to najłatwiej dostępny cel dla rozgrywającego."
       ],
       "commonMistakes": [
-        "Zbyt płaska wystawa podczas trwającego wbiegania → rozgrywający pod piłką.",
-        "Późna zamiana C↔przyjmujący → środkowy w strefie 4 = bezużyteczny przy bloku.",
-        "Krótki odbiór → rozgrywający przybywa zbyt daleko od siatki."
+        "Zbyt szybka wystawa w trakcie wejścia → rozgrywający pod piłką.",
+        "Spóźniona zamiana Ś↔P → środkowy w strefie 4 = bezużyteczny w bloku.",
+        "Rozgrywający przed środkowym (strefa 4) w momencie zagrywki → błąd ustawienia."
       ]
     }
   },
@@ -618,12 +618,12 @@
     "shortDescription": "System 6-2: rozgrywający z linii obrony wbiega, 3 atakujących z przodu w każdej chwili.",
     "contextLabel": "6-2 · Rozgrywający wbiegający · Średniozaawansowany",
     "players": {
-      "R4a": "Przyjmujący (P4)",
-      "C": "Środkowy (P3)",
-      "PA": "Rozgrywający-atakujący (P2)",
-      "P": "Rozgrywający (P1)",
-      "C2": "Środkowy (P6)",
-      "R4b": "Przyjmujący (P5)",
+      "R4a": "Przyjmujący (strefa 2)",
+      "C": "Środkowy (strefa 3)",
+      "PA": "Rozgrywający-atakujący (strefa 4)",
+      "P": "Rozgrywający (strefa 1)",
+      "C2": "Środkowy (strefa 6)",
+      "R4b": "Przyjmujący (strefa 5)",
       "OPP_SRV": "Zagrywający przeciwnika",
       "OPP_BL": "Lewy blokujący przeciwnika",
       "OPP_BR": "Prawy blokujący przeciwnika",
@@ -631,41 +631,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Konfiguracja 6-2",
-        "description": "2 wszechstronnych rozgrywających: ten z przodu atakuje (rozgrywający-atakujący), ten z tyłu rozprowadza (i wbiega). 3 atakujących z przodu w każdej chwili."
+        "title": "1. Ustawienie 6-2",
+        "description": "2 wszechstronnych rozgrywających po przekątnej: ten ze strefy 4 (z przodu) atakuje, ten ze strefy 1 (z tyłu) rozgrywa i wchodzi. Przyjmują: przyjmujący ze strefy 5, środkowy ze strefy 6 i przyjmujący ze strefy 2 cofnięty z prawej; rozgrywający z tyłu chowa się za nim."
       },
       "s2": {
-        "title": "2. Zagrywka + odbiór środkowego z tyłu",
-        "description": "Klasyczny centralny odbiór przez C2. Rozgrywający rozpoczyna wbieganie z P1 w stronę strefy 2-3."
+        "title": "2. Zagrywka + przyjęcie środkowego z tyłu",
+        "description": "Przyjęcie na środku przez środkowego ze strefy 6. Rozgrywający rozpoczyna wejście ze strefy 1; rozgrywający-atakujący przebiega za środkowym w prawo, a przyjmujący ze strefy 2 przesuwa się w lewo."
       },
       "s3": {
-        "title": "3. Wystawa w strefie 2 + doskok",
-        "description": "Rozprowadzanie do rozgrywającego-atakującego w strefie 2. Maksymalna różnorodność: 3 zagrożenia ofensywne z przodu. Blok podwójny przesunięty w prawo."
+        "title": "3. Zamiany + rozbieg w strefie 2",
+        "description": "Przyjęcie leci do rozgrywającego. Rozgrywający-atakujący zaczyna rozbieg w strefie 2, przyjmujący zajmuje strefę 4, a środkowy angażuje blok na środku: 3 zagrożenia z przodu. Blok przeciwnika przesuwa się w prawo."
       },
       "s4": {
-        "title": "4. Atak krzyżowy + blok podwójny",
-        "description": "Rozgrywający-atakujący uderza długą krzyżową. System 6-2 zawsze gwarantuje 3 zagrożenia ofensywne — blok przeciwnika nie może antycypować."
+        "title": "4. Atak po przekątnej + podwójny blok",
+        "description": "Krótka wystawa do strefy 2: rozgrywający-atakujący uderza długą krzyżową. System 6-2 zawsze daje 3 zagrożenia w ataku — blok przeciwnika nie może przewidzieć. Rozgrywający i środkowy z tyłu asekurują atakującego."
       },
       "s5": {
         "title": "5. Obrona przeciwnika",
-        "description": "Obrońca krzyżowej rzuca się na długą trajektorię po lewej stronie przeciwnika — desperacka próba obrony."
+        "description": "Obrońca przekątnej rzuca się na długą trajektorię po lewej stronie przeciwnika — rozpaczliwa próba ratunku. Nasz rozgrywający-atakujący ląduje i wraca bliżej środka."
       },
       "s6": {
-        "title": "6. RESET — powrót do formacji",
-        "description": "Cała drużyna wraca na swoje pozycje. Rozgrywający-atakujący zostaje z przodu, rozgrywający wraca na P1."
+        "title": "6. RESET — powrót do ustawienia",
+        "description": "Cała drużyna wraca na pozycje: rozgrywający-atakujący do strefy 4, przyjmujący do strefy 2, a rozgrywający do strefy 1."
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 wszechstronnych rozgrywających po przekątnej.",
-        "Zawsze 3 atakujących z przodu (rozgrywający z przodu atakuje, rozgrywający z tyłu rozprowadza).",
-        "Systematyczne wbieganie, jak w 5-1, ale z 2 naprzemiennymi rozprowadzającymi.",
-        "Doskonałe do rozwijania wszechstronności przed przejściem do 5-1."
+        "6-2: 2 wszechstronnych rozgrywających po przekątnej (tutaj strefy 1 i 4).",
+        "Zawsze 3 atakujących z przodu (rozgrywający z przodu atakuje, rozgrywający z tyłu rozgrywa).",
+        "Systematyczne wejście, jak w 5-1, ale z 2 naprzemiennymi rozgrywającymi.",
+        "Świetne do rozwijania wszechstronności przed przejściem na 5-1."
       ],
       "commonMistakes": [
-        "Różnice w stylu między 2 rozgrywającymi → niespójne rozprowadzanie.",
-        "Rozgrywający z przodu, który nie pojawia się do ataku → tylko 2 opcje.",
-        "Wbieganie zbyt późne → inny zawodnik musi wystawić."
+        "Różnica stylu między 2 rozgrywającymi → niespójne rozegranie.",
+        "Rozgrywający z przodu nie zgłasza się do ataku → tylko 2 opcje.",
+        "Zbyt późne wejście → inny zawodnik musi wystawiać."
       ]
     }
   },
@@ -1845,50 +1845,51 @@
   },
   "6v6-reception-rotation-p4": {
     "title": "Odbiór · rotacja 5-1 P4",
-    "shortDescription": "Przypadek szczególny P4: rozgrywający i środkowy przesuwają się w lewo, aby uwolnić przyjmującego w strefie 6.",
+    "shortDescription": "Szczególny przypadek P4: rozgrywający i środkowy przesuwają się w lewo, aby przyjmujący* mógł przyjmować z prawej.",
     "contextLabel": "5-1 · 3 przyjmujących · Rotacja P4 (rozgrywający z przodu)",
     "players": {
-      "P": "Rozgrywający (P4)",
-      "C": "Środkowy (P3)",
-      "R4b": "Przyjmujący* (P2)",
-      "L": "Libero (P5)",
-      "R4a": "Przyjmujący (P6)",
-      "Op": "Atakujący (P1)",
+      "P": "Rozgrywający (strefa 4)",
+      "C": "Środkowy (strefa 3)",
+      "R4b": "Przyjmujący* (strefa 2)",
+      "L": "Libero (strefa 6)",
+      "R4a": "Przyjmujący (strefa 5)",
+      "Op": "Atakujący (strefa 1)",
       "OPP_SRV": "Zagrywający przeciwnika"
     },
     "steps": {
       "s1": {
         "title": "1. Przesunięcie w lewo",
-        "description": "PRZED uderzeniem: rozgrywający (P4) i środkowy (P3) ustawiają się JAK NAJDALEJ W LEWO, na ile pozwalają zasady ustawienia. To przesunięcie uwalnia strefę 6 dla odbierającego przyjmującego."
+        "description": "PRZED zagrywką: rozgrywający (strefa 4) i środkowy (strefa 3) ustawiają się JAK NAJBARDZIEJ W LEWO, na ile pozwalają przepisy o ustawieniu. To przesunięcie pozwala przyjmującemu* (strefa 2), który musi stać na prawo od środkowego, cofnąć się do przyjęcia z prawej. Przyjęcie w 3: przyjmujący (strefa 5), libero (strefa 6), przyjmujący*. Atakujący (strefa 1) chowa się w głębi z prawej."
       },
       "s2": {
-        "title": "2. Zagrywka + odbicie przyjmującego na P6",
-        "description": "Zagrywka w strefę centralną 6. Przyjmujący na P6 woła i odbija w strefie uwolnionej przez przesunięcie rozgrywającego. Trzech przyjmujących: libero, przyjmujący i atakujący (na krawędzi)."
+        "title": "2. Zagrywka + przyjęcie przyjmującego ze strefy 5",
+        "description": "Zagrywka w strefę 5. Przyjmujący z tyłu woła piłkę i przyjmuje dołem do celu. Od momentu zagrywki rozgrywający opuszcza strefę 4, przebiegając za środkowym, a przyjmujący* zaczyna przejście."
       },
       "s3": {
-        "title": "3. Wbieganie + zamiana przyjmującego*",
-        "description": "Rozgrywający biegnie z P4 do strefy 2-3. Jednocześnie przyjmujący* na P2 krzyżuje się do P4, aby atakować. Środkowy ponownie ustawia się w strefie 3."
+        "title": "3. Wejście + zamiana przyjmującego*",
+        "description": "Rozgrywający dociera do 2-3 i odbiera piłkę. Jednocześnie przyjmujący* kończy przejście do strefy 4 i zaczyna rozbieg. Środkowy wraca do strefy 3, atakujący podchodzi, grożąc atakiem z drugiej linii."
       },
       "s4": {
-        "title": "4. Piłka dostępna dla przyjmującego* w strefie 4",
-        "description": "Wystawa przybywa do przyjmującego*, który zakończył swoją krzyżówkę. Z tylko 2 atakującymi z przodu (przyjmujący* + środkowy) główną opcją jest lewe skrzydło."
+        "title": "4. Atak przyjmującego* ze strefy 4",
+        "description": "Wysoka wystawa do przyjmującego*, który zakończył przejście. Przy tylko 2 atakujących z przodu (przyjmujący* + środkowy) główną opcją jest lewe skrzydło. Atakujący wyskakuje i uderza po przekątnej w głąb boiska przeciwnika."
       },
       "s5": {
         "title": "5. RESET — powrót do przesunięcia",
-        "description": "Wszyscy zawodnicy wracają do przesunięcia w lewo do kolejnej zagrywki w rotacji P4."
+        "description": "Wszyscy zawodnicy wracają do przesunięcia w lewo przed kolejną zagrywką w rotacji P4: rozgrywający wraca do strefy 4 wzdłuż siatki, przyjmujący* wraca do strefy 2 od tyłu."
       }
     },
     "summary": {
       "keyPoints": [
-        "Na P4 rozgrywający i środkowy MUSZĄ przesunąć się w lewo przy zagrywce.",
-        "To przesunięcie otwiera strefę 6 dla odbioru przyjmującego na P6.",
-        "Zamiana rozgrywający↔przyjmujący* obowiązkowa podczas wystawy.",
-        "Atakujący (na P1) nie odbiera i pozostaje gotowy do ataku z głębi."
+        "Kolejność rotacji: rozgrywający w strefie 4, atakujący naprzeciw w strefie 1, przyjmujący w strefach 2 i 5, środkowy w 3, libero w 6.",
+        "W P4 rozgrywający i środkowy MUSZĄ przesunąć się w lewo przy zagrywce.",
+        "To przesunięcie daje przyjmującemu* (strefa 2) miejsce do przyjęcia z prawej, obok libero.",
+        "Zamiana rozgrywający↔przyjmujący* obowiązkowa w trakcie przyjęcia.",
+        "Atakujący (w strefie 1) nie przyjmuje i jest gotowy do ataku z drugiej linii."
       ],
       "commonMistakes": [
-        "Przesunięcie zapomniane → konflikt odbioru w strefie 6.",
-        "Zamiana zbyt późna → przyjmujący* atakuje na P2 (zła strona).",
-        "Atakujący, który odbiera → traci opcję ataku z głębi."
+        "Zapomniane przesunięcie → przyjmujący* nie może cofnąć się do przyjęcia bez błędu ustawienia.",
+        "Spóźniona zamiana → przyjmujący* atakuje ze strefy 2 (zła strona).",
+        "Atakujący, który przyjmuje → traci opcję ataku z drugiej linii."
       ]
     }
   },

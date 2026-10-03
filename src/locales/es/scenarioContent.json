@@ -277,15 +277,15 @@
   },
   "6v6-attack-5-1-p1": {
     "title": "Ataque · Rotación P1 del 5-1",
-    "shortDescription": "Recepción a 3 → colocador penetra desde P1 → ataque en zona 4 por la punta.",
+    "shortDescription": "Recepción a 3 → el colocador penetra desde P1 → la punta delantera cambia y ataca en zona 4.",
     "contextLabel": "5-1 · Rotación P1 · Saque rival",
     "players": {
-      "L": "Líbero (P5)",
-      "R4a": "Punta (P4)",
-      "R4b": "Punta (P6)",
-      "C": "Central (P3)",
-      "Op": "Opuesto (P2)",
-      "P": "Colocador (P1)",
+      "L": "Líbero (zona 6)",
+      "R4a": "Punta (zona 2)",
+      "R4b": "Punta (zona 5)",
+      "C": "Central (zona 3)",
+      "Op": "Opuesto (zona 4)",
+      "P": "Colocador (zona 1)",
       "OPP_SRV": "Sacador rival",
       "OPP_BL": "Bloqueador izquierdo rival",
       "OPP_BR": "Bloqueador derecho rival",
@@ -296,54 +296,54 @@
     "steps": {
       "s1": {
         "title": "1. Formación de recepción",
-        "description": "Nuestro equipo en formación de recepción a 3: líbero (P5), punta en P6 y punta en P4 retrasada sobre la línea de 3 m. Central y opuesto fuera, en la red. El colocador espera en P1 para penetrar en cuanto se golpee el saque."
+        "description": "Recepción a 3: punta de la zona 5 a la izquierda, líbero (zona 6) en el centro, punta de la zona 2 retrasada a la derecha. El opuesto (zona 4) y el central (zona 3) se quedan en la red. El colocador, en zona 1, se esconde detrás de la punta de la zona 2, listo para penetrar."
       },
       "s2": {
         "title": "2. Saque + recepción",
-        "description": "Saque rival alto hacia la punta en P6 que juega antebrazos. En paralelo, el colocador inicia su penetración desde P1 hacia la zona 2-3."
+        "description": "Saque rival bombeado hacia la zona 5: la punta zaguera recibe de antebrazos. Desde el golpe de saque, el colocador penetra desde la zona 1, el opuesto pasa por detrás del central hacia la derecha y la punta de la zona 2 empieza a deslizarse hacia la izquierda."
       },
       "s3": {
-        "title": "3. Colocación alta + aproximación",
-        "description": "El balón sube hacia el colocador que ha llegado a la red. Entrega una colocación alta a la zona 4 donde la punta ya ha iniciado su aproximación. La cobertura se forma a su alrededor."
+        "title": "3. Cambios + carrera de impulso",
+        "description": "La recepción sube hacia el colocador ya en la red. La punta de la zona 2 termina su cruce e inicia su carrera de impulso en zona 4; el opuesto ocupa la zona 2 y el central fija en el centro."
       },
       "s4": {
-        "title": "4. Remate + bloqueo doble",
-        "description": "La punta despega y golpea en diagonal larga hacia la zona 6 rival. Los dos bloqueadores rivales saltan en paralelo para cerrar diagonal y paralela."
+        "title": "4. Remate + doble bloqueo",
+        "description": "Colocación alta a la zona 4: la punta despega y remata en diagonal larga hacia el fondo de la pista rival. Los dos bloqueadores cierran la paralela, el remate pasa por el hueco. El colocador, la punta zaguera y el líbero cubren al atacante."
       },
       "s5": {
         "title": "5. Defensa rival",
-        "description": "El líbero rival se lanza hacia la zona 6 para intentar unos antebrazos desesperados. El colocador rival se desplaza hacia la zona 2 para enlazar si la defensa toca el balón."
+        "description": "El líbero rival se lanza sobre la diagonal larga para intentar un antebrazo desesperado. El colocador rival sube hacia la zona 2 para relevar si la defensa toca el balón."
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "Todo el equipo retoma su posición de recepción para el siguiente saque. Esta colocación determina la calidad del próximo ataque."
+        "description": "Todo el equipo retoma su posición de recepción para el siguiente saque: la punta vuelve a la zona 2, el opuesto a la zona 4. Esta colocación determina la calidad del próximo ataque."
       }
     },
     "summary": {
       "keyPoints": [
-        "Recepción a 3: líbero + 2 puntas ocupan todo el ancho de la cancha.",
-        "El colocador penetra desde P1 hacia la zona 2-3 en cuanto se golpea el saque.",
-        "La punta atacante se desplaza sobre la línea de 3 m durante la recepción para preparar su aproximación.",
-        "Cobertura de 5 jugadores (3 cerca + 2 lejos) en posición baja alrededor del atacante."
+        "Orden de rotación: colocador en zona 1, opuesto enfrente en zona 4, puntas en zonas 2 y 5, central en 3, líbero en 6.",
+        "Recepción a 3: líbero + 2 puntas cubren todo el ancho de la pista.",
+        "El colocador penetra desde la zona 1 hacia la zona 2-3 en cuanto se golpea el saque.",
+        "Tras la recepción, la punta delantera cruza a la zona 4 y el opuesto ocupa la zona 2."
       ],
       "commonMistakes": [
         "Colocador que penetra demasiado tarde → colocación forzada en suspensión por otro jugador.",
-        "Punta atacante que inicia su aproximación demasiado pronto → llega bajo el balón en lugar de comprometerse.",
+        "Colocador delante de la punta de la zona 2 en el saque → falta de posición.",
         "Cobertura olvidada → bloqueo rival exitoso = punto perdido directamente."
       ]
     }
   },
   "6v6-attack-5-1-p2": {
     "title": "Ataque · Rotación P2 del 5-1",
-    "shortDescription": "Colocador ya en la red en P2: 2 atacantes delante + el opuesto ataca excepcionalmente en 4.",
+    "shortDescription": "Colocador ya en la red en P2: 2 atacantes delante, la punta y el central cambian, ataque en zona 4.",
     "contextLabel": "5-1 · Rotación P2 · Colocador delantero",
     "players": {
-      "R4a": "Punta (P5)",
-      "L": "Líbero (P6)",
-      "R4b": "Punta (P1)",
-      "C": "Central (P3)",
-      "Pt": "Opuesto (P4)",
-      "P": "Colocador (P2)",
+      "R4a": "Punta (zona 3)",
+      "L": "Líbero (zona 1)",
+      "R4b": "Punta (zona 6)",
+      "C": "Central (zona 4)",
+      "Pt": "Opuesto (zona 5)",
+      "P": "Colocador (zona 2)",
       "OPP_SRV": "Sacador rival",
       "OPP_BL": "Bloqueador izquierdo rival",
       "OPP_BR": "Bloqueador derecho rival",
@@ -351,41 +351,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Saque rival",
-        "description": "Saque hacia la zona 5-6. El líbero canta y se prepara para los antebrazos. El colocador ya espera en la red en P2."
+        "title": "1. Formación de recepción",
+        "description": "Recepción a 3: punta de la zona 3 retrasada a la izquierda, punta de la zona 6 en el centro, líbero (zona 1) a la derecha. El central (zona 4) se queda en la red a la izquierda, el colocador ya espera en la red en zona 2. El opuesto, zaguero en zona 5, se esconde al fondo a la izquierda."
       },
       "s2": {
         "title": "2. Saque + recepción del líbero",
-        "description": "Saque alto a la zona 6. El líbero se desplaza y juega antebrazos con precisión hacia el objetivo del colocador (zona 2)."
+        "description": "Saque bombeado hacia la zona 1. El líbero hace un antebrazo preciso hacia el objetivo del colocador. Desde el golpe de saque, el central se desliza al centro de la red y la punta de la zona 3 se desplaza hacia la zona 4."
       },
       "s3": {
-        "title": "3. Colocación al opuesto + aproximación",
-        "description": "El colocador, ya en P2, distribuye excepcionalmente a la zona 4 donde el opuesto inicia su aproximación. El bloqueo rival se reagrupa en el centro."
+        "title": "3. Colocación a la zona 4 + carrera de impulso",
+        "description": "El colocador, ya en zona 2, recibe el balón sin penetrar. La punta inicia su carrera de impulso en zona 4 mientras el central fija en el centro. El bloqueo rival se desliza hacia el ala."
       },
       "s4": {
-        "title": "4. Remate + bloqueo doble",
-        "description": "El opuesto despega por la izquierda y golpea en diagonal larga. Configuración rara pero inevitable en P2 — el colocador se queda en su sitio."
+        "title": "4. Remate + doble bloqueo",
+        "description": "Colocación larga a la zona 4: la punta despega y remata en diagonal larga, por el hueco del bloqueo a 2. El opuesto y la punta zaguera cubren al atacante, el colocador se queda en la red."
       },
       "s5": {
         "title": "5. Defensa rival",
-        "description": "El defensor diagonal rival se lanza a la diagonal larga para intentar unos antebrazos defensivos desesperados."
+        "description": "El defensor de diagonal rival se lanza sobre la diagonal larga para intentar un antebrazo de rescate."
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "Todos retoman su posición de recepción. La rotación P2 sigue siendo la más limitada ofensivamente: solo 2 atacantes delante."
+        "description": "Todos retoman su posición de recepción: el central vuelve a la zona 4, la punta a la zona 3. La rotación P2 sigue siendo la más pobre ofensivamente: solo 2 atacantes delante."
       }
     },
     "summary": {
       "keyPoints": [
-        "Rotación P2 = la más limitada ofensivamente (solo 2 atacantes delante).",
-        "Colocador ya colocado: cero penetración, distribución fácil.",
-        "El opuesto ataca excepcionalmente por la izquierda (zona 4) para liberar al colocador.",
-        "Priorizar las bandas y los ataques de zaga de la punta como opciones."
+        "Orden de rotación: colocador en zona 2, opuesto enfrente en zona 5, puntas en zonas 3 y 6, central en 4, líbero en 1.",
+        "Rotación P2 = la más pobre ofensivamente: solo 2 atacantes delante (punta + central).",
+        "Colocador ya en su sitio: cero penetración, distribución fácil.",
+        "La punta y el central cambian en el saque: la punta ataca en 4, el central fija en 3."
       ],
       "commonMistakes": [
-        "Colocador queriendo colocar en suspensión en 2 cuando ya está ahí → 2º toque difícil.",
-        "Opuesto que duda entre 2 y 4 → bloqueo rival ya colocado.",
-        "Centrales que no se comprometen → bloqueo doble fácil para el rival."
+        "Colocador que retrocede a buscar una recepción corta → 2.º toque difícil.",
+        "Cambio punta ↔ central tardío → el central se queda en zona 4, inútil en el bloqueo.",
+        "Central que no fija → bloqueo a 2 fácil para el rival en el ala."
       ]
     }
   },
@@ -450,12 +450,12 @@
     "shortDescription": "Colocador delantero en P4 switch a la derecha; la punta* ataca en 4, el central en 3, el opuesto desde zaga en 1.",
     "contextLabel": "5-1 · Rotación P4 · Colocador delantero",
     "players": {
-      "L": "Líbero (P5)",
-      "R4b": "Punta (P6)",
-      "Pt": "Opuesto (P1)",
-      "P": "Colocador (P4)",
-      "C": "Central (P3)",
-      "R4a": "Punta (P2)",
+      "L": "Líbero (zona 6)",
+      "R4b": "Punta (zona 5)",
+      "Pt": "Opuesto (zona 1)",
+      "P": "Colocador (zona 4)",
+      "C": "Central (zona 3)",
+      "R4a": "Punta* (zona 2)",
       "OPP_SRV": "Sacador rival",
       "OPP_BL": "Bloqueador izquierdo rival",
       "OPP_BR": "Bloqueador derecho rival",
@@ -463,41 +463,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Configuración P4 + descalado",
-        "description": "Colocador en zona 4, punta* en zona 2 — colocación cruzada. Colocador y central descalados a la izquierda para liberar la zona de recepción al líbero."
+        "title": "1. Configuración P4 + desplazamiento",
+        "description": "Colocador en zona 4, punta* en zona 2: colocación cruzada. Colocador y central se desplazan a la izquierda para que la punta* pueda retrasarse a recibir a la derecha. Recepción a 3: punta (zona 5), líbero (zona 6), punta*. El opuesto, en zona 1, se esconde al fondo a la derecha."
       },
       "s2": {
         "title": "2. Saque + recepción del líbero",
-        "description": "El saque apunta a la zona 6. El líbero se desplaza y juega antebrazos al objetivo clásico (entre P2 y P3)."
+        "description": "El saque apunta a la zona 6. El líbero avanza y hace un antebrazo hacia el objetivo clásico (entre zonas 2 y 3). Desde el golpe de saque, el colocador sale de la zona 4 pasando por detrás del central y la punta* inicia su cruce."
       },
       "s3": {
         "title": "3. Switch colocador↔punta* + colocación alta",
-        "description": "Cruce esencial: el colocador sale de P4 hacia 2-3, la punta* sale de P2 hacia 4 para atacar. Colocación alta al ala izquierda."
+        "description": "Cruce esencial: el colocador llega a 2-3 mientras la punta* termina su cruce hacia la zona 4 e inicia su carrera de impulso. El central se recoloca en zona 3, el opuesto avanza para amenazar con ataque de zaguero."
       },
       "s4": {
-        "title": "4. Ataque por la banda + bloqueo doble",
-        "description": "Remate en diagonal larga. Con un colocador delantero (bajo en el bloqueo), el ataque debe finalizar rápido. Bloqueo doble desplazado hacia la banda."
+        "title": "4. Ataque por el ala + doble bloqueo",
+        "description": "Colocación alta a la zona 4: la punta* remata en diagonal larga. Con un colocador delantero (por tanto bajo en el bloqueo), el ataque debe concluir rápido. Bloqueo a 2 desplazado al ala."
       },
       "s5": {
         "title": "5. Defensa rival",
-        "description": "El defensor diagonal rival se lanza a la trayectoria larga para intentar unos antebrazos desesperados."
+        "description": "El defensor de diagonal rival se lanza sobre la trayectoria larga para intentar un antebrazo desesperado. Nuestro atacante cae y ya retrocede para defender."
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "Todos retoman su posición inicial. El descalado colocador/central izquierdo se mantiene para el siguiente saque."
+        "description": "Todos retoman su posición inicial: la punta* vuelve a la zona 2, el colocador a la zona 4. El desplazamiento colocador/central a la izquierda se mantiene para el siguiente saque."
       }
     },
     "summary": {
       "keyPoints": [
+        "Orden de rotación: colocador en zona 4, opuesto enfrente en zona 1, puntas en zonas 2 y 5, central en 3, líbero en 6.",
         "Rotación P4 = colocador delantero. Switch colocador↔punta* obligatorio.",
-        "2 atacantes delante: punta* en 4, central en 3. Pipe u opuesto desde zaga como opciones.",
-        "El colocador y el central se descalan a la izquierda al sacar para liberar la zona 6.",
-        "El opuesto (en P1) no recibe y se queda listo para un ataque de zaga."
+        "2 atacantes delante: punta* en 4, central en 3. Pipe u opuesto zaguero como opción.",
+        "El opuesto (en zona 1) no recibe y queda listo para el ataque de zaguero."
       ],
       "commonMistakes": [
-        "Switch olvidado → la punta* se queda a la derecha, atacante en mala posición.",
-        "Colocador y central demasiado a la derecha al sacar → conflicto de recepción en zona 6.",
-        "Bloqueo rival no comprometido por el central → bloqueo doble fácil al ala izquierda."
+        "Switch olvidado → la punta* se queda a la derecha, atacante mal colocado.",
+        "Colocador y central demasiado a la derecha en el saque → la punta* no puede retrasarse a recibir.",
+        "Bloqueo rival no fijado por el central → bloqueo a 2 fácil en el ala izquierda."
       ]
     }
   },
@@ -506,12 +506,12 @@
     "shortDescription": "Penetración larga desde P5. Switch C/punta. Colocación al opuesto en zona 2.",
     "contextLabel": "5-1 · Rotación P5 · Penetración larga",
     "players": {
-      "P": "Colocador (P5)",
-      "L": "Líbero (P6)",
-      "R4b": "Punta (P1)",
-      "C": "Central (P4)",
-      "R4a": "Punta (P3)",
-      "Pt": "Opuesto (P2)",
+      "P": "Colocador (zona 5)",
+      "L": "Líbero (zona 1)",
+      "R4b": "Punta (zona 6)",
+      "C": "Central (zona 4)",
+      "R4a": "Punta (zona 3)",
+      "Pt": "Opuesto (zona 2)",
       "OPP_SRV": "Sacador rival",
       "OPP_BL": "Bloqueador izquierdo rival",
       "OPP_BR": "Bloqueador derecho rival",
@@ -520,40 +520,40 @@
     "steps": {
       "s1": {
         "title": "1. Formación de recepción",
-        "description": "Colocador en zaga-izquierda P5, lo más lejos posible de la red. C en P4 y punta en P3 switcharán en cuanto se golpee el saque."
+        "description": "Colocador en zona 5, zaguero izquierdo, detrás del central (zona 4). Recepción a 3: punta de la zona 3 retrasada a la izquierda, punta de la zona 6 en el centro, líbero (zona 1) a la derecha. El opuesto espera en la red en zona 2. El central y la punta de la zona 3 cambiarán desde el saque."
       },
       "s2": {
-        "title": "2. Saque + recepción + switch C↔punta",
-        "description": "El saque apunta a la zona 1 donde la punta recibe. Simultáneamente, el central se desliza al centro y la punta atacante ocupa la zona 4."
+        "title": "2. Saque + recepción + cambio C↔punta",
+        "description": "El saque apunta a la zona 6, donde la punta zaguera recibe. En paralelo, el central se desliza al centro de la red, la punta de la zona 3 va a la zona 4 y el colocador inicia su penetración pasando por detrás de ella."
       },
       "s3": {
-        "title": "3. Penetración larga + colocación a zona 2",
-        "description": "El colocador atraviesa toda la cancha desde P5 — la penetración más larga. Distribuye corto al opuesto en zona 2. El bloqueo rival se desplaza a la derecha para cerrar."
+        "title": "3. Penetración larga + colocación en zona 2",
+        "description": "El colocador termina su cruce desde la zona 5 — la penetración más larga — y recibe el balón entre las zonas 2 y 3. El opuesto inicia su carrera de impulso en zona 2. El bloqueo rival se desliza a la derecha para cerrar."
       },
       "s4": {
-        "title": "4. Remate diagonal + bloqueo doble",
-        "description": "El opuesto despega en zona 2 y golpea en diagonal larga. Combinación clásica en esta rotación. El bloqueo doble está colocado a la derecha."
+        "title": "4. Remate en diagonal + doble bloqueo",
+        "description": "Colocación corta a la zona 2: el opuesto despega y remata en diagonal larga. El bloqueo a 2 está colocado en el lado derecho. El líbero, la punta zaguera y el colocador cubren al atacante."
       },
       "s5": {
         "title": "5. Defensa rival",
-        "description": "El defensor diagonal rival se lanza a la zona 5 para intentar atrapar el balón largo."
+        "description": "El defensor de diagonal rival se lanza sobre el balón largo para intentar recuperarlo. Nuestro colocador, zaguero, ya vuelve hacia su zona de defensa."
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "Todo el equipo retoma su posición de recepción. El central vuelve a P4, la punta a P3, el colocador a P5."
+        "description": "Todo el equipo retoma su posición de recepción: el central vuelve a la zona 4, la punta a la zona 3, el colocador a la zona 5."
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = la penetración más larga. Requiere una recepción perfecta.",
-        "El central y la punta switchan en cuanto se golpea el saque para colocar a C en zona 3.",
-        "El opuesto en zona 2 es el objetivo más accesible para el colocador.",
-        "Pipe posible como opción si la colocación es plana y rápida."
+        "Orden de rotación: colocador en zona 5, opuesto enfrente en zona 2, puntas en zonas 3 y 6, central en 4, líbero en 1.",
+        "P5 = la penetración más larga. Exige una recepción perfecta.",
+        "El central y la punta cambian en el saque para devolver al central a la zona 3.",
+        "El opuesto en zona 2 es el objetivo más accesible para el colocador."
       ],
       "commonMistakes": [
-        "Colocación demasiado plana durante una penetración en curso → colocador bajo el balón.",
-        "Switch C↔punta tardío → central en zona 4 = inútil en el bloqueo.",
-        "Recepción corta → el colocador llega demasiado lejos de la red."
+        "Colocación demasiado tensa con la penetración en curso → colocador debajo del balón.",
+        "Cambio C↔punta tardío → central en zona 4 = inútil en el bloqueo.",
+        "Colocador delante del central (zona 4) en el saque → falta de posición."
       ]
     }
   },
@@ -618,12 +618,12 @@
     "shortDescription": "Sistema 6-2: colocador zaguero penetra, 3 atacantes delante en todo momento.",
     "contextLabel": "6-2 · Colocador penetrante · Intermedio",
     "players": {
-      "R4a": "Punta (P4)",
-      "C": "Central (P3)",
-      "PA": "Colocador-atacante (P2)",
-      "P": "Colocador (P1)",
-      "C2": "Central (P6)",
-      "R4b": "Punta (P5)",
+      "R4a": "Punta (zona 2)",
+      "C": "Central (zona 3)",
+      "PA": "Colocador-atacante (zona 4)",
+      "P": "Colocador (zona 1)",
+      "C2": "Central (zona 6)",
+      "R4b": "Punta (zona 5)",
       "OPP_SRV": "Sacador rival",
       "OPP_BL": "Bloqueador izquierdo rival",
       "OPP_BR": "Bloqueador derecho rival",
@@ -632,40 +632,40 @@
     "steps": {
       "s1": {
         "title": "1. Configuración 6-2",
-        "description": "2 colocadores polivalentes: el delantero ataca (colocador-atacante), el zaguero distribuye (y penetra). 3 atacantes delante en todo momento."
+        "description": "2 colocadores polivalentes en diagonal: el de la zona 4 (delantero) ataca, el de la zona 1 (zaguero) coloca y penetra. Reciben la punta de la zona 5, el central de la zona 6 y la punta de la zona 2 retrasada a la derecha; el colocador zaguero se esconde detrás de ella."
       },
       "s2": {
         "title": "2. Saque + recepción del central zaguero",
-        "description": "Recepción central clásica por C2. El colocador lanza su penetración desde P1 hacia la zona 2-3."
+        "description": "Recepción en el centro por el central de la zona 6. El colocador inicia su penetración desde la zona 1; el colocador-atacante pasa por detrás del central hacia la derecha y la punta de la zona 2 se desliza hacia la izquierda."
       },
       "s3": {
-        "title": "3. Colocación en zona 2 + aproximación",
-        "description": "Distribución al colocador-atacante en zona 2. Máxima variedad: 3 amenazas ofensivas delante. Bloqueo doble desplazado a la derecha."
+        "title": "3. Cambios + carrera de impulso en zona 2",
+        "description": "La recepción sube hacia el colocador. El colocador-atacante inicia su carrera de impulso en zona 2, la punta ocupa la zona 4 y el central fija en el centro: 3 amenazas ofensivas delante. El bloqueo rival se desliza a la derecha."
       },
       "s4": {
-        "title": "4. Ataque en diagonal + bloqueo doble",
-        "description": "El colocador-atacante golpea en diagonal larga. El 6-2 garantiza siempre 3 amenazas ofensivas — el bloqueo rival no puede anticipar."
+        "title": "4. Ataque en diagonal + doble bloqueo",
+        "description": "Colocación corta a la zona 2: el colocador-atacante remata en diagonal larga. El 6-2 garantiza siempre 3 amenazas ofensivas — el bloqueo rival no puede anticipar. El colocador y el central zaguero cubren al atacante."
       },
       "s5": {
         "title": "5. Defensa rival",
-        "description": "El defensor diagonal se lanza a la trayectoria larga en el lado izquierdo del rival — intento desesperado de salvamento."
+        "description": "El defensor de diagonal se lanza sobre la trayectoria larga en el lado izquierdo rival — intento de rescate desesperado. Nuestro colocador-atacante cae y se recentra."
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "Todo el equipo retoma su posición. El colocador-atacante se queda delante, el colocador vuelve a P1."
+        "description": "Todo el equipo retoma su posición: el colocador-atacante vuelve a la zona 4, la punta a la zona 2 y el colocador regresa a la zona 1."
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 colocadores polivalentes en oposición diagonal.",
-        "Siempre 3 atacantes delante (el colocador delantero ataca, el zaguero distribuye).",
-        "Penetración sistemática, como en el 5-1, pero con 2 distribuidores alternados.",
+        "6-2: 2 colocadores polivalentes en oposición diagonal (aquí zonas 1 y 4).",
+        "Siempre 3 atacantes delante (el colocador delantero ataca, el colocador zaguero distribuye).",
+        "Penetración sistemática, como en el 5-1, pero con 2 distribuidores alternos.",
         "Excelente para desarrollar la polivalencia antes de pasar al 5-1."
       ],
       "commonMistakes": [
-        "Diferencia de estilo entre los 2 colocadores → distribución inconsistente.",
-        "Colocador delantero que no se ofrece para el ataque → solo 2 opciones.",
-        "Penetración demasiado tarde → otro jugador debe hacer la colocación."
+        "Diferencia de estilo entre los 2 colocadores → distribución incoherente.",
+        "Colocador delantero que no se presenta al ataque → solo 2 opciones.",
+        "Penetración demasiado tardía → otro jugador tiene que colocar."
       ]
     }
   },
@@ -1845,50 +1845,51 @@
   },
   "6v6-reception-rotation-p4": {
     "title": "Recepción · Rotación P4 del 5-1",
-    "shortDescription": "Caso especial P4: el colocador y el central se descalan a la izquierda para liberar a la punta en zona 6.",
+    "shortDescription": "Caso especial P4: el colocador y el central se desplazan a la izquierda para que la punta* pueda recibir a la derecha.",
     "contextLabel": "5-1 · A 3 · Rotación P4 (colocador delantero)",
     "players": {
-      "P": "Colocador (P4)",
-      "C": "Central (P3)",
-      "R4b": "Punta* (P2)",
-      "L": "Líbero (P5)",
-      "R4a": "Punta (P6)",
-      "Op": "Opuesto (P1)",
+      "P": "Colocador (zona 4)",
+      "C": "Central (zona 3)",
+      "R4b": "Punta* (zona 2)",
+      "L": "Líbero (zona 6)",
+      "R4a": "Punta (zona 5)",
+      "Op": "Opuesto (zona 1)",
       "OPP_SRV": "Sacador rival"
     },
     "steps": {
       "s1": {
-        "title": "1. Descalado a la izquierda",
-        "description": "ANTES del golpe: el colocador (P4) y el central (P3) se colocan LO MÁS a la izquierda que las reglas de alineación permiten. Este descalado libera la zona 6 para la punta receptora."
+        "title": "1. Desplazamiento a la izquierda",
+        "description": "ANTES del saque: el colocador (zona 4) y el central (zona 3) se colocan LO MÁS A LA IZQUIERDA posible según las reglas de alineación. Este desplazamiento permite a la punta* (zona 2), que debe quedar a la derecha del central, retrasarse a recibir a la derecha. Recepción a 3: punta (zona 5), líbero (zona 6), punta*. El opuesto (zona 1) se esconde al fondo a la derecha."
       },
       "s2": {
-        "title": "2. Saque + antebrazos de la punta en P6",
-        "description": "Saque a la zona central 6. La punta en P6 canta y juega antebrazos en la zona liberada por el descalado del colocador. Tres receptores: líbero, punta y opuesto (en el borde)."
+        "title": "2. Saque + antebrazo de la punta en zona 5",
+        "description": "Saque hacia la zona 5. La punta zaguera canta el balón y recibe de antebrazos hacia el objetivo. Desde el golpe de saque, el colocador sale de la zona 4 pasando por detrás del central, y la punta* inicia su cruce."
       },
       "s3": {
-        "title": "3. Penetración + switch de la punta*",
-        "description": "El colocador se precipita desde P4 a la zona 2-3. Simultáneamente, la punta* en P2 cruza a P4 para atacar. El central se recoloca en zona 3."
+        "title": "3. Penetración + cambio de la punta*",
+        "description": "El colocador llega a 2-3 y recibe el balón. Al mismo tiempo, la punta* termina su cruce hacia la zona 4 e inicia su carrera de impulso. El central se recoloca en zona 3, el opuesto avanza para amenazar con ataque de zaguero."
       },
       "s4": {
-        "title": "4. Balón disponible para la punta* en zona 4",
-        "description": "La colocación llega a la punta* que ha completado su cruce. Con solo 2 atacantes delante (punta* + central), la opción principal es el ala izquierda."
+        "title": "4. Ataque de la punta* en zona 4",
+        "description": "Colocación alta hacia la punta* que ha completado su cruce. Con solo 2 atacantes delante (punta* + central), la opción principal es el ala izquierda. El atacante salta y remata en diagonal hacia el fondo de la pista rival."
       },
       "s5": {
-        "title": "5. RESET — vuelta al descalado",
-        "description": "Todos los jugadores retoman el descalado a la izquierda para el siguiente saque en rotación P4."
+        "title": "5. RESET — vuelta al desplazamiento",
+        "description": "Todos los jugadores retoman el desplazamiento a la izquierda para el próximo saque en rotación P4: el colocador vuelve a la zona 4 a lo largo de la red, la punta* regresa a la zona 2 por detrás."
       }
     },
     "summary": {
       "keyPoints": [
-        "En P4, el colocador y el central DEBEN descalarse a la izquierda al sacar.",
-        "Este descalado abre la zona 6 a la recepción de la punta en P6.",
-        "Switch colocador↔punta* obligatorio durante la colocación.",
-        "El opuesto (en P1) no recibe y se queda listo para un ataque de zaga."
+        "Orden de rotación: colocador en zona 4, opuesto enfrente en zona 1, puntas en zonas 2 y 5, central en 3, líbero en 6.",
+        "En P4, el colocador y el central DEBEN desplazarse a la izquierda en el saque.",
+        "Este desplazamiento deja a la punta* (zona 2) sitio para recibir a la derecha, junto al líbero.",
+        "Switch colocador↔punta* obligatorio durante la recepción.",
+        "El opuesto (en zona 1) no recibe y queda listo para el ataque de zaguero."
       ],
       "commonMistakes": [
-        "Descalado olvidado → conflicto de recepción en zona 6.",
-        "Switch demasiado tarde → la punta* ataca en P2 (lado equivocado).",
-        "Opuesto que recibe → pierde la opción de ataque de zaga."
+        "Desplazamiento olvidado → la punta* no puede retrasarse a recibir sin falta de posición.",
+        "Switch tardío → la punta* ataca en zona 2 (lado equivocado).",
+        "Opuesto que recibe → pierde la opción de ataque de zaguero."
       ]
     }
   },
