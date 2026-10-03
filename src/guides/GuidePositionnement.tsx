@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Court, type CourtLayout } from '../components/court';
 import type { RoleColorKey } from '../constants/positions';
-import { CONFIGURATIONS, type TeamSize } from '../pages/Positions';
+import { CONFIGURATIONS, type TeamSize } from '../positions/configurations';
 import { S } from './styles';
 import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { useCurrentLang } from '../i18n/paths';
