@@ -41,4 +41,4 @@ Il n'y a pas de tests automatiques : `pnpm lint` et `pnpm build` font office de 
 
 ## Contribuer
 
-Tout travail part d'un ticket du dépôt, suivi dans le [projet Volley Wiki](https://github.com/users/Xavier-Cliquennois/projects/6). Les conventions (tickets, labels, vagues d'agents, commits, palette des positions, système de coordonnées 3D) sont dans [`CLAUDE.md`](./CLAUDE.md).
+Tout travail part d'un ticket du dépôt, suivi dans le [projet Volley Wiki](https://github.com/users/Xavier-Cliquennois/projects/6). Chaque ticket part de la branche `dev` et y revient par une PR ; `main` ne reçoit que des promotions de `dev`, ce qui limite les déploiements. Les conventions (tickets, labels, vagues d'agents, commits, palette des positions, système de coordonnées 3D) sont dans [`CLAUDE.md`](./CLAUDE.md).

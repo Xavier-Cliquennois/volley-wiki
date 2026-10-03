@@ -158,6 +158,43 @@ Quand un ticket se ferme, ceux qu'il débloquait et qui n'attendent plus rien
 passent de **Bloqué** à **Prêt**. Un nouveau ticket est rattaché à son epic en
 **sous-issue** et ajouté à sa liste.
 
+## Deux branches : `dev` pour développer, `main` pour livrer
+
+Le site est en production sur `volley-wiki.fr`. Pour ne pas multiplier les builds
+et les déploiements (et ce qu'ils coûtent), **on livre par lots** :
+
+```
+branche de ticket ──PR──▶ dev ──PR de promotion──▶ main ──▶ production
+```
+
+- **`dev`** est la branche d'intégration. **Chaque ticket part de `dev`** et y
+  revient par une PR. Rien ne se déploie.
+- **`main`** est la branche de production. Elle ne reçoit **que** des promotions de
+  `dev`, jamais une branche de ticket, jamais un commit de développement. Elle doit
+  rester déployable à tout instant.
+- **Promotion `dev` → `main`** : décidée par Xavier, quand le lot est vérifié
+  (`pnpm lint` et `pnpm build` verts sur `dev`, et le lot regardé dans le
+  navigateur). **Aucun agent ne promeut.** La session qui orchestre propose la
+  promotion quand une vague est terminée.
+- **Correctif urgent en production** : seul cas qui contourne `dev`. Branche
+  `hotfix/<N>-<mots-cles>` coupée dans `origin/main`, PR vers `main`, puis report
+  immédiat dans `dev`.
+- **Un hook garde `main`** (`.claude/hooks/guard-main.py`, branché dans
+  `.claude/settings.json`) : refuse un `git push` vers `main`, un `gh pr create
+  --base main` ou un `gh pr merge` vers `main` dont la branche source n'est ni
+  `dev` ni `hotfix/*`. S'il te bloque, ta PR vise la mauvaise base : vise `dev`, ne
+  cherche pas à le contourner.
+
+```bash
+# Promotion, par Xavier
+gh pr create --base main --head dev --title "release: <lot>"
+gh pr merge <n> --merge   # jamais --squash ni --delete-branch : dev est permanente
+git fetch origin && git push origin origin/main:dev   # remet dev à niveau, sans checkout
+```
+
+Fusion par merge commit pour la promotion, pour que `dev` et `main` ne divergent
+pas. Aucun commit de développement directement sur `dev` ni sur `main`.
+
 ## On travaille par vagues, jusqu'à 4 agents en même temps
 
 La session principale **orchestre** : elle lance les sous-agents, elle ne code pas
@@ -193,20 +230,24 @@ attendre qu'on le lui demande :
 
 1. **Les vérifications passent** : `pnpm lint` et `pnpm build`. Sinon il **ne
    merge pas** : il laisse la branche, dit pourquoi dans le ticket, et s'arrête.
-2. **Le rebase** sur `origin/main`, puis les vérifications relancées. Un conflit sur
-   `pnpm-lock.yaml` ne se résout pas à la main : reprendre la version de `main` et
+2. **Le rebase** sur `origin/dev`, puis les vérifications relancées. Un conflit sur
+   `pnpm-lock.yaml` ne se résout pas à la main : reprendre la version de `dev` et
    relancer `pnpm install`. Si le conflit touche le fond du ticket d'un autre agent,
    s'arrêter et le signaler dans le ticket.
-3. **La PR** vers `main` : ce que le changement rend vrai, ce qui a été vérifié et
+3. **La PR** vers `dev` : ce que le changement rend vrai, ce qui a été vérifié et
    ce qui ne l'est pas, avec `Refs #N` (pas `Closes`, qui fermerait le ticket même
    avec des cases non cochées).
-4. **Le merge tout de suite** : `gh pr merge <n> --rebase`.
+4. **Le merge tout de suite** dans `dev` : `gh pr merge <n> --rebase`.
 5. **Le ticket** : cocher les cases réellement faites, commenter le reste, passer la
    carte à **Terminé** (ou **À tester**, liste en commentaire), fermer le ticket si
    tout est coché, cocher sa ligne dans l'epic.
 6. **Le ménage**, en dernier : worktree (`git -C <arbre principal> worktree remove`,
    puisque le worktree est le répertoire courant), branche locale (`git branch -D`),
    branche distante (`git push origin --delete`), puis `git worktree prune`.
+
+Le worktree part de `dev` : `git worktree add <chemin> -b <branche> origin/dev
+--no-track` (sans `--no-track`, un `git push` nu viserait `dev`). Premier envoi :
+`git push -u origin <branche>`.
 
 Branche : `<N>-<portee>-<mots-cles>`, par exemple `12-scenarios-reception-5v5`.
 
