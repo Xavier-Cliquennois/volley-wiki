@@ -33,9 +33,14 @@ export type ExpandContext = {
   // Player's starting position (= previous step's snapshot.positions[playerId]).
   // Used as the launch pad for movement-flavoured bricks.
   startPos: [number, number, number];
-  // Ball arrival time (absolute). Set when the ball_move emitted for this
-  // step lands within ~1.2 m of the player — see compileScenario.ts.
+  // Contact time (absolute) when auto-snap found one: the ball's arrival on
+  // the player, or the start of the window when the ball leaves the player
+  // (a set, a dig) — see compileScenario.ts.
   ballArrivalTime?: number;
+  // Player's position in the step's snapshot. A player who plays the ball at
+  // the start of the window then moves on to it (a setter who covers, a
+  // server who steps into the court).
+  endPos?: [number, number, number];
 };
 
 // Default jump heights per brick — tuned to look right against the 2.43 m net.
@@ -291,6 +296,19 @@ function groundContact(
     pose,
     duration: 0.2,
   });
+  const { endPos } = ctx;
+  const windowEnd = windowStart + windowDuration;
+  const followUpAt = contactAt + 0.2;
+  if (endPos && windowEnd - followUpAt >= MIN_DUR
+    && Math.hypot(endPos[0] - target[0], endPos[2] - target[2]) > 0.05) {
+    actions.push({
+      type: 'player_move',
+      time: followUpAt,
+      id: playerId,
+      to: [endPos[0], 0, endPos[2]],
+      duration: windowEnd - followUpAt,
+    });
+  }
   return actions;
 }
 

@@ -224,6 +224,7 @@ export function compileScenario(state: EditorState): Scenario {
           windowDuration: transitionDuration,
           startPos,
           ballArrivalTime: snapTime,
+          endPos: curr.snapshot.positions[brick.playerId],
         };
         timeline.push(...expandBrick(brick, ctx));
       }
