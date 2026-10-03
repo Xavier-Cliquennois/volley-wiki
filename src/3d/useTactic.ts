@@ -154,7 +154,9 @@ export const useTactic = (
             case 'BUMP': arms(-Math.PI / 3, Math.PI / 12, -Math.PI / 3, -Math.PI / 12); break;
             case 'SET': arms(-Math.PI * 0.65, Math.PI / 6, -Math.PI * 0.65, -Math.PI / 6); break;
             case 'ARM_SPIKE': arms(-Math.PI * 1.1, 0.2, -Math.PI * 0.7, 0); break;
-            case 'SPIKE': arms(Math.PI / 3, -0.5, 0, 0); break;
+            // The strike whips the arm from the cocked ARM_SPIKE position over
+            // the top and finishes down in front of the body.
+            case 'SPIKE': arms(-Math.PI / 6, -0.3, 0, 0); break;
             case 'READY': arms(-Math.PI / 8, 0, -Math.PI / 8, 0); break;
             case 'RESET': arms(0, 0, 0, 0); break;
           }
