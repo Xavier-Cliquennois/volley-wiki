@@ -153,7 +153,7 @@ const STATE: EditorState = {
           OPP_BR:  [1.5, 0, -0.5],
           OPP_D1:  [0, 0, -4.8],
         },
-        ballPosition: [0, 0, -5],
+        ballPosition: [0, 0.22, -5],
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
@@ -181,7 +181,7 @@ const STATE: EditorState = {
           OPP_BR:  [2.5, 0, -0.5],
           OPP_D1:  [0, 0, -3.5],
         },
-        ballPosition: [0, 0, -5],
+        ballPosition: [0, 0.22, -5],
       },
     },
   ],

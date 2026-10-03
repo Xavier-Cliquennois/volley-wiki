@@ -138,7 +138,7 @@ const STATE: EditorState = {
           OPP_S:   [3, 0, -4],
           OPP_BC:  [0, 0, -6],
         },
-        ballPosition: [2, 0, -6],
+        ballPosition: [2, 0.22, -6],
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
@@ -168,7 +168,7 @@ const STATE: EditorState = {
           OPP_S:   [3, 0, -1.5],
           OPP_BC:  [2, 0, -5.8],
         },
-        ballPosition: [2, 0, -6],
+        ballPosition: [2, 0.22, -6],
       },
       actions: [
         { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_BC', impact: [2, 0, -5.8] },
@@ -195,7 +195,7 @@ const STATE: EditorState = {
           OPP_S:   [3, 0, -4],
           OPP_BC:  [0, 0, -6],
         },
-        ballPosition: [2, 0, -6],
+        ballPosition: [2, 0.22, -6],
       },
     },
   ],
