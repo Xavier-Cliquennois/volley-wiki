@@ -17,7 +17,7 @@ const STATE: EditorState = {
     { id: 'R4',      label: 'Aile gauche',     role: 'outside',  color: COLORS.outside },
     { id: 'C',       label: 'Central',         role: 'middle',   color: COLORS.middle },
     { id: 'P',       label: 'Passeur (P2)',    role: 'setter',   color: COLORS.setter },
-    { id: 'A1',      label: 'Arrière G (P5)',  role: 'libero',   color: COLORS.libero },
+    { id: 'A1',      label: 'Arrière G (P5)',  role: 'outside',  color: COLORS.outside_back },
     { id: 'A2',      label: 'Arrière D (P1)',  role: 'outside',  color: COLORS.outside },
     { id: 'OPP_SRV', label: 'Serveur adv.',    role: 'opponent', color: COLORS.opponent },
     { id: 'OPP_BL',  label: 'Bloc adv. G',     role: 'opponent', color: COLORS.opponent },

@@ -18,7 +18,7 @@ const STATE: EditorState = {
     { id: 'P',       label: 'Passeur (caché)', role: 'setter',   color: COLORS.setter },
     { id: 'R4',      label: 'Aile G',          role: 'outside',  color: COLORS.outside },
     { id: 'A',       label: 'Fond centre',     role: 'libero',   color: COLORS.libero },
-    { id: 'A2',      label: 'Aile D',          role: 'outside',  color: COLORS.opposite },
+    { id: 'A2',      label: 'Aile D',          role: 'outside',  color: COLORS.outside },
     { id: 'OPP_SRV', label: 'Serveur adv.',    role: 'opponent', color: COLORS.opponent },
   ],
   steps: [
