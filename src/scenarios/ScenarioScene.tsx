@@ -94,8 +94,15 @@ function pickTemplateFillers(
 ): ScenarioPlayerConfig[] {
   if (count <= 0) return [];
   const existing = scenario.players.filter(p => p.role === 'opponent');
+  const existingIds = new Set(existing.map(p => p.id));
+  // A filler must stay clear of every spot a scripted opponent goes through,
+  // not only its starting spot: an attacker running in to the net would
+  // otherwise end up inside a filler standing there.
   const blockers: Array<{ x: number; z: number }> = [
     ...existing.map(p => ({ x: p.position[0], z: p.position[2] })),
+    ...scenario.timeline.flatMap(a =>
+      a.type === 'player_move' && existingIds.has(a.id) ? [{ x: a.to[0], z: a.to[2] }] : [],
+    ),
     ...(ballSrcPlayer ? [{ x: ballSrcPlayer.position[0], z: ballSrcPlayer.position[2] }] : []),
   ];
 
