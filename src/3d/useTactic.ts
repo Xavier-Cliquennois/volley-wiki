@@ -1,18 +1,38 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffectEvent, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import * as THREE from 'three';
 import type { BallWithTrailRef } from './BallWithTrail';
+import type { PlayerRef } from './Player';
+import type { TimelineAction } from '../scenarios/types';
+
+export type TacticScript = {
+  id: string;
+  timeline: readonly TimelineAction[];
+};
+
+export type PlayerRefMap = Record<string, PlayerRef | null>;
 
 export const useTactic = (
-  playerRefs: React.MutableRefObject<Record<string, any>>,
+  playerRefs: React.MutableRefObject<PlayerRefMap>,
   ballRef: React.RefObject<BallWithTrailRef | null>,
-  script: any,
+  script: TacticScript,
   onUpdate?: (progress: number, actionIndex: number) => void,
   onImpact?: (position: THREE.Vector3) => void,
   autoplay: boolean = false
 ) => {
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const isMountedRef = useRef(true);
+
+  // The timeline is rebuilt only when the script changes. The callbacks are
+  // read through effect events so the timeline always reaches the latest ones
+  // without being rebuilt when their identity changes.
+  const hasImpactHandler = onImpact !== undefined;
+  const emitUpdate = useEffectEvent((progress: number, actionIndex: number) => {
+    onUpdate?.(progress, actionIndex);
+  });
+  const emitImpact = useEffectEvent((position: THREE.Vector3) => {
+    onImpact?.(position);
+  });
 
   useLayoutEffect(() => {
     if (!script?.timeline) return;
@@ -55,13 +75,13 @@ export const useTactic = (
     const tl = gsap.timeline({
       paused: true,
       onUpdate: () => {
-        if (!isMountedRef.current || !onUpdate || !timelineRef.current) return;
+        if (!isMountedRef.current || !timelineRef.current) return;
         const time = timelineRef.current.time();
         let currentIndex = 0;
         for (let i = 0; i < script.timeline.length; i++) {
           if (time >= script.timeline[i].time) currentIndex = i;
         }
-        onUpdate(timelineRef.current.progress(), currentIndex);
+        emitUpdate(timelineRef.current.progress(), currentIndex);
       },
       onComplete: () => { if (isMountedRef.current) resetScene(); },
       onStart: () => { if (isMountedRef.current) resetScene(); },
@@ -70,7 +90,7 @@ export const useTactic = (
     timelineRef.current = tl;
     tl.call(() => resetScene(), [], 0);
 
-    script.timeline.forEach((action: any) => {
+    script.timeline.forEach((action) => {
       if (action.type === 'ball_move') {
         const mesh = ballRef.current?.mesh;
         if (mesh) {
@@ -95,8 +115,8 @@ export const useTactic = (
             tl.to(mesh.position, { y: action.to[1], duration: action.duration / 2, ease: 'power1.in' }, action.time + action.duration / 2);
           }
 
-          if (onImpact) {
-            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) onImpact(m.position); }, [], action.time + action.duration);
+          if (hasImpactHandler) {
+            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) emitImpact(m.position); }, [], action.time + action.duration);
           }
         }
       }
@@ -113,8 +133,8 @@ export const useTactic = (
             tl.to(p.rightShoulder.current.rotation, { x: rx, z: rz, duration: action.duration }, action.time);
             tl.to(p.leftShoulder.current.rotation, { x: lx, z: lz, duration: action.duration }, action.time);
           };
-          if (onImpact && ['BUMP', 'SET', 'SPIKE'].includes(action.pose)) {
-            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) onImpact(m.position); }, [], action.time);
+          if (hasImpactHandler && ['BUMP', 'SET', 'SPIKE'].includes(action.pose)) {
+            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) emitImpact(m.position); }, [], action.time);
           }
           switch (action.pose) {
             case 'BUMP': arms(-Math.PI / 3, Math.PI / 12, -Math.PI / 3, -Math.PI / 12); break;
@@ -134,7 +154,10 @@ export const useTactic = (
       isMountedRef.current = false;
       if (timelineRef.current) { timelineRef.current.kill(); timelineRef.current = null; }
     };
-  }, [script]);
+    // playerRefs and ballRef are stable ref objects, autoplay and
+    // hasImpactHandler are constant for each caller: in practice the timeline
+    // is rebuilt only when the script changes, as before.
+  }, [script, playerRefs, ballRef, autoplay, hasImpactHandler]);
 
   return timelineRef;
 };

@@ -10,6 +10,7 @@ import type { BallWithTrailRef } from '../3d/BallWithTrail';
 import { ImpactEffect } from '../3d/ImpactEffect';
 import type { ImpactEffectRef } from '../3d/ImpactEffect';
 import { useTactic } from '../3d/useTactic';
+import type { PlayerRefMap } from '../3d/useTactic';
 import type { Scenario, ScenarioPlayerConfig, TimelineAction } from './types';
 import { COLORS, resolvePlayerColor } from './data/_shared';
 
@@ -148,7 +149,7 @@ function ensureLandings(timeline: TimelineAction[]): TimelineAction[] {
 
 type ScenarioSceneProps = {
   scenario: Scenario;
-  playerRefs: React.MutableRefObject<Record<string, any>>;
+  playerRefs: React.MutableRefObject<PlayerRefMap>;
   controllerRef: React.MutableRefObject<gsap.core.Timeline | null>;
   cameraRef: React.RefObject<THREE.PerspectiveCamera | null>;
   onUpdate: (progress: number, actionIndex: number) => void;
@@ -162,7 +163,7 @@ type ScenarioSceneProps = {
 const CameraSetup: React.FC<{ cameraRef: React.RefObject<THREE.PerspectiveCamera | null> }> = ({ cameraRef }) => {
   const { camera } = useThree();
   useEffect(() => {
-    (cameraRef as React.MutableRefObject<THREE.PerspectiveCamera | null>).current = camera as THREE.PerspectiveCamera;
+    cameraRef.current = camera as THREE.PerspectiveCamera;
   }, [camera, cameraRef]);
   return null;
 };

@@ -6,7 +6,7 @@ export interface ImpactEffectRef {
   trigger: (position: THREE.Vector3) => void;
 }
 
-export const ImpactEffect = forwardRef<ImpactEffectRef, {}>((_, ref) => {
+export const ImpactEffect = forwardRef<ImpactEffectRef, object>((_, ref) => {
   const meshRef = useRef<THREE.Mesh>(null);
   const [active, setActive] = useState(false);
 

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ScenarioScene } from './ScenarioScene';
 import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
+import type { PlayerRefMap } from '../3d/useTactic';
 import type { PhaseKind, Scenario, ScenarioStep, TeamSize } from './types';
 import { resolvePlayerColor } from './data/_shared';
 import { CONFIGURATIONS } from '../positions/configurations';
@@ -136,7 +137,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
   const lang = useCurrentLang();
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
-  const playerRefs = useRef<Record<string, any>>({});
+  const playerRefs = useRef<PlayerRefMap>({});
   const stepStripRef = useRef<HTMLDivElement>(null);
   const stepBoundaryRef = useRef<number | null>(null);
 
@@ -148,20 +149,30 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
   const [activeStepIdx, setActiveStepIdx] = useState(0);
   const [showTrail, setShowTrail] = useState(true);
   const [showZones, setShowZones] = useState(false);
-  const [currentCameraPreset, setCurrentCameraPreset] = useState<CameraPresetKey>('DEFAULT');
+  const initialCamera: CameraPresetKey = scenario.defaultCamera ?? 'DEFAULT';
+  const [currentCameraPreset, setCurrentCameraPreset] = useState<CameraPresetKey>(initialCamera);
 
   const { animateToPreset } = useCameraControls(cameraRef);
 
-  useEffect(() => {
+  // Reset the playback state when another scenario (or camera) is loaded.
+  // Done during render rather than in an effect so the stale state never
+  // reaches the screen; see https://react.dev/learn/you-might-not-need-an-effect.
+  const [resetKey, setResetKey] = useState({ id: scenario.id, camera: initialCamera });
+  if (resetKey.id !== scenario.id || resetKey.camera !== initialCamera) {
+    setResetKey({ id: scenario.id, camera: initialCamera });
     setIsPlaying(false);
     setHasStarted(false);
     setProgress(0);
     setActiveStepIdx(0);
-    stepBoundaryRef.current = null;
-    const initialCamera = scenario.defaultCamera ?? 'DEFAULT';
     setCurrentCameraPreset(initialCamera);
+  }
+
+  // Side effects of the reset: drop the pending step boundary and snap the
+  // camera to the scenario's preset.
+  useEffect(() => {
+    stepBoundaryRef.current = null;
     animateToPreset(initialCamera, 0.01);
-  }, [scenario.id, scenario.defaultCamera, animateToPreset]);
+  }, [scenario.id, initialCamera, animateToPreset]);
 
   const handleUpdate = useCallback((prog: number) => {
     setProgress(prog);
