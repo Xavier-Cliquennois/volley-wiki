@@ -96,6 +96,12 @@
     "showDetails_one": "Show detail ({{count}})",
     "showDetails_other": "Show all details ({{count}})",
     "hideDetails": "Hide details",
+    "setterFocus": {
+      "label": "Highlight:",
+      "none": "Both",
+      "s": "Setter 1 (S)",
+      "s2": "Setter 2 (S2)"
+    },
     "toggleMovements": "Show all movements",
     "viewScenarios_one": "→ {{count}} linked scenario",
     "viewScenarios_other": "→ {{count}} linked scenarios",

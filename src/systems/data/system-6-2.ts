@@ -73,50 +73,59 @@ function backSetterRole(id: RotationId): 'S' | 'S2' {
   return 'S2';
 }
 
-// In 6-2 the front setter is the 3rd attacker (typically from the right side,
-// since setters often play P2 in their attacking rotations). The back setter
-// distributes — no arrow needed for them; their job is in the textual detail.
+type FrontAttackSpec = {
+  target: typeof ATTACK_TARGET.outsideLeft;
+  zone: 'A' | 'B' | 'C';
+  label: string;
+};
+
+// Where each role attacks from when occupying a given front-row zone (same
+// refinement as the 5-1). OHs finish on the left antenna and MBs hit a quick
+// in the centre regardless of where they entered the zone. The front setter,
+// as the third attacker, hits from the antenna closest to the zone he holds,
+// so his target changes with the rotation.
+function frontAttackTarget(role: RoleCode, zone: ZoneKey): FrontAttackSpec | null {
+  if (role === 'MB1' || role === 'MB2') {
+    return { target: ATTACK_TARGET.centre, zone: 'C', label: 'Quick centre (1er tempo)' };
+  }
+  if (role === 'OH1' || role === 'OH2') {
+    return { target: ATTACK_TARGET.outsideLeft, zone: 'A', label: 'Aile gauche (P4)' };
+  }
+  if (role === 'S' || role === 'S2') {
+    if (zone === 'P4') {
+      return { target: ATTACK_TARGET.outsideLeft, zone: 'A', label: 'Aile gauche (passeur attaquant)' };
+    }
+    if (zone === 'P3') {
+      return { target: ATTACK_TARGET.centre, zone: 'C', label: 'Attaque centre (passeur attaquant)' };
+    }
+    return { target: ATTACK_TARGET.outsideRight, zone: 'B', label: 'Aile droite (passeur attaquant)' };
+  }
+  return null;
+}
+
+// In 6-2 the front setter is the 3rd attacker; the back setter distributes,
+// so no arrow is needed for him (his job is in the textual detail).
 function buildAttacks(id: RotationId): AttackOption[] {
   const mapping = ROTATION_MAP[id];
   const active = backSetterRole(id);
-  const frontSetter: RoleCode = active === 'S' ? 'S2' : 'S';
   const attacks: AttackOption[] = [];
 
   for (const [zone, role] of Object.entries(mapping) as [ZoneKey, RoleCode][]) {
     if (!FRONT_ZONES.has(zone)) continue;
     if (role === active || role === 'L') continue;
-
-    if (role === 'MB1' || role === 'MB2') {
-      attacks.push({
-        id: `${id}-quick`,
-        attacker: role,
-        zone: 'C',
-        label: 'Quick centre (1er tempo)',
-        risk: 'low',
-        tempo: 1,
-        target: ATTACK_TARGET.centre,
-      });
-    } else if (role === 'OH1' || role === 'OH2') {
-      attacks.push({
-        id: `${id}-outside-left`,
-        attacker: role,
-        zone: 'A',
-        label: 'Aile gauche (P4)',
-        risk: 'medium',
-        tempo: 2,
-        target: ATTACK_TARGET.outsideLeft,
-      });
-    } else if (role === frontSetter) {
-      attacks.push({
-        id: `${id}-setter-attack`,
-        attacker: role,
-        zone: 'B',
-        label: 'Aile droite (passeur attaquant)',
-        risk: 'medium',
-        tempo: 2,
-        target: ATTACK_TARGET.outsideRight,
-      });
-    }
+    const spec = frontAttackTarget(role, zone);
+    if (!spec) continue;
+    const isMiddle = role === 'MB1' || role === 'MB2';
+    const isSetter = role === 'S' || role === 'S2';
+    attacks.push({
+      id: `${id}-${isSetter ? 'setter-attack' : isMiddle ? 'quick' : 'outside-left'}`,
+      attacker: role,
+      zone: spec.zone,
+      label: spec.label,
+      risk: isMiddle ? 'low' : 'medium',
+      tempo: isMiddle ? 1 : 2,
+      target: spec.target,
+    });
   }
 
   // Pipe: only if an OH is in P6.
