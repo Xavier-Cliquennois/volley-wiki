@@ -119,7 +119,7 @@ const STATE: EditorState = {
           OPP_D1:  [2.5, 0, -4.0],
           OPP_D2:  [0, 0, -5.5],
         },
-        ballPosition: [2.5, 0, -6],
+        ballPosition: [2.5, 0.22, -6],
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
@@ -146,7 +146,7 @@ const STATE: EditorState = {
           OPP_D1:  [2.5, 0, -5.8],
           OPP_D2:  [0, 0, -5.5],
         },
-        ballPosition: [2.5, 0, -6],
+        ballPosition: [2.5, 0.22, -6],
       },
       actions: [
         { kind: 'DEFENSE_PLONGEE', id: 'b-s5-dig', playerId: 'OPP_D1', impact: [2.5, 0, -5.8] },
@@ -170,7 +170,7 @@ const STATE: EditorState = {
           OPP_D1:  [2.5, 0, -2.5],
           OPP_D2:  [0, 0, -5.5],
         },
-        ballPosition: [2.5, 0, -6],
+        ballPosition: [2.5, 0.22, -6],
       },
     },
   ],
