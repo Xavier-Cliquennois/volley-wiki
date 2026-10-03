@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import { S } from './styles';
 import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 // Short team-play guide focused on transitions, coverage and communication.
 // The substance lives in the drills (pepper, wash, transition, queen of the
@@ -113,6 +114,8 @@ export default function GuideJeuCollectif() {
         <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.team-play') })}</h2>
         <DrillList skill="team-play" />
       </section>
+
+      <QuizEmbed slug="jeu-collectif" persistProgress={false} />
     </div>
   );
 }

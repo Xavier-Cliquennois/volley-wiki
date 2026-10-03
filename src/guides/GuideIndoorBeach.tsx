@@ -4,6 +4,7 @@ import { S } from './styles';
 import LevelFilterPanel from '../components/LevelFilterPanel';
 import LeveledContent from '../components/LeveledContent';
 import type { Level } from '../userLevel/useUserLevel';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type CompareRow = { category: string; indoor: string; beach: string; impact: 'low' | 'high' };
 type SkillRow = { skill: string; indoor: string; beach: string };
@@ -160,6 +161,8 @@ export default function GuideIndoorBeach() {
           </div>
         </section>
       </LeveledContent>
+
+      <QuizEmbed slug="indoor-beach" persistProgress={false} />
     </div>
   );
 }

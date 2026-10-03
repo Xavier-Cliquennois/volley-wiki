@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 const LEVEL_COLOR: Record<string, string> = {
   beginner: 'var(--mint)',
@@ -239,6 +240,7 @@ export default function GuideService() {
         </div>
       </section>
 
+      <QuizEmbed slug="service" persistProgress={false} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
 import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type TimingStep = { title: string; desc: string };
 type TypePoint = { label: string; text: string };
@@ -272,6 +273,7 @@ export default function GuideContre() {
         </div>
       </section>
 
+      <QuizEmbed slug="contre" persistProgress={false} />
     </div>
   );
 }

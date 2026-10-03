@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import { S } from './styles';
 import { ROLE_COLORS, type RoleColorKey } from '../constants/positions';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type Error = { label: string; text: string };
 type Position = { role: string; color: RoleColorKey; errors: Error[] };
@@ -101,6 +102,8 @@ export default function GuideErreursTypiques() {
           })}
         </div>
       </section>
+
+      <QuizEmbed slug="erreurs-typiques" persistProgress={false} />
     </div>
   );
 }

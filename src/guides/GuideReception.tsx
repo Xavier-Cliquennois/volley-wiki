@@ -6,6 +6,7 @@ import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
 import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type ReceptionSystem = {
   name: string;
@@ -324,6 +325,7 @@ export default function GuideReception() {
         </div>
       </section>
 
+      <QuizEmbed slug="reception" persistProgress={false} />
     </div>
   );
 }
