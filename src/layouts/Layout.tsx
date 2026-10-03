@@ -172,10 +172,13 @@ export default function Layout() {
     }
   }, [location.pathname]);
 
-  // Close the mobile menu when the route changes
-  useEffect(() => {
+  // Close the mobile menu when the route changes. Done during render rather
+  // than in an effect (no extra render pass).
+  const [menuPathname, setMenuPathname] = useState(location.pathname);
+  if (menuPathname !== location.pathname) {
+    setMenuPathname(location.pathname);
     setMenuOpen(false);
-  }, [location.pathname]);
+  }
 
   // Lock body scroll while the mobile menu overlay is open
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 
 export type Level = 'beginner' | 'intermediate' | 'advanced';
 
@@ -37,33 +37,55 @@ function readStoredLevel(): Level {
   }
 }
 
+// Module-level store shared by every hook instance. `cachedLevel` mirrors the
+// stored level; it is read from localStorage on first access and dropped when
+// the last subscriber leaves, so a later mount re-reads localStorage. It also
+// keeps the chosen level in memory when localStorage is unavailable.
+let cachedLevel: Level | null = null;
+let subscriberCount = 0;
+
+function getSnapshot(): Level {
+  if (cachedLevel === null) cachedLevel = readStoredLevel();
+  return cachedLevel;
+}
+
+// SSR-safe: the server render (SSG) and hydration use the default level so the
+// HTML matches the first client render; the stored level is applied right
+// after. Brief flash on first paint is the standard trade-off for SSR +
+// localStorage.
+function getServerSnapshot(): Level {
+  return DEFAULT_LEVEL;
+}
+
+// Same-tab sync goes through a CustomEvent bus, cross-tab sync through the
+// storage event.
+function subscribe(onStoreChange: () => void): () => void {
+  const onChange = (e: Event) => {
+    const next = (e as CustomEvent<Level>).detail;
+    if (!isLevel(next)) return;
+    cachedLevel = next;
+    onStoreChange();
+  };
+  const onStorage = (e: StorageEvent) => {
+    if (e.key !== STORAGE_KEY || !isLevel(e.newValue)) return;
+    cachedLevel = e.newValue;
+    onStoreChange();
+  };
+  subscriberCount += 1;
+  window.addEventListener(EVENT_NAME, onChange as EventListener);
+  window.addEventListener('storage', onStorage);
+  return () => {
+    window.removeEventListener(EVENT_NAME, onChange as EventListener);
+    window.removeEventListener('storage', onStorage);
+    subscriberCount -= 1;
+    if (subscriberCount === 0) cachedLevel = null;
+  };
+}
+
 // Shared hook: returns the current level and a setter that persists to localStorage
 // and broadcasts the change to other hook instances in the same tab.
-//
-// SSR-safe: initial state is the default level so server-rendered HTML matches
-// the first client render. After mount, the real value from localStorage is
-// applied. Brief flash on first paint is the standard trade-off for SSR + localStorage.
 export function useUserLevel(): readonly [Level, (next: Level) => void] {
-  const [level, setLevelState] = useState<Level>(DEFAULT_LEVEL);
-
-  useEffect(() => {
-    const stored = readStoredLevel();
-    if (stored !== DEFAULT_LEVEL) setLevelState(stored);
-
-    const onChange = (e: Event) => {
-      const next = (e as CustomEvent<Level>).detail;
-      if (isLevel(next)) setLevelState(next);
-    };
-    const onStorage = (e: StorageEvent) => {
-      if (e.key === STORAGE_KEY && isLevel(e.newValue)) setLevelState(e.newValue);
-    };
-    window.addEventListener(EVENT_NAME, onChange as EventListener);
-    window.addEventListener('storage', onStorage);
-    return () => {
-      window.removeEventListener(EVENT_NAME, onChange as EventListener);
-      window.removeEventListener('storage', onStorage);
-    };
-  }, []);
+  const level = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const setLevel = useCallback((next: Level) => {
     if (typeof window === 'undefined') return;
@@ -72,8 +94,8 @@ export function useUserLevel(): readonly [Level, (next: Level) => void] {
     } catch {
       // ignore quota / disabled storage
     }
+    cachedLevel = next;
     window.dispatchEvent(new CustomEvent<Level>(EVENT_NAME, { detail: next }));
-    setLevelState(next);
   }, []);
 
   return [level, setLevel] as const;

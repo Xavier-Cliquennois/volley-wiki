@@ -35,7 +35,7 @@ export function QuizPlayer({ quiz, persistProgress, onBackToHub }: Props) {
   // Snapshot of the best score *at the start* of this run, so the result
   // screen can announce a personal best even after we've written the new one.
   // Read straight from localStorage rather than `useQuizProgress` state — the
-  // hook hydrates inside useEffect, so its first-render value is always {}.
+  // hook returns {} while hydrating, and its value follows the score we write.
   const [snapshotBest] = useState<number | undefined>(() => {
     const stored: Record<string, QuizScore> = readStoredProgress();
     return stored[quiz.slug]?.bestScore;

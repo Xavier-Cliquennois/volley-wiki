@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 import type { QuizProgress, QuizScore } from './types';
 
 const STORAGE_KEY = 'volley-wiki:quiz-progress';
@@ -26,6 +26,54 @@ function readStored(): QuizProgress {
   }
 }
 
+// Module-level store shared by every hook instance. `cached` mirrors the
+// stored progress; it is filled from localStorage on first read and dropped
+// when the last subscriber leaves, so a later mount re-reads localStorage.
+const EMPTY_PROGRESS: QuizProgress = {};
+let cached: QuizProgress | null = null;
+let subscriberCount = 0;
+
+function getSnapshot(): QuizProgress {
+  if (cached === null) cached = readStored();
+  return cached;
+}
+
+// Server render (SSG) and hydration always see an empty progress.
+function getServerSnapshot(): QuizProgress {
+  return EMPTY_PROGRESS;
+}
+
+// Same-tab sync goes through a CustomEvent bus, cross-tab sync through the
+// storage event.
+function subscribe(onStoreChange: () => void): () => void {
+  const onChange = (e: Event) => {
+    const next = (e as CustomEvent<QuizProgress>).detail;
+    if (!isProgress(next)) return;
+    cached = next;
+    onStoreChange();
+  };
+  const onStorage = (e: StorageEvent) => {
+    if (e.key !== STORAGE_KEY) return;
+    try {
+      const next = e.newValue ? JSON.parse(e.newValue) : {};
+      if (!isProgress(next)) return;
+      cached = next;
+      onStoreChange();
+    } catch {
+      // ignore parse error
+    }
+  };
+  subscriberCount += 1;
+  window.addEventListener(EVENT_NAME, onChange as EventListener);
+  window.addEventListener('storage', onStorage);
+  return () => {
+    window.removeEventListener(EVENT_NAME, onChange as EventListener);
+    window.removeEventListener('storage', onStorage);
+    subscriberCount -= 1;
+    if (subscriberCount === 0) cached = null;
+  };
+}
+
 function writeStored(value: QuizProgress) {
   if (typeof window === 'undefined') return;
   try {
@@ -42,32 +90,7 @@ export function useQuizProgress(): readonly [
   QuizProgress,
   (slug: string, score: number, total: number) => void,
 ] {
-  const [progress, setProgress] = useState<QuizProgress>({});
-
-  useEffect(() => {
-    const stored = readStored();
-    if (Object.keys(stored).length > 0) setProgress(stored);
-
-    const onChange = (e: Event) => {
-      const next = (e as CustomEvent<QuizProgress>).detail;
-      if (isProgress(next)) setProgress(next);
-    };
-    const onStorage = (e: StorageEvent) => {
-      if (e.key !== STORAGE_KEY) return;
-      try {
-        const next = e.newValue ? JSON.parse(e.newValue) : {};
-        if (isProgress(next)) setProgress(next);
-      } catch {
-        // ignore parse error
-      }
-    };
-    window.addEventListener(EVENT_NAME, onChange as EventListener);
-    window.addEventListener('storage', onStorage);
-    return () => {
-      window.removeEventListener(EVENT_NAME, onChange as EventListener);
-      window.removeEventListener('storage', onStorage);
-    };
-  }, []);
+  const progress = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const recordScore = useCallback(
     (slug: string, score: number, total: number) => {
@@ -81,8 +104,8 @@ export function useQuizProgress(): readonly [
         attempts: (previous?.attempts ?? 0) + 1,
       };
       const updated = { ...current, [slug]: next };
+      cached = updated;
       writeStored(updated);
-      setProgress(updated);
     },
     [],
   );
