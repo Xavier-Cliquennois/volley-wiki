@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { PlacementQuestion } from '../types';
 import { getSystemById } from '../../systems/data';
 import { Court, type CourtLayout, type CourtPlayer } from '../../components/court';
@@ -30,6 +31,7 @@ const ZONE_POSITIONS: Record<ZoneId, { x: number; y: number }> = {
 // other roles (enough to deduce which rotation is being asked about) but
 // the candidate slots are presented as a clean choice.
 export function QuestionPlacement({ question, selectedId, onSelect }: Props) {
+  const { t } = useTranslation();
   const fullLayout = useMemo<CourtLayout>(() => {
     const system = getSystemById(question.systemId);
     const rotation = system?.rotations[question.rotationId];
@@ -60,7 +62,7 @@ export function QuestionPlacement({ question, selectedId, onSelect }: Props) {
     return { players: [...visiblePlayers, ...candidateMarkers] };
   }, [question.systemId, question.rotationId, question.hiddenRole, question.options]);
 
-  const options = question.options.map(id => ({ id, label: `Zone ${id}` }));
+  const options = question.options.map(id => ({ id, label: t('quiz.zoneOption', { id }) }));
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
@@ -82,7 +84,7 @@ export function QuestionPlacement({ question, selectedId, onSelect }: Props) {
           textAlign: 'center',
         }}
       >
-        ★ Les pastilles « ? » sont les zones candidates. Quelle est la bonne ?
+        {t('quiz.placementHint')}
       </div>
       <OptionList
         options={options}

@@ -20,6 +20,7 @@ import frGuidesBeach from '../locales/fr/guidesBeach.json';
 import frGuideContentBeach from '../locales/fr/guideContentBeach.json';
 import frDrills from '../locales/fr/drills.json';
 import frSystemContent from '../locales/fr/systemContent.json';
+import frQuizContent from '../locales/fr/quizContent.json';
 
 import enCommon from '../locales/en/common.json';
 import enHome from '../locales/en/home.json';
@@ -40,6 +41,7 @@ import enGuidesBeach from '../locales/en/guidesBeach.json';
 import enGuideContentBeach from '../locales/en/guideContentBeach.json';
 import enDrills from '../locales/en/drills.json';
 import enSystemContent from '../locales/en/systemContent.json';
+import enQuizContent from '../locales/en/quizContent.json';
 
 import plCommon from '../locales/pl/common.json';
 import plHome from '../locales/pl/home.json';
@@ -207,6 +209,8 @@ const bundle = (
   // Only FR (empty stub) and EN carry system content for now; other languages
   // fall back on the French source texts in src/systems/data.
   systemContent: unknown = {},
+  // Same for the quiz overlay (src/i18n/localizeQuiz.ts).
+  quizContent: unknown = {},
 ): Record<string, unknown> => ({
   common,
   home,
@@ -227,11 +231,12 @@ const bundle = (
   guideContentBeach,
   drills,
   systemContent,
+  quizContent,
 });
 
 const RESOURCES = {
-  fr: bundle(frCommon, frHome, frTechniques, frPositions, frRules, frGlossary, frGuides, frGuideContent, frScenarios, frScenarioContent, frSeo, frHomeBeach, frTechniquesBeach, frPositionsBeach, frScenariosBeach, frGuidesBeach, frGuideContentBeach, frDrills, frSystemContent),
-  en: bundle(enCommon, enHome, enTechniques, enPositions, enRules, enGlossary, enGuides, enGuideContent, enScenarios, enScenarioContent, enSeo, enHomeBeach, enTechniquesBeach, enPositionsBeach, enScenariosBeach, enGuidesBeach, enGuideContentBeach, enDrills, enSystemContent),
+  fr: bundle(frCommon, frHome, frTechniques, frPositions, frRules, frGlossary, frGuides, frGuideContent, frScenarios, frScenarioContent, frSeo, frHomeBeach, frTechniquesBeach, frPositionsBeach, frScenariosBeach, frGuidesBeach, frGuideContentBeach, frDrills, frSystemContent, frQuizContent),
+  en: bundle(enCommon, enHome, enTechniques, enPositions, enRules, enGlossary, enGuides, enGuideContent, enScenarios, enScenarioContent, enSeo, enHomeBeach, enTechniquesBeach, enPositionsBeach, enScenariosBeach, enGuidesBeach, enGuideContentBeach, enDrills, enSystemContent, enQuizContent),
   pl: bundle(plCommon, plHome, plTechniques, plPositions, plRules, plGlossary, plGuides, plGuideContent, plScenarios, plScenarioContent, plSeo, plHomeBeach, plTechniquesBeach, plPositionsBeach, plScenariosBeach, plGuidesBeach, plGuideContentBeach, plDrills),
   it: bundle(itCommon, itHome, itTechniques, itPositions, itRules, itGlossary, itGuides, itGuideContent, itScenarios, itScenarioContent, itSeo, itHomeBeach, itTechniquesBeach, itPositionsBeach, itScenariosBeach, itGuidesBeach, itGuideContentBeach, itDrills),
   es: bundle(esCommon, esHome, esTechniques, esPositions, esRules, esGlossary, esGuides, esGuideContent, esScenarios, esScenarioContent, esSeo, esHomeBeach, esTechniquesBeach, esPositionsBeach, esScenariosBeach, esGuidesBeach, esGuideContentBeach, esDrills),

@@ -1,0 +1,530 @@
+{
+  "rotations-5-1": {
+    "title": "5-1 Rotations",
+    "subtitle": "Recognise the 6 rotations from the court diagram",
+    "description": "Six questions mixing rotation recognition and the placement of the setter, libero and opposite. Ideal for memorising the R1→R6 cycle.",
+    "questions": {
+      "r51-q1": {
+        "prompt": "The setter is in P1 (back right) and has to penetrate from the right corner of the court. Three attackers are at the net, including the opposite in P4. Which rotation is it?",
+        "explanation": "This is rotation R1: setter in P1, penetrating from the back right. Three attackers at the net (opposite P4 + middle P2 + outside P3) plus the pipe available. It is the most offensive rotation of the 5-1."
+      },
+      "r51-q2": {
+        "prompt": "The setter is at the net on the right (P2), ready to distribute without penetrating. The opposite is in the back left (P5), ready for the pipe. Which rotation?",
+        "explanation": "This is R6: setter in P2, already at the distribution target. The most stable rotation defensively: the setter barely has to move, and the opposite in P5 sets up the pipe to get around the opposing block."
+      },
+      "r51-q3": {
+        "prompt": "In rotation R3 of the 5-1, where is the setter when the opponent serves?",
+        "explanation": "In R3, the setter is in P5 (back left). It is the longest penetration of the system: the setter has to cross the whole court diagonally to reach the target between P2 and P3. The most physically demanding rotation for the setter."
+      },
+      "r51-q4": {
+        "prompt": "The setter penetrates from the centre of the court (P6), the shortest path in the system. The opposite and the libero are in P3 and P1. Which rotation?",
+        "explanation": "This is R2: setter in P6, straight central penetration, the fastest path. Only 2 attackers at the net (the opposite is in P3 centre, but the left side hitter stays in the back row), so the offensive options are more limited."
+      },
+      "r51-q5": {
+        "prompt": "In rotation R4 of the 5-1 (setter at the net in P4), where is the opposite to prepare the back-row attack?",
+        "explanation": "In R4, the opposite is in P1 (back right), ready to hit a pipe or a back-row right (bic D). It is the main weapon of this rotation: with only 2 real attackers at the net (the setter does not hit), the opposite's pipe gets around the opposing block."
+      },
+      "r51-q6": {
+        "prompt": "The setter is at the centre of the net (P3), the opposite is in the back row in P6. The front-row middle has to clear to the left side to attack. Which rotation?",
+        "explanation": "This is R5: setter in P3 (centre of the net), the best distribution angle in the system. Timing is crucial: the setter slides to the right while the front-row middle (in P4) clears to the left to attack like an outside hitter."
+      }
+    }
+  },
+  "options-attaque": {
+    "title": "Attack options",
+    "subtitle": "Pick the right attack according to the quality of the reception",
+    "description": "Perfect, medium or poor reception: you decide between the quick, the pipe, the back-row attack or the high ball. Covers the 5-1 and the golden rule \"bad reception → high ball\".",
+    "questions": {
+      "oa-q1": {
+        "prompt": "In R1 of the 5-1, your reception is perfect: the setter receives the ball 1 m from the net, shoulders parallel. Which option has priority?",
+        "explanation": "On a perfect reception, the central 1st-tempo is the priority option: it pins the opposing block in the middle, opens up the outside hitters for the following balls and is the fastest tempo. The pipe and the back-row attack are useful in turn to break the rhythm, but the quick remains the base.",
+        "options": {
+          "quick": "Centre quick (1st tempo) to the middle",
+          "pipe": "Pipe in P6",
+          "high-outside": "High ball to the left side",
+          "bic": "Back-row right (bic D) by the opposite"
+        }
+      },
+      "oa-q2": {
+        "prompt": "In R3 of the 5-1, the reception is poor and the setter arrives late because the penetration is the longest in the system. Which option leaves the most margin?",
+        "explanation": "On a poor reception, you raise the tempo: a high ball to the left side gives the attacker time to take their run-up. The quick becomes impossible (set too low or too far) and back-row balls are too risky. Golden rule: \"bad reception → high ball to the antennas\".",
+        "options": {
+          "quick": "Centre quick in 1st tempo",
+          "high-outside": "High ball to the left side (P4)",
+          "bic": "Back-row centre attack by the opposite",
+          "pipe": "Back-row pipe in P6"
+        }
+      },
+      "oa-q3": {
+        "prompt": "In R4 of the 5-1 (setter at the net in P4), the reception is decent. The middle and the right side are at the net, the opposite is in the back row. What is the right offensive choice?",
+        "explanation": "In R4, there are only 2 real attackers at the net (middle + right side). To get around this limit, you combine a centre quick with a pipe by the back-row opposite. The setter does not hit (they distribute), and the opposite in P1 is the hidden weapon that opens up the opposing block.",
+        "options": {
+          "quick": "Centre quick + opposite's pipe as a threat",
+          "left-wing": "Left side (the setter hits)",
+          "opp-front": "Right side to the opposite (who is in the back row)",
+          "bic-left": "Back-row left (bic A) by the middle"
+        }
+      },
+      "oa-q4": {
+        "prompt": "The opposing block has a very mobile middle who follows the ball. The reception is perfect. How do you exploit this?",
+        "explanation": "If the opposing middle follows the ball (read blocking), you draw them in with a fake quick approach and then send the outside hitter at 2nd tempo: the middle blocker is late on their lateral run, leaving the outside hitter facing a single blocker. Principle: \"the opposing middle is your fulcrum\".",
+        "options": {
+          "quick-only": "Multiply the quicks to the middle",
+          "fake-quick": "Quick as a threat + 2nd-tempo ball to the outside",
+          "slide": "Slide behind the setter",
+          "bic-only": "Systematic back-row attack by the opposite"
+        }
+      },
+      "oa-q5": {
+        "prompt": "In R6 of the 5-1, the setter is at the net in P2. The reception is average but usable. Which option makes the best use of the rotation?",
+        "explanation": "In R6, the opposite is in P5 (back left): this is the rotation where the pipe is the most natural. With an average reception, the pipe keeps an intermediate tempo that catches the opposing block off guard, especially combined with the centre quick as a threat.",
+        "options": {
+          "pipe": "Pipe from P5 (opposite in the back left)",
+          "bic": "Back-row left (bic A) by the opposite",
+          "quick-only": "Centre quick only",
+          "wing-only": "Left side only"
+        }
+      },
+      "oa-q6": {
+        "prompt": "The reception is very poor: the ball goes far from the setter's target, into a defensive zone. What is the right collective reflex?",
+        "explanation": "On an \"unplayable\" reception, the rule is: send a playable high ball to the antennas and accept giving a free ball rather than sending a gift under the net. The goal is to get the ball back in play without handing the opponent a free point: better to defend an opposing side-out than to lose the point outright.",
+        "options": {
+          "free-ball": "High free ball to the antennas, accept the easy ball",
+          "quick-anyway": "Force the centre quick anyway",
+          "block": "Cancel the attack and prepare the block",
+          "jump-set": "Forced jump-set to gain tempo"
+        }
+      }
+    }
+  },
+  "placement-defense": {
+    "title": "Placement & defence",
+    "subtitle": "Libero, middle, outside: where to stand depending on rotation and phase?",
+    "description": "Six questions on player placement against the opponent's serve and after an attack. A mix of precise court placements and defensive logic.",
+    "questions": {
+      "pd-q1": {
+        "prompt": "In R1 of the 5-1, where is the libero positioned when the opponent serves?",
+        "explanation": "In R1, the libero is in P5 (back left). They replace the middle who would otherwise be in the back row (MB2). The libero always plays in the back row and covers the reception on the left: this is the position where they can absorb hard serves on the left while staying available for the short diagonal defence."
+      },
+      "pd-q2": {
+        "prompt": "In R2 of the 5-1, the setter penetrates from the back centre. Where does the front-row middle (MB) stand to prepare the block?",
+        "explanation": "In R2, the front-row middle MB2 is in P4. They take the left side for the block, covering the opposing attack in zone 4. At the serve signal, they must hold their overlap position (in front of P5 and to the left of P3), then quickly shift to the opposing target once the ball is served."
+      },
+      "pd-q3": {
+        "prompt": "The opposing attack comes from zone 4 (their left side, so the right side of the court for us). Which player is responsible for defending the long diagonal?",
+        "explanation": "The long diagonal of an opposing attack from zone 4 lands deep on our right side, which is P1. The P1 defender (for us, the opposite or the back-right player) must read the angle and drop back to the end line. Rule: a zone 4 attacker naturally hits the long diagonal.",
+        "options": {
+          "p1": "P1 (our back right)",
+          "p6": "P6 (back centre)",
+          "p5": "P5 (back left)",
+          "p4": "P4 (front left)"
+        }
+      },
+      "pd-q4": {
+        "prompt": "In R4 of the 5-1 (setter at the net in P4), where is the left-side hitter (OH1) when the opponent serves?",
+        "explanation": "In R4, OH1 is in P6 (back centre). As the setter occupies P4 at the net, OH1 is pushed back: they handle the left side of the W reception and prepare the back-row pipe as an alternative weapon. Covering the centre quick also falls to them."
+      },
+      "pd-q5": {
+        "prompt": "After an attack by our opposite in zone 2, who must drop to the 3 m line to cover the opposing block's return?",
+        "explanation": "Attack coverage is done by the players close to the attacker: the left-side hitter (opposite side) drops in an arc, the front-row middle stays high to block, and the setter (if in the back row) drops too. The aim: dig a blocked ball to restart immediately. Without coverage, a returned block means a lost point.",
+        "options": {
+          "oh-mb": "The left-side hitter and the front-row middle",
+          "libero": "The libero only",
+          "setter-only": "The setter only",
+          "nobody": "Nobody, we are already preparing the defence"
+        }
+      },
+      "pd-q6": {
+        "prompt": "In R3 of the 5-1, the opposite (OPP) is at the net. Where are they to prepare their attack in zone 2?",
+        "explanation": "In R3, the opposite is in P2 (front right) at the net. It is their natural attack zone: they hit from the right side, most often on the short diagonal or down the line. The rotation is offensive: 3 attackers at the net (opposite P2 + middle P3 + outside P4), made possible by the setter's long penetration."
+      }
+    }
+  },
+  "systemes": {
+    "title": "Recognising the systems",
+    "subtitle": "5-1, 6-2, 4-2: pros, cons and choosing by level",
+    "description": "Identify the system from a description or a diagram. Understand why each system exists and which one to use for your team.",
+    "questions": {
+      "sys-q1": {
+        "prompt": "A single player distributes across all 6 rotations. When they are at the net, the opposite takes half of the attacks to keep the offence balanced. Which system is it?",
+        "explanation": "This is the 5-1: one setter (S) + one opposite (OPP) diagonally across from each other. The opposite makes up for the attack when the setter is in the front row (rotations 4-5-6). It is the competition standard because it maximises role specialisation.",
+        "options": {
+          "5-1": "5-1 system",
+          "6-2": "6-2 system",
+          "4-2": "4-2 system",
+          "4v4": "4v4 Diamond system"
+        }
+      },
+      "sys-q2": {
+        "prompt": "Two setters on the court, diagonally across from each other. The back-row setter distributes (2nd touch after penetrating), the front-row setter plays as a third attacker. Which system?",
+        "explanation": "This is the 6-2: 2 setters (S + S2), 6 attackers (the 2 setters take their turn attacking when they are in the front row). Ideal for teams that always want 3 attackers at the net, at the cost of having to train 2 setters.",
+        "options": {
+          "5-1": "5-1 system",
+          "6-2": "6-2 system",
+          "4-2": "4-2 system",
+          "5v5": "5v5 system"
+        }
+      },
+      "sys-q3": {
+        "prompt": "Two setters diagonally across from each other, but it is the FRONT-row setter who distributes. Only 2 attackers at the net per rotation. No standard libero. Which system?",
+        "explanation": "This is the 4-2: the front-row setter distributes (no penetration), the back-row setter only plays defence. A simple system, ideal for beginners or recreational play: less offensive (only 2 attackers at the net) but easy to put in place.",
+        "options": {
+          "5-1": "5-1 system",
+          "6-2": "6-2 system",
+          "4-2": "4-2 system",
+          "libre": "Free system"
+        }
+      },
+      "sys-q4": {
+        "prompt": "A team of juniors is discovering volleyball at a club. Which system is best suited to their first season?",
+        "explanation": "The 4-2 is the entry system: little overlap to memorise, no penetration, the front-row setter takes all the 2nd touches. Young players can focus on the fundamentals (reception, overhead pass, attack) without the complexity of the 5-1. The move to the 5-1 then comes naturally.",
+        "options": {
+          "4-2": "The 4-2 (no penetration)",
+          "5-1": "The 5-1 (competition standard)",
+          "6-2": "The 6-2 (2 setters)",
+          "libre": "Free system with a rotating setter"
+        }
+      },
+      "sys-q5": {
+        "prompt": "In this diagram, the main setter (S) is at the net in P2 on the right, and the 2nd setter (S2) is in the back left in P5. This is the rotation where the opposite does not exist as a separate role. Which system?",
+        "explanation": "This is R6 of the 6-2: main setter at the net on the right (P2), 2nd setter in the back left. Note: the 2 setters (in purple and red) visually replace the \"opposite\" role of the 5-1. In the 6-2 it is the front-row setter (in P2 here) who hits as the third attacker, like an opposite."
+      },
+      "sys-q6": {
+        "prompt": "A key advantage of the 5-1 over the 6-2: ",
+        "explanation": "The 5-1 maximises specialisation: a single setter to train (a single distribution style to learn) and specialised attackers in each position. The 6-2 requires 2 setters of comparable standard. That is why the 5-1 is the reference as soon as you are aiming for performance, at the price of a heavy reliance on that single setter.",
+        "options": {
+          "specialisation": "Maximum specialisation (one setter, one style)",
+          "attackers": "3 attackers at the net in every rotation",
+          "no-pen": "No penetration needed",
+          "libero": "No need for a libero"
+        }
+      }
+    }
+  },
+  "lecture-jeu": {
+    "title": "Reading the game",
+    "subtitle": "Server, setter and attacker cues, plus the golden rule of blocking",
+    "description": "Six questions on the cues to read in real time: the server's run-up, the setter's gaze, the attacker's shoulder. Taken from the Reading the game guide.",
+    "questions": {
+      "lj-q1": {
+        "prompt": "The opposing server steps back 3 m behind the end line, tosses the ball high and starts a run-up. What do you prepare for?",
+        "explanation": "This is the signature of a jump topspin serve: long run-up, high toss, \"smash\"-style attack. The ball will arrive flat and heavy. You need to move your reception zone back, lower your platform and get ready to absorb a very powerful serve. Rule: \"run-up = jump serve → step back\".",
+        "options": {
+          "jump-topspin": "A jump topspin → move your reception zone back",
+          "float": "A short float → move up towards the net",
+          "cuillere": "A lobbed underhand serve → stay put",
+          "skyball": "A sky ball → look up"
+        }
+      },
+      "lj-q2": {
+        "prompt": "The opposing setter receives a perfect ball, shoulders square to the net, and looks up towards their right side. What are you likely to defend?",
+        "explanation": "The setter's gaze is the most reliable clue to their direction. If they look right (zone 2 on their side = your left side), they will distribute to their right-side opposite. Your left side (P4) must form the block, and your P5 defender absorbs the long diagonal. Intermediate+ level cue.",
+        "options": {
+          "right-wing": "An attack on the opposing right side (your left)",
+          "middle": "A centre quick",
+          "back": "A back-row pipe",
+          "no-info": "Impossible to tell, the gaze gives nothing away"
+        }
+      },
+      "lj-q3": {
+        "prompt": "At the moment the opposing attacker jumps, their right shoulder is drawn back behind their ear (strong rotation). Where is their shot going?",
+        "explanation": "A heavily loaded shoulder means maximum power in the direction of the arm. The left arm (guide side) points to the target. The more the shoulder is drawn back, the more the attacker is looking for a long diagonal or a powerful line shot. Conversely, a barely loaded shoulder signals a short placement (cobra, poke). An advanced cue that can be read in the last 2 steps.",
+        "options": {
+          "power": "A powerful shot on the long diagonal or down the line",
+          "tip": "A short placement (poke or cobra)",
+          "sharp": "A short diagonal onto the 3 m line",
+          "cant-tell": "Nothing can be deduced from the shoulder"
+        }
+      },
+      "lj-q4": {
+        "prompt": "You are the defending middle in R1. The opposing setter looks up at their front-row middle, who is already starting a quick run. What do you do?",
+        "explanation": "This is the classic commit block scenario: you jump with the middle as soon as they start their run, to block the quick. Risk: if the setter changes target mid-pass (a slide to the outside), you will already have come back down. The commit is used when the setter is very readable and you accept the gamble. By contrast, read blocking waits for the set before reacting.",
+        "options": {
+          "commit": "Commit block: jump with the opposing middle",
+          "wait": "Wait for the trajectory of the set (read)",
+          "retreat": "Drop back into defence for the pipe",
+          "spread": "Stretch to block the whole width"
+        }
+      },
+      "lj-q5": {
+        "prompt": "In pre-match scouting, you learn that their number 10 hits the short diagonal 95% of the time. How do you adjust your defence when they attack from the left side?",
+        "explanation": "If you know they hit the short diagonal (the area close to the net on your right side), you bring the P1 defender (back right) closer to the net and shift the block to close the short line. This is scouting applied directly: you do not defend \"everywhere\", you defend where the data points you. Cue: \"scouting turns statistical defence into targeted defence\".",
+        "options": {
+          "shift": "Bring the P1 defender closer to the net and close the short diagonal",
+          "symmetric": "Symmetric defence, ignore the stat",
+          "line": "Seal the line rather than the diagonal",
+          "middle": "All defenders drop back in an arc"
+        }
+      },
+      "lj-q6": {
+        "prompt": "The golden rule of blocking, as taught by FIVB coaches: ",
+        "explanation": "The golden rule: \"You don't block the ball, you block the attacker\". You watch the attacker (shoulder, run-up, gaze) and position yourself facing them to close their angle, not facing the ball. A blocker who follows the ball reacts too late; one who anticipates the attacker arrives on time. From the Reading the game guide, \"golden rule\" section.",
+        "options": {
+          "attacker": "You block the attacker, not the ball",
+          "ball": "You block the ball, not the attacker",
+          "setter": "You block the setter, not the attacker",
+          "middle": "You block the middle, whatever the set"
+        }
+      }
+    }
+  },
+  "service": {
+    "title": "Quick test: serving",
+    "subtitle": "Toss, float and target zones",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "sv-q1": {
+        "prompt": "Your serve is inconsistent. What should you stabilise first?",
+        "explanation": "About 80% of serving errors come from the toss. You stabilise the toss before looking for power: consistency matters more than force.",
+        "options": {
+          "power": "Hitting power",
+          "toss": "The ball toss",
+          "run-up": "The length of the run-up",
+          "spin": "The spin on the ball"
+        }
+      },
+      "sv-q2": {
+        "prompt": "Why is the trajectory of a float serve unpredictable?",
+        "explanation": "With no spin, the ball creates asymmetric vortices at a critical speed (~12-13 m/s). They generate random lateral forces: this is the \"knuckleball\" effect. It is the serve to master first.",
+        "options": {
+          "topspin": "Because it spins very fast",
+          "knuckleball": "Because it is hit with no spin, which creates random lateral forces",
+          "height": "Because it is hit as high as possible",
+          "speed": "Because it is always hit at full speed"
+        }
+      },
+      "sv-q3": {
+        "prompt": "Against a team playing a 5-1, which target blocks the setter's release?",
+        "explanation": "Serving to zone 1 (back right) hampers the setter's release in the 5-1 system. Aiming at the space between two receivers (the seams) is also more effective than aiming at a player.",
+        "options": {
+          "zone-5": "Zone 5 (deep back left)",
+          "zone-1": "Zone 1 (back right)",
+          "zone-6": "Zone 6 (deep back centre)",
+          "zone-4": "Zone 4 (short front left)"
+        }
+      }
+    }
+  },
+  "reception": {
+    "title": "Quick test: reception",
+    "subtitle": "Position, platform and movement",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "rc-q1": {
+        "prompt": "In the ready position, what do you do with your arms before the ball arrives?",
+        "explanation": "The arms stay apart (not joined), bent at waist height. Joining them too early slows movement and prevents a late choice between forearm pass and overhead pass.",
+        "options": {
+          "joined": "I already join them in a platform",
+          "dissociated": "I keep them apart, bent at waist height",
+          "down": "I let them hang by my sides",
+          "raised": "I raise them above my head"
+        }
+      },
+      "rc-q2": {
+        "prompt": "How do you direct the ball to your target with a forearm pass?",
+        "explanation": "The ball goes where the platform faces: the angle of the platform controls the direction. The platform is passive, the legs are active: you do not swing the arms.",
+        "options": {
+          "swing": "By swinging the arms hard towards the target",
+          "shoulders": "By only turning the head towards the target",
+          "platform": "By orienting the platform towards the target",
+          "wrists": "By snapping the wrists at contact"
+        }
+      },
+      "rc-q3": {
+        "prompt": "The ball passes over you, behind. What do you do?",
+        "explanation": "You pivot the foot then move back with side-steps (drop step). Running backwards makes you lose your balance. If it is too late, you turn and create a platform to the side.",
+        "options": {
+          "backwards": "I run backwards as fast as I can",
+          "jump": "I jump to intercept the ball with both hands",
+          "drop-step": "I pivot the foot then step back with side-steps (drop step)",
+          "let-go": "I let the ball go, it is too late"
+        }
+      }
+    }
+  },
+  "contre": {
+    "title": "Quick test: blocking",
+    "subtitle": "Timing, gaze and choosing the type of block",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "ct-q1": {
+        "prompt": "On a high ball to the outside, when do you jump relative to the attacker?",
+        "explanation": "The blocker jumps after the attacker, with a delay of about 0.2 to 0.3 seconds on a high ball (3rd tempo). Jumping at the same time or before means coming down too early. Only the quick is blocked at the same time as, or slightly before, the hitter (commit block).",
+        "options": {
+          "before": "Before them, to be up there already",
+          "same": "At the same time as them",
+          "after": "About 0.2 to 0.3 s after them",
+          "no-jump": "I don't jump, I defend"
+        }
+      },
+      "ct-q2": {
+        "prompt": "What should an elite blocker watch at the moment of the attack?",
+        "explanation": "The sequence is ball, setter, ball, then the hitter's shoulder. The attacker's shoulder and arm show the direction of the hit before contact.",
+        "options": {
+          "ball": "Only the ball",
+          "net": "The top of the net",
+          "coach": "The coach's instructions",
+          "shoulder": "The attacker's shoulder and arm"
+        }
+      },
+      "ct-q3": {
+        "prompt": "What is the main risk of the commit block?",
+        "explanation": "The middle decides to jump before the setter's release. If the setter sets elsewhere, the middle is completely out of the play. Read blocking, which waits for the setter's decision, is recommended at all amateur levels.",
+        "options": {
+          "slow": "They arrive too late on the quick",
+          "out": "If the setter sets elsewhere, the middle is out of the play",
+          "knees": "It tires the knees more",
+          "net": "It always causes a net fault"
+        }
+      }
+    }
+  },
+  "passe": {
+    "title": "Quick test: setting",
+    "subtitle": "Hands, feet and distribution options",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "ps-q1": {
+        "prompt": "Why should a setter adjust their feet BEFORE contact rather than turn the torso in the air?",
+        "explanation": "The opposing block reads the feet, not the hands. A setter who adjusts their feet before contact can distribute to 3 options without giving anything away. A torso turning in the air is readable and gets blocked.",
+        "options": {
+          "balance": "Only to keep their balance",
+          "power": "To give the set more power",
+          "unreadable": "To stay unreadable: the block reads the feet, not the hands",
+          "rule": "Because the rules require it"
+        }
+      },
+      "ps-q2": {
+        "prompt": "The reception arrives 3 m from the net, perfect. What options do you have?",
+        "explanation": "On a perfect pass, 3 options are live: the quick (middle), the 2nd tempo (outside) and the back row (opposite). You choose according to the opposing block. The more the reception degrades, the fewer options remain.",
+        "options": {
+          "one": "Only one: the outside hitter in zone 4",
+          "three": "Three: quick, 2nd tempo and back-row attack",
+          "none": "None, you have to play it safe",
+          "two": "Two: high ball in zone 4 or zone 2, no quick"
+        }
+      },
+      "ps-q3": {
+        "prompt": "How should your hands be for an overhead set?",
+        "explanation": "The thumbs and index fingers form a triangular window above the forehead. The ball is touched by the pads of the spread fingers, not the palm, and the elbows stay open outwards and upwards.",
+        "options": {
+          "palms": "The ball is touched by the palms",
+          "elbows-in": "The elbows point forward",
+          "low": "The hands stay at chest height",
+          "triangle": "A triangle above the forehead, contact with the finger pads"
+        }
+      }
+    }
+  },
+  "jeu-collectif": {
+    "title": "Quick test: team play",
+    "subtitle": "Game phases, coverage and communication",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "jc-q1": {
+        "prompt": "Which phase of team play is the hardest?",
+        "explanation": "The transition: every player is already committed elsewhere. The setter must anticipate their run to the net from the defence, and the attackers restart their approach from any position.",
+        "options": {
+          "side-out": "Side-out (reception, set, attack)",
+          "transition": "The transition",
+          "service": "Serving",
+          "timeout": "The timeout"
+        }
+      },
+      "jc-q2": {
+        "prompt": "How far from the attacker does the coverage stand?",
+        "explanation": "About 2 m: the golden zone. Too close, and the ball flies over the players; too far, and there is no time to defend. Coverage is played low, platform ready, because the ball returned by the block arrives fast and low.",
+        "options": {
+          "one": "Right up against them, within 50 cm",
+          "five": "About 5 m",
+          "two": "About 2 m",
+          "back": "At the back of the court"
+        }
+      },
+      "jc-q3": {
+        "prompt": "Two players head for the same ball in reception. What should happen?",
+        "explanation": "The first to shout \"Mine!\" takes the ball. There is no double call on the same ball: constant communication avoids collisions and balls dropping between two players.",
+        "options": {
+          "both": "Both play it, the best one wins",
+          "silent": "Nobody speaks so as not to get in the way",
+          "first-call": "The first to shout \"Mine!\" takes the ball",
+          "closest-net": "The one closest to the net always takes the ball"
+        }
+      }
+    }
+  },
+  "erreurs-typiques": {
+    "title": "Quick test: typical mistakes",
+    "subtitle": "The classic pitfalls of each position",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "et-q1": {
+        "prompt": "Where should the middle blocker have their eyes to read the opposing setter?",
+        "explanation": "On the opposing setter's hands, not on the ball: watching the set go up comes too late to move. You decide your block before the ball leaves, and you wait for the setter's hands to commit before jumping to the quick.",
+        "options": {
+          "ball": "On the ball",
+          "hands": "On the opposing setter's hands",
+          "referee": "On the referee",
+          "floor": "On the floor, to stay ready"
+        }
+      },
+      "et-q2": {
+        "prompt": "What is the mistake of the opposite who \"admires their smash\"?",
+        "explanation": "They do not move into coverage: if the opposing block sends the ball back, nobody is there to defend it. The reflex to work on is \"I attack THEN I drop to the 3 m line to cover\".",
+        "options": {
+          "hit-out": "They systematically hit out of bounds",
+          "cover": "They do not drop to cover their attack at the 3 m line",
+          "net": "They touch the net on every attack",
+          "serve": "They serve too short"
+        }
+      },
+      "et-q3": {
+        "prompt": "Which of these actions is forbidden for the libero?",
+        "explanation": "The libero can NOT attack. They stay behind the 3 m line for overhead sets, and in reception they have priority: they must call loudly (\"libero\", \"mine\") to avoid collisions.",
+        "options": {
+          "attack": "Attacking",
+          "receive": "Receiving the serve",
+          "call": "Calling the ball out loud",
+          "dig": "Defending an opposing attack"
+        }
+      }
+    }
+  },
+  "indoor-beach": {
+    "title": "Quick test: indoor vs beach",
+    "subtitle": "What changes when you move onto the sand",
+    "description": "Three questions to check that you have retained the essentials of this guide.",
+    "questions": {
+      "ib-q1": {
+        "prompt": "On the beach, does the block count as a touch?",
+        "explanation": "Yes: on the beach, the block is a touch, so the team only has 2 touches left. Indoors, the block does not count and 3 touches remain.",
+        "options": {
+          "no": "No, as indoors",
+          "yes": "Yes, only 2 touches are left",
+          "only-first": "Only the first block of the rally",
+          "no-block": "There is no block on the beach"
+        }
+      },
+      "ib-q2": {
+        "prompt": "Which indoor attacking shot is forbidden on the beach when played with the fingertips?",
+        "explanation": "The fingertip tip is forbidden on the beach (fist, palm or locked fingers only). It is replaced by the cut shot, the poke (knuckles) or the roll shot, and you have to vary your shots rather than rely on power alone.",
+        "options": {
+          "smash": "The smash",
+          "quick": "The quick",
+          "tip": "The fingertip tip",
+          "serve": "The float serve"
+        }
+      },
+      "ib-q3": {
+        "prompt": "How many players per team on the beach, and how often do you switch sides?",
+        "explanation": "Beach is played 2 per team, with no rotation or substitution, switching sides every 7 points (5 in a tie-break) to even out wind and sun.",
+        "options": {
+          "six": "6 players, no switching of sides during the set",
+          "four": "4 players, switching sides every point",
+          "two-set": "2 players, switching sides only at each set",
+          "two-seven": "2 players, switching sides every 7 points"
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import type { QuizScore } from '../types';
 import { Q } from './styles';
 
@@ -12,10 +13,11 @@ type Props = {
 // Final screen shown after the last question. Highlights the score, whether
 // it beats the previous best, and offers Replay + Back to hub.
 export function QuizResult({ score, total, previousBest, onReplay, onBackToHub }: Props) {
+  const { t } = useTranslation();
   const percent = Math.round((score / total) * 100);
   const isPerfect = score === total;
   const isPersonalBest = previousBest !== undefined && score > previousBest;
-  const verdict = verdictFor(percent);
+  const verdict = t(`quiz.verdict.${verdictKey(percent)}`);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -37,7 +39,7 @@ export function QuizResult({ score, total, previousBest, onReplay, onBackToHub }
             marginBottom: 12,
           }}
         >
-          {isPerfect ? '★ SANS FAUTE' : '★ RÉSULTAT'}
+          {isPerfect ? t('quiz.flawless') : t('quiz.result')}
         </div>
         <div
           style={{
@@ -74,29 +76,30 @@ export function QuizResult({ score, total, previousBest, onReplay, onBackToHub }
               letterSpacing: '0.1em',
             }}
           >
-            ★ NOUVEAU MEILLEUR SCORE ({previousBest} → {score})
+            {t('quiz.newBest', { previous: previousBest, score })}
           </div>
         )}
       </div>
 
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
         <button type="button" onClick={onReplay} style={Q.cta}>
-          REJOUER →
+          {t('quiz.replay')}
         </button>
         <button type="button" onClick={onBackToHub} style={Q.ctaSecondary}>
-          ← FERMER LE QUIZ
+          {t('quiz.close')}
         </button>
       </div>
     </div>
   );
 }
 
-function verdictFor(percent: number): string {
-  if (percent === 100) return 'Maîtrise totale';
-  if (percent >= 80) return 'Bien dominé';
-  if (percent >= 60) return 'Bon départ — revois les justifications';
-  if (percent >= 40) return 'Encore du chemin — relis les guides liés';
-  return 'À retravailler avec les guides';
+// Key of the verdict in the `quiz.verdict` common namespace.
+function verdictKey(percent: number): 'perfect' | 'high' | 'good' | 'mid' | 'low' {
+  if (percent === 100) return 'perfect';
+  if (percent >= 80) return 'high';
+  if (percent >= 60) return 'good';
+  if (percent >= 40) return 'mid';
+  return 'low';
 }
 
 export type { QuizScore };
