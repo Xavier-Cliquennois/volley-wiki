@@ -20,7 +20,9 @@ const CONTACT_DURATION = 0.2;
 
 // How far above the striking hand a set climbs before coming down onto it.
 const SET_LIFT = 0.8;
-// A grounded player can hold the ball up to this height (hands above the head).
+// A grounded player holds the ball between these heights (hands at the hips
+// up to hands above the head); lower, the ball lies on the floor.
+const HOLD_MIN_HEIGHT = 0.6;
 const HOLD_MAX_HEIGHT = 2.2;
 // Horizontal distance under which a grounded player is considered to hold the ball.
 const HOLD_RADIUS = 0.8;
@@ -188,6 +190,22 @@ export function compileScenario(state: EditorState): Scenario {
         timeline.push(primaryBallAction);
         flights.push({ action: primaryBallAction, arrivalStep: curr, isApproach: false });
         contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
+      }
+    } else {
+      // A ball held by a player who walks away goes with him instead of
+      // staying in the air where he left it.
+      const carriedTo = carriedBallTarget(prev, curr, playersOwnedByBricks);
+      if (carriedTo) {
+        timeline.push({
+          type: 'ball_move',
+          time: transitionStart,
+          from: prev.snapshot.ballPosition,
+          to: carriedTo,
+          duration: transitionDuration,
+          arc: false,
+          curve: 'flat',
+          carried: true,
+        });
       }
     }
 
@@ -519,14 +537,41 @@ function apexOf(action: BallMoveAction): number {
     ?? (typeof action.arc === 'number' ? action.arc : Math.max(action.from[1], action.to[1]));
 }
 
-// A grounded player standing under a low enough ball holds it (a server
-// before the toss, a setter about to set).
+// A grounded player standing next to a ball at hands height holds it (a
+// server before the toss, a setter about to set).
 function isHeld(ball: [number, number, number], step: EditorStep): boolean {
-  if (ball[1] > HOLD_MAX_HEIGHT) return false;
-  if (step.snapshot.ballAttachedTo) return true;
-  return Object.values(step.snapshot.positions).some(
-    p => Math.hypot(p[0] - ball[0], p[2] - ball[2]) < HOLD_RADIUS,
-  );
+  return holderOf(ball, step) !== null;
+}
+
+function holderOf(ball: [number, number, number], step: EditorStep): string | null {
+  if (ball[1] > HOLD_MAX_HEIGHT || ball[1] < HOLD_MIN_HEIGHT) return null;
+  if (step.snapshot.ballAttachedTo) return step.snapshot.ballAttachedTo;
+  let best: string | null = null;
+  let bestDist = HOLD_RADIUS;
+  for (const [id, p] of Object.entries(step.snapshot.positions)) {
+    const d = Math.hypot(p[0] - ball[0], p[2] - ball[2]);
+    if (d < bestDist) {
+      best = id;
+      bestDist = d;
+    }
+  }
+  return best;
+}
+
+// Where a held ball goes when its holder moves during a step in which the
+// ball itself is not played: it keeps its offset to the holder.
+function carriedBallTarget(
+  prev: EditorStep,
+  curr: EditorStep,
+  playersOwnedByBricks: ReadonlySet<string>,
+): [number, number, number] | null {
+  const ball = prev.snapshot.ballPosition;
+  const holder = holderOf(ball, prev);
+  if (!holder || playersOwnedByBricks.has(holder)) return null;
+  const from = prev.snapshot.positions[holder];
+  const to = curr.snapshot.positions[holder];
+  if (!from || !to || positionsEqual(from, to)) return null;
+  return [ball[0] + to[0] - from[0], ball[1], ball[2] + to[2] - from[2]];
 }
 
 // A strike fired at the arrival by a player close to the ball means the ball

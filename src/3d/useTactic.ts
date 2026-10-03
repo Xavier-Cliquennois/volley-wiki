@@ -101,10 +101,12 @@ export const useTactic = (
           const apex = action.apex
             ?? (typeof action.arc === 'number' ? action.arc : Math.max(action.from[1], action.to[1], 2.5));
 
-          tl.to(mesh.position, { x: action.to[0], z: action.to[2], duration: action.duration, ease: 'none' }, action.time);
+          // A carried ball moves with the player holding it, at his pace.
+          const groundEase = action.carried ? 'power1.inOut' : 'none';
+          tl.to(mesh.position, { x: action.to[0], z: action.to[2], duration: action.duration, ease: groundEase }, action.time);
 
           if (curve === 'flat') {
-            tl.to(mesh.position, { y: action.to[1], duration: action.duration, ease: 'none' }, action.time);
+            tl.to(mesh.position, { y: action.to[1], duration: action.duration, ease: groundEase }, action.time);
           } else if (curve === 'floater') {
             // Slow rise, then sharp drop — the signature of a float serve that « tombe » brusquement.
             tl.to(mesh.position, { y: apex, duration: action.duration * 0.7, ease: 'power1.out' }, action.time);
