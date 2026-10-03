@@ -2,6 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCurrentLang } from '../i18n/paths';
 import { SYSTEMS } from '../systems/data';
+import { useLocalizedSystem } from '../i18n/localizeSystem';
 import type { SystemId } from '../systems/types';
 import { useDiscipline } from '../discipline/useDiscipline';
 import { Head } from '../seo/Head';
@@ -191,7 +192,7 @@ function SizeToggle({
 function SystemCard({ id }: { id: SystemId }) {
   const { t } = useTranslation('common');
   const lang = useCurrentLang();
-  const system = SYSTEMS[id];
+  const system = useLocalizedSystem(SYSTEMS[id]);
   const isAvailable = !!system;
   const subPath = system?.discipline === 'beach' ? 'beach/systems' : 'systems';
 

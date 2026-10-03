@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCurrentLang } from '../i18n/paths';
 import { getSystemById } from '../systems/data';
+import { useLocalizedSystem } from '../i18n/localizeSystem';
 import type { Rotation, RotationId } from '../systems/types';
 import RotationDiagram from '../systems/RotationDiagram';
 import LevelFilterPanel from '../components/LevelFilterPanel';
@@ -40,7 +41,7 @@ export default function SystemDetail() {
   const { t } = useTranslation('common');
   const [showMovements, setShowMovements] = useState(false);
 
-  const system = slug ? getSystemById(slug) : undefined;
+  const system = useLocalizedSystem(slug ? getSystemById(slug) : undefined);
   const hubPath = system?.discipline === 'beach' ? '/beach/systems' : '/systems';
   if (!system) {
     return <Navigate to={`/${lang}/systems`} replace />;
