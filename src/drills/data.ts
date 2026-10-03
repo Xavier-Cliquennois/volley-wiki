@@ -1,8 +1,9 @@
 import type { Drill } from './types';
 
 // Catalogue of 30 drills covering 7 skills (reception, set, attack, defense,
-// serve, block, team-play). FR content embedded — i18n extraction is a future
-// iteration (see wiki-roadmap.md).
+// serve, block, team-play). Source texts are French; other languages overlay
+// them by drill id from the `drills` locale namespace (`content`), see
+// `localizeDrill.ts`. Keep ids stable: translations are keyed on them.
 //
 // Each drill follows the roadmap format: goal / setup / level variants /
 // success criteria, plus optional coaching cues and sources.
