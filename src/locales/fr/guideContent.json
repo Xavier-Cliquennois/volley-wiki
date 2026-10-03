@@ -2424,5 +2424,145 @@
         ]
       }
     ]
+  },
+  "passe": {
+    "goldenRule": {
+      "mantra": "LE BLOC ADVERSE LIT TES PIEDS — PAS TES MAINS",
+      "body": "Un passeur qui ajuste ses pieds AVANT le contact distribue à 3 options sans donner d'indice au bloc. Un passeur qui tourne le buste en l'air est lisible et bloqué."
+    },
+    "hands": {
+      "title": "Mains et triangle",
+      "intro": "La forme des mains détermine la précision. 4 points à drilller au mur avant tout entraînement collectif.",
+      "cues": [
+        {
+          "label": "Triangle",
+          "text": "Pouces et index forment une fenêtre triangulaire juste au-dessus du front. La balle entre par cette fenêtre — pas par les paumes."
+        },
+        {
+          "label": "Doigts écartés",
+          "text": "Les pads (coussinets) des 10 doigts touchent le ballon, pas la paume. Tension légère, comme si tu tenais un ballon de basket-ball."
+        },
+        {
+          "label": "Coudes ouverts",
+          "text": "Coudes vers l'extérieur et vers le haut. Si tes coudes pointent vers l'avant, ton set sera court."
+        },
+        {
+          "label": "Finition",
+          "text": "Bras tendus en finale, pouces qui pointent vers la cible. La balle quitte les mains au-dessus du front, pas devant."
+        }
+      ]
+    },
+    "footwork": {
+      "title": "Footwork — pas du passeur",
+      "intro": "Pieds tournent en premier, mains en second. Le geste idéal finit sur le pied droit (droitier) avec le poids transféré vers la cible.",
+      "steps": [
+        "Pas 1 — gauche : avance dynamique vers la zone d'arrivée prévue du ballon.",
+        "Pas 2 — droit : ajustement, le pied droit arrive sous le ballon.",
+        "Finition sur pied droit : le poids transfère du gauche au droit pendant le contact, jamais l'inverse.",
+        "Nez sous le ballon avant le contact — si tu vois ton triangle, le ballon est trop devant."
+      ]
+    },
+    "decisions": {
+      "title": "Décisions de distribution",
+      "intro": "La qualité de réception conditionne tes options. Plus la passe est précise, plus tu peux varier les tempos.",
+      "items": [
+        {
+          "label": "Passe parfaite (à 3 m du filet)",
+          "text": "3 options actives : quick (MB), 2e tempo (OH), arrière (OPP). Choisir selon le bloc adverse."
+        },
+        {
+          "label": "Passe correcte (3-5 m)",
+          "text": "2 options : OH en zone 4 (set haut) ou OPP en zone 2. Le quick n'est plus jouable."
+        },
+        {
+          "label": "Passe difficile (> 5 m ou hors zone)",
+          "text": "Set sécurité — zone 4 haut. L'objectif n'est plus de surprendre, c'est de garder l'attaque."
+        },
+        {
+          "label": "Sur réception au filet",
+          "text": "Saut-set ou bump-set (manchette). Pas de set debout — tu serais en faute de filet."
+        }
+      ]
+    }
+  },
+  "jeuCollectif": {
+    "goldenRule": {
+      "mantra": "COUVERTURE À CHAQUE ATTAQUE — SANS EXCEPTION",
+      "body": "Un attaquant qui sait que son équipe le couvre ose plus. Une équipe qui ne couvre pas perd 30% de ses attaques bloquées sur des balles récupérables."
+    },
+    "phases": {
+      "title": "Les 3 phases du jeu",
+      "intro": "Tout point passe par 1, 2 ou 3 de ces phases. Le jeu collectif consiste à les enchaîner sans temps mort, en sachant où être quand.",
+      "items": [
+        {
+          "phase": "Phase 1 — Side-out (réception)",
+          "items": [
+            "R-S-A : réception → passe → attaque, sans transition.",
+            "Couverture immédiate de l'attaquant par 3 joueurs en triangle.",
+            "Objectif : marquer ou forcer une free ball adverse."
+          ]
+        },
+        {
+          "phase": "Phase 2 — Défense / contre",
+          "items": [
+            "Bloc + arrière : 2-3 blockers + 3 défenseurs en couverture des angles.",
+            "Communication en continu : \"ligne\", \"diag\", \"tip\".",
+            "Si défense propre → enchaîner attaque rapide en transition."
+          ]
+        },
+        {
+          "phase": "Phase 3 — Transition",
+          "items": [
+            "Phase la plus difficile : tous les joueurs sont déjà mobilisés ailleurs.",
+            "Le passeur doit anticiper sa course vers le filet dès la défense.",
+            "Les attaquants reprennent leur course d'approche depuis n'importe quelle position."
+          ]
+        }
+      ]
+    },
+    "coverage": {
+      "title": "Couverture en triangle",
+      "intro": "Chaque attaque doit déclencher 3 joueurs en couverture. Le moment où le ballon est bloqué et revient dans ton camp est trop tard pour réagir.",
+      "items": [
+        {
+          "label": "Triangle de couverture",
+          "text": "3 joueurs à 2 m de l'attaquant : passeur côté ligne, libero/back-row côté diagonale, opposite (ou OH non-attaquant) derrière."
+        },
+        {
+          "label": "Distance",
+          "text": "Trop près = le ballon survole, trop loin = pas le temps de défendre. 2 m est la zone d'or."
+        },
+        {
+          "label": "Posture",
+          "text": "Bas, plateforme prête. Le ballon couvert arrive vite et bas (rebond bloc)."
+        },
+        {
+          "label": "Erreur classique",
+          "text": "Joueurs qui regardent leur attaquant frapper — ils ne sont pas prêts pour la couverture. Yeux sur le bloc adverse."
+        }
+      ]
+    },
+    "communication": {
+      "title": "Communication",
+      "intro": "Une équipe silencieuse perd des ballons sur des doubles cris (deux joueurs vont au même ballon) ou des \"abandons\" (personne n'y va). Parler n'est pas optionnel.",
+      "items": [
+        {
+          "label": "Avant le service",
+          "text": "Annonce du serveur (\"zone 1\", \"zone 5\"). Annonce des rôles défensifs (\"je libère 2\", \"tu prends ligne\")."
+        },
+        {
+          "label": "Pendant la réception",
+          "text": "\"Mine!\" / \"Yours!\" — le premier à crier prend. Pas de double cri sur la même balle."
+        },
+        {
+          "label": "Sur l'attaque adverse",
+          "text": "\"Tip!\" si feinte courte, \"Out!\" si balle sortante. Personne ne défend une out."
+        },
+        {
+          "label": "Après le point",
+          "text": "Reset rapide — 1 phrase pour corriger ou féliciter. Pas de discussion longue qui casse le tempo."
+        }
+      ]
+    }
   }
 }

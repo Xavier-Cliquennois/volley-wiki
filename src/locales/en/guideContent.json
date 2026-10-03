@@ -1711,5 +1711,145 @@
       "body2": "The key: apply the base rule (same side = move up, opposite = move back), watch the hitter, communicate with your teammates, and never be afraid to dive for a ball.",
       "mantra": "Defense wins matches."
     }
+  },
+  "passe": {
+    "goldenRule": {
+      "mantra": "THE OPPOSING BLOCK READS YOUR FEET — NOT YOUR HANDS",
+      "body": "A setter who adjusts their feet BEFORE contact can distribute to 3 options without giving the block any clue. A setter who turns the torso in the air is easy to read and gets blocked."
+    },
+    "hands": {
+      "title": "Hands and triangle",
+      "intro": "Hand shape determines accuracy. 4 points to drill against a wall before any team training.",
+      "cues": [
+        {
+          "label": "Triangle",
+          "text": "Thumbs and index fingers form a triangular window just above the forehead. The ball enters through that window — not through the palms."
+        },
+        {
+          "label": "Spread fingers",
+          "text": "The pads of all 10 fingers touch the ball, not the palm. Light tension, as if you were holding a basketball."
+        },
+        {
+          "label": "Open elbows",
+          "text": "Elbows out and up. If your elbows point forward, your set will fall short."
+        },
+        {
+          "label": "Finish",
+          "text": "Arms extended at the end, thumbs pointing at the target. The ball leaves the hands above the forehead, not in front of it."
+        }
+      ]
+    },
+    "footwork": {
+      "title": "Footwork — the setter's steps",
+      "intro": "Feet turn first, hands second. The ideal motion finishes on the right foot (right-handed) with the weight transferred toward the target.",
+      "steps": [
+        "Step 1 — left: dynamic move toward the ball's expected landing zone.",
+        "Step 2 — right: adjustment, the right foot arrives under the ball.",
+        "Finish on the right foot: weight transfers from left to right during contact, never the other way around.",
+        "Nose under the ball before contact — if you can see your triangle, the ball is too far in front."
+      ]
+    },
+    "decisions": {
+      "title": "Distribution decisions",
+      "intro": "Reception quality determines your options. The more accurate the pass, the more you can vary the tempos.",
+      "items": [
+        {
+          "label": "Perfect pass (3 m from the net)",
+          "text": "3 active options: quick (MB), 2nd tempo (OH), back set (OPP). Choose based on the opposing block."
+        },
+        {
+          "label": "Decent pass (3-5 m)",
+          "text": "2 options: OH in zone 4 (high set) or OPP in zone 2. The quick is no longer playable."
+        },
+        {
+          "label": "Difficult pass (> 5 m or off target)",
+          "text": "Safety set — high ball to zone 4. The goal is no longer to surprise, it is to keep the attack alive."
+        },
+        {
+          "label": "On a pass at the net",
+          "text": "Jump set or bump set (forearm pass). No standing overhead set — you would be called for a net fault."
+        }
+      ]
+    }
+  },
+  "jeuCollectif": {
+    "goldenRule": {
+      "mantra": "COVER EVERY ATTACK — NO EXCEPTIONS",
+      "body": "An attacker who knows the team has their back dares more. A team that does not cover loses 30% of its blocked attacks on balls that could have been recovered."
+    },
+    "phases": {
+      "title": "The 3 phases of the game",
+      "intro": "Every point goes through 1, 2 or 3 of these phases. Team play means chaining them without dead time, knowing where to be and when.",
+      "items": [
+        {
+          "phase": "Phase 1 — Side-out (reception)",
+          "items": [
+            "R-S-A: reception → set → attack, with no transition.",
+            "Immediate coverage of the attacker by 3 players in a triangle.",
+            "Goal: score or force a free ball from the opponent."
+          ]
+        },
+        {
+          "phase": "Phase 2 — Defense / block",
+          "items": [
+            "Block + back row: 2-3 blockers + 3 defenders covering the angles.",
+            "Continuous communication: \"line\", \"diag\", \"tip\".",
+            "If the defense is clean → follow with a quick attack in transition."
+          ]
+        },
+        {
+          "phase": "Phase 3 — Transition",
+          "items": [
+            "The hardest phase: every player is already committed elsewhere.",
+            "The setter must anticipate their run to the net as soon as the defense starts.",
+            "Attackers restart their approach from any position."
+          ]
+        }
+      ]
+    },
+    "coverage": {
+      "title": "Triangle coverage",
+      "intro": "Every attack must trigger 3 players into coverage. By the time the ball is blocked and comes back to your side, it is too late to react.",
+      "items": [
+        {
+          "label": "Coverage triangle",
+          "text": "3 players 2 m from the attacker: setter on the line side, libero/back-row player on the diagonal side, opposite (or non-attacking OH) behind."
+        },
+        {
+          "label": "Distance",
+          "text": "Too close = the ball flies over you, too far = no time to defend. 2 m is the sweet spot."
+        },
+        {
+          "label": "Posture",
+          "text": "Low, platform ready. The covered ball arrives fast and low (block rebound)."
+        },
+        {
+          "label": "Classic mistake",
+          "text": "Players watching their attacker hit — they are not ready for coverage. Eyes on the opposing block."
+        }
+      ]
+    },
+    "communication": {
+      "title": "Communication",
+      "intro": "A silent team loses balls to double calls (two players go for the same ball) or \"drops\" (nobody goes). Talking is not optional.",
+      "items": [
+        {
+          "label": "Before the serve",
+          "text": "Call the server's zone (\"zone 1\", \"zone 5\"). Call defensive roles (\"I free 2\", \"you take line\")."
+        },
+        {
+          "label": "During reception",
+          "text": "\"Mine!\" / \"Yours!\" — the first to call takes it. No double call on the same ball."
+        },
+        {
+          "label": "On the opposing attack",
+          "text": "\"Tip!\" for a short feint, \"Out!\" for a ball going out. Nobody defends an out."
+        },
+        {
+          "label": "After the point",
+          "text": "Quick reset — 1 sentence to correct or praise. No long discussion that breaks the tempo."
+        }
+      ]
+    }
   }
 }
