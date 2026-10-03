@@ -431,18 +431,21 @@ function buildSplitBallMove(
     apex: approachApex,
   };
 
-  // Segment 2: the spike. Flat, fast trajectory to the final destination.
-  // For BLOC, the "spike" segment is the rebound — still flat but slower.
-  const isBloc = brick.kind === 'BLOC';
+  // Segment 2: the spike. Flat, fast trajectory to the final destination,
+  // unless the step asks for an arc: a topspin back-row attack dipping over
+  // the net, a tip lobbed over the block. For BLOC, the segment is the
+  // rebound, always an arc.
+  const isArc = brick.kind === 'BLOC' || curr.ballTrajectory?.curve === 'arc';
+  const seg2Apex = Math.max(contactY, to[1], curr.ballTrajectory?.apex ?? 0);
   const seg2: BallMoveAction = {
     type: 'ball_move',
     time: roundTime(transitionStart + seg1Dur),
     from: contact,
     to,
     duration: seg2Dur,
-    arc: false,
-    curve: isBloc ? 'arc' : 'flat',
-    apex: isBloc ? Math.max(contactY, to[1]) : undefined,
+    arc: isArc ? seg2Apex : false,
+    curve: isArc ? 'arc' : 'flat',
+    apex: isArc ? seg2Apex : undefined,
   };
 
   return [seg1, seg2];
@@ -456,15 +459,15 @@ type BallFlight = {
   isApproach: boolean;
 };
 
-// A ball never waits in the air. When a flight ends above the floor and the
-// ball stays there for a while (the next step does not move it), nobody holds
-// it and nobody touches it on arrival, the flight is adjusted:
+// A ball never waits in the air. When a flight ends above the floor, nobody
+// holds the ball and nobody touches it on arrival, the flight is adjusted:
 //   - the next flight carries the ball to a jumping player's hand: both are
 //     merged into one flight that reaches the hand exactly at contact time
-//     (typically a set that lands next to the hitter one step before the smash);
-//   - another flight follows: this one lasts until the next one starts, so the
-//     ball arrives exactly when it is played again;
-//   - nothing follows: the ball falls to the floor under gravity.
+//     (typically a set that lands next to the hitter before the smash step);
+//   - otherwise, when the ball stays there for a while (the next step does
+//     not move it): the flight lasts until the next one starts, so the ball
+//     arrives exactly when it is played again, or, when nothing follows, the
+//     ball falls to the floor under gravity.
 function settleAirborneBall(
   timeline: TimelineAction[],
   flights: BallFlight[],
@@ -477,12 +480,13 @@ function settleAirborneBall(
     const end = a.time + a.duration;
     const next = ordered[i + 1];
     const nextStart = next ? next.action.time : scenarioEnd;
+    const flowsIntoHit = next !== undefined && next.isApproach && a.curve !== 'flat';
     if (a.to[1] < AIRBORNE_MIN_HEIGHT) continue;
-    if (nextStart - end < 0.05) continue;
+    if (!flowsIntoHit && nextStart - end < 0.05) continue;
     if (isHeld(a.to, flight.arrivalStep)) continue;
     if (isTouchedOnArrival(timeline, a.to, flight.arrivalStep, end)) continue;
 
-    if (next && next.isApproach && a.curve !== 'flat') {
+    if (next && flowsIntoHit) {
       const b = next.action;
       const apex = Math.max(apexOf(a), b.to[1]);
       a.to = b.to;
@@ -525,8 +529,11 @@ function isHeld(ball: [number, number, number], step: EditorStep): boolean {
   );
 }
 
-// A contact pose fired at the arrival by a player close to the ball means the
-// ball is played right there (a block, a smash): its flight is not adjusted.
+// A strike fired at the arrival by a player close to the ball means the ball
+// is played right there: its flight is not adjusted. ARM_SPIKE is left out on
+// purpose: it is also the windup an attacker takes while jumping to the ball.
+const STRIKE_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE']);
+
 function isTouchedOnArrival(
   timeline: TimelineAction[],
   ball: [number, number, number],
@@ -534,7 +541,7 @@ function isTouchedOnArrival(
   time: number,
 ): boolean {
   return timeline.some(action => {
-    if (action.type !== 'player_pose' || !CONTACT_POSES.has(action.pose)) return false;
+    if (action.type !== 'player_pose' || !STRIKE_POSES.has(action.pose)) return false;
     if (Math.abs(action.time - time) > 0.06) return false;
     const pos = step.snapshot.positions[action.id];
     return pos !== undefined && Math.hypot(pos[0] - ball[0], pos[2] - ball[2]) < SYNC_RADIUS;
