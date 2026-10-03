@@ -51,7 +51,7 @@ const STATE: EditorState = {
       title: '2. Passe haute Z4 adverse',
       description: "Passe vers leur ailier gauche. Notre ligne avant identifie la zone, les périphériques restent strictement sur les lignes.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 0.6,
       snapshot: {
         positions: {
           P:     [4, 0, 8],
@@ -65,7 +65,7 @@ const STATE: EditorState = {
         },
         ballPosition: [3.0, 3.0, -0.8],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 5 },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s2-set', playerId: 'OPP_S', impact: [-1.5, 0, -0.8] },
       ],
@@ -75,12 +75,12 @@ const STATE: EditorState = {
       title: '3. Bloc à 2 + 4 défenseurs sur le périmètre',
       description: "Bloc à 2 standard (pointu ligne + central diagonale). Aucun défenseur monté derrière le bloc (d'où le 0 central). Libéro sur la ligne gauche, P6 sur la baseline, P1 sur la ligne droite.",
       tempo: 'standard',
-      durationOverride: 0.9,
+      durationOverride: 0.5,
       snapshot: {
         positions: {
           P:     [4.3, 0, 8.5],
           Op:    [3.0, 0, 0.3],
-          C:     [2.0, 0, 0.3],
+          C:     [1.4, 0, 0.3],
           R4:    [-3.0, 0, 1.5],
           L:     [-4.3, 0, 8.5],
           R4b:   [0, 0, 8.8],
@@ -93,16 +93,16 @@ const STATE: EditorState = {
     {
       id: 's4',
       title: '4. Smash en ligne puissant + bloc',
-      description: "L'attaquant frappe en ligne sur notre coin arrière-gauche. La trajectoire passe à proximité du bloc — un block-out long est probable.",
+      description: "L'attaquant frappe en grande diagonale sur notre coin arrière-gauche. La trajectoire passe à proximité du bloc — un block-out long est probable.",
       tempo: 'rapide',
       durationOverride: 0.9,
       snapshot: {
         positions: {
           P:     [4.3, 0, 8.5],
           Op:    [3.0, 0, 0.5],
-          C:     [2.0, 0, 0.5],
+          C:     [1.4, 0, 0.5],
           R4:    [-3.0, 0, 1.5],
-          L:     [-4.3, 0, 8.5],
+          L:     [-4, 0, 7.2],
           R4b:   [0, 0, 8.8],
           OPP_A: [3, 0, -0.6],
           OPP_S: [-1.5, 0, -0.8],
@@ -111,9 +111,9 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [3, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'Op',    impact: [3.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-blocC', playerId: 'C',     impact: [2.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [3, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-blocR', playerId: 'Op',    impact: [3.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-blocC', playerId: 'C',     impact: [1.4, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -121,7 +121,7 @@ const STATE: EditorState = {
       title: '5. Récupération en couloir',
       description: "Le libéro récupère sur la ligne — couverture périphérique parfaite. Identifie facilement les balles « out ». Manchette haute vers la zone 2-3.",
       tempo: 'rapide',
-      durationOverride: 0.7,
+      durationOverride: 1,
       snapshot: {
         positions: {
           P:     [4.3, 0, 8.5],
@@ -133,11 +133,11 @@ const STATE: EditorState = {
           OPP_A: [3, 0, -0.6],
           OPP_S: [-1.5, 0, -0.8],
         },
-        ballPosition: [1.5, 2.5, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
-        { kind: 'MANCHETTE', id: 'b-s5-dig', playerId: 'L', impact: [-4, 0, 7] },
+        { kind: 'MANCHETTE', id: 'b-s5-dig', playerId: 'L', impact: [-4, 0, 7.2] },
       ],
     },
     {
@@ -157,7 +157,7 @@ const STATE: EditorState = {
           OPP_A: [3, 0, -3],
           OPP_S: [-1.5, 0, -2],
         },
-        ballPosition: [1.5, 2.5, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
     },
   ],
