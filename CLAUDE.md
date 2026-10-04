@@ -43,7 +43,29 @@ When adding new scenarios, ensure each format gets coverage of attack / defense 
 - FIVB positions on our side (looking from behind):
   - Front row: P4 (x<0) — P3 (x=0) — P2 (x>0)
   - Back row: P5 (x<0) — P6 (x=0) — P1 (x>0)
-- Setters on our side face the antenne gauche (rotation `-π/2`) instead of the net.
+
+### Orientation des joueurs
+
+Règle unique, calculée par `computeFacing` (`src/scenarios/facing.ts`) et appliquée
+par le lecteur (`ScenarioScene.tsx`, actions `player_face` jouées par
+`useTactic.ts`). Les fichiers de scénario n'ont rien à déclarer.
+
+- **Tout le monde fait face au filet** par défaut : rotation `π` dans notre camp,
+  `0` en face. Attente, réception, défense, contre, couverture : face au filet,
+  quel que soit le rôle ou la zone. Un passeur arrière qui attend (zone 1, 5 ou 6)
+  regarde donc le filet, pas la ligne de côté.
+- **Celui qui passe se tourne vers SON antenne gauche** pendant la passe : geste
+  `SET` dont la balle reste dans son camp. Il pivote pendant l'arrivée de la balle
+  (au plus 0,6 s avant le contact), passe de profil, puis se retourne face au filet
+  0,05 s après pour couvrir. Notre antenne gauche est en x < 0 (rotation `-π/2`),
+  celle de l'adversaire en x > 0 (rotation `+π/2`). La règle suit le geste, pas le
+  rôle : un pointu ou un ailier qui joue la 2ᵉ touche se tourne aussi, le passeur
+  adverse aussi.
+- Une passe jouée à plus de 3 m du filet tourne le passeur vers le point visé
+  plutôt que vers l'antenne. Une balle poussée par-dessus le filet avec le geste
+  `SET` ne tourne personne.
+- Un joueur qui tient la balle au début du scénario et la passe en première
+  touche démarre déjà de profil.
 
 ### Touches de balle (règle FIVB, vérifiée par `pnpm check:scenarios`)
 

@@ -78,7 +78,19 @@ export type PlayerPoseAction = {
   text?: string;
 };
 
-export type TimelineAction = BallMoveAction | PlayerMoveAction | PlayerPoseAction;
+// Turns a player on himself (rotation around Y, radians, same convention as
+// the Player group). Not authored: added at render time by
+// `setFacingActions` (src/scenarios/facing.ts).
+export type PlayerFaceAction = {
+  type: 'player_face';
+  time: number;
+  id: string;
+  rotation: number;
+  duration: number;
+  description?: string;
+};
+
+export type TimelineAction = BallMoveAction | PlayerMoveAction | PlayerPoseAction | PlayerFaceAction;
 
 // Narrative step shown in the side card / timeline strip
 // Multiple actions can map to the same narrative step via stepId
