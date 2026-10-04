@@ -29,12 +29,12 @@ const STATE: EditorState = {
     {
       id: 's1',
       title: '1. Configuration 3-1',
-      description: 'Passeur unique en P1 (arrière). 3 attaquants devant en P2, P3, P4. Pas de libéro : le réceptionneur enchaîne sa course.',
+      description: "Passeur unique en P1 (arrière). 3 attaquants devant en P2, P3, P4 : le central recule pour prendre la réception, les deux ailes restent libres pour attaquer.",
       tempo: 'pause',
       snapshot: {
         positions: {
           R4:      [-3, 0, 0.6],
-          C:       [0, 0, 0.6],
+          C:       [0, 0, 3.5],
           A2:      [3, 0, 0.6],
           P:       [3, 0, 5],
           OPP_SRV: [0, 0, -9.5],
@@ -46,20 +46,20 @@ const STATE: EditorState = {
         ballPosition: [0, 2, -9.2],
         poses: {
           OPP_SRV: 'ARM_SPIKE',
-          R4: 'READY', A2: 'READY', P: 'READY',
+          R4: 'READY', C: 'READY', A2: 'READY', P: 'READY',
         },
       },
     },
     {
       id: 's2',
       title: '2. Service + réception + pénétration',
-      description: "L'aile gauche réceptionne en manchette. Le passeur démarre simultanément sa pénétration depuis P1 vers la zone 2.",
+      description: 'Le central réceptionne en manchette. Le passeur démarre simultanément sa pénétration depuis P1 vers la zone 2.',
       tempo: 'standard',
       durationOverride: 1.0,
       snapshot: {
         positions: {
-          R4:      [-1, 0, 4.5],
-          C:       [0, 0, 0.6],
+          R4:      [-3, 0, 0.6],
+          C:       [-0.5, 0, 4.5],
           A2:      [3, 0, 0.6],
           P:       [2.0, 0, 0.8],
           OPP_SRV: [0, 0, -8.7],
@@ -68,26 +68,26 @@ const STATE: EditorState = {
           OPP_D1:  [2.5, 0, -2.5],
           OPP_D2:  [0, 0, -5.5],
         },
-        ballPosition: [-1, 1.2, 4.5],
+        ballPosition: [-0.5, 1.2, 4.5],
       },
       ballTrajectory: { curve: 'arc', apex: 4 },
       actions: [
         { kind: 'FLOAT_SERVE', id: 'b-s2-serve', playerId: 'OPP_SRV', impact: [0, 0, -9.5] },
-        { kind: 'MANCHETTE',   id: 'b-s2-recv', playerId: 'R4', impact: [-1, 0, 4.5] },
+        { kind: 'MANCHETTE',   id: 'b-s2-recv', playerId: 'C',  impact: [-0.5, 0, 4.5] },
         { kind: 'PENETRATION', id: 'b-s2-pen',  playerId: 'P',  to: [2.0, 0, 0.8] },
       ],
     },
     {
       id: 's3',
       title: "3. Passe + course d'élan du R4",
-      description: "Passe haute vers l'aile gauche après la course de réception du R4. Le bloc adverse glisse face à lui.",
+      description: "Passe haute vers l'aile gauche, qui n'a pas réceptionné et recule pour prendre son élan. Le central et l'aile droite se rapprochent pour couvrir. Le bloc adverse glisse face à l'attaquant.",
       tempo: 'standard',
       durationOverride: 0.9,
       snapshot: {
         positions: {
           R4:      [-3.0, 0, 1.5],
-          C:       [0, 0, 0.6],
-          A2:      [3, 0, 0.6],
+          C:       [-1.5, 0, 3.0],
+          A2:      [1.5, 0, 2.5],
           P:       [2, 0, 0.8],
           OPP_SRV: [0, 0, -8.7],
           OPP_B:   [-3.0, 0, -0.4],
@@ -112,8 +112,8 @@ const STATE: EditorState = {
       snapshot: {
         positions: {
           R4:      [-3.0, 0, 1.0],
-          C:       [0, 0, 0.6],
-          A2:      [3, 0, 0.6],
+          C:       [-2.0, 0, 2.6],
+          A2:      [-0.5, 0, 2.0],
           P:       [2.0, 0, 0.8],
           OPP_SRV: [0, 0, -8.7],
           OPP_B:   [-3.0, 0, -0.4],
@@ -138,8 +138,8 @@ const STATE: EditorState = {
       snapshot: {
         positions: {
           R4:      [-3.0, 0, 0.6],
-          C:       [0, 0, 0.6],
-          A2:      [3, 0, 0.6],
+          C:       [-2.0, 0, 2.6],
+          A2:      [-0.5, 0, 2.0],
           P:       [2.0, 0, 0.8],
           OPP_SRV: [0, 0, -8.7],
           OPP_B:   [-3.0, 0, -0.4],
@@ -156,13 +156,13 @@ const STATE: EditorState = {
     {
       id: 's6',
       title: '6. RESET — retour formation',
-      description: 'Le passeur retourne en P1 arrière, le R4 revient en zone 4. La pénétration doit être anticipée dès le service suivant.',
+      description: 'Le passeur retourne en P1 arrière, le central recule en réception, les ailes reviennent au filet. La pénétration doit être anticipée dès le service suivant.',
       tempo: 'calme',
       durationOverride: 1.2,
       snapshot: {
         positions: {
           R4:      [-3, 0, 0.6],
-          C:       [0, 0, 0.6],
+          C:       [0, 0, 3.5],
           A2:      [3, 0, 0.6],
           P:       [3, 0, 5],
           OPP_SRV: [0, 0, -9.5],
@@ -180,7 +180,7 @@ const STATE: EditorState = {
       'Système 3-1 = équivalent du 5-1 en 4v4. 1 passeur dédié pénétrant.',
       'Avantage : 3 attaquants devant en permanence, comme en 6v6.',
       "Inconvénient : exige une réception très propre car le passeur n'est pas au filet.",
-      "Pas de libéro : le réceptionneur enchaîne aussi sa course d'élan.",
+      "Pas de libéro : le central réceptionne, le passeur passe, une aile attaque. Trois joueurs différents, le quatrième couvre.",
     ],
     commonMistakes: [
       'Pénétration trop tardive → un autre joueur doit faire la passe.',

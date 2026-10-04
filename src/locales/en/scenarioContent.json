@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. 3-1 configuration",
-        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4. No libero: the receiver chains his approach."
+        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4: the middle drops back to take the reception, both wings stay free to attack."
       },
       "s2": {
         "title": "2. Serve + reception + penetration",
-        "description": "The left wing bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
+        "description": "The middle bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
       },
       "s3": {
         "title": "3. Set + R4 approach",
-        "description": "High set toward the left wing after R4's reception run. The opposing block slides toward him."
+        "description": "High set toward the left wing, who did not receive and pulls back for his approach. The middle and the right wing close in to cover. The opposing block slides toward the hitter."
       },
       "s4": {
         "title": "4. Cross-court spike + single block",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "The setter returns to back-row P1, R4 returns to zone 4. The penetration must be anticipated from the next serve onward."
+        "description": "The setter returns to back-row P1, the middle drops back to receive, the wings return to the net. The penetration must be anticipated from the next serve onward."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "3-1 system = the 4v4 equivalent of the 5-1. 1 dedicated penetrating setter.",
         "Advantage: 3 hitters in front at all times, like in 6v6.",
         "Drawback: requires very clean reception since the setter is not at the net.",
-        "No libero: the receiver also chains his attack approach."
+        "No libero: the middle receives, the setter sets, a wing attacks. Three different players, the fourth one covers."
       ],
       "commonMistakes": [
         "Penetration too late → another player has to make the set.",
@@ -1570,16 +1570,16 @@
         "description": "The setter is hidden at P2 at the net. 3 receivers in a U: left wing, back center, right wing. Each player covers about 1/3 of the width."
       },
       "s2": {
-        "title": "2. Serve + left wing bump",
-        "description": "Lofted serve to the left channel. The left wing calls and takes the ball in his channel. High trajectory to give the setter time."
+        "title": "2. Serve + back center bump",
+        "description": "Lofted serve deep, between the left wing and the center. The back center calls and takes the ball. High trajectory to give the setter time. The left wing, who did not receive, stays free to attack."
       },
       "s3": {
         "title": "3. Distribution to the left wing",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach."
+        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach. The back center and the right wing close in to cover the attack."
       },
       "s4": {
         "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: the setter has not received, the attack is fast and readable."
+        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: neither the setter nor the hitter has received, the attack is fast and readable."
       },
       "s5": {
         "title": "5. RESET — back to the U",

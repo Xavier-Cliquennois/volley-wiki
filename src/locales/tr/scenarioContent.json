@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. 3-1 konfigürasyonu",
-        "description": "P1'de (arka saha) tek pasör. Önde P2, P3, P4'te 3 vurucu. Libero yok: karşılayan kendi yaklaşmasını zincirler."
+        "description": "P1'de (arka saha) tek pasör. Önde P2, P3, P4'te 3 vurucu: orta oyuncu karşılamayı almak için geri çekilir, iki kanat hücum için serbest kalır."
       },
       "s2": {
         "title": "2. Servis + karşılama + penetrasyon",
-        "description": "Sol kanat karşılamayı manşetler. Pasör eş zamanlı olarak P1'den 2. bölgeye penetrasyonunu başlatır."
+        "description": "Orta oyuncu karşılamayı manşetler. Pasör eş zamanlı olarak P1'den 2. bölgeye penetrasyonunu başlatır."
       },
       "s3": {
         "title": "3. Pas + R4 yaklaşma",
-        "description": "R4'ün karşılama koşusundan sonra sol kanada yüksek pas. Rakip blok ona doğru kayar."
+        "description": "Karşılama yapmamış olan ve yaklaşması için geri çekilen sol kanada yüksek pas. Orta oyuncu ve sağ kanat koruma için yaklaşır. Rakip blok vurucuya doğru kayar."
       },
       "s4": {
         "title": "4. Çapraz smaç + tek blok",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. SIFIRLA — dizilişe geri dön",
-        "description": "Pasör arka saha P1'e döner, R4 4. bölgeye döner. Penetrasyon bir sonraki servisten itibaren tahmin edilmelidir."
+        "description": "Pasör arka saha P1'e döner, orta oyuncu karşılamaya geri çekilir, kanatlar fileye döner. Penetrasyon bir sonraki servisten itibaren tahmin edilmelidir."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "3-1 sistemi = 5-1'in 4'e 4 eşdeğeri. 1 özel penetre eden pasör.",
         "Avantaj: 6'ya 6 gibi her zaman önde 3 vurucu.",
         "Dezavantaj: pasör filede olmadığı için çok temiz karşılama gerektirir.",
-        "Libero yok: karşılayan aynı zamanda saldırı yaklaşmasını zincirler."
+        "Libero yok: orta oyuncu karşılar, pasör pas verir, bir kanat hücum eder. Üç farklı oyuncu, dördüncüsü korur."
       ],
       "commonMistakes": [
         "Çok geç penetrasyon → başka bir oyuncunun pas vermesi gerekir.",
@@ -1570,16 +1570,16 @@
         "description": "Pasör P2'de filede gizli. U'da 3 karşılayıcı: sol kanat, arka orta, sağ kanat. Her oyuncu genişliğin yaklaşık 1/3'ünü kapsar."
       },
       "s2": {
-        "title": "2. Servis + sol kanat manşet",
-        "description": "Sol kanala yüksek servis. Sol kanat çağırır ve kendi kanalında topu alır. Pasöre zaman vermek için yüksek yörünge."
+        "title": "2. Servis + arka orta manşet",
+        "description": "Sol kanat ile orta arasına, derine yüksek servis. Arka orta oyuncu çağırır ve topu alır. Pasöre zaman vermek için yüksek yörünge. Karşılama yapmayan sol kanat hücum için serbest kalır."
       },
       "s3": {
         "title": "3. Sol kanada dağıtım",
-        "description": "Top 2. bölgedeki sabit pasöre varır (4'e 4'te penetrasyon yok). Yaklaşmasını anında zincirleyen sol kanada hızlı dağıtım."
+        "description": "Top 2. bölgedeki sabit pasöre varır (4'e 4'te penetrasyon yok). Yaklaşmasını anında zincirleyen sol kanada hızlı dağıtım. Arka orta oyuncu ve sağ kanat hücumu korumak için yaklaşır."
       },
       "s4": {
         "title": "4. Top mevcut 4. bölgede",
-        "description": "Pas sol kanat için 4. bölgeye gelir. Elmastan daha hücum eğilimli sistem: pasör karşılamamış, saldırı hızlı ve okunabilir."
+        "description": "Pas sol kanat için 4. bölgeye gelir. Elmastan daha hücum eğilimli sistem: ne pasör ne de vurucu karşılama yaptı, saldırı hızlı ve okunabilir."
       },
       "s5": {
         "title": "5. SIFIRLA — U'ya geri dön",

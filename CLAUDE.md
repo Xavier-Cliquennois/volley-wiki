@@ -45,6 +45,27 @@ When adding new scenarios, ensure each format gets coverage of attack / defense 
   - Back row: P5 (x<0) — P6 (x=0) — P1 (x>0)
 - Setters on our side face the antenne gauche (rotation `-π/2`) instead of the net.
 
+### Touches de balle (règle FIVB, vérifiée par `pnpm check:scenarios`)
+
+Tout scénario, nouveau ou corrigé, respecte ces règles :
+
+- **3 touches maximum** par équipe avant de renvoyer la balle.
+- **Jamais deux touches de suite par le même joueur.** Seule exception : le contre
+  ne compte pas comme une touche, et le contreur peut jouer la touche suivante.
+  Une attaque après réception, c'est donc : réception (A), passe (B ≠ A), attaque
+  (C ≠ B).
+- **En 4v4, les 3 touches sont jouées par 3 joueurs différents** : réceptionneur,
+  passeur, attaquant ; le quatrième couvre. C'est plus strict que la FIVB (qui
+  laisse le réceptionneur attaquer), c'est le choix du wiki pour ses formations
+  4v4. Si un scénario ne tient pas avec 4 joueurs, le dire dans le ticket plutôt
+  que tricher sur la règle.
+
+`pnpm check:scenarios` (`scripts/check-scenarios.ts`) compile chaque scénario
+comme le site, rejoue la timeline et relève qui touche la balle à chaque étape
+(`--verbose` pour la liste, un id de scénario en argument pour le restreindre). Il
+signale aussi une balle qui change de trajectoire en l'air sans que personne ne la
+touche. Il sort en erreur au moindre défaut.
+
 ## Scroll behaviour
 
 - `App.tsx` has a `ScrollToTop` component that scrolls window to top on every route change.
@@ -228,8 +249,10 @@ Un sous-agent ne touche à aucun fichier qu'il n'a pas à modifier pour son tick
 Quand sa tâche est **finie et vérifiée**, il referme tout, dans cet ordre, sans
 attendre qu'on le lui demande :
 
-1. **Les vérifications passent** : `pnpm lint` et `pnpm build`. Sinon il **ne
-   merge pas** : il laisse la branche, dit pourquoi dans le ticket, et s'arrête.
+1. **Les vérifications passent** : `pnpm lint` et `pnpm build`, plus
+   `pnpm check:scenarios` dès que le ticket touche un scénario 3D
+   (`src/scenarios/`, `src/editor/`, `src/3d/`). Sinon il **ne merge pas** : il
+   laisse la branche, dit pourquoi dans le ticket, et s'arrête.
 2. **Le rebase** sur `origin/dev`, puis les vérifications relancées. Un conflit sur
    `pnpm-lock.yaml` ne se résout pas à la main : reprendre la version de `dev` et
    relancer `pnpm install`. Si le conflit touche le fond du ticket d'un autre agent,
