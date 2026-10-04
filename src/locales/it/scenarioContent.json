@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. Configurazione 3-1",
-        "description": "Unico alzatore in P1 (seconda linea). 3 attaccanti davanti in P2, P3, P4. Niente libero: il ricevitore incatena la rincorsa."
+        "description": "Unico alzatore in P1 (seconda linea). 3 attaccanti davanti in P2, P3, P4: il centrale arretra per prendere la ricezione, le due ali restano libere per attaccare."
       },
       "s2": {
         "title": "2. Servizio + ricezione + penetrazione",
-        "description": "L'ala sinistra fa il bagher della ricezione. L'alzatore lancia simultaneamente la sua penetrazione da P1 verso la zona 2."
+        "description": "Il centrale fa il bagher della ricezione. L'alzatore lancia simultaneamente la sua penetrazione da P1 verso la zona 2."
       },
       "s3": {
         "title": "3. Alzata + rincorsa di R4",
-        "description": "Alzata alta verso l'ala sinistra dopo la corsa di ricezione di R4. Il muro avversario si sposta verso di lui."
+        "description": "Alzata alta verso l'ala sinistra, che non ha ricevuto e arretra per prendere la rincorsa. Il centrale e l'ala destra si avvicinano per coprire. Il muro avversario si sposta verso l'attaccante."
       },
       "s4": {
         "title": "4. Schiacciata in diagonale + muro singolo",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. RESET — ritorno alla formazione",
-        "description": "L'alzatore torna in P1 di seconda linea, R4 torna in zona 4. La penetrazione deve essere anticipata dal servizio successivo."
+        "description": "L'alzatore torna in P1 di seconda linea, il centrale arretra in ricezione, le ali tornano a rete. La penetrazione deve essere anticipata dal servizio successivo."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "Sistema 3-1 = l'equivalente 4v4 del 5-1. 1 alzatore penetrante dedicato.",
         "Vantaggio: 3 attaccanti davanti in ogni momento, come nel 6v6.",
         "Svantaggio: richiede una ricezione molto pulita perché l'alzatore non è a rete.",
-        "Niente libero: il ricevitore incatena anche la sua rincorsa d'attacco."
+        "Niente libero: il centrale riceve, l'alzatore alza, un'ala attacca. Tre giocatori diversi, il quarto copre."
       ],
       "commonMistakes": [
         "Penetrazione troppo tardiva → un altro giocatore deve fare l'alzata.",
@@ -1570,16 +1570,16 @@
         "description": "L'alzatore è nascosto in P2 a rete. 3 ricevitori a U: ala sinistra, centro dietro, ala destra. Ogni giocatore copre circa 1/3 della larghezza."
       },
       "s2": {
-        "title": "2. Servizio + bagher dell'ala sinistra",
-        "description": "Servizio teso nella corsia sinistra. L'ala sinistra chiama e prende la palla nella sua corsia. Traiettoria alta per dare tempo all'alzatore."
+        "title": "2. Servizio + bagher del centrale di fondo",
+        "description": "Servizio alto in profondità, tra l'ala sinistra e il centro. Il centrale di fondo chiama e prende la palla. Traiettoria alta per dare tempo all'alzatore. L'ala sinistra, che non ha ricevuto, resta libera per attaccare."
       },
       "s3": {
         "title": "3. Distribuzione all'ala sinistra",
-        "description": "La palla arriva all'alzatore fisso in zona 2 (niente penetrazione nel 4v4). Distribuzione rapida all'ala sinistra che incatena subito la rincorsa."
+        "description": "La palla arriva all'alzatore fisso in zona 2 (niente penetrazione nel 4v4). Distribuzione rapida all'ala sinistra che incatena subito la rincorsa. Il centrale di fondo e l'ala destra si avvicinano per coprire l'attacco."
       },
       "s4": {
         "title": "4. Palla disponibile in zona 4",
-        "description": "L'alzata arriva in zona 4 per l'ala sinistra. Sistema più offensivo del rombo: l'alzatore non ha ricevuto, l'attacco è veloce e leggibile."
+        "description": "L'alzata arriva in zona 4 per l'ala sinistra. Sistema più offensivo del rombo: né l'alzatore né l'attaccante hanno ricevuto, l'attacco è veloce e leggibile."
       },
       "s5": {
         "title": "5. RESET — ritorno alla U",

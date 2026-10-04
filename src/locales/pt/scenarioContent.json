@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. Configuração 3-1",
-        "description": "Distribuidor único em P1 (linha de trás). 3 atacantes à frente em P2, P3, P4. Sem líbero: o recetor encadeia a sua corrida de balanço."
+        "description": "Distribuidor único em P1 (linha de trás). 3 atacantes à frente em P2, P3, P4: o central recua para fazer a receção, as duas asas ficam livres para atacar."
       },
       "s2": {
         "title": "2. Serviço + receção + infiltração",
-        "description": "A asa esquerda faz a manchete na receção. O distribuidor inicia simultaneamente a sua infiltração a partir de P1 para a zona 2."
+        "description": "O central faz a manchete na receção. O distribuidor inicia simultaneamente a sua infiltração a partir de P1 para a zona 2."
       },
       "s3": {
         "title": "3. Passe + corrida de R4",
-        "description": "Passe alto para a asa esquerda após a corrida de receção de R4. O bloco adversário desliza para ele."
+        "description": "Passe alto para a asa esquerda, que não recebeu e recua para a sua corrida de balanço. O central e a asa direita aproximam-se para cobrir. O bloco adversário desliza para o atacante."
       },
       "s4": {
         "title": "4. Remate em diagonal + bloco a 1",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. RESET — regresso à formação",
-        "description": "O distribuidor regressa ao P1 da linha de trás, R4 regressa à zona 4. A infiltração tem de ser antecipada já no próximo serviço."
+        "description": "O distribuidor regressa ao P1 da linha de trás, o central recua para a receção, as asas regressam à rede. A infiltração tem de ser antecipada já no próximo serviço."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "Sistema 3-1 = o equivalente em 4v4 do 5-1. 1 distribuidor dedicado a infiltrar.",
         "Vantagem: 3 atacantes à frente em todos os momentos, como no 6v6.",
         "Desvantagem: exige uma receção muito limpa pois o distribuidor não está junto à rede.",
-        "Sem líbero: o recetor encadeia também a sua corrida de balanço de ataque."
+        "Sem líbero: o central recebe, o distribuidor passa, uma asa ataca. Três jogadores diferentes, o quarto cobre."
       ],
       "commonMistakes": [
         "Infiltração demasiado tarde → outro jogador tem de fazer o passe.",
@@ -1570,16 +1570,16 @@
         "description": "O distribuidor está escondido em P2 junto à rede. 3 recetores em U: asa esquerda, atrás central, asa direita. Cada jogador cobre cerca de 1/3 da largura."
       },
       "s2": {
-        "title": "2. Serviço + manchete pela asa esquerda",
-        "description": "Serviço alto para o corredor esquerdo. A asa esquerda chama e fica com a bola no seu corredor. Trajetória alta para dar tempo ao distribuidor."
+        "title": "2. Serviço + manchete do fundo central",
+        "description": "Serviço alto para o fundo, entre a asa esquerda e o centro. O fundo central chama e fica com a bola. Trajetória alta para dar tempo ao distribuidor. A asa esquerda, que não recebeu, fica livre para atacar."
       },
       "s3": {
         "title": "3. Distribuição para a asa esquerda",
-        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 4v4). Distribuição rápida para a asa esquerda que encadeia imediatamente a sua corrida."
+        "description": "A bola chega ao distribuidor fixo na zona 2 (sem infiltração no 4v4). Distribuição rápida para a asa esquerda que encadeia imediatamente a sua corrida. O fundo central e a asa direita aproximam-se para cobrir o ataque."
       },
       "s4": {
         "title": "4. Bola disponível na zona 4",
-        "description": "O passe chega à zona 4 para a asa esquerda. Sistema mais ofensivo do que o losango: o distribuidor não recebeu, o ataque é rápido e legível."
+        "description": "O passe chega à zona 4 para a asa esquerda. Sistema mais ofensivo do que o losango: nem o distribuidor nem o atacante receberam, o ataque é rápido e legível."
       },
       "s5": {
         "title": "5. RESET — regresso ao U",

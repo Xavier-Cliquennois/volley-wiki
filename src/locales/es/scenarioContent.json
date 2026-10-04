@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. Configuración 3-1",
-        "description": "Colocador único en P1 (zaga). 3 atacantes delante en P2, P3, P4. Sin líbero: el receptor encadena su aproximación."
+        "description": "Colocador único en P1 (zaga). 3 atacantes delante en P2, P3, P4: el central retrocede para recibir, las dos alas quedan libres para atacar."
       },
       "s2": {
         "title": "2. Saque + recepción + penetración",
-        "description": "El ala izquierda juega la recepción. El colocador lanza simultáneamente su penetración desde P1 hacia la zona 2."
+        "description": "El central juega la recepción de antebrazos. El colocador lanza simultáneamente su penetración desde P1 hacia la zona 2."
       },
       "s3": {
         "title": "3. Colocación + aproximación de R4",
-        "description": "Colocación alta hacia el ala izquierda tras la carrera de recepción de R4. El bloqueo rival se desplaza hacia él."
+        "description": "Colocación alta hacia el ala izquierda, que no ha recibido y retrocede para tomar su aproximación. El central y el ala derecha se acercan para cubrir. El bloqueo rival se desplaza hacia el atacante."
       },
       "s4": {
         "title": "4. Remate en diagonal + bloqueo único",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. RESET — vuelta a la formación",
-        "description": "El colocador vuelve a P1 zaguero, R4 vuelve a la zona 4. La penetración debe anticiparse desde el siguiente saque."
+        "description": "El colocador vuelve a P1 zaguero, el central retrocede a recepción, las alas vuelven a la red. La penetración debe anticiparse desde el siguiente saque."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "Sistema 3-1 = el equivalente en 4v4 del 5-1. 1 colocador penetrante dedicado.",
         "Ventaja: 3 atacantes delante en todo momento, como en 6v6.",
         "Inconveniente: requiere una recepción muy limpia ya que el colocador no está en la red.",
-        "Sin líbero: el receptor encadena también su aproximación de ataque."
+        "Sin líbero: el central recibe, el colocador coloca, un ala ataca. Tres jugadores distintos, el cuarto cubre."
       ],
       "commonMistakes": [
         "Penetración demasiado tarde → otro jugador debe hacer la colocación.",
@@ -1570,16 +1570,16 @@
         "description": "El colocador está oculto en P2 en la red. 3 receptores en U: ala izquierda, zaguero centro, ala derecha. Cada jugador cubre alrededor de 1/3 del ancho."
       },
       "s2": {
-        "title": "2. Saque + antebrazos del ala izquierda",
-        "description": "Saque alto al canal izquierdo. El ala izquierda canta y toma el balón en su canal. Trayectoria alta para dar tiempo al colocador."
+        "title": "2. Saque + antebrazos del zaguero central",
+        "description": "Saque alto al fondo, entre el ala izquierda y el centro. El zaguero central canta y toma el balón. Trayectoria alta para dar tiempo al colocador. El ala izquierda, que no ha recibido, queda libre para atacar."
       },
       "s3": {
         "title": "3. Distribución al ala izquierda",
-        "description": "El balón llega al colocador fijo en zona 2 (sin penetración en 4v4). Distribución rápida al ala izquierda que encadena inmediatamente su aproximación."
+        "description": "El balón llega al colocador fijo en zona 2 (sin penetración en 4v4). Distribución rápida al ala izquierda que encadena inmediatamente su aproximación. El zaguero central y el ala derecha se acercan para cubrir el ataque."
       },
       "s4": {
         "title": "4. Balón disponible en zona 4",
-        "description": "La colocación llega a la zona 4 para el ala izquierda. Sistema más ofensivo que el rombo: el colocador no ha recibido, el ataque es rápido y legible."
+        "description": "La colocación llega a la zona 4 para el ala izquierda. Sistema más ofensivo que el rombo: ni el colocador ni el atacante han recibido, el ataque es rápido y legible."
       },
       "s5": {
         "title": "5. RESET — vuelta a la U",
