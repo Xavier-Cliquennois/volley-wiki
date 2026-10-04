@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check:scenarios": "node --experimental-strip-types scripts/check-scenarios.ts"
   },
   "dependencies": {
     "@fontsource/bungee": "^5.2.7",
