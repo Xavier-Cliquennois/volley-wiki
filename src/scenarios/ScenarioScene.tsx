@@ -13,6 +13,7 @@ import { useTactic } from '../3d/useTactic';
 import type { PlayerRefMap } from '../3d/useTactic';
 import type { Scenario, ScenarioPlayerConfig, TimelineAction } from './types';
 import { COLORS, resolvePlayerColor } from './data/_shared';
+import { computeFacing } from './facing';
 
 // ──────────────────────────────────────────────────────────────────────────
 // Helpers — injected automatically so every scenario looks consistent
@@ -199,14 +200,18 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   // - Fill remaining slots with template opponents
   // - Hard-cap each side at `teamSize` so we never end up with 5 opponents in 4v4
   // - Append landing actions for any player still in the air at the end of their last scripted move
+  // - Append the turns of every player who sets (towards his left antenna, then back to the net)
   //
   // When `disableAutoFill` is set (editor preview), every step above is skipped:
   // we render exactly the authored roster so the WYSIWYG promise holds.
   const augmented = useMemo(() => {
     if (disableAutoFill) {
+      const landed = ensureLandings(scenario.timeline);
+      const facing = computeFacing(scenario.players, landed);
       return {
         players: scenario.players,
-        timeline: ensureLandings(scenario.timeline),
+        timeline: [...landed, ...facing.actions],
+        initialFacing: facing.initial,
       };
     }
 
@@ -231,8 +236,13 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
     const baseTimeline = ballSrc && opponents.includes(ballSrc.player)
       ? [ballSrc.pose, ...scenario.timeline]
       : scenario.timeline;
-    const timeline = ensureLandings(baseTimeline);
-    return { players, timeline };
+    const landed = ensureLandings(baseTimeline);
+    const facing = computeFacing(players, landed);
+    return {
+      players,
+      timeline: [...landed, ...facing.actions],
+      initialFacing: facing.initial,
+    };
   }, [scenario, disableAutoFill]);
 
   const script = useMemo(
@@ -259,21 +269,17 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
       {showZones && <CourtZones />}
-      {augmented.players.map(player => {
-        // Setters on our side face the antenne gauche to mimic real setting orientation.
-        const facingRotation = player.role === 'setter' && player.position[2] > 0
-          ? -Math.PI / 2
-          : undefined;
-        return (
-          <Player
-            key={player.id}
-            ref={el => { playerRefs.current[player.id] = el; }}
-            color={resolvePlayerColor(player)}
-            position={player.position}
-            facingRotation={facingRotation}
-          />
-        );
-      })}
+      {/* Everyone faces the net; a player who sets turns towards his left
+          antenna through `player_face` actions (see facing.ts). */}
+      {augmented.players.map(player => (
+        <Player
+          key={player.id}
+          ref={el => { playerRefs.current[player.id] = el; }}
+          color={resolvePlayerColor(player)}
+          position={player.position}
+          facingRotation={augmented.initialFacing[player.id]}
+        />
+      ))}
       <BallWithTrail ref={ballRef} position={scenario.initialBallPosition} showTrail={showTrail} />
       <ImpactEffect ref={impactRef} />
     </>

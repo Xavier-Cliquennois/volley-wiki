@@ -40,10 +40,12 @@ export const useTactic = (
     if (timelineRef.current) timelineRef.current.kill();
 
     const initialPositions: Record<string, { x: number; y: number; z: number }> = {};
+    const initialRotations: Record<string, number> = {};
     Object.keys(playerRefs.current).forEach(id => {
       const p = playerRefs.current[id];
       if (p?.group?.current) {
         initialPositions[id] = { x: p.group.current.position.x, y: p.group.current.position.y, z: p.group.current.position.z };
+        initialRotations[id] = p.group.current.rotation.y;
       }
     });
 
@@ -62,6 +64,9 @@ export const useTactic = (
             p.group.current.position.x = initialPositions[id].x;
             p.group.current.position.y = initialPositions[id].y;
             p.group.current.position.z = initialPositions[id].z;
+          }
+          if (p.group?.current && initialRotations[id] !== undefined) {
+            p.group.current.rotation.y = initialRotations[id];
           }
         }
       });
@@ -140,6 +145,12 @@ export const useTactic = (
         const p = playerRefs.current[action.id];
         if (p?.group?.current) {
           tl.to(p.group.current.position, { x: action.to[0], y: action.to[1], z: action.to[2], duration: action.duration, ease: 'power1.inOut' }, action.time);
+        }
+      }
+      if (action.type === 'player_face') {
+        const p = playerRefs.current[action.id];
+        if (p?.group?.current) {
+          tl.to(p.group.current.rotation, { y: action.rotation, duration: action.duration, ease: 'power1.inOut' }, action.time);
         }
       }
       if (action.type === 'player_pose') {
