@@ -170,6 +170,10 @@ export const useTactic = (
             // The strike whips the arm from the cocked ARM_SPIKE position over
             // the top and finishes down in front of the body.
             case 'SPIKE': arms(-Math.PI / 6, -0.3, 0, 0); break;
+            // Block: both arms straight up and leaning slightly forward over
+            // the net, mirrored left/right (same x, opposite z), so they rise
+            // together and reach the same height.
+            case 'BLOCK': arms(-Math.PI * 0.92, 0.1, -Math.PI * 0.92, -0.1); break;
             case 'READY': arms(-Math.PI / 8, 0, -Math.PI / 8, 0); break;
             case 'RESET': arms(0, 0, 0, 0); break;
           }

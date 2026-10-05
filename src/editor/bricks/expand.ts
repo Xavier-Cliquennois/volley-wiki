@@ -94,13 +94,14 @@ export function expandBrick(brick: BrickAction, ctx: ExpandContext): TimelineAct
 
 type JumpPlan = {
   // Pose to fire at the apex (synchronized with ball arrival when possible).
-  apexPose: 'SPIKE' | 'ARM_SPIKE' | 'SET';
+  apexPose: 'SPIKE' | 'BLOCK' | 'SET';
   // Windup pose to fire DURING the jump-up. The arm is loaded into striking
   // position so the apex strike reads as a real movement instead of a single
   // jolt. Set for SMASH/JUMP_SERVE where the spike is a two-beat gesture
-  // (arm loads back → arm whips forward); omitted for FEINTE (a soft poke)
-  // and BLOC (the apex pose IS the arm-up position).
-  windupPose?: 'ARM_SPIKE';
+  // (arm loads back → arm whips forward); omitted for FEINTE (a soft poke).
+  // BLOC raises both arms into BLOCK during the jump-up so they are fully
+  // extended above the net at the apex, then holds the same pose there.
+  windupPose?: 'ARM_SPIKE' | 'BLOCK';
   // How long the jump (going up + coming down) takes.
   jumpDuration: number;
   // Approach duration — capped to 60 % of the window so jump + land have room.
@@ -260,7 +261,8 @@ function expandJumpServe(brick: JumpServeBrick, ctx: ExpandContext): TimelineAct
 
 function expandBloc(brick: BlocBrick, ctx: ExpandContext): TimelineAction[] {
   return approachJumpLand(brick, ctx, {
-    apexPose: 'ARM_SPIKE',
+    apexPose: 'BLOCK',
+    windupPose: 'BLOCK',
     jumpDuration: 0.6,
     approachDuration: 0.4,
   }, DEFAULT_JUMP.bloc);

@@ -53,7 +53,7 @@ const JUMPING_BRICKS = new Set<BrickAction['kind']>([
 // Poses that represent a moment of contact with the ball — fired right when the
 // ball arrives on the player. READY/RESET are static stances that interpolate
 // during the transition. Exported so decompile.ts uses the same definition.
-export const CONTACT_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE']);
+export const CONTACT_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'BLOCK']);
 
 function positionsEqual(a: [number, number, number], b: [number, number, number]): boolean {
   return (

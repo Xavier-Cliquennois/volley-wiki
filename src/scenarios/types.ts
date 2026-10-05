@@ -72,7 +72,7 @@ export type PlayerPoseAction = {
   type: 'player_pose';
   time: number;
   id: string;
-  pose: 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'READY' | 'RESET';
+  pose: 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'BLOCK' | 'READY' | 'RESET';
   duration: number;
   description?: string;
   text?: string;
