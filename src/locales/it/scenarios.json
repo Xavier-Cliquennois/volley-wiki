@@ -4,10 +4,6 @@
     "title": "SCENARI DI GIOCO",
     "subtitle": "Visualizza situazioni concrete in 3D con narrazione passo dopo passo."
   },
-  "construction": {
-    "label": "PAGINA IN COSTRUZIONE",
-    "body": "Alcune animazioni 3D possono ancora contenere errori o essere incomplete. Grazie per la pazienza — gli scenari sono in fase di completamento."
-  },
   "wizard": {
     "step1": "1 · QUANTI GIOCATORI PER SQUADRA?",
     "step2": "2 · QUALE FASE DI GIOCO?",

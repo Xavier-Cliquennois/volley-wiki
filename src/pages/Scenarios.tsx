@@ -186,29 +186,6 @@ export default function Scenarios() {
         </p>
       </div>
 
-      <div
-        role="status"
-        style={{
-          border: '3px solid var(--ink)',
-          background: 'var(--yellow)',
-          boxShadow: 'var(--shadow-sm)',
-          padding: '14px 18px',
-          display: 'flex',
-          alignItems: 'flex-start',
-          gap: 14,
-        }}
-      >
-        <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>🚧</span>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em' }}>
-            {t('construction.label')}
-          </div>
-          <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, lineHeight: 1.5 }}>
-            {t('construction.body')}
-          </p>
-        </div>
-      </div>
-
       {(systemFilter || rotationFilter) && (
         <div
           role="status"

@@ -4,10 +4,6 @@
     "title": "OYUN SENARYOLARI",
     "subtitle": "Adım adım anlatımla somut durumları 3D olarak görselleştirin."
   },
-  "construction": {
-    "label": "SAYFA YAPIM AŞAMASINDA",
-    "body": "Bazı 3D animasyonlar hâlâ hatalar içerebilir veya eksik olabilir. Sabrınız için teşekkürler — senaryolar tamamlanıyor."
-  },
   "wizard": {
     "step1": "1 · TAKIM BAŞINA KAÇ OYUNCU?",
     "step2": "2 · HANGİ OYUN FAZI?",
