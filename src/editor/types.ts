@@ -4,6 +4,8 @@ import type {
   PhaseKind,
   PlayerRole,
   Scenario,
+  ScenarioRotationTag,
+  ScenarioSystemTag,
   TeamSize,
 } from '../scenarios/types';
 import type { BrickAction } from './bricks';
@@ -48,7 +50,7 @@ export function migrateLegacyTempo(t: string): StepTempo {
 }
 
 // Pose names supported by the runtime (mirrors useTactic.ts).
-export type PoseName = 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'READY' | 'RESET';
+export type PoseName = 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'BLOCK' | 'READY' | 'RESET';
 
 export type EditorPlayer = {
   id: string;
@@ -104,6 +106,9 @@ export type EditorState = {
     phase: PhaseKind;
     contextLabel: string;
     defaultCamera?: CameraPreset;
+    // Tactical tags propagated to the compiled scenario's config.
+    system?: ScenarioSystemTag;
+    rotation?: ScenarioRotationTag;
   };
   players: EditorPlayer[];
   steps: EditorStep[];

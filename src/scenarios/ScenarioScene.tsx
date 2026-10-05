@@ -10,8 +10,10 @@ import type { BallWithTrailRef } from '../3d/BallWithTrail';
 import { ImpactEffect } from '../3d/ImpactEffect';
 import type { ImpactEffectRef } from '../3d/ImpactEffect';
 import { useTactic } from '../3d/useTactic';
+import type { PlayerRefMap } from '../3d/useTactic';
 import type { Scenario, ScenarioPlayerConfig, TimelineAction } from './types';
 import { COLORS, resolvePlayerColor } from './data/_shared';
+import { computeFacing } from './facing';
 
 // ──────────────────────────────────────────────────────────────────────────
 // Helpers — injected automatically so every scenario looks consistent
@@ -74,13 +76,15 @@ function ballSourceCandidate(scenario: Scenario): { player: ScenarioPlayerConfig
       label: isServe ? 'Serveur adv.' : 'Réceptionneur adv.',
       role: 'opponent',
       color: COLORS.opponent,
-      position: [bx, 0, bz + 0.2],
+      // Opponents face our side (+z): the ball sits just in front of them.
+      position: [bx, 0, bz - 0.3],
     },
     pose: {
       type: 'player_pose',
       time: 0,
       id,
-      pose: isServe ? 'SPIKE' : 'BUMP',
+      // A server waits arm cocked: the strike itself is not scripted.
+      pose: isServe ? 'ARM_SPIKE' : 'BUMP',
       duration: 0.2,
     },
   };
@@ -93,8 +97,15 @@ function pickTemplateFillers(
 ): ScenarioPlayerConfig[] {
   if (count <= 0) return [];
   const existing = scenario.players.filter(p => p.role === 'opponent');
+  const existingIds = new Set(existing.map(p => p.id));
+  // A filler must stay clear of every spot a scripted opponent goes through,
+  // not only its starting spot: an attacker running in to the net would
+  // otherwise end up inside a filler standing there.
   const blockers: Array<{ x: number; z: number }> = [
     ...existing.map(p => ({ x: p.position[0], z: p.position[2] })),
+    ...scenario.timeline.flatMap(a =>
+      a.type === 'player_move' && existingIds.has(a.id) ? [{ x: a.to[0], z: a.to[2] }] : [],
+    ),
     ...(ballSrcPlayer ? [{ x: ballSrcPlayer.position[0], z: ballSrcPlayer.position[2] }] : []),
   ];
 
@@ -148,7 +159,7 @@ function ensureLandings(timeline: TimelineAction[]): TimelineAction[] {
 
 type ScenarioSceneProps = {
   scenario: Scenario;
-  playerRefs: React.MutableRefObject<Record<string, any>>;
+  playerRefs: React.MutableRefObject<PlayerRefMap>;
   controllerRef: React.MutableRefObject<gsap.core.Timeline | null>;
   cameraRef: React.RefObject<THREE.PerspectiveCamera | null>;
   onUpdate: (progress: number, actionIndex: number) => void;
@@ -162,7 +173,7 @@ type ScenarioSceneProps = {
 const CameraSetup: React.FC<{ cameraRef: React.RefObject<THREE.PerspectiveCamera | null> }> = ({ cameraRef }) => {
   const { camera } = useThree();
   useEffect(() => {
-    (cameraRef as React.MutableRefObject<THREE.PerspectiveCamera | null>).current = camera as THREE.PerspectiveCamera;
+    cameraRef.current = camera as THREE.PerspectiveCamera;
   }, [camera, cameraRef]);
   return null;
 };
@@ -189,14 +200,18 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
   // - Fill remaining slots with template opponents
   // - Hard-cap each side at `teamSize` so we never end up with 5 opponents in 4v4
   // - Append landing actions for any player still in the air at the end of their last scripted move
+  // - Append the turns of every player who sets (towards his left antenna, then back to the net)
   //
   // When `disableAutoFill` is set (editor preview), every step above is skipped:
   // we render exactly the authored roster so the WYSIWYG promise holds.
   const augmented = useMemo(() => {
     if (disableAutoFill) {
+      const landed = ensureLandings(scenario.timeline);
+      const facing = computeFacing(scenario.players, landed);
       return {
         players: scenario.players,
-        timeline: ensureLandings(scenario.timeline),
+        timeline: [...landed, ...facing.actions],
+        initialFacing: facing.initial,
       };
     }
 
@@ -221,8 +236,13 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
     const baseTimeline = ballSrc && opponents.includes(ballSrc.player)
       ? [ballSrc.pose, ...scenario.timeline]
       : scenario.timeline;
-    const timeline = ensureLandings(baseTimeline);
-    return { players, timeline };
+    const landed = ensureLandings(baseTimeline);
+    const facing = computeFacing(players, landed);
+    return {
+      players,
+      timeline: [...landed, ...facing.actions],
+      initialFacing: facing.initial,
+    };
   }, [scenario, disableAutoFill]);
 
   const script = useMemo(
@@ -249,21 +269,17 @@ export const ScenarioScene: React.FC<ScenarioSceneProps> = ({
       <directionalLight position={[5, 10, 5]} intensity={1.2} castShadow />
       <Court />
       {showZones && <CourtZones />}
-      {augmented.players.map(player => {
-        // Setters on our side face the antenne gauche to mimic real setting orientation.
-        const facingRotation = player.role === 'setter' && player.position[2] > 0
-          ? -Math.PI / 2
-          : undefined;
-        return (
-          <Player
-            key={player.id}
-            ref={el => { playerRefs.current[player.id] = el; }}
-            color={resolvePlayerColor(player)}
-            position={player.position}
-            facingRotation={facingRotation}
-          />
-        );
-      })}
+      {/* Everyone faces the net; a player who sets turns towards his left
+          antenna through `player_face` actions (see facing.ts). */}
+      {augmented.players.map(player => (
+        <Player
+          key={player.id}
+          ref={el => { playerRefs.current[player.id] = el; }}
+          color={resolvePlayerColor(player)}
+          position={player.position}
+          facingRotation={augmented.initialFacing[player.id]}
+        />
+      ))}
       <BallWithTrail ref={ballRef} position={scenario.initialBallPosition} showTrail={showTrail} />
       <ImpactEffect ref={impactRef} />
     </>

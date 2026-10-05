@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "N°",
   "list": {
+    "techniques-de-base": {
+      "title": "基本技術",
+      "subtitle": "基本技術カード — ポイント、ミス、動画",
+      "category": "技術",
+      "description": "バレーボールの基本動作カタログ：レセプション、トス、スパイク、ブロック、サーブ、ディフェンス。カテゴリーとレベルでフィルタリング可能、動画付き。",
+      "readingTime": "約10分",
+      "level": "初級"
+    },
     "service": {
       "title": "サーブガイド",
       "subtitle": "アンダーハンド、フローター、ジャンプフローター、ジャンプサーブ",

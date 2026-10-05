@@ -11,6 +11,12 @@
 export type TeamSize = 4 | 5 | 6;
 export type PhaseKind = 'attack' | 'defense' | 'reception';
 
+// Optional tactical tags so a scenario can be linked back to a specific
+// team system + rotation. Used by the /scenarios filter and by the
+// SystemDetail page to show "see related scenarios" links.
+export type ScenarioSystemTag = '5-1' | '6-2' | '4-2';
+export type ScenarioRotationTag = 'R1' | 'R2' | 'R3' | 'R4' | 'R5' | 'R6';
+
 export type PlayerRole =
   | 'setter'
   | 'opposite'
@@ -47,6 +53,9 @@ export type BallMoveAction = {
   // Optional explicit trajectory. When provided, takes precedence over `arc`.
   curve?: BallCurve;
   apex?: number;
+  // The ball is held by a walking player: it follows his pace (same easing as
+  // a player_move) instead of flying at a constant speed.
+  carried?: boolean;
   description?: string;
 };
 
@@ -63,13 +72,25 @@ export type PlayerPoseAction = {
   type: 'player_pose';
   time: number;
   id: string;
-  pose: 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'READY' | 'RESET';
+  pose: 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'BLOCK' | 'READY' | 'RESET';
   duration: number;
   description?: string;
   text?: string;
 };
 
-export type TimelineAction = BallMoveAction | PlayerMoveAction | PlayerPoseAction;
+// Turns a player on himself (rotation around Y, radians, same convention as
+// the Player group). Not authored: added at render time by
+// `setFacingActions` (src/scenarios/facing.ts).
+export type PlayerFaceAction = {
+  type: 'player_face';
+  time: number;
+  id: string;
+  rotation: number;
+  duration: number;
+  description?: string;
+};
+
+export type TimelineAction = BallMoveAction | PlayerMoveAction | PlayerPoseAction | PlayerFaceAction;
 
 // Narrative step shown in the side card / timeline strip
 // Multiple actions can map to the same narrative step via stepId
@@ -84,6 +105,10 @@ export type ScenarioConfig = {
   teamSize: TeamSize;
   phase: PhaseKind;
   contextLabel: string;
+  // Tactical tags — present only on scenarios that demonstrate a specific
+  // system (and optionally a specific rotation within that system).
+  system?: ScenarioSystemTag;
+  rotation?: ScenarioRotationTag;
 };
 
 export type ScenarioSummary = {

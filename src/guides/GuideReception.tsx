@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
-import type { TeamSize } from '../pages/Positions';
+import type { TeamSize } from '../positions/configurations';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
 import { S } from './styles';
+import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 type ReceptionSystem = {
   name: string;
@@ -37,6 +39,7 @@ type VideoItem = { title: string; url: string };
 
 export default function GuideReception() {
   const { t } = useTranslation('guideContent');
+  const { t: tD } = useTranslation('drills');
   const [searchParams, setSearchParams] = useSearchParams();
   const initialSize = parseInt(searchParams.get('size') ?? '6') as TeamSize;
   const [teamSize, setTeamSize] = useState<TeamSize>([4, 5, 6].includes(initialSize) ? initialSize : 6);
@@ -306,6 +309,12 @@ export default function GuideReception() {
         </div>
       </section>
 
+      {/* Drills */}
+      <section>
+        <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.reception') })}</h2>
+        <DrillList skill="reception" availableTeamSizes={[teamSize]} />
+      </section>
+
       {/* Videos */}
       <section>
         <h2 style={S.section}>{t('reception.videos.title')}</h2>
@@ -316,6 +325,7 @@ export default function GuideReception() {
         </div>
       </section>
 
+      <QuizEmbed slug="reception" persistProgress={false} />
     </div>
   );
 }

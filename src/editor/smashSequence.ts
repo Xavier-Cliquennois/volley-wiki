@@ -9,15 +9,15 @@
 // current position to the contact zone).
 
 import type { BrickAction, SmashBrick } from './bricks';
-import { DEFAULT_JUMP } from './bricks/expand';
+import { DEFAULT_JUMP, HAND_REACH } from './bricks/expand';
 import type { EditorPlayer, EditorState, EditorStep, BallTrajectory } from './types';
 import { defaultSmashLandingFor } from './smashSync';
 
 // Standard jump-apex height for a smash. Sourced from the canonical map so
 // the macro stays aligned if defaults are retuned.
 const SMASH_JUMP = DEFAULT_JUMP.smash;
-// Above-apex height where the ball "meets" the hand.
-const BALL_CONTACT_Y = SMASH_JUMP + 0.5;
+// Height where the ball meets the raised hand at the jump apex.
+const BALL_CONTACT_Y = SMASH_JUMP + HAND_REACH;
 // Approach offset: the attacker stands a touch behind their impact point at
 // the start of the smash card (they then run + jump in).
 const APPROACH_BACK_Z = 1.8;
@@ -110,7 +110,7 @@ export function buildSmashSequence(
 
   const smashStep: EditorStep = {
     id: smashStepId,
-    title: `Smash ${zoneLabel(impactX, impactZ)}`,
+    title: `Smash ${zoneLabel(impactX)}`,
     description: `${attacker?.label ?? attackerId} saute et frappe au filet, la balle plonge côté adverse.`,
     tempo: 'rapide',
     snapshot: {
@@ -144,7 +144,7 @@ function pickDefaultSetter(
   return best;
 }
 
-function zoneLabel(x: number, _z: number): string {
+function zoneLabel(x: number): string {
   if (x < -1.5) return 'zone 4';
   if (x > 1.5) return 'zone 2';
   return 'zone 3';

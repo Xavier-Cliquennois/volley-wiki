@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { ScenarioScene } from './ScenarioScene';
 import { CAMERA_PRESETS, useCameraControls } from '../3d/useCameraControls';
 import type { CameraPresetKey } from '../3d/useCameraControls';
+import type { PlayerRefMap } from '../3d/useTactic';
 import type { PhaseKind, Scenario, ScenarioStep, TeamSize } from './types';
 import { resolvePlayerColor } from './data/_shared';
-import { CONFIGURATIONS } from '../pages/Positions';
+import { CONFIGURATIONS } from '../positions/configurations';
 import { useCurrentLang } from '../i18n/paths';
 
 // Guide pointers used by the per-step deep-dive link. Slugs match the routes
@@ -130,13 +131,42 @@ const btnSm: React.CSSProperties = {
 };
 const btnActive: React.CSSProperties = { ...btnSm, background: 'var(--orange)', color: '#fff', borderColor: 'var(--orange)' };
 
+type ControlIconName = 'play' | 'pause' | 'replay' | 'stepMode' | 'prev' | 'next'
+
+/**
+ * Inline SVG control glyphs. Unicode media symbols (U+23F8, U+23EF...) render as
+ * coloured emoji on some phones; SVG with currentColor looks the same everywhere.
+ */
+function ControlIcon({ name, size }: { name: ControlIconName; size: number }) {
+  const common = { width: size, height: size, viewBox: '0 0 24 24', 'aria-hidden': true, focusable: false, style: { display: 'block', flexShrink: 0 } } as const
+  switch (name) {
+    case 'play':
+      return <svg {...common} fill="currentColor"><path d="M7 4v16l13-8z" /></svg>
+    case 'pause':
+      return <svg {...common} fill="currentColor"><rect x="6" y="4" width="4.5" height="16" /><rect x="13.5" y="4" width="4.5" height="16" /></svg>
+    case 'replay':
+      return (
+        <svg {...common} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square">
+          <path d="M5 12a7 7 0 1 0 2.2-5.1" />
+          <path d="M4 3v6h6" />
+        </svg>
+      )
+    case 'stepMode':
+      return <svg {...common} fill="currentColor"><path d="M4 4v16l11-8z" /><rect x="17" y="4" width="3.5" height="16" /></svg>
+    case 'prev':
+      return <svg {...common} fill="currentColor"><rect x="4" y="4" width="3.5" height="16" /><path d="M20 4v16L9 12z" /></svg>
+    case 'next':
+      return <svg {...common} fill="currentColor"><path d="M4 4v16l11-8z" /><rect x="16.5" y="4" width="3.5" height="16" /></svg>
+  }
+}
+
 export default function ScenarioPlayer({ scenario, hideHeader = false, disableAutoFill = false }: ScenarioPlayerProps) {
   const { t } = useTranslation('scenarios');
   const { t: tGuides } = useTranslation('guides');
   const lang = useCurrentLang();
   const controllerRef = useRef<gsap.core.Timeline | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
-  const playerRefs = useRef<Record<string, any>>({});
+  const playerRefs = useRef<PlayerRefMap>({});
   const stepStripRef = useRef<HTMLDivElement>(null);
   const stepBoundaryRef = useRef<number | null>(null);
 
@@ -148,20 +178,30 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
   const [activeStepIdx, setActiveStepIdx] = useState(0);
   const [showTrail, setShowTrail] = useState(true);
   const [showZones, setShowZones] = useState(false);
-  const [currentCameraPreset, setCurrentCameraPreset] = useState<CameraPresetKey>('DEFAULT');
+  const initialCamera: CameraPresetKey = scenario.defaultCamera ?? 'DEFAULT';
+  const [currentCameraPreset, setCurrentCameraPreset] = useState<CameraPresetKey>(initialCamera);
 
   const { animateToPreset } = useCameraControls(cameraRef);
 
-  useEffect(() => {
+  // Reset the playback state when another scenario (or camera) is loaded.
+  // Done during render rather than in an effect so the stale state never
+  // reaches the screen; see https://react.dev/learn/you-might-not-need-an-effect.
+  const [resetKey, setResetKey] = useState({ id: scenario.id, camera: initialCamera });
+  if (resetKey.id !== scenario.id || resetKey.camera !== initialCamera) {
+    setResetKey({ id: scenario.id, camera: initialCamera });
     setIsPlaying(false);
     setHasStarted(false);
     setProgress(0);
     setActiveStepIdx(0);
-    stepBoundaryRef.current = null;
-    const initialCamera = scenario.defaultCamera ?? 'DEFAULT';
     setCurrentCameraPreset(initialCamera);
+  }
+
+  // Side effects of the reset: drop the pending step boundary and snap the
+  // camera to the scenario's preset.
+  useEffect(() => {
+    stepBoundaryRef.current = null;
     animateToPreset(initialCamera, 0.01);
-  }, [scenario.id, scenario.defaultCamera, animateToPreset]);
+  }, [scenario.id, initialCamera, animateToPreset]);
 
   const handleUpdate = useCallback((prog: number) => {
     setProgress(prog);
@@ -410,7 +450,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   border: '2.5px solid var(--ink)', boxShadow: 'var(--shadow)', marginBottom: 12,
                 }}>
-                  <span style={{ fontSize: 36, marginLeft: 4, color: '#fff' }}>▶</span>
+                  <span style={{ marginLeft: 4, color: '#fff', display: 'flex' }}><ControlIcon name="play" size={36} /></span>
                 </div>
                 <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 10, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--cream)' }}>
                   {mode === 'step' ? t('player.controls.play') + ' · ' + t('player.controls.previousStep').toLowerCase() : t('player.controls.play')}
@@ -502,6 +542,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   onClick={() => handleModeChange('auto')}
                   style={{
                     padding: '6px 12px',
+                    display: 'inline-flex', alignItems: 'center', gap: 6,
                     fontFamily: '"DM Mono", monospace',
                     fontSize: 11,
                     border: 'none',
@@ -511,12 +552,13 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   }}
                   aria-pressed={mode === 'auto'}
                 >
-                  ▶ {t('player.controls.auto')}
+                  <ControlIcon name="play" size={11} /> {t('player.controls.auto')}
                 </button>
                 <button
                   onClick={() => handleModeChange('step')}
                   style={{
                     padding: '6px 12px',
+                    display: 'inline-flex', alignItems: 'center', gap: 6,
                     fontFamily: '"DM Mono", monospace',
                     fontSize: 11,
                     border: 'none',
@@ -527,7 +569,7 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                   }}
                   aria-pressed={mode === 'step'}
                 >
-                  ⏯ {t('player.controls.stepMode')}
+                  <ControlIcon name="stepMode" size={11} /> {t('player.controls.stepMode')}
                 </button>
               </div>
               <button
@@ -535,20 +577,20 @@ export default function ScenarioPlayer({ scenario, hideHeader = false, disableAu
                 disabled={activeStepIdx === 0}
                 style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === 0 ? 0.3 : 1 }}
                 aria-label={t('player.controls.previousStep')}
-              >⏮</button>
+              ><ControlIcon name="prev" size={16} /></button>
               <button
                 onClick={togglePlay}
                 style={{ width: 48, height: 48, background: 'var(--orange)', border: '2.5px solid var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, cursor: 'pointer', boxShadow: 'var(--shadow-sm)' }}
                 aria-label={isPlaying ? t('player.controls.pause') : isAtEnd ? t('player.controls.replay') : t('player.controls.play')}
               >
-                {isPlaying ? '⏸' : isAtEnd ? '↺' : '▶'}
+                <ControlIcon name={isPlaying ? 'pause' : isAtEnd ? 'replay' : 'play'} size={20} />
               </button>
               <button
                 onClick={stepForward}
                 disabled={activeStepIdx === scenario.steps.length - 1}
                 style={{ ...btnSm, width: 38, height: 38, opacity: activeStepIdx === scenario.steps.length - 1 ? 0.3 : 1 }}
                 aria-label={t('player.controls.nextStep')}
-              >⏭</button>
+              ><ControlIcon name="next" size={16} /></button>
             </div>
           </div>
 

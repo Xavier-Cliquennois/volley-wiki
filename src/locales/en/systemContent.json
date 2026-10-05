@@ -1,0 +1,407 @@
+{
+  "attackLabels": {
+    "Quick centre (1er tempo)": "Centre quick (1st tempo)",
+    "Aile gauche (P4)": "Left side (P4)",
+    "Aile droite (Pointu)": "Right side (opposite)",
+    "Aile droite (P2)": "Right side (P2)",
+    "Aile gauche (passeur attaquant)": "Left side (attacking setter)",
+    "Aile droite (passeur attaquant)": "Right side (attacking setter)",
+    "Attaque centre (passeur attaquant)": "Centre attack (attacking setter)",
+    "Pipe (P6)": "Pipe (P6)",
+    "Bic D (P1 arrière droit)": "Back-row right (P1)",
+    "Bic centre (P6 arrière)": "Back-row centre (P6)",
+    "Bic A (P5 arrière gauche)": "Back-row left (P5)",
+    "Aile gauche": "Left side",
+    "Aile droite": "Right side"
+  },
+  "5-1": {
+    "title": "5-1 System",
+    "tagline": "A single setter across all 6 rotations — the competition standard.",
+    "philosophy": "The 5-1 uses one setter who distributes in every rotation, whether at the net (rotations 4-5-6) or in the back row (rotations 1-2-3, with penetration). To keep the offence balanced, the opposite (diagonally across from the setter) takes over the attack when the setter is at the net. The libero replaces the middle blockers when they are in the back row. It is the system that maximises individual expertise: one setter to train, specialised attackers, constant distribution.",
+    "pros": [
+      "Stable distribution: one setter, one style of play.",
+      "Varied attack: 3 front-row attackers + pipe in the back-row rotations.",
+      "Maximum role specialisation."
+    ],
+    "cons": [
+      "Needs a reliable setter across 6 rotations (weak point if replaced).",
+      "Demanding penetration in the back-row rotations.",
+      "Defensive weakness in P1 when the setter penetrates (the off-blocker must compensate)."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "The most offensive 5-1 rotation: 3 front-row attackers + a pipe available. The setter penetrates from P1.",
+        "details": {
+          "overlap": "Overlap rules to respect at the moment the server contacts the ball: the setter (P1) must stay behind P2 (check: shoulders) and to the right of P6. The opposite (P4) must stay in front of P5 and to the left of P3. The front-row middle (P3) must stay between P4 and P2 without crossing. The slightest positional fault is whistled.",
+          "penetration": "Setter penetration: triggered by the opposing server's CONTACT (not the whistle). Outside curved path — along the end line, back up the diagonal, arriving at the target (~1 m from the net between P2 and P3) with shoulders parallel to the net.",
+          "transitions": "Coverage after the attack: the opposite (P2) and the left-side hitter (P4) drop to the 3 m line to cover the opposing block. MB1 stays at the net to block. If the ball gets through: immediate transition, the setter drops back to the defensive position (P1 = short diagonal defence).",
+          "signals": "Setter signals: given BEFORE the serve. Fingers behind the back for the MB (1 = quick A, 2 = quick C, 3 = slide); open hand for a high ball to the left side; closed fist for a fast set; thumb pointing backward for the pipe. Options change with the reception quality read in real time.",
+          "when-strong": "When this rotation is strong: three front-row attackers + a back-row attacker on the pipe = 4 offensive options. Ideal to open a set or a crucial side-out. Weakness: if the reception is poor, the MB's 1st tempo becomes impossible and the options shrink to the outside."
+        }
+      },
+      "R2": {
+        "summary": "Setter in P6. Penetration from the centre — the shortest path.",
+        "details": {
+          "R2-beginner": "Strengths: the shortest penetration in the system, ideal for chaining a quick attack after reception. Weaknesses: only 2 attackers at the net (the opposite is in the back row), so the offensive options are reduced compared to R1 or R3.",
+          "R2-overlap": "Overlap rules: the setter (P6) must stay behind P3 and between P5 and P1. The opposite (P3) at the centre of the net must stay in front of P6 and between P4 and P2. The libero in P1 must stay behind P2 and to the right of P6. Symmetrical set-up, easier to hold than R1.",
+          "R2-setter": "Short penetration: the setter starts at back centre and runs in a straight line to the target (between P2 and P3). Triggered at the server's contact. It is the fastest path; in most cases the setter gets there before the ball.",
+          "R2-transitions": "Coverage after the attack: the opposite (P3) and the outside hitter (P4) drop to the 3 m line to cover the opposing block. The front-row middle (P2) stays at the net to block. After the set, the setter drops back to back centre (P6) — covering the widest defensive zone.",
+          "R2-signals": "Offensive options: centre quick (P2) on 1st tempo, left side (P4) on 2nd tempo, pipe from P5 if the back-row outside hitter is strong. The opposite is not available (back row, in P1). The setter often calls quick + outside to exploit a central reception."
+        }
+      },
+      "R3": {
+        "summary": "Setter in P5. Penetration from the left, has to cross the court.",
+        "details": {
+          "R3-beginner": "Strengths: 3 attackers available at the net (opposite in P2 + middle in P3 + left-side hitter in P4). Weaknesses: the longest penetration in the system — if the reception is fast or poor, the setter arrives late and a teammate has to take the 2nd contact.",
+          "R3-overlap": "Overlap rules: the setter (P5) must stay to the left of P6 and behind P4. The left-side hitter (P4) must stay in front of P5 and to the left of P3. The opposite (P2) at the right of the net has plenty of room. This is the rotation where the setter must police their position the most before the serve.",
+          "R3-setter": "Long penetration: diagonal path from back left to the right-hand target. The setter must start early and accelerate. Variant: penetrate along the outside lane (left → end line → back up on the right) to avoid getting in the way of the central receivers.",
+          "R3-transitions": "Coverage after the attack: the left-side hitter (P4) and the middle (P3) cover in an arc around the attacker. The back-row setter (P5) covers the short left diagonal. If the defence recovers the ball, the setter has the longest penetration for the 2nd contact — often the libero or the outside hitter takes the set.",
+          "R3-signals": "Offensive options: left side (P4) on a high ball if the setter is late, centre quick (P3) if the reception is perfect, opposite attack (P2) on a higher ball, pipe from P6 (back-row OH2). The most offensive in theory, but conditioned by the setter's speed."
+        }
+      },
+      "R4": {
+        "summary": "Setter in P4. At the net on the left — fast distribution to the centre and the right.",
+        "details": {
+          "R4-beginner": "Strengths: no penetration, the setter is already at the net. Stable distribution. The opposite (back row in P1) stays ready to hit the pipe. Weaknesses: only 2 real attackers at the net (middle + right side — the setter does not hit), so the opposing block anticipates more easily.",
+          "R4-overlap": "Overlap rules: the setter (P4) at the left of the net must stay in front of P5 and to the left of P3. The outside hitter (P5) in the back left must stay behind P4. The middle (P3) must stay between P4 and P2 — this is the rotation where the middle has to be most disciplined to avoid a fault.",
+          "R4-setter": "No penetration: the setter slides from P4 to the target (between P3 and P2) as soon as the server contacts the ball. Short distance, path along the net. Must face the net and turn quickly so as not to be late on fast balls.",
+          "R4-transitions": "Coverage after the attack: the setter (P4) drops to the 3 m line to cover the right-side hitter. The middle stays at the net to block. The opposite in P1 (back row) prepares the pipe in transition — it is this rotation's main weapon to get around the opposing block.",
+          "R4-signals": "Offensive options: centre quick (P3) on 1st tempo, right side (P2 where OH2 is positioned) on 2nd tempo, pipe from the back right (P1 opposite). The setter often calls pipe + quick to exploit the thinner defence. No left side since the setter occupies P4."
+        }
+      },
+      "R5": {
+        "summary": "Setter in P3. At the net in the centre — the best distribution angle.",
+        "details": {
+          "R5-beginner": "Strengths: the setter in the centre sees the whole court and distributes to every angle. Weaknesses: the setter must shift instantly from P3 to the target (right of the net) and the front-row middle (in P4) must clear the net to attack on the left side.",
+          "R5-overlap": "Overlap rules: the setter (P3) at the centre of the net must stay between P4 and P2 and in front of P6. This is the strictest overlap in the system — no margin on the left or the right. The back-row middle (P6, actually replaced by the OPP here) must stay behind the setter.",
+          "R5-setter": "The setter slides from P3 to the right (target between P2 and P3) as soon as the server contacts the ball. A short movement, but it has to be instant — the front-row middle (P4) clears at the same time toward the left side to attack. Setter/middle timing is crucial.",
+          "R5-transitions": "Coverage after the attack: the setter drops to the 3 m line on the short diagonal. The middle (who was in P4) returns to the net to block. The opposite in P6 (back row) prepares the pipe — in this rotation the pipe is very exploitable thanks to the setter's central angle.",
+          "R5-signals": "Offensive options: left side (the front-row middle who shifted), right side (OH2 in P2), pipe (back-row opposite, P6). The front-row middle does not run a quick in this rotation (he is in P4 and goes to attack like an outside hitter). Rich distribution thanks to the central angle."
+        }
+      },
+      "R6": {
+        "summary": "Setter in P2. At the net on the right — the most defensively stable rotation.",
+        "details": {
+          "R6-beginner": "Strengths: the setter is already at the target (zone 2 of the net), ultra-fast transition. The opposite is in the back row (P5), ready for the pipe. Weaknesses: the defence in P1 (short diagonal zone behind the setter) is weaker because it is covered by the opposite, who is less of a defender than the outside hitter.",
+          "R6-overlap": "Overlap rules: the setter (P2) at the right of the net must stay to the right of P3 and in front of P1. Natural position, the overlap is held effortlessly. The opposite in P5 (back left) has plenty of room, no tight constraint.",
+          "R6-setter": "Minimal movement: the setter adjusts a few steps toward the target (between P2 and P3). It is the fastest transition in the system, ideal for side-outs under pressure. The setter can even take the 2nd contact without moving on a good reception.",
+          "R6-transitions": "Coverage after the attack: the setter (P2) covers the right-side hitter in a tight arc. The middle (P3) blocks the opposing attack across from them. The opposite (P5 back row) drops to the left 3 m line to cover the block. Very balanced defensive set-up, the soundest in the system.",
+          "R6-signals": "Offensive options: centre quick (P3) on 1st tempo, left side (P4 where OH1 is positioned) on 2nd tempo, pipe from P5 (back-row opposite). The setter uses the stability of this position to distribute more often to the most dangerous attackers of the match."
+        }
+      }
+    }
+  },
+  "6-2": {
+    "title": "6-2 System",
+    "tagline": "2 setters on the diagonal — always 3 attackers at the net.",
+    "philosophy": "The 6-2 places 2 setters diagonally opposite each other. In every rotation, one is in the back row (penetrating and distributing) and the other is in the front row (playing as a 3rd attacker, usually on the right side). Result: 3 attackers at the net at all times, versus 2 in a 5-1. It is a demanding system that requires the setters to be versatile (set AND attack), but it maximises the offensive options.",
+    "pros": [
+      "3 attackers at the net in every rotation: constant offensive pressure.",
+      "No long penetration: the back-row setter stays on the right.",
+      "Allows specialisation by side (one right-handed and one left-handed setter is ideal)."
+    ],
+    "cons": [
+      "Both setters must be good attackers (right side) — a rare combination.",
+      "Less stable distribution: 2 different setting styles depending on the rotation.",
+      "No left-side attack by the setter; too predictable on the right side."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "Setter 1 in the back row in P1, 2nd setter in the front row in P4 — attacking like an OH.",
+        "details": {
+          "R1-beginner": "Strengths: 3 attackers at the net (the 2nd setter attacks from P4 + middle + right side). The back-row setter's penetration is short (from P1). Weaknesses: the 2nd setter in P4 must be able to attack a high ball — technically demanding.",
+          "R1-overlap": "Setter 1 (P1) must stay behind P2 and to the right of P6. The 2nd setter (P4) must stay in front of P5 and to the left of P3. No opposite to manage (the setters take the right-side/left-side attacking roles depending on the rotation).",
+          "R1-setter": "Short penetration: setter 1 leaves P1 and runs up toward the target (between P2 and P3). Distance comparable to R1 of the 5-1. The 2nd setter stays at the net and switches to attacking after the distribution.",
+          "R1-transitions": "After the attack: setter 1 drops back to P1 (short diagonal defence). The 2nd setter drops to the 3 m line to cover the opposing block. Middle and left-side hitter block. Quick transition to defensive coverage.",
+          "R1-signals": "Options: quick MB1 (centre), left side OH1, right side by the 2nd setter (P4 toward zone 2), pipe OH2 from P6. Fan-shaped distribution: every angle available, ideal to confuse the opposing block."
+        }
+      },
+      "R2": {
+        "summary": "Setter 1 always in the back row (P6), 2nd setter in the front row in P3 — quick attack or right side.",
+        "details": {
+          "R2-beginner": "Strengths: short penetration from the centre, 3 attackers at the net. The 2nd setter in P3 can run a centre quick or switch to the right side. Weaknesses: the 2nd setter has to choose quickly between quick and outside — reading the opposing block is crucial.",
+          "R2-overlap": "Setter 1 (P6) must stay behind P3 and between P5 and P1. The 2nd setter (P3) at the centre of the net must stay between P4 and P2 and in front of P6. Symmetrical set-up, easy to hold.",
+          "R2-setter": "The shortest penetration in the system: straight line from back centre. The 2nd setter stays in P3 and attacks or switches depending on the chosen option. Minimal movement for both setters.",
+          "R2-transitions": "After the attack: setter 1 returns to P6 (covers the central back zone). The 2nd setter drops to the centre 3 m line. The front-row MB stays at the net to block. Centred transition — no blind spot.",
+          "R2-signals": "Options: quick MB2 (centre), left side OH1, the 2nd setter can hit in place (P3) or switch to P2 to attack on the right side. Pipe OH2 from P5. Maximum variety."
+        }
+      },
+      "R3": {
+        "summary": "Setter 1 in the back row in P5, 2nd setter in the front row in P2 — the most offensive 6-2 rotation.",
+        "details": {
+          "R3-beginner": "Strengths: 3 attackers at the net, the 2nd setter attacks on the right side (their natural zone) — the most stable option. Weaknesses: long penetration by setter 1 (from P5 to the right-hand target) — requires an early start.",
+          "R3-overlap": "Setter 1 (P5) must stay to the left of P6 and behind P4. The 2nd setter (P2) at the right of the net must stay in front of P1 and to the right of P3. Set-up where the 2nd setter is in a natural attacking position.",
+          "R3-setter": "Long penetration (from P5): diagonal path toward the right-hand target. Must start early or be late. The 2nd setter in P2 attacks without moving — their target is right in front of them.",
+          "R3-transitions": "After the attack: setter 1 drops back to P5 (deep left diagonal defence). The 2nd setter covers the line after their attack. Middle and left-side hitter block. Defensively solid set-up.",
+          "R3-signals": "Options: quick MB2 (centre), left side OH2, right side by the 2nd setter (natural attack in P2), pipe OH1 from P6. The most offensive rotation thanks to the 2nd setter's natural position."
+        }
+      },
+      "R4": {
+        "summary": "2nd setter in the back row in P1, setter 1 in the front row in P4 — the roles are reversed.",
+        "details": {
+          "R4-beginner": "Strengths: the 2nd setter takes over the distribution (twin of R1 but with the roles reversed). 3 attackers at the net. Setter 1 attacks from P4. Weaknesses: if the 2 setters have very different styles, the team has to adapt — a tactical transition moment.",
+          "R4-overlap": "Same as R1 but with the roles reversed: 2nd setter (P1) behind P2 and to the right of P6; setter 1 (P4) in front of P5 and to the left of P3.",
+          "R4-setter": "Short penetration by the 2nd setter (from P1). Setter 1 attacks from P4 like an OH. Full swap of responsibilities.",
+          "R4-transitions": "Coverage identical to R1 but reversed. The 2nd setter returns to P1, setter 1 drops to the 3 m line. Defensive continuity assured.",
+          "R4-signals": "Options: quick MB1 (centre), right side OH1, left side by setter 1 attacking from P4, pipe OH2 from P6. Setter 1 has to choose the angle of attack on the left side."
+        }
+      },
+      "R5": {
+        "summary": "2nd setter in the back row in P6, setter 1 in the front row in P3 — central penetration.",
+        "details": {
+          "R5-beginner": "Strengths: the shortest penetration (back centre), 3 attackers at the net. Setter 1 in P3 can run a quick or go outside. Weaknesses: setter 1 has to be even more versatile — playing at the centre of the net is technically demanding.",
+          "R5-overlap": "2nd setter (P6) behind P3 and between P5 and P1. Setter 1 (P3) at the centre of the net — strict overlap, between P4 and P2 and in front of P6.",
+          "R5-setter": "The shortest penetration in the system — straight line from P6. Setter 1 stays in P3 and attacks the centre or switches to P2.",
+          "R5-transitions": "The 2nd setter returns to back centre (P6). Setter 1 drops to the centre 3 m line after their attack. Very stable symmetrical set-up.",
+          "R5-signals": "Options: quick MB1 (centre), left side OH1, centre attack or right side by setter 1 from P3, pipe OH2 from P5. Centred distribution, ideal to exploit a perfect reception."
+        }
+      },
+      "R6": {
+        "summary": "2nd setter in the back row in P5, setter 1 in the front row in P2 — natural right-side attack.",
+        "details": {
+          "R6-beginner": "Strengths: setter 1 attacks in their natural zone (P2). 3 attackers at the net. Weaknesses: long penetration by the 2nd setter (from P5) — equivalent to R3 but reversed.",
+          "R6-overlap": "Same as R3 but reversed. 2nd setter (P5) to the left of P6 and behind P4. Setter 1 (P2) in front of P1 and to the right of P3.",
+          "R6-setter": "Long diagonal penetration by the 2nd setter. Setter 1 attacks from P2 without moving.",
+          "R6-transitions": "The 2nd setter drops back to P5 (left diagonal defence). Setter 1 covers the right-side hitter after their attack.",
+          "R6-signals": "Options: quick MB1 (centre), left side OH1, right side by setter 1 (natural attack in P2), pipe OH2 from P6. The soundest rotation to finish a cycle."
+        }
+      }
+    }
+  },
+  "4-2": {
+    "title": "4-2 System",
+    "tagline": "The simplest — 2 front-row setters who distribute without penetrating.",
+    "philosophy": "The 4-2 uses 2 setters on the diagonal. In every rotation, the FRONT-row setter takes the 2nd contact and distributes — no penetration! It is the easiest system to learn: no complex setter movement, just 2 attackers at the net. Ideal for beginners, schools and recreational play.",
+    "pros": [
+      "No penetration — the front-row setter takes the ball in place.",
+      "Simplest system: 2 versatile setters are enough.",
+      "Excellent for learning rotations without tactical complexity."
+    ],
+    "cons": [
+      "Only 2 attackers at the net: less offensive, the opposing block anticipates.",
+      "The setter cannot attack (they distribute): 1 player is \"lost\" in attack.",
+      "No pipe traditionally — limited offensive options."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "2nd setter (S2) in the front row in P4 — they distribute. 2 attackers: MB1 quick + OH1 outside.",
+        "details": {
+          "R1-beginner": "Strengths: the most stable 4-2 rotation. The 2nd setter is already at the net on the left and takes the 2nd contact without moving. Weaknesses: only 2 attackers (the middle and the outside hitter) — the opposing block anticipates easily.",
+          "R1-overlap": "The 2nd setter (P4) at the left of the net must stay in front of P5 and to the left of P3. Setter 1 (P1) in the back row stays a defender — they do not take part in the attack.",
+          "R1-setter": "No movement: the 2nd setter takes the pass in place. This is the main difference from the 6-2 — no penetration, no run.",
+          "R1-transitions": "After the attack: the 2nd setter drops to the 3 m line to cover the block. Setter 1 stays in P1 (defence). Symmetrical defensive set-up but with one attacker fewer.",
+          "R1-signals": "Options: centre quick MB1, right side by OH1 (since the 2nd setter occupies the left side). Simple distribution, few options — the setter often calls the same option repeatedly."
+        }
+      },
+      "R2": {
+        "summary": "2nd setter in P3 (centre of the net) — they distribute. MB2 quick on the right + OH1 on the left side.",
+        "details": {
+          "R2-beginner": "Strengths: the 2nd setter in the centre sees the whole court. 2 attackers: MB2 (in P4, who switches) and OH1 (in P2). Weaknesses: the middle has to switch to the left side to attack — not their natural zone.",
+          "R2-overlap": "The 2nd setter (P3) at the centre of the net must stay between P4 and P2 and in front of P6. Strict overlap but no difficulty since there is no movement.",
+          "R2-setter": "No movement. The 2nd setter takes the 2nd contact at the centre of the net and distributes to the left (MB2) or the right (OH1).",
+          "R2-transitions": "Centred coverage. The 2nd setter drops to P3 at the 3 m line. The attackers cover their own side.",
+          "R2-signals": "Options: MB2 attacks from P4 (left side), OH1 attacks from P2 (right side). The 2nd setter chooses depending on the reception quality."
+        }
+      },
+      "R3": {
+        "summary": "2nd setter in P2 (right of the net) — they distribute. MB2 quick + OH2 on the left side.",
+        "details": {
+          "R3-beginner": "Strengths: the 2nd setter is on the right, a natural position. 2 attackers: MB2 in the centre + OH2 on the left. Weaknesses: no threat on the right side (the setter does not hit).",
+          "R3-overlap": "The 2nd setter (P2) must stay in front of P1 and to the right of P3. Natural position, easy overlap.",
+          "R3-setter": "No movement. The 2nd setter takes the ball at the right of the net and distributes to the left.",
+          "R3-transitions": "The 2nd setter covers the right line. MB2 stays at the net to block. Solid set-up but few offensive options.",
+          "R3-signals": "Options: MB2 centre quick, OH2 left side. The 2nd setter can hardly do anything but distribute to the left — very predictable."
+        }
+      },
+      "R4": {
+        "summary": "Setter 1 (S) in the front row in P4 — they distribute (the roles are reversed). MB1 quick + OH2 on the right side.",
+        "details": {
+          "R4-beginner": "Strengths: it is now setter 1's turn to distribute. Same principles as R1 but with the roles reversed. Weaknesses: mental transition — the team has to adapt to the new distributor's style.",
+          "R4-overlap": "Setter 1 (P4) at the left of the net must stay in front of P5 and to the left of P3. The 2nd setter (P1) in the back row plays as a defender only.",
+          "R4-setter": "No movement. Setter 1 takes the ball in place in P4.",
+          "R4-transitions": "Coverage symmetrical to R1. Setter 1 drops to the 3 m line after distributing. The 2nd setter stays in P1.",
+          "R4-signals": "Options: MB1 centre quick, OH2 attacks on the right side (from P2). Simple distribution to the right only."
+        }
+      },
+      "R5": {
+        "summary": "Setter 1 in P3 (centre of the net) — they distribute. MB1 quick on the right + OH2 on the left side.",
+        "details": {
+          "R5-beginner": "Strengths: setter 1 in the centre sees everything. 2 attackers. Weaknesses: the middle has to switch to the right side to attack.",
+          "R5-overlap": "Setter 1 (P3) must stay between P4 and P2 and in front of P6. Strict overlap.",
+          "R5-setter": "No movement. Setter 1 takes the ball in the centre and distributes.",
+          "R5-transitions": "Centred coverage, symmetrical to R2.",
+          "R5-signals": "Options: MB1 from P4 (left side, switched), OH2 from P2 (right side). Centred distribution."
+        }
+      },
+      "R6": {
+        "summary": "Setter 1 in P2 (right of the net) — they distribute. MB1 quick + OH1 on the left side.",
+        "details": {
+          "R6-beginner": "Strengths: setter 1 is on the right, a natural position. Same principles as R3 but reversed. Weaknesses: very predictable, distribution to the left only.",
+          "R6-overlap": "Setter 1 (P2) must stay in front of P1 and to the right of P3.",
+          "R6-setter": "No movement. Setter 1 takes the ball on the right and distributes.",
+          "R6-transitions": "Right-side coverage. Solid set-up but not very offensive.",
+          "R6-signals": "Options: MB1 quick, OH1 left side. Simple distribution to the left."
+        }
+      }
+    }
+  },
+  "5v5-5-1": {
+    "title": "5v5 — 5-1 (3 front)",
+    "tagline": "The 5-1 condensed to 5 players: 3 attackers + penetrating setter + libero.",
+    "philosophy": "In 5v5, the most offensive format is the simplified version of the 6v6 5-1. A single setter penetrates from the back row, the libero receives and defends. 3 attackers at the net at all times. Ideal to prepare the move to 6v6 or to play a fast competitive format.",
+    "pros": [
+      "3 attackers at the net at all times — constant offensive pressure.",
+      "Single setter: stable distribution.",
+      "Good preparation for 6v6 (same tactical principles)."
+    ],
+    "cons": [
+      "Limited back-court defence: the libero covers a large area alone.",
+      "Penetration on every rally — physically demanding for the setter.",
+      "No pipe (back-row attack is forbidden for the libero)."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "3 attackers at the net + a back-row setter who penetrates — the 5-1 condensed to 5 players.",
+        "details": {
+          "5v5-5-1-beginner": "The setter penetrates from the back right toward the target (between P2 and P3). 3 attackers at the net: left side, middle, opposite on the right side. The libero receives and defends in the back left. Equivalent to the 6v6 R1 without the back-row middle.",
+          "5v5-5-1-overlap": "No strict overlap rules in 5v5 (non-FIVB format), but the principles apply: the setter must stay behind the front-row attackers before the serve. The libero respects the back zone (does not cross the attack line to set overhand).",
+          "5v5-5-1-pen": "Setter penetration: triggered at the opposing server's contact. Curved path from the back right zone toward the target (~1 m from the net between P2 and P3). Faster than in 6v6 because the distance is shorter.",
+          "5v5-5-1-transitions": "Coverage: the setter drops back to the back right after distributing. The opposite and the left-side hitter drop to the 3 m line to cover the opposing block. The middle stays at the net to block. Back-court defence rests entirely on the libero — they have to cover a large area.",
+          "5v5-5-1-signals": "Offensive options: centre quick, left side, right side. No pipe (the libero cannot attack above the net in the front zone). The setter calls the 1st tempo if the reception is clean, otherwise a high ball to the outside."
+        }
+      }
+    }
+  },
+  "5v5-4-2": {
+    "title": "5v5 — 4-2 (2 front)",
+    "tagline": "Simple version: 2 setters on the diagonal, distribution in place, 2 attackers.",
+    "philosophy": "The 4-2 adapted to 5v5: 2 setters diagonally opposite, the front-row setter always distributes, the back-row setter plays as a defender. No penetration. It is the learning formation in 5v5 — simple to understand, easy to execute.",
+    "pros": [
+      "No penetration — the simplest system.",
+      "Immediate distribution at the net, quick transition to the attack.",
+      "Ideal for learning the basics."
+    ],
+    "cons": [
+      "Only 2 attackers — the opposing block anticipates easily.",
+      "1 player (the 2nd setter) does not take part in the attack.",
+      "Predictable set-up offensively."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "2 setters on the diagonal — the front-row setter distributes without moving. 2 attackers.",
+        "details": {
+          "5v5-4-2-beginner": "The front-row setter takes the 2nd contact at the centre of the net and distributes. No penetration. 2 attackers: left side + middle. The 2nd setter stays in the back row and plays as a defender. The 3rd back-row player (OH2) receives and can attack from the back row in transition.",
+          "5v5-4-2-overlap": "No strict rules in 5v5. Principles: the setters stay on the diagonal (front + back). The front-row middle must not go past the front-row setter on the right side.",
+          "5v5-4-2-pen": "No setter movement — they take the ball in place at the net. This is the advantage of the 4-2: no penetration to organise.",
+          "5v5-4-2-transitions": "Coverage after the attack: the setter drops to the 3 m line, the middle stays at the net to block. The 2nd setter in P1 defends the short right diagonal. OH2 defends the deep left side.",
+          "5v5-4-2-signals": "Options: quick MB1 if the reception is clean, left side OH1 otherwise. No pipe. Simple distribution — suits beginner teams or matches with fast rotation."
+        }
+      }
+    }
+  },
+  "4v4-diamant": {
+    "title": "4v4 — Diamond",
+    "tagline": "The most used formation — centre setter, 2 wings, 1 back.",
+    "philosophy": "The \"Diamond\" is the most played indoor 4v4 formation. The setter stays at the centre of the net, two wings take positions P4 and P2 toward the 3 m line, a single defender covers the whole back court. Simple to set up, good short-range defensive coverage, but weak at the back of the court.",
+    "pros": [
+      "The most used in indoor 4v4 — the format's reference.",
+      "Good short coverage (setter + 2 wings at 3 m).",
+      "Stable distribution, no penetration."
+    ],
+    "cons": [
+      "Only 1 back-row defender — the long diagonal is very vulnerable.",
+      "No centre quick (zone 3 is occupied by the setter).",
+      "Offensive options limited to 2 wings."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "\"Diamond\": setter in the centre, 2 wings at mid-court, 1 back-row defender.",
+        "details": {
+          "diamant-beginner": "The most used formation in indoor 4v4. 1 setter at the centre of the net, 2 wings at mid-court (P4 and P2 toward the 3 m line), 1 back-row defender covering the whole back court. The setter takes the 2nd contact and distributes to the wings — no penetration.",
+          "diamant-defense": "Typical defence: system A (1 central blocker + 3 defenders). The setter blocks at the net, the 2 wings drop to the 3 m line after the attack to cover, the back-row defender stays deep. Most vulnerable zone: the long diagonal — not enough players at the back.",
+          "diamant-transitions": "Coverage after the attack: 1 attacker covers short (3 m behind the hitter), 2 players at the back. The setter stays at the net to block the 2nd wave. Quick transition to the next attack — little movement to manage.",
+          "diamant-signals": "Options: left side or right side only (no centre, the setter occupies zone 3). The setter can fake to both sides to confuse the opposing block. Possible tip on the 2nd contact by the setter if the opponent steps forward."
+        }
+      }
+    }
+  },
+  "4v4-box": {
+    "title": "4v4 — Box",
+    "tagline": "2 at the net + 2 in the back — for a double block against powerful attacks.",
+    "philosophy": "The \"Box\" places 2 players at the net and 2 in the back, forming a square. It allows a double block on the opposing attack — useful against very powerful hitters. But with only 2 defenders at the back, it is riskier than the Diamond.",
+    "pros": [
+      "Double block possible — effective defence against power hitters.",
+      "2 attackers directly available at the net.",
+      "Symmetrical set-up that is easy to memorise."
+    ],
+    "cons": [
+      "Only 2 defenders at the back — the tip is not covered.",
+      "No central short coverage.",
+      "Requires players who are versatile in attack and defence."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "\"Box\" 2-2: 2 attackers at the net + 2 back-row defenders. Allows the double block.",
+        "details": {
+          "box-beginner": "2 players at the net (P4 and P2) + 2 in the back (P5 and P1). The setter is often one of the two back-row players, penetrating from the back left. Allows a double block on the opposing attack — useful against powerful hitters. But with only 2 defenders at the back, the tip is poorly covered.",
+          "box-defense": "Typical defence: system B (2 blockers + 2 defenders). Use only against powerful hitters without finesse. The 2 wings at the net block together, the 2 back-row players defend the diagonals. Vulnerable to short fakes.",
+          "box-transitions": "The back-row setter penetrates from the back left toward the target (centre of the net). Short distance (faster than in 6v6). After distributing, returns to the back left to defend.",
+          "box-signals": "Options: left side or right side. More often played in system A (a single blocker, 3 defenders) than in system B — unless a double block is specifically needed."
+        }
+      }
+    }
+  },
+  "4v4-ligne": {
+    "title": "4v4 — 3-1 Line",
+    "tagline": "3 attackers at the net + penetrating setter — the most offensive 4v4 formation.",
+    "philosophy": "The \"3-1 Line\" takes the principle of the 6v6 5-1: a single back-row setter who penetrates, 3 attackers at the net. It is the most offensive 4v4 formation — but it demands very clean reception and a fast setter. Ideal as a transition to 6v6.",
+    "pros": [
+      "3 attackers at the net — constant offensive pressure.",
+      "Centre quick available (1st tempo).",
+      "Ideal preparation for 6v6."
+    ],
+    "cons": [
+      "Demands good reception and a fast setter.",
+      "Only 1 defender after penetration (the setter).",
+      "Too complex for beginners."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "\"3-1 Line\": 3 attackers at the net + penetrating setter — simplified equivalent of the 5-1.",
+        "details": {
+          "ligne-beginner": "The single setter in the back right (P1) penetrates as soon as the ball is hit, toward zone 2. This frees 3 attackers in front: left side, middle, right side (often an opposite). Simplified equivalent of the 6v6 5-1 — demanding on reception and setter speed, but the most offensive of the 3 4v4 systems.",
+          "ligne-defense": "Typical defence: system A (1 central blocker + 3 defenders). The middle stays at the net to block, the 2 wings drop to the 3 m line, the setter gets back to the back right to defend the short diagonal.",
+          "ligne-transitions": "Short but critical penetration: if the reception is poor, the setter arrives late and another player has to take the 2nd contact. Technically demanding system — reserved for teams with a good setter.",
+          "ligne-signals": "Options: centre quick (1st tempo), left side, right side. No pipe (no back-row player available). Distribution to 3 angles — the opposing block struggles to anticipate."
+        }
+      }
+    }
+  },
+  "beach-classic": {
+    "title": "Beach 2v2 — Classic System",
+    "tagline": "Side by side on reception, blocker/defender on the opposing attack.",
+    "philosophy": "In beach volleyball there is no FIVB rotation and no \"system\" in the indoor sense. The 2 players split the court in halves on reception, then switch to dynamic roles (one blocks at the net, the other defends in the back) depending on the opposing attack. The \"switch\" lets each player attack from their best side.",
+    "pros": [
+      "Balanced court coverage on reception.",
+      "Flexible roles: each player passes, attacks, blocks and defends.",
+      "No rotation complexity — quick learning of the basics."
+    ],
+    "cons": [
+      "No specialisation — each player has to be able to do everything.",
+      "Fatigue directly affects performance (no substitutions).",
+      "Constant communication needed (signals, switch, defence)."
+    ],
+    "rotations": {
+      "R1": {
+        "summary": "2 players side by side on reception — each covers their half of the court.",
+        "details": {
+          "beach-beginner": "In beach 2v2, the 2 players split the court in two: the left player covers the left half, the right player the right half. When one receives the serve, the other takes the 2nd contact (set) then attacks. After each rally, they can \"switch\" (change sides) depending on the best attacking angle.",
+          "beach-blocker": "On the opposing attack: one player goes up to block at the net (the \"blocker\"), the other drops back to defend the tip and deep balls (the \"defender\"). The roles can swap on every rally — the blocker signals behind their back which side they will block (line or diagonal).",
+          "beach-switch": "The \"switch\": after the serve, the players swap positions to get the right attacking angle (a right-hander attacks better from the left of the net, a left-hander from the right). The switch happens as soon as the ball is in play — each team has its own movement convention.",
+          "beach-defense": "Defensive systems: (1) \"angle\" — the defender covers the diagonal, the block covers the line; (2) \"line\" — the defender covers the line, the block covers the diagonal; (3) \"no block\" — the blocker drops back to defend, formation with 2 deep defenders. The choice depends on the opposing hitter and the wind.",
+          "beach-signals": "Signals behind the back: open hand = block the diagonal; closed fist = block the line; fingers spread = no block. Given BEFORE the serve by the blocker, readable by their partner (the defender), who adjusts their position. In strong wind, complementary verbal signals."
+        }
+      }
+    }
+  }
+}

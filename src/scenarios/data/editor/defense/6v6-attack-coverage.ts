@@ -33,14 +33,14 @@ const STATE: EditorState = {
         positions: {
           R4a:    [-3, 0, 1],
           C:      [-1.5, 0, 1.2],
-          P:      [-2.0, 0, 1.5],
+          P:      [1, 0, 0.8],
           Op:     [3, 0, 0.6],
           L:      [-3, 0, 4],
           R4b:    [-1, 0, 5],
           OPP_BL: [-2.5, 0, -0.4],
           OPP_BR: [-1.0, 0, -0.4],
         },
-        ballPosition: [-2, 2.5, 0.8],
+        ballPosition: [1, 1.9, 0.8],
         poses: {
           R4a: 'READY',
         },
@@ -55,7 +55,7 @@ const STATE: EditorState = {
       snapshot: {
         positions: {
           R4a:    [-3, 0, 0.8],
-          C:      [-1.5, 0, 1.5],
+          C:      [-1.2, 0, 2.4],
           P:      [-2.0, 0, 1.5],
           Op:     [2.5, 0, 4.5],
           L:      [-3.5, 0, 2.5],
@@ -63,11 +63,15 @@ const STATE: EditorState = {
           OPP_BL: [-2.5, 0, -0.4],
           OPP_BR: [-1.0, 0, -0.4],
         },
-        ballPosition: [-2, 2.5, 0.8],
+        ballPosition: [-2.8, 3.5, 0.65],
         poses: {
           P: 'READY', C: 'READY', L: 'READY',
         },
       },
+      ballTrajectory: { curve: 'arc', apex: 4.6 },
+      actions: [
+        { kind: 'PASSE_HAUTE', id: 'b-s2-set', playerId: 'P', impact: [1, 0, 0.8] },
+      ],
     },
     {
       id: 's3',
@@ -78,7 +82,7 @@ const STATE: EditorState = {
       snapshot: {
         positions: {
           R4a:    [-3, 0, 0.6],
-          C:      [-1.5, 0, 1.5],
+          C:      [-1.2, 0, 2.4],
           P:      [-2.0, 0, 1.5],
           Op:     [2.5, 0, 4.5],
           L:      [-3.5, 0, 2.5],
@@ -86,13 +90,13 @@ const STATE: EditorState = {
           OPP_BL: [-2.5, 0, -0.4],
           OPP_BR: [-1.0, 0, -0.4],
         },
-        ballPosition: [-2.5, 2.5, -0.2],
+        ballPosition: [-2.5, 3, -0.25],
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'R4a',    impact: [-3, 0, 0.6],   jumpHeight: 1.7, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s3-blocL', playerId: 'OPP_BL', impact: [-2.5, 0, -0.4], jumpHeight: 1.6, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s3-blocR', playerId: 'OPP_BR', impact: [-1.0, 0, -0.4], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'R4a',    impact: [-3, 0, 0.6],   jumpHeight: 1.7, contactAtRatio: 0.75 },
+        { kind: 'BLOC',  id: 'b-s3-blocL', playerId: 'OPP_BL', impact: [-2.5, 0, -0.4], jumpHeight: 1.6, contactAtRatio: 0.75 },
+        { kind: 'BLOC',  id: 'b-s3-blocR', playerId: 'OPP_BR', impact: [-1.0, 0, -0.4], jumpHeight: 1.6, contactAtRatio: 0.75 },
       ],
     },
     {
@@ -100,11 +104,11 @@ const STATE: EditorState = {
       title: '4. Block-out : la balle revient',
       description: "Le bloc adverse touche la balle qui ricoche dans notre camp à 1,5 m de l'attaquant. Sans couverture, c'est un point perdu — ici, le passeur est exactement à l'arrivée.",
       tempo: 'rapide',
-      durationOverride: 0.5,
+      durationOverride: 0.8,
       snapshot: {
         positions: {
           R4a:    [-3, 0, 0.6],
-          C:      [-1.5, 0, 1.5],
+          C:      [-1.2, 0, 2.4],
           P:      [-2.0, 0, 1.5],
           Op:     [2.5, 0, 4.5],
           L:      [-3.5, 0, 2.5],
@@ -114,18 +118,18 @@ const STATE: EditorState = {
         },
         ballPosition: [-1.5, 1.0, 1.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 2.5 },
+      ballTrajectory: { curve: 'arc', apex: 3.2 },
     },
     {
       id: 's5',
       title: "5. Récupération du passeur (1ᵉʳ soutien)",
       description: "Le passeur (1ᵉʳ soutien proche) relève la balle en manchette à 1 m de l'attaquant. C'est SA responsabilité après une passe en zone 4 — règle non négociable.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 1,
       snapshot: {
         positions: {
           R4a:    [-3, 0, 0.6],
-          C:      [-1.5, 0, 1.5],
+          C:      [-1.2, 0, 2.4],
           P:      [-2.0, 0, 1.5],
           Op:     [2.5, 0, 4.5],
           L:      [-3.5, 0, 2.5],
@@ -133,9 +137,9 @@ const STATE: EditorState = {
           OPP_BL: [-2.5, 0, -0.4],
           OPP_BR: [-1.0, 0, -0.4],
         },
-        ballPosition: [0, 3.0, 2],
+        ballPosition: [0.5, 2.6, 1.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 3.8 },
       actions: [
         { kind: 'MANCHETTE', id: 'b-s5-dig', playerId: 'P', impact: [-1.5, 0, 1.5] },
       ],
@@ -149,7 +153,7 @@ const STATE: EditorState = {
       snapshot: {
         positions: {
           R4a:    [-3, 0, 0.8],
-          C:      [-1.5, 0, 1.5],
+          C:      [-1.2, 0, 2.4],
           P:      [-2.0, 0, 1.5],
           Op:     [3, 0, 0.6],
           L:      [-3, 0, 4],
@@ -157,7 +161,7 @@ const STATE: EditorState = {
           OPP_BL: [-2.5, 0, -0.4],
           OPP_BR: [-1.0, 0, -0.4],
         },
-        ballPosition: [0, 3.0, 2],
+        ballPosition: [0.5, 2.6, 1.5],
       },
     },
   ],

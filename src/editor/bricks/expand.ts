@@ -33,9 +33,14 @@ export type ExpandContext = {
   // Player's starting position (= previous step's snapshot.positions[playerId]).
   // Used as the launch pad for movement-flavoured bricks.
   startPos: [number, number, number];
-  // Ball arrival time (absolute). Set when the ball_move emitted for this
-  // step lands within ~1.2 m of the player — see compileScenario.ts.
+  // Contact time (absolute) when auto-snap found one: the ball's arrival on
+  // the player, or the start of the window when the ball leaves the player
+  // (a set, a dig) — see compileScenario.ts.
   ballArrivalTime?: number;
+  // Player's position in the step's snapshot. A player who plays the ball at
+  // the start of the window then moves on to it (a setter who covers, a
+  // server who steps into the court).
+  endPos?: [number, number, number];
 };
 
 // Default jump heights per brick — tuned to look right against the 2.43 m net.
@@ -47,6 +52,11 @@ export const DEFAULT_JUMP = {
   jumpServe: 2.0,
   bloc: 1.4,
 };
+
+// Height of the raised hand above the player's feet, from the Player.tsx
+// geometry: shoulder pivot at 1.15 m plus a 0.5 m arm. A jumping player meets
+// the ball at `jumpHeight + HAND_REACH`; anything lower hits the torso.
+export const HAND_REACH = 1.65;
 
 // Minimum duration we'll allow for a sub-action — gsap is fine with very short
 // tweens but anything below ~0.05s reads as a teleport.
@@ -84,13 +94,14 @@ export function expandBrick(brick: BrickAction, ctx: ExpandContext): TimelineAct
 
 type JumpPlan = {
   // Pose to fire at the apex (synchronized with ball arrival when possible).
-  apexPose: 'SPIKE' | 'ARM_SPIKE' | 'SET';
+  apexPose: 'SPIKE' | 'BLOCK' | 'SET';
   // Windup pose to fire DURING the jump-up. The arm is loaded into striking
   // position so the apex strike reads as a real movement instead of a single
   // jolt. Set for SMASH/JUMP_SERVE where the spike is a two-beat gesture
-  // (arm loads back → arm whips forward); omitted for FEINTE (a soft poke)
-  // and BLOC (the apex pose IS the arm-up position).
-  windupPose?: 'ARM_SPIKE';
+  // (arm loads back → arm whips forward); omitted for FEINTE (a soft poke).
+  // BLOC raises both arms into BLOCK during the jump-up so they are fully
+  // extended above the net at the apex, then holds the same pose there.
+  windupPose?: 'ARM_SPIKE' | 'BLOCK';
   // How long the jump (going up + coming down) takes.
   jumpDuration: number;
   // Approach duration — capped to 60 % of the window so jump + land have room.
@@ -105,7 +116,10 @@ function approachJumpLand(
 ): TimelineAction[] {
   const { windowStart, windowDuration, startPos, ballArrivalTime } = ctx;
   const jumpHeight = brick.jumpHeight ?? defaultJumpHeight;
-  const landing = brick.landing ?? [brick.impact[0], 0, brick.impact[2] + 0.4];
+  // Run-up and landing sit on the player's own side of the net: behind the
+  // impact for us (z > 0), in front of it for the opponents (z < 0).
+  const awayFromNet = brick.impact[2] < 0 ? -1 : 1;
+  const landing = brick.landing ?? [brick.impact[0], 0, brick.impact[2] + 0.4 * awayFromNet];
   const windowEnd = windowStart + windowDuration;
 
   // When contactAtRatio is set, the ball_move was split at the contact point —
@@ -141,7 +155,7 @@ function approachJumpLand(
   // 1. Approach run — only emit if the player actually has to move AND we have
   //    real time for it. When the window is tight, the approach is folded into
   //    the jump-up itself (the jump-up's `to` is the impact spot).
-  const approachTo: [number, number, number] = [brick.impact[0], 0, brick.impact[2] + 0.3];
+  const approachTo: [number, number, number] = [brick.impact[0], 0, brick.impact[2] + 0.3 * awayFromNet];
   const moved = Math.hypot(approachTo[0] - startPos[0], approachTo[2] - startPos[2]) > 0.05;
   if (moved && approachDur >= MIN_DUR) {
     const approach: PlayerMoveAction = {
@@ -247,7 +261,8 @@ function expandJumpServe(brick: JumpServeBrick, ctx: ExpandContext): TimelineAct
 
 function expandBloc(brick: BlocBrick, ctx: ExpandContext): TimelineAction[] {
   return approachJumpLand(brick, ctx, {
-    apexPose: 'ARM_SPIKE',
+    apexPose: 'BLOCK',
+    windupPose: 'BLOCK',
     jumpDuration: 0.6,
     approachDuration: 0.4,
   }, DEFAULT_JUMP.bloc);
@@ -286,6 +301,19 @@ function groundContact(
     pose,
     duration: 0.2,
   });
+  const { endPos } = ctx;
+  const windowEnd = windowStart + windowDuration;
+  const followUpAt = contactAt + 0.2;
+  if (endPos && windowEnd - followUpAt >= MIN_DUR
+    && Math.hypot(endPos[0] - target[0], endPos[2] - target[2]) > 0.05) {
+    actions.push({
+      type: 'player_move',
+      time: followUpAt,
+      id: playerId,
+      to: [endPos[0], 0, endPos[2]],
+      duration: windowEnd - followUpAt,
+    });
+  }
   return actions;
 }
 

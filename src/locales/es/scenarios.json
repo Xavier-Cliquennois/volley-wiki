@@ -4,10 +4,6 @@
     "title": "ESCENARIOS DE JUEGO",
     "subtitle": "Visualiza situaciones concretas en 3D con narración paso a paso."
   },
-  "construction": {
-    "label": "PÁGINA EN CONSTRUCCIÓN",
-    "body": "Algunas animaciones 3D pueden contener errores o estar incompletas. Gracias por tu paciencia — los escenarios se están finalizando."
-  },
   "wizard": {
     "step1": "1 · ¿CUÁNTOS JUGADORES POR EQUIPO?",
     "step2": "2 · ¿QUÉ FASE DE JUEGO?",

@@ -13,7 +13,7 @@
       "label": "01",
       "title": "Techniques",
       "desc": "Animations 3D interactives des gestes fondamentaux du volleyball.",
-      "to": "/techniques",
+      "to": "/guides/techniques-de-base",
       "accent": "var(--orange)"
     },
     {

@@ -46,7 +46,7 @@ const STATE: EditorState = {
       title: '2. Passe tendue centrale',
       description: "Le passeur lance tendu vers le central qui a déjà commencé sa course. Nos ailes reculent à mi-terrain pour couvrir les diagonales.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 0.3,
       snapshot: {
         positions: {
           C:     [0, 0, 0.4],
@@ -71,7 +71,7 @@ const STATE: EditorState = {
       durationOverride: 0.7,
       snapshot: {
         positions: {
-          C:     [0, 0, 0.4],
+          C:     [0.8, 0, 0.4],
           R4:    [-3, 0, 2],
           A2:    [3, 0, 2],
           A:     [0, 0, 6],
@@ -82,8 +82,8 @@ const STATE: EditorState = {
       },
       ballTrajectory: { curve: 'flat' },
       actions: [
-        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s3-smash', playerId: 'OPP_A', impact: [0, 0, -0.5], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s3-bloc',  playerId: 'C',     impact: [0.8, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -91,7 +91,7 @@ const STATE: EditorState = {
       title: "4. Pivot défensif : l'arrière unique",
       description: "L'arrière P1 défend la balle puissante en plein axe — il joue le rôle de Z6 du 6v6. Sa lecture doit être PARFAITE.",
       tempo: 'rapide',
-      durationOverride: 0.7,
+      durationOverride: 1,
       snapshot: {
         positions: {
           C:     [0, 0, 0.4],
@@ -101,9 +101,9 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -0.6],
           OPP_S: [-1.5, 0, -0.8],
         },
-        ballPosition: [1.5, 2.5, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
         { kind: 'MANCHETTE', id: 'b-s4-dig', playerId: 'A', impact: [0, 0, 6.5] },
       ],
@@ -123,7 +123,7 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -0.5],
           OPP_S: [-1.5, 0, -2],
         },
-        ballPosition: [1.5, 2.5, 1.0],
+        ballPosition: [1.5, 2.5, 1.5],
       },
     },
   ],

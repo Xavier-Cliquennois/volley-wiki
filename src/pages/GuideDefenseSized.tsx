@@ -1,11 +1,12 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import GuidePositionnement from '../guides/GuidePositionnement';
-import { useConfigurations } from './Positions';
+import { useConfigurations } from '../positions/configurations';
 import { Head } from '../seo/Head';
 import { DEFAULT_POSITION_CONFIG, TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 const SLUG_TO_SIZE = { '4v4': 4, '5v5': 5, '6v6': 6 } as const;
 
@@ -119,6 +120,8 @@ export default function GuideDefenseSized() {
       </div>
 
       <GuidePositionnement teamSize={teamSize} configId={configId} />
+
+      <QuizEmbed slug="placement-defense" />
     </div>
   );
 }

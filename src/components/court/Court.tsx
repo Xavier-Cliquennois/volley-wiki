@@ -373,7 +373,7 @@ export function Court({
       {ball && <Ball x={ball.x} y={ball.y} />}
 
       {/* Arrows (computed under players so the avoidance leaves the player visible) */}
-      <Arrows arrows={arrows} players={playerPoints} idSuffix={idSuffix} />
+      <Arrows arrows={arrows} players={playerPoints} idSuffix={idSuffix} view={view} />
 
       {/* Zone labels — auto-positioned (with legacy -5 nudge) when no explicit pos */}
       {zones.map(z => {

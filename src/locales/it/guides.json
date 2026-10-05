@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "N°",
   "list": {
+    "techniques-de-base": {
+      "title": "Tecniche di base",
+      "subtitle": "Schede delle tecniche fondamentali — punti chiave, errori, video",
+      "category": "Tecnica",
+      "description": "Catalogo dei gesti fondamentali della pallavolo: bagher, alzata, schiacciata, muro, servizio, difesa. Schede filtrabili per categoria e livello, con video.",
+      "readingTime": "~10 min",
+      "level": "Principiante"
+    },
     "service": {
       "title": "Guida al servizio",
       "subtitle": "Dal basso, float, jump float e jump topspin",

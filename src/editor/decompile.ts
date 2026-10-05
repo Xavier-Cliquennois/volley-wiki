@@ -43,7 +43,7 @@ import { TEMPO_DURATIONS } from './types';
 // generous enough to catch them all without grabbing unrelated balls.
 const ARRIVAL_TOLERANCE = 0.15;
 
-const POSE_NAMES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'READY', 'RESET']);
+const POSE_NAMES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'BLOCK', 'READY', 'RESET']);
 
 export function decompile(scenario: Scenario): EditorState {
   const players: EditorPlayer[] = scenario.players.map(p => ({
@@ -158,7 +158,7 @@ function replayBallPosition(
 }
 
 // Pose state to associate with a step:
-//  - contact poses (BUMP/SET/SPIKE/ARM_SPIKE) firing AT step.startTime → that's
+//  - contact poses (BUMP/SET/SPIKE/ARM_SPIKE/BLOCK) firing AT step.startTime → that's
 //    the canonical "the ball arrives on this player" pose
 //  - static poses (READY/RESET) firing AT prevStartTime → that's the "stance
 //    held during this transition" — compileScenario does this in reverse.

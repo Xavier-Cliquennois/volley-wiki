@@ -224,7 +224,7 @@ export const BRICK_CATALOG: ReadonlyArray<BrickMeta> = [
     kind: 'BLOC', label: 'Bloc', category: 'defense',
     validRoles: ['middle', 'outside', 'opposite', 'opponent'],
     description: 'Saut au filet bras tendus pour stopper l\'attaque adverse.',
-    subActions: ['petit pas latéral', 'saut au filet (≈1.4m)', 'pose ARM_SPIKE', 'atterrissage'],
+    subActions: ['petit pas latéral', 'saut au filet (≈1.4m)', 'deux bras tendus (pose BLOCK)', 'atterrissage'],
   },
   {
     kind: 'MANCHETTE', label: 'Manchette', category: 'defense',

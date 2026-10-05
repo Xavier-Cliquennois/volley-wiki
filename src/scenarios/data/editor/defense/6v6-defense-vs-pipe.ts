@@ -51,7 +51,7 @@ const STATE: EditorState = {
       title: '2. Passe tendue centrale + course pipe',
       description: "Le passeur adverse envoie une passe tendue vers l'axe Z6. Le pipe-attaquant entre en course depuis derrière les 3 m, élan long. P6 commence son glissement avant.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 0.6,
       snapshot: {
         positions: {
           P:     [3, 0, 3.5],
@@ -65,7 +65,7 @@ const STATE: EditorState = {
         },
         ballPosition: [0, 3.0, -3.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 3.5 },
+      ballTrajectory: { curve: 'arc', apex: 4.5 },
       actions: [
         { kind: 'PASSE_TENDUE', id: 'b-s2-set',  playerId: 'OPP_S', impact: [1.5, 0, -0.8] },
         { kind: 'COURSE_ELAN',  id: 'b-s2-elan', playerId: 'OPP_A', to: [0, 0, -4.5] },
@@ -76,7 +76,7 @@ const STATE: EditorState = {
       title: '3. Bloc central + ailes resserrées',
       description: "Notre central saute seul sur la pipe. Ailes (R4 + pointu) descendent à ~1,5 m du filet pour couvrir les déviations latérales. Z1 et Z5 sacrifient les lignes pour défendre l'axe.",
       tempo: 'standard',
-      durationOverride: 0.9,
+      durationOverride: 0.5,
       snapshot: {
         positions: {
           P:     [1.5, 0, 7],
@@ -101,7 +101,7 @@ const STATE: EditorState = {
         positions: {
           P:     [1.5, 0, 7],
           Op:    [3, 0, 1.5],
-          C:     [0, 0, 0.4],
+          C:     [0.7, 0, 0.4],
           R4:    [-3, 0, 1.5],
           L:     [-1.5, 0, 7],
           R4b:   [0, 0, 6.5],
@@ -110,10 +110,10 @@ const STATE: EditorState = {
         },
         ballPosition: [0, 0.8, 6.5],
       },
-      ballTrajectory: { curve: 'flat' },
+      ballTrajectory: { curve: 'arc' },
       actions: [
-        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [0, 0, -3.0], jumpHeight: 1.8, contactAtRatio: 0.45 },
-        { kind: 'BLOC',  id: 'b-s4-bloc',  playerId: 'C',     impact: [0, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'SMASH', id: 'b-s4-smash', playerId: 'OPP_A', impact: [0, 0, -3.0], jumpHeight: 1.8, contactAtRatio: 0.4 },
+        { kind: 'BLOC',  id: 'b-s4-bloc',  playerId: 'C',     impact: [0.7, 0, 0.3],  jumpHeight: 1.6, contactAtRatio: 0.4 },
       ],
     },
     {
@@ -121,7 +121,7 @@ const STATE: EditorState = {
       title: '5. Récupération axiale par P6',
       description: "La balle traverse vers l'axe profond — P6 (avancé à 6,5 m) est exactement sur l'impact. Manchette dans son axe vers la zone 2-3 du passeur.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 1,
       snapshot: {
         positions: {
           P:     [1.5, 0, 1.0],
@@ -133,7 +133,7 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -4],
           OPP_S: [1.5, 0, -0.8],
         },
-        ballPosition: [1.5, 2.0, 1.0],
+        ballPosition: [1.5, 1.9, 1],
       },
       ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
@@ -158,7 +158,7 @@ const STATE: EditorState = {
           OPP_A: [0, 0, -4],
           OPP_S: [1.5, 0, -0.8],
         },
-        ballPosition: [1.5, 2.0, 1.0],
+        ballPosition: [1.5, 1.9, 1],
       },
     },
   ],

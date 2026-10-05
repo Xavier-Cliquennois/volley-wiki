@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GoldenRule from './GoldenRule';
 import VideoLink from './VideoLink';
+import DrillList from '../drills/DrillList';
+import { QuizEmbed } from '../quiz/components/QuizEmbed';
 
 const LEVEL_COLOR: Record<string, string> = {
   beginner: 'var(--mint)',
@@ -48,6 +50,7 @@ const S: Record<string, React.CSSProperties> = {
 
 export default function GuideService() {
   const { t } = useTranslation('guideContent');
+  const { t: tD } = useTranslation('drills');
 
   const serviceTypes = t('service.types.items', { returnObjects: true }) as ServiceType[];
   const zoneRows = t('service.zones.rows', { returnObjects: true }) as ZoneRow[];
@@ -203,6 +206,12 @@ export default function GuideService() {
         </div>
       </section>
 
+      {/* Drills */}
+      <section>
+        <h2 style={S.sectionTitle}>{tD('sectionTitle', { skill: tD('skills.serve') })}</h2>
+        <DrillList skill="serve" />
+      </section>
+
       {/* Hierarchy */}
       <section>
         <div style={{ border: '3px solid var(--ink)', background: 'var(--cream)', boxShadow: 'var(--shadow)', padding: 20 }}>
@@ -231,6 +240,7 @@ export default function GuideService() {
         </div>
       </section>
 
+      <QuizEmbed slug="service" persistProgress={false} />
     </div>
   );
 }

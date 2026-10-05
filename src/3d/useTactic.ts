@@ -1,12 +1,21 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffectEvent, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import * as THREE from 'three';
 import type { BallWithTrailRef } from './BallWithTrail';
+import type { PlayerRef } from './Player';
+import type { TimelineAction } from '../scenarios/types';
+
+export type TacticScript = {
+  id: string;
+  timeline: readonly TimelineAction[];
+};
+
+export type PlayerRefMap = Record<string, PlayerRef | null>;
 
 export const useTactic = (
-  playerRefs: React.MutableRefObject<Record<string, any>>,
+  playerRefs: React.MutableRefObject<PlayerRefMap>,
   ballRef: React.RefObject<BallWithTrailRef | null>,
-  script: any,
+  script: TacticScript,
   onUpdate?: (progress: number, actionIndex: number) => void,
   onImpact?: (position: THREE.Vector3) => void,
   autoplay: boolean = false
@@ -14,16 +23,29 @@ export const useTactic = (
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
   const isMountedRef = useRef(true);
 
+  // The timeline is rebuilt only when the script changes. The callbacks are
+  // read through effect events so the timeline always reaches the latest ones
+  // without being rebuilt when their identity changes.
+  const hasImpactHandler = onImpact !== undefined;
+  const emitUpdate = useEffectEvent((progress: number, actionIndex: number) => {
+    onUpdate?.(progress, actionIndex);
+  });
+  const emitImpact = useEffectEvent((position: THREE.Vector3) => {
+    onImpact?.(position);
+  });
+
   useLayoutEffect(() => {
     if (!script?.timeline) return;
     isMountedRef.current = true;
     if (timelineRef.current) timelineRef.current.kill();
 
     const initialPositions: Record<string, { x: number; y: number; z: number }> = {};
+    const initialRotations: Record<string, number> = {};
     Object.keys(playerRefs.current).forEach(id => {
       const p = playerRefs.current[id];
       if (p?.group?.current) {
         initialPositions[id] = { x: p.group.current.position.x, y: p.group.current.position.y, z: p.group.current.position.z };
+        initialRotations[id] = p.group.current.rotation.y;
       }
     });
 
@@ -43,6 +65,9 @@ export const useTactic = (
             p.group.current.position.y = initialPositions[id].y;
             p.group.current.position.z = initialPositions[id].z;
           }
+          if (p.group?.current && initialRotations[id] !== undefined) {
+            p.group.current.rotation.y = initialRotations[id];
+          }
         }
       });
       if (ballRef.current && initialBallPos) {
@@ -55,13 +80,13 @@ export const useTactic = (
     const tl = gsap.timeline({
       paused: true,
       onUpdate: () => {
-        if (!isMountedRef.current || !onUpdate || !timelineRef.current) return;
+        if (!isMountedRef.current || !timelineRef.current) return;
         const time = timelineRef.current.time();
         let currentIndex = 0;
         for (let i = 0; i < script.timeline.length; i++) {
           if (time >= script.timeline[i].time) currentIndex = i;
         }
-        onUpdate(timelineRef.current.progress(), currentIndex);
+        emitUpdate(timelineRef.current.progress(), currentIndex);
       },
       onComplete: () => { if (isMountedRef.current) resetScene(); },
       onStart: () => { if (isMountedRef.current) resetScene(); },
@@ -70,7 +95,7 @@ export const useTactic = (
     timelineRef.current = tl;
     tl.call(() => resetScene(), [], 0);
 
-    script.timeline.forEach((action: any) => {
+    script.timeline.forEach((action) => {
       if (action.type === 'ball_move') {
         const mesh = ballRef.current?.mesh;
         if (mesh) {
@@ -81,22 +106,38 @@ export const useTactic = (
           const apex = action.apex
             ?? (typeof action.arc === 'number' ? action.arc : Math.max(action.from[1], action.to[1], 2.5));
 
-          tl.to(mesh.position, { x: action.to[0], z: action.to[2], duration: action.duration, ease: 'none' }, action.time);
+          // A carried ball moves with the player holding it, at his pace.
+          const groundEase = action.carried ? 'power1.inOut' : 'none';
+          tl.to(mesh.position, { x: action.to[0], z: action.to[2], duration: action.duration, ease: groundEase }, action.time);
 
           if (curve === 'flat') {
-            tl.to(mesh.position, { y: action.to[1], duration: action.duration, ease: 'none' }, action.time);
+            tl.to(mesh.position, { y: action.to[1], duration: action.duration, ease: groundEase }, action.time);
           } else if (curve === 'floater') {
             // Slow rise, then sharp drop — the signature of a float serve that « tombe » brusquement.
             tl.to(mesh.position, { y: apex, duration: action.duration * 0.7, ease: 'power1.out' }, action.time);
             tl.to(mesh.position, { y: action.to[1], duration: action.duration * 0.3, ease: 'power3.in' }, action.time + action.duration * 0.7);
           } else {
-            // Symmetric parabola.
-            tl.to(mesh.position, { y: apex, duration: action.duration / 2, ease: 'power1.out' }, action.time);
-            tl.to(mesh.position, { y: action.to[1], duration: action.duration / 2, ease: 'power1.in' }, action.time + action.duration / 2);
+            // Constant-gravity parabola. The horizontal motion is linear, so
+            // the ball reaches the apex at the fraction of the flight where
+            // rise and fall times match the heights climbed and dropped
+            // (t ∝ √h): a ball dropped from its apex falls straight away, a
+            // set climbing onto a high hand peaks late.
+            const peak = Math.max(apex, action.from[1], action.to[1]);
+            const rise = Math.sqrt(peak - action.from[1]);
+            const fall = Math.sqrt(peak - action.to[1]);
+            const apexAt = rise + fall > 0 ? rise / (rise + fall) : 0.5;
+            const riseDur = action.duration * apexAt;
+            const fallDur = action.duration - riseDur;
+            if (riseDur > 0) {
+              tl.to(mesh.position, { y: peak, duration: riseDur, ease: 'power1.out' }, action.time);
+            }
+            if (fallDur > 0) {
+              tl.to(mesh.position, { y: action.to[1], duration: fallDur, ease: 'power1.in' }, action.time + riseDur);
+            }
           }
 
-          if (onImpact) {
-            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) onImpact(m.position); }, [], action.time + action.duration);
+          if (hasImpactHandler) {
+            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) emitImpact(m.position); }, [], action.time + action.duration);
           }
         }
       }
@@ -106,6 +147,12 @@ export const useTactic = (
           tl.to(p.group.current.position, { x: action.to[0], y: action.to[1], z: action.to[2], duration: action.duration, ease: 'power1.inOut' }, action.time);
         }
       }
+      if (action.type === 'player_face') {
+        const p = playerRefs.current[action.id];
+        if (p?.group?.current) {
+          tl.to(p.group.current.rotation, { y: action.rotation, duration: action.duration, ease: 'power1.inOut' }, action.time);
+        }
+      }
       if (action.type === 'player_pose') {
         const p = playerRefs.current[action.id];
         if (p) {
@@ -113,14 +160,20 @@ export const useTactic = (
             tl.to(p.rightShoulder.current.rotation, { x: rx, z: rz, duration: action.duration }, action.time);
             tl.to(p.leftShoulder.current.rotation, { x: lx, z: lz, duration: action.duration }, action.time);
           };
-          if (onImpact && ['BUMP', 'SET', 'SPIKE'].includes(action.pose)) {
-            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) onImpact(m.position); }, [], action.time);
+          if (hasImpactHandler && ['BUMP', 'SET', 'SPIKE'].includes(action.pose)) {
+            tl.call(() => { if (!isMountedRef.current) return; const m = ballRef.current?.mesh; if (m) emitImpact(m.position); }, [], action.time);
           }
           switch (action.pose) {
             case 'BUMP': arms(-Math.PI / 3, Math.PI / 12, -Math.PI / 3, -Math.PI / 12); break;
             case 'SET': arms(-Math.PI * 0.65, Math.PI / 6, -Math.PI * 0.65, -Math.PI / 6); break;
             case 'ARM_SPIKE': arms(-Math.PI * 1.1, 0.2, -Math.PI * 0.7, 0); break;
-            case 'SPIKE': arms(Math.PI / 3, -0.5, 0, 0); break;
+            // The strike whips the arm from the cocked ARM_SPIKE position over
+            // the top and finishes down in front of the body.
+            case 'SPIKE': arms(-Math.PI / 6, -0.3, 0, 0); break;
+            // Block: both arms straight up and leaning slightly forward over
+            // the net, mirrored left/right (same x, opposite z), so they rise
+            // together and reach the same height.
+            case 'BLOCK': arms(-Math.PI * 0.92, 0.1, -Math.PI * 0.92, -0.1); break;
             case 'READY': arms(-Math.PI / 8, 0, -Math.PI / 8, 0); break;
             case 'RESET': arms(0, 0, 0, 0); break;
           }
@@ -134,7 +187,10 @@ export const useTactic = (
       isMountedRef.current = false;
       if (timelineRef.current) { timelineRef.current.kill(); timelineRef.current = null; }
     };
-  }, [script]);
+    // playerRefs and ballRef are stable ref objects, autoplay and
+    // hasImpactHandler are constant for each caller: in practice the timeline
+    // is rebuilt only when the script changes, as before.
+  }, [script, playerRefs, ballRef, autoplay, hasImpactHandler]);
 
   return timelineRef;
 };

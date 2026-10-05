@@ -13,7 +13,7 @@
       "label": "01",
       "title": "Techniques",
       "desc": "Poke, cobra, tomahawk, skyball, beach dig — les gestes phares du beach.",
-      "to": "/beach/techniques",
+      "to": "/beach/guides/techniques-beach",
       "accent": "var(--orange)"
     },
     {

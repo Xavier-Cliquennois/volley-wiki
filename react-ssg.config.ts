@@ -3,6 +3,7 @@ import { routes } from './src/routes';
 import { SCENARIOS } from './src/scenarios/data';
 import { GUIDES } from './src/guides/data';
 import { BEACH_GUIDES } from './src/guides/beach/data';
+import { SYSTEM_PATHS } from './src/systems/paths';
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants';
 
 const LANGS = ['fr', 'en', 'pl', 'it', 'es', 'pt', 'ja', 'tr'] as const;
@@ -39,6 +40,7 @@ const contentPaths: string[] = [
   ...defenseHubPath,
   ...sizedDefensePaths,
   ...sizedPositionsPaths,
+  ...SYSTEM_PATHS,
   // Beach
   '/beach',
   '/beach/techniques',

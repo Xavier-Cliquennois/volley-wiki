@@ -51,7 +51,7 @@ const STATE: EditorState = {
       title: '2. Passe haute adverse Z4',
       description: "Distribution standard vers Z4 adverse. La défense reconnaît la configuration et se met en place.",
       tempo: 'standard',
-      durationOverride: 1.0,
+      durationOverride: 0.6,
       snapshot: {
         positions: {
           P:     [3, 0, 5],
@@ -65,7 +65,7 @@ const STATE: EditorState = {
         },
         ballPosition: [3.0, 3.0, -0.8],
       },
-      ballTrajectory: { curve: 'arc', apex: 4 },
+      ballTrajectory: { curve: 'arc', apex: 5 },
       actions: [
         { kind: 'PASSE_HAUTE', id: 'b-s2-set', playerId: 'OPP_S', impact: [-1.5, 0, -0.8] },
       ],
@@ -75,7 +75,7 @@ const STATE: EditorState = {
       title: "3. Joueur monté derrière le bloc",
       description: "Différence-clé du man-up : R4b avance à 2,5 m du filet, dans l'ombre du bloc. Libéro et passeur reculent à 6 m pour compenser. Bloc à 2 standard (pointu + central).",
       tempo: 'standard',
-      durationOverride: 0.9,
+      durationOverride: 0.5,
       snapshot: {
         positions: {
           P:     [3.0, 0, 6],
@@ -95,7 +95,7 @@ const STATE: EditorState = {
       title: '4. Feinte adverse en suspension',
       description: "L'attaquant choisit la feinte plutôt que le smash. La balle pose juste derrière le bloc — exactement où est le joueur monté.",
       tempo: 'rapide',
-      durationOverride: 0.8,
+      durationOverride: 1.4,
       snapshot: {
         positions: {
           P:     [3.0, 0, 6],
@@ -109,11 +109,11 @@ const STATE: EditorState = {
         },
         ballPosition: [1.5, 1.0, 2.5],
       },
-      ballTrajectory: { curve: 'arc', apex: 2.5 },
+      ballTrajectory: { curve: 'arc', apex: 3.8 },
       actions: [
-        { kind: 'FEINTE', id: 'b-s4-tip',   playerId: 'OPP_A', impact: [3, 0, -0.5], jumpHeight: 1.7, contactAtRatio: 0.45 },
-        { kind: 'BLOC',   id: 'b-s4-blocR', playerId: 'Op',    impact: [3.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.45 },
-        { kind: 'BLOC',   id: 'b-s4-blocC', playerId: 'C',     impact: [2.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.45 },
+        { kind: 'FEINTE', id: 'b-s4-tip',   playerId: 'OPP_A', impact: [3, 0, -0.5], jumpHeight: 1.7, contactAtRatio: 0.3 },
+        { kind: 'BLOC',   id: 'b-s4-blocR', playerId: 'Op',    impact: [3.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.3 },
+        { kind: 'BLOC',   id: 'b-s4-blocC', playerId: 'C',     impact: [2.0, 0, 0.3], jumpHeight: 1.6, contactAtRatio: 0.3 },
       ],
     },
     {
@@ -121,7 +121,7 @@ const STATE: EditorState = {
       title: '5. Récupération courte par le joueur monté',
       description: "Le joueur monté est exactement où la balle tombe. Manchette précise vers le pointu pour relancer une 2ᵉ touche en suspension.",
       tempo: 'rapide',
-      durationOverride: 0.6,
+      durationOverride: 1,
       snapshot: {
         positions: {
           P:     [3.0, 0, 6],
@@ -133,7 +133,7 @@ const STATE: EditorState = {
           OPP_A: [3, 0, -0.6],
           OPP_S: [-1.5, 0, -0.8],
         },
-        ballPosition: [2.0, 2.5, 1.0],
+        ballPosition: [2.8, 1.9, 0.7],
       },
       ballTrajectory: { curve: 'arc', apex: 3.5 },
       actions: [
@@ -157,7 +157,7 @@ const STATE: EditorState = {
           OPP_A: [3, 0, -3],
           OPP_S: [-1.5, 0, -2.5],
         },
-        ballPosition: [2.0, 2.5, 1.0],
+        ballPosition: [2.8, 1.9, 0.7],
       },
     },
   ],

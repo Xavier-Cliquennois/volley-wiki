@@ -1,0 +1,672 @@
+{
+  "sectionTitle": "Drills · {{skill}}",
+  "skills": {
+    "reception": "Reception",
+    "set": "Setting",
+    "attack": "Attack",
+    "defense": "Defense",
+    "serve": "Serve",
+    "block": "Block",
+    "team-play": "Team play"
+  },
+  "levels": {
+    "all": "All",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "levelShort": {
+    "beginner": "BEG",
+    "intermediate": "INT",
+    "advanced": "ADV"
+  },
+  "teamSize": {
+    "all": "All formats"
+  },
+  "filters": {
+    "level": "Level",
+    "format": "Format"
+  },
+  "count": "{{visible}} / {{total}} drills",
+  "empty": "No drill matches these filters. Broaden the level or format.",
+  "card": {
+    "goal": "Goal",
+    "variants": "Level variants",
+    "criteria": "Success criteria",
+    "cues": "Coaching cues",
+    "source": "Source",
+    "cueQuote": "“{{cue}}”",
+    "sourceLine": "Source: {{sources}}"
+  },
+  "content": {
+    "wall-pass-ladder": {
+      "title": "Wall Passing Ladder",
+      "goal": "Build a quiet platform and a feel for clean contact without needing a partner.",
+      "equipment": [
+        "1 ball",
+        "1 wall",
+        "masking tape (optional)"
+      ],
+      "variants": [
+        "Stand 2 m from the wall and pass 10 times in a row at net height (about 2.20 m). Count out loud.",
+        "Mark a 30x30 cm target on the wall. Hit it 5 times in a row without a lateral step.",
+        "Two targets (high / low): alternate high, low, high, low over 10 consecutive passes."
+      ],
+      "successCriteria": [
+        "10 clean passes without breaking rhythm",
+        "Feet stay grounded between passes",
+        "Contact always on straight arms, no pumping motion"
+      ],
+      "coachingCues": [
+        "Quiet platform",
+        "Shoulders do the work, not the arms"
+      ]
+    },
+    "triangle-drift-control": {
+      "title": "Triangle: Controlling the Drift",
+      "goal": "Keep the ball's lateral path under control toward the setter target despite the deliberate drift from the tosser.",
+      "equipment": [
+        "2 balls",
+        "4 cones (target zones)"
+      ],
+      "variants": [
+        "The tosser feeds a high ball to the passer, who sends it to zone 3 (cone target). 8 passes per passer.",
+        "The tosser adds a 1 m drift left or right. The passer must still deliver to the target.",
+        "The tosser mixes short and deep balls with lateral drift. Hold the angle to the target."
+      ],
+      "successCriteria": [
+        "6 of 8 passes on target (zone 3-4 at the net)",
+        "Platform angled to the target BEFORE contact",
+        "Visible shoulder finish, no arm swing"
+      ],
+      "coachingCues": [
+        "Shoulder angle first, ball second"
+      ]
+    },
+    "server-vs-passer-ladder": {
+      "title": "1v1 Server / Passer Ladder",
+      "goal": "Test passing under real serve pressure, with a scoring system that rewards accuracy.",
+      "equipment": [
+        "4-8 balls",
+        "1 net",
+        "1 target (hoop or cone)"
+      ],
+      "variants": [
+        "8 serves. Scoring: perfect (+3), good (+1), poor (-1). No server bonus.",
+        "A serving ace costs the passer 2 points. The passer moves up a court if the total is above 12.",
+        "The server aims at a called zone (1-6). Score doubles if the pass ends up within 3 m of the net."
+      ],
+      "successCriteria": [
+        "Passer scores more than 12 points over 8 serves at intermediate level",
+        "No extra steps after contact",
+        "Face the target at the finish"
+      ]
+    },
+    "read-reach-receiver": {
+      "title": "Read and Reach",
+      "goal": "Read the server's cues from the toss and arrive set and still under the ball before contact.",
+      "equipment": [
+        "6 balls",
+        "6 cones (target zones 1-6)"
+      ],
+      "variants": [
+        "The server calls their zone (1-6) BEFORE serving. The passer steps in as soon as it is called.",
+        "No call. The passer reads the cues (shoulder, toss height) and starts moving on the toss.",
+        "Add a second ball sent 1.5 s after the first: pass, then immediately transition to cover."
+      ],
+      "successCriteria": [
+        "Feet planted (freeze) before contact on 6 of 8 serves",
+        "Pass lands within 3 m of the net",
+        "Read called out loud (\"Short!\", \"Deep!\")"
+      ],
+      "coachingCues": [
+        "First step on the toss",
+        "Freeze before contact"
+      ]
+    },
+    "wall-set-target": {
+      "title": "Wall Setting to a Target",
+      "goal": "Build the hand triangle and repeat the same contact point on a fixed target.",
+      "equipment": [
+        "1 ball",
+        "1 wall",
+        "masking tape"
+      ],
+      "variants": [
+        "30x30 cm target marked on the wall at antenna height. 10 consecutive sets, at least 7 on target.",
+        "Alternate high sets (third tempo) and low sets (second tempo) on two separate targets.",
+        "On a signal, set backward (push the hips through, finish overhead). Target 1 m behind you."
+      ],
+      "successCriteria": [
+        "7 of 10 sets on target",
+        "Hand triangle visible BEFORE contact",
+        "Feet always under the hips (no uncontrolled backward lean)"
+      ],
+      "coachingCues": [
+        "High triangle",
+        "Elbows open toward the target"
+      ]
+    },
+    "move-stop-set": {
+      "title": "Move, Stop, Set",
+      "goal": "Learn to stop and square the shoulders to the target BEFORE contact.",
+      "equipment": [
+        "2 balls",
+        "3 cones",
+        "1 hitting target (hoop)"
+      ],
+      "variants": [
+        "The setter starts at a cone, runs 2 m to a tossed ball, stops and sets to the target.",
+        "The tosser varies where the ball lands (left / right / short / deep). The setter adjusts their steps.",
+        "Add a constraint: at most 2 ground contacts between the end of the run and the set (dynamic balance)."
+      ],
+      "successCriteria": [
+        "6 of 8 sets land in the outside zone (4)",
+        "Nose behind the ball at contact",
+        "Full stop BEFORE contact"
+      ],
+      "coachingCues": [
+        "Move, stop, set (said out loud)",
+        "Nose behind the ball"
+      ]
+    },
+    "setter-on-the-run": {
+      "title": "Setting on the Move Laterally",
+      "goal": "Keep setting accurate when the pass forces a long lateral move (more than 2 m).",
+      "equipment": [
+        "3 balls"
+      ],
+      "variants": [
+        "The tosser sends 5 balls 2 m away from the setter's position. Set to zone 4 every time.",
+        "Add a back set to zone 2 (alternate front and back).",
+        "A moving hitter target: call \"Hut!\" or \"Go!\" out loud before the set."
+      ],
+      "successCriteria": [
+        "4 of 5 sets within a 1.5 m circle",
+        "Feet turned to the target BEFORE the hands",
+        "No twisting of the torso in the air"
+      ],
+      "coachingCues": [
+        "Feet turn first"
+      ]
+    },
+    "decoy-and-back-set": {
+      "title": "Decoy and Back Set",
+      "goal": "Choose between front and back on a late signal, to disguise the set from the opposing block.",
+      "equipment": [
+        "4 balls",
+        "1 block dummy (or a coach on the other side)"
+      ],
+      "variants": [
+        "The coach calls \"FRONT\" or \"BACK\" 0.5 s before contact. The setter executes.",
+        "No signal: the setter reads the position of the phantom block and sets away from it.",
+        "Add the pipe option (long back-row set) for 3 set options at once."
+      ],
+      "successCriteria": [
+        "4 of 5 correct decisions (set to the unblocked zone)",
+        "Same preparation for front and back sets",
+        "Constant set speed across variations"
+      ],
+      "coachingCues": [
+        "Same feet front and back",
+        "Read the blocker, not the ball"
+      ]
+    },
+    "approach-shadow": {
+      "title": "Shadow Approach",
+      "goal": "Internalise the slow-to-fast rhythm of the approach, with no ball and no jump.",
+      "equipment": [
+        "None (ideally a net for reference)"
+      ],
+      "variants": [
+        "3-step approach (left-right-left for a right-hander), 10 reps. The coach counts \"one... two-three!\" to mark the slow-to-fast rhythm.",
+        "4-step approach (R-L-R-L), arms loaded at the power step, vertical jump and a clap at the 4th step.",
+        "4-step approach plus a block transition (start as middle blocker, retreat 2 steps, approach zone 4)."
+      ],
+      "successCriteria": [
+        "The last 2 steps are visibly faster",
+        "Arms loaded at the power step (not after)",
+        "Jump vertically, not toward the net"
+      ],
+      "coachingCues": [
+        "Slow, then FAST",
+        "Long, low power step"
+      ]
+    },
+    "box-arm-swing": {
+      "title": "Box Hitting",
+      "goal": "Isolate the wrist snap and arm finish, without the noise of the approach or jump.",
+      "equipment": [
+        "1 plyo box or bench",
+        "5 balls",
+        "1 net"
+      ],
+      "variants": [
+        "The hitter stands on the box, the tosser feeds a ball 50 cm off the net. Full swing, 10 reps.",
+        "Alternate full swing, cut shot (sharp angle) and line shot on the tosser's signal.",
+        "Lower the set (a flat, fast set) to compress the time available and train arm speed."
+      ],
+      "successCriteria": [
+        "7 of 10 balls land in the opposing court on the called side",
+        "Elbow above the shoulder when loaded",
+        "Visible snap (topspin on the ball)"
+      ],
+      "coachingCues": [
+        "High elbow, hand behind the ear",
+        "Snap over the top of the ball"
+      ]
+    },
+    "approach-toss-hit": {
+      "title": "Approach, Toss and Hit",
+      "goal": "Sync the approach with a simple tossed ball from a coach or a steady setter.",
+      "equipment": [
+        "8-10 balls",
+        "1 net"
+      ],
+      "variants": [
+        "A tosser passes a high ball to zone 4. Full approach. 8 balls: 4 cross-court, 4 line.",
+        "Add a target (cone or hoop) in the aimed zone, with a bonus if the ball touches it.",
+        "Lower the set height (second tempo / go) so the hitter has to start the approach earlier."
+      ],
+      "successCriteria": [
+        "6 of 8 balls in the called zone",
+        "Take-off 30-50 cm from the net",
+        "No feet under the net on landing"
+      ],
+      "coachingCues": [
+        "Jump vertical, not toward the net"
+      ]
+    },
+    "tempo-quick-hut-go": {
+      "title": "Quick / Hut / Go Tempos",
+      "goal": "Tell the 3 tempos apart and start the approach at the right moment on the setter's signal.",
+      "equipment": [
+        "8 balls",
+        "1 net"
+      ],
+      "variants": [
+        "3 hitters (OH4, MB3, OH2). The setter calls \"Quick\" or \"Hut\". Hitters who are not called run a decoy approach.",
+        "The setter stops calling: hitters start based on pass quality (a perfect pass allows a quick).",
+        "Add the pipe (back-row outside in zone 6) for 4 options at once and more pressure on the setter."
+      ],
+      "successCriteria": [
+        "Correct timing: middle in the air AT the setter's contact, outsides as soon as the ball leaves the setter",
+        "No collisions between hitters",
+        "Everyone runs at full speed even without the ball (ghost middle)"
+      ],
+      "coachingCues": [
+        "Ghost middle at full speed, always"
+      ]
+    },
+    "read-the-block": {
+      "title": "Reading the Block",
+      "goal": "Choose the shot based on the position and timing of the opposing block.",
+      "equipment": [
+        "6 balls",
+        "1 net"
+      ],
+      "variants": [
+        "Two blockers line up on the line or the angle (coach's signal). The hitter attacks the open zone.",
+        "Add the tip as a third option, for when the block is perfectly set.",
+        "Live scrimmage: the hitter scores only if the ball lands OUTSIDE the block AND OUTSIDE the defense."
+      ],
+      "successCriteria": [
+        "4 of 6 attacks score",
+        "Read called out loud (\"line open!\", \"tip!\")",
+        "No attack hit into the block"
+      ],
+      "coachingCues": [
+        "Eyes on the block when loading, not before"
+      ]
+    },
+    "pancake-floor-touch": {
+      "title": "Floor Pancake",
+      "goal": "Build the reflex of sliding a flat hand under the ball for short, low balls.",
+      "equipment": [
+        "5 balls"
+      ],
+      "variants": [
+        "A partner drops a ball 1 m in front of the defender. Pancake (flat hand on the floor, the ball bounces off it). 10 reps.",
+        "The partner sends a soft, short ball 1.5 m away. Pancake on the move.",
+        "Start in a zone 6 defensive position, run and pancake a ball sent 2 m away, then roll immediately."
+      ],
+      "successCriteria": [
+        "8 of 10 clean pancakes (the ball goes up, not sideways)",
+        "Arm does not collapse at contact",
+        "Back up right away (don't stay on the floor)"
+      ],
+      "coachingCues": [
+        "Flat hand, back of the hand on the floor"
+      ]
+    },
+    "three-ball-dig": {
+      "title": "Three-Ball Sequence",
+      "goal": "Chain 3 different digs (short / mid-range / deep) without a break.",
+      "equipment": [
+        "5 balls",
+        "1 setter target"
+      ],
+      "variants": [
+        "The coach sends a short / mid / deep sequence. The defender digs each ball to the target, with a short pause between.",
+        "No pause: the coach tosses as soon as the defender has touched the previous ball.",
+        "Random order, plus a 4th \"fake\" ball that drops just behind the defender."
+      ],
+      "successCriteria": [
+        "3 of 3 balls dug to the target",
+        "Stay low and moving, not standing still between balls",
+        "Call out loud on every contact"
+      ],
+      "coachingCues": [
+        "Eyes on the ball, not on the target before contact"
+      ]
+    },
+    "rapid-fire-dig": {
+      "title": "Rapid-Fire Digging",
+      "goal": "Train reaction time against continuous attacks with no recovery time.",
+      "equipment": [
+        "15 balls",
+        "1 box",
+        "1 net"
+      ],
+      "duration": "6-10 min (short sets)",
+      "variants": [
+        "The coach stands on a box and hits down balls non-stop (1 ball every 2 s). 10 balls in a row.",
+        "Faster pace (1 ball every 1.5 s) with varied zones (cross-court / line).",
+        "20 balls in a row, scored on decisions (1 point per ball played correctly, whatever the result)."
+      ],
+      "successCriteria": [
+        "7 of 10 balls dug",
+        "No standing up between balls",
+        "Ball returned to the target (not just anywhere)"
+      ],
+      "coachingCues": [
+        "Low, low, low: burning legs"
+      ]
+    },
+    "pursuit-and-save": {
+      "title": "Chase and Save",
+      "goal": "Build a \"never give up\" mindset and the habit of running down balls outside the defensive zone.",
+      "equipment": [
+        "6 balls",
+        "1 target"
+      ],
+      "variants": [
+        "The coach sends a ball deliberately out of range, 3 m from the defender. They run and save it (any contact counts).",
+        "Add a relay: a second player picks up the save and makes a real pass. Bonus if the third touch is attackable.",
+        "In pairs: one digs, the other covers the resulting free ball."
+      ],
+      "successCriteria": [
+        "3 of 5 saves lead to a playable third touch",
+        "Call out loud (\"You!\", \"Mine!\")",
+        "No player standing still during the sequence"
+      ],
+      "coachingCues": [
+        "Get a touch on it, any way you can"
+      ]
+    },
+    "read-hitter-adjust": {
+      "title": "Read the Hitter and Adjust",
+      "goal": "Adjust your defensive position BEFORE the hitter makes contact, by reading the approach and the arm.",
+      "equipment": [
+        "8 balls",
+        "1 net"
+      ],
+      "variants": [
+        "The defender starts neutral in zone 6. Based on the approach (cross-court / line), they step up or back 1 m BEFORE contact.",
+        "Constraint: no movement AFTER contact, pure reading.",
+        "Scoring: 2 points for a dig to the target from the right position, 1 point for a scrappy dig, 0 for a miss."
+      ],
+      "successCriteria": [
+        "4 of 6 digs from the right position (in the shadow of the block)",
+        "Feet set at contact (not moving)",
+        "Read called out loud"
+      ],
+      "coachingCues": [
+        "The read starts at the load, not at contact"
+      ]
+    },
+    "toss-and-drop": {
+      "title": "Toss and Drop",
+      "goal": "Make the serving toss consistent: it is 80% of the final accuracy.",
+      "equipment": [
+        "1 ball",
+        "masking tape on the floor"
+      ],
+      "variants": [
+        "Mark a cross on the floor in front of the hitting shoulder. Toss the ball up and LET IT DROP on the cross, 10 times.",
+        "Same drill, aiming for a constant height (imaginary ceiling at 2.5 m for a float, 3.5 m for a jump float).",
+        "Toss while looking at the target area (not at the ball) to train blind timing."
+      ],
+      "successCriteria": [
+        "8 of 10 tosses land on the cross",
+        "Same height on every toss",
+        "The ball does not spin (a \"dead\" toss)"
+      ],
+      "coachingCues": [
+        "The hand tosses, the body stays still"
+      ]
+    },
+    "six-zones-target": {
+      "title": "Six-Zone Targets",
+      "goal": "Cover all 6 zones of the opposing court with comparable execution, so you can choose tactically.",
+      "equipment": [
+        "6 cones or hoops",
+        "10+ balls",
+        "1 net"
+      ],
+      "variants": [
+        "One target at a time (zone 1, then 5, then 6...). 3 serves per zone. Score = number of zones with at least 2 of 3.",
+        "Random targets called by the coach BEFORE the toss. 12 serves, score = zones hit.",
+        "Add a defensive constraint (a zone between two players, or against a real libero). Score = aces plus opponent reception errors."
+      ],
+      "successCriteria": [
+        "4 of 6 zones with at least 2 of 3 successful",
+        "Same pre-serve routine on every attempt",
+        "No serve into the net"
+      ]
+    },
+    "pressure-serve-game": {
+      "title": "Serving Under Pressure",
+      "goal": "Serve under scoring pressure to simulate the end of a set.",
+      "equipment": [
+        "10+ balls",
+        "1 net"
+      ],
+      "variants": [
+        "5 serves in a row. In and beyond 3 m = +1. Missed (net / out) = -1. Minimum score: +3.",
+        "Add a final \"match point\" serve: if missed, back to 0 and start again.",
+        "Three servers compete. First to 10 points wins."
+      ],
+      "successCriteria": [
+        "Score of +3 or better over 5 serves",
+        "Same pre-serve routine, critical point or not",
+        "No rushing after a miss"
+      ],
+      "coachingCues": [
+        "Same routine, critical point or not"
+      ]
+    },
+    "tactical-zone-serve": {
+      "title": "Serving to the Opponent's Weak Spot",
+      "goal": "Pick the serving zone based on the weakness you have spotted in the opponent.",
+      "equipment": [
+        "8 balls",
+        "1 net",
+        "opposing team receiving"
+      ],
+      "variants": [
+        "Before each serve, the server calls \"ace in 1\" (zone) and names the weak passer. Then executes.",
+        "Scoring: +3 ace, +1 broken pass, 0 perfect pass, -1 error.",
+        "Scout first: the opponent plays a full set, the serving team identifies weak zones, then exploits them."
+      ],
+      "successCriteria": [
+        "At least 2 aces in 8 serves",
+        "Zone choice justified out loud",
+        "No \"automatic\" serve (always zone 1)"
+      ]
+    },
+    "shadow-block-mirror": {
+      "title": "Mirror Blocking",
+      "goal": "Sync lateral movement and the jump without a ball, mirroring a partner.",
+      "equipment": [
+        "1 net"
+      ],
+      "variants": [
+        "Two players face each other across the net. One moves left / right, the other mirrors. Jump on the \"up!\" signal.",
+        "Add a jump with a press over the net (hands reach into the opponent's side). 10 lateral reps.",
+        "3 blockers in a line (zones 2-3-4). The coach calls an attack zone, all 3 move and form a double block in that zone."
+      ],
+      "successCriteria": [
+        "Smooth lateral steps (no uncontrolled crossing)",
+        "Hands above the net at the peak",
+        "Stable landing (no loss of balance)"
+      ],
+      "coachingCues": [
+        "Hands up at all times"
+      ]
+    },
+    "footwork-net-touch": {
+      "title": "Lateral Footwork and Net Press",
+      "goal": "Choose the right step (shuffle vs crossover) for the distance, and finish with hands high at the net.",
+      "equipment": [
+        "1 net",
+        "4 cones"
+      ],
+      "variants": [
+        "Shuffle 1 m (zone 3 to zone 4), jump, hands high. 8 reps.",
+        "Crossover 3 m (zone 4 to zone 2), jump, hands high. Work on the timing of the last step (outside foot).",
+        "Alternate shuffle and crossover on the coach's signal (short = shuffle / long = crossover) in under 0.5 s."
+      ],
+      "successCriteria": [
+        "Last step square to the net (no crooked foot)",
+        "Hands 30 cm above the tape at the peak",
+        "No jumping backward"
+      ],
+      "coachingCues": [
+        "Shuffle short, crossover long"
+      ]
+    },
+    "read-setter-block": {
+      "title": "Reading the Setter (Commit vs Read)",
+      "goal": "Decide between commit (an early jump on a quick) and read (jump on the chosen hitter).",
+      "equipment": [
+        "8 balls",
+        "1 net"
+      ],
+      "variants": [
+        "The setter signals their set (front / back) BEFORE the toss. The middle commits, the outsides read.",
+        "No signal: the middle must read the setter's shoulder angle and decide in under 0.3 s.",
+        "Add the pipe (back-row outside) for 4 options. The middle becomes a pure read blocker."
+      ],
+      "successCriteria": [
+        "4 of 6 correct decisions (block on the real hitter)",
+        "Middle never caught between two hitters",
+        "Call out loud \"FRONT!\" or \"BACK!\""
+      ],
+      "coachingCues": [
+        "Read the setter, not the ball"
+      ]
+    },
+    "seal-the-seam-duo": {
+      "title": "Sealing the Seam as a Pair",
+      "goal": "Two blockers (middle and outside) close either the line or the angle, leaving no seam between them.",
+      "equipment": [
+        "6 balls",
+        "1 net"
+      ],
+      "variants": [
+        "\"Line\" block: the middle closes the line, the outside takes the angle. 6 reps.",
+        "\"Angle\" block: the middle takes the angle, the outside closes the line. 6 reps.",
+        "Live decision: the coach calls \"LINE\" or \"ANGLE\" 0.5 s before the set. Both adjust."
+      ],
+      "successCriteria": [
+        "5 of 6 blocks with sealed hands (no visible seam between the two blockers)",
+        "Both blockers arrive at the same time",
+        "No lateral drift after the jump"
+      ],
+      "coachingCues": [
+        "Shoulder to shoulder at the peak"
+      ]
+    },
+    "pepper-progressive": {
+      "title": "Progressive Pepper",
+      "goal": "Work all 3 contacts in a loop with a partner, building up the intensity.",
+      "equipment": [
+        "1 ball per pair"
+      ],
+      "variants": [
+        "Classic pepper with no jumping. Dig, set, soft-hand \"spike\". Goal: 10 cycles in a row.",
+        "\"Down ball pepper\": the hitter hits standing, down-ball style. Dig, set, down ball.",
+        "Pepper with a jump and targets: the hitter must hit a zone called by the setter (left / right)."
+      ],
+      "successCriteria": [
+        "10 cycles in a row without a break",
+        "Talk (\"Mine!\", \"Yours!\")",
+        "Every contact sets up the next one (no \"selfish\" ball)"
+      ],
+      "coachingCues": [
+        "Serve your partner, not yourself"
+      ]
+    },
+    "side-out-wash-3": {
+      "title": "Side-Out Wash x3",
+      "goal": "Win a point only after 3 consecutive side-outs, with the focus on error-free execution.",
+      "equipment": [
+        "10+ balls",
+        "1 net"
+      ],
+      "variants": [
+        "3 serves in a row. 3 successful side-outs = +1 point. A miss at any point means starting over.",
+        "After each side-out, the defending team plays out the rally (transition). Only side-outs count.",
+        "Reverse scoring: the serving team scores if it stops the third side-out. First to 5 wins."
+      ],
+      "successCriteria": [
+        "At least 1 run of 3 side-outs per team over 10 serves",
+        "Hitter coverage on every attack",
+        "Constant communication (pass-set-hit called out)"
+      ]
+    },
+    "triangle-transition": {
+      "title": "Transition Triangle",
+      "goal": "Chain pass, set and attack plus coverage with no downtime.",
+      "equipment": [
+        "8 balls",
+        "1 net"
+      ],
+      "variants": [
+        "The coach hits a down ball, the team defends (3 contacts). After the attack, cover in a triangle (setter plus 2 back-row players).",
+        "The coach varies cross-court / line / tip: the team works out who digs and who covers.",
+        "Chain 2 transitions in a row: defense, attack and cover, new defense, new attack."
+      ],
+      "successCriteria": [
+        "Coverage triangle on every attack (3 players 2 m from the hitter)",
+        "No one standing still during the rally",
+        "Constant communication"
+      ],
+      "coachingCues": [
+        "Cover every attack, no exceptions"
+      ]
+    },
+    "queen-of-the-court": {
+      "title": "Queen of the Court",
+      "goal": "A competitive game mode: winning a rally moves you up to the \"royal court\", losing sends you back.",
+      "equipment": [
+        "1 net",
+        "10+ balls"
+      ],
+      "variants": [
+        "3 teams. The \"queen\" team receives the serve. If it scores, it stays. If it loses, it leaves and the next team moves up.",
+        "Tactical constraint: the win must come from a third-tempo attack (otherwise 0 points even if the rally is won).",
+        "Bonus: 2 points if the win comes off a clean side-out (pass-set-hit) with no transition."
+      ],
+      "successCriteria": [
+        "Smooth rotation between the 3 teams",
+        "No waiting between rotations",
+        "Intensity held for 20+ minutes"
+      ],
+      "coachingCues": [
+        "Every rally counts"
+      ]
+    }
+  }
+}

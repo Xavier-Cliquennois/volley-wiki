@@ -1711,5 +1711,858 @@
       "body2": "La clé : applique la règle de base (même côté = avance, opposé = recule), observe l'attaquant, communique avec tes coéquipiers, et n'aie jamais peur de plonger pour une balle.",
       "mantra": "La défense gagne les matchs."
     }
+  },
+  "lectureDuJeu": {
+    "goldenRule": {
+      "mantra": "Tu ne bloques pas le ballon — tu bloques l'attaquant.",
+      "body": "Lire le jeu = avoir 0,3 seconde d'avance. À ce niveau, tu ne réagis plus à la balle (trop tard), tu réagis au CORPS adverse. Cette page t'apprend où regarder, dans quel ordre, et comment transformer ce que tu vois en décision instantanée."
+    },
+    "eyeSequence": {
+      "title": "★ LA SÉQUENCE VISUELLE",
+      "intro": "Tous les joueurs élite suivent la même boucle d'observation. L'ordre des points fixés change selon ton poste, mais le principe est identique : ne regarde JAMAIS le ballon en continu — laisse la vision périphérique le suivre, et fixe les indices qui prédisent ce qui va se passer.",
+      "phases": [
+        {
+          "phase": "1. Au service (tu sers)",
+          "items": [
+            "Arbitre — anticipe le coup de sifflet pour ne pas être pris de court",
+            "Formation de réception adverse — repère les trous (entre 2 joueurs), les faibles passeurs, qui vient d'entrer en jeu",
+            "Tendances connues — qui n'aime pas reculer ? qui passe mal en mouvement ?"
+          ]
+        },
+        {
+          "phase": "2. En réception (l'adversaire sert)",
+          "items": [
+            "Corps du serveur — pieds + épaules indiquent la direction (personne ne sert opposé à ses pieds)",
+            "Toss — haut = lifté ; bas et tendu = flottant ; côté tossing = direction probable",
+            "Vitesse de bras — lente + contact sous l'équateur = service court ; rapide = profond",
+            "Ballon dès le contact — sortie de la main"
+          ]
+        },
+        {
+          "phase": "3. Au bloc / défense",
+          "items": [
+            "Qualité de la passe (1er contact adverse) — bonne = toutes options ouvertes ; mauvaise = options limitées",
+            "Passeur (2e contact) — regard, mains, déplacement, position du corps",
+            "Trajectoire du set — bref tracking pour vérifier la cible et le tempo",
+            "ÉPAULE frappante de l'attaquant — c'est le déclencheur final du saut"
+          ]
+        }
+      ]
+    },
+    "readServer": {
+      "title": "Lire le serveur",
+      "level": "Débutant",
+      "intro": "Le serveur te donne 3 à 4 secondes pour lire ses intentions. Utilise-les.",
+      "cues": [
+        {
+          "label": "Toss bas et plat (~30 cm devant le corps)",
+          "text": "Service flottant. Trajectoire imprévisible. Reste large et bas — la balle peut soudainement plonger ou dévier latéralement."
+        },
+        {
+          "label": "Toss haut, devant la tête",
+          "text": "Service lifté (topspin). Trajectoire fiable mais accélération en chute. Prépare-toi à reculer."
+        },
+        {
+          "label": "Toss avec course d'élan",
+          "text": "Jump serve. Plus rapide, plus puissant, mais trajectoire plus prévisible (longue diagonale typiquement)."
+        },
+        {
+          "label": "Pieds et épaules pointent vers ta P1",
+          "text": "98% du temps, le serveur sert où il pointe. Annonce à voix haute : « SUR MOI » ou « SUR TOI »."
+        },
+        {
+          "label": "Bras lent + contact sous l'équateur",
+          "text": "Service court devant les 3 m. Tes avants doivent reculer pour passer ; tes arrières restent reculés et viennent vite."
+        },
+        {
+          "label": "Bras rapide + contact équateur",
+          "text": "Service profond, sur la ligne de fond. Tes arrières doivent prendre la balle haute, plateforme ferme."
+        }
+      ]
+    },
+    "readPasserOpp": {
+      "title": "Lire la qualité de la passe adverse (1er contact)",
+      "level": "Intermédiaire",
+      "intro": "Dès que le ballon quitte la plateforme du réceptionneur adverse, tu peux déjà éliminer 50 % des options de set. Apprends ce code.",
+      "cases": [
+        {
+          "label": "Passe parfaite (~1 m du filet, devant le passeur)",
+          "text": "TOUTES les options sont ouvertes : quick centre, aile gauche, aile droite, pipe. Lecture pure — l'épaule du frappeur sera ton seul indicateur final."
+        },
+        {
+          "label": "Passe derrière la ligne 3 m",
+          "text": "Quick centre IMPOSSIBLE. Set obligatoirement en arc vers une aile → attaque en angle. Bloque en lecture, anticipe une trajectoire haute."
+        },
+        {
+          "label": "Passe collée au filet (< 50 cm)",
+          "text": "Risque d'overpass — sois prêt à attaquer la balle directement. Si le passeur joue quand même, ce sera un set ultra tendu vers une aile."
+        },
+        {
+          "label": "Passeur déséquilibré / plateforme tordue",
+          "text": "Set forcé en aile gauche dans 80 % des cas (option par défaut quand on est en galère). Anticipe une attaque en cloche, pas un 1er tempo."
+        },
+        {
+          "label": "Passeur sort du terrain pour rattraper",
+          "text": "Plus de quick possible. Souvent une « free ball » déguisée — soit attaque haute prévisible, soit relance directe."
+        }
+      ]
+    },
+    "readSetter": {
+      "title": "Lire le passeur (distributeur)",
+      "level": "Intermédiaire",
+      "intro": "Le passeur fuit le bloc et envoie la balle là où il y a moins de monde. Mais son corps trahit souvent sa décision 0,2 s avant le contact.",
+      "cues": [
+        {
+          "label": "Regard rapide AVANT le contact",
+          "text": "Beaucoup de passeurs vérifient leur cible juste avant d'engager les mains. Vois où il regarde → tu sais où la balle va. Les passeurs élite cachent ce coup d'œil, mais les amateurs le donnent presque toujours."
+        },
+        {
+          "label": "Hanches et épaules orientées vers la cible",
+          "text": "Difficile de set perpendiculairement à son alignement. Les hanches indiquent souvent la direction (avant pour aile gauche / quick, arrière pour pointu)."
+        },
+        {
+          "label": "Mains TRÈS proches du visage (compactes)",
+          "text": "Quick / 1er tempo. La balle ne monte presque pas — set tendu et rapide. Saute MAINTENANT avec ton central."
+        },
+        {
+          "label": "Mains plus hautes, recul léger des coudes",
+          "text": "Set arrière (vers pointu). La trajectoire passe au-dessus de la tête du passeur."
+        },
+        {
+          "label": "Doigts tendus en attaque immédiate (jump set)",
+          "text": "Le passeur peut prendre la 2e touche en feinte d'attaque ou en quick relais. Reste prêt à un tip rapide du passeur — fréquent en rotation P2."
+        },
+        {
+          "label": "Position basse / poignets fermes mais hanches en torsion",
+          "text": "Set en aile gauche (set haut, option de secours). C'est le set le plus prévisible — anticipe et place ton contre tôt."
+        }
+      ]
+    },
+    "readHitter": {
+      "title": "Lire l'attaquant",
+      "level": "Avancé",
+      "intro": "C'est la lecture la PLUS importante. Au moment où l'épaule frappante descend, tu sautes. À ce stade, tout se joue en 0,15 seconde — tu n'as pas le temps de penser, tu dois avoir ANTICIPÉ.",
+      "cues": [
+        {
+          "label": "Course d'approche droite (face au filet)",
+          "text": "Attaque ligne (couloir court) très probable. Ta défense doit avancer en P5 ou P1 selon le côté."
+        },
+        {
+          "label": "Course d'approche en diagonale (sortant du terrain)",
+          "text": "Attaque en diagonale (cross-court). Ta défense P5/P1 reste large, P6 prêt sur la diagonale longue."
+        },
+        {
+          "label": "Course lente / sans élan complet",
+          "text": "Tip, roll shot ou attaque placée. La défense lâche le contre-tip — un défenseur monte à la 3 m."
+        },
+        {
+          "label": "Épaule frappante PIVOTÉE vers l'extérieur",
+          "text": "Frappe ligne. La trajectoire suivra l'axe de l'épaule."
+        },
+        {
+          "label": "Épaule OUVERTE vers le centre du filet",
+          "text": "Frappe diagonale. Bloc adverse moins gênant, attaque qui contourne le bloc côté pointu."
+        },
+        {
+          "label": "Coude HAUT + bras très rapide (main invisible)",
+          "text": "Smash puissant. Anticipe un impact dur, ne te précipite pas vers la zone proche."
+        },
+        {
+          "label": "Coude DROPÉ « shot-put » + main visible",
+          "text": "Tip ou roll shot. La main ralentit juste avant le contact. Un défenseur AVANCE à la 3 m."
+        },
+        {
+          "label": "Pas de plant complet (saut compromis)",
+          "text": "Attaque placée, voire renvoi sans force. C'est une free ball déguisée — préparé pour relancer dans la foulée."
+        }
+      ]
+    },
+    "blockTiming": {
+      "title": "Le timing du bloc",
+      "level": "Avancé",
+      "intro": "La règle absolue : tu sautes quand l'épaule frappante DESCEND, pas avant. Variantes selon la passe.",
+      "rules": [
+        {
+          "label": "Set tendu, près du filet (passe parfaite)",
+          "text": "Saute dès que le frappeur ENGAGE son saut. Le délai est minimal."
+        },
+        {
+          "label": "Set haut sur l'aile",
+          "text": "Saute quand l'épaule descend pour engager le bras. Tu attends 1 compte de plus."
+        },
+        {
+          "label": "Set loin du filet (1+ m)",
+          "text": "Attends 1,5 compte après le décollage du frappeur. Si tu sautes trop tôt, tu redescends pendant qu'il frappe."
+        },
+        {
+          "label": "Erreur classique : saut au plant de pieds",
+          "text": "Le frappeur n'a pas encore décidé. Tu seras en redescente quand il frappera. Toujours attendre l'épaule."
+        }
+      ]
+    },
+    "ifThen": {
+      "title": "Le cadre IF / THEN",
+      "intro": "Pour transformer la lecture en réflexe, les coachs élite enseignent par paires \"IF (l'indice) → THEN (la réaction)\". Voici 12 paires à mémoriser puis à drillder jusqu'à l'automatisme.",
+      "scenarios": [
+        { "if": "Bloqueur extérieur adverse en retard sur la course de l'aile", "then": "Frappe ligne — le bloc ne ferme pas le couloir" },
+        { "if": "Bloqueur extérieur à temps", "then": "Frappe seam / diagonale — vise le creux entre les deux bloqueurs" },
+        { "if": "Central adverse fronte sur le 31 (lit le quick)", "then": "Le passeur backset vers le pointu — anticipe une attaque droite" },
+        { "if": "Coude de l'attaquant dropé en shot-put", "then": "Défense se relâche, un joueur monte à la 3 m pour le tip" },
+        { "if": "Serveur a une vitesse de bras lente + contact bas", "then": "Service court attendu — avants vigilants" },
+        { "if": "Passe adverse derrière 3 m", "then": "Pas de quick possible — bloc en lecture, libère le central" },
+        { "if": "Passeur regarde son pointu juste avant la passe", "then": "Set arrière — bloc droit + défense alerte" },
+        { "if": "Course d'approche diagonale très marquée", "then": "Cross-court — P5/P1 large, P6 défend la diagonale longue" },
+        { "if": "Attaquant arrive très en retard sur la passe", "then": "Roll ou bidouille — défense bas et compact" },
+        { "if": "Passeur saute en feinte d'attaque (mains hautes)", "then": "Possible tip rapide du passeur — bloc reste droit, ne suit pas" },
+        { "if": "Hanches du passeur ouvertes vers la gauche", "then": "Set en aile gauche (option par défaut) — bloc se prépare tôt" },
+        { "if": "Réceptionneur adverse sort du terrain", "then": "Free ball déguisée — équipe avance en transition rapide" }
+      ]
+    },
+    "scouting": {
+      "title": "Scouting pré-match",
+      "level": "Avancé",
+      "intro": "Le scouting transforme la lecture en match en lecture en MATCH. C'est l'art de connaître son adversaire AVANT de jouer, pour réduire l'incertitude pendant le rally.",
+      "axes": [
+        {
+          "axis": "Attaquants — par poste et par rotation",
+          "questions": [
+            "Où chaque attaquant frappe-t-il majoritairement (ligne vs diagonale) ?",
+            "Quel est son tir préféré sous pression ?",
+            "Frappe-t-il différemment en réception vs en transition ?",
+            "Sa course d'approche change-t-elle quand il prépare un tip ?"
+          ]
+        },
+        {
+          "axis": "Passeur — par rotation",
+          "questions": [
+            "Distribue-t-il majoritairement vers son aile favorite ?",
+            "Qui est sa solution sous pression (kill-button hitter) ?",
+            "Set-il après une erreur du même attaquant, ou change-t-il ?",
+            "Ses backsets sont-ils consistants ? Vers le bon antenne ?"
+          ]
+        },
+        {
+          "axis": "Serveurs",
+          "questions": [
+            "Qui sert lifté ? Qui sert flottant ? Qui jump-serve ?",
+            "Quels sont les zones cibles préférées de chaque serveur ?",
+            "Qui craque sous pression (double faute en série) ?",
+            "Quel est le rendement en aces vs erreurs ?"
+          ]
+        },
+        {
+          "axis": "Défense + bloc",
+          "questions": [
+            "Quel système défensif (péri 6-back, 6-front, rotation) ?",
+            "Le bloc lit-il ou commit-il sur le quick ?",
+            "Où sont les trous défensifs (zone 1, zone 5, milieu profond) ?",
+            "Le libéro défend-il bien la diagonale courte ?"
+          ]
+        }
+      ]
+    },
+    "scoutingFormat": {
+      "title": "Format scouting — feuille d'avant-match",
+      "intro": "Une bonne feuille de scouting tient sur UNE page. Plus que ça, et tes joueurs ne s'en souviendront pas en match.",
+      "checklist": [
+        "Rotation wheel (cercle 6 cases avec qui occupe quelle zone)",
+        "Tendance d'attaque par hitter (% ligne / diagonale / tip) — flèches sur un demi-terrain schématique",
+        "Zone à servir pour chaque rotation adverse (cible : le passeur en R1/R6/R5, le faible passeur sinon)",
+        "Hitter prioritaire à bloquer (souvent le pointu ou le passeur 2 en out-of-system)",
+        "1-2 phrases résumées : « Sers en 1 contre R1, double bloc sur OH2, lâche le central en R3 »"
+      ]
+    },
+    "commonMistakes": {
+      "title": "Erreurs classiques de lecture",
+      "items": [
+        {
+          "label": "Fixer le ballon au lieu du corps",
+          "text": "Le ballon arrive trop tard pour réagir. Tu dois fixer le passeur PUIS l'épaule du frappeur — laisse la vision périphérique suivre la balle."
+        },
+        {
+          "label": "Sauter sur le plant de pieds du frappeur",
+          "text": "Tu seras en redescente quand il frappera. Toujours attendre la descente de l'épaule frappante."
+        },
+        {
+          "label": "Sur-réagir aux feintes",
+          "text": "Une seule feinte peut suffire à te détruire si tu sur-corriges. Reste sur ta lecture statistique (tendances), pas sur l'exception."
+        },
+        {
+          "label": "Trop d'infos = paralysie d'analyse",
+          "text": "Si tu essaies de lire 6 indices en même temps, tu n'en lis aucun. Choisis 1-2 priorités selon ton poste."
+        },
+        {
+          "label": "Oublier de scanner avant le service",
+          "text": "Les 3-5 secondes avant le service sont précieuses. Repère la formation adverse, le passeur, le pointu — pendant le rally tu n'auras plus le temps."
+        }
+      ]
+    },
+    "drills": {
+      "title": "Drills d'entraînement progressifs",
+      "level": "Coach / capitaine",
+      "items": [
+        {
+          "level": "Niveau 1 — Reads stationnaires",
+          "desc": "Le coach (ou hitter) annonce le tir avant chaque attaque : 'ligne / diagonale / tip / roll'. Le défenseur réagit. Quand 80% sont bons, passer en lecture aveugle."
+        },
+        {
+          "level": "Niveau 2 — Lecture aveugle",
+          "desc": "Même setup mais sans annonce. Le défenseur doit lire le corps. Compter combien de fois il a la balle propre vs en plongeon."
+        },
+        {
+          "level": "Niveau 3 — 2 hitters / 2 défenseurs",
+          "desc": "Deux attaquants à P4 et P2. Défenseurs P5 et P1 communiquent (« sur moi », « sur toi »). Le coach set l'un ou l'autre aléatoirement."
+        },
+        {
+          "level": "Niveau 4 — Hit & dig (10 attaques)",
+          "desc": "Set live, 10 attaques par hitter. Compter combien de balles propres remontent au centre (cible : 60%+)."
+        },
+        {
+          "level": "Niveau 5 — Sans bloc",
+          "desc": "On retire les bloqueurs. La défense doit lire 100 % du terrain. Très exigeant mais force l'œil à fixer le bon endroit."
+        }
+      ]
+    },
+    "linkedScenarios": {
+      "title": "Scénarios liés",
+      "intro": "Mets cette lecture en pratique sur les scénarios 3D existants — chacun est une situation concrète à analyser."
+    }
+  },
+  "indoorBeach": {
+    "goldenRule": {
+      "mantra": "Le beach n'est pas un volley indoor sur sable.",
+      "body": "80 % des fondamentaux sont partagés (frapper, défendre, lire le jeu). Mais les 20 % restants — règles, physique, tactique — changent tout. Ce guide te dit exactement ce qui transfère, ce qui s'adapte, et ce qui demande de réapprendre."
+    },
+    "overview": {
+      "title": "★ TABLEAU COMPARATIF",
+      "intro": "Les chiffres officiels FIVB. Les lignes en orange marquent un changement qui demande une adaptation technique ou tactique, pas juste numérique.",
+      "rows": [
+        { "category": "Joueurs / équipe", "indoor": "6 (+1 libéro)", "beach": "2", "impact": "high" },
+        { "category": "Dimensions du terrain", "indoor": "18 × 9 m", "beach": "16 × 8 m", "impact": "low" },
+        { "category": "Hauteur du filet H / F", "indoor": "2,43 m / 2,24 m", "beach": "2,43 m / 2,24 m", "impact": "low" },
+        { "category": "Ligne d'attaque (3 m)", "indoor": "Présente (limite back-row)", "beach": "Absente (tous attaquent partout)", "impact": "high" },
+        { "category": "Ballon", "indoor": "Cuir, ~260 g, dur", "beach": "Plus souple, légèrement plus gros, pression plus basse", "impact": "low" },
+        { "category": "Set / Match", "indoor": "25 pts · best of 5 sets", "beach": "21 pts · best of 3 sets", "impact": "low" },
+        { "category": "Tie-break", "indoor": "15 pts (5e set)", "beach": "15 pts (3e set)", "impact": "low" },
+        { "category": "Changements de côté", "indoor": "Pas pendant le set", "beach": "Tous les 7 points (5 pts en tie-break)", "impact": "high" },
+        { "category": "Délai pour servir", "indoor": "8 secondes", "beach": "5 secondes", "impact": "low" },
+        { "category": "Rotations / positions", "indoor": "Strictes (P1 → P6)", "beach": "Libres — pas de rotation", "impact": "high" },
+        { "category": "Substitutions", "indoor": "6 par set", "beach": "Aucune", "impact": "high" },
+        { "category": "Contre = touche ?", "indoor": "Non (il reste 3 touches)", "beach": "OUI — il ne reste que 2 touches", "impact": "high" },
+        { "category": "Passe à 10 doigts (set)", "indoor": "Tolérante", "beach": "Très stricte — double facilement sifflé", "impact": "high" },
+        { "category": "Tip / placette du bout des doigts", "indoor": "Autorisé", "beach": "INTERDIT (poing, paume, doigts verrouillés)", "impact": "high" },
+        { "category": "Réception manchette", "indoor": "Souvent à 10 doigts", "beach": "Manchette quasi obligatoire", "impact": "high" },
+        { "category": "Communication", "indoor": "Vocale + appels", "beach": "Signes derrière le dos (1 doigt = bloc ligne, 2 = diag, etc.)", "impact": "low" }
+      ]
+    },
+    "skillAdaptations": {
+      "title": "Adaptations techniques skill par skill",
+      "level": "Intermédiaire",
+      "intro": "Si tu viens de l'indoor, voici comment chaque geste change quand tu passes sur sable.",
+      "items": [
+        {
+          "skill": "Service",
+          "indoor": "Float / jump float / jump topspin. Cibles précises (P1, P5, passeur).",
+          "beach": "Le service est ARME #1 : float très flottant pour exploiter le vent, jump serve agressif pour pousser. Vent debout = service flottant ; vent dans le dos = jump topspin pour profondeur."
+        },
+        {
+          "skill": "Réception",
+          "indoor": "10 doigts toléré en haute réception. 3 ou 4 réceptionneurs.",
+          "beach": "MANCHETTE quasi obligatoire (passe à 10 doigts = double sifflé). 2 réceptionneurs qui se partagent le terrain en moitiés (ligne du milieu mentale). Le serveur a 5 s = moins de temps de prep."
+        },
+        {
+          "skill": "Passe (set)",
+          "indoor": "10 doigts standard, passe haute ou tendue.",
+          "beach": "Bump set (manchette en passe) très répandue car plus safe. Quand 10 doigts utilisé : arbitre TRÈS STRICT sur la double. Set en cloche pour éviter le jugement (« hand-set » avec rotation = double automatique)."
+        },
+        {
+          "skill": "Attaque",
+          "indoor": "Smash puissant + tip + roll. Approches 3-4 pas codifiées.",
+          "beach": "Approche raccourcie (1-2 pas dans le sable). Pas de tip aux doigts → cut shot (paume rotation poignet), poke (jointures), roll shot, hard ball. Diversifier les tirs essentiel : un attaquant ne peut compter sur la puissance seule."
+        },
+        {
+          "skill": "Contre",
+          "indoor": "Lecture passeur → set → attaquant. Souvent à 2 ou 3.",
+          "beach": "Toujours 1 bloqueur (à 2 = trop de terrain découvert). Soit BLOQUER (option ligne ou diag, jamais les deux), soit PEEL (descendre défendre, ne pas sauter). Le défenseur lit le bloc pour savoir où il défend."
+        },
+        {
+          "skill": "Défense",
+          "indoor": "5 défenseurs spécialisés (libéro + arrières + couvreurs).",
+          "beach": "1 SEUL défenseur. Doit lire l'attaquant en temps réel pour anticiper. Position basse, large ouverte. Souvent feinte sa position pour confondre le frappeur."
+        }
+      ]
+    },
+    "tacticAdaptations": {
+      "title": "Adaptations tactiques",
+      "level": "Intermédiaire",
+      "intro": "Le beach est essentiellement du 1 contre 1 répété. La tactique est radicalement différente.",
+      "items": [
+        {
+          "label": "Rôles dynamiques",
+          "text": "Pas de poste fixe : à chaque rally, l'un est blocker (au filet), l'autre est defender (au fond). Souvent on switch en cours d'échange (« crossing pattern »). Les deux joueurs doivent savoir TOUT FAIRE."
+        },
+        {
+          "label": "Signaux du bloqueur",
+          "text": "Avant chaque service, le bloqueur fait des signes derrière son dos au serveur : 1 doigt = bloc ligne, 2 doigts = bloc diagonale, poing = peel (pas de bloc). Le défenseur s'adapte en conséquence."
+        },
+        {
+          "label": "Pas de pénétration",
+          "text": "Le passeur prend la 2e touche sur place — il était au filet ou bien il y reste après réception. Pas de course longue. La passe doit être très précise pour économiser de l'énergie."
+        },
+        {
+          "label": "Coup de vent = stratégie",
+          "text": "Le vent influe énormément. Vent debout = serve flottant aggressif + sets bas. Vent dans le dos = jump serve + sets plus hauts. Changement de côté toutes les 7 points pour égaliser."
+        },
+        {
+          "label": "Pas d'overlap, pas de rotation",
+          "text": "Tu peux te placer où tu veux. Tu peux servir 10 fois de suite. Ça change la tactique du serveur (cibler le joueur faible toute la partie)."
+        }
+      ]
+    },
+    "physical": {
+      "title": "Préparation physique spécifique",
+      "level": "Intermédiaire",
+      "intro": "Le sable change tout. Tu sautes 20-30 % moins haut, tu cours 3 fois plus lentement. Voici ce qui se travaille différemment.",
+      "items": [
+        {
+          "label": "Force des jambes en sand",
+          "text": "Sprint sand, plyo dans le sable, fentes lestées. Le mollet et les ischios travaillent énormément (pas de push-off solide)."
+        },
+        {
+          "label": "Endurance / cardio",
+          "text": "Un échange beach dure 2-3× plus longtemps qu'en indoor (pas de pause). 1h de match = 1h de cardio continu sous le soleil."
+        },
+        {
+          "label": "Stabilité de la cheville",
+          "text": "Le sable cède sous le pied à chaque appui. Sans gainage cheville/pied solide, le risque d'entorse explose. Renfort proprio régulier."
+        },
+        {
+          "label": "Hydratation + nutrition",
+          "text": "1 L d'eau par heure de jeu, électrolytes obligatoires. Repas léger pré-match (digestion ralentie sous chaleur)."
+        },
+        {
+          "label": "Protection solaire",
+          "text": "Crème SPF 50 toutes les 1h30, lunettes de soleil polarisées, casquette / visière. Coup de soleil au mollet = match suivant compromis."
+        }
+      ]
+    },
+    "whenToTransition": {
+      "title": "Quand passer de l'un à l'autre ?",
+      "intro": "La plupart des joueurs élite combinent les deux. Voici quand le switch est pertinent.",
+      "cases": [
+        {
+          "label": "Saison indoor → été beach",
+          "text": "Très courant en Europe. La saison indoor finit en mai-juin, la saison beach démarre en juin. 6-8 semaines de transition = idéal pour récupérer + travailler la coordination différemment."
+        },
+        {
+          "label": "Joueur d'1m80 et moins",
+          "text": "Le beach valorise la lecture du jeu, la diversité technique, le toucher de balle. L'indoor élite demande de la taille. Le beach offre une seconde vie sportive aux gabarits moyens."
+        },
+        {
+          "label": "Joueur polyvalent (no specialization)",
+          "text": "Si tu touches à tout en indoor mais tu n'as pas un poste élite, le beach valorisera ta polyvalence. Tu y seras meilleur que dans un poste spécialisé."
+        },
+        {
+          "label": "Recovery from injury",
+          "text": "Le sable est moins traumatisant pour les articulations. Joueurs en récup post-blessure (genou, dos) reviennent souvent via le beach avant de retourner indoor."
+        },
+        {
+          "label": "Profil mental",
+          "text": "Beach = communication intense avec UN seul partenaire. Si tu carbures à la solitude tactique, c'est ton sport. Indoor = jeu collectif d'équipe. Si tu carbures à l'esprit d'équipe large, reste indoor."
+        }
+      ]
+    },
+    "commonMistakes": {
+      "title": "Pièges typiques de l'indoor → beach",
+      "items": [
+        {
+          "label": "Set à 10 doigts → double sifflé en série",
+          "text": "L'arbitre beach siffle 5× plus de doubles. Solution : bump set (manchette en passe) jusqu'à maîtriser le toucher beach."
+        },
+        {
+          "label": "Tip aux doigts → faute",
+          "text": "Le geste indoor automatique. En beach, utilise un cut shot ou un poke (jointures fermées). Réapprendre le geste prend 2-3 semaines."
+        },
+        {
+          "label": "Approche d'attaque trop longue",
+          "text": "Le sable absorbe l'élan. Course de 4 pas indoor → 1-2 pas beach. Sauter en hauteur, pas en distance."
+        },
+        {
+          "label": "Sous-estimer la fatigue",
+          "text": "Un joueur indoor s'effondre en 2e set beach. Pre-saison sand obligatoire avant compétition."
+        },
+        {
+          "label": "Oublier le vent",
+          "text": "Une balle indoor va où tu la frappes. Une balle beach peut dévier de 1-2 m selon le vent. Toujours regarder le drapeau ou les arbres avant de servir."
+        }
+      ]
+    },
+    "drills": {
+      "title": "Drills d'adaptation indoor → beach",
+      "level": "Intermédiaire",
+      "items": [
+        {
+          "level": "1 — Sprint + ramping",
+          "desc": "10 × 20 m sprint dans le sable + ramping (montée de jambes). Active les chaînes musculaires beach. 3-4 fois/semaine la 1re semaine."
+        },
+        {
+          "level": "2 — Cut shot / poke / roll",
+          "desc": "Sans bloqueur, attaquer 30 balles en n'utilisant QUE cut shot, puis 30 en poke, puis 30 en roll. Apprendre à se passer du tip aux doigts."
+        },
+        {
+          "level": "3 — Bump set sous pression",
+          "desc": "Le coach lance des balles imparfaites (manchette nécessaire). Le joueur doit set en manchette précise dans une zone de 1m². But : 8/10."
+        },
+        {
+          "level": "4 — Block + peel decision",
+          "desc": "À chaque service, le bloqueur annonce derrière son dos « bloc ligne » ou « peel ». Si peel : descendre pour défendre. Si bloc : sauter et fermer l'angle."
+        },
+        {
+          "level": "5 — Match au vent",
+          "desc": "Entraîner avec un ventilateur ou par jour venteux. Lire la trajectoire ballon altérée. Cible : ajuster la passe avec 2-3 m de vent."
+        }
+      ]
+    }
+  },
+  "signauxArbitre": {
+    "intro": {
+      "title": "★ POURQUOI APPRENDRE LES SIGNAUX",
+      "body": "Connaître les signaux de l'arbitre, c'est savoir EXACTEMENT pourquoi tu perds (ou gagnes) un point. Ça évite la frustration, accélère ta progression, et te permet d'arbitrer en interne quand l'équipe joue sans arbitre officiel. Voici les 15 signaux les plus utilisés en FIVB, dans l'ordre de fréquence d'apparition en match."
+    },
+    "signals": [
+      {
+        "name": "Point / Side-out",
+        "gesture": "Bras tendu horizontalement vers le camp gagnant.",
+        "context": "Signalé après chaque rally gagnant. C'est le signal le plus fréquent — repère vers QUI le bras pointe avant de fêter."
+      },
+      {
+        "name": "Ballon dedans",
+        "gesture": "Bras et main pointés vers le sol, à l'endroit du contact.",
+        "context": "Arbitre OU juge de ligne. Confirme qu'une balle litigieuse a touché la ligne / l'intérieur."
+      },
+      {
+        "name": "Ballon dehors",
+        "gesture": "Deux bras levés à 90°, avant-bras verticaux, paumes vers l'arbitre.",
+        "context": "La balle est tombée hors du terrain. Le geste se confond parfois avec une joie d'équipe — toujours regarder l'arbitre principal."
+      },
+      {
+        "name": "Faute de filet",
+        "gesture": "Arbitre touche le filet du côté du joueur fautif avec la main correspondante.",
+        "context": "Contact illégal avec le filet pendant l'action. Souvent contesté : le contact doit être pendant ou en lien avec l'action de jeu."
+      },
+      {
+        "name": "4 touches (équipe)",
+        "gesture": "Quatre doigts levés.",
+        "context": "L'équipe a effectué plus de 3 contacts avant de renvoyer. Le contre adverse ne compte pas dans les 3 touches en indoor."
+      },
+      {
+        "name": "Double touche",
+        "gesture": "Index + majeur levés (deux doigts).",
+        "context": "Un joueur a touché 2 fois consécutivement (souvent en passe à 10 doigts mal exécutée). Très subjectif — l'arbitre a le dernier mot."
+      },
+      {
+        "name": "Balle tenue / accompagnée",
+        "gesture": "Avant-bras levé, paume vers le haut, mouvement lent de soulèvement.",
+        "context": "La balle a été tenue / accompagnée au lieu d'être frappée nettement. Très fréquent sur les attaques en \"bidouille\" mal contrôlées."
+      },
+      {
+        "name": "Faute de pied au service",
+        "gesture": "Bras pointé vers la ligne de fond.",
+        "context": "Le serveur a marché sur ou franchi la ligne avant ou au moment du contact. Souvent signalé par le juge de ligne."
+      },
+      {
+        "name": "Faute de rotation",
+        "gesture": "Index qui dessine un cercle devant le corps.",
+        "context": "Une équipe n'était pas dans le bon ordre de rotation au moment du service. Conséquence : point ET service à l'adversaire."
+      },
+      {
+        "name": "Faute de position (overlap)",
+        "gesture": "Bras tendu horizontal indiquant les deux zones concernées.",
+        "context": "Au moment du contact serveur, un joueur n'était pas dans sa zone (overlap). C'est la faute la plus pointilleuse — voir notre guide systèmes 5-1."
+      },
+      {
+        "name": "Attaque arrière interdite",
+        "gesture": "Avant-bras qui descend en mouvement de fouet vers le sol.",
+        "context": "Un joueur arrière a attaqué (sauté + frappé) la balle au-dessus du filet en étant devant la ligne des 3 m. Pipe et bic doivent décoller depuis derrière la ligne."
+      },
+      {
+        "name": "Touche au contre",
+        "gesture": "Main passée sur les doigts levés de l'autre main.",
+        "context": "Le contre adverse a touché la balle avant qu'elle ne sorte. Important : la balle est donc OUT mais NOTRE équipe perd le point."
+      },
+      {
+        "name": "Temps-mort",
+        "gesture": "Une main paume vers le bas posée sur les doigts verticaux de l'autre (forme T).",
+        "context": "Demandé par un coach ou un capitaine. Durée : 30 secondes. Chaque équipe en a 2 par set."
+      },
+      {
+        "name": "Changement de joueur",
+        "gesture": "Avant-bras qui tournent l'un autour de l'autre (rotation devant la poitrine).",
+        "context": "Substitution autorisée. En indoor : 6 par set ; en beach : aucune."
+      },
+      {
+        "name": "Challenge / vidéo",
+        "gesture": "Deux mains qui dessinent un rectangle (forme d'écran).",
+        "context": "Demande de revue vidéo. Présent uniquement en compétition équipée. Le coach signale, l'arbitre confirme par ce geste."
+      }
+    ]
+  },
+  "erreursTypiques": {
+    "intro": {
+      "title": "★ APPRENDRE EN ÉVITANT LES PIÈGES",
+      "body": "Chaque poste a ses propres tentations et automatismes ratés. Voici 4 erreurs typiques par poste — celles que les coachs corrigent en boucle. Connaître ces erreurs te permet de les éviter ou de les remarquer chez les autres pour ajuster ton jeu."
+    },
+    "positions": [
+      {
+        "role": "Passeur",
+        "color": "P2",
+        "errors": [
+          {
+            "label": "Se précipiter sur la 2e touche",
+            "text": "Tu arrives sous la balle, plateforme tordue, set raté. Solution : ralentir d'1 demi-pas, prendre la balle haute devant le front, et CHOISIR sa passe avant le contact."
+          },
+          {
+            "label": "Ne pas regarder sa cible",
+            "text": "Si tu set sans regarder ton attaquant, tu passes en aveugle. Solution : 1/10e de seconde de coup d'œil VERS l'aile gauche AVANT le contact. Habitude essentielle."
+          },
+          {
+            "label": "Mauvaise pénétration (trop tard)",
+            "text": "Tu déclenches au coup de sifflet au lieu du contact serveur. Tu arrives en retard, un coéquipier prend la 2e touche. Solution : œil sur le serveur, pas sur l'arbitre."
+          },
+          {
+            "label": "Set toujours vers l'aile gauche (prévisible)",
+            "text": "L'aile gauche, c'est l'option safe — utilisée à outrance, elle devient prévisible. Solution : forcer 30% de quick + 20% de pipe en entraînement pour habituer la lecture."
+          }
+        ]
+      },
+      {
+        "role": "Pointu",
+        "color": "P1",
+        "errors": [
+          {
+            "label": "Attaquer en force sans lire le bloc",
+            "text": "Tu smashes dans le bloc à 3. Solution : 1/10e de seconde sur les bras du bloqueur avant le contact. Si fermé → ralentir et placer en zone 6. Si écarté → smasher dans la seam."
+          },
+          {
+            "label": "Oublier la pipe / la bic",
+            "text": "Tu restes 100% sur l'aile droite, le bloc adverse t'attend. Solution : 1 pipe ou 1 bic toutes les 5 attaques pour ouvrir le jeu central."
+          },
+          {
+            "label": "Ne pas couvrir après son attaque",
+            "text": "Tu admires ton smash, le contre adverse renvoie la balle, tu n'es pas en couverture. Solution : « j'attaque PUIS je descends à la 3 m couvrir » — réflexe à drillder."
+          },
+          {
+            "label": "Attaque en arrière sans s'engager",
+            "text": "Tu pars en bic mais tu hésites à 3 m. Solution : commit total dès la passe — soit tu y vas franc, soit tu deviens couverture, jamais entre les deux."
+          }
+        ]
+      },
+      {
+        "role": "Central",
+        "color": "P3",
+        "errors": [
+          {
+            "label": "Suivre la balle au lieu de lire le passeur",
+            "text": "Tu regardes la passe monter — trop tard pour bouger. Solution : œil sur les MAINS du passeur adverse, pas sur la balle. Décide ton contre AVANT la sortie."
+          },
+          {
+            "label": "Lâcher trop tôt en quick",
+            "text": "Tu décolles avant que le passeur ait engagé ses mains → tu redescends quand la balle est frappée. Solution : attendre l'engagement des mains du passeur pour sauter."
+          },
+          {
+            "label": "Ne pas se libérer après le contre",
+            "text": "Tu restes au filet alors que le central doit reculer pour l'attaque suivante. Solution : « contre → 2 pas en arrière → prêt à attaquer » comme séquence automatique."
+          },
+          {
+            "label": "Quick toujours en zone C (centre)",
+            "text": "Si tu fais toujours ton 1er tempo au centre, le central adverse t'anticipe. Solution : alterner zone A (gauche centre), C (centre), B (droite centre) — 1 sur 3 minimum hors centre."
+          }
+        ]
+      },
+      {
+        "role": "Aile (R4 / OH)",
+        "color": "P4",
+        "errors": [
+          {
+            "label": "Ne pas alterner les tirs",
+            "text": "Tu smashes toujours la même zone. Le défenseur t'anticipe. Solution : 40% diagonale + 30% ligne + 20% tip + 10% feinte = répartition idéale."
+          },
+          {
+            "label": "Course d'approche trop longue / trop loin du filet",
+            "text": "Tu arrives sous la balle, l'élan vertical est gâché. Solution : court d'approche = 2,5 à 3 m depuis le filet, dernier pas large, plant en ligne avec ton épaule frappante."
+          },
+          {
+            "label": "Lever le bras trop tard",
+            "text": "Tu armes au dernier moment → pas de puissance + contact bas. Solution : bras armé DÈS le décollage, coude haut au sommet du saut."
+          },
+          {
+            "label": "Mauvaise réception en R4 sur service court",
+            "text": "Service court derrière la 3 m, tu cours en avant en panique. Solution : position d'attente à 6 m du filet (PAS à 3 m), épaules face au serveur, freeze au contact."
+          }
+        ]
+      },
+      {
+        "role": "Libéro",
+        "color": "L",
+        "errors": [
+          {
+            "label": "Sortir de sa zone autorisée",
+            "text": "Tu attaques en suspension OU tu fais une passe à 10 doigts depuis la zone avant. Solution : libéro reste TOUJOURS en arrière de la ligne 3 m pour les passes en suspension, et ne peut PAS attaquer."
+          },
+          {
+            "label": "Geste sur la 2e touche au filet",
+            "text": "Tu fais une passe à 10 doigts depuis la zone avant — l'attaquant qui frappe au-dessus du filet est en faute. Solution : si tu passes à 10 doigts en avant, l'attaque doit être hors du filet (passe).Conséquence : nul, faute, point adverse."
+          },
+          {
+            "label": "Ne pas communiquer en réception",
+            "text": "Deux joueurs vers la même balle = collision. Le libéro a la priorité — il doit APPELER fort « libéro », « moi », « à toi » pour clarifier."
+          },
+          {
+            "label": "Manchette plate (pas d'orientation)",
+            "text": "Tu reçois mais la balle part au filet ou hors zone. Solution : orienter la plateforme vers la cible — angle des poignets contrôle la direction."
+          }
+        ]
+      }
+    ]
+  },
+  "passe": {
+    "goldenRule": {
+      "mantra": "LE BLOC ADVERSE LIT TES PIEDS — PAS TES MAINS",
+      "body": "Un passeur qui ajuste ses pieds AVANT le contact distribue à 3 options sans donner d'indice au bloc. Un passeur qui tourne le buste en l'air est lisible et bloqué."
+    },
+    "hands": {
+      "title": "Mains et triangle",
+      "intro": "La forme des mains détermine la précision. 4 points à drilller au mur avant tout entraînement collectif.",
+      "cues": [
+        {
+          "label": "Triangle",
+          "text": "Pouces et index forment une fenêtre triangulaire juste au-dessus du front. La balle entre par cette fenêtre — pas par les paumes."
+        },
+        {
+          "label": "Doigts écartés",
+          "text": "Les pads (coussinets) des 10 doigts touchent le ballon, pas la paume. Tension légère, comme si tu tenais un ballon de basket-ball."
+        },
+        {
+          "label": "Coudes ouverts",
+          "text": "Coudes vers l'extérieur et vers le haut. Si tes coudes pointent vers l'avant, ton set sera court."
+        },
+        {
+          "label": "Finition",
+          "text": "Bras tendus en finale, pouces qui pointent vers la cible. La balle quitte les mains au-dessus du front, pas devant."
+        }
+      ]
+    },
+    "footwork": {
+      "title": "Footwork — pas du passeur",
+      "intro": "Pieds tournent en premier, mains en second. Le geste idéal finit sur le pied droit (droitier) avec le poids transféré vers la cible.",
+      "steps": [
+        "Pas 1 — gauche : avance dynamique vers la zone d'arrivée prévue du ballon.",
+        "Pas 2 — droit : ajustement, le pied droit arrive sous le ballon.",
+        "Finition sur pied droit : le poids transfère du gauche au droit pendant le contact, jamais l'inverse.",
+        "Nez sous le ballon avant le contact — si tu vois ton triangle, le ballon est trop devant."
+      ]
+    },
+    "decisions": {
+      "title": "Décisions de distribution",
+      "intro": "La qualité de réception conditionne tes options. Plus la passe est précise, plus tu peux varier les tempos.",
+      "items": [
+        {
+          "label": "Passe parfaite (à 3 m du filet)",
+          "text": "3 options actives : quick (MB), 2e tempo (OH), arrière (OPP). Choisir selon le bloc adverse."
+        },
+        {
+          "label": "Passe correcte (3-5 m)",
+          "text": "2 options : OH en zone 4 (set haut) ou OPP en zone 2. Le quick n'est plus jouable."
+        },
+        {
+          "label": "Passe difficile (> 5 m ou hors zone)",
+          "text": "Set sécurité — zone 4 haut. L'objectif n'est plus de surprendre, c'est de garder l'attaque."
+        },
+        {
+          "label": "Sur réception au filet",
+          "text": "Saut-set ou bump-set (manchette). Pas de set debout — tu serais en faute de filet."
+        }
+      ]
+    }
+  },
+  "jeuCollectif": {
+    "goldenRule": {
+      "mantra": "COUVERTURE À CHAQUE ATTAQUE — SANS EXCEPTION",
+      "body": "Un attaquant qui sait que son équipe le couvre ose plus. Une équipe qui ne couvre pas perd 30% de ses attaques bloquées sur des balles récupérables."
+    },
+    "phases": {
+      "title": "Les 3 phases du jeu",
+      "intro": "Tout point passe par 1, 2 ou 3 de ces phases. Le jeu collectif consiste à les enchaîner sans temps mort, en sachant où être quand.",
+      "items": [
+        {
+          "phase": "Phase 1 — Side-out (réception)",
+          "items": [
+            "R-S-A : réception → passe → attaque, sans transition.",
+            "Couverture immédiate de l'attaquant par 3 joueurs en triangle.",
+            "Objectif : marquer ou forcer une free ball adverse."
+          ]
+        },
+        {
+          "phase": "Phase 2 — Défense / contre",
+          "items": [
+            "Bloc + arrière : 2-3 blockers + 3 défenseurs en couverture des angles.",
+            "Communication en continu : \"ligne\", \"diag\", \"tip\".",
+            "Si défense propre → enchaîner attaque rapide en transition."
+          ]
+        },
+        {
+          "phase": "Phase 3 — Transition",
+          "items": [
+            "Phase la plus difficile : tous les joueurs sont déjà mobilisés ailleurs.",
+            "Le passeur doit anticiper sa course vers le filet dès la défense.",
+            "Les attaquants reprennent leur course d'approche depuis n'importe quelle position."
+          ]
+        }
+      ]
+    },
+    "coverage": {
+      "title": "Couverture en triangle",
+      "intro": "Chaque attaque doit déclencher 3 joueurs en couverture. Le moment où le ballon est bloqué et revient dans ton camp est trop tard pour réagir.",
+      "items": [
+        {
+          "label": "Triangle de couverture",
+          "text": "3 joueurs à 2 m de l'attaquant : passeur côté ligne, libero/back-row côté diagonale, opposite (ou OH non-attaquant) derrière."
+        },
+        {
+          "label": "Distance",
+          "text": "Trop près = le ballon survole, trop loin = pas le temps de défendre. 2 m est la zone d'or."
+        },
+        {
+          "label": "Posture",
+          "text": "Bas, plateforme prête. Le ballon couvert arrive vite et bas (rebond bloc)."
+        },
+        {
+          "label": "Erreur classique",
+          "text": "Joueurs qui regardent leur attaquant frapper — ils ne sont pas prêts pour la couverture. Yeux sur le bloc adverse."
+        }
+      ]
+    },
+    "communication": {
+      "title": "Communication",
+      "intro": "Une équipe silencieuse perd des ballons sur des doubles cris (deux joueurs vont au même ballon) ou des \"abandons\" (personne n'y va). Parler n'est pas optionnel.",
+      "items": [
+        {
+          "label": "Avant le service",
+          "text": "Annonce du serveur (\"zone 1\", \"zone 5\"). Annonce des rôles défensifs (\"je libère 2\", \"tu prends ligne\")."
+        },
+        {
+          "label": "Pendant la réception",
+          "text": "\"Mine!\" / \"Yours!\" — le premier à crier prend. Pas de double cri sur la même balle."
+        },
+        {
+          "label": "Sur l'attaque adverse",
+          "text": "\"Tip!\" si feinte courte, \"Out!\" si balle sortante. Personne ne défend une out."
+        },
+        {
+          "label": "Après le point",
+          "text": "Reset rapide — 1 phrase pour corriger ou féliciter. Pas de discussion longue qui casse le tempo."
+        }
+      ]
+    }
   }
 }

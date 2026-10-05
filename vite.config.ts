@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import reactSsg from 'vite-plugin-react-ssg'
 import { SCENARIOS } from './src/scenarios/data'
 import { GUIDES } from './src/guides/data'
+import { SYSTEM_PATHS } from './src/systems/paths'
 import { POSITION_CONFIGS_BY_SIZE, SITE_URL, TEAM_SIZES } from './src/seo/constants'
 
 type Lang = 'fr' | 'en' | 'pl' | 'it' | 'es' | 'pt' | 'ja' | 'tr'
@@ -13,7 +14,6 @@ type SitemapEntry = { path: string; changefreq: string; priority: string }
 
 const STATIC_ROUTES: SitemapEntry[] = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/techniques', changefreq: 'monthly', priority: '0.8' },
   { path: '/positions', changefreq: 'monthly', priority: '0.7' },
   { path: '/scenarios', changefreq: 'monthly', priority: '0.8' },
   { path: '/guides', changefreq: 'monthly', priority: '0.8' },
@@ -50,6 +50,10 @@ function buildSitemap(): string {
   }
   for (const scenario of SCENARIOS) {
     paths.push({ path: `/scenarios/${scenario.id}`, changefreq: 'monthly', priority: '0.6' })
+  }
+
+  for (const path of SYSTEM_PATHS) {
+    paths.push({ path, changefreq: 'monthly', priority: '0.7' })
   }
 
   const urls: string[] = []

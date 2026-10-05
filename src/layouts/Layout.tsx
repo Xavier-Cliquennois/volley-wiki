@@ -157,8 +157,8 @@ export default function Layout() {
   const beachPrefix = discipline === 'beach' ? '/beach' : '';
   const NAV_LINKS = [
     { to: `/${lang}${beachPrefix}`, label: t('nav.home') },
-    { to: `/${lang}${beachPrefix}/techniques`, label: t('nav.techniques') },
     { to: `/${lang}${beachPrefix}/positions`, label: t('nav.positions') },
+    { to: `/${lang}${beachPrefix}/systems`, label: t('nav.systems') },
     { to: `/${lang}${beachPrefix}/scenarios`, label: t('nav.scenarios') },
     { to: `/${lang}${beachPrefix}/guides`, label: t('nav.guides') },
     { to: `/${lang}/rules`, label: t('nav.rules') },
@@ -172,10 +172,13 @@ export default function Layout() {
     }
   }, [location.pathname]);
 
-  // Close the mobile menu when the route changes
-  useEffect(() => {
+  // Close the mobile menu when the route changes. Done during render rather
+  // than in an effect (no extra render pass).
+  const [menuPathname, setMenuPathname] = useState(location.pathname);
+  if (menuPathname !== location.pathname) {
+    setMenuPathname(location.pathname);
     setMenuOpen(false);
-  }, [location.pathname]);
+  }
 
   // Lock body scroll while the mobile menu overlay is open
   useEffect(() => {

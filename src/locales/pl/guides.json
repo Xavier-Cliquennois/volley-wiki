@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "Nr ",
   "list": {
+    "techniques-de-base": {
+      "title": "Techniki podstawowe",
+      "subtitle": "Karty technik fundamentalnych — kluczowe punkty, błędy, filmy",
+      "category": "Technika",
+      "description": "Katalog podstawowych gestów w siatkówce: odbicie dolne, wystawienie, atak, blok, zagrywka, obrona. Karty filtrowane według kategorii i poziomu, z filmami.",
+      "readingTime": "~10 min",
+      "level": "Początkujący"
+    },
     "service": {
       "title": "Poradnik zagrywki",
       "subtitle": "Dolna, float, jump float i jump topspin",

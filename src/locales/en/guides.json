@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "N°",
   "list": {
+    "techniques-de-base": {
+      "title": "Core techniques",
+      "subtitle": "Fundamental skill cards — key points, mistakes, videos",
+      "category": "Technique",
+      "description": "Catalogue of the fundamental volleyball skills: passing, setting, spiking, blocking, serving, defense. Filterable cards by category and level, with videos.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
+    },
     "service": {
       "title": "Serving guide",
       "subtitle": "Underhand, float, jump float and jump topspin",
@@ -13,6 +21,22 @@
       "description": "The 4 serve types with biomechanics, steps, common mistakes, drills and tactical zones.",
       "readingTime": "~15 min",
       "level": "Beginner"
+    },
+    "passe-setter": {
+      "title": "Setter guide",
+      "subtitle": "Hand triangle, footwork and distribution decisions",
+      "category": "Technique",
+      "description": "Hand shape, weight transfer, reading the block and choosing distribution based on pass quality. Drills included.",
+      "readingTime": "~10 min",
+      "level": "Intermediate"
+    },
+    "jeu-collectif": {
+      "title": "Team play and transitions",
+      "subtitle": "Side-out, coverage, transitions and communication",
+      "category": "Tactics",
+      "description": "The 3 phases of play, coverage triangle, vocabulary and team drills (pepper, wash, queen of the court).",
+      "readingTime": "~10 min",
+      "level": "Intermediate"
     },
     "reception": {
       "title": "Reception guide",
@@ -45,6 +69,38 @@
       "description": "Zone responsibilities, positioning by opposing attack zone, systems and communication.",
       "readingTime": "~20 min",
       "level": "Intermediate"
+    },
+    "lecture-du-jeu": {
+      "title": "Reading the game / scouting",
+      "subtitle": "Read server, setter, hitter — and scout the opponent",
+      "category": "Tactics",
+      "description": "Elite eye sequence, cues at serve / pass / attack, IF/THEN framework, pre-match scouting and drills.",
+      "readingTime": "~20 min",
+      "level": "Intermediate"
+    },
+    "indoor-vs-beach": {
+      "title": "Indoor ↔ Beach",
+      "subtitle": "Differences, technical and tactical adaptations between the two disciplines",
+      "category": "Tactics",
+      "description": "Comparison table of rules, skill-by-skill adaptations, physical preparation, when to switch, common pitfalls and drills.",
+      "readingTime": "~15 min",
+      "level": "Intermediate"
+    },
+    "signaux-arbitre": {
+      "title": "Referee signals",
+      "subtitle": "The 15 FIVB hand signals to understand on-court decisions",
+      "category": "Technique",
+      "description": "Pictograms + descriptions of the 15 most common signals: point, ball in/out, net touch, double, ball held, rotation, back-row attack, etc.",
+      "readingTime": "~5 min",
+      "level": "Beginner"
+    },
+    "erreurs-typiques": {
+      "title": "Common mistakes by position",
+      "subtitle": "The 4 most frequent traps for each role — and how to fix them",
+      "category": "Technique",
+      "description": "Setter, opposite, middle, outside, libero: 4 recurring mistakes per role with the corrective drill.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
     }
   },
   "detail": {

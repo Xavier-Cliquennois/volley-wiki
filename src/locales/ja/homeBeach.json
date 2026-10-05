@@ -13,7 +13,7 @@
       "label": "01",
       "title": "テクニック",
       "desc": "ポーク、コブラ、トマホーク、スカイボール、ビーチディグ — ビーチを象徴する技。",
-      "to": "/beach/techniques",
+      "to": "/beach/guides/techniques-beach",
       "accent": "var(--orange)"
     },
     {

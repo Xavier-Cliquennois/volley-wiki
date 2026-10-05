@@ -11,6 +11,14 @@
     "notFound": "Guide not found."
   },
   "list": {
+    "techniques-beach": {
+      "title": "Beach techniques",
+      "subtitle": "Beach skill cards — poke, cobra, tomahawk, skyball",
+      "category": "Technique",
+      "description": "Catalogue of beach volleyball signature skills: poke, cobra, cut, line, tomahawk, sky-ball, signals. Filterable cards by category and level, with videos.",
+      "readingTime": "~10 min",
+      "level": "Beginner"
+    },
     "debutant": {
       "title": "Absolute beginner's guide",
       "subtitle": "First reflexes: bump, communication, hydration",

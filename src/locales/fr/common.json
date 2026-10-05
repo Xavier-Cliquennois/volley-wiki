@@ -5,6 +5,7 @@
     "home": "Accueil",
     "techniques": "Techniques",
     "positions": "Positions",
+    "systems": "Systèmes",
     "scenarios": "Scénarios",
     "guides": "Guides",
     "rules": "Règles",
@@ -29,7 +30,9 @@
     "readGuide": "LIRE LE GUIDE →",
     "showAll": "TOUT AFFICHER",
     "reset": "RÉINITIALISER",
-    "loading": "CHARGEMENT…"
+    "loading": "CHARGEMENT…",
+    "viewSystem": "VOIR LE SYSTÈME →",
+    "viewPositions": "VOIR LES POSTES →"
   },
   "labels": {
     "documentation": "★ DOCUMENTATION",
@@ -54,6 +57,89 @@
     "ourSide": "Notre camp",
     "opponentSide": "Côté adverse"
   },
+  "userLevel": {
+    "switcherLabel": "Niveau d'expérience",
+    "beginnerShort": "Débutant",
+    "intermediateShort": "Inter.",
+    "advancedShort": "Avancé",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "panelKicker": "★ NIVEAU DE DÉTAIL",
+    "panelTagline": "Adapte la profondeur du contenu à ton expérience.",
+    "hiddenContent_one": "{{count}} section cachée — passe en mode {{level}} pour la voir.",
+    "hiddenContent_other": "{{count}} sections cachées — passe en mode {{level}} pour les voir."
+  },
+  "systems": {
+    "kicker": "SYSTÈMES DE JEU",
+    "hubTitle": "Systèmes de jeu",
+    "hubDescription": "Le 5-1, le 6-2 et le 4-2 : trois manières d'organiser une équipe de 6. Rotations, distribution, équilibre offensif et défensif.",
+    "hubTitleBeach": "Systèmes — Beach 2v2",
+    "hubDescriptionBeach": "Comment 2 joueurs partagent un terrain de beach volley : réception, rôles dynamiques (blocker/defender), switch et signaux.",
+    "philosophy": "Philosophie",
+    "pros": "★ AVANTAGES",
+    "cons": "★ INCONVÉNIENTS",
+    "rotationsTitle": "Les 6 rotations",
+    "rotationLabel": "Rotation {{id}}",
+    "setterAt": {
+      "front": "Passeur au filet",
+      "back": "Pénétration arrière"
+    },
+    "attackOptions": "Options offensives",
+    "attackerLabel": "Attaquant : {{role}}",
+    "tempoLabel": "Tempo {{tempo}}",
+    "risk": {
+      "low": "FAIBLE",
+      "medium": "MOYEN",
+      "high": "ÉLEVÉ"
+    },
+    "showDetails_one": "Voir le détail ({{count}})",
+    "showDetails_other": "Voir tous les détails ({{count}})",
+    "hideDetails": "Masquer les détails",
+    "setterFocus": {
+      "label": "Mettre en avant :",
+      "none": "Les deux",
+      "s": "Passeur 1 (S)",
+      "s2": "Passeur 2 (S2)"
+    },
+    "toggleMovements": "Voir tous les mouvements",
+    "viewScenarios_one": "→ {{count}} scénario lié",
+    "viewScenarios_other": "→ {{count}} scénarios liés",
+    "legend": {
+      "tempo1": "1er tempo (quick)",
+      "tempo2": "2e tempo / arrière",
+      "movement": "Mouvement joueur",
+      "setter": "Pénétration du passeur",
+      "reception": "Réception en W",
+      "approach": "Prise d'élan des attaquants",
+      "coverage": "Couverture (attaque à gauche)",
+      "isolate": "Cliquer pour isoler ce mouvement"
+    },
+    "backToHub": "Retour aux systèmes",
+    "comingSoon": "Bientôt disponible",
+    "formationTitle": "Formation",
+    "sizeFilter": {
+      "label": "Taille d’équipe",
+      "all": "Toutes"
+    },
+    "group": {
+      "6v6": "Indoor — 6 contre 6",
+      "5v5": "Indoor — 5 contre 5",
+      "4v4": "Indoor — 4 contre 4",
+      "beach": "Beach 2 contre 2"
+    },
+    "title": {
+      "5-1": "Système 5-1",
+      "6-2": "Système 6-2",
+      "4-2": "Système 4-2",
+      "5v5-5-1": "5v5 — 5-1",
+      "5v5-4-2": "5v5 — 4-2",
+      "4v4-diamant": "4v4 — Diamant",
+      "4v4-box": "4v4 — Box",
+      "4v4-ligne": "4v4 — Ligne 3-1",
+      "beach-classic": "Beach — Système classique"
+    }
+  },
   "discipline": {
     "indoor": "Indoor",
     "beach": "Beach",
@@ -72,6 +158,45 @@
       "indoor": "Indoor",
       "beach": "Beach",
       "both": "Communs"
+    }
+  },
+  "quiz": {
+    "kicker": "★ TESTE-TOI",
+    "badge": "QUIZ",
+    "start": "COMMENCER LE QUIZ →",
+    "questionCount": "{{count}} questions",
+    "progress": "QUESTION {{index}} / {{total}}",
+    "score": "SCORE : {{score}}",
+    "noQuestions": "Aucune question disponible dans ce quiz.",
+    "correct": "✓ BIEN VU",
+    "incorrect": "✗ PAS TOUT À FAIT",
+    "next": "QUESTION SUIVANTE →",
+    "seeResult": "VOIR LE RÉSULTAT →",
+    "flawless": "★ SANS FAUTE",
+    "result": "★ RÉSULTAT",
+    "newBest": "★ NOUVEAU MEILLEUR SCORE ({{previous}} → {{score}})",
+    "replay": "REJOUER →",
+    "close": "← FERMER LE QUIZ",
+    "verdict": {
+      "perfect": "Maîtrise totale",
+      "high": "Bien dominé",
+      "good": "Bon départ — revois les justifications",
+      "mid": "Encore du chemin — relis les guides liés",
+      "low": "À retravailler avec les guides"
+    },
+    "level": {
+      "Débutant": "Débutant",
+      "Intermédiaire": "Intermédiaire",
+      "Avancé": "Avancé"
+    },
+    "rotationOption": "Rotation {{id}}",
+    "zoneOption": "Zone {{id}}",
+    "rotationNotFound": "Rotation introuvable ({{system}} / {{rotation}}).",
+    "placementHint": "★ Les pastilles « ? » sont les zones candidates. Quelle est la bonne ?",
+    "receptionQuality": {
+      "perfect": "Réception parfaite",
+      "medium": "Réception moyenne",
+      "poor": "Réception dégradée"
     }
   }
 }

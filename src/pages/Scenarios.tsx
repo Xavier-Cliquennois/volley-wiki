@@ -1,12 +1,22 @@
-import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Suspense, lazy, useMemo, useState } from 'react';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { SCENARIOS, getScenarioById } from '../scenarios/data';
-import type { PhaseKind, TeamSize } from '../scenarios/types';
+import type { PhaseKind, ScenarioRotationTag, ScenarioSystemTag, TeamSize } from '../scenarios/types';
 import { Head } from '../seo/Head';
 import { buildBreadcrumb, buildHowTo } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
 import { useLocalizedScenario, useLocalizedScenarios } from '../i18n/localizeScenario';
+
+const SYSTEM_TAGS: readonly ScenarioSystemTag[] = ['5-1', '6-2', '4-2'];
+const ROTATION_TAGS: readonly ScenarioRotationTag[] = ['R1', 'R2', 'R3', 'R4', 'R5', 'R6'];
+
+function isSystemTag(value: string | null): value is ScenarioSystemTag {
+  return value !== null && (SYSTEM_TAGS as readonly string[]).includes(value);
+}
+function isRotationTag(value: string | null): value is ScenarioRotationTag {
+  return value !== null && (ROTATION_TAGS as readonly string[]).includes(value);
+}
 
 const ScenarioPlayer = lazy(() => import('../scenarios/ScenarioPlayer'));
 
@@ -32,25 +42,49 @@ export default function Scenarios() {
   const rawScenario = routeId ? getScenarioById(routeId) : undefined;
   const launchedScenario = useLocalizedScenario(rawScenario);
   const launched = !!launchedScenario;
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const [teamSize, setTeamSize] = useState<TeamSize | null>(launchedScenario?.config.teamSize ?? null);
+  // Optional URL filters: ?system=5-1&rotation=R1 narrows the wizard's
+  // scenario list to just the ones tagged with that tactical context.
+  const systemFilter = isSystemTag(searchParams.get('system')) ? (searchParams.get('system') as ScenarioSystemTag) : null;
+  const rotationFilter = isRotationTag(searchParams.get('rotation')) ? (searchParams.get('rotation') as ScenarioRotationTag) : null;
+
+  const [teamSize, setTeamSize] = useState<TeamSize | null>(launchedScenario?.config.teamSize ?? (systemFilter ? 6 : null));
   const [phase, setPhase] = useState<PhaseKind | null>(launchedScenario?.config.phase ?? null);
   const [contextChoice, setContextChoice] = useState<string | null>(launchedScenario?.id ?? null);
 
-  useEffect(() => {
+  // Sync the wizard with the launched scenario whenever its id changes.
+  // Done during render rather than in an effect (no extra render pass).
+  const launchedId = launchedScenario?.id;
+  const [syncedLaunchedId, setSyncedLaunchedId] = useState(launchedId);
+  if (syncedLaunchedId !== launchedId) {
+    setSyncedLaunchedId(launchedId);
     if (launchedScenario) {
       setTeamSize(launchedScenario.config.teamSize);
       setPhase(launchedScenario.config.phase);
       setContextChoice(launchedScenario.id);
     }
-  }, [launchedScenario?.id]);
+  }
 
   const localizedScenarios = useLocalizedScenarios(SCENARIOS);
 
   const matchingScenarios = useMemo(() => {
     if (!teamSize || !phase) return [];
-    return localizedScenarios.filter(s => s.config.teamSize === teamSize && s.config.phase === phase);
-  }, [teamSize, phase, localizedScenarios]);
+    return localizedScenarios.filter(s => {
+      if (s.config.teamSize !== teamSize) return false;
+      if (s.config.phase !== phase) return false;
+      if (systemFilter && s.config.system !== systemFilter) return false;
+      if (rotationFilter && s.config.rotation !== rotationFilter) return false;
+      return true;
+    });
+  }, [teamSize, phase, localizedScenarios, systemFilter, rotationFilter]);
+
+  const clearTacticalFilter = () => {
+    const next = new URLSearchParams(searchParams);
+    next.delete('system');
+    next.delete('rotation');
+    setSearchParams(next, { replace: true });
+  };
 
   const reset = () => {
     setTeamSize(null);
@@ -152,28 +186,48 @@ export default function Scenarios() {
         </p>
       </div>
 
-      <div
-        role="status"
-        style={{
-          border: '3px solid var(--ink)',
-          background: 'var(--yellow)',
-          boxShadow: 'var(--shadow-sm)',
-          padding: '14px 18px',
-          display: 'flex',
-          alignItems: 'flex-start',
-          gap: 14,
-        }}
-      >
-        <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>🚧</span>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <div style={{ fontFamily: '"Bungee", sans-serif', fontSize: 12, letterSpacing: '0.08em' }}>
-            {t('construction.label')}
-          </div>
-          <p style={{ margin: 0, fontFamily: '"DM Mono", monospace', fontSize: 12, lineHeight: 1.5 }}>
-            {t('construction.body')}
-          </p>
+      {(systemFilter || rotationFilter) && (
+        <div
+          role="status"
+          style={{
+            border: '3px solid var(--ink)',
+            background: 'var(--teal)',
+            color: 'var(--cream)',
+            boxShadow: 'var(--shadow-sm)',
+            padding: '12px 16px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: 12,
+          }}
+        >
+          <span style={{ fontFamily: '"Bungee", sans-serif', fontSize: 11, letterSpacing: '0.08em' }}>
+            ★ {t('filters.tacticalKicker', { defaultValue: 'FILTRE TACTIQUE' })}
+          </span>
+          <span style={{ fontFamily: '"DM Mono", monospace', fontSize: 12 }}>
+            {systemFilter && <strong>{systemFilter}</strong>}
+            {systemFilter && rotationFilter && ' · '}
+            {rotationFilter && <strong>{rotationFilter}</strong>}
+          </span>
+          <button
+            type="button"
+            onClick={clearTacticalFilter}
+            style={{
+              marginLeft: 'auto',
+              border: '2px solid var(--cream)',
+              background: 'transparent',
+              color: 'var(--cream)',
+              padding: '4px 12px',
+              fontFamily: '"Bungee", sans-serif',
+              fontSize: 10,
+              letterSpacing: '0.08em',
+              cursor: 'pointer',
+            }}
+          >
+            {t('filters.clear', { defaultValue: 'EFFACER ✕' })}
+          </button>
         </div>
-      </div>
+      )}
 
       {!launched && (
         <div style={{ border: '3px solid var(--ink)', boxShadow: 'var(--shadow)', background: 'var(--cream)', padding: 24 }}>

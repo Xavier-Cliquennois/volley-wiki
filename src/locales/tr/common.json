@@ -5,6 +5,7 @@
     "home": "Ana Sayfa",
     "techniques": "Teknikler",
     "positions": "Pozisyonlar",
+    "systems": "Sistemler",
     "scenarios": "Senaryolar",
     "guides": "Rehberler",
     "rules": "Kurallar",
@@ -53,6 +54,17 @@
     "backOfCourt": "SAHA ARKASI",
     "ourSide": "Bizim taraf",
     "opponentSide": "Rakip taraf"
+  },
+  "userLevel": {
+    "switcherLabel": "Deneyim seviyesi",
+    "beginnerShort": "Başlangıç",
+    "intermediateShort": "Orta",
+    "advancedShort": "İleri",
+    "beginner": "Başlangıç",
+    "intermediate": "Orta",
+    "advanced": "İleri",
+    "hiddenContent_one": "{{count}} bölüm gizli — görmek için {{level}} moduna geç.",
+    "hiddenContent_other": "{{count}} bölüm gizli — görmek için {{level}} moduna geç."
   },
   "discipline": {
     "indoor": "Salon",

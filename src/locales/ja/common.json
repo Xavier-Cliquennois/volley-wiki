@@ -5,6 +5,7 @@
     "home": "ホーム",
     "techniques": "技術",
     "positions": "ポジション",
+    "systems": "システム",
     "scenarios": "シナリオ",
     "guides": "ガイド",
     "rules": "ルール",
@@ -53,6 +54,17 @@
     "backOfCourt": "コート後方",
     "ourSide": "自陣側",
     "opponentSide": "相手側"
+  },
+  "userLevel": {
+    "switcherLabel": "経験レベル",
+    "beginnerShort": "初級",
+    "intermediateShort": "中級",
+    "advancedShort": "上級",
+    "beginner": "初級",
+    "intermediate": "中級",
+    "advanced": "上級",
+    "hiddenContent_one": "{{count}} 個のセクションが非表示です — {{level}} モードに切り替えて表示してください。",
+    "hiddenContent_other": "{{count}} 個のセクションが非表示です — {{level}} モードに切り替えて表示してください。"
   },
   "discipline": {
     "indoor": "インドア",

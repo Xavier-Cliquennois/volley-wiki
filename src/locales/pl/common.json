@@ -5,6 +5,7 @@
     "home": "Strona główna",
     "techniques": "Techniki",
     "positions": "Pozycje",
+    "systems": "Systemy",
     "scenarios": "Scenariusze",
     "guides": "Poradniki",
     "rules": "Przepisy",
@@ -53,6 +54,19 @@
     "backOfCourt": "TYŁ BOISKA",
     "ourSide": "Nasza strona",
     "opponentSide": "Strona przeciwnika"
+  },
+  "userLevel": {
+    "switcherLabel": "Poziom doświadczenia",
+    "beginnerShort": "Początk.",
+    "intermediateShort": "Średni",
+    "advancedShort": "Zaawan.",
+    "beginner": "Początkujący",
+    "intermediate": "Średniozaawansowany",
+    "advanced": "Zaawansowany",
+    "hiddenContent_one": "{{count}} sekcja ukryta — przełącz na tryb {{level}}, aby ją zobaczyć.",
+    "hiddenContent_few": "{{count}} sekcje ukryte — przełącz na tryb {{level}}, aby je zobaczyć.",
+    "hiddenContent_many": "{{count}} sekcji ukrytych — przełącz na tryb {{level}}, aby je zobaczyć.",
+    "hiddenContent_other": "{{count}} sekcji ukrytych — przełącz na tryb {{level}}, aby je zobaczyć."
   },
   "discipline": {
     "indoor": "Hala",

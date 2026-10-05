@@ -5,6 +5,7 @@
     "home": "Home",
     "techniques": "Techniques",
     "positions": "Positions",
+    "systems": "Systems",
     "scenarios": "Scenarios",
     "guides": "Guides",
     "rules": "Rules",
@@ -29,7 +30,9 @@
     "readGuide": "READ THE GUIDE →",
     "showAll": "SHOW ALL",
     "reset": "RESET",
-    "loading": "LOADING…"
+    "loading": "LOADING…",
+    "viewSystem": "VIEW TEAM SYSTEM →",
+    "viewPositions": "VIEW POSITIONS →"
   },
   "labels": {
     "documentation": "★ DOCUMENTATION",
@@ -54,6 +57,89 @@
     "ourSide": "Our side",
     "opponentSide": "Opponent side"
   },
+  "userLevel": {
+    "switcherLabel": "Experience level",
+    "beginnerShort": "Beginner",
+    "intermediateShort": "Inter.",
+    "advancedShort": "Advanced",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "panelKicker": "★ DETAIL LEVEL",
+    "panelTagline": "Match the content depth to your experience.",
+    "hiddenContent_one": "{{count}} section hidden — switch to {{level}} mode to see it.",
+    "hiddenContent_other": "{{count}} sections hidden — switch to {{level}} mode to see them."
+  },
+  "systems": {
+    "kicker": "TEAM SYSTEMS",
+    "hubTitle": "Team systems",
+    "hubDescription": "5-1, 6-2 and 4-2: three ways to organize a 6-player team. Rotations, distribution, offensive and defensive balance.",
+    "hubTitleBeach": "Systems — Beach 2v2",
+    "hubDescriptionBeach": "How 2 players share a beach volleyball court: reception, dynamic roles (blocker/defender), switch and signals.",
+    "philosophy": "Philosophy",
+    "pros": "★ PROS",
+    "cons": "★ CONS",
+    "rotationsTitle": "The 6 rotations",
+    "rotationLabel": "Rotation {{id}}",
+    "setterAt": {
+      "front": "Setter at the net",
+      "back": "Back-row penetration"
+    },
+    "attackOptions": "Attack options",
+    "attackerLabel": "Attacker: {{role}}",
+    "tempoLabel": "Tempo {{tempo}}",
+    "risk": {
+      "low": "LOW",
+      "medium": "MED",
+      "high": "HIGH"
+    },
+    "showDetails_one": "Show detail ({{count}})",
+    "showDetails_other": "Show all details ({{count}})",
+    "hideDetails": "Hide details",
+    "setterFocus": {
+      "label": "Highlight:",
+      "none": "Both",
+      "s": "Setter 1 (S)",
+      "s2": "Setter 2 (S2)"
+    },
+    "toggleMovements": "Show all movements",
+    "viewScenarios_one": "→ {{count}} linked scenario",
+    "viewScenarios_other": "→ {{count}} linked scenarios",
+    "legend": {
+      "tempo1": "1st tempo (quick)",
+      "tempo2": "2nd tempo / back-row",
+      "movement": "Player movement",
+      "setter": "Setter penetration",
+      "reception": "W reception",
+      "approach": "Attackers back off to approach",
+      "coverage": "Coverage (left-side attack)",
+      "isolate": "Click to isolate this movement"
+    },
+    "backToHub": "Back to systems",
+    "comingSoon": "Coming soon",
+    "formationTitle": "Formation",
+    "sizeFilter": {
+      "label": "Team size",
+      "all": "All"
+    },
+    "group": {
+      "6v6": "Indoor — 6 vs 6",
+      "5v5": "Indoor — 5 vs 5",
+      "4v4": "Indoor — 4 vs 4",
+      "beach": "Beach 2 vs 2"
+    },
+    "title": {
+      "5-1": "5-1 System",
+      "6-2": "6-2 System",
+      "4-2": "4-2 System",
+      "5v5-5-1": "5v5 — 5-1",
+      "5v5-4-2": "5v5 — 4-2",
+      "4v4-diamant": "4v4 — Diamond",
+      "4v4-box": "4v4 — Box",
+      "4v4-ligne": "4v4 — Line 3-1",
+      "beach-classic": "Beach — Classic system"
+    }
+  },
   "discipline": {
     "indoor": "Indoor",
     "beach": "Beach",
@@ -72,6 +158,45 @@
       "indoor": "Indoor",
       "beach": "Beach",
       "both": "Shared"
+    }
+  },
+  "quiz": {
+    "kicker": "★ TEST YOURSELF",
+    "badge": "QUIZ",
+    "start": "START THE QUIZ →",
+    "questionCount": "{{count}} questions",
+    "progress": "QUESTION {{index}} / {{total}}",
+    "score": "SCORE: {{score}}",
+    "noQuestions": "No questions available in this quiz.",
+    "correct": "✓ WELL SPOTTED",
+    "incorrect": "✗ NOT QUITE",
+    "next": "NEXT QUESTION →",
+    "seeResult": "SEE THE RESULT →",
+    "flawless": "★ FLAWLESS",
+    "result": "★ RESULT",
+    "newBest": "★ NEW BEST SCORE ({{previous}} → {{score}})",
+    "replay": "PLAY AGAIN →",
+    "close": "← CLOSE THE QUIZ",
+    "verdict": {
+      "perfect": "Total mastery",
+      "high": "Well done",
+      "good": "Good start — review the explanations",
+      "mid": "Still some way to go — reread the linked guides",
+      "low": "Needs more work with the guides"
+    },
+    "level": {
+      "Débutant": "Beginner",
+      "Intermédiaire": "Intermediate",
+      "Avancé": "Advanced"
+    },
+    "rotationOption": "Rotation {{id}}",
+    "zoneOption": "Zone {{id}}",
+    "rotationNotFound": "Rotation not found ({{system}} / {{rotation}}).",
+    "placementHint": "★ The \"?\" markers are the candidate zones. Which one is right?",
+    "receptionQuality": {
+      "perfect": "Perfect reception",
+      "medium": "Average reception",
+      "poor": "Poor reception"
     }
   }
 }

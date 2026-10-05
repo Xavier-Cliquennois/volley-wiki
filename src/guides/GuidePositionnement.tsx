@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Court, type CourtLayout } from '../components/court';
 import type { RoleColorKey } from '../constants/positions';
-import { CONFIGURATIONS, type TeamSize } from '../pages/Positions';
+import { CONFIGURATIONS, type TeamSize } from '../positions/configurations';
 import { S } from './styles';
 import { TEAM_SIZES, type TeamSizeSlug } from '../seo/constants';
 import { useCurrentLang } from '../i18n/paths';
+import DrillList from '../drills/DrillList';
 
 const SLUG_TO_SIZE: Record<TeamSizeSlug, TeamSize> = { '4v4': 4, '5v5': 5, '6v6': 6 };
 const SIZE_TO_SLUG: Record<TeamSize, TeamSizeSlug> = { 4: '4v4', 5: '5v5', 6: '6v6' };
@@ -561,6 +562,7 @@ type GuidePositionnementProps = {
 
 export default function GuidePositionnement({ teamSize: teamSizeProp, configId: configIdProp }: GuidePositionnementProps = {}) {
   const { t } = useTranslation('guideContent');
+  const { t: tD } = useTranslation('drills');
   const lang = useCurrentLang();
   const teamSize: TeamSize = teamSizeProp ?? 6;
   const configurations = CONFIGURATIONS[teamSize];
@@ -1092,6 +1094,12 @@ export default function GuidePositionnement({ teamSize: teamSizeProp, configId: 
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Drills */}
+      <section>
+        <h2 style={S.section}>{tD('sectionTitle', { skill: tD('skills.defense') })}</h2>
+        <DrillList skill="defense" />
       </section>
 
       {/* Conclusion */}

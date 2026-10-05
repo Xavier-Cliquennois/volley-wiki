@@ -8,7 +8,7 @@ import type {
 import type { EditorState, EditorStep, PoseName } from './types';
 import { TEMPO_DURATIONS } from './types';
 import { expandBrick, BRICK_BY_KIND } from './bricks';
-import { DEFAULT_JUMP } from './bricks/expand';
+import { DEFAULT_JUMP, HAND_REACH } from './bricks/expand';
 import type {
   BrickAction,
   ExpandContext,
@@ -17,6 +17,24 @@ import { SYNC_RADIUS, type JumpingBrick } from './smashSync';
 
 const EPSILON = 0.001;
 const CONTACT_DURATION = 0.2;
+
+// A jumping brick splits the ball flight when the ball leaves its hand for a
+// spot at least this far away (a spike into the block one metre away is a
+// real second flight, a ball merely drifting onto the hand is not).
+const SPLIT_MIN_TRAVEL = 0.6;
+// How far above the striking hand a set climbs before coming down onto it.
+const SET_LIFT = 0.8;
+// A grounded player holds the ball between these heights (hands at the hips
+// up to hands above the head); lower, the ball lies on the floor.
+const HOLD_MIN_HEIGHT = 0.6;
+const HOLD_MAX_HEIGHT = 2.2;
+// Horizontal distance under which a grounded player is considered to hold the ball.
+const HOLD_RADIUS = 0.8;
+// Below this height a ball is resting on (or rolling over) the floor.
+const AIRBORNE_MIN_HEIGHT = 0.5;
+// Centre height of a ball lying on the floor (BallWithTrail radius).
+const BALL_REST_Y = 0.22;
+const GRAVITY = 9.81;
 
 // Bricks for which auto-snap on ball arrival makes sense.
 const SNAPPING_BRICKS = new Set<BrickAction['kind']>([
@@ -35,7 +53,7 @@ const JUMPING_BRICKS = new Set<BrickAction['kind']>([
 // Poses that represent a moment of contact with the ball — fired right when the
 // ball arrives on the player. READY/RESET are static stances that interpolate
 // during the transition. Exported so decompile.ts uses the same definition.
-export const CONTACT_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE']);
+export const CONTACT_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'BLOCK']);
 
 function positionsEqual(a: [number, number, number], b: [number, number, number]): boolean {
   return (
@@ -59,6 +77,7 @@ function positionsEqual(a: [number, number, number], b: [number, number, number]
 export function compileScenario(state: EditorState): Scenario {
   const timeline: TimelineAction[] = [];
   const steps: ScenarioStep[] = [];
+  const flights: BallFlight[] = [];
 
   if (state.steps.length === 0) {
     return buildEmpty(state);
@@ -144,6 +163,8 @@ export function compileScenario(state: EditorState): Scenario {
     // ball_move, primary === sole action.
     let primaryBallAction: BallMoveAction | null = null;
     let contactArrivalTime: number | undefined;
+    // Second half of a split flight: the spike leaving the hitter's hand.
+    let spike: BallMoveAction | null = null;
 
     if (ballMoved) {
       // We only split the ball_move into two segments when the ball clearly
@@ -160,18 +181,38 @@ export function compileScenario(state: EditorState): Scenario {
         ? curr.snapshot.ballPosition[2] - interceptor.impact[2]
         : 0;
       const ballFliesPastImpact = interceptor
-        ? Math.hypot(dxImpact, dzImpact) > SYNC_RADIUS
+        ? Math.hypot(dxImpact, dzImpact) > SPLIT_MIN_TRAVEL
         : false;
 
       if (interceptor && interceptor.contactAtRatio !== undefined && ballFliesPastImpact) {
         const segments = buildSplitBallMove(prev, curr, transitionStart, transitionDuration, interceptor);
         timeline.push(...segments);
+        flights.push({ action: segments[0], arrivalStep: curr, isApproach: true });
+        flights.push({ action: segments[1], arrivalStep: curr, isApproach: false });
+        spike = segments[1];
         primaryBallAction = segments[0];
         contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
       } else {
         primaryBallAction = buildBallMove(prev, curr, transitionStart, transitionDuration);
         timeline.push(primaryBallAction);
+        flights.push({ action: primaryBallAction, arrivalStep: curr, isApproach: false });
         contactArrivalTime = primaryBallAction.time + primaryBallAction.duration;
+      }
+    } else {
+      // A ball held by a player who walks away goes with him instead of
+      // staying in the air where he left it.
+      const carriedTo = carriedBallTarget(prev, curr, playersOwnedByBricks);
+      if (carriedTo) {
+        timeline.push({
+          type: 'ball_move',
+          time: transitionStart,
+          from: prev.snapshot.ballPosition,
+          to: carriedTo,
+          duration: transitionDuration,
+          arc: false,
+          curve: 'flat',
+          carried: true,
+        });
       }
     }
 
@@ -182,14 +223,19 @@ export function compileScenario(state: EditorState): Scenario {
     if (curr.actions?.length) {
       for (const brick of curr.actions) {
         const startPos = prev.snapshot.positions[brick.playerId] ?? [0, 0, 0];
-        const snapTime = shouldSnap(brick, primaryBallAction, prev.snapshot.ballPosition)
-          ? contactArrivalTime
-          : undefined;
+        // Blockers facing a spike peak when the ball passes them, not when
+        // the hitter strikes it.
+        const snapTime = brick.kind === 'BLOC' && spike && brick !== interceptor
+          ? passingTime(spike, brick.impact)
+          : contactTimeFor(
+            brick, primaryBallAction, prev.snapshot.ballPosition, transitionStart, contactArrivalTime,
+          );
         const ctx: ExpandContext = {
           windowStart: transitionStart,
           windowDuration: transitionDuration,
           startPos,
           ballArrivalTime: snapTime,
+          endPos: curr.snapshot.positions[brick.playerId],
         };
         timeline.push(...expandBrick(brick, ctx));
       }
@@ -221,6 +267,8 @@ export function compileScenario(state: EditorState): Scenario {
     cumulativeTime = arrivalTime;
   }
 
+  settleAirborneBall(timeline, flights, roundTime(cumulativeTime));
+
   const players: ScenarioPlayerConfig[] = state.players.map(p => ({
     id: p.id,
     label: p.label,
@@ -237,6 +285,8 @@ export function compileScenario(state: EditorState): Scenario {
       teamSize: state.metadata.teamSize,
       phase: state.metadata.phase,
       contextLabel: state.metadata.contextLabel,
+      ...(state.metadata.system && { system: state.metadata.system }),
+      ...(state.metadata.rotation && { rotation: state.metadata.rotation }),
     },
     defaultCamera: state.metadata.defaultCamera,
     players,
@@ -291,41 +341,38 @@ function buildBallMove(
   };
 }
 
-// Decide if a brick should auto-snap onto the ball arrival in its window.
-// Only snap if (a) the brick is a contact-flavoured one, and (b) the ball
-// actually meets the brick's impact spot at some point during its flight.
+// Decide when a contact brick touches the ball in its window, or undefined
+// when the ball never comes near the brick's impact spot.
 //
-// For jumping bricks (smash, feinte, jump_serve, bloc), the ball is intercepted
-// MID-FLIGHT — so the right proximity check is against the ball's ORIGIN (where
-// it comes from in this step). For ground bricks (manchette, set, etc.), the
-// ball lands on the player so we check against the destination as before.
-function shouldSnap(
+// Jumping bricks (smash, feinte, jump_serve, bloc) intercept the ball
+// MID-FLIGHT: they snap onto the contact arrival whether the ball comes from
+// the impact area or lands on it.
+//
+// Ground bricks (manchette, set, etc.) touch the ball either when it lands on
+// the player (destination near the impact) or when it leaves the player
+// (origin near the impact: the step shows the ball flying away after a dig or
+// a set). In the second case the contact happens at the very start of the
+// window; firing it at the arrival would show the gesture once the ball is
+// already far away.
+function contactTimeFor(
   brick: BrickAction,
   ballAction: BallMoveAction | null,
   prevBallPos: [number, number, number],
-): boolean {
-  if (!ballAction) return false;
-  if (!SNAPPING_BRICKS.has(brick.kind)) return false;
+  transitionStart: number,
+  contactArrivalTime: number | undefined,
+): number | undefined {
+  if (!ballAction) return undefined;
+  if (!SNAPPING_BRICKS.has(brick.kind)) return undefined;
   // Movement-only bricks (no `impact`) won't pass the type narrowing; guard.
-  if (!('impact' in brick)) return false;
+  if (!('impact' in brick)) return undefined;
 
-  const isJumping = JUMPING_BRICKS.has(brick.kind);
-  // When the ball_move was split, ballAction.to IS the contact point — so
-  // checking against ballAction.to works for both jumping and ground bricks.
-  // For unsplit jumping bricks, we fall back to the previous position (where
-  // the ball is "coming from") since the impact happens mid-flight.
-  const refX = isJumping ? prevBallPos[0] : ballAction.to[0];
-  const refZ = isJumping ? prevBallPos[2] : ballAction.to[2];
-  // For ground bricks, prefer the destination point (where it lands).
-  const destX = ballAction.to[0];
-  const destZ = ballAction.to[2];
+  // When the ball_move was split, ballAction.to IS the contact point.
+  const distFromOrigin = Math.hypot(prevBallPos[0] - brick.impact[0], prevBallPos[2] - brick.impact[2]);
+  const distFromDest = Math.hypot(ballAction.to[0] - brick.impact[0], ballAction.to[2] - brick.impact[2]);
+  if (Math.min(distFromOrigin, distFromDest) >= SYNC_RADIUS) return undefined;
 
-  const distFromOrigin = Math.hypot(refX - brick.impact[0], refZ - brick.impact[2]);
-  const distFromDest = Math.hypot(destX - brick.impact[0], destZ - brick.impact[2]);
-
-  // Either origin OR destination near the impact triggers the snap — covers
-  // both "ball is here at start of step" (jumping) and "ball lands here" (ground).
-  return Math.min(distFromOrigin, distFromDest) < SYNC_RADIUS;
+  if (JUMPING_BRICKS.has(brick.kind)) return contactArrivalTime;
+  return distFromOrigin < distFromDest ? transitionStart : contactArrivalTime;
 }
 
 // Find a jumping brick that intercepts the ball mid-flight in this step.
@@ -390,39 +437,183 @@ function buildSplitBallMove(
     seg2Dur = transitionDuration - seg1Dur;
   }
 
-  // Contact point in 3D: XZ from the brick's impact, Y slightly above the
-  // jump apex so the ball is at the player's striking hand height.
+  // Contact point in 3D: XZ from the brick's impact, Y at the raised hand of
+  // the player at the top of the jump.
   const jumpHeight = brick.jumpHeight ?? defaultJumpHeightFor(brick.kind);
-  const contactY = Math.max(jumpHeight + 0.5, 2.4);
+  const contactY = jumpHeight + HAND_REACH;
   const contact: [number, number, number] = [brick.impact[0], contactY, brick.impact[2]];
 
+  // Approach arc: a set climbs above the striking hand and comes down onto it.
+  // When the ball already hangs next to the hand (the pass step left it
+  // there), it only drifts onto the contact point.
+  const approachDist = Math.hypot(contact[0] - from[0], contact[2] - from[2]);
+  const approachApex = approachDist < SYNC_RADIUS
+    ? Math.max(from[1], contactY)
+    : Math.max(from[1], contactY) + SET_LIFT;
   const seg1: BallMoveAction = {
     type: 'ball_move',
     time: transitionStart,
     from,
     to: contact,
     duration: seg1Dur,
-    // Approach arc — the ball rises from the setter towards the striking zone.
-    arc: Math.max(from[1], contactY, 2.5),
+    arc: approachApex,
     curve: 'arc',
-    apex: contactY,
+    apex: approachApex,
   };
 
-  // Segment 2: the spike. Flat, fast trajectory to the final destination.
-  // For BLOC, the "spike" segment is the rebound — still flat but slower.
-  const isBloc = brick.kind === 'BLOC';
+  // Segment 2: the spike. Flat, fast trajectory to the final destination,
+  // unless the step asks for an arc: a topspin back-row attack dipping over
+  // the net, a tip lobbed over the block. For BLOC, the segment is the
+  // rebound, always an arc.
+  const isArc = brick.kind === 'BLOC' || curr.ballTrajectory?.curve === 'arc';
+  const seg2Apex = Math.max(contactY, to[1], curr.ballTrajectory?.apex ?? 0);
   const seg2: BallMoveAction = {
     type: 'ball_move',
     time: roundTime(transitionStart + seg1Dur),
     from: contact,
     to,
     duration: seg2Dur,
-    arc: false,
-    curve: isBloc ? 'arc' : 'flat',
-    apex: isBloc ? Math.max(contactY, to[1]) : undefined,
+    arc: isArc ? seg2Apex : false,
+    curve: isArc ? 'arc' : 'flat',
+    apex: isArc ? seg2Apex : undefined,
   };
 
   return [seg1, seg2];
+}
+
+type BallFlight = {
+  action: BallMoveAction;
+  // Step whose snapshot the ball reaches at the end of this flight.
+  arrivalStep: EditorStep;
+  // First half of a split ball_move: the ball flies to a jumping player's hand.
+  isApproach: boolean;
+};
+
+// A ball never waits in the air. When a flight ends above the floor, nobody
+// holds the ball and nobody touches it on arrival, the flight is adjusted:
+//   - the next flight carries the ball to a jumping player's hand: both are
+//     merged into one flight that reaches the hand exactly at contact time
+//     (typically a set that lands next to the hitter before the smash step);
+//   - otherwise, when the ball stays there for a while (the next step does
+//     not move it): the flight lasts until the next one starts, so the ball
+//     arrives exactly when it is played again, or, when nothing follows, the
+//     ball falls to the floor under gravity.
+function settleAirborneBall(
+  timeline: TimelineAction[],
+  flights: BallFlight[],
+  scenarioEnd: number,
+): void {
+  const ordered = [...flights].sort((a, b) => a.action.time - b.action.time);
+  for (let i = 0; i < ordered.length; i++) {
+    const flight = ordered[i];
+    const a = flight.action;
+    const end = a.time + a.duration;
+    const next = ordered[i + 1];
+    const nextStart = next ? next.action.time : scenarioEnd;
+    const flowsIntoHit = next !== undefined && next.isApproach && a.curve !== 'flat';
+    if (a.to[1] < AIRBORNE_MIN_HEIGHT) continue;
+    if (!flowsIntoHit && nextStart - end < 0.05) continue;
+    if (isHeld(a.to, flight.arrivalStep)) continue;
+    if (isTouchedOnArrival(timeline, a.to, flight.arrivalStep, end)) continue;
+
+    if (next && flowsIntoHit) {
+      const b = next.action;
+      const apex = Math.max(apexOf(a), b.to[1]);
+      a.to = b.to;
+      a.duration = roundTime(b.time + b.duration - a.time);
+      a.curve = 'arc';
+      a.apex = apex;
+      a.arc = apex;
+      timeline.splice(timeline.indexOf(b), 1);
+      ordered.splice(i + 1, 1);
+    } else if (next) {
+      a.duration = roundTime(nextStart - a.time);
+    } else {
+      const rest: [number, number, number] = [a.to[0], BALL_REST_Y, a.to[2]];
+      timeline.push({
+        type: 'ball_move',
+        time: roundTime(end),
+        from: a.to,
+        to: rest,
+        duration: roundTime(Math.sqrt((2 * (a.to[1] - BALL_REST_Y)) / GRAVITY)),
+        arc: a.to[1],
+        curve: 'arc',
+        apex: a.to[1],
+      });
+    }
+  }
+}
+
+// Time at which a flight passes closest (in XZ) to a point.
+function passingTime(flight: BallMoveAction, point: [number, number, number]): number {
+  const dx = flight.to[0] - flight.from[0];
+  const dz = flight.to[2] - flight.from[2];
+  const len2 = dx * dx + dz * dz;
+  const along = len2 > 0
+    ? ((point[0] - flight.from[0]) * dx + (point[2] - flight.from[2]) * dz) / len2
+    : 0;
+  return roundTime(flight.time + flight.duration * clamp01(along));
+}
+
+function apexOf(action: BallMoveAction): number {
+  return action.apex
+    ?? (typeof action.arc === 'number' ? action.arc : Math.max(action.from[1], action.to[1]));
+}
+
+// A grounded player standing next to a ball at hands height holds it (a
+// server before the toss, a setter about to set).
+function isHeld(ball: [number, number, number], step: EditorStep): boolean {
+  return holderOf(ball, step) !== null;
+}
+
+function holderOf(ball: [number, number, number], step: EditorStep): string | null {
+  if (ball[1] > HOLD_MAX_HEIGHT || ball[1] < HOLD_MIN_HEIGHT) return null;
+  if (step.snapshot.ballAttachedTo) return step.snapshot.ballAttachedTo;
+  let best: string | null = null;
+  let bestDist = HOLD_RADIUS;
+  for (const [id, p] of Object.entries(step.snapshot.positions)) {
+    const d = Math.hypot(p[0] - ball[0], p[2] - ball[2]);
+    if (d < bestDist) {
+      best = id;
+      bestDist = d;
+    }
+  }
+  return best;
+}
+
+// Where a held ball goes when its holder moves during a step in which the
+// ball itself is not played: it keeps its offset to the holder.
+function carriedBallTarget(
+  prev: EditorStep,
+  curr: EditorStep,
+  playersOwnedByBricks: ReadonlySet<string>,
+): [number, number, number] | null {
+  const ball = prev.snapshot.ballPosition;
+  const holder = holderOf(ball, prev);
+  if (!holder || playersOwnedByBricks.has(holder)) return null;
+  const from = prev.snapshot.positions[holder];
+  const to = curr.snapshot.positions[holder];
+  if (!from || !to || positionsEqual(from, to)) return null;
+  return [ball[0] + to[0] - from[0], ball[1], ball[2] + to[2] - from[2]];
+}
+
+// A strike fired at the arrival by a player close to the ball means the ball
+// is played right there: its flight is not adjusted. ARM_SPIKE is left out on
+// purpose: it is also the windup an attacker takes while jumping to the ball.
+const STRIKE_POSES: ReadonlySet<PoseName> = new Set(['BUMP', 'SET', 'SPIKE']);
+
+function isTouchedOnArrival(
+  timeline: TimelineAction[],
+  ball: [number, number, number],
+  step: EditorStep,
+  time: number,
+): boolean {
+  return timeline.some(action => {
+    if (action.type !== 'player_pose' || !STRIKE_POSES.has(action.pose)) return false;
+    if (Math.abs(action.time - time) > 0.06) return false;
+    const pos = step.snapshot.positions[action.id];
+    return pos !== undefined && Math.hypot(pos[0] - ball[0], pos[2] - ball[2]) < SYNC_RADIUS;
+  });
 }
 
 function clamp01(n: number): number {
@@ -453,6 +644,8 @@ function buildEmpty(state: EditorState): Scenario {
       teamSize: state.metadata.teamSize,
       phase: state.metadata.phase,
       contextLabel: state.metadata.contextLabel,
+      ...(state.metadata.system && { system: state.metadata.system }),
+      ...(state.metadata.rotation && { rotation: state.metadata.rotation }),
     },
     players: [],
     initialBallPosition: [0, 1.0, 5],

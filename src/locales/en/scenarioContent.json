@@ -72,15 +72,15 @@
     "steps": {
       "s1": {
         "title": "1. 3-1 configuration",
-        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4. No libero: the receiver chains his approach."
+        "description": "Single setter in P1 (back-row). 3 hitters in front at P2, P3, P4: the middle drops back to take the reception, both wings stay free to attack."
       },
       "s2": {
         "title": "2. Serve + reception + penetration",
-        "description": "The left wing bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
+        "description": "The middle bumps the reception. The setter simultaneously launches his penetration from P1 toward zone 2."
       },
       "s3": {
         "title": "3. Set + R4 approach",
-        "description": "High set toward the left wing after R4's reception run. The opposing block slides toward him."
+        "description": "High set toward the left wing, who did not receive and pulls back for his approach. The middle and the right wing close in to cover. The opposing block slides toward the hitter."
       },
       "s4": {
         "title": "4. Cross-court spike + single block",
@@ -92,7 +92,7 @@
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "The setter returns to back-row P1, R4 returns to zone 4. The penetration must be anticipated from the next serve onward."
+        "description": "The setter returns to back-row P1, the middle drops back to receive, the wings return to the net. The penetration must be anticipated from the next serve onward."
       }
     },
     "summary": {
@@ -100,7 +100,7 @@
         "3-1 system = the 4v4 equivalent of the 5-1. 1 dedicated penetrating setter.",
         "Advantage: 3 hitters in front at all times, like in 6v6.",
         "Drawback: requires very clean reception since the setter is not at the net.",
-        "No libero: the receiver also chains his attack approach."
+        "No libero: the middle receives, the setter sets, a wing attacks. Three different players, the fourth one covers."
       ],
       "commonMistakes": [
         "Penetration too late → another player has to make the set.",
@@ -277,15 +277,15 @@
   },
   "6v6-attack-5-1-p1": {
     "title": "Attack · 5-1 P1 rotation",
-    "shortDescription": "3-receiver reception → setter penetrates from P1 → zone-4 attack by the OH.",
+    "shortDescription": "3-receiver reception → setter penetrates from P1 → the front-row OH switches and attacks in zone 4.",
     "contextLabel": "5-1 · P1 rotation · Opposing serve",
     "players": {
-      "L": "Libero (P5)",
-      "R4a": "OH (P4)",
-      "R4b": "OH (P6)",
-      "C": "Middle (P3)",
-      "Op": "Opposite (P2)",
-      "P": "Setter (P1)",
+      "L": "Libero (zone 6)",
+      "R4a": "OH (zone 2)",
+      "R4b": "OH (zone 5)",
+      "C": "Middle (zone 3)",
+      "Op": "Opposite (zone 4)",
+      "P": "Setter (zone 1)",
       "OPP_SRV": "Opposing server",
       "OPP_BL": "Opposing left blocker",
       "OPP_BR": "Opposing right blocker",
@@ -296,54 +296,54 @@
     "steps": {
       "s1": {
         "title": "1. Reception formation",
-        "description": "Our team is in a 3-receiver formation: libero (P5), OH in P6 and OH in P4 pulled back on the 3 m line. Middle and opposite are out at the net. The setter waits in P1 to penetrate as soon as the serve is struck."
+        "description": "3-receiver reception: OH from zone 5 on the left, libero (zone 6) in the middle, OH from zone 2 pulled back on the right. The opposite (zone 4) and the middle (zone 3) stay at the net. The setter, in zone 1, hides behind the zone-2 OH, ready to penetrate."
       },
       "s2": {
         "title": "2. Serve + reception",
-        "description": "Opposing lofted serve to the OH in P6 who bumps it. In parallel, the setter triggers his penetration from P1 toward zone 2-3."
+        "description": "Opposing lofted serve to zone 5: the back-row OH bumps it. As soon as the serve is struck, the setter penetrates from zone 1, the opposite runs behind the middle toward the right and the zone-2 OH starts sliding to the left."
       },
       "s3": {
-        "title": "3. High set + approach",
-        "description": "The ball rises to the setter who has arrived at the net. He delivers a lofted set to zone 4 where the OH has already started his approach. Coverage forms around him."
+        "title": "3. Switches + approach",
+        "description": "The reception rises to the setter who has reached the net. The zone-2 OH completes his crossing and starts his approach in zone 4; the opposite takes zone 2 and the middle holds the centre."
       },
       "s4": {
         "title": "4. Spike + double block",
-        "description": "The OH lifts off and hits long cross-court toward the opponent's zone 6. The two opposing blockers jump in parallel to close cross-court and line."
+        "description": "High set to zone 4: the OH lifts off and hits long cross-court toward the back of the opposing court. The two blockers close the line, the spike goes through the seam. The setter, the back-row OH and the libero cover the hitter."
       },
       "s5": {
         "title": "5. Opposing dig",
-        "description": "The opposing libero dives toward zone 6 to try a desperate bump. The opposing setter moves toward zone 2 to relay if defense touches the ball."
+        "description": "The opposing libero dives on the long diagonal to try a desperate bump. The opposing setter moves toward zone 2 to relay if defense touches the ball."
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position for the next serve. This placement determines the quality of the next attack."
+        "description": "The whole team resumes its reception position for the next serve: the OH goes back to zone 2, the opposite to zone 4. This placement determines the quality of the next attack."
       }
     },
     "summary": {
       "keyPoints": [
+        "Rotation order: setter in zone 1, opposite across in zone 4, OHs in zones 2 and 5, middle in 3, libero in 6.",
         "3-receiver reception: libero + 2 OHs take the full width of the court.",
-        "The setter penetrates from P1 toward zone 2-3 as soon as the serve is struck.",
-        "The OH attacker slides on the 3 m line during reception to prepare his approach.",
-        "5-player coverage (3 close + 2 far) in low position around the hitter."
+        "The setter penetrates from zone 1 toward zone 2-3 as soon as the serve is struck.",
+        "After the reception, the front-row OH crosses to zone 4 and the opposite takes zone 2."
       ],
       "commonMistakes": [
         "Setter penetrating too late → forced jump set by another player.",
-        "OH attacker triggering his approach too early → arrives under the ball instead of committing.",
+        "Setter standing in front of the zone-2 OH at the serve → overlap fault.",
         "Coverage forgotten → successful opposing block = point lost directly."
       ]
     }
   },
   "6v6-attack-5-1-p2": {
     "title": "Attack · 5-1 P2 rotation",
-    "shortDescription": "Setter already at the net in P2: 2 hitters in front + opposite attacks in 4 exceptionally.",
+    "shortDescription": "Setter already at the net in P2: 2 front-row hitters, the OH and the middle switch, attack in zone 4.",
     "contextLabel": "5-1 · P2 rotation · Front-row setter",
     "players": {
-      "R4a": "OH (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P3)",
-      "Pt": "Opposite (P4)",
-      "P": "Setter (P2)",
+      "R4a": "OH (zone 3)",
+      "L": "Libero (zone 1)",
+      "R4b": "OH (zone 6)",
+      "C": "Middle (zone 4)",
+      "Pt": "Opposite (zone 5)",
+      "P": "Setter (zone 2)",
       "OPP_SRV": "Opposing server",
       "OPP_BL": "Opposing left blocker",
       "OPP_BR": "Opposing right blocker",
@@ -351,41 +351,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. Opposing serve",
-        "description": "Serve toward zone 5-6. The libero calls and prepares to bump. The setter already waits at the net in P2."
+        "title": "1. Reception formation",
+        "description": "3-receiver reception: OH from zone 3 pulled back on the left, OH from zone 6 in the middle, libero (zone 1) on the right. The middle (zone 4) stays at the net on the left, the setter already waits at the net in zone 2. The opposite, back row in zone 5, hides deep on the left."
       },
       "s2": {
         "title": "2. Serve + libero reception",
-        "description": "Lofted serve to zone 6. The libero steps in and bumps precisely to the setter target (zone 2)."
+        "description": "Lofted serve to zone 1. The libero makes an accurate bump to the setter target. As soon as the serve is struck, the middle slides to the centre of the net and the zone-3 OH shifts toward zone 4."
       },
       "s3": {
-        "title": "3. Set to the opposite + approach",
-        "description": "The setter, already in P2, exceptionally distributes to zone 4 where the opposite starts his approach. The opposing block regroups in the center."
+        "title": "3. Set to zone 4 + approach",
+        "description": "The setter, already in zone 2, receives the ball without penetrating. The OH starts his approach in zone 4 while the middle holds the centre. The opposing block slides toward the wing."
       },
       "s4": {
         "title": "4. Spike + double block",
-        "description": "The opposite lifts off on the left and hits long cross-court. A rare configuration but unavoidable in P2 — the setter stays in place."
+        "description": "Long set to zone 4: the OH lifts off and hits long cross-court, through the seam of the 2-man block. The opposite and the back-row OH cover the hitter, the setter stays at the net."
       },
       "s5": {
         "title": "5. Opposing dig",
-        "description": "The opposing cross defender dives on the long cross-court to try a desperate bump save."
+        "description": "The opposing cross-court defender dives on the long diagonal to try a rescue bump."
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their reception position. The P2 rotation remains the most offensively limited: only 2 hitters in front."
+        "description": "Everyone resumes their reception position: the middle returns to zone 4, the OH to zone 3. The P2 rotation remains the poorest offensively: only 2 front-row hitters."
       }
     },
     "summary": {
       "keyPoints": [
-        "P2 rotation = the most offensively limited (only 2 hitters in front).",
+        "Rotation order: setter in zone 2, opposite across in zone 5, OHs in zones 3 and 6, middle in 4, libero in 1.",
+        "P2 rotation = the poorest offensively: only 2 front-row hitters (OH + middle).",
         "Setter already in place: zero penetration, easy distribution.",
-        "The opposite exceptionally attacks on the left (zone 4) to free the setter.",
-        "Prioritize the wings and OH back-row attacks as options."
+        "The OH and the middle switch at the serve: the OH attacks in 4, the middle holds in 3."
       ],
       "commonMistakes": [
-        "Setter trying to jump-set in 2 when he's already there → difficult 2nd touch.",
-        "Opposite hesitating between 2 and 4 → opposing block in place.",
-        "Middles not committing → easy double block for the opponent."
+        "Setter backing off to chase a short reception → difficult 2nd touch.",
+        "Late OH ↔ middle switch → the middle stays in zone 4, useless at the block.",
+        "Middle who doesn't hold → easy 2-man block on the wing for the opponent."
       ]
     }
   },
@@ -450,12 +450,12 @@
     "shortDescription": "Front-row setter at P4 switches to the right; OH* attacks in 4, middle in 3, opposite back-row in 1.",
     "contextLabel": "5-1 · P4 rotation · Front-row setter",
     "players": {
-      "L": "Libero (P5)",
-      "R4b": "OH (P6)",
-      "Pt": "Opposite (P1)",
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4a": "OH (P2)",
+      "L": "Libero (zone 6)",
+      "R4b": "OH (zone 5)",
+      "Pt": "Opposite (zone 1)",
+      "P": "Setter (zone 4)",
+      "C": "Middle (zone 3)",
+      "R4a": "OH* (zone 2)",
       "OPP_SRV": "Opposing server",
       "OPP_BL": "Opposing left blocker",
       "OPP_BR": "Opposing right blocker",
@@ -463,41 +463,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. P4 configuration + offset",
-        "description": "Setter in zone 4, OH* in zone 2 — crossed placement. Setter and middle shift left to free the reception zone for the libero."
+        "title": "1. P4 setup + shift",
+        "description": "Setter in zone 4, OH* in zone 2: crossed placement. Setter and middle shift left so the OH* can drop back to receive on the right. 3-receiver reception: OH (zone 5), libero (zone 6), OH*. The opposite, in zone 1, hides deep on the right."
       },
       "s2": {
         "title": "2. Serve + libero reception",
-        "description": "The serve targets zone 6. The libero steps in and bumps to the classic target (between P2 and P3)."
+        "description": "The serve targets zone 6. The libero steps in and bumps to the classic target (between zones 2 and 3). As soon as the serve is struck, the setter leaves zone 4 running behind the middle and the OH* starts his crossing."
       },
       "s3": {
         "title": "3. Setter↔OH* switch + high set",
-        "description": "Essential crossover: the setter leaves P4 toward 2-3, the OH* leaves P2 toward 4 to attack. Lofted set to the left wing."
+        "description": "Key crossing: the setter reaches 2-3 while the OH* completes his crossing to zone 4 and starts his approach. The middle moves back to zone 3, the opposite steps up to threaten a back-row attack."
       },
       "s4": {
         "title": "4. Wing attack + double block",
-        "description": "Long cross-court spike. With a front-row setter (small at the block), the attack must finish quickly. Double block shifted toward the wing."
+        "description": "High set to zone 4: the OH* hits long cross-court. With a front-row setter (so small at the block), the attack must finish quickly. 2-man block shifted to the wing."
       },
       "s5": {
         "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives on the long trajectory to try a desperate bump."
+        "description": "The opposing diagonal defender dives on the long trajectory to try a desperate bump. Our hitter lands and already backs off to defend."
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "Everyone resumes their initial position. The setter/middle left offset is kept for the next serve."
+        "description": "Everyone resumes their initial position: the OH* goes back to zone 2, the setter to zone 4. The setter/middle shift to the left is kept for the next serve."
       }
     },
     "summary": {
       "keyPoints": [
-        "P4 rotation = front-row setter. Setter↔OH* switch mandatory.",
-        "2 hitters in front: OH* in 4, middle in 3. Pipe or back-row opposite as options.",
-        "The setter and middle shift left at the serve to free zone 6.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "Rotation order: setter in zone 4, opposite across in zone 1, OHs in zones 2 and 5, middle in 3, libero in 6.",
+        "P4 rotation = front-row setter. Setter↔OH* switch is mandatory.",
+        "2 front-row hitters: OH* in 4, middle in 3. Pipe or back-row opposite as options.",
+        "The opposite (in zone 1) doesn't receive and stays ready for the back-row attack."
       ],
       "commonMistakes": [
-        "Switch forgotten → the OH* stays on the right, hitter in poor position.",
-        "Setter and middle too far right at the serve → reception conflict in zone 6.",
-        "Opposing block not committed by the middle → easy double block on the left wing."
+        "Switch forgotten → the OH* stays on the right, hitter in the wrong spot.",
+        "Setter and middle too far right at the serve → the OH* cannot drop back to receive.",
+        "Opposing block not held by the middle → easy 2-man block on the left wing."
       ]
     }
   },
@@ -506,12 +506,12 @@
     "shortDescription": "Long penetration from P5. C/OH switch. Set to the opposite in zone 2.",
     "contextLabel": "5-1 · P5 rotation · Long penetration",
     "players": {
-      "P": "Setter (P5)",
-      "L": "Libero (P6)",
-      "R4b": "OH (P1)",
-      "C": "Middle (P4)",
-      "R4a": "OH (P3)",
-      "Pt": "Opposite (P2)",
+      "P": "Setter (zone 5)",
+      "L": "Libero (zone 1)",
+      "R4b": "OH (zone 6)",
+      "C": "Middle (zone 4)",
+      "R4a": "OH (zone 3)",
+      "Pt": "Opposite (zone 2)",
       "OPP_SRV": "Opposing server",
       "OPP_BL": "Opposing left blocker",
       "OPP_BR": "Opposing right blocker",
@@ -520,40 +520,40 @@
     "steps": {
       "s1": {
         "title": "1. Reception formation",
-        "description": "Setter in back-left P5, as far from the net as possible. C in P4 and OH in P3 will switch as soon as the serve is struck."
+        "description": "Setter in zone 5, back left, behind the middle (zone 4). 3-receiver reception: OH from zone 3 pulled back on the left, OH from zone 6 in the middle, libero (zone 1) on the right. The opposite waits at the net in zone 2. The middle and the zone-3 OH will switch as soon as the serve is struck."
       },
       "s2": {
-        "title": "2. Serve + reception + C↔OH switch",
-        "description": "The serve targets zone 1 where the OH receives. Simultaneously, the middle slides to the center and the attacking OH takes zone 4."
+        "title": "2. Serve + reception + M↔OH switch",
+        "description": "The serve targets zone 6 where the back-row OH takes the reception. Meanwhile, the middle slides to the centre of the net, the zone-3 OH heads to zone 4 and the setter starts his penetration running behind him."
       },
       "s3": {
-        "title": "3. Long penetration + set in zone 2",
-        "description": "The setter crosses the whole court from P5 — the longest penetration. He distributes short to the opposite in zone 2. The opposing block slides right to close."
+        "title": "3. Long penetration + set to zone 2",
+        "description": "The setter completes his crossing from zone 5 — the longest penetration — and receives the ball between zones 2 and 3. The opposite starts his approach in zone 2. The opposing block slides right to close."
       },
       "s4": {
         "title": "4. Cross-court spike + double block",
-        "description": "The opposite lifts off in zone 2 and hits long cross-court. A classic combination on this rotation. The double block is in place on the right."
+        "description": "Short set to zone 2: the opposite lifts off and hits long cross-court. The 2-man block is set on the right side. The libero, the back-row OH and the setter cover the hitter."
       },
       "s5": {
         "title": "5. Opposing dig",
-        "description": "The opposing diagonal defender dives into zone 5 to try to catch the long ball."
+        "description": "The opposing diagonal defender dives on the long ball to try to dig it. Our setter, back row, is already heading back to his defensive zone."
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its reception position. The middle returns to P4, the OH to P3, the setter to P5."
+        "description": "The whole team resumes its reception position: the middle returns to zone 4, the OH to zone 3, the setter to zone 5."
       }
     },
     "summary": {
       "keyPoints": [
-        "P5 = the longest penetration. Requires perfect reception.",
-        "The middle and the OH switch as soon as the serve is struck to place C in zone 3.",
-        "The opposite in zone 2 is the most accessible target for the setter.",
-        "Pipe possible as an option if the set is flat and fast."
+        "Rotation order: setter in zone 5, opposite across in zone 2, OHs in zones 3 and 6, middle in 4, libero in 1.",
+        "P5 = the longest penetration. Requires a perfect reception.",
+        "The middle and the OH switch at the serve to put the middle back in zone 3.",
+        "The opposite in zone 2 is the most accessible target for the setter."
       ],
       "commonMistakes": [
-        "Too flat a set during an ongoing penetration → setter under the ball.",
-        "Late C↔OH switch → middle in zone 4 = useless at the block.",
-        "Short reception → setter arrives too far from the net."
+        "Set too fast while still penetrating → setter under the ball.",
+        "Late M↔OH switch → middle in zone 4 = useless at the block.",
+        "Setter standing in front of the middle (zone 4) at the serve → overlap fault."
       ]
     }
   },
@@ -618,12 +618,12 @@
     "shortDescription": "6-2 system: back-row setter penetrates, 3 hitters in front at all times.",
     "contextLabel": "6-2 · Penetrating setter · Intermediate",
     "players": {
-      "R4a": "OH (P4)",
-      "C": "Middle (P3)",
-      "PA": "Setter-hitter (P2)",
-      "P": "Setter (P1)",
-      "C2": "Middle (P6)",
-      "R4b": "OH (P5)",
+      "R4a": "OH (zone 2)",
+      "C": "Middle (zone 3)",
+      "PA": "Setter-hitter (zone 4)",
+      "P": "Setter (zone 1)",
+      "C2": "Middle (zone 6)",
+      "R4b": "OH (zone 5)",
       "OPP_SRV": "Opposing server",
       "OPP_BL": "Opposing left blocker",
       "OPP_BR": "Opposing right blocker",
@@ -631,41 +631,41 @@
     },
     "steps": {
       "s1": {
-        "title": "1. 6-2 configuration",
-        "description": "2 versatile setters: the front one attacks (setter-hitter), the back one distributes (and penetrates). 3 hitters in front at all times."
+        "title": "1. 6-2 setup",
+        "description": "2 versatile setters on the diagonal: the one in zone 4 (front row) attacks, the one in zone 1 (back row) sets and penetrates. Reception by the zone-5 OH, the zone-6 middle and the zone-2 OH pulled back on the right; the back-row setter hides behind him."
       },
       "s2": {
-        "title": "2. Serve + back-middle reception",
-        "description": "Classic central reception by C2. The setter triggers his penetration from P1 toward zone 2-3."
+        "title": "2. Serve + back-row middle reception",
+        "description": "Reception in the middle by the zone-6 middle. The setter triggers his penetration from zone 1; the setter-hitter runs behind the middle toward the right and the zone-2 OH slides to the left."
       },
       "s3": {
-        "title": "3. Set in zone 2 + approach",
-        "description": "Distribution to the setter-hitter in zone 2. Maximum variety: 3 offensive threats in front. Double block shifted to the right."
+        "title": "3. Switches + approach in zone 2",
+        "description": "The reception rises to the setter. The setter-hitter starts his approach in zone 2, the OH takes zone 4 and the middle holds the centre: 3 attacking threats up front. The opposing block slides right."
       },
       "s4": {
         "title": "4. Cross-court attack + double block",
-        "description": "The setter-hitter hits long cross-court. The 6-2 always guarantees 3 offensive threats — the opposing block cannot anticipate."
+        "description": "Short set to zone 2: the setter-hitter hits long cross-court. The 6-2 always guarantees 3 attacking threats — the opposing block can't anticipate. The setter and the back-row middle cover the hitter."
       },
       "s5": {
         "title": "5. Opposing dig",
-        "description": "The cross defender dives on the long trajectory on the opponent's left side — a desperate save attempt."
+        "description": "The cross-court defender dives on the long trajectory on the opposing left side — a desperate rescue attempt. Our setter-hitter lands and moves back toward the centre."
       },
       "s6": {
         "title": "6. RESET — back to formation",
-        "description": "The whole team resumes its position. The setter-hitter stays in front, the setter returns to P1."
+        "description": "The whole team resumes its position: the setter-hitter returns to zone 4, the OH to zone 2 and the setter goes back to zone 1."
       }
     },
     "summary": {
       "keyPoints": [
-        "6-2: 2 versatile setters in diagonal opposition.",
-        "Always 3 hitters in front (the front setter attacks, the back setter distributes).",
-        "Systematic penetration, like in 5-1, but with 2 alternating distributors.",
-        "Excellent for developing versatility before switching to a 5-1."
+        "6-2: 2 versatile setters in diagonal opposition (here zones 1 and 4).",
+        "Always 3 front-row hitters (the front-row setter attacks, the back-row setter distributes).",
+        "Systematic penetration, as in 5-1, but with 2 alternating distributors.",
+        "Excellent to develop versatility before moving to 5-1."
       ],
       "commonMistakes": [
         "Style difference between the 2 setters → inconsistent distribution.",
-        "Front setter not showing up for the attack → only 2 options.",
-        "Penetration too late → another player has to make the set."
+        "Front-row setter who doesn't present in attack → only 2 options.",
+        "Penetration too late → another player has to take the set."
       ]
     }
   },
@@ -1570,16 +1570,16 @@
         "description": "The setter is hidden at P2 at the net. 3 receivers in a U: left wing, back center, right wing. Each player covers about 1/3 of the width."
       },
       "s2": {
-        "title": "2. Serve + left wing bump",
-        "description": "Lofted serve to the left channel. The left wing calls and takes the ball in his channel. High trajectory to give the setter time."
+        "title": "2. Serve + back center bump",
+        "description": "Lofted serve deep, between the left wing and the center. The back center calls and takes the ball. High trajectory to give the setter time. The left wing, who did not receive, stays free to attack."
       },
       "s3": {
         "title": "3. Distribution to the left wing",
-        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach."
+        "description": "The ball arrives at the fixed setter in zone 2 (no penetration in 4v4). Quick distribution to the left wing who immediately chains his approach. The back center and the right wing close in to cover the attack."
       },
       "s4": {
         "title": "4. Ball available in zone 4",
-        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: the setter has not received, the attack is fast and readable."
+        "description": "The set arrives in zone 4 for the left wing. System more offensive than the diamond: neither the setter nor the hitter has received, the attack is fast and readable."
       },
       "s5": {
         "title": "5. RESET — back to the U",
@@ -1845,49 +1845,50 @@
   },
   "6v6-reception-rotation-p4": {
     "title": "Reception · 5-1 P4 rotation",
-    "shortDescription": "P4 special case: the setter and the middle shift left to free the OH in zone 6.",
+    "shortDescription": "Special P4 case: the setter and the middle shift left so the OH* can receive on the right.",
     "contextLabel": "5-1 · 3-receiver · P4 rotation (front-row setter)",
     "players": {
-      "P": "Setter (P4)",
-      "C": "Middle (P3)",
-      "R4b": "OH* (P2)",
-      "L": "Libero (P5)",
-      "R4a": "OH (P6)",
-      "Op": "Opposite (P1)",
+      "P": "Setter (zone 4)",
+      "C": "Middle (zone 3)",
+      "R4b": "OH* (zone 2)",
+      "L": "Libero (zone 6)",
+      "R4a": "OH (zone 5)",
+      "Op": "Opposite (zone 1)",
       "OPP_SRV": "Opposing server"
     },
     "steps": {
       "s1": {
-        "title": "1. Left shift",
-        "description": "BEFORE the hit: the setter (P4) and the middle (P3) place themselves AS FAR LEFT as alignment rules allow. This shift frees zone 6 for the receiving OH."
+        "title": "1. Shift to the left",
+        "description": "BEFORE the serve: the setter (zone 4) and the middle (zone 3) stand as FAR LEFT as the alignment rules allow. This shift lets the OH* (zone 2), who must stay right of the middle, drop back to receive on the right. 3-receiver reception: OH (zone 5), libero (zone 6), OH*. The opposite (zone 1) hides deep on the right."
       },
       "s2": {
-        "title": "2. Serve + bump by the OH in P6",
-        "description": "Serve to the central zone 6. The OH in P6 calls and bumps in the zone freed by the setter's shift. Three receivers: libero, OH and opposite (on the edge)."
+        "title": "2. Serve + bump by the zone-5 OH",
+        "description": "Serve to zone 5. The back-row OH calls it and bumps to the target. As soon as the serve is struck, the setter leaves zone 4 running behind the middle, and the OH* starts his crossing."
       },
       "s3": {
         "title": "3. Penetration + OH* switch",
-        "description": "The setter rushes from P4 to zone 2-3. Simultaneously, the OH* in P2 crosses over to P4 to attack. The middle repositions in zone 3."
+        "description": "The setter reaches 2-3 and receives the ball. At the same time, the OH* completes his crossing to zone 4 and starts his approach. The middle moves back to zone 3, the opposite steps up to threaten a back-row attack."
       },
       "s4": {
-        "title": "4. Ball available for OH* in zone 4",
-        "description": "The set arrives for the OH* who has completed his crossover. With only 2 hitters in front (OH* + middle), the main option is the left wing."
+        "title": "4. OH* attack in zone 4",
+        "description": "High set to the OH* who has completed his crossing. With only 2 front-row hitters (OH* + middle), the main option is the left wing. The hitter jumps and hits cross-court toward the back of the opposing court."
       },
       "s5": {
         "title": "5. RESET — back to the shift",
-        "description": "All players resume the left shift for the next serve in P4 rotation."
+        "description": "All players resume the shift to the left for the next serve in P4 rotation: the setter returns to zone 4 along the net, the OH* goes back to zone 2 through the back."
       }
     },
     "summary": {
       "keyPoints": [
-        "In P4, the setter and middle MUST shift left at the serve.",
-        "This shift opens zone 6 for the OH reception at P6.",
-        "Setter↔OH* switch mandatory during the set.",
-        "The opposite (in P1) does not receive and stays ready for a back-row attack."
+        "Rotation order: setter in zone 4, opposite across in zone 1, OHs in zones 2 and 5, middle in 3, libero in 6.",
+        "In P4, the setter and the middle MUST shift left at the serve.",
+        "This shift gives the OH* (zone 2) room to receive on the right, next to the libero.",
+        "Setter↔OH* switch is mandatory during the reception.",
+        "The opposite (in zone 1) doesn't receive and stays ready for the back-row attack."
       ],
       "commonMistakes": [
-        "Shift forgotten → reception conflict in zone 6.",
-        "Switch too late → OH* attacks at P2 (wrong side).",
+        "Shift forgotten → the OH* cannot drop back to receive without an overlap fault.",
+        "Late switch → OH* attacks in zone 2 (wrong side).",
         "Opposite who receives → loses the back-row attack option."
       ]
     }

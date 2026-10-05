@@ -75,12 +75,15 @@ export const BallWithTrail = forwardRef<BallWithTrailRef, BallWithTrailProps>(
       });
     });
 
+    // Reset the trail only when the coordinates change, not when a new array
+    // with the same values is passed.
+    const [px, py, pz] = position;
     React.useEffect(() => {
-      trailData.current.positions.forEach(p => p.set(...position));
-      trailData.current.lastPos.set(...position);
+      trailData.current.positions.forEach(p => p.set(px, py, pz));
+      trailData.current.lastPos.set(px, py, pz);
       trailData.current.index = 0;
       trailData.current.count = 0;
-    }, [position[0], position[1], position[2]]);
+    }, [px, py, pz]);
 
     return (
       <group>

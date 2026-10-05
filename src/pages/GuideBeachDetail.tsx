@@ -4,6 +4,10 @@ import { BEACH_GUIDES } from '../guides/beach/data';
 import { Head } from '../seo/Head';
 import { buildArticle, buildBreadcrumb } from '../seo/structuredData';
 import { useCurrentLang } from '../i18n/paths';
+import TechniqueList from '../techniques/TechniqueList';
+import { TECHNIQUES_BEACH, CATEGORY_TAGS_BEACH } from '../techniques/data';
+
+const TECHNIQUES_BEACH_SLUG = 'techniques-beach';
 
 type GuideSectionItem = { title: string; body: string };
 type GuideSection = {
@@ -50,8 +54,11 @@ export default function GuideBeachDetail() {
   const level = t(`list.${guide.slug}.level`);
   const readingTime = t(`list.${guide.slug}.readingTime`);
 
-  const intro = tContent(`${guide.slug}.intro`);
-  const sections = tContent(`${guide.slug}.sections`, { returnObjects: true }) as GuideSection[];
+  const isCatalog = guide.slug === TECHNIQUES_BEACH_SLUG;
+  const intro = isCatalog ? '' : tContent(`${guide.slug}.intro`);
+  const sections = isCatalog
+    ? ([] as GuideSection[])
+    : (tContent(`${guide.slug}.sections`, { returnObjects: true }) as GuideSection[]);
 
   const path = `/beach/guides/${guide.slug}`;
 
@@ -124,6 +131,14 @@ export default function GuideBeachDetail() {
 
       {intro && (
         <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.65, maxWidth: 760 }}>{intro}</p>
+      )}
+
+      {isCatalog && (
+        <TechniqueList
+          items={TECHNIQUES_BEACH}
+          categoryTags={CATEGORY_TAGS_BEACH}
+          namespace="techniquesBeach"
+        />
       )}
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>

@@ -6,6 +6,14 @@
   },
   "ticketPrefix": "N°",
   "list": {
+    "techniques-de-base": {
+      "title": "Temel teknikler",
+      "subtitle": "Temel teknik kartları — kilit noktalar, hatalar, videolar",
+      "category": "Teknik",
+      "description": "Voleybolun temel hareketleri kataloğu: manşet, pas, smaç, blok, servis, savunma. Kategoriye ve seviyeye göre filtrelenebilen kartlar, videolu.",
+      "readingTime": "~10 dk",
+      "level": "Başlangıç"
+    },
     "service": {
       "title": "Servis rehberi",
       "subtitle": "Alttan, float, jump float ve jump topspin",
