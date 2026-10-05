@@ -4,10 +4,6 @@
     "title": "SCÉNARIOS DE JEU",
     "subtitle": "Visualisez des situations concrètes en 3D avec narration étape par étape."
   },
-  "construction": {
-    "label": "PAGE EN COURS DE CONSTRUCTION",
-    "body": "Certaines animations 3D peuvent encore comporter des erreurs ou être incomplètes. Merci de votre indulgence — les scénarios sont en cours de finalisation."
-  },
   "filters": {
     "tacticalKicker": "FILTRE TACTIQUE",
     "clear": "EFFACER ✕"
