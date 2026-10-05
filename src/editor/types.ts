@@ -50,7 +50,7 @@ export function migrateLegacyTempo(t: string): StepTempo {
 }
 
 // Pose names supported by the runtime (mirrors useTactic.ts).
-export type PoseName = 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'READY' | 'RESET';
+export type PoseName = 'BUMP' | 'SET' | 'SPIKE' | 'ARM_SPIKE' | 'BLOCK' | 'READY' | 'RESET';
 
 export type EditorPlayer = {
   id: string;

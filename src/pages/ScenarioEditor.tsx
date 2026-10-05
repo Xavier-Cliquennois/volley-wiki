@@ -33,7 +33,7 @@ import type { BallCurve, PhaseKind, PlayerRole, TeamSize } from '../scenarios/ty
 
 const ScenarioPlayer = lazy(() => import('../scenarios/ScenarioPlayer'));
 
-const POSE_OPTIONS: PoseName[] = ['READY', 'BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'RESET'];
+const POSE_OPTIONS: PoseName[] = ['READY', 'BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'BLOCK', 'RESET'];
 
 // Ball-to-player snap radius in metres. When the author drops the ball within
 // this distance of a teammate, the ball locks onto that player and follows
@@ -1084,14 +1084,14 @@ function reserveStepIds(existing: { id: string }[], count: number): string[] {
 
 
 // Auto-pose policy when the ball sits on top of a teammate:
-// - Player at the net (|z| < 1.5m) → SPIKE on attack, ARM_SPIKE (block) on defense/reception
+// - Player at the net (|z| < 1.5m) → SPIKE on attack, BLOCK on defense/reception
 // - Player away from the net → SET (passe haute)
 // Opponents and balls that are airborne too high (y > 3.5m) are ignored — those
 // are typically arc trajectories, not contact moments.
 const HIT_RADIUS = 0.9;
 const NET_ZONE_Z = 1.5;
 const MAX_CONTACT_HEIGHT = 3.5;
-const AUTO_POSES: ReadonlySet<PoseName> = new Set(['SET', 'BUMP', 'SPIKE', 'ARM_SPIKE']);
+const AUTO_POSES: ReadonlySet<PoseName> = new Set(['SET', 'BUMP', 'SPIKE', 'ARM_SPIKE', 'BLOCK']);
 
 function recomputeContactPose(
   state: EditorState,
@@ -1126,7 +1126,7 @@ function recomputeContactPose(
       const atNet = Math.abs(hitPos[2]) < NET_ZONE_Z;
       const phase = state.metadata.phase;
       next[hitId] = atNet
-        ? (phase === 'attack' ? 'SPIKE' : 'ARM_SPIKE')
+        ? (phase === 'attack' ? 'SPIKE' : 'BLOCK')
         : 'SET';
     }
   }

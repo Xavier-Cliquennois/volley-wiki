@@ -16,7 +16,7 @@
 // How a touch is found. The compiled ball flight is a chain of `ball_move`
 // segments. The ball is played at every junction between two segments (and at
 // the very first departure / the very last arrival): the toucher is the player
-// whose contact pose (BUMP, SET, SPIKE, ARM_SPIKE) fires at that moment and who
+// whose contact pose (BUMP, SET, SPIKE, ARM_SPIKE, BLOCK) fires at that moment and who
 // stands within reach of the ball. A ball resting on the floor or falling under
 // gravity at the end of a scenario is not a touch; a ball that changes its
 // course in mid-air with nobody around is reported as an anomaly.
@@ -41,7 +41,7 @@ type Team = 'us' | 'them';
 // Contact poses: the moment the ball meets the player (see CONTACT_POSES in
 // compileScenario.ts). ARM_SPIKE is also the windup of a smash; it only counts
 // when it is the gesture closest in time to the ball.
-const TOUCH_POSES = new Set<PlayerPoseAction['pose']>(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE']);
+const TOUCH_POSES = new Set<PlayerPoseAction['pose']>(['BUMP', 'SET', 'SPIKE', 'ARM_SPIKE', 'BLOCK']);
 // A contact pose fires at the start or the end of a ball segment; allow for
 // the rounding of the compiled times.
 const TIME_TOLERANCE = 0.1;
@@ -83,6 +83,7 @@ const GESTURE_LABELS: Record<string, string> = {
   // Not a block: the arm cocked of an attacker the ball reaches before he
   // strikes it. Merged with the strike that follows.
   ARM_SPIKE: 'bras armé',
+  BLOCK: 'contre',
   HOLD: 'tenue',
 };
 
@@ -256,7 +257,9 @@ function analyse(scenario: Scenario): ScenarioReport {
     }
     const team = teamOf(scenario, toucher.playerId);
     const previous = touches.at(-1);
-    const isBlock = toucher.gesture === 'ARM_SPIKE'
+    // BLOCK is the block pose of the BLOC brick; a hand-placed ARM_SPIKE at the
+    // net (older scenarios) is still read as a block.
+    const isBlock = (toucher.gesture === 'BLOCK' || toucher.gesture === 'ARM_SPIKE')
       && toucher.position[1] > BLOCK_MIN_JUMP
       && Math.abs(toucher.position[2]) < BLOCK_MAX_NET_DISTANCE
       && previous !== undefined && previous.team !== team;
