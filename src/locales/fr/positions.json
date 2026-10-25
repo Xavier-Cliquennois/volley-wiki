@@ -2,7 +2,7 @@
   "hub": {
     "kicker": "★ DOCUMENTATION",
     "title": "POSITIONS & RÔLES",
-    "intro": "Au volley-ball indoor, les positions sont numérotées <strong>P1 à P6</strong> dans le sens antihoraire vu depuis l'arrière de son camp. La rotation se fait dans le sens horaire à chaque side-out. Selon le format de jeu, le nombre de joueurs et les systèmes tactiques diffèrent — choisissez le format qui correspond à votre pratique.",
+    "intro": "Au volley-ball indoor, les positions sont numérotées <strong>P1 à P6</strong> dans le sens antihoraire vu depuis l'arrière de son camp. La rotation se fait dans le sens horaire à chaque side-out. Selon le format de jeu, le nombre de joueurs et les systèmes tactiques diffèrent. Choisissez le format qui correspond à votre pratique.",
     "formats": {
       "6v6": {
         "tagline": "Format officiel FIVB / FFVolley",
@@ -77,7 +77,7 @@
         "P2": { "role": "Passeur (Setter)", "description": "Le chef d'orchestre. Reçoit la 2ᵉ touche et distribue le jeu. En 5-1 il joue toutes les rotations : pénétration depuis P1, P6 ou P5 (arrière), distribution depuis P4, P3 ou P2 (avant). Cible : entre Z2 et Z3, ~1 m du filet.", "skills": ["Passe en touche", "Lecture du bloc", "Communication", "Pénétration"], "traits": ["Précision technique maximale", "Vision 360°", "Sang-froid", "Leadership"] },
         "P5": { "role": "Réception / défense", "description": "Zone de réception et défense côté gauche. Souvent occupée par le 2ᵉ R4 en rotation arrière. Le libéro peut le remplacer.", "skills": ["Manchette", "Réception", "Défense", "Lecture"], "traits": ["Lecture des attaques", "Premier rideau", "Couverture fond gauche", "Souvent remplacé par libéro"] },
         "P6": { "role": "Défense centrale", "description": "Pivot défensif au fond du terrain. Couvre les balles longues et soutient ses coéquipiers. Le libéro y est souvent.", "skills": ["Défense longue", "Couverture", "Soutien", "Manchette"], "traits": ["Lecture du jeu", "Mobilité maximale", "Communication arrière", "Souvent remplacé par libéro"] },
-        "P1": { "role": "Opposé (Opposite)", "description": "L'opposé (\"pointu\") en opposition au passeur. Ne participe pas à la réception, c'est le finisseur. En arrière 3 rotations sur 6 (attaque depuis le fond — pipe).", "skills": ["Attaque forte", "Service", "Contre", "Attaque arrière"], "traits": ["Puissance maximale", "Attaque back-row 3 rotations/6", "Libéré de la réception", "Synonyme : \"pointu\""] },
+        "P1": { "role": "Opposé (Opposite)", "description": "L'opposé (\"pointu\") en opposition au passeur. Ne participe pas à la réception, c'est le finisseur. En arrière 3 rotations sur 6 (attaque depuis le fond, ou pipe).", "skills": ["Attaque forte", "Service", "Contre", "Attaque arrière"], "traits": ["Puissance maximale", "Attaque back-row 3 rotations/6", "Libéré de la réception", "Synonyme : \"pointu\""] },
         "L":  { "role": "Spécialiste défensif", "description": "Spécialiste défensif en maillot contrastant. Remplace les arrières (P1, P5, P6) sans compter comme substitution. Restrictions FIVB : pas de contre, pas d'attaque au-dessus du filet, pas de passe haute devant la ligne des 3 m pour un coéquipier qui attaque ensuite au-dessus du filet.", "skills": ["Manchette", "Réception", "Défense", "Lecture"], "traits": ["Agilité maximale", "Ne peut pas bloquer/attaquer au-dessus du filet", "Pas de passe haute devant 3 m → attaquant", "Remplacements illimités", "Peut servir (FIVB 2021)"] }
       }
     },
@@ -111,9 +111,9 @@
     "pentagon": {
       "name": "Pentagone (1-2-2)",
       "shortName": "Pentagone",
-      "description": "1 joueur au filet centre, 2 ailes en milieu de terrain, 2 arrière. Couverture régulière du terrain — bonne option en initiation et loisir. Défense type : système 1-2-2 (man-up adapté, 1 contreur + 2 couvreurs + 2 défenseurs profonds).",
+      "description": "1 joueur au filet centre, 2 ailes en milieu de terrain, 2 arrière. Couverture régulière du terrain, bonne option en initiation et loisir. Défense type : système 1-2-2 (man-up adapté, 1 contreur + 2 couvreurs + 2 défenseurs profonds).",
       "positions": {
-        "P3": { "name": "Centre filet", "role": "Passeur ou central", "description": "Au filet centre. Souvent passeur si joueur fixe ; sinon central principal au bloc.", "skills": ["Passe", "Contre", "Communication"], "traits": ["Hub du jeu", "Block central", "Dispense partielle de réception"] },
+        "P3": { "name": "Centre filet", "role": "Passeur ou central", "description": "Au filet centre. Souvent passeur si joueur fixe, sinon central principal au bloc.", "skills": ["Passe", "Contre", "Communication"], "traits": ["Hub du jeu", "Block central", "Dispense partielle de réception"] },
         "P4": { "name": "Aile gauche", "role": "Outside", "description": "Aile gauche en milieu de terrain : réceptionne et attaque depuis la zone 4.", "skills": ["Attaque", "Réception", "Contre"], "traits": ["Polyvalence", "Course d'élan moyenne", "Couverture petite diagonale"] },
         "P2": { "name": "Aile droite", "role": "Outside / pointu", "description": "Aile droite. Si le passeur est central, c'est l'attaquant en zone 2.", "skills": ["Attaque ligne", "Contre", "Service"], "traits": ["Attaque diagonale longue", "Block à 2 avec central", "Couverture grande diagonale"] },
         "P5": { "name": "Arrière gauche", "role": "Réception / défense", "description": "Arrière gauche : couvre la défense côté gauche, souvent meilleur réceptionneur.", "skills": ["Manchette", "Réception", "Défense"], "traits": ["Pilier défensif", "~30 m² couverts", "Lecture en grande diagonale"] },
@@ -127,7 +127,7 @@
       "positions": {
         "P4": { "name": "Aile gauche", "role": "Outside", "description": "Aile gauche au filet. Cible principale du passeur en zone 4.", "skills": ["Attaque", "Contre", "Réception"], "traits": ["Polyvalence", "Block à 2 avec central", "Cible favorite du passeur"] },
         "P3": { "name": "Central", "role": "Middle", "description": "Central au filet. Block + attaque rapide quand la réception le permet.", "skills": ["Contre", "Attaque rapide"], "traits": ["Block central", "Tempo 1 conservé", "Permutation possible"] },
-        "P2": { "name": "Passeur (avant)", "role": "Setter", "description": "Passeur avant fixe. Pas de pénétration. Distribue depuis le filet ; attaque possible en 2 si le ballon arrive haut côté droit.", "skills": ["Passe en touche", "Distribution", "Block aile droite"], "traits": ["Avant fixe", "Pas de pénétration", "Attaque exceptionnelle en zone 2"] },
+        "P2": { "name": "Passeur (avant)", "role": "Setter", "description": "Passeur avant fixe. Pas de pénétration. Distribue depuis le filet. Attaque possible en 2 si le ballon arrive haut côté droit.", "skills": ["Passe en touche", "Distribution", "Block aile droite"], "traits": ["Avant fixe", "Pas de pénétration", "Attaque exceptionnelle en zone 2"] },
         "P5": { "name": "Arrière gauche", "role": "Réception / défense", "description": "Arrière gauche : réception côté gauche + défense en grande diagonale.", "skills": ["Manchette", "Défense", "Réception"], "traits": ["Meilleur réceptionneur idéalement", "Grande diagonale", "Couverture ~30 m²"] },
         "P1": { "name": "Arrière droit", "role": "Service / défense", "description": "Arrière droit : sert puis défend la ligne droite et la diagonale courte.", "skills": ["Service", "Défense", "Manchette"], "traits": ["Serveur", "Ligne droite + couloir", "Soutien attaque zone 2"] }
       }
@@ -158,7 +158,7 @@
     "carre": {
       "name": "Carré / Box (2-2)",
       "shortName": "Carré",
-      "description": "Formation « box » 2-2 : 2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Permet le bloc à 2 (système B) — mais à n'utiliser que contre des frappeurs très puissants sans finesse, car laisse seulement 2 défenseurs profonds (tip non couvert). Plus souvent joué en système A avec un seul contreur.",
+      "description": "Formation « box » 2-2 : 2 joueurs au filet (P4 et P2) + 2 arrière (P5 et P1). Permet le bloc à 2 (système B), mais à n'utiliser que contre des frappeurs très puissants sans finesse, car laisse seulement 2 défenseurs profonds (tip non couvert). Plus souvent joué en système A avec un seul contreur.",
       "positions": {
         "P4": { "name": "Aile gauche (filet)", "role": "Contreur / attaquant", "description": "Au filet à gauche. Contre + attaque en zone 4.", "skills": ["Contre", "Attaque", "Couverture filet"], "traits": ["Block à 2 avec aile droite", "Permutation possible avec passeur", "Pas de tempo 1 traditionnel"] },
         "P2": { "name": "Passeur-attaquant (filet)", "role": "Passeur avant", "description": "Passeur-attaquant au filet à droite. Fait la 2ᵉ touche systématiquement (pas de pénétration en carré).", "skills": ["Passe", "Contre", "Attaque zone 2"], "traits": ["Toujours en avant", "Pas de pénétration", "Block à 2 avec aile gauche"] },
@@ -169,7 +169,7 @@
     "3-1": {
       "name": "Ligne 3-1 (passeur pénétrant)",
       "shortName": "3-1",
-      "description": "Formation « ligne 3-1 » : passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant — équivalent simplifié du 5-1 6v6. Exige une réception très propre et un passeur rapide. Défense : système A possible (1 contreur central + 3 défenseurs).",
+      "description": "Formation « ligne 3-1 » : passeur unique en P1 (arrière) qui pénètre dès la frappe vers la zone 2. Libère 3 attaquants devant : c'est un équivalent simplifié du 5-1 6v6. Exige une réception très propre et un passeur rapide. Défense : système A possible (1 contreur central + 3 défenseurs).",
       "positions": {
         "P4": { "name": "Aile gauche", "role": "Outside", "description": "Aile gauche au filet. Attaquant principal en zone 4 + réception.", "skills": ["Attaque", "Réception", "Contre"], "traits": ["Cible n°1", "Réception à 3", "Course d'élan zone 4"] },
         "P3": { "name": "Central", "role": "Middle", "description": "Central au filet. Block + attaque en zone 3 si la passe est tendue.", "skills": ["Contre", "Attaque rapide"], "traits": ["Block central", "Tempo 2 possible", "Sans réception"] },
