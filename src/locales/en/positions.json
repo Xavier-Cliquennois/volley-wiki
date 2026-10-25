@@ -2,7 +2,7 @@
   "hub": {
     "kicker": "★ DOCUMENTATION",
     "title": "POSITIONS & ROLES",
-    "intro": "In indoor volleyball, positions are numbered <strong>P1 to P6</strong> counter-clockwise as seen from behind your own court. Rotation happens clockwise on every side-out. The number of players and tactical systems differ by format — pick the one that matches your practice.",
+    "intro": "In indoor volleyball, positions are numbered <strong>P1 to P6</strong> counter-clockwise as seen from behind your own court. Rotation happens clockwise on every side-out. The number of players and tactical systems differ by format. Pick the one that matches your practice.",
     "formats": {
       "6v6": {
         "tagline": "Official FIVB / FFVolley format",
@@ -77,7 +77,7 @@
         "P2": { "role": "Setter", "description": "The conductor. Receives the 2nd touch and runs the offense. In 5-1 plays all rotations: penetrates from P1, P6 or P5 (back), distributes from P4, P3 or P2 (front). Target: between Z2 and Z3, ~1 m from the net.", "skills": ["Hand set", "Reading the block", "Communication", "Penetration"], "traits": ["Maximum technical precision", "360° vision", "Composure", "Leadership"] },
         "P5": { "role": "Reception / defense", "description": "Reception and defense zone on the left. Often filled by the 2nd outside in the back-row rotation. The libero may replace them.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Reading attacks", "Front line of defense", "Left back coverage", "Often replaced by the libero"] },
         "P6": { "role": "Center defense", "description": "Defensive pivot at the back. Covers long balls and supports teammates. Often the libero plays here.", "skills": ["Deep defense", "Coverage", "Support", "Forearm pass"], "traits": ["Game reading", "Maximum mobility", "Back communication", "Often replaced by the libero"] },
-        "P1": { "role": "Opposite", "description": "The opposite (\"point hitter\") sits diagonally opposite the setter. Does not participate in reception — the finisher. Spends 3 of 6 rotations in the back (attacks from the back — pipe).", "skills": ["Strong attack", "Serve", "Block", "Back-row attack"], "traits": ["Maximum power", "Back-row attack 3 rotations/6", "Freed from reception", "Aka \"point hitter\""] },
+        "P1": { "role": "Opposite", "description": "The opposite (\"point hitter\") sits diagonally opposite the setter. Does not participate in reception: the finisher. Spends 3 of 6 rotations in the back (back-row attack, the pipe).", "skills": ["Strong attack", "Serve", "Block", "Back-row attack"], "traits": ["Maximum power", "Back-row attack 3 rotations/6", "Freed from reception", "Aka \"point hitter\""] },
         "L":  { "role": "Defensive specialist", "description": "Defensive specialist in a contrasting jersey. Replaces the back-row players (P1, P5, P6) without counting as a substitution. FIVB restrictions: no block, no attack above the net, no overhand set from the front zone to a teammate who then attacks above the net.", "skills": ["Forearm pass", "Reception", "Defense", "Reading"], "traits": ["Maximum agility", "Cannot block / attack above the net", "No overhand set from front → attacker", "Unlimited substitutions", "Allowed to serve (FIVB 2021)"] }
       }
     },
@@ -111,9 +111,9 @@
     "pentagon": {
       "name": "Pentagon (1-2-2)",
       "shortName": "Pentagon",
-      "description": "1 player at the center net, 2 wings mid-court, 2 back. Even court coverage — good in beginner and recreational play. Typical defense: 1-2-2 system (adapted man-up, 1 blocker + 2 coverers + 2 deep defenders).",
+      "description": "1 player at the center net, 2 wings mid-court, 2 back. Even court coverage, good in beginner and recreational play. Typical defense: 1-2-2 system (adapted man-up, 1 blocker + 2 coverers + 2 deep defenders).",
       "positions": {
-        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the setter (if fixed); otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Game hub", "Central block", "Partial reception exemption"] },
+        "P3": { "name": "Net center", "role": "Setter or middle", "description": "At the center net. Often the setter (if fixed), otherwise the primary blocker.", "skills": ["Set", "Block", "Communication"], "traits": ["Game hub", "Central block", "Partial reception exemption"] },
         "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing mid-court: receives and attacks from zone 4.", "skills": ["Attack", "Reception", "Block"], "traits": ["Versatility", "Medium approach", "Short cross-court coverage"] },
         "P2": { "name": "Right wing", "role": "Outside / opposite", "description": "Right wing. If the setter plays center, this is the zone-2 attacker.", "skills": ["Line attack", "Block", "Serve"], "traits": ["Long cross-court attack", "2-person block with middle", "Long cross-court coverage"] },
         "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: covers the left defense, often the best passer.", "skills": ["Forearm pass", "Reception", "Defense"], "traits": ["Defensive pillar", "~30 m² to cover", "Reads the long cross"] },
@@ -127,7 +127,7 @@
       "positions": {
         "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main setter target in zone 4.", "skills": ["Attack", "Block", "Reception"], "traits": ["Versatility", "2-person block with middle", "Setter's favorite target"] },
         "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + quick attack when the reception allows it.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 1 preserved", "Switching possible"] },
-        "P2": { "name": "Front setter", "role": "Setter", "description": "Fixed front setter. No penetration. Distributes from the net; can attack in 2 if the ball comes high on the right side.", "skills": ["Hand set", "Distribution", "Right-side block"], "traits": ["Fixed front", "No penetration", "Occasional zone-2 attack"] },
+        "P2": { "name": "Front setter", "role": "Setter", "description": "Fixed front setter. No penetration. Distributes from the net and can attack in 2 if the ball comes high on the right side.", "skills": ["Hand set", "Distribution", "Right-side block"], "traits": ["Fixed front", "No penetration", "Occasional zone-2 attack"] },
         "P5": { "name": "Back left", "role": "Reception / defense", "description": "Back left: reception on the left + long cross-court defense.", "skills": ["Forearm pass", "Defense", "Reception"], "traits": ["Best passer ideally", "Long cross-court", "Coverage ~30 m²"] },
         "P1": { "name": "Back right", "role": "Serve / defense", "description": "Back right: serves then defends the line and short cross.", "skills": ["Serve", "Defense", "Forearm pass"], "traits": ["Server", "Line + corridor", "Zone-2 attack support"] }
       }
@@ -158,7 +158,7 @@
     "carre": {
       "name": "Box (2-2)",
       "shortName": "Box",
-      "description": "\"Box\" 2-2 formation: 2 players at the net (P4 and P2) + 2 back (P5 and P1). Enables 2-person blocking (B system) — but only useful against very powerful hitters with no finesse, since it leaves only 2 deep defenders (tip uncovered). More often played in A system with a single blocker.",
+      "description": "\"Box\" 2-2 formation: 2 players at the net (P4 and P2) + 2 back (P5 and P1). Enables 2-person blocking (B system), but only useful against very powerful hitters with no finesse, since it leaves only 2 deep defenders (tip uncovered). More often played in A system with a single blocker.",
       "positions": {
         "P4": { "name": "Left wing (net)", "role": "Blocker / attacker", "description": "At the net on the left. Block + attack in zone 4.", "skills": ["Block", "Attack", "Net coverage"], "traits": ["2-person block with right wing", "Possible switch with the setter", "No traditional tempo 1"] },
         "P2": { "name": "Setter-attacker (net)", "role": "Front setter", "description": "Setter-attacker at the net on the right. Always takes the 2nd touch (no penetration in the box).", "skills": ["Set", "Block", "Zone 2 attack"], "traits": ["Always front", "No penetration", "2-person block with the left wing"] },
@@ -169,7 +169,7 @@
     "3-1": {
       "name": "3-1 line (penetrating setter)",
       "shortName": "3-1",
-      "description": "\"3-1 line\" formation: sole setter at P1 (back) who penetrates to zone 2 as soon as the ball is hit. Frees 3 attackers in front — a simplified equivalent of 6v6 5-1. Requires very clean reception and a fast setter. Defense: A system possible (1 central blocker + 3 defenders).",
+      "description": "\"3-1 line\" formation: sole setter at P1 (back) who penetrates to zone 2 as soon as the ball is hit. Frees 3 attackers in front: a simplified equivalent of 6v6 5-1. Requires very clean reception and a fast setter. Defense: A system possible (1 central blocker + 3 defenders).",
       "positions": {
         "P4": { "name": "Left wing", "role": "Outside", "description": "Left wing at the net. Main attacker in zone 4 + reception.", "skills": ["Attack", "Reception", "Block"], "traits": ["#1 target", "3-person reception", "Zone-4 approach"] },
         "P3": { "name": "Middle", "role": "Middle", "description": "Middle at the net. Block + attack in zone 3 if the set is tight.", "skills": ["Block", "Quick attack"], "traits": ["Central block", "Tempo 2 possible", "No reception"] },

@@ -8,7 +8,7 @@
   "list": {
     "techniques-de-base": {
       "title": "Core techniques",
-      "subtitle": "Fundamental skill cards — key points, mistakes, videos",
+      "subtitle": "Fundamental skill cards: key points, mistakes, videos",
       "category": "Technique",
       "description": "Catalogue of the fundamental volleyball skills: passing, setting, spiking, blocking, serving, defense. Filterable cards by category and level, with videos.",
       "readingTime": "~10 min",
@@ -72,7 +72,7 @@
     },
     "lecture-du-jeu": {
       "title": "Reading the game / scouting",
-      "subtitle": "Read server, setter, hitter — and scout the opponent",
+      "subtitle": "Read server, setter, hitter, and scout the opponent",
       "category": "Tactics",
       "description": "Elite eye sequence, cues at serve / pass / attack, IF/THEN framework, pre-match scouting and drills.",
       "readingTime": "~20 min",
@@ -96,7 +96,7 @@
     },
     "erreurs-typiques": {
       "title": "Common mistakes by position",
-      "subtitle": "The 4 most frequent traps for each role — and how to fix them",
+      "subtitle": "The 4 most frequent traps for each role, and how to fix them",
       "category": "Technique",
       "description": "Setter, opposite, middle, outside, libero: 4 recurring mistakes per role with the corrective drill.",
       "readingTime": "~10 min",
