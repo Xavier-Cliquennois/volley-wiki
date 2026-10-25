@@ -31,16 +31,16 @@
   "items": {
     "reception": {
       "name": "Réception / Manchette",
-      "description": "La manchette est le geste défensif universel. Les avant-bras joints forment une plateforme plate dirigeant le ballon vers le passeur. La plateforme est passive — les jambes font le travail de déplacement.",
+      "description": "La manchette est le geste défensif universel. Les avant-bras joints forment une plateforme plate dirigeant le ballon vers le passeur. La plateforme est passive, les jambes font le travail de déplacement.",
       "keyPoints": [
         "Plateforme : avant-bras joints, pouces parallèles vers le bas",
         "Sweet spot entre les poignets et les coudes (pas les poignets seuls)",
-        "\"Le ballon va où la plateforme regarde\" — l'angle commande la direction",
+        "\"Le ballon va où la plateforme regarde\" : l'angle commande la direction",
         "FREEZE au contact : s'immobiliser avant que le ballon arrive",
-        "Ne jamais swinger les bras — la plateforme est passive"
+        "Ne jamais swinger les bras, la plateforme est passive"
       ],
       "errors": [
-        "Swing des bras au contact (cause #1 — ballon imprévisible)",
+        "Swing des bras au contact (cause #1 : ballon imprévisible)",
         "Bras joints trop tôt avant le déplacement",
         "Plateforme cassée (un avant-bras plus haut que l'autre)"
       ],
@@ -52,14 +52,14 @@
       "keyPoints": [
         "Triangle pouce-index : \"fenêtre\" par laquelle on regarde la balle",
         "Contact : pulpe et 1ère phalange du pouce, index et majeur",
-        "Pied droit légèrement avancé — \"viseur\" pointant la cible",
+        "Pied droit légèrement avancé, \"viseur\" pointant la cible",
         "Pieds, hanches, épaules \"squared up\" vers la cible AVANT le contact",
         "Extension complète jambes-hanches-bras-poignets, suivi \"Superman\""
       ],
       "errors": [
         "Double touche visible (contact non simultané des deux mains)",
-        "Épaules perpendiculaires au filet — balle trop loin",
-        "Balle portée (lift) — contact trop lent"
+        "Épaules perpendiculaires au filet, balle trop loin",
+        "Balle portée (lift) : contact trop lent"
       ],
       "when": "Deuxième touche pour préparer l'attaque"
     },
@@ -69,13 +69,13 @@
       "keyPoints": [
         "Course d'élan 3-4 pas : se terminer sur double appel gauche-droite",
         "Règle d'or : les deux derniers pas sont les plus rapides (slow → fast)",
-        "Contact légèrement en avant de l'épaule — jamais derrière la tête",
+        "Contact légèrement en avant de l'épaule, jamais derrière la tête",
         "Snap du poignet : la main \"griffe\" la balle par-dessus → topspin",
         "Sauter VERTICAL, pas vers le filet"
       ],
       "errors": [
         "Timing d'approche incorrect (trop tôt = re-saut sans puissance)",
-        "Pas de snap du poignet — ballon plat sans topspin",
+        "Pas de snap du poignet : ballon plat sans topspin",
         "Atterrissage sur un seul pied (risque ACL)"
       ],
       "when": "Troisième touche pour terminer l'échange"
@@ -92,19 +92,19 @@
       ],
       "errors": [
         "Sauter trop tôt (réagir au plant des pieds de l'attaquant)",
-        "Mains trop molles — ballon rebondit dans son propre camp",
+        "Mains trop molles : le ballon rebondit dans son propre camp",
         "Saut vers l'avant → touche de filet"
       ],
       "when": "En réponse à une attaque adverse au filet"
     },
     "serve": {
       "name": "Service",
-      "description": "Seule action sans pression directe adverse. Quatre types existent selon le niveau. La règle d'or : 80% des erreurs viennent du lancer (toss) — stabiliser le lancer avant de chercher la puissance.",
+      "description": "Seule action sans pression directe adverse. Quatre types existent selon le niveau. La règle d'or : 80% des erreurs viennent du lancer (toss). Stabiliser le lancer avant de chercher la puissance.",
       "keyPoints": [
-        "Float debout : \"punch and freeze\" — arrêter le bras après contact pour aucun spin",
+        "Float debout : \"punch and freeze\", arrêter le bras après contact pour aucun spin",
         "Jump float : même mécanique que float debout + élan court",
         "Jump topspin : snap complet du poignet, réservé après 1000+ reps",
-        "Lancer (toss) stable = service stable — règle #1",
+        "Lancer (toss) stable = service stable, règle #1",
         "Viser les seams (espaces entre réceptionneurs) plus que les joueurs"
       ],
       "errors": [
@@ -121,11 +121,11 @@
         "Position basse : pieds plus larges que les épaules, genoux à ~90°",
         "\"Tête en avant des pieds, épaules en avant des genoux\"",
         "FREEZE absolu au moment où l'attaquant frappe",
-        "Block shadow : si tu ne vois pas l'attaquant, tu es derrière le bloc — repositionne-toi",
-        "Sur smash dur : ne pas armer (la force du smash suffit) — absorber"
+        "Block shadow : si tu ne vois pas l'attaquant, tu es derrière le bloc. Repositionne-toi",
+        "Sur smash dur : ne pas armer (la force du smash suffit), absorber"
       ],
       "errors": [
-        "Encore en mouvement au contact — impossible de contrôler",
+        "Encore en mouvement au contact : impossible de contrôler",
         "Se positionner dans le \"shadow\" du bloc (zone inutile)",
         "Plonger trop tôt alors qu'un pas latéral suffisait"
       ],
