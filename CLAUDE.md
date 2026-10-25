@@ -88,6 +88,25 @@ comme le site, rejoue la timeline et relève qui touche la balle à chaque étap
 signale aussi une balle qui change de trajectoire en l'air sans que personne ne la
 touche. Il sort en erreur au moindre défaut.
 
+## Contenu publié pour l'app mobile
+
+`pnpm build` se termine par `pnpm build:content` (`scripts/build-content.mjs`),
+qui écrit `dist/content/v1/fr.json` et `en.json` pour l'app Volley Quest. Le
+format est le contrat v1 du dépôt de l'app (`docs/wiki-content.md` de
+`Xavier-Cliquennois/volley-quest`), recopié dans
+`scripts/content/validate-contract.mjs`. Les convertisseurs sont dans
+`scripts/content/` (un par guide dans `guides.ts`).
+
+- Publié : indoor seulement (guides sauf `indoor-vs-beach`, positions, règles,
+  glossaire, techniques, exercices), en `fr` et `en`.
+- **Le build échoue** si un texte publié contient le tiret cadratin « — » ou le
+  point-virgule « ; », du HTML autre que `<strong>`, ou sort du contrat. On
+  corrige la phrase dans `src/locales/<langue>/*.json` ou `src/drills/data.ts`,
+  jamais dans le script.
+- Une section ajoutée à `guideContent.json` doit avoir son convertisseur dans
+  `scripts/content/guides.ts` et sa ligne dans la table de correspondance du
+  contrat.
+
 ## Scroll behaviour
 
 - `App.tsx` has a `ScrollToTop` component that scrolls window to top on every route change.
