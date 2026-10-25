@@ -16,7 +16,7 @@ Le gestionnaire de paquets est **pnpm**.
 pnpm install
 pnpm dev        # serveur de développement
 pnpm lint       # eslint
-pnpm build      # tsc -b puis vite build, sortie dans dist/
+pnpm build      # tsc -b, vite build puis build:content, sortie dans dist/
 pnpm preview    # sert dist/ en local
 ```
 
@@ -33,11 +33,12 @@ Il n'y a pas de tests automatiques : `pnpm lint` et `pnpm build` font office de 
 | `src/drills/`, `src/quiz/` | Catalogue d'exercices et module de quiz |
 | `src/constants/positions.ts` | Palette des positions (voir `CLAUDE.md`) |
 | `src/locales/` | Traductions par langue |
+| `scripts/content/`, `scripts/build-content.mjs` | Export JSON du contenu indoor pour l'app mobile (`dist/content/v1/<langue>.json`, voir `CLAUDE.md`) |
 | `docs/` | Matériel de référence et contenu source, pas de plan de travail |
 
 ## Déploiement
 
-`Dockerfile` construit le site et le sert avec nginx ; `docker-compose.prod.yml` le publie derrière Traefik.
+`Dockerfile` construit le site et le sert avec nginx ; `docker-compose.prod.yml` le publie derrière Traefik. `/content/` (JSON de l'app) est servi sans gzip, avec CORS et `Cache-Control: no-cache`.
 
 ## Contribuer
 

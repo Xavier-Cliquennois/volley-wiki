@@ -6,7 +6,8 @@
   "packageManager": "pnpm@12.6.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && pnpm build:content",
+    "build:content": "node scripts/build-content.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "check:scenarios": "node --experimental-strip-types scripts/check-scenarios.ts"
