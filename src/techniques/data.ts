@@ -71,7 +71,7 @@ export const TECHNIQUES_INDOOR: Technique[] = [
     tags: ['Attaque', 'Intermédiaire'],
     discipline: ['indoor'],
     videos: [
-      { title: 'Comment attaquer — 3 étapes (Sikana)', url: 'https://www.youtube.com/watch?v=3aQgfk0VtEA' },
+      { title: 'Comment attaquer en 3 étapes (Sikana)', url: 'https://www.youtube.com/watch?v=3aQgfk0VtEA' },
       { title: 'Le smash au volleyball (CEPSUM)', url: 'https://www.youtube.com/watch?v=Gn1Otje3beg' },
     ],
   },
