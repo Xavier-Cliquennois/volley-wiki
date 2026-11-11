@@ -13,7 +13,32 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@014df23b1329b615816a38eb5f473bb9000700b1 # v3
+
+      # DOPPLER_TOKEN is the only GitHub secret (read-only, scoped to one Doppler
+      # config). Everything else comes from Doppler, masked, then exported below.
+      - name: Load secrets from Doppler
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}
+        run: |
+          set -euo pipefail
+          export_key() {
+            local k="$1" mask="$2" empty_ok="${3:-0}" v
+            v=$(doppler secrets get "$k" --plain)
+            if [ -z "$v" ] && [ "$empty_ok" != 1 ]; then echo "Missing secret: $k"; exit 1; fi
+            if [ "$mask" = 1 ]; then
+              while IFS= read -r line; do [ -n "$line" ] && echo "::add-mask::$line"; done <<< "$v"
+            fi
+            delim="EOF_$(openssl rand -hex 16)"
+            case "$v" in *"$delim"*) echo "Unsafe value for $k"; exit 1 ;; esac
+            { echo "$k<<$delim"; echo "$v"; echo "$delim"; } >> "$GITHUB_ENV"
+          }
+          for k in VPS_HOST VPS_USER SSH_PRIVATE_KEY; do
+            export_key "$k" 1
+          done
 
       - name: Build Docker image
         run: docker build -t ${{ env.IMAGE_NAME }}:latest .
@@ -22,22 +47,22 @@ jobs:
         run: docker save ${{ env.IMAGE_NAME }}:latest | gzip > image.tar.gz
 
       - name: Copy files to server
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@917f8b81dfc1ccd331fef9e2d61bdc6c8be94634 # v0.1.7
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ env.VPS_HOST }}
+          username: ${{ env.VPS_USER }}
+          key: ${{ env.SSH_PRIVATE_KEY }}
           source: "image.tar.gz,docker-compose.prod.yml"
           target: "/tmp/volley-wiki-deploy"
           timeout: 60s
           command_timeout: 30m
 
       - name: Deploy to server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@029f5b4aeeeb58fdfe1410a5d17f967dacf36262 # v1.0.3
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          host: ${{ env.VPS_HOST }}
+          username: ${{ env.VPS_USER }}
+          key: ${{ env.SSH_PRIVATE_KEY }}
           timeout: 60s
           command_timeout: 30m
           script: |
