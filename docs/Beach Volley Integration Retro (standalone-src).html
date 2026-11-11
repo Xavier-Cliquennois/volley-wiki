@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Volley Wiki — Beach Volley · 4 idees UX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <template id="__bundler_thumbnail" data-bg-color="#f5e9d4">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#f5e9d4"/>
+      <!-- top stripe -->
+      <g>
+        <rect x="0" y="80" width="300" height="40" fill="#e2542e"/>
+        <rect x="300" y="80" width="300" height="40" fill="#1d8b8b"/>
+        <rect x="600" y="80" width="300" height="40" fill="#e88aa8"/>
+        <rect x="900" y="80" width="300" height="40" fill="#f0c84c"/>
+      </g>
+      <!-- INDOOR + BEACH stacked title -->
+      <text x="600" y="380" text-anchor="middle" font-family="Bungee, Impact, sans-serif" font-size="160" fill="#1d8b8b" stroke="#1a1812" stroke-width="6" paint-order="stroke">INDOOR</text>
+      <text x="600" y="540" text-anchor="middle" font-family="Bungee, Impact, sans-serif" font-size="160" fill="#e2542e" stroke="#1a1812" stroke-width="6" paint-order="stroke">BEACH</text>
+      <!-- ball stamp -->
+      <g transform="translate(990 660) rotate(-10)">
+        <circle r="80" fill="#f0c84c" stroke="#1a1812" stroke-width="8"/>
+        <circle r="68" fill="none" stroke="#1a1812" stroke-width="3" stroke-dasharray="6 8"/>
+        <text x="0" y="14" text-anchor="middle" font-family="Bungee, Impact, sans-serif" font-size="40" fill="#e2542e" stroke="#1a1812" stroke-width="3" paint-order="stroke">v2</text>
+      </g>
+      <!-- bottom stripe -->
+      <g>
+        <rect x="0" y="720" width="300" height="40" fill="#f0c84c"/>
+        <rect x="300" y="720" width="300" height="40" fill="#e88aa8"/>
+        <rect x="600" y="720" width="300" height="40" fill="#1d8b8b"/>
+        <rect x="900" y="720" width="300" height="40" fill="#e2542e"/>
+      </g>
+    </svg>
+  </template>
+
+  <style>
+    :root {
+      --cream:#f5e9d4; --paper:#ede0c4; --ink:#1a1812;
+      --orange:#e2542e; --teal:#1d8b8b; --pink:#e88aa8; --yellow:#f0c84c;
+      --mint:#b8dab2; --plum:#6b2c5c;
+      --shadow:5px 5px 0 var(--ink);
+      --shadow-sm:3px 3px 0 var(--ink);
+      --shadow-lg:8px 8px 0 var(--ink);
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{
+      background:var(--cream); color:var(--ink);
+      font-family:"DM Sans",sans-serif; font-size:15px; line-height:1.55;
+    }
+    body::before{
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background-image:radial-gradient(rgba(26,24,18,0.06) 1.2px,transparent 1.4px);
+      background-size:14px 14px;
+    }
+    .page{ position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 48px; }
+    .display{ font-family:"Bungee",sans-serif; letter-spacing:0.01em; }
+    .mono{ font-family:"DM Mono",monospace; }
+
+    .stripe{
+      height:12px;
+      background:repeating-linear-gradient(90deg,
+        var(--orange) 0 48px, var(--teal) 48px 96px,
+        var(--pink) 96px 144px, var(--yellow) 144px 192px);
+    }
+
+    .mast{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:24px 0; border-bottom:3px solid var(--ink);
+    }
+    .mast-ball{
+      width:48px; height:48px; border-radius:50%;
+      background:var(--orange); border:3px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      transform:rotate(-8deg); box-shadow:var(--shadow-sm);
+    }
+
+    .section-head{
+      display:flex; align-items:center; gap:18px;
+      padding:64px 0 28px;
+    }
+    .section-head .rule{ flex:1; height:3px; background:var(--ink); }
+    .section-head .star{
+      font-family:"Bungee",sans-serif; color:var(--orange);
+      font-size:14px; letter-spacing:0.2em; white-space:nowrap;
+    }
+    .section-head h2{
+      font-family:"Bungee",sans-serif; font-size:30px; margin:0;
+      letter-spacing:0.04em; white-space:nowrap;
+    }
+
+    .badge{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:4px 12px; border:2.5px solid var(--ink);
+      background:var(--yellow);
+      font-family:"Bungee",sans-serif; font-size:10px; letter-spacing:0.1em;
+    }
+    .badge-orange{ background:var(--orange); }
+    .badge-teal{ background:var(--teal); color:var(--cream); }
+    .badge-pink{ background:var(--pink); }
+    .badge-mint{ background:var(--mint); }
+    .badge-tilt{ transform:rotate(-3deg); box-shadow:3px 3px 0 var(--ink); }
+    .badge-tilt-r{ transform:rotate(3deg); box-shadow:3px 3px 0 var(--ink); }
+
+    .chip{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:4px 12px; background:var(--cream); border:2.5px solid var(--ink);
+      font-family:"DM Mono",monospace; font-size:12px; font-weight:500;
+      border-radius:999px;
+    }
+    .chip-dot{ width:8px; height:8px; border-radius:50%; background:var(--orange); }
+
+    .tile{
+      background:var(--cream); border:3px solid var(--ink);
+      box-shadow:var(--shadow); padding:22px; position:relative;
+    }
+    .tile-flat{ box-shadow:none; }
+    .ticket-no{
+      position:absolute; top:-10px; right:14px;
+      padding:2px 10px; background:var(--cream);
+      border:2.5px solid var(--ink);
+      font-family:"Bungee",sans-serif; font-size:11px;
+    }
+
+    .eyebrow{ font-family:"Bungee",sans-serif; font-size:11px; letter-spacing:0.18em; color:var(--ink); }
+    .eyebrow-orange{ color:var(--orange); }
+    .eyebrow-teal{ color:var(--teal); }
+    .eyebrow-plum{ color:var(--plum); }
+
+    /* Mock frame */
+    .mock{
+      border:3px solid var(--ink);
+      background:var(--paper);
+      box-shadow:var(--shadow-lg);
+      position:relative;
+      margin: 8px 0;
+    }
+    .mock-ribbon{
+      position:absolute; top:-14px; left:24px;
+      padding:4px 14px; background:var(--ink); color:var(--cream);
+      font-family:"Bungee",sans-serif; font-size:11px; letter-spacing:0.16em;
+    }
+
+    .wk{
+      background:var(--cream);
+      margin:18px;
+      border:3px solid var(--ink);
+      box-shadow:var(--shadow-sm);
+    }
+    .wk-stripe{
+      height:8px;
+      background:repeating-linear-gradient(90deg,
+        var(--orange) 0 32px, var(--teal) 32px 64px,
+        var(--pink) 64px 96px, var(--yellow) 96px 128px);
+    }
+    .wk-bar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 14px; background:var(--paper);
+      border-bottom:3px solid var(--ink); gap:14px;
+    }
+    .wk-logo{ display:flex; align-items:center; gap:10px; }
+    .wk-logo-ball{
+      width:30px; height:30px; border-radius:50%;
+      background:var(--orange); border:2.5px solid var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-family:"Bungee",sans-serif; font-size:13px;
+      transform:rotate(-6deg); box-shadow:2px 2px 0 var(--ink);
+    }
+    .wk-name{ font-family:"Bungee",sans-serif; font-size:14px; line-height:1; }
+    .wk-tag{ font-family:"DM Mono",monospace; font-size:9px; color:var(--teal); letter-spacing:0.15em; }
+
+    .wk-nav{ display:flex; gap:4px; }
+    .wk-nav a{
+      padding:5px 10px; font-family:"Bungee",sans-serif;
+      font-size:10px; letter-spacing:0.06em; color:var(--ink);
+      text-decoration:none; border:2.5px solid transparent;
+      background:transparent;
+    }
+    .wk-nav a.is-on{ background:var(--ink); color:var(--cream); border-color:var(--ink); }
+    .wk-nav a.is-beach{ background:var(--orange); border-color:var(--ink); box-shadow:2px 2px 0 var(--ink); }
+
+    .tabs{ display:inline-flex; border:3px solid var(--ink); box-shadow:var(--shadow-sm); background:var(--cream); }
+    .tab{
+      padding:8px 16px; font-family:"Bungee",sans-serif; font-size:11px;
+      letter-spacing:0.08em; cursor:pointer; border-right:3px solid var(--ink);
+    }
+    .tab:last-child{ border-right:0; }
+    .tab-indoor.is-on{ background:var(--teal); color:var(--cream); }
+    .tab-beach.is-on{ background:var(--orange); color:var(--ink); }
+
+    .notes-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:24px; }
+    .note-card{
+      background:var(--cream); border:3px solid var(--ink);
+      box-shadow:var(--shadow-sm); padding:18px;
+    }
+    .note-card h4{
+      font-family:"Bungee",sans-serif; font-size:13px; letter-spacing:0.08em;
+      margin:0 0 14px; padding-bottom:8px;
+      border-bottom:3px solid var(--ink);
+    }
+    .note-card.pros h4{ color:var(--teal); }
+    .note-card.cons h4{ color:var(--orange); }
+    .note-card.devs h4{ color:var(--plum); }
+    .note-card ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; }
+    .note-card li{ font-size:13.5px; line-height:1.4; display:flex; gap:10px; }
+    .note-card li::before{
+      flex-shrink:0; width:18px; font-family:"Bungee",sans-serif; font-size:13px;
+    }
+    .note-card.pros li::before{ content:"+"; color:var(--teal); }
+    .note-card.cons li::before{ content:"-"; color:var(--orange); }
+    .note-card.devs li::before{ content:"\25B8"; color:var(--plum); }
+
+    code, .code{
+      font-family:"Space Mono",monospace; background:var(--paper);
+      padding:1px 6px; border:1.5px solid rgba(26,24,18,0.2); font-size:12.5px;
+    }
+    pre.snip{
+      font-family:"Space Mono",monospace;
+      background:var(--ink); color:var(--cream);
+      padding:14px 16px; margin:0;
+      border:3px solid var(--ink); box-shadow:var(--shadow-sm);
+      font-size:12px; line-height:1.6; overflow-x:auto;
+      white-space:pre;
+    }
+    pre.snip .k{ color:var(--yellow); }
+    pre.snip .c{ color:#a09988; }
+    pre.snip .s{ color:var(--pink); }
+    pre.snip .n{ color:var(--mint); }
+
+    .court-mini{
+      position:relative; aspect-ratio:2/1; background:var(--paper);
+      border:3px solid var(--ink); box-shadow:var(--shadow-sm);
+      background-image:
+        repeating-linear-gradient(0deg,transparent 0 22px,rgba(26,24,18,0.05) 22px 23px),
+        repeating-linear-gradient(90deg,transparent 0 22px,rgba(26,24,18,0.05) 22px 23px);
+    }
+    .court-mini::after{
+      content:""; position:absolute; top:0; bottom:0; left:50%;
+      width:4px; background:var(--orange);
+      border-left:1.5px solid var(--ink); border-right:1.5px solid var(--ink);
+      transform:translateX(-50%);
+    }
+    .court-mini .p{
+      position:absolute; width:18px; height:18px; border-radius:50%;
+      background:var(--orange); border:2.5px solid var(--ink);
+      transform:translate(-50%,-50%); box-shadow:2px 2px 0 var(--ink);
+    }
+
+    .stat-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:3px solid var(--ink); }
+    .stat-strip > div{ padding:10px 12px; border-right:3px solid var(--ink); background:var(--cream); }
+    .stat-strip > div:last-child{ border-right:0; }
+    .stat-strip .v{ font-family:"Bungee",sans-serif; font-size:18px; }
+    .stat-strip .l{ font-family:"DM Mono",monospace; font-size:9px; letter-spacing:0.15em; color:var(--teal); }
+
+    .sticker{
+      position:absolute; top:-10px; right:-10px;
+      padding:4px 10px; background:var(--orange);
+      border:2.5px solid var(--ink); box-shadow:2px 2px 0 var(--ink);
+      font-family:"Bungee",sans-serif; font-size:9px; letter-spacing:0.1em;
+      transform:rotate(6deg); white-space:nowrap;
+    }
+    .sticker.indoor{ background:var(--teal); color:var(--cream); transform:rotate(-6deg); }
+    .sticker.both{ background:var(--mint); }
+
+    .matrix{ width:100%; border-collapse:separate; border-spacing:0; border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--cream); }
+    .matrix th, .matrix td{ padding:12px 14px; border-right:2.5px solid var(--ink); border-bottom:2.5px solid var(--ink); vertical-align:top; font-size:13px; }
+    .matrix tr:last-child td{ border-bottom:0; }
+    .matrix th:last-child, .matrix td:last-child{ border-right:0; }
+    .matrix th{ background:var(--ink); color:var(--cream); font-family:"Bungee",sans-serif; font-size:11px; letter-spacing:0.1em; text-align:left; }
+    .matrix td:first-child{ font-family:"Bungee",sans-serif; font-size:11px; letter-spacing:0.06em; background:var(--paper); width:18%; }
+    .matrix .good{ color:var(--teal); font-weight:700; }
+    .matrix .bad{ color:var(--orange); font-weight:700; }
+    .matrix .meh{ color:var(--plum); font-weight:700; }
+
+    .poster{
+      background:var(--yellow); border:4px solid var(--ink); box-shadow:var(--shadow-lg);
+      padding:32px 36px; position:relative; overflow:hidden;
+    }
+    .poster::before{
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:0.4;
+      background-image:radial-gradient(rgba(26,24,18,0.18) 1.3px,transparent 1.4px);
+      background-size:16px 16px;
+    }
+    .poster > *{ position:relative; }
+    .poster-stamp{
+      position:absolute; top:24px; right:24px;
+      width:120px; height:120px; border-radius:50%;
+      background:var(--pink); border:4px solid var(--ink);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      transform:rotate(-10deg); box-shadow:var(--shadow);
+    }
+    .poster h3{ font-family:"Bungee",sans-serif; font-size:36px; margin:8px 0 12px; line-height:0.95; }
+
+    .steps{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:14px; }
+    .steps > li{ display:flex; gap:16px; align-items:flex-start; }
+    .step-num{
+      width:46px; height:46px; flex-shrink:0; border-radius:50%;
+      background:var(--orange); border:3px solid var(--ink); box-shadow:2px 2px 0 var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      font-family:"Bungee",sans-serif; font-size:18px;
+    }
+
+    a{ color:var(--orange); font-weight:600; }
+  </style>
+</head>
+<body>
+
+  <div class="stripe"></div>
+
+  <div class="page">
+
+    <header class="mast">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div class="mast-ball"><span class="display" style="font-size:22px;">V</span></div>
+        <div>
+          <div class="display" style="font-size:22px; line-height:1;">VOLLEY&middot;WIKI</div>
+          <div class="mono" style="font-size:11px; letter-spacing:0.18em; color:var(--teal);">SPEC UX &middot; BEACH &times; INDOOR</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:10px;">
+        <span class="badge badge-tilt">&#9733; 4 IDEES &#9733;</span>
+        <span class="badge badge-orange badge-tilt-r">POUR CLAUDE CODE</span>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section style="padding:48px 0 16px;">
+      <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:36px; align-items:center;">
+        <div>
+          <div style="display:inline-block; padding:5px 14px; background:var(--pink); border:3px solid var(--ink); box-shadow:var(--shadow-sm); transform:rotate(-2deg); margin-bottom:16px;">
+            <span class="display" style="font-size:11px; letter-spacing:0.1em;">&#9733; LE PROBLEME &#9733;</span>
+          </div>
+          <h1 class="display" style="font-size:64px; line-height:0.95; margin:0;">
+            <span style="color:var(--teal); text-shadow:4px 4px 0 var(--ink);">INDOOR</span>
+            <span style="font-size:38px; color:var(--ink);"> + </span>
+            <span style="color:var(--orange); text-shadow:4px 4px 0 var(--ink);">BEACH</span>
+          </h1>
+          <p style="font-size:16px; max-width:520px; margin-top:18px;">
+            Le wiki ne couvre que l'indoor. On veut <b>ajouter le beach (2v2)</b> sans casser l'existant. Cette spec propose <b>4 mecaniques UX</b> pour gerer la double documentation &mdash; toutes mockees dans le systeme retro.
+          </p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <div style="width:240px; height:240px; border-radius:50%; background:var(--yellow); border:4px solid var(--ink); position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; transform:rotate(-6deg); box-shadow:var(--shadow-lg);">
+            <div style="position:absolute; inset:12px; border-radius:50%; border:2px dashed var(--ink);"></div>
+            <div class="display" style="font-size:11px; letter-spacing:0.2em; color:var(--teal);">&#9733; QUESTION &#9733;</div>
+            <div class="display" style="font-size:32px; line-height:1; margin:6px 0; color:var(--orange); text-shadow:3px 3px 0 var(--ink);">UN OU<br/>DEUX&nbsp;?</div>
+            <div class="display" style="font-size:10px; color:var(--ink);">SITES &middot; ONGLETS &middot; FILTRES</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT MAP -->
+    <section style="padding-top:32px;">
+      <div class="tile" style="padding:24px 26px;">
+        <div class="display" style="font-size:14px; letter-spacing:0.1em; color:var(--orange); margin-bottom:14px;">&#9733; AVANT TOUT &mdash; QUI PARTAGE QUOI&nbsp;?</div>
+        <p style="margin:0 0 20px; font-size:14px; max-width:780px;">
+          Le bon modele UX depend du <b>taux de partage</b> entre indoor et beach. Cartographie des 6 sections actuelles&nbsp;:
+        </p>
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:10px;">
+          <div class="tile-flat" style="padding:12px; background:var(--paper); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">TECHNIQUES</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~60%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">+ pokey, cobra beach</div>
+          </div>
+          <div class="tile-flat" style="padding:12px; background:var(--paper); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">POSITIONS</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~10%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">6 postes vs 2 roles</div>
+          </div>
+          <div class="tile-flat" style="padding:12px; background:var(--paper); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">SCENARIOS</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~5%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">Rotations vs on/off</div>
+          </div>
+          <div class="tile-flat" style="padding:12px; background:var(--paper); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">GUIDES</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~40%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">Tactique commune</div>
+          </div>
+          <div class="tile-flat" style="padding:12px; background:var(--mint); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">REGLES</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~80%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">12 differences listees</div>
+          </div>
+          <div class="tile-flat" style="padding:12px; background:var(--mint); border:3px solid var(--ink);">
+            <div class="display" style="font-size:11px; color:var(--orange);">GLOSSAIRE</div>
+            <div style="margin-top:8px; font-size:12px;"><b>~75%</b> partage</div>
+            <div style="font-size:11px; color:var(--plum); margin-top:4px;">+ ~15 termes beach</div>
+          </div>
+        </div>
+        <div style="margin-top:18px; display:flex; gap:14px; align-items:flex-start; padding:14px 18px; border:3px solid var(--ink); box-shadow:var(--shadow); background:var(--mint);">
+          <div style="width:30px; height:30px; border-radius:50%; border:3px solid var(--ink); display:flex; align-items:center; justify-content:center; background:var(--cream); flex-shrink:0; font-family:Bungee; font-size:14px;">!</div>
+          <div style="font-size:13.5px;">
+            <b>Le desequilibre est fort</b> &mdash; Positions/Scenarios sont quasi-disjoints (donc bascule), Regles/Glossaire sont tres partages (donc unifies). Une seule mecanique ne couvre pas tout&nbsp;: la <b>reco finale</b> est hybride.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================ OPTION A ============================ -->
+    <div class="section-head" id="opt-a">
+      <span class="star">&#9733; IDEE 01 &#9733;</span>
+      <h2>LE GROS SWITCHER</h2>
+      <div class="rule"></div>
+      <span class="badge badge-teal">SIMPLE</span>
+    </div>
+
+    <p style="max-width:780px; margin:0 0 20px; font-size:15px;">
+      Deux <b>onglets chunky</b> dans le header &mdash; comme un dark mode, sauf que ca bascule entre <span style="color:var(--teal); font-weight:700;">INDOOR</span> et <span style="color:var(--orange); font-weight:700;">BEACH</span>. Le reste de la nav ne change pas, mais <b>chaque page se reconfigure</b> selon le mode choisi. Etat sauvegarde.
+    </p>
+
+    <div class="mock">
+      <div class="mock-ribbon">&#9733; MAQUETTE &middot; MODE BEACH &#9733;</div>
+      <div class="wk">
+        <div class="wk-stripe"></div>
+        <div class="wk-bar">
+          <div class="wk-logo">
+            <div class="wk-logo-ball">V</div>
+            <div>
+              <div class="wk-name">VOLLEY&middot;WIKI</div>
+              <div class="wk-tag">TECHNIQUES &middot; REGLES &middot; TACTIQUES</div>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="tab tab-indoor">INDOOR</div>
+            <div class="tab tab-beach is-on">BEACH</div>
+          </div>
+          <nav class="wk-nav">
+            <a>Accueil</a><a>Techniques</a><a class="is-on">Positions</a><a>Regles</a><a>Glossaire</a>
+          </nav>
+        </div>
+
+        <div style="padding:22px 24px; display:grid; grid-template-columns:1.2fr 1fr; gap:24px;">
+          <div>
+            <div class="eyebrow eyebrow-orange">&#9733; BEACH &middot; 2 CONTRE 2</div>
+            <h3 class="display" style="font-size:32px; margin:8px 0 10px;">LES POSTES EN BEACH</h3>
+            <p style="margin:0 0 14px; font-size:13.5px;">
+              Pas de rotation, deux roles fixes en defense&nbsp;: le <b>bloqueur</b> au filet et le <b>defenseur</b> en fond. Les roles s'inversent service apres service.
+            </p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+              <div style="padding:12px; border:3px solid var(--ink); background:var(--paper); position:relative;">
+                <span class="sticker">BLOQUEUR</span>
+                <div style="font-size:11px; color:var(--orange); font-family:Bungee;">FILET</div>
+                <p style="margin:4px 0 0; font-size:12px;">Signaux main dans le dos. Bloque ligne ou diagonale.</p>
+              </div>
+              <div style="padding:12px; border:3px solid var(--ink); background:var(--paper); position:relative;">
+                <span class="sticker indoor">DEFENSEUR</span>
+                <div style="font-size:11px; color:var(--orange); font-family:Bungee;">FOND</div>
+                <p style="margin:4px 0 0; font-size:12px;">Couvre la zone opposee au bloc, lit la defense.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:6px;">&#9733; TERRAIN &middot; 16 &times; 8 M</div>
+            <div class="court-mini">
+              <div class="p" style="left:20%; top:30%;"></div>
+              <div class="p" style="left:32%; top:72%;"></div>
+              <div class="p" style="left:68%; top:30%;"></div>
+              <div class="p" style="left:80%; top:72%;"></div>
+            </div>
+            <div class="stat-strip" style="margin-top:10px;">
+              <div><div class="l">FILET</div><div class="v">2,43 M</div></div>
+              <div><div class="l">SET</div><div class="v">21 PTS</div></div>
+              <div><div class="l">FINAL</div><div class="v">15 PTS</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:10px 24px; background:var(--paper); border-top:3px solid var(--ink); font-family:DM Mono,monospace; font-size:10px; letter-spacing:0.15em; color:var(--teal);">
+          &#9733; MODE SAUVEGARDE &middot; INDOOR A 1 CLIC
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-grid">
+      <div class="note-card pros">
+        <h4>POUR</h4>
+        <ul>
+          <li>Modele mental trivial &mdash; comme un dark mode</li>
+          <li>Aucune nouvelle entree dans la nav</li>
+          <li>Chaque page reste focalisee sur une discipline</li>
+          <li>Le wiki existant ne bouge pas visuellement</li>
+        </ul>
+      </div>
+      <div class="note-card cons">
+        <h4>CONTRE</h4>
+        <ul>
+          <li>Comparer indoor / beach demande de basculer</li>
+          <li>Le toggle peut passer inapercu pour un nouveau visiteur</li>
+          <li>Force la <b>duplication</b> des regles/glossaire partages</li>
+          <li>SEO&nbsp;: deux fois moins de pages indexables</li>
+        </ul>
+      </div>
+      <div class="note-card devs">
+        <h4>POUR CLAUDE CODE</h4>
+        <ul>
+          <li>Nouveau <code>DisciplineContext</code> en React</li>
+          <li>Persister dans <code>localStorage("vw.discipline")</code></li>
+          <li>Toggle injecte dans <code>Layout.tsx</code></li>
+          <li>Donnees separees&nbsp;: <code>positions.indoor.ts</code> / <code>positions.beach.ts</code></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ============================ OPTION B ============================ -->
+    <div class="section-head" id="opt-b">
+      <span class="star" style="color:var(--teal);">&#9733; IDEE 02 &#9733;</span>
+      <h2>TICKET BEACH DANS LA NAV</h2>
+      <div class="rule"></div>
+      <span class="badge badge-pink">DECOUVRABLE</span>
+    </div>
+
+    <p style="max-width:780px; margin:0 0 20px; font-size:15px;">
+      Beach devient un <b>onglet de premier niveau</b> avec sa propre couleur (orange sable) et son propre univers&nbsp;: son accueil, ses techniques, ses positions. Indoor reste le defaut implicite &mdash; pas besoin de toggle, le mot "Beach" est visible direct.
+    </p>
+
+    <div class="mock">
+      <div class="mock-ribbon">&#9733; MAQUETTE &middot; L'ONGLET BEACH &#9733;</div>
+      <div class="wk">
+        <div class="wk-stripe"></div>
+        <div class="wk-bar">
+          <div class="wk-logo">
+            <div class="wk-logo-ball">V</div>
+            <div>
+              <div class="wk-name">VOLLEY&middot;WIKI</div>
+              <div class="wk-tag">TECHNIQUES &middot; REGLES &middot; TACTIQUES</div>
+            </div>
+          </div>
+          <nav class="wk-nav">
+            <a>Accueil</a><a>Techniques</a><a>Positions</a><a>Scenarios</a><a>Guides</a><a>Regles</a><a>Glossaire</a>
+            <span style="width:3px; align-self:stretch; background:var(--ink); margin:0 6px;"></span>
+            <a class="is-beach">BEACH</a>
+          </nav>
+        </div>
+
+        <div style="padding:22px 24px;">
+          <div class="eyebrow eyebrow-orange" style="margin-bottom:6px;">&#9733; ACCUEIL &middot; BEACH</div>
+          <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;">
+            <h3 class="display" style="font-size:42px; margin:0; line-height:0.95;">
+              <span style="color:var(--orange); text-shadow:3px 3px 0 var(--ink);">BEACH</span>&middot;<span style="color:var(--teal); text-shadow:3px 3px 0 var(--ink);">VOLLEY</span>
+            </h3>
+            <span class="badge badge-orange badge-tilt-r">2 vs 2 &middot; 21 PTS</span>
+          </div>
+          <p style="font-size:13.5px; max-width:600px; margin:14px 0 18px;">
+            Le volley en plein air a deux&nbsp;: un sport jumeau avec ses propres techniques, ses propres tactiques, et un reglement FIVB distinct.
+          </p>
+
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px;">
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="ticket-no">01</span>
+              <div class="display" style="font-size:13px; color:var(--orange);">TECHNIQUES</div>
+              <p style="margin:6px 0 0; font-size:12px;">Pokey, cobra, signaux main</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="ticket-no">02</span>
+              <div class="display" style="font-size:13px; color:var(--orange);">ROLES 2v2</div>
+              <p style="margin:6px 0 0; font-size:12px;">Bloqueur &middot; defenseur</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="ticket-no">03</span>
+              <div class="display" style="font-size:13px; color:var(--orange);">REGLES BEACH</div>
+              <p style="margin:6px 0 0; font-size:12px;">12 differences vs indoor</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative; background:var(--mint);">
+              <span class="ticket-no">04</span>
+              <div class="display" style="font-size:13px; color:var(--orange);">VENT &amp; SOLEIL</div>
+              <p style="margin:6px 0 0; font-size:12px;">Lecture conditions, hors-court</p>
+            </div>
+          </div>
+
+          <div style="margin-top:16px; display:flex; gap:14px; align-items:flex-start; padding:12px 14px; border:3px solid var(--ink); box-shadow:var(--shadow-sm); background:var(--yellow);">
+            <div style="width:26px; height:26px; border-radius:50%; border:3px solid var(--ink); display:flex; align-items:center; justify-content:center; background:var(--cream); flex-shrink:0; font-family:Bungee; font-size:12px;">&#8597;</div>
+            <div style="font-size:12.5px;">
+              <b>Les regles communes restent dans la section Regles principale</b>, avec un encart "en beach" ou c'est different.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-grid">
+      <div class="note-card pros">
+        <h4>POUR</h4>
+        <ul>
+          <li>Decouvrabilite maximale &mdash; le mot "Beach" est visible</li>
+          <li>URLs propres&nbsp;: <code>/beach/positions</code></li>
+          <li>Permet du contenu beach-only (vent, sable...)</li>
+          <li>Coherent avec la navigation actuelle</li>
+        </ul>
+      </div>
+      <div class="note-card cons">
+        <h4>CONTRE</h4>
+        <ul>
+          <li>Nav a 8 items, tendu sur mobile</li>
+          <li>Hierarchie ambigue&nbsp;: indoor "frere" ou defaut&nbsp;?</li>
+          <li>Duplication possible entre "Regles" et "Beach / Regles"</li>
+        </ul>
+      </div>
+      <div class="note-card devs">
+        <h4>POUR CLAUDE CODE</h4>
+        <ul>
+          <li>Etendre <code>NAV_LINKS</code> dans <code>Layout.tsx</code></li>
+          <li>Nouveau dossier <code>src/pages/beach/</code></li>
+          <li>Route nested <code>/beach/*</code></li>
+          <li>Mobile&nbsp;: remonter "Beach" en tete du burger</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ============================ OPTION C ============================ -->
+    <div class="section-head" id="opt-c">
+      <span class="star" style="color:var(--plum);">&#9733; IDEE 03 &#9733;</span>
+      <h2>L'AFFICHE SPLIT &mdash; DEUX MONDES</h2>
+      <div class="rule"></div>
+      <span class="badge badge-pink">FORT</span>
+    </div>
+
+    <p style="max-width:780px; margin:0 0 20px; font-size:15px;">
+      L'accueil devient une <b>affiche binaire facon poster de tournoi</b> &mdash; INDOOR a gauche en teal, BEACH a droite en orange. L'utilisateur entre dans un univers et y reste. Un petit interrupteur en haut permet de basculer a tout moment.
+    </p>
+
+    <div class="mock">
+      <div class="mock-ribbon">&#9733; MAQUETTE &middot; LANDING SPLIT &#9733;</div>
+      <div class="wk">
+        <div class="wk-stripe"></div>
+        <div class="wk-bar">
+          <div class="wk-logo">
+            <div class="wk-logo-ball">V</div>
+            <div>
+              <div class="wk-name">VOLLEY&middot;WIKI</div>
+              <div class="wk-tag">CHOISIS TA DISCIPLINE</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:8px; font-family:Bungee; font-size:10px; letter-spacing:0.1em;">
+            <span style="padding:4px 10px; border:2.5px solid var(--ink); background:var(--cream);">A PROPOS</span>
+            <span style="padding:4px 10px; border:2.5px solid var(--ink); background:var(--cream);">GLOSSAIRE COMMUN</span>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; min-height:340px;">
+          <div style="padding:32px 28px; background:linear-gradient(135deg, var(--teal) 0%, #248080 100%); color:var(--cream); position:relative; border-right:4px solid var(--ink);">
+            <div style="position:absolute; inset:0; opacity:0.15; pointer-events:none; background-image:radial-gradient(rgba(245,233,212,0.6) 1.3px,transparent 1.4px); background-size:14px 14px;"></div>
+            <div style="position:relative;">
+              <div class="display" style="font-size:11px; letter-spacing:0.18em; color:var(--yellow);">&#9733; DISCIPLINE 01</div>
+              <div class="display" style="font-size:64px; line-height:0.95; margin-top:8px; text-shadow:4px 4px 0 var(--ink);">INDOOR</div>
+              <div class="display" style="font-size:14px; margin-top:6px; letter-spacing:0.1em;">6v6 &middot; 5v5 &middot; 4v4</div>
+              <p style="margin:14px 0 0; font-size:13px; max-width:280px; line-height:1.5;">
+                Le volley en salle. Six joueurs, rotations FIVB, libero, six positions, terrain 18&times;9 m.
+              </p>
+              <div class="stat-strip" style="margin-top:18px; background:var(--cream); color:var(--ink);">
+                <div><div class="l">PAGES</div><div class="v">42</div></div>
+                <div><div class="l">TECHNIQUES</div><div class="v">18</div></div>
+                <div><div class="l">SCENARIOS</div><div class="v">9</div></div>
+              </div>
+              <div style="display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border:3px solid var(--cream); background:var(--ink); color:var(--cream); font-family:Bungee; font-size:13px; letter-spacing:0.08em; margin-top:22px; box-shadow:5px 5px 0 var(--cream);">
+                ENTRER &rarr;
+              </div>
+            </div>
+          </div>
+          <div style="padding:32px 28px; background:linear-gradient(135deg, var(--orange) 0%, #c44219 100%); color:var(--cream); position:relative;">
+            <div style="position:absolute; inset:0; opacity:0.15; pointer-events:none; background-image:radial-gradient(rgba(245,233,212,0.6) 1.3px,transparent 1.4px); background-size:14px 14px;"></div>
+            <div style="position:relative;">
+              <div class="display" style="font-size:11px; letter-spacing:0.18em; color:var(--yellow);">&#9733; DISCIPLINE 02</div>
+              <div class="display" style="font-size:64px; line-height:0.95; margin-top:8px; text-shadow:4px 4px 0 var(--ink);">BEACH</div>
+              <div class="display" style="font-size:14px; margin-top:6px; letter-spacing:0.1em;">2v2 &middot; SABLE &middot; PLEIN AIR</div>
+              <p style="margin:14px 0 0; font-size:13px; max-width:280px; line-height:1.5;">
+                Le volley en duo, sur sable. Pas de rotation, signaux main, lecture du vent. Olympique depuis 1996.
+              </p>
+              <div class="stat-strip" style="margin-top:18px; background:var(--cream); color:var(--ink);">
+                <div><div class="l">PAGES</div><div class="v">14</div></div>
+                <div><div class="l">TECHNIQUES</div><div class="v">11</div></div>
+                <div><div class="l">SCENARIOS</div><div class="v">5</div></div>
+              </div>
+              <div style="display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border:3px solid var(--cream); background:var(--ink); color:var(--cream); font-family:Bungee; font-size:13px; letter-spacing:0.08em; margin-top:22px; box-shadow:5px 5px 0 var(--cream);">
+                ENTRER &rarr;
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:10px 24px; background:var(--paper); border-top:3px solid var(--ink); font-family:DM Mono,monospace; font-size:10px; letter-spacing:0.15em; color:var(--plum); display:flex; align-items:center; gap:10px;">
+          <span style="font-family:Bungee; color:var(--orange);">&#8597;</span> GLOSSAIRE &amp; REGLES COMMUNES SONT PARTAGES ENTRE LES DEUX UNIVERS
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-grid">
+      <div class="note-card pros">
+        <h4>POUR</h4>
+        <ul>
+          <li>Statement fort&nbsp;: "deux sports, un wiki"</li>
+          <li>Scale aux variantes (snow, sit, 4v4 fun)</li>
+          <li>Chaque univers reste minimal et focus</li>
+          <li>Tres photogenique &mdash; super pour partage social</li>
+        </ul>
+      </div>
+      <div class="note-card cons">
+        <h4>CONTRE</h4>
+        <ul>
+          <li>+1 clic a chaque visite (sauf memoire)</li>
+          <li>Recherche transversale plus complexe</li>
+          <li>Risque de "ghost town" beach les premiers mois</li>
+          <li>Refonte importante du routing</li>
+        </ul>
+      </div>
+      <div class="note-card devs">
+        <h4>POUR CLAUDE CODE</h4>
+        <ul>
+          <li>Route <code>/</code> = selecteur</li>
+          <li>Routes <code>/indoor/*</code> et <code>/beach/*</code></li>
+          <li>Memo&nbsp;: redirect vers la derniere discipline visitee</li>
+          <li><code>Layout</code> commun avec prop <code>accent</code></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- ============================ OPTION D ============================ -->
+    <div class="section-head" id="opt-d">
+      <span class="star" style="color:var(--teal);">&#9733; IDEE 04 &#9733;</span>
+      <h2>STICKERS PARTOUT + FILTRE</h2>
+      <div class="rule"></div>
+      <span class="badge badge-mint">UNIFIE</span>
+    </div>
+
+    <p style="max-width:780px; margin:0 0 20px; font-size:15px;">
+      Modele <b>Wikipedia</b>&nbsp;: une seule arborescence. Chaque carte, chaque entree porte un <b>sticker de discipline</b> &mdash; <span style="background:var(--teal); color:var(--cream); padding:1px 6px; font-family:Bungee; font-size:11px;">INDOOR</span> &middot; <span style="background:var(--orange); padding:1px 6px; font-family:Bungee; font-size:11px;">BEACH</span> &middot; <span style="background:var(--mint); padding:1px 6px; font-family:Bungee; font-size:11px;">2 EN 1</span>. Un filtre en haut de chaque page permet de masquer une discipline.
+    </p>
+
+    <div class="mock">
+      <div class="mock-ribbon">&#9733; MAQUETTE &middot; GLOSSAIRE AVEC STICKERS &#9733;</div>
+      <div class="wk">
+        <div class="wk-stripe"></div>
+        <div class="wk-bar">
+          <div class="wk-logo">
+            <div class="wk-logo-ball">V</div>
+            <div>
+              <div class="wk-name">VOLLEY&middot;WIKI</div>
+              <div class="wk-tag">TECHNIQUES &middot; REGLES &middot; TACTIQUES</div>
+            </div>
+          </div>
+          <nav class="wk-nav">
+            <a>Accueil</a><a>Techniques</a><a>Positions</a><a>Regles</a><a class="is-on">Glossaire</a>
+          </nav>
+        </div>
+
+        <div style="padding:22px 24px;">
+          <div style="display:flex; align-items:baseline; gap:14px;">
+            <div class="eyebrow eyebrow-orange">&#9733; VOCABULAIRE</div>
+            <h3 class="display" style="font-size:30px; margin:0;">GLOSSAIRE</h3>
+            <span class="badge badge-tilt-r">74 TERMES</span>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:10px; margin:16px 0 18px; flex-wrap:wrap;">
+            <span class="eyebrow" style="font-size:10px;">&#9733; FILTRER</span>
+            <span class="chip" style="background:var(--yellow);"><span class="chip-dot" style="background:var(--ink);"></span> TOUTES</span>
+            <span class="chip"><span class="chip-dot" style="background:var(--teal);"></span> INDOOR</span>
+            <span class="chip"><span class="chip-dot"></span> BEACH</span>
+            <span class="chip"><span class="chip-dot" style="background:var(--mint);"></span> COMMUNS</span>
+            <span style="flex:1;"></span>
+            <span style="padding:6px 12px; border:3px solid var(--ink); background:var(--cream); font-family:DM Mono,monospace; font-size:11px;">&#128269; chercher un terme...</span>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker both">2 EN 1</span>
+              <div class="display" style="font-size:14px;">PANCAKE</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Main a plat sur le sol juste avant l'impact &mdash; le ballon rebondit sur le dos de la main.</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker">BEACH</span>
+              <div class="display" style="font-size:14px;">POKEY</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Attaque douce poussee du bout des doigts replies. Faute en indoor.</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker indoor">INDOOR</span>
+              <div class="display" style="font-size:14px;">LIBERO</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Joueur defensif specialise, maillot distinct. N'existe pas en beach.</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker">BEACH</span>
+              <div class="display" style="font-size:14px;">COBRA</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Attaque du bout des doigts tendus, main rigide en tete de serpent.</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker both">2 EN 1</span>
+              <div class="display" style="font-size:14px;">ACE</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Service direct qui tombe sans etre touche, ou impossible a relever.</p>
+            </div>
+            <div class="tile" style="padding:14px; box-shadow:var(--shadow-sm); position:relative;">
+              <span class="sticker">BEACH</span>
+              <div class="display" style="font-size:14px;">SHOOT</div>
+              <p style="margin:6px 0 0; font-size:12.5px;">Passe haute envoyee directement dans le camp adverse &mdash; tolere en beach.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="notes-grid">
+      <div class="note-card pros">
+        <h4>POUR</h4>
+        <ul>
+          <li>Apprentissage croise naturel &mdash; on voit les deux mondes</li>
+          <li>Recherche universelle, 1 seule URL par terme</li>
+          <li>Zero duplication des contenus partages</li>
+          <li>Scale a N disciplines sans refonte</li>
+        </ul>
+      </div>
+      <div class="note-card cons">
+        <h4>CONTRE</h4>
+        <ul>
+          <li>Stickers partout = risque de bruit visuel</li>
+          <li>Pages specifiques (positions 2v2) cohabitent avec indoor</li>
+          <li>Migration data&nbsp;: tagger toutes les entrees</li>
+        </ul>
+      </div>
+      <div class="note-card devs">
+        <h4>POUR CLAUDE CODE</h4>
+        <ul>
+          <li>Data&nbsp;: <code>discipline: ("indoor"|"beach")[]</code></li>
+          <li>Primitive <code>&lt;DisciplineBadge&gt;</code> + <code>&lt;DisciplineFilter&gt;</code></li>
+          <li>Filtre persiste en URL <code>?d=beach</code></li>
+          <li>Couleur sable&nbsp;: <code>--orange</code> existant</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- MATRIX -->
+    <div class="section-head" id="compare">
+      <span class="star">&#9733; COMPARATIF &#9733;</span>
+      <h2>QUI GAGNE QUOI</h2>
+      <div class="rule"></div>
+    </div>
+
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th>Critere</th>
+          <th>A &middot; Switcher</th>
+          <th>B &middot; Ticket</th>
+          <th>C &middot; Affiche split</th>
+          <th>D &middot; Stickers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Decouvrabilite beach</td>
+          <td class="meh">Moyen</td>
+          <td class="good">Elevee</td>
+          <td class="good">Maximale</td>
+          <td class="meh">Moyen</td>
+        </tr>
+        <tr>
+          <td>Effort integration</td>
+          <td class="good">Faible</td>
+          <td class="meh">Moyen</td>
+          <td class="bad">Eleve</td>
+          <td class="meh">Moyen</td>
+        </tr>
+        <tr>
+          <td>Contenu partage</td>
+          <td class="bad">Duplication</td>
+          <td class="meh">A arbitrer</td>
+          <td class="meh">Bof</td>
+          <td class="good">Ideal</td>
+        </tr>
+        <tr>
+          <td>Coherence retro</td>
+          <td class="good">Tres bonne</td>
+          <td class="good">Tres bonne</td>
+          <td class="good">Excellente</td>
+          <td class="good">Tres bonne</td>
+        </tr>
+        <tr>
+          <td>SEO</td>
+          <td class="bad">Faible</td>
+          <td class="good">Tres bon</td>
+          <td class="good">Tres bon</td>
+          <td class="good">Tres bon</td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td class="good">Compact</td>
+          <td class="bad">Nav saturee</td>
+          <td class="good">Stack vertical</td>
+          <td class="meh">Stickers denses</td>
+        </tr>
+        <tr>
+          <td>Scale (snow, sit...)</td>
+          <td class="bad">Binaire</td>
+          <td class="meh">Nav explose</td>
+          <td class="good">Grille N&times;</td>
+          <td class="good">Tag extensible</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- RECO -->
+    <div class="section-head" id="reco">
+      <span class="star" style="color:var(--orange);">&#9733; RECO &#9733;</span>
+      <h2>LA SOLUTION HYBRIDE</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="poster">
+      <div class="poster-stamp">
+        <div class="display" style="font-size:10px; letter-spacing:0.15em; color:var(--yellow);">&#9733; MIX &#9733;</div>
+        <div class="display" style="font-size:30px; color:var(--ink); line-height:1; margin:4px 0;">A+D</div>
+        <div class="display" style="font-size:9px; color:var(--ink);">SWITCHER<br/>+ STICKERS</div>
+      </div>
+      <div style="max-width:680px;">
+        <div class="display" style="font-size:14px; letter-spacing:0.15em; color:var(--plum);">&#9733; RECOMMANDATION &#9733;</div>
+        <h3>SWITCHER POUR LES PAGES DISJOINTES,<br/>STICKERS POUR LES PAGES PARTAGEES.</h3>
+        <p style="font-size:15px; line-height:1.55; max-width:580px;">
+          Aucune des 4 idees ne gagne seule. La carte de contenu montre un desequilibre&nbsp;: <b>Positions / Scenarios sont quasi-disjoints</b> (dupliques, donc switcher), tandis que <b>Regles / Glossaire sont partages a ~75%</b> (unifies, donc stickers).
+        </p>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:24px;">
+      <div class="tile" style="background:var(--mint);">
+        <div class="display" style="font-size:13px; color:var(--teal); margin-bottom:10px;">&#9733; PAGES QUI BASCULENT (A)</div>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px;">
+          <li>&#9656; <b>Accueil</b> &mdash; hero &amp; cartes adaptes au mode</li>
+          <li>&#9656; <b>Techniques</b> &mdash; gestes filtres par discipline</li>
+          <li>&#9656; <b>Positions</b> &mdash; 6v6 FIVB ou roles 2v2</li>
+          <li>&#9656; <b>Scenarios</b> &mdash; rotations ou systemes beach</li>
+          <li>&#9656; <b>Guides</b> &mdash; articles tagues par discipline</li>
+        </ul>
+      </div>
+      <div class="tile" style="background:var(--pink);">
+        <div class="display" style="font-size:13px; color:var(--plum); margin-bottom:10px;">&#9733; PAGES UNIFIEES (D)</div>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px;">
+          <li>&#9656; <b>Regles</b> &mdash; reglement commun + encart "en beach"</li>
+          <li>&#9656; <b>Glossaire</b> &mdash; 1 entree par terme, sticker INDOOR / BEACH / 2 EN 1</li>
+        </ul>
+        <p style="margin:14px 0 0; font-size:13px; line-height:1.5;">
+          <b>Pourquoi&nbsp;?</b> Un joueur indoor qui decouvre le beach veut <em>comparer</em>, pas changer de monde. Le glossaire et le reglement sont les endroits naturels du croisement.
+        </p>
+      </div>
+    </div>
+
+    <!-- IMPLEMENTATION STEPS -->
+    <div class="tile" style="margin-top:24px; padding:28px 32px;">
+      <div class="display" style="font-size:16px; letter-spacing:0.1em; color:var(--orange); margin-bottom:18px;">&#9733; ORDRE D'IMPLEMENTATION &middot; POUR CLAUDE CODE &#9733;</div>
+      <ol class="steps">
+        <li>
+          <div class="step-num">01</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">MODELE DATA</div>
+            <p style="margin:4px 0 0; font-size:13.5px;">Ajouter <code>discipline: ("indoor"|"beach")[]</code> a toutes les entites. Backfill = <code>["indoor"]</code>.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num" style="background:var(--teal); color:var(--cream);">02</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">CONTEXTE + SWITCHER</div>
+            <p style="margin:4px 0 0; font-size:13.5px;"><code>DisciplineContext</code> persiste en <code>localStorage("vw.discipline")</code>. Switcher dans <code>Layout.tsx</code>, a droite du wordmark &mdash; tabs retro avec ombres.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num" style="background:var(--pink);">03</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">PRIMITIVES STICKERS</div>
+            <p style="margin:4px 0 0; font-size:13.5px;"><code>&lt;DisciplineBadge&gt;</code> en 3 variants&nbsp;: <code>indoor</code> (teal), <code>beach</code> (orange), <code>both</code> (mint).</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num" style="background:var(--yellow);">04</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">PAGES "BASCULE"</div>
+            <p style="margin:4px 0 0; font-size:13.5px;">Home, Techniques, Positions, Scenarios, Guides&nbsp;: lisent le contexte et branchent sur la bonne data. <b>Pas de sticker</b> sur ces pages &mdash; le switcher suffit.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num" style="background:var(--mint);">05</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">PAGES "UNIFIEES"</div>
+            <p style="margin:4px 0 0; font-size:13.5px;">Regles + Glossaire&nbsp;: <b>ignorent le switcher</b>, affichent les stickers + filtre <code>[ Toutes / Indoor / Beach / Communs ]</code>.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num" style="background:var(--plum); color:var(--cream);">06</div>
+          <div>
+            <div class="display" style="font-size:13px; letter-spacing:0.06em;">URL &amp; SEO</div>
+            <p style="margin:4px 0 0; font-size:13.5px;">Switcher reflete en <code>?d=beach</code> pour partage de liens. Pages unifiees independantes.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div style="margin-top:24px;">
+        <div class="display" style="font-size:12px; letter-spacing:0.1em; color:var(--orange); margin-bottom:10px;">&#9733; SNIPPET TYPESCRIPT &#9733;</div>
+<pre class="snip"><span class="c">// src/contexts/Discipline.tsx</span>
+<span class="k">type</span> Discipline = <span class="s">"indoor"</span> | <span class="s">"beach"</span>;
+
+<span class="k">const</span> DisciplineContext = createContext&lt;{
+  d: Discipline;
+  set: (d: Discipline) =&gt; <span class="k">void</span>;
+}&gt;(...);
+
+<span class="c">// dans une page "bascule"</span>
+<span class="k">const</span> { d } = useDiscipline();
+<span class="k">const</span> positions = d === <span class="s">"beach"</span>
+  ? POSITIONS_BEACH
+  : POSITIONS_INDOOR;
+
+<span class="c">// dans une page "unifiee" --- pas de useDiscipline</span>
+&lt;<span class="n">DisciplineBadge</span> on={term.discipline} /&gt;</pre>
+      </div>
+    </div>
+
+    <footer style="margin-top:64px; padding:24px 0; border-top:3px solid var(--ink); display:flex; align-items:center; justify-content:space-between; font-family:DM Mono,monospace; font-size:11px; letter-spacing:0.15em;">
+      <span>VOLLEY&middot;WIKI &mdash; SPEC UX BEACH &times; INDOOR &middot; v1</span>
+      <span style="color:var(--teal);">&#9733; POUR CLAUDE CODE &#9733;</span>
+    </footer>
+
+  </div>
+
+  <div class="stripe" style="margin-top:32px;"></div>
+
+</body>
+</html>
